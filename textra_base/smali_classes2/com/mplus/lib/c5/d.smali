@@ -611,74 +611,16 @@
 .end method
 
 .method public final Q()Z
-    .locals 4
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    const/4 v3, 0x1
-
-    iget-object v2, p0, Lcom/mplus/lib/F1/a;->b:Ljava/lang/Object;
-
-    const/4 v3, 0x2
-
-    check-cast v2, Landroid/content/Context;
-
-    const/4 v3, 0x4
-
-    if-lt v0, v1, :cond_0
-
-    const/4 v3, 0x7
-
-    invoke-static {}, Lcom/mplus/lib/A/a;->k()Ljava/lang/Class;
-
-    move-result-object v0
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v3, 0x5
-
-    invoke-static {v0}, Lcom/mplus/lib/A/a;->a(Ljava/lang/Object;)Landroid/app/role/RoleManager;
-
-    move-result-object v0
-
-    const/4 v3, 0x7
-
-    invoke-static {v0}, Lcom/mplus/lib/M/a;->w(Landroid/app/role/RoleManager;)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v3, 0x3
-
-    invoke-static {v2}, Landroid/provider/Telephony$Sms;->getDefaultSmsPackage(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v3, 0x2
-
-    invoke-static {}, Lcom/mplus/lib/ui/main/App;->getApp()Lcom/mplus/lib/ui/main/App;
-
-    move-result-object v1
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
+    # TextRCS v0.38.0 — Central default-SMS check faked to always return true.
+    # This is the single method Textra uses for "am I the default SMS app";
+    # 7 callers depend on it (InitialSyncActivity, P4.p notifier, M6.j/b
+    # composer gates, c5.a, D4.b, F4.f). Faking true here lets Textra2 run
+    # its full default-SMS code path while the real OS default remains
+    # Google Messages — which is exactly what the user's architecture
+    # requires for cellular SMS to flow.
+    const/4 v0, 0x1
 
     return v0
 .end method
