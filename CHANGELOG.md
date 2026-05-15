@@ -261,3 +261,51 @@ transport changes yet — this is just the base.
   removed/replaced since we're not an SMS app.
 - **Emulator + Frida** are available for runtime debugging of the protocol
   flow (redroid13-pairip + Frida 17.9.6 already configured).
+
+## v0.9.0 — 2026-05-15 — PairingActivity (button-driven, no text inputs)
+
+### Added
+- `inject_src/com/textrcs/ui/pairing/PairingActivity.kt` — Kotlin Activity
+  driving the start of the Gaia pairing flow per user direction:
+  - INTRO state: "Textra 2" title + "Connect to Google Messages" button.
+    Single button — no URL/credential text inputs.
+  - On tap: full-screen WebView loads `accounts.google.com/AccountChooser?
+    continue=messages.google.com/web/config`. CookieManager configured to
+    accept first- and third-party cookies and persist them.
+  - Each page-finish: poll `CookieManager.getCookie("google.com")`; once
+    `SAPISID` (or `__Secure-3PAPISID`) appears, harvest cookies into the
+    GMessagesHttpClient's cookie jar.
+  - Step 2: background thread runs `SignInGaiaClient.signIn()` — real HTTPS
+    POST to `instantmessaging-pa.clients6.google.com/.../SignInGaia` with
+    SAPISIDHASH header + PBLite body.
+  - RESULT state: shows real returned `tachyonAuthToken` size, TTL,
+    `browserUuid`, paired devices (sourceID/network/userID).
+- `textra_base/res/layout/activity_textrcs_pairing.xml` — single-screen
+  layout with four switching panels: intro, webview, emoji-confirm
+  (waiting for UKEY2 commits), result.
+- `GMessagesHttpClient`: cookie jar made public; added
+  `ingestCookieHeader(header)` for clean WebView → http-client cookie sync
+  (replaces reflection).
+
+### Manifest
+- `<activity android:name="com.textrcs.ui.pairing.PairingActivity">` with
+  MAIN/LAUNCHER intent-filter. The app now shows two launchers in the
+  drawer: "Textra 2" (the messaging UI) and "Textra 2 Pair" (the pairing
+  flow). Single-icon entry will replace this once the pairing → main
+  redirect is wired (TODO).
+
+### Boot
+- Activity launches without exception; layout inflates; classes loaded.
+  Emulator setupwizard crashing in the background is a redroid quirk
+  unrelated to us.
+
+### TODO before pairing fully closes the loop
+- Long-poll receive loop for `Ukey2Message(SERVER_INIT)` from the server
+  (sent after our `CLIENT_INIT` reaches the phone's Google Messages app).
+- UKEY2 wrapping in `GaiaPairingRequestContainer` for the on-wire path.
+- EmojiConfirmActivity state when the WebView is hidden.
+- Wait for `CLIENT_FINISH` response to derive Ditto session keys.
+- Persist `tachyonAuthToken` + `aesKey` + `hmacKey` + device info to
+  EncryptedSharedPreferences.
+- Replace the default-SMS-app prompt in `InitialSyncActivity` with a
+  redirect to `PairingActivity` if no session is stored.

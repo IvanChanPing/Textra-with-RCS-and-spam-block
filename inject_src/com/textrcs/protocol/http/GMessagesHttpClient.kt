@@ -30,10 +30,19 @@ import java.security.MessageDigest
  */
 class GMessagesHttpClient(
     /** Cookie jar — keys like SAPISID, SID, HSID, SSID, __Secure-1PSID. */
-    private val cookies: MutableMap<String, String> = mutableMapOf(),
+    val cookies: MutableMap<String, String> = mutableMapOf(),
 ) {
 
     val sapisid: String? get() = cookies["SAPISID"] ?: cookies["__Secure-3PAPISID"]
+
+    /** Bulk-add cookies from a `name=value; name=value` Cookie-header string. */
+    fun ingestCookieHeader(header: String) {
+        for (pair in header.split("; ")) {
+            val eq = pair.indexOf('=')
+            if (eq <= 0) continue
+            cookies[pair.substring(0, eq).trim()] = pair.substring(eq + 1).trim()
+        }
+    }
 
     enum class ContentType(val mime: String) {
         PROTO_BINARY(GMessagesConstants.CONTENT_TYPE_PROTO_BINARY),

@@ -78,7 +78,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 44
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->statusCode:I
@@ -229,7 +229,7 @@
 .method public final getBody()[B
     .registers 2
 
-    .line 44
+    .line 53
     iget-object v0, p0, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->body:[B
 
     return-object v0
@@ -238,7 +238,7 @@
 .method public final getContentType()Ljava/lang/String;
     .registers 2
 
-    .line 44
+    .line 53
     iget-object v0, p0, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->contentType:Ljava/lang/String;
 
     return-object v0
@@ -247,7 +247,7 @@
 .method public final getStatusCode()I
     .registers 2
 
-    .line 44
+    .line 53
     iget v0, p0, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->statusCode:I
 
     return v0
@@ -288,7 +288,7 @@
 .method public final isSuccess()Z
     .registers 4
 
-    .line 45
+    .line 54
     iget v0, p0, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->statusCode:I
 
     const/16 v1, 0xc8

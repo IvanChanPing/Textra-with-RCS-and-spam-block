@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:id="@+id/textrcs_pairing_root"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:background="#FFFFFF">
+
+    <!-- Intro state: title + Connect button. -->
+    <LinearLayout
+        a:id="@+id/textrcs_intro_panel"
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:orientation="vertical"
+        a:gravity="center"
+        a:padding="32dp">
+
+        <TextView
+            a:layout_width="wrap_content"
+            a:layout_height="wrap_content"
+            a:text="Textra 2"
+            a:textSize="34sp"
+            a:textStyle="bold"
+            a:textColor="#202124"
+            a:paddingBottom="8dp"/>
+
+        <TextView
+            a:layout_width="match_parent"
+            a:layout_height="wrap_content"
+            a:text="Send and receive messages through your phone via Google Messages."
+            a:textSize="16sp"
+            a:textColor="#5F6368"
+            a:gravity="center"
+            a:paddingBottom="48dp"/>
+
+        <Button
+            a:id="@+id/textrcs_connect_button"
+            a:layout_width="wrap_content"
+            a:layout_height="wrap_content"
+            a:text="Connect to Google Messages"
+            a:textSize="16sp"
+            a:textColor="#FFFFFF"
+            a:background="#1A73E8"
+            a:paddingLeft="32dp"
+            a:paddingRight="32dp"
+            a:paddingTop="14dp"
+            a:paddingBottom="14dp"/>
+
+        <TextView
+            a:id="@+id/textrcs_intro_status"
+            a:layout_width="match_parent"
+            a:layout_height="wrap_content"
+            a:textSize="14sp"
+            a:textColor="#5F6368"
+            a:gravity="center"
+            a:paddingTop="24dp"
+            a:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- WebView state: full-screen Google login. -->
+    <WebView
+        a:id="@+id/textrcs_webview"
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:visibility="gone"/>
+
+    <!-- Emoji-confirm state: large emoji + instruction + spinner. -->
+    <LinearLayout
+        a:id="@+id/textrcs_emoji_panel"
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:orientation="vertical"
+        a:gravity="center"
+        a:padding="32dp"
+        a:visibility="gone">
+
+        <TextView
+            a:id="@+id/textrcs_emoji_view"
+            a:layout_width="wrap_content"
+            a:layout_height="wrap_content"
+            a:textSize="120sp"
+            a:gravity="center"
+            a:paddingBottom="24dp"/>
+
+        <TextView
+            a:id="@+id/textrcs_emoji_caption"
+            a:layout_width="match_parent"
+            a:layout_height="wrap_content"
+            a:text="Open Google Messages on your phone and tap the matching emoji."
+            a:textSize="18sp"
+            a:textColor="#202124"
+            a:gravity="center"
+            a:paddingBottom="32dp"/>
+
+        <ProgressBar
+            a:layout_width="wrap_content"
+            a:layout_height="wrap_content"
+            a:indeterminate="true"/>
+    </LinearLayout>
+
+    <!-- Result state: status text after sign-in. -->
+    <ScrollView
+        a:id="@+id/textrcs_result_panel"
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:padding="24dp"
+        a:visibility="gone">
+
+        <TextView
+            a:id="@+id/textrcs_result_text"
+            a:layout_width="match_parent"
+            a:layout_height="wrap_content"
+            a:textSize="14sp"
+            a:textColor="#202124"
+            a:fontFamily="monospace"/>
+    </ScrollView>
+
+</FrameLayout>

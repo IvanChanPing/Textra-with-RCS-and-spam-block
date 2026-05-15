@@ -78,7 +78,7 @@
 .method static constructor <clinit>()V
     .registers 4
 
-    .line 39
+    .line 48
     new-instance v0, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;
 
     const/4 v1, 0x0
@@ -91,7 +91,7 @@
 
     sput-object v0, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;->PROTO_BINARY:Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;
 
-    .line 40
+    .line 49
     new-instance v0, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;
 
     const/4 v1, 0x1
@@ -136,7 +136,7 @@
         }
     .end annotation
 
-    .line 38
+    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput-object p3, p0, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;->mime:Ljava/lang/String;
@@ -193,7 +193,7 @@
 .method public final getMime()Ljava/lang/String;
     .registers 2
 
-    .line 38
+    .line 47
     iget-object v0, p0, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;->mime:Ljava/lang/String;
 
     return-object v0

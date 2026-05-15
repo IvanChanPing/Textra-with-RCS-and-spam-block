@@ -3042,6 +3042,12 @@
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
         </activity-alias>
         <activity android:name="com.mplus.lib.ui.initialsync.InitialSyncActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.InitialSyncActivity"/>
+        <activity android:name="com.textrcs.ui.pairing.PairingActivity" android:exported="true" android:label="Textra 2 Pair" android:screenOrientation="portrait" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity android:name="com.mplus.lib.ui.convo.ConvoActivity" android:theme="@style/AppTheme.ConvoActivity"/>
         <activity android:name="com.mplus.lib.ui.convo.media.ConvoMediaActivity" android:theme="@style/AppTheme.ConvoMediaActivity"/>
         <activity android:name="com.mplus.lib.ui.common.plus.giphy.GiphyActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.GiphyActivity" android:windowSoftInputMode="stateHidden"/>
