@@ -14,12 +14,12 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,221:1\n1#2:222\n*E\n"
+    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,269:1\n1#2:270\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \u0008\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\tH\u0007J$\u0010\n\u001a\u00020\u000b2\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u00042\n\u0010\r\u001a\u0006\u0012\u0002\u0008\u00030\u000eH\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000"
+        "\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\tH\u0007J@\u0010\n\u001a\u00020\u000b2\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u00042\n\u0010\r\u001a\u0006\u0012\u0002\u0008\u00030\u000e2\u001a\u0010\u000f\u001a\u0016\u0012\u0004\u0012\u00020\u0011\u0018\u00010\u0010j\n\u0012\u0004\u0012\u00020\u0011\u0018\u0001`\u0012H\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/send/SendManager$Companion;",
@@ -36,7 +36,11 @@
         "",
         "destination",
         "parts",
-        ""
+        "",
+        "sentIntents",
+        "Ljava/util/ArrayList;",
+        "Landroid/app/PendingIntent;",
+        "Lkotlin/collections/ArrayList;"
     }
     k = 0x1
     mv = {
@@ -52,7 +56,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 187
+    .line 229
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,7 +82,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 194
+    .line 236
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getInstance$cp()Lcom/textrcs/send/SendManager;
 
@@ -90,7 +94,7 @@
 
     const/4 v0, 0x0
 
-    .line 195
+    .line 237
     .local v0, "$i$a$-synchronized-SendManager$Companion$get$1":I
     :try_start_d
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
@@ -116,11 +120,11 @@
 
     move-object v2, v1
 
-    .line 222
+    .line 270
     .local v2, "it":Lcom/textrcs/send/SendManager;
     const/4 v3, 0x0
 
-    .line 195
+    .line 237
     .local v3, "$i$a$-also-SendManager$Companion$get$1$1":I
     sget-object v4, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
 
@@ -128,7 +132,7 @@
     :try_end_29
     .catchall {:try_start_d .. :try_end_29} :catchall_2c
 
-    .line 194
+    .line 236
     .end local v0    # "$i$a$-synchronized-SendManager$Companion$get$1":I
     .end local v2    # "it":Lcom/textrcs/send/SendManager;
     .end local v3    # "$i$a$-also-SendManager$Companion$get$1$1":I
@@ -151,18 +155,22 @@
     return-object v0
 .end method
 
-.method public final sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
-    .registers 14
+.method public final sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/ArrayList;)V
+    .registers 15
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "destination"    # Ljava/lang/String;
     .param p3, "parts"    # Ljava/util/List;
+    .param p4, "sentIntents"    # Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "*>;)V"
+            "*>;",
+            "Ljava/util/ArrayList<",
+            "Landroid/app/PendingIntent;",
+            ">;)V"
         }
     .end annotation
 
@@ -181,7 +189,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 216
+    .line 263
     move-object v1, p3
 
     check-cast v1, Ljava/lang/Iterable;
@@ -214,14 +222,34 @@
 
     move-result-object v0
 
-    .line 217
+    .line 264
     .local v0, "body":Ljava/lang/String;
-    invoke-virtual {p0, p1}, Lcom/textrcs/send/SendManager$Companion;->get(Landroid/content/Context;)Lcom/textrcs/send/SendManager;
+    if-eqz p4, :cond_32
+
+    move-object v1, p4
+
+    check-cast v1, Ljava/lang/Iterable;
+
+    invoke-static {v1}, Lkotlin/collections/CollectionsKt;->filterNotNull(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v1, p2, v0}, Lcom/textrcs/send/SendManager;->sendText(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v1, :cond_36
 
-    .line 218
+    :cond_32
+    invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
+
+    move-result-object v1
+
+    .line 265
+    .local v1, "intents":Ljava/util/List;
+    :cond_36
+    invoke-virtual {p0, p1}, Lcom/textrcs/send/SendManager$Companion;->get(Landroid/content/Context;)Lcom/textrcs/send/SendManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2, v0, v1}, Lcom/textrcs/send/SendManager;->sendText(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+
+    .line 266
     return-void
 .end method

@@ -2530,7 +2530,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1, p2}, Lcom/textrcs/send/SendManager;->sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
+    invoke-static {v0, p1, p2, p3}, Lcom/textrcs/send/SendManager;->sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/ArrayList;)V
 
     return-void
 .end method

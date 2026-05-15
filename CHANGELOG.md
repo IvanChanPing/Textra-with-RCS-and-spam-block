@@ -666,3 +666,40 @@ SmsManager is never called. No cellular radio activity.
 
 ### Build / boot
 - `textra2_v0.19.0.apk` (74M) — installs side-by-side, boots cleanly.
+
+## v0.20.0 — 2026-05-15 — Outgoing sent indicator (fire reportSentIntent on GMessages success)
+
+### What changed
+- Smali patch at `e5/d.smali::m()` (Textra's `C5677d.mo6177m`) now passes
+  parameter p3 (`sentIntents: ArrayList<PendingIntent>`) into
+  `SendManager.sendSmsBridge` alongside the destination + parts:
+  ```smali
+  invoke-static {v0, p1, p2, p3}, Lcom/textrcs/send/SendManager;->sendSmsBridge(
+      Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/ArrayList;)V
+  ```
+- `SendManager.sendSmsBridge` accepts the new arg; `SendManager.sendText`
+  now takes an optional `List<PendingIntent>`. After the GMessages POST
+  finishes:
+  - **Success**: fires every PendingIntent with `Activity.RESULT_OK = -1`
+  - **Failure**: fires every PendingIntent with
+    `SmsManager.RESULT_ERROR_GENERIC_FAILURE = 1`
+- Textra's existing `C5894fe` BroadcastReceiver picks up these intents
+  (action `reportSentIntent`), forwards to `SmsMgr$Worker`, which calls
+  back into `C5217d.m7452N` → `m7459W` → DB state update.
+
+### Effect on Textra's UI
+- Messages now transition from "pending" to "sent" in the conversation
+  thread immediately after the GMessages POST returns 2xx.
+- A failed POST marks the row as failed (same path as a real SMS
+  network failure).
+- No new code in Textra's state machine — we reuse the existing
+  reportSentIntent reconciliation chain exactly as the original SMS
+  path would.
+
+### Build / boot
+- `textra2_v0.20.0.apk` (74M) — installs side-by-side, boots cleanly.
+
+### Outstanding from earlier status
+- Pre-v0.18.0 saved sessions don't carry `refreshKeyPkcs8` — user must
+  re-pair to enable automatic token refresh. This is a migration
+  consequence, not a bug.

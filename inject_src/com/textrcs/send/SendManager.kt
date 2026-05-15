@@ -1,6 +1,9 @@
 package com.textrcs.send
 
+import android.app.Activity
+import android.app.PendingIntent
 import android.content.Context
+import android.telephony.SmsManager
 import android.util.Log
 import com.google.protobuf.ByteString
 import com.textrcs.gmproto.client.GetOrCreateConversationRequest
@@ -56,21 +59,60 @@ class SendManager private constructor(private val appContext: Context) {
         Thread(r, "TextRCS-Send").apply { isDaemon = true }
     }
 
-    /** Queue a real outgoing send. Returns immediately; runs off-main-thread. */
-    fun sendText(recipientPhone: String, body: String) {
+    /**
+     * Queue a real outgoing send. Returns immediately; runs off-main-thread.
+     *
+     * After the GMessages POST completes (success OR failure), [sentIntents]
+     * is fired so Textra's own state machine reconciles the message row
+     * (`C5217d.m7452N` handles the `reportSentIntent` action and updates
+     * `C6899M.f15210g` / `C6899M.f15211a` accordingly). This makes the
+     * "sent" indicator appear in Textra's UI exactly as if SmsManager had
+     * succeeded.
+     *
+     * Result codes (match the contract of `SmsManager.sendMultipartTextMessage`):
+     *   - `Activity.RESULT_OK` (-1)                  → success
+     *   - `SmsManager.RESULT_ERROR_GENERIC_FAILURE`  → generic failure
+     */
+    fun sendText(
+        recipientPhone: String,
+        body: String,
+        sentIntents: List<PendingIntent>? = null,
+    ) {
         sendExecutor.execute {
-            try {
+            val ok = try {
                 sendTextBlocking(recipientPhone, body)
+                true
             } catch (e: Throwable) {
                 Log.e(TAG, "send failed: phone=$recipientPhone body.len=${body.length}", e)
+                false
+            }
+            if (sentIntents != null) {
+                fireSentIntents(sentIntents, ok)
             }
         }
     }
 
+    private fun fireSentIntents(sentIntents: List<PendingIntent>, ok: Boolean) {
+        val resultCode = if (ok) Activity.RESULT_OK else SmsManager.RESULT_ERROR_GENERIC_FAILURE
+        for (pi in sentIntents) {
+            try {
+                pi.send(appContext, resultCode, null)
+            } catch (e: PendingIntent.CanceledException) {
+                Log.w(TAG, "PendingIntent already canceled: ${e.message}")
+            } catch (e: Throwable) {
+                Log.w(TAG, "PendingIntent.send failed: ${e.javaClass.simpleName}: ${e.message}")
+            }
+        }
+    }
+
+    /**
+     * Throws on any GMessages POST failure (caller treats failure as
+     * non-success for the sentIntents callback).
+     */
     private fun sendTextBlocking(recipientPhone: String, body: String) {
         val session = store.load() ?: run {
             Log.w(TAG, "no GMessages session — message dropped. User must complete PairingActivity first.")
-            return
+            throw IllegalStateException("not paired")
         }
 
         val http = GMessagesHttpClient(session.cookies.toMutableMap())
@@ -212,9 +254,15 @@ class SendManager private constructor(private val appContext: Context) {
          * call never runs, so no actual SMS goes out the cellular radio.
          */
         @JvmStatic
-        fun sendSmsBridge(context: Context, destination: String, parts: List<*>) {
+        fun sendSmsBridge(
+            context: Context,
+            destination: String,
+            parts: List<*>,
+            sentIntents: ArrayList<PendingIntent>?,
+        ) {
             val body = parts.joinToString(separator = "") { it?.toString() ?: "" }
-            get(context).sendText(destination, body)
+            val intents = sentIntents?.filterNotNull() ?: emptyList()
+            get(context).sendText(destination, body, intents)
         }
     }
 }

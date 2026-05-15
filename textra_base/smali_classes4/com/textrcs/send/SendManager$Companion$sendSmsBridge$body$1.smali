@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/textrcs/send/SendManager$Companion;->sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
+    value = Lcom/textrcs/send/SendManager$Companion;->sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/ArrayList;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -80,7 +80,7 @@
     .registers 3
     .param p1, "it"    # Ljava/lang/Object;
 
-    .line 216
+    .line 263
     if-eqz p1, :cond_9
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -104,7 +104,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 216
+    .line 263
     invoke-virtual {p0, p1}, Lcom/textrcs/send/SendManager$Companion$sendSmsBridge$body$1;->invoke(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v0
