@@ -80,13 +80,57 @@ class GaiaPairingOrchestrator(
             isFinish = false,
             timeoutMs = 30_000,
         )
+
+        // Hard-diagnostic dump of the bytes so a future SERVER_INIT failure
+        // is debuggable from the on-screen text alone instead of needing
+        // logcat or Frida. PairingException carries the diagnostic info if
+        // any layer below produces empty bytes / wrong type.
+        val msgDataBytes = responseMsg.messageData.toByteArray()
         val rpcData = parseRpcData(responseMsg)
-        val container = GaiaPairingResponseContainer.parseFrom(rpcData.unencryptedData)
+        val unenc = rpcData.unencryptedData.toByteArray()
+        if (unenc.isEmpty()) {
+            throw PairingException(
+                "RPCMessageData.unencryptedData is empty (action=${rpcData.action} " +
+                "encryptedDataLen=${rpcData.encryptedData.size()} " +
+                "encryptedData2Len=${rpcData.encryptedData2.size()} " +
+                "msgDataLen=${msgDataBytes.size} " +
+                "outerResponseID=${responseMsg.responseID})"
+            )
+        }
+        val container = GaiaPairingResponseContainer.parseFrom(unenc)
+        val containerDataBytes = container.data.toByteArray()
+        if (containerDataBytes.isEmpty()) {
+            throw PairingException(
+                "GaiaPairingResponseContainer.data is empty (unencLen=${unenc.size} " +
+                "containerSerializedSize=${container.serializedSize} " +
+                "containerHex=${unenc.toHexShort()})"
+            )
+        }
         // SERVER_INIT comes nested inside `container.data` as a Ukey2Message.
-        return ukey2.processServerInit(
-            container.data.toByteArray(),
-            container.confirmedVerificationCodeVersion,
-        )
+        return try {
+            ukey2.processServerInit(
+                containerDataBytes,
+                container.confirmedVerificationCodeVersion,
+            )
+        } catch (e: IllegalArgumentException) {
+            // Re-throw with the bytes that produced it so we can debug from
+            // the on-screen text.
+            throw PairingException(
+                "${e.message} | containerDataLen=${containerDataBytes.size} " +
+                "containerHex=${containerDataBytes.toHexShort()} " +
+                "unencLen=${unenc.size}"
+            )
+        }
+    }
+
+    private fun ByteArray.toHexShort(): String {
+        val max = 80
+        val sb = StringBuilder(2 * minOf(size, max))
+        for (i in 0 until minOf(size, max)) {
+            sb.append("%02x".format(this[i].toInt() and 0xff))
+        }
+        if (size > max) sb.append("…(${size}B)")
+        return sb.toString()
     }
 
     /**
