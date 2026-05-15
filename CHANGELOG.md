@@ -542,3 +542,39 @@ SmsManager is never called. No cellular radio activity.
 
 ### Build / boot
 - `textra2_v0.15.0.apk` (73M) — installs, boots cleanly.
+
+## v0.16.0 — 2026-05-15 — InitialSyncActivity disabled (no more default-SMS-app prompt)
+
+### What changed
+- Manifest: `<activity android:name="com.mplus.lib.ui.initialsync.InitialSyncActivity"
+  android:enabled="false" .../>`. Android refuses to launch the activity;
+  Textra's `j4/a` ActivityStarter wrapper catches the resulting failure and
+  app flow continues without the user ever seeing the "set as default
+  messaging app" prompt.
+
+### Why android:enabled="false" instead of a smali patch
+- First attempt was to no-op MainActivity's `W()` method (which launches
+  InitialSyncActivity). That crashed `M6/b.onResume` with NPE because the
+  original W() also initializes the `S4/b` singleton chain that
+  `M6/b.x` depends on. Reverted.
+- The manifest disable is one line, doesn't break any initialization, and
+  Textra's own catch path handles the rejected launch cleanly.
+
+### Build / boot
+- `textra2_v0.16.0.apk` (73M) — installs, MainActivity launches, no
+  InitialSync prompt, no FATAL.
+
+### State of the project after v0.16.0
+- Renamed Textra 2 boots side-by-side with original Textra.
+- Pairing UI (`PairingActivity`) is button-driven; full Gaia/UKEY2 flow
+  with emoji handshake; persists `GMessagesSession` across launches.
+- Outgoing send: smali patch at `e5/d::m` routes every Textra send through
+  `SendManager` → real GMessages Web RPCs. `SmsManager` is never invoked.
+- Receive: `ReceiveService` foreground service maintains the receive
+  long-poll, decrypts incoming RPCs, logs `MessageEvent`/`ConversationEvent`
+  details via `TextRCSIncoming` logcat tag.
+- Default-SMS-app prompt suppressed.
+- The visible runtime gap: incoming `MessageEvent` is logged but not yet
+  written into Textra's own DB, so messages don't appear in the
+  conversation UI. Wiring that requires a tiny smali bridge to call
+  `com.mplus.lib.r4.H.m8737F0(C6949s0)` — saved for a future iteration.
