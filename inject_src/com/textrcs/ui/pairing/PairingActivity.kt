@@ -13,8 +13,11 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import com.textrcs.protocol.GMessagesConstants
+import com.textrcs.protocol.GMessagesSession
 import com.textrcs.protocol.SignInGaiaClient
 import com.textrcs.protocol.http.GMessagesHttpClient
+import com.textrcs.protocol.pairing.GaiaPairingOrchestrator
+import com.textrcs.protocol.pairing.PairingException
 
 /**
  * One-screen Gaia pairing flow.
@@ -34,6 +37,8 @@ class PairingActivity : Activity() {
     private val mainHandler = Handler(Looper.getMainLooper())
     private val httpClient = GMessagesHttpClient()
     private val signInClient = SignInGaiaClient(httpClient)
+    private var orchestrator: GaiaPairingOrchestrator? = null
+    private var emojiView: TextView? = null
 
     // Layout-resource IDs are resolved at runtime via getIdentifier so we
     // don't depend on the host APK's generated R class.
@@ -56,6 +61,7 @@ class PairingActivity : Activity() {
         connectButton = findViewById(resId("id", "textrcs_connect_button"))
         webView = findViewById(resId("id", "textrcs_webview"))
         emojiPanel = findViewById(resId("id", "textrcs_emoji_panel"))
+        emojiView = findViewById(resId("id", "textrcs_emoji_view"))
         resultPanel = findViewById(resId("id", "textrcs_result_panel"))
         resultText = findViewById(resId("id", "textrcs_result_text"))
 
@@ -116,23 +122,67 @@ class PairingActivity : Activity() {
     // ─────────────────────────────────────────────────────────────────────
 
     private fun runSignInGaiaOffMainThread() {
-        val result = try {
+        val signInResult = try {
             signInClient.signIn()
         } catch (e: Throwable) {
             mainHandler.post { showResult("SignInGaia failed:\n${e.javaClass.simpleName}: ${e.message}") }
             return
         }
-        val devicesText = result.devices.joinToString("\n") { d ->
-            "  sourceID=${d.sourceID} network=${d.network} userID=${d.userID}"
+
+        // Step 3 — open the receive long-poll, send CLIENT_INIT, get the
+        // verification emoji.
+        val orch = GaiaPairingOrchestrator(httpClient, signInResult)
+        orchestrator = orch
+        val emoji = try {
+            orch.beginPairing()
+        } catch (e: Throwable) {
+            orch.stop()
+            mainHandler.post {
+                showResult("Pairing beginPairing failed:\n${e.javaClass.simpleName}: ${e.message}")
+            }
+            return
         }
+
+        // Step 4 — show emoji and start CLIENT_FINISH in another bg thread
+        // (it blocks on the long-poll for the user's confirmation response).
+        mainHandler.post {
+            introPanel.visibility = View.GONE
+            webView.visibility = View.GONE
+            resultPanel.visibility = View.GONE
+            emojiPanel.visibility = View.VISIBLE
+            emojiView?.text = emoji
+        }
+        Thread { runFinishOffMainThread(orch, signInResult) }.start()
+    }
+
+    private fun runFinishOffMainThread(
+        orch: GaiaPairingOrchestrator,
+        signInResult: SignInGaiaClient.SignInResult,
+    ) {
+        val session: GMessagesSession = try {
+            orch.finishPairing()
+        } catch (e: PairingException) {
+            mainHandler.post { showResult("Pairing failed:\n${e.message}") }
+            return
+        } catch (e: Throwable) {
+            mainHandler.post {
+                showResult("Pairing finish failed:\n${e.javaClass.simpleName}: ${e.message}")
+            }
+            return
+        } finally {
+            orch.stop()
+        }
+
         mainHandler.post {
             showResult(buildString {
-                append("Signed in to Google Messages.\n\n")
-                append("tachyonAuthToken: ${result.tachyonAuthToken.size} bytes\n")
-                append("tokenTtlSeconds: ${result.tokenTtlSeconds}\n")
-                append("browserUuid: ${result.browserUuid}\n")
-                append("devices:\n").append(devicesText).append("\n\n")
-                append("Next step (not yet wired): UKEY2 emoji handshake.\n")
+                append("Paired to Google Messages.\n\n")
+                append("Browser UUID: ${session.browserUuid}\n")
+                append("Tachyon token: ${session.tachyonAuthToken.size} bytes ")
+                append("(TTL ${session.tokenTtlSeconds}s)\n")
+                append("AES session key: ${session.aesKey.size} bytes\n")
+                append("HMAC session key: ${session.hmacKey.size} bytes\n")
+                append("Phone: sourceID=${session.mobileDevice.sourceID}\n\n")
+                append("Next: persist session, replace SMS send path with GMessages.\n")
             })
         }
     }

@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda4;
+.class public final synthetic Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda5;
 .super Ljava/lang/Object;
 .source "D8$$SyntheticClass"
 
@@ -17,7 +17,7 @@
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda4;->f$0:Lcom/textrcs/ui/pairing/PairingActivity;
+    iput-object p1, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda5;->f$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
     return-void
 .end method
@@ -28,9 +28,9 @@
     .registers 2
 
     .line 0
-    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda4;->f$0:Lcom/textrcs/ui/pairing/PairingActivity;
+    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda5;->f$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
-    invoke-static {v0}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$M8lJ6IzJsn5npG1Cxc2aDUM1A5Q(Lcom/textrcs/ui/pairing/PairingActivity;)V
+    invoke-static {v0}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$Kcbd7C23bd4HHwooHWeaZBP1WEI(Lcom/textrcs/ui/pairing/PairingActivity;)V
 
     return-void
 .end method

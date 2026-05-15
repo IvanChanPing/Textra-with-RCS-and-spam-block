@@ -330,3 +330,47 @@ transport changes yet — this is just the base.
 
 ### Build / boot
 - `textra2_v0.10.0.apk` (73M) installs side-by-side, boots cleanly.
+
+## v0.11.0 — 2026-05-15 — Full Gaia pairing flow wired into PairingActivity
+
+### Added
+- `inject_src/com/textrcs/protocol/GMessagesSession.kt` — data class for
+  persistent paired-session state (tachyonAuthToken, aesKey, hmacKey,
+  device, browserUuid, cookies).
+- `inject_src/com/textrcs/protocol/pairing/GaiaPairingOrchestrator.kt` —
+  end-to-end pairing orchestrator. Port of mautrix
+  `pair_google.go::DoGaiaPairing` + `FinishGaiaPairing` +
+  `sendGaiaPairingMessage`. Owns:
+  - The receive [LongPollReceiver] thread (started in beginPairing).
+  - The `pendingResponses` map keyed by requestID, with `LinkedBlockingQueue`
+    waiters — `LongPollReceiver.Handler.onIncomingRpc` delivers the matching
+    `IncomingRPCMessage` by `responseID`.
+  - `beginPairing()` — sends CLIENT_INIT wrapped in
+    `GaiaPairingRequestContainer{pairingAttemptID, browserDetails,
+    startTimestamp, data, proposedVerificationCodeVersion=1,
+    proposedKeyDerivationVersion=1}`, wrapped in `OutgoingRPCData{action=
+    CREATE_GAIA_PAIRING_CLIENT_INIT, unencryptedProtoData, sessionID}`,
+    wrapped in `OutgoingRPCMessage{mobile=phone, data{requestID, bugleRoute=
+    DataEvent, messageType=GAIA_2, messageData}, auth{requestID,
+    tachyonAuthToken, configVersion}, ttl=300s}`. Posts to
+    `Messaging/SendMessage` PBLite. Waits on long-poll for response (30s
+    timeout). Parses `GaiaPairingResponseContainer`, hands `container.data`
+    to `Ukey2Handshake.processServerInit` → emoji.
+  - `finishPairing()` — same envelope, but `action=
+    CREATE_GAIA_PAIRING_CLIENT_FINISHED`, `messageType=BUGLE_MESSAGE`, 90s
+    timeout. Checks `finishErrorType`. Calls
+    `SessionCrypto.deriveSessionKeys(nextKey, confirmedKeyDerivationVersion)`.
+    Returns the full [GMessagesSession].
+  - `BROWSER_DETAILS` constant — verbatim mautrix
+    `BrowserDetailsMessage{userAgent, OTHER, 'libgm', TABLET}`.
+
+### PairingActivity wired through to finish
+- After SignInGaia success: instantiates [GaiaPairingOrchestrator] →
+  background thread runs `beginPairing()` → on emoji return, switches to
+  EMOJI panel and shows the emoji large.
+- A second background thread runs `finishPairing()`; on success switches to
+  RESULT panel showing the real session keys + browser UUID + phone sourceID.
+- On any `PairingException` / other Throwable: shows the error text.
+
+### Build / boot
+- `textra2_v0.11.0.apk` (73M) — installs side-by-side, boots cleanly.
