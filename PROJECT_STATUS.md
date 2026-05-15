@@ -1,7 +1,7 @@
 # TextRCS Project Status — 2026-05-15
 
-Tag: **v0.16.0** (HEAD)
-Latest APK: `textra2_v0.16.0.apk` (73 MB, signed with `textrcs.keystore`)
+Tag: **v0.19.0** (HEAD)
+Latest APK: `textra2_v0.19.0.apk` (74 MB, signed with `textrcs.keystore`)
 
 ## What works end-to-end
 
@@ -77,46 +77,48 @@ Latest APK: `textra2_v0.16.0.apk` (73 MB, signed with `textrcs.keystore`)
 - `IncomingMessageHandler` logs per-event details with tag `TextRCSIncoming`
   (messageID, conversationID, timestamp, tmpID, messageInfoCount).
 
-## Honest runtime gaps
+## What's been closed since v0.16.0
 
-These are the things that are wired structurally but don't yet have the
-final integration commit:
+### v0.17.0 — Incoming messages now appear in Textra UI
+- `TextraDbBridge.writeIncoming(phone, body, ts)` uses reflection (verified
+  against current Textra smali) to construct a `com.mplus.lib.r4.s0` with
+  the right `j0` fields populated and calls `H.X().F0(s0)`. Wired from
+  `IncomingMessageHandler`: every `MessageEvent` with empty `tmpID` gets
+  the body extracted from `messageInfoList[*].messageContent.content` and
+  written into Textra's DB.
 
-### Incoming messages don't appear in Textra's conversation UI
-- Where they go: `IncomingMessageHandler` receives them and logs structured
-  fields to logcat. The DB write isn't done.
-- What's needed: a tiny bridge that calls `com.mplus.lib.r4.H.m8737F0(s0)`
-  with a constructed `s0` (= obfuscated `C6949s0`, which extends `r4.j0`
-  with no additional fields). The `j0` POJO has fields `h` (recipients =
-  `r4.n`), `i` (body string), `j` (timestamp), `e` (queueId), etc.
-- Two implementation paths:
-  1. Smali shim class under `com.textrcs.bridge.*` that does the field puts
-     and calls `m8737F0`. Robust against Kotlin/Java type erasure but adds
-     50-100 lines of smali to maintain.
-  2. Kotlin reflection: `Class.forName("com.mplus.lib.r4.s0").newInstance()`,
-     field-by-field set via `Field.setAccessible(true)`. Cleaner code but
-     breaks if Textra's R8 mapping moves between releases.
-- Path 1 is safer for a real ship; path 2 is fine if we accept that v0
-  ships only against the current Textra Premium 4.84 build.
+### v0.18.0 — Token refresh
+- `TokenRefreshClient.refresh()` ports mautrix's `doRefreshAuthToken`,
+  signs `"$requestID:$timestampMicros"` with the EC P-256 keypair from
+  pairing (`Signature.NONEwithECDSA` over the pre-hashed SHA-256 digest →
+  matches Go's `ecdsa.SignASN1` DER shape).
+- `GMessagesSession.refreshKeyPkcs8` is now persisted via SessionStore.
+- `ReceiveService` schedules the refresh at `tokenTtlSeconds - 3600s`
+  (1h safety margin) on connect. On success, saves the new session +
+  reschedules; on failure, retries in 5min.
 
-### Outgoing status updates
-- `SendMessage` POST is fire-and-forget. The server's response to that POST
-  goes to the receive long-poll as a `SendMessageResponse` with status. We
-  log it but don't propagate back into Textra's "sent/delivered" UI
-  indicator (`C6898L.f15210g`).
-- Fix is the same shape as the inbound DB write — needs a bridge.
+### v0.19.0 — iOS/OnePlus parallax conv-view animation
+- 4 new anim XMLs in `res/anim/textrcs_overlay_*.xml`.
+- New screen slides 100%→0 in 280ms; old screen slides 0→-30% in 280ms
+  (parallax push-underneath). Both use `fast_out_slow_in`.
+- Close: new screen 0→100%, old screen -30%→0, 240ms, `fast_out_linear_in`.
+- Wired via `<style TextrcsOverlayWindowAnimation>` referenced from
+  `AppTheme.ConvoActivity` as `android:windowAnimationStyle`. No smali
+  patch — purely XML at the OS animation layer.
+- Settings + new-conv FAB animations are unaffected (different themes).
 
-### Token refresh
-- `tokenTtlSeconds` is stored but `RegisterRefresh` isn't called. After ~24h
-  the long-poll auth fails with 401 and the user has to re-pair.
-- Fix: add `RegisterRefresh` periodic task in `ReceiveService` keyed off
-  `(now - session.savedAtMs) > ttl - 60min`. Mautrix has the proto.
+## Remaining gaps
 
-### Conv-view animation
-- Slide-with-alpha-fade (current state) is the original Textra animation.
-  The OnePlus/iOS overlay parallax target is documented in
-  `docs/ANIMATION_TODO.md` with concrete `<translate>` values + the smali
-  touch points (`f9/c.smali` switch on `j4.a.i`) — saved for follow-up.
+### Outgoing sent/delivered indicator
+- `SendMessage` POST is fire-and-forget. The actual delivery
+  confirmation echoes back on the receive long-poll as a `MessageEvent`
+  containing the same `tmpID` we sent. The bridge to mark Textra's row as
+  delivered (clear `C6898L.f15210g`) is wired structurally in
+  `TextraDbBridge.markSent()` but currently logs only.
+
+### V1 sessions need re-pair to enable refresh
+- Pre-v0.18.0 saved sessions don't have `refreshKeyPkcs8` set. The
+  refresh code logs and skips for those; user re-pairs to enable.
 
 ## Source tree
 
