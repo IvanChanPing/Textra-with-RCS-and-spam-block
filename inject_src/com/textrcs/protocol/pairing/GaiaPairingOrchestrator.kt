@@ -185,23 +185,44 @@ class GaiaPairingOrchestrator(
     private fun startLongPoll() {
         val handler = object : LongPollReceiver.Handler {
             override fun onIncomingRpc(msg: IncomingRPCMessage) {
-                // Response correlation: mautrix `session_handler.go:123` matches
-                // by `msg.Message.SessionID` — i.e. the SessionID field of the
-                // inner RPCMessageData decoded from messageData(12). That's the
-                // field the server echoes our OutgoingRPCData.RequestID into.
-                // We previously matched by `msg.responseID` (the OUTER field 1
-                // of IncomingRPCMessage), which is a different value set by the
-                // server for its own bookkeeping — that mismatch caused the
-                // long-poll handler to grab the wrong frame (often a heartbeat
-                // or unrelated push) whose messageData parsed to all-defaults,
-                // yielding an empty Ukey2Message with messageType =
-                // UNKNOWN_DO_NOT_USE.
-                val correlationId = try {
-                    RPCMessageData.parseFrom(msg.messageData).sessionID
+                // Parse the inner RPCMessageData. We need both:
+                //   - sessionID  → correlate with our outgoing requestID
+                //   - action     → reject the placeholder/preflight frames
+                //                  that the server emits BEFORE the real
+                //                  response (mautrix's "very hacky way to
+                //                  ignore weird messages" filter).
+                val rpcData = try {
+                    RPCMessageData.parseFrom(msg.messageData)
                 } catch (_: Throwable) {
                     return
                 }
+                val correlationId = rpcData.sessionID
                 if (correlationId.isEmpty()) return
+
+                // mautrix session_handler.go:113-121 — for the gaia-pairing
+                // actions, always deliver; for other actions, skip frames
+                // where unencryptedData is present but encryptedData is absent
+                // (these are the "weird preflight" frames).
+                //
+                // Our v0.33.0 diagnostic proved exactly this: the matched
+                // 392-byte frame had action=UNSPECIFIED (zero), encryptedDataLen=0,
+                // encryptedData2Len=0, unencryptedDataLen=0 — a placeholder
+                // that mautrix would filter. Without the filter, our handler
+                // delivered the placeholder and beginPairing tried to decode
+                // its empty bytes as GaiaPairingResponseContainer→Ukey2Message,
+                // yielding messageType=UNKNOWN_DO_NOT_USE.
+                val isGaiaPairingAction =
+                    rpcData.action == ActionType.CREATE_GAIA_PAIRING_CLIENT_INIT ||
+                    rpcData.action == ActionType.CREATE_GAIA_PAIRING_CLIENT_FINISHED
+                if (!isGaiaPairingAction) {
+                    // No real payload AND not a gaia-pairing-action ack →
+                    // this is the placeholder. Drop it and keep waiting.
+                    val hasUnencrypted = !rpcData.unencryptedData.isEmpty
+                    val hasEncrypted = !rpcData.encryptedData.isEmpty
+                    val hasEncrypted2 = !rpcData.encryptedData2.isEmpty
+                    if (!hasUnencrypted && !hasEncrypted && !hasEncrypted2) return
+                }
+
                 val waiter = pendingResponses[correlationId]
                 waiter?.offer(msg)
             }
