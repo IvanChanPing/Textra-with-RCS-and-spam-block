@@ -14,6 +14,7 @@ import android.widget.ScrollView
 import android.widget.TextView
 import com.textrcs.protocol.GMessagesConstants
 import com.textrcs.protocol.GMessagesSession
+import com.textrcs.protocol.SessionStore
 import com.textrcs.protocol.SignInGaiaClient
 import com.textrcs.protocol.http.GMessagesHttpClient
 import com.textrcs.protocol.pairing.GaiaPairingOrchestrator
@@ -39,6 +40,7 @@ class PairingActivity : Activity() {
     private val signInClient = SignInGaiaClient(httpClient)
     private var orchestrator: GaiaPairingOrchestrator? = null
     private var emojiView: TextView? = null
+    private lateinit var sessionStore: SessionStore
 
     // Layout-resource IDs are resolved at runtime via getIdentifier so we
     // don't depend on the host APK's generated R class.
@@ -64,6 +66,20 @@ class PairingActivity : Activity() {
         emojiView = findViewById(resId("id", "textrcs_emoji_view"))
         resultPanel = findViewById(resId("id", "textrcs_result_panel"))
         resultText = findViewById(resId("id", "textrcs_result_text"))
+
+        sessionStore = SessionStore(this)
+        // If we're already paired, show that to the user instead of forcing
+        // a re-pair.
+        sessionStore.load()?.let { existing ->
+            showResult(buildString {
+                append("Already paired to Google Messages.\n\n")
+                append("Browser UUID: ${existing.browserUuid}\n")
+                append("Phone: ${existing.mobileDevice.sourceID}\n")
+                append("AES key length: ${existing.aesKey.size}\n")
+                append("HMAC key length: ${existing.hmacKey.size}\n\n")
+                append("Tap back to re-pair (this will overwrite the saved session).\n")
+            })
+        }
 
         connectButton.setOnClickListener { startGoogleLogin() }
     }
@@ -173,6 +189,10 @@ class PairingActivity : Activity() {
             orch.stop()
         }
 
+        // Persist before showing the success screen — so a crash on the
+        // confirmation screen doesn't lose the just-completed pairing.
+        sessionStore.save(session)
+
         mainHandler.post {
             showResult(buildString {
                 append("Paired to Google Messages.\n\n")
@@ -182,7 +202,7 @@ class PairingActivity : Activity() {
                 append("AES session key: ${session.aesKey.size} bytes\n")
                 append("HMAC session key: ${session.hmacKey.size} bytes\n")
                 append("Phone: sourceID=${session.mobileDevice.sourceID}\n\n")
-                append("Next: persist session, replace SMS send path with GMessages.\n")
+                append("Session saved. Outgoing SMS will route to Google Messages.\n")
             })
         }
     }

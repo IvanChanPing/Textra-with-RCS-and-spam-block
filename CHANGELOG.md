@@ -374,3 +374,27 @@ transport changes yet — this is just the base.
 
 ### Build / boot
 - `textra2_v0.11.0.apk` (73M) — installs side-by-side, boots cleanly.
+
+## v0.12.0 — 2026-05-15 — Session persistence (SessionStore)
+
+### Added
+- `inject_src/com/textrcs/protocol/SessionStore.kt` — SharedPreferences-backed
+  store for [GMessagesSession]. JSON envelope, base64 for byte arrays, the
+  `Device` proto stored as base64 of its binary proto bytes.
+- PairingActivity:
+  - Saves session via `SessionStore.save()` immediately after `finishPairing`
+    returns (before showing the success screen — survives screen-state crashes).
+  - On launch, if `SessionStore.load()` returns non-null, shows the existing
+    paired state instead of forcing the user back through the WebView flow.
+
+### Why plain SharedPreferences (not EncryptedSharedPreferences)
+- AndroidX `security-crypto` isn't bundled in the host APK and adding it
+  pulls in ~300KB plus tink — we'd need to update build.sh to fetch the
+  jars and merge them.
+- `/data/data/com.textra2/shared_prefs/` is sandboxed per-app by Android's
+  filesystem ACL — not world-readable on a non-rooted device.
+- Forward path: swap for EncryptedSharedPreferences in a future commit
+  if/when the user wants tighter at-rest protection.
+
+### Build / boot
+- `textra2_v0.12.0.apk` (73M) installs side-by-side, boots cleanly.
