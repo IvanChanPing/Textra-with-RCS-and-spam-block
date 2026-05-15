@@ -53,6 +53,14 @@ class Ukey2Handshake {
     var serverInitBytes: ByteArray = ByteArray(0)
         private set
 
+    /**
+     * Wrapped `Ukey2Message(CLIENT_FINISH)` bytes — computed in [makeClientInit]
+     * so we can commit to its SHA-512 in CLIENT_INIT, then re-sent verbatim in
+     * [makeClientFinished]. Storing the exact bytes (vs re-serializing) guarantees
+     * the commitment matches what the server receives.
+     */
+    private var clientFinishedOuterBytes: ByteArray = ByteArray(0)
+
     /** Auth key derived from the ECDH shared secret — first 4 bytes pick the emoji. */
     var ukeyV1Auth: ByteArray = ByteArray(0)
         private set
@@ -69,9 +77,20 @@ class Ukey2Handshake {
      * we'll reveal in step 3). We compute that same value here.
      */
     fun makeClientInit(): ByteArray {
-        // The ClientFinished payload we'll send in step 3 — we commit to its hash now.
-        val clientFinishedBytes = buildClientFinishedProto().toByteArray()
-        val commitment = sha512(clientFinishedBytes)
+        // Mautrix pair_google.go:143-158: build the OUTER Ukey2Message wrapping
+        // the Ukey2ClientFinished payload, take SHA-512 of THAT, use as the
+        // cipher commitment. Server verifies sha512(received CLIENT_FINISH
+        // outer bytes) == this commitment.
+        //
+        // v0.36.0 fix: previously hashed only the INNER Ukey2ClientFinished
+        // bytes; server saw OUTER bytes don't match → UKEY2_HANDSHAKE_ERROR.
+        val clientFinishedInner = buildClientFinishedProto()
+        val clientFinishedOuter = Ukey2Message.newBuilder()
+            .setMessageType(Ukey2Message.Type.CLIENT_FINISH)
+            .setMessageData(clientFinishedInner.toByteString())
+            .build()
+        clientFinishedOuterBytes = clientFinishedOuter.toByteArray()
+        val commitment = sha512(clientFinishedOuterBytes)
 
         val clientInit = Ukey2ClientInit.newBuilder()
             .setVersion(1)
@@ -148,12 +167,13 @@ class Ukey2Handshake {
      */
     fun makeClientFinished(): ByteArray {
         require(nextKey.isNotEmpty()) { "processServerInit() must be called first" }
-        val clientFinished = buildClientFinishedProto()
-        val message = Ukey2Message.newBuilder()
-            .setMessageType(Ukey2Message.Type.CLIENT_FINISH)
-            .setMessageData(clientFinished.toByteString())
-            .build()
-        return message.toByteArray()
+        // Return the EXACT bytes whose SHA-512 we committed to in makeClientInit.
+        // Re-serializing here could in principle produce different bytes (proto
+        // determinism caveats), which would break the server's hash check.
+        require(clientFinishedOuterBytes.isNotEmpty()) {
+            "makeClientInit() must be called first"
+        }
+        return clientFinishedOuterBytes
     }
 
     /**
