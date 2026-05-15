@@ -133,3 +133,35 @@ transport changes yet — this is just the base.
 
 ### Build
 - `textra2_v0.4.0.apk` (73M), still boots side-by-side with original Textra.
+
+## v0.5.0 — 2026-05-15 — UKEY2 handshake state machine
+
+### Added
+- `inject_src/com/textrcs/protocol/pairing/Ukey2Handshake.kt` — full
+  UKEY2 P256_SHA512 handshake. Port of mautrix/gmessages
+  `pkg/libgm/pair_google.go` (UKEY2 portion). Three steps:
+  1. `makeClientInit()` — generates ephemeral EC P-256 keypair, builds
+     `Ukey2ClientInit` proto with SHA-512 commitment of the future
+     `Ukey2ClientFinished` payload. Returns the wrapped `Ukey2Message`
+     bytes ready to wrap in `GaiaPairingRequestContainer.data` and send.
+  2. `processServerInit(serverBytes, version)` — parses `Ukey2Message` →
+     `Ukey2ServerInit`, validates version=1 and cipher=P256_SHA512, extracts
+     server EC pubkey via `EcP256.publicKeyFromXY`, performs ECDH, SHA-256
+     hashes the shared secret, HKDF-derives `ukeyV1Auth` and `nextKey` with
+     `authInfo = clientInitBytes || serverInitBytes`, picks the verification
+     emoji via `Ukey2Emojis.pick(version, ukeyV1Auth)`.
+  3. `makeClientFinished()` — builds `Ukey2ClientFinished` with our public
+     key (X/Y as 33-byte 0-prefixed coords, matching the Go wire format),
+     returns wrapped `Ukey2Message` bytes.
+- All proto interactions go through real protoc-generated classes
+  (`com.textrcs.gmproto.ukey.*`); no manual proto byte-twiddling.
+
+### Animation revert
+- Restored `<alpha>` in `slide_in_from_right_and_fade.xml` and
+  `slide_out_to_right_and_fade.xml` (commits 7558fb12 + 73de8593).
+- `docs/ANIMATION_TODO.md` notes the OnePlus-overlay research item for
+  later; conv-view will need its own anim resources + a new
+  ActivityStarter style index (or bypass `j4.a` directly).
+
+### Build / boot
+- `textra2_v0.5.0.apk` (73M) installs side-by-side, boots cleanly.
