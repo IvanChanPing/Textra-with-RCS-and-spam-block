@@ -229,3 +229,35 @@ transport changes yet — this is just the base.
 
 ### Build / boot
 - `textra2_v0.7.0.apk` (73M) installs side-by-side, boots cleanly.
+
+## v0.8.0 — 2026-05-15 — SignInGaia HTTP call
+
+### Added
+- `inject_src/com/textrcs/protocol/SignInGaiaClient.kt` — port of
+  mautrix `pkg/libgm/pair_google.go::signInGaiaGetToken`.
+  - Generates an EC P-256 refresh keypair via `KeyPairGenerator.getInstance("EC")`.
+  - Encodes the public key as X.509 SPKI DER (`PublicKey.encoded`),
+    matching Go's `x509.MarshalPKIXPublicKey`.
+  - Builds `SignInGaiaRequest` with `AuthMessage{requestID=UUID, network=GDitto,
+    configVersion=2026/3/18 v1=4 v2=6}` + Inner{deviceID, someData=SPKI bytes}.
+  - POSTs via [GMessagesHttpClient] with PBLite content type, with SAPISIDHASH
+    auto-attached (the cookie jar must already contain SAPISID).
+  - Parses [SignInGaiaResponse] → returns:
+    - `tachyonAuthToken` — initial token for long-poll auth
+    - `tokenTtlSeconds` — TTL hint
+    - `browserUuid` — Google-assigned UUID for this browser
+    - `devices` — paired phone(s)
+    - `refreshKeyPair` — kept by caller for `RegisterRefresh` later
+
+### Build / boot
+- `textra2_v0.8.0.apk` (73M) installs, boots cleanly.
+
+### User direction captured for follow-on commits
+- **Pairing UI must be button-driven** — no URL or text-field inputs. Single
+  "Connect to Google Messages" button → WebView Google login → emoji display
+  → user confirms in Google Messages app → done. UI design captured for next
+  commits.
+- **Default-SMS-app prompt** (currently from InitialSyncActivity) needs to be
+  removed/replaced since we're not an SMS app.
+- **Emulator + Frida** are available for runtime debugging of the protocol
+  flow (redroid13-pairip + Frida 17.9.6 already configured).
