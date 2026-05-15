@@ -76,3 +76,31 @@ transport changes yet — this is just the base.
 - UKEY2Handshake + Gaia pairing flow
 - LongPollService + GMessagesClient
 - C5217d integration
+
+## v0.3.0 — 2026-05-15 — real crypto layer
+
+### Added
+- `inject_src/com/textrcs/protocol/crypto/CryptoUtils.kt` — port of
+  mautrix/gmessages `pkg/libgm/crypto/{aesctr,aesgcm,generate}.go`:
+  - `CryptoUtils.randomBytes(n)` / `generateKey(32)` — SecureRandom CSPRNG.
+  - `AESCTRHelper(aesKey, hmacKey)` — AES-256-CTR encrypt/decrypt with
+    appended IV (16B) and HMAC-SHA256 (32B). Wire format:
+    `ciphertext || iv || hmac`. Constant-time HMAC compare on decrypt.
+  - `AESGCMHelper(key)` — AES-256-GCM chunked encryption matching the
+    Google Messages media-upload format: 2-byte header `[0x00][log2(32768)=15]`
+    followed by 32 KiB chunks, each with 12-byte nonce prepended and 5-byte
+    AAD `[isLast: u8][chunkIndex: u32 BE]`. All javax.crypto-backed; no
+    third-party crypto deps.
+
+### Beeper decompile finding
+- Beeper's `com.beeper.chat.booper.bridges.api.GoogleMessagesApi` uses Ktor
+  HTTP client to call **Beeper's cloud**, not Google Messages directly.
+- Beeper APK contains **zero `.so` files** and **zero direct protocol code**.
+- Beeper's architecture: Android → Ktor → Beeper cloud → mautrix-gmessages
+  (server-side) → Google Messages Web.
+- ⇒ Decompiling Beeper further won't help; mautrix/gmessages Go source is
+  the only direct-on-device reference.
+
+### Build
+- Compiles, packages, signs, installs side-by-side, boots cleanly on redroid13.
+- `textra2_v0.3.0.apk` placed in project root for convenience.
