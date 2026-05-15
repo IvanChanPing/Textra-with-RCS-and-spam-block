@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Old (conv-list) screen slides back from the -30% parallax offset to 0
+     while the new screen exits to the right. -->
+<translate xmlns:a="http://schemas.android.com/apk/res/android"
+    a:fromXDelta="-30%p"
+    a:toXDelta="0"
+    a:duration="240"
+    a:interpolator="@android:interpolator/fast_out_linear_in"/>

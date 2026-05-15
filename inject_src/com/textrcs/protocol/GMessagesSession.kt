@@ -15,6 +15,9 @@ import com.textrcs.gmproto.authentication.Device
  * @property mobileDevice     the paired phone (sourceID, userID, network)
  * @property cookies          SAPISID + co; required for clients6 auth on
  *                            every request via SAPISIDHASH
+ * @property refreshKeyPkcs8  PKCS#8-encoded EC P-256 private key used by
+ *                            RegisterRefresh to sign refresh requests
+ *                            (matches `c.AuthData.RefreshKey` in mautrix)
  */
 data class GMessagesSession(
     val tachyonAuthToken: ByteArray,
@@ -24,4 +27,5 @@ data class GMessagesSession(
     val hmacKey: ByteArray,
     val mobileDevice: Device,
     val cookies: Map<String, String>,
+    val refreshKeyPkcs8: ByteArray,
 )

@@ -610,3 +610,59 @@ SmsManager is never called. No cellular radio activity.
 ### Build / boot
 - `textra2_v0.17.0.apk` (73M) — installs side-by-side, boots cleanly.
   Process stays up; no FATAL.
+
+## v0.18.0 — 2026-05-15 — Token refresh (RegisterRefresh + persisted EC signing key)
+
+### Added
+- `inject_src/com/textrcs/protocol/TokenRefreshClient.kt` — port of mautrix
+  `pkg/libgm/client.go::doRefreshAuthToken`. Builds
+  `RegisterRefreshRequest{messageAuth{requestID, tachyonAuthToken, GDitto,
+  configVersion}, unixTimestamp=now_ms*1000, signature=
+  ECDSA-DER(SHA-256("$requestID:$timestampMicros")), parameters{emptyArr},
+  messageType=2}`, POSTs PBLite to `/Registration/RegisterRefresh`, parses
+  `RegisterRefreshResponse`, returns a new [GMessagesSession] with the
+  refreshed `tachyonAuthToken`.
+- ECDSA signing via `Signature.getInstance("NONEwithECDSA")` over the
+  pre-computed SHA-256 digest — matches Go's `ecdsa.SignASN1` semantics
+  (DER-encoded `r,s`). `KeyFactory.getInstance("EC").generatePrivate(
+  PKCS8EncodedKeySpec(pkcs8))` reconstructs the private key.
+
+### Schema changes
+- `GMessagesSession.refreshKeyPkcs8: ByteArray` — added field. Stores
+  the PKCS#8 encoding of the EC P-256 private key generated at SignInGaia
+  time. Persisted via [SessionStore] alongside the other session bytes.
+- `SessionStore.load()` accepts the v0.17 schema where `refreshKeyPkcs8`
+  is absent (loads as empty); the refresh path checks for empty and
+  logs "skip; older pairing — re-pair to enable refresh".
+
+### ReceiveService integration
+- Single-thread `ScheduledExecutorService` (`TextRCS-Refresh` daemon).
+- After the long-poll receiver is started, schedules a refresh attempt at
+  `(tokenTtlSeconds - 3600)` seconds (1h safety margin). On success:
+  saves the new session via SessionStore and reschedules for the new TTL.
+  On failure: retries in 5 minutes.
+
+## v0.19.0 — 2026-05-15 — iOS/OnePlus parallax conv-view animation
+
+### Added
+- `textra_base/res/anim/textrcs_overlay_enter.xml` — new screen (conv-view)
+  slides in from right (100% → 0) over 280ms with fast_out_slow_in.
+- `textrcs_overlay_partial_exit.xml` — old screen (conv-list) slides
+  part-way left (0 → -30%) over 280ms with fast_out_slow_in. This is
+  what creates the "pushed underneath" iOS/OnePlus parallax effect.
+- `textrcs_overlay_exit.xml` — new screen slides fully out to the right
+  on close (0 → 100%, 240ms, fast_out_linear_in).
+- `textrcs_overlay_partial_enter.xml` — old screen slides back from -30%
+  to 0 on close (240ms, fast_out_linear_in).
+
+### Wiring (theme-level, no smali patch)
+- New `<style name="TextrcsOverlayWindowAnimation">` references the four
+  anims via `android:activity{Open,Close}{Enter,Exit}Animation`.
+- `AppTheme.ConvoActivity` (the theme attached to `ConvoActivity` in the
+  manifest) gets `<item name="android:windowAnimationStyle">@style/
+  TextrcsOverlayWindowAnimation</item>`.
+- Settings, new-conv FAB, and other non-conv activities are unaffected
+  (their themes are different).
+
+### Build / boot
+- `textra2_v0.19.0.apk` (74M) — installs side-by-side, boots cleanly.

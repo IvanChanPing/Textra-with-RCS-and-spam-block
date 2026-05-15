@@ -123,6 +123,7 @@ class GaiaPairingOrchestrator(
             hmacKey = crypto.hmacKey,
             mobileDevice = signInResult.devices.first(),
             cookies = http.cookies.toMap(),
+            refreshKeyPkcs8 = signInResult.refreshKeyPair.private.encoded,
         )
     }
 

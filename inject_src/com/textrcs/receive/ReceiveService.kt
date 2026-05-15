@@ -14,9 +14,12 @@ import com.textrcs.gmproto.rpc.ActionType
 import com.textrcs.gmproto.rpc.IncomingRPCMessage
 import com.textrcs.gmproto.rpc.RPCMessageData
 import com.textrcs.protocol.SessionStore
+import com.textrcs.protocol.TokenRefreshClient
 import com.textrcs.protocol.crypto.AESCTRHelper
 import com.textrcs.protocol.http.GMessagesHttpClient
 import com.textrcs.protocol.longpoll.LongPollReceiver
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 
 /**
  * Foreground service that maintains the Google Messages Web receive
@@ -35,6 +38,9 @@ class ReceiveService : Service() {
     private var receiverThread: Thread? = null
     private var crypto: AESCTRHelper? = null
     private var http: GMessagesHttpClient? = null
+    private val refreshScheduler = Executors.newSingleThreadScheduledExecutor { r ->
+        Thread(r, "TextRCS-Refresh").apply { isDaemon = true }
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -54,6 +60,7 @@ class ReceiveService : Service() {
         super.onDestroy()
         receiver?.stop()
         receiverThread?.interrupt()
+        refreshScheduler.shutdownNow()
     }
 
     // ─────────────────────────────────────────────────────────────────────
@@ -90,6 +97,41 @@ class ReceiveService : Service() {
         receiverThread = Thread(recv, "TextRCS-Receive").apply {
             isDaemon = false
             start()
+        }
+        scheduleTokenRefresh(session)
+    }
+
+    /**
+     * Schedule a `RegisterRefresh` call before the tachyon token expires.
+     * Run at `ttl - 60min` (60min safety margin). Reschedules itself with
+     * the new TTL on success.
+     */
+    private fun scheduleTokenRefresh(session: com.textrcs.protocol.GMessagesSession) {
+        // ttl can be 0 from older sessions; in that case run an immediate
+        // refresh attempt and let the server return a current ttl.
+        val ttl = if (session.tokenTtlSeconds > 0) session.tokenTtlSeconds else 3600L
+        val refreshAtSeconds = (ttl - 3600L).coerceAtLeast(60L)
+        refreshScheduler.schedule({ tryRefreshAndReschedule() }, refreshAtSeconds, TimeUnit.SECONDS)
+        Log.d(TAG, "scheduled token refresh in ${refreshAtSeconds}s (ttl=${ttl}s)")
+    }
+
+    private fun tryRefreshAndReschedule() {
+        val store = SessionStore(this)
+        val current = store.load() ?: return
+        if (current.refreshKeyPkcs8.isEmpty()) {
+            Log.w(TAG, "session has no refreshKeyPkcs8 (older pairing) — skipping refresh")
+            return
+        }
+        try {
+            val httpClient = http ?: GMessagesHttpClient(current.cookies.toMutableMap())
+            val refreshed = TokenRefreshClient(httpClient, current).refresh()
+            store.save(refreshed)
+            Log.i(TAG, "token refreshed; new ttl=${refreshed.tokenTtlSeconds}s")
+            scheduleTokenRefresh(refreshed)
+        } catch (e: Throwable) {
+            Log.w(TAG, "token refresh failed: ${e.javaClass.simpleName}: ${e.message}")
+            // Retry in 5min.
+            refreshScheduler.schedule({ tryRefreshAndReschedule() }, 5L, TimeUnit.MINUTES)
         }
     }
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- New (conv-view) screen slides fully in from the right. iOS/OnePlus parallax. -->
+<translate xmlns:a="http://schemas.android.com/apk/res/android"
+    a:fromXDelta="100%p"
+    a:toXDelta="0"
+    a:duration="280"
+    a:interpolator="@android:interpolator/fast_out_slow_in"/>

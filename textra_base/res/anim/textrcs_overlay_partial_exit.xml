@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Old (conv-list) screen slides part-way left while new screen overlays it.
+     This is what produces the "pushed underneath" iOS/OnePlus look. -->
+<translate xmlns:a="http://schemas.android.com/apk/res/android"
+    a:fromXDelta="0"
+    a:toXDelta="-30%p"
+    a:duration="280"
+    a:interpolator="@android:interpolator/fast_out_slow_in"/>

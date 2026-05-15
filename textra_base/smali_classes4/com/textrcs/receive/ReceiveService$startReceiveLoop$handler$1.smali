@@ -56,7 +56,7 @@
 
     iput-object p1, p0, Lcom/textrcs/receive/ReceiveService$startReceiveLoop$handler$1;->this$0:Lcom/textrcs/receive/ReceiveService;
 
-    .line 73
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +68,7 @@
     .registers 2
     .param p1, "ack"    # Lcom/textrcs/gmproto/rpc/StartAckMessage;
 
-    .line 73
+    .line 80
     invoke-static {p0, p1}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onAck(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;Lcom/textrcs/gmproto/rpc/StartAckMessage;)V
 
     return-void
@@ -77,14 +77,14 @@
 .method public onConnected()V
     .registers 3
 
-    .line 78
+    .line 85
     const-string v0, "TextRCSReceive"
 
     const-string v1, "Long-poll connected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
+    .line 86
     return-void
 .end method
 
@@ -92,7 +92,7 @@
     .registers 4
     .param p1, "cleanClose"    # Z
 
-    .line 81
+    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +121,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 89
     return-void
 .end method
 
@@ -133,7 +133,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 84
+    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,14 +160,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
+    .line 92
     return-void
 .end method
 
 .method public onHeartbeat()V
     .registers 1
 
-    .line 73
+    .line 80
     invoke-static {p0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onHeartbeat(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;)V
 
     return-void
@@ -181,20 +181,20 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 75
+    .line 82
     iget-object v0, p0, Lcom/textrcs/receive/ReceiveService$startReceiveLoop$handler$1;->this$0:Lcom/textrcs/receive/ReceiveService;
 
     # invokes: Lcom/textrcs/receive/ReceiveService;->dispatchRpc(Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;)V
     invoke-static {v0, p1}, Lcom/textrcs/receive/ReceiveService;->access$dispatchRpc(Lcom/textrcs/receive/ReceiveService;Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;)V
 
-    .line 76
+    .line 83
     return-void
 .end method
 
 .method public onStartRead()V
     .registers 1
 
-    .line 73
+    .line 80
     invoke-static {p0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onStartRead(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;)V
 
     return-void

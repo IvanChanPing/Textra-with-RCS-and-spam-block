@@ -42,6 +42,7 @@ class SessionStore(context: Context) {
             val cookieJson = JSONObject()
             for ((k, v) in session.cookies) cookieJson.put(k, v)
             put("cookies", cookieJson)
+            put("refreshKeyPkcs8", b64(session.refreshKeyPkcs8))
             put("savedAtMs", System.currentTimeMillis())
         }
         prefs.edit().putString(KEY_BLOB, json.toString()).apply()
@@ -62,6 +63,7 @@ class SessionStore(context: Context) {
                 hmacKey = unb64(json.getString("hmacKey")),
                 mobileDevice = Device.parseFrom(unb64(json.getString("mobileDevice"))),
                 cookies = cookieMap,
+                refreshKeyPkcs8 = unb64(json.optString("refreshKeyPkcs8", "")),
             )
         } catch (_: Throwable) {
             null
