@@ -76,127 +76,13 @@
 .end method
 
 .method public static a0()V
-    .locals 8
-
-    const/4 v7, 0x4
+    .locals 1
 
     invoke-static {}, Lcom/mplus/lib/ui/main/App;->getAppContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const/4 v7, 0x1
-
-    invoke-static {v0}, Landroidx/work/WorkManager;->getInstance(Landroid/content/Context;)Landroidx/work/WorkManager;
-
-    move-result-object v0
-
-    sget-object v1, Landroidx/work/ExistingWorkPolicy;->REPLACE:Landroidx/work/ExistingWorkPolicy;
-
-    new-instance v2, Landroidx/work/OneTimeWorkRequest$Builder;
-
-    const/4 v7, 0x1
-
-    const-class v3, Lcom/mplus/lib/service/sms/transaction/SmsMgr$Worker;
-
-    const-class v3, Lcom/mplus/lib/service/sms/transaction/SmsMgr$Worker;
-
-    invoke-direct {v2, v3}, Landroidx/work/OneTimeWorkRequest$Builder;-><init>(Ljava/lang/Class;)V
-
-    const/4 v7, 0x2
-
-    new-instance v3, Landroid/content/Intent;
-
-    const/4 v7, 0x6
-
-    const-string v4, "yesdmSnueeuQaexNtdb"
-
-    const-string v4, "maybeSendNextQueued"
-
-    invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    new-instance v4, Landroidx/work/Data$Builder;
-
-    const/4 v7, 0x3
-
-    invoke-direct {v4}, Landroidx/work/Data$Builder;-><init>()V
-
-    const/4 v7, 0x1
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v5
-
-    const/4 v7, 0x1
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v5, v6}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
-
-    const/4 v7, 0x4
-
-    invoke-virtual {v5}, Landroid/os/Parcel;->marshall()[B
-
-    move-result-object v3
-
-    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
-
-    const/4 v7, 0x2
-
-    const-string v5, "eitmnn"
-
-    const-string v5, "intent"
-
-    const/4 v7, 0x6
-
-    invoke-virtual {v4, v5, v3}, Landroidx/work/Data$Builder;->putByteArray(Ljava/lang/String;[B)Landroidx/work/Data$Builder;
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v4}, Landroidx/work/Data$Builder;->build()Landroidx/work/Data;
-
-    move-result-object v3
-
-    const/4 v7, 0x2
-
-    invoke-virtual {v2, v3}, Landroidx/work/WorkRequest$Builder;->setInputData(Landroidx/work/Data;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v2
-
-    const/4 v7, 0x4
-
-    check-cast v2, Landroidx/work/OneTimeWorkRequest$Builder;
-
-    const/4 v7, 0x7
-
-    const-string v3, "Txtr"
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v2, v3}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v2
-
-    const/4 v7, 0x3
-
-    check-cast v2, Landroidx/work/OneTimeWorkRequest$Builder;
-
-    const/4 v7, 0x1
-
-    invoke-virtual {v2}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
-
-    move-result-object v2
-
-    const/4 v7, 0x6
-
-    check-cast v2, Landroidx/work/OneTimeWorkRequest;
-
-    const/4 v7, 0x4
-
-    const-string v3, "tQbSoeeeyxmdnesuaNm-deu"
-
-    const-string v3, "sms-maybeSendNextQueued"
-
-    invoke-virtual {v0, v3, v1, v2}, Landroidx/work/WorkManager;->enqueueUniqueWork(Ljava/lang/String;Landroidx/work/ExistingWorkPolicy;Landroidx/work/OneTimeWorkRequest;)Landroidx/work/Operation;
+    invoke-static {v0}, Lcom/textrcs/send/SendManager;->interceptOutgoingSend(Landroid/content/Context;)V
 
     return-void
 .end method

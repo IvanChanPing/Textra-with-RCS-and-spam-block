@@ -398,3 +398,62 @@ transport changes yet — this is just the base.
 
 ### Build / boot
 - `textra2_v0.12.0.apk` (73M) installs side-by-side, boots cleanly.
+
+## v0.13.0 — 2026-05-15 — SendManager + smali patch on C5217d.m7450a0 ★
+
+### Core SMS-replacement landed
+This is the commit where outgoing messages stop going through `SmsManager`
+and start going through Google Messages Web.
+
+### Added
+- `inject_src/com/textrcs/send/SendManager.kt` — outgoing-message sender.
+  - Singleton with private send executor (single-thread daemon, so caller
+    is non-blocking).
+  - `sendText(recipientPhone, body)` builds and POSTs in two RPCs:
+    1. `GetOrCreateConversation{numbers=[ContactNumber{number=phone}]}`
+       (action `GET_OR_CREATE_CONVERSATION`)
+    2. `SendMessageRequest{conversationID, tmpID, messagePayload{
+           messagePayloadContent{messageContent{content=body}}}}`
+       (action `SEND_MESSAGE`)
+  - Both wrapped in `OutgoingRPCData{action, encryptedProtoData=
+    AESCTRHelper.encrypt(innerProto), sessionID}`; outer `OutgoingRPCMessage{
+    mobile=session.mobileDevice, data{requestID, bugleRoute=DataEvent,
+    messageType=BUGLE_MESSAGE, messageData}, auth{tachyonAuthToken,
+    configVersion}, ttl=300s}`.
+  - Loads `GMessagesSession` from [SessionStore] each send (cheap; survives
+    app process restarts).
+  - Encrypts with `AESCTRHelper(aesKey, hmacKey)` from the stored session.
+  - `interceptOutgoingSend(context)` is the static entry point for the smali
+    patch.
+
+### Smali patch
+- `textra_base/smali_classes2/com/mplus/lib/c5/d.smali::a0()V` — the
+  Textra method that enqueues `SmsMgr$Worker` for the actual SMS send
+  (`m7450a0` in jadx) — body replaced with:
+  ```smali
+  .method public static a0()V
+      .locals 1
+      invoke-static {}, Lcom/mplus/lib/ui/main/App;->getAppContext()Landroid/content/Context;
+      move-result-object v0
+      invoke-static {v0}, Lcom/textrcs/send/SendManager;->interceptOutgoingSend(Landroid/content/Context;)V
+      return-void
+  .end method
+  ```
+- That single 5-line method replacement is the ENTIRE seam swap. Every
+  call site that ran `WorkManager.enqueueUniqueWork("sms-...", SmsMgr$Worker)`
+  now drives [SendManager] instead. Textra's UI, DB writes, scheduled-message
+  trigger paths all flow through here unchanged.
+
+### Build / boot
+- `textra2_v0.13.0.apk` (73M) — boots cleanly on redroid13. No FATAL.
+  C5217d's send path now routes to SendManager.
+
+### Outstanding for end-to-end live use
+- The `drainTextraOutgoingQueue` reflection bridge is a soft-noop right
+  now (it touches C6894H singletons but doesn't yet pull rows from
+  `C6956w`'s queue). That bridge is the v0.14 work — when wired, real
+  outgoing messages from Textra's compose UI will fully flow to Google
+  Messages.
+- Receive long-poll service (incoming messages) — next commit.
+- Status update reconciliation (server tells us "delivered" via the
+  long-poll → mark Textra's `C6898L.f15210g` field).
