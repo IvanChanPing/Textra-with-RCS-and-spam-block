@@ -91,6 +91,11 @@ class Ukey2Handshake {
             .build()
         clientFinishedOuterBytes = clientFinishedOuter.toByteArray()
         val commitment = sha512(clientFinishedOuterBytes)
+        com.textrcs.diag.PairingTrace.log("UKEY2", "commitment",
+            "finishOuterLen=${clientFinishedOuterBytes.size}",
+            "commitHex=${com.textrcs.diag.PairingTrace.hexShort(commitment, 16)}",
+            "pubXHex=${com.textrcs.diag.PairingTrace.hexShort(com.textrcs.protocol.crypto.EcP256.xBytes(ourPublic), 16)}",
+            "pubYHex=${com.textrcs.diag.PairingTrace.hexShort(com.textrcs.protocol.crypto.EcP256.yBytes(ourPublic), 16)}")
 
         val clientInit = Ukey2ClientInit.newBuilder()
             .setVersion(1)
@@ -157,7 +162,14 @@ class Ukey2Handshake {
         ukeyV1Auth = HkdfSha256.derive(sharedSecret, "UKEY2 v1 auth".toByteArray(), authInfo)
         nextKey = HkdfSha256.derive(sharedSecret, "UKEY2 v1 next".toByteArray(), authInfo)
 
-        return Ukey2Emojis.pick(verificationCodeVersion, ukeyV1Auth)
+        val emoji = Ukey2Emojis.pick(verificationCodeVersion, ukeyV1Auth)
+        com.textrcs.diag.PairingTrace.log("UKEY2", "server-init-processed",
+            "serverInitLen=${serverInitBytes.size}",
+            "verCodeVer=$verificationCodeVersion",
+            "sharedFingerprint=${com.textrcs.diag.PairingTrace.hexShort(sha256(sharedSecret), 8)}",
+            "authFingerprint=${com.textrcs.diag.PairingTrace.hexShort(ukeyV1Auth, 8)}",
+            "emoji=$emoji")
+        return emoji
     }
 
     /**

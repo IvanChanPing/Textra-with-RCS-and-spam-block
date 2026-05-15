@@ -71,9 +71,17 @@ class GaiaPairingOrchestrator(
      *         response arrives within 30 seconds.
      */
     fun beginPairing(): String {
+        com.textrcs.diag.PairingTrace.log("ORCH", "beginPairing-start",
+            "pairAttemptId=$pairingAttemptId",
+            "sessionId=$sessionId",
+            "destRegId=${signInResult.destRegistrationId ?: "<null>"}")
         startLongPoll()
+        com.textrcs.diag.PairingTrace.log("ORCH", "longpoll-started")
 
         val clientInitBytes = ukey2.makeClientInit()
+        com.textrcs.diag.PairingTrace.log("UKEY2", "client-init",
+            "outerLen=${clientInitBytes.size}",
+            "outerHex=${com.textrcs.diag.PairingTrace.hexShort(clientInitBytes, 24)}")
         val responseMsg = sendGaiaPairingMessage(
             action = ActionType.CREATE_GAIA_PAIRING_CLIENT_INIT,
             data = clientInitBytes,
@@ -140,7 +148,11 @@ class GaiaPairingOrchestrator(
      * @throws PairingException on `finishErrorType != 0`.
      */
     fun finishPairing(): GMessagesSession {
+        com.textrcs.diag.PairingTrace.log("ORCH", "finishPairing-start")
         val clientFinishBytes = ukey2.makeClientFinished()
+        com.textrcs.diag.PairingTrace.log("UKEY2", "client-finish",
+            "outerLen=${clientFinishBytes.size}",
+            "outerHex=${com.textrcs.diag.PairingTrace.hexShort(clientFinishBytes, 24)}")
         val responseMsg = sendGaiaPairingMessage(
             action = ActionType.CREATE_GAIA_PAIRING_CLIENT_FINISHED,
             data = clientFinishBytes,
@@ -214,16 +226,28 @@ class GaiaPairingOrchestrator(
                 val isGaiaPairingAction =
                     rpcData.action == ActionType.CREATE_GAIA_PAIRING_CLIENT_INIT ||
                     rpcData.action == ActionType.CREATE_GAIA_PAIRING_CLIENT_FINISHED
+                val hasUnencrypted = !rpcData.unencryptedData.isEmpty
+                val hasEncrypted = !rpcData.encryptedData.isEmpty
+                val hasEncrypted2 = !rpcData.encryptedData2.isEmpty
                 if (!isGaiaPairingAction) {
-                    // No real payload AND not a gaia-pairing-action ack →
-                    // this is the placeholder. Drop it and keep waiting.
-                    val hasUnencrypted = !rpcData.unencryptedData.isEmpty
-                    val hasEncrypted = !rpcData.encryptedData.isEmpty
-                    val hasEncrypted2 = !rpcData.encryptedData2.isEmpty
-                    if (!hasUnencrypted && !hasEncrypted && !hasEncrypted2) return
+                    if (!hasUnencrypted && !hasEncrypted && !hasEncrypted2) {
+                        com.textrcs.diag.PairingTrace.log("LP-FRAME", "placeholder-skip",
+                            "corrId=${correlationId.take(8)}",
+                            "action=${rpcData.action}")
+                        return
+                    }
                 }
+                com.textrcs.diag.PairingTrace.log("LP-FRAME", "deliver",
+                    "corrId=${correlationId.take(8)}",
+                    "action=${rpcData.action}",
+                    "unencLen=${rpcData.unencryptedData.size()}",
+                    "encLen=${rpcData.encryptedData.size()}",
+                    "enc2Len=${rpcData.encryptedData2.size()}")
 
                 val waiter = pendingResponses[correlationId]
+                if (waiter == null) {
+                    com.textrcs.diag.PairingTrace.log("LP-FRAME", "no-waiter", "corrId=${correlationId.take(8)}")
+                }
                 waiter?.offer(msg)
             }
             override fun onError(e: Throwable) {

@@ -84,7 +84,11 @@ class PairingActivity : Activity() {
             })
         }
 
-        connectButton.setOnClickListener { startGoogleLogin() }
+        connectButton.setOnClickListener {
+            com.textrcs.diag.PairingTrace.start()
+            com.textrcs.diag.PairingTrace.log("UI", "connect-tapped")
+            startGoogleLogin()
+        }
     }
 
     // ─────────────────────────────────────────────────────────────────────
@@ -118,9 +122,11 @@ class PairingActivity : Activity() {
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
+                com.textrcs.diag.PairingTrace.log("WEBVIEW", "onPageFinished", "url=${url?.take(80) ?: "null"}")
                 tryHarvestSapisid(url)
             }
         }
+        com.textrcs.diag.PairingTrace.log("WEBVIEW", "loadUrl", "url=${GMessagesConstants.GAIA_LOGIN_URL.take(80)}")
         webView.loadUrl(GMessagesConstants.GAIA_LOGIN_URL)
     }
 
@@ -137,12 +143,33 @@ class PairingActivity : Activity() {
         //                                    returned by androidCustomCookieDomain("gmessages"))
         // We pass a full URL, NOT a bare domain like ".google.com".
         val rawCookie = CookieManager.getInstance().getCookie("https://messages.google.com")
-            ?: return
+        if (rawCookie == null) {
+            com.textrcs.diag.PairingTrace.log("COOKIE", "absent")
+            return
+        }
         // Quick guard: don't re-trigger after we've already started SignInGaia.
         if (signInTriggered) return
-        if (!rawCookie.contains("SAPISID")) return
+        if (!rawCookie.contains("SAPISID")) {
+            com.textrcs.diag.PairingTrace.log(
+                "COOKIE", "no-sapisid",
+                "len=${rawCookie.length}",
+                "names=" + rawCookie.split("; ").mapNotNull {
+                    val eq = it.indexOf('=')
+                    if (eq > 0) it.substring(0, eq) else null
+                }.joinToString(",")
+            )
+            return
+        }
 
         httpClient.ingestCookieHeader(rawCookie)
+        com.textrcs.diag.PairingTrace.log(
+            "COOKIE", "sapisid-captured",
+            "rawLen=${rawCookie.length}",
+            "names=" + rawCookie.split("; ").mapNotNull {
+                val eq = it.indexOf('=')
+                if (eq > 0) it.substring(0, eq) else null
+            }.joinToString(",")
+        )
 
         signInTriggered = true
         runOnUiThread {
@@ -159,29 +186,40 @@ class PairingActivity : Activity() {
     // ─────────────────────────────────────────────────────────────────────
 
     private fun runSignInGaiaOffMainThread() {
+        com.textrcs.diag.PairingTrace.log("SIGNIN", "start")
         val signInResult = try {
             signInClient.signIn()
         } catch (e: Throwable) {
-            mainHandler.post { showResult("SignInGaia failed:\n${e.javaClass.simpleName}: ${e.message}") }
+            com.textrcs.diag.PairingTrace.log("SIGNIN", "FAILED",
+                "ex=${e.javaClass.simpleName}", "msg=${e.message}")
+            uploadTraceOnError("signin-fail")
+            mainHandler.post { showResult("SignInGaia failed:\n${e.javaClass.simpleName}: ${e.message}\n\n${com.textrcs.diag.PairingTrace.snapshot()}") }
             return
         }
+        com.textrcs.diag.PairingTrace.log("SIGNIN", "ok",
+            "tokenLen=${signInResult.tachyonAuthToken.size}",
+            "ttl=${signInResult.tokenTtlSeconds}",
+            "browserUUID=${signInResult.browserUuid}",
+            "deviceCount=${signInResult.devices.size}",
+            "destRegId=${signInResult.destRegistrationId ?: "<null>"}")
 
-        // Step 3 — open the receive long-poll, send CLIENT_INIT, get the
-        // verification emoji.
         val orch = GaiaPairingOrchestrator(httpClient, signInResult)
         orchestrator = orch
+        com.textrcs.diag.PairingTrace.log("PAIR", "beginPairing-call")
         val emoji = try {
             orch.beginPairing()
         } catch (e: Throwable) {
+            com.textrcs.diag.PairingTrace.log("PAIR", "begin-FAILED",
+                "ex=${e.javaClass.simpleName}", "msg=${e.message}")
+            uploadTraceOnError("begin-fail")
             orch.stop()
             mainHandler.post {
-                showResult("Pairing beginPairing failed:\n${e.javaClass.simpleName}: ${e.message}")
+                showResult("Pairing beginPairing failed:\n${e.javaClass.simpleName}: ${e.message}\n\n${com.textrcs.diag.PairingTrace.snapshot()}")
             }
             return
         }
+        com.textrcs.diag.PairingTrace.log("PAIR", "emoji-derived", "emoji=$emoji")
 
-        // Step 4 — show emoji and start CLIENT_FINISH in another bg thread
-        // (it blocks on the long-poll for the user's confirmation response).
         mainHandler.post {
             introPanel.visibility = View.GONE
             webView.visibility = View.GONE
@@ -192,18 +230,31 @@ class PairingActivity : Activity() {
         Thread { runFinishOffMainThread(orch, signInResult) }.start()
     }
 
+    private fun uploadTraceOnError(tag: String) {
+        com.textrcs.diag.LogUploader.upload(
+            "pairing-$tag",
+            com.textrcs.diag.PairingTrace.snapshot(),
+        )
+    }
+
     private fun runFinishOffMainThread(
         orch: GaiaPairingOrchestrator,
         signInResult: SignInGaiaClient.SignInResult,
     ) {
+        com.textrcs.diag.PairingTrace.log("PAIR", "finishPairing-call")
         val session: GMessagesSession = try {
             orch.finishPairing()
         } catch (e: PairingException) {
-            mainHandler.post { showResult("Pairing failed:\n${e.message}") }
+            com.textrcs.diag.PairingTrace.log("PAIR", "finish-FAILED", "msg=${e.message}")
+            uploadTraceOnError("finish-fail")
+            mainHandler.post { showResult("Pairing failed:\n${e.message}\n\n${com.textrcs.diag.PairingTrace.snapshot()}") }
             return
         } catch (e: Throwable) {
+            com.textrcs.diag.PairingTrace.log("PAIR", "finish-EXCEPTION",
+                "ex=${e.javaClass.simpleName}", "msg=${e.message}")
+            uploadTraceOnError("finish-exception")
             mainHandler.post {
-                showResult("Pairing finish failed:\n${e.javaClass.simpleName}: ${e.message}")
+                showResult("Pairing finish failed:\n${e.javaClass.simpleName}: ${e.message}\n\n${com.textrcs.diag.PairingTrace.snapshot()}")
             }
             return
         } finally {
@@ -213,6 +264,16 @@ class PairingActivity : Activity() {
         // Persist before showing the success screen — so a crash on the
         // confirmation screen doesn't lose the just-completed pairing.
         sessionStore.save(session)
+        com.textrcs.diag.PairingTrace.log("PAIR", "session-saved",
+            "browserUUID=${session.browserUuid}",
+            "aesKeyLen=${session.aesKey.size}",
+            "hmacKeyLen=${session.hmacKey.size}",
+            "phone=${session.mobileDevice.sourceID}")
+        // Upload the successful trace so we have a known-good baseline.
+        com.textrcs.diag.LogUploader.upload(
+            "pairing-success",
+            com.textrcs.diag.PairingTrace.snapshot(),
+        )
         // Start the receive long-poll service.
         startReceiveServiceCompat()
 
