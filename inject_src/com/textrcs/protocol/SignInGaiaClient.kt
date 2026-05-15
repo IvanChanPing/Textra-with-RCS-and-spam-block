@@ -54,6 +54,20 @@ class SignInGaiaClient(
         val browserUuid: String,
         val devices: List<Device>,
         val refreshKeyPair: KeyPair,
+        /**
+         * Phone's pairing-routing UUID. Mautrix `pair_google.go:345-377`:
+         * iterate `SignInGaiaResponse.DeviceData.unknownItems2` for items where
+         * `unknownInt4 == 1` (the destination/phone device). Use that item's
+         * `destOrSourceUUID` as the routing target.
+         *
+         * Mautrix then appends this string to the OutgoingRPCMessage's
+         * `destRegistrationIDs` field 9 on every outgoing message
+         * (session_handler.go:218-222). Without it, the server can't tie our
+         * CLIENT_FINISHED back to the pairing attempt — yields
+         * `NOT_LATEST_ATTEMPT` immediately. Verified by user runtime error
+         * on v0.34.0.
+         */
+        val destRegistrationId: String?,
     )
 
     /**
@@ -113,7 +127,27 @@ class SignInGaiaClient(
             browserUuid = response.maybeBrowserUUID,
             devices = if (devices.isEmpty()) listOf(device) else devices,
             refreshKeyPair = refreshKeyPair,
+            destRegistrationId = pickDestRegistrationId(response),
         )
+    }
+
+    /**
+     * Mautrix `pair_google.go:345-377`: scan `deviceData.unknownItems2`
+     * looking for items where `unknownInt4 == 1` (the destination/phone
+     * device per the proto comment "1 for destination device, 6 for local
+     * device"). Return that item's `destOrSourceUUID`. If multiple, mautrix
+     * picks via `GaiaHackyDeviceSwitcher` index — we just take the first
+     * since the typical case is one phone.
+     */
+    private fun pickDestRegistrationId(response: SignInGaiaResponse): String? {
+        val items = response.deviceData?.unknownItems2List ?: return null
+        for (item in items) {
+            if (item.unknownInt4 == 1) {
+                val uuid = item.destOrSourceUUID
+                if (uuid.isNotEmpty()) return uuid
+            }
+        }
+        return null
     }
 
     // ─────────────────────────────────────────────────────────────────────

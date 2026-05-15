@@ -306,7 +306,7 @@ class GaiaPairingOrchestrator(
             }
             .build()
 
-        val outer = OutgoingRPCMessage.newBuilder()
+        val outerBuilder = OutgoingRPCMessage.newBuilder()
             .setMobile(signInResult.devices.first())
             .setData(
                 OutgoingRPCMessage.Data.newBuilder()
@@ -329,7 +329,14 @@ class GaiaPairingOrchestrator(
                     .build()
             )
             .setTTL(customTtlMicros)
-            .build()
+        // Mautrix session_handler.go:218-222 — append the destination phone's
+        // RegID to destRegistrationIDs (proto field 9) so the server routes
+        // this message to the same pairing attempt we started.
+        // Without this, CLIENT_FINISHED is rejected with NOT_LATEST_ATTEMPT
+        // immediately, regardless of whether the user has tapped the emoji
+        // on their phone. Confirmed by v0.34.0 runtime data.
+        signInResult.destRegistrationId?.let { outerBuilder.addDestRegistrationIDs(it) }
+        val outer = outerBuilder.build()
 
         val resp = http.postProto(
             url = GMessagesConstants.URL_SEND_MESSAGE,
