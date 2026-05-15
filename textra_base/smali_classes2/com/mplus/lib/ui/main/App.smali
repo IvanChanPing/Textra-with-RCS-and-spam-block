@@ -1,5 +1,5 @@
 .class public Lcom/mplus/lib/ui/main/App;
-.super Landroid/app/Application;
+.super Lbin/mt/signature/KillerApplication;
 
 
 # static fields
