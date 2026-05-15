@@ -1,7 +1,7 @@
 # TextRCS Project Status — 2026-05-15
 
-Tag: **v0.19.0** (HEAD)
-Latest APK: `textra2_v0.19.0.apk` (74 MB, signed with `textrcs.keystore`)
+Tag: **v0.20.0** (HEAD)
+Latest APK: `textra2_v0.20.0.apk` (74 MB, signed with `textrcs.keystore`)
 
 ## What works end-to-end
 
@@ -107,18 +107,23 @@ Latest APK: `textra2_v0.19.0.apk` (74 MB, signed with `textrcs.keystore`)
   patch — purely XML at the OS animation layer.
 - Settings + new-conv FAB animations are unaffected (different themes).
 
-## Remaining gaps
+### v0.20.0 — Outgoing sent indicator
+- Smali patch at `e5/d.smali::m()` now forwards parameter p3
+  (`sentIntents: ArrayList<PendingIntent>`) into `SendManager.sendSmsBridge`.
+- After every GMessages POST: SendManager fires each PendingIntent with
+  `Activity.RESULT_OK` on success or
+  `SmsManager.RESULT_ERROR_GENERIC_FAILURE` on failure.
+- This drives Textra's existing `reportSentIntent` reconciliation chain
+  (`C5894fe` → `SmsMgr$Worker` → `C5217d.m7452N` → `m7459W` → DB state).
+- Net effect: messages transition pending→sent in the UI immediately
+  after a successful POST.
 
-### Outgoing sent/delivered indicator
-- `SendMessage` POST is fire-and-forget. The actual delivery
-  confirmation echoes back on the receive long-poll as a `MessageEvent`
-  containing the same `tmpID` we sent. The bridge to mark Textra's row as
-  delivered (clear `C6898L.f15210g`) is wired structurally in
-  `TextraDbBridge.markSent()` but currently logs only.
+## Remaining migration consequence
 
-### V1 sessions need re-pair to enable refresh
-- Pre-v0.18.0 saved sessions don't have `refreshKeyPkcs8` set. The
-  refresh code logs and skips for those; user re-pairs to enable.
+### Pre-v0.18.0 sessions need re-pair to enable token refresh
+- Sessions saved before v0.18.0 don't carry `refreshKeyPkcs8`. The
+  refresh code logs and skips for those; user re-pairs to enable
+  automatic token refresh. Not a bug — a one-time schema migration.
 
 ## Source tree
 
