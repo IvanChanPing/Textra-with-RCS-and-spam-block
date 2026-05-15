@@ -1141,6 +1141,53 @@ to use unsigned parsing on the String branch.
 | v0.30.0 | NumberFormatException uint64 | PBLite decode used signed Long.parseLong on uint64 string |
 | v0.31.0 | (next observation) | TBD |
 
+## v0.32.0 — 2026-05-15 — Fix RPC response correlation + defensive uint32-string
+
+User v0.31.0 runtime error (screenshot):
+```
+Pairing beginPairing failed:
+IllegalArgumentException: expected SERVER_INIT, got UNKNOWN_DO_NOT_USE
+```
+
+UKEY2 handshake reached, the long-poll delivered a frame, but the frame we
+matched was the WRONG one — its inner messageData parsed to all-defaults
+yielding an empty Ukey2Message, whose `messageType` defaulted to
+`UNKNOWN_DO_NOT_USE` (proto enum-zero).
+
+### Root cause (verified from mautrix `session_handler.go:123`)
+
+mautrix matches responses by the INNER RPCMessageData.SessionID field
+(decoded from IncomingRPCMessage.messageData=12). The server echoes our
+OutgoingRPCData.RequestID into that field on each response.
+
+Our orchestrator matched by the OUTER IncomingRPCMessage.responseID
+(field 1 of IncomingRPCMessage), which the server sets to a different,
+unrelated value. So we grabbed the wrong frame from the long-poll stream.
+
+Confusing-but-real proto layout: `OutgoingRPCData` has BOTH a `RequestID`
+(per-message UUID) and a `SessionID` (per-client lifetime UUID), and the
+server echoes the requestID into the response's RPCMessageData.SessionID
+slot. mautrix's local code therefore reads `msg.Message.SessionID` and
+calls it `requestID` semantically.
+
+### Change A — GaiaPairingOrchestrator.startLongPoll
+
+`onIncomingRpc` now decodes `RPCMessageData.parseFrom(msg.messageData).sessionID`
+and matches by that, mirroring mautrix exactly.
+
+### Change B (defensive) — PBLite INT branch
+
+Same uint-string class as the v0.31.0 uint64 fix. Now handles String input
+via `Integer.parseUnsignedInt` so a uint32 encoded as JSON string doesn't
+throw `ClassCastException` later. Number branch unchanged.
+
+### Verified on redroid15 Android 15
+
+- Build signed v2+v3, 76 MB (sha256 `04ada0d9b7ef305a6ec03da4b4dbd3951eaf209e57ad9a8e8dbeba168f99b0b2`)
+- Install: Streamed Install Success
+- Launch: PID 24894 alive
+- No FATAL/AndroidRuntime/VerifyError
+
 ### Beeper Frida trace attempted but couldn't complete
 
 - Installed Beeper 4.44.2 on redroid15, attached Frida, hooked
