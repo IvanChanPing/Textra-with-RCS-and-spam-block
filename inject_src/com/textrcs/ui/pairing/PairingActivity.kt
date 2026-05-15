@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
+import android.content.Intent
 import com.textrcs.protocol.GMessagesConstants
 import com.textrcs.protocol.GMessagesSession
 import com.textrcs.protocol.SessionStore
@@ -19,6 +20,7 @@ import com.textrcs.protocol.SignInGaiaClient
 import com.textrcs.protocol.http.GMessagesHttpClient
 import com.textrcs.protocol.pairing.GaiaPairingOrchestrator
 import com.textrcs.protocol.pairing.PairingException
+import com.textrcs.receive.ReceiveService
 
 /**
  * One-screen Gaia pairing flow.
@@ -69,8 +71,9 @@ class PairingActivity : Activity() {
 
         sessionStore = SessionStore(this)
         // If we're already paired, show that to the user instead of forcing
-        // a re-pair.
+        // a re-pair, and ensure the receive service is running.
         sessionStore.load()?.let { existing ->
+            startReceiveServiceCompat()
             showResult(buildString {
                 append("Already paired to Google Messages.\n\n")
                 append("Browser UUID: ${existing.browserUuid}\n")
@@ -192,6 +195,8 @@ class PairingActivity : Activity() {
         // Persist before showing the success screen — so a crash on the
         // confirmation screen doesn't lose the just-completed pairing.
         sessionStore.save(session)
+        // Start the receive long-poll service.
+        startReceiveServiceCompat()
 
         mainHandler.post {
             showResult(buildString {
@@ -221,4 +226,13 @@ class PairingActivity : Activity() {
 
     private fun resId(type: String, name: String): Int =
         resources.getIdentifier(name, type, packageName)
+
+    private fun startReceiveServiceCompat() {
+        val intent = Intent(this, ReceiveService::class.java)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        } else {
+            startService(intent)
+        }
+    }
 }

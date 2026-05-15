@@ -505,3 +505,40 @@ SmsManager is never called. No cellular radio activity.
 ### Build / boot
 - `textra2_v0.14.0.apk` (73M) — installs, boots cleanly. The seam swap
   is now structurally complete.
+
+## v0.15.0 — 2026-05-15 — Receive long-poll foreground service
+
+### Added
+- `inject_src/com/textrcs/receive/ReceiveService.kt` — foreground Service
+  (Android 14+ `foregroundServiceType="dataSync"`) that maintains a
+  continuous Google Messages Web receive long-poll. On `onCreate`:
+  - Loads [GMessagesSession] from [SessionStore]; if absent, stops self.
+  - Builds [AESCTRHelper] and [GMessagesHttpClient] from the stored session.
+  - Spawns a [LongPollReceiver] in a daemon-thread, dispatches every
+    `IncomingRPCMessage`, decrypts `RPCMessageData.encryptedData` via the
+    session crypto, parses `UpdateEvents` when action is `GET_UPDATES`.
+  - Posts a low-importance ongoing notification ("Connected to Google
+    Messages") to satisfy foreground-service requirements.
+  - START_STICKY so Android restarts it if killed.
+- `inject_src/com/textrcs/receive/IncomingMessageHandler.kt` — logs
+  per-event details (messageID, conversationID, timestamp, tmpID,
+  messageInfoCount) so users can verify reception in logcat with
+  `TextRCSIncoming` tag. The DB write to Textra's `C6894H` data layer
+  (so messages appear in Textra's conversation UI) is documented as the
+  next-slice work — requires either reflection into `m8737F0` with a
+  constructed `C6949s0`, or a small smali bridge class.
+
+### Manifest
+- `<service android:name="com.textrcs.receive.ReceiveService"
+  android:exported="false" android:foregroundServiceType="dataSync"/>`
+- INTERNET, POST_NOTIFICATIONS, FOREGROUND_SERVICE, FOREGROUND_SERVICE_DATA_SYNC
+  permissions already present.
+
+### PairingActivity
+- Starts [ReceiveService] via `startForegroundService` immediately after
+  `sessionStore.save(session)` on successful pairing.
+- Also starts it on `onCreate` when a saved session is already present
+  (so the user opening the app re-arms reception).
+
+### Build / boot
+- `textra2_v0.15.0.apk` (73M) — installs, boots cleanly.
