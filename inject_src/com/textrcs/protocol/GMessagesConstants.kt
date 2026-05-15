@@ -19,13 +19,26 @@ object GMessagesConstants {
     // ─────────────────────────────────────────────────────────────────────
 
     /**
-     * X-Goog-Api-Key header value. Hardcoded in the live Google Messages APK.
-     * (RCS_TRANSPORT_RESEARCH.md §2: "primary — appears 3x".)
+     * X-Goog-Api-Key header value.
      *
-     * PLAN.md previously listed AIzaSyCA4RsOZUFrm9whhtGosPlJLmVPnfSHKz8;
-     * that value was NOT found in the live APK and is superseded.
+     * v0.30.0 — corrected based on real runtime 403:
+     *   "Requests to this API instantmessaging-pa.googleapis.com method
+     *    google.internal.communications.instantmessaging.v1.Registration.SignInGaia
+     *    are blocked."
+     *
+     * Reference (read 2026-05-15):
+     *   /tmp/gmessages/pkg/libgm/util/constants.go line 3:
+     *     const GoogleAPIKey = "AIzaSyCA4RsOZUFrm9whhtGosPlJLmVPnfSHKz8"
+     *   /tmp/gmessages/pkg/libgm/util/func.go line 21:
+     *     req.Header.Set("x-goog-api-key", GoogleAPIKey)
+     *
+     * Beeper's libgojni.so (verified by `strings`) contains the exact same key.
+     *
+     * Previous value (AIzaSyBVISctL4wnC5nctQ1nGYDRD6zybQjKCL8) was Textra's own
+     * embedded Firebase key — wrong API project for the Tachyon endpoints. That
+     * caused the user-reported 403 on v0.29.0.
      */
-    const val API_KEY = "AIzaSyBVISctL4wnC5nctQ1nGYDRD6zybQjKCL8"
+    const val API_KEY = "AIzaSyCA4RsOZUFrm9whhtGosPlJLmVPnfSHKz8"
 
     /**
      * User-Agent string presented to the Tachyon backend. The server does
