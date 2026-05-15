@@ -98,9 +98,15 @@ object GMessagesConstants {
     // Pairing — Gaia/QR URL formats
     // ─────────────────────────────────────────────────────────────────────
 
-    /** Google login page used by the WebView in GaiaLoginActivity. */
+    /**
+     * Google Messages Web authentication page (mirrors mautrix
+     * `pkg/libgm/util/paths.go:5`: `GoogleAuthenticationURL = MessagesBaseURL + "/web/authentication"`).
+     * Returns text/html (the actual Messages Web HTML app) per server probe
+     * 2026-05-15. Was previously `/web/config` which returns text/plain JSON
+     * (the runtime config endpoint, not the user-facing page).
+     */
     const val GAIA_LOGIN_URL =
-        "https://accounts.google.com/AccountChooser?continue=https://messages.google.com/web/config"
+        "https://accounts.google.com/AccountChooser?continue=https://messages.google.com/web/authentication"
 
     /**
      * Prefix for QR-pairing URLs. URLData{pairingKey, AESKey, HMACKey} is
