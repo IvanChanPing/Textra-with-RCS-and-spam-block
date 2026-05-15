@@ -1053,6 +1053,45 @@ look/sound/icon — no new channel, no custom UI.
   a real GMessages message. Requires paired session, untestable from
   pre-pairing state.
 
+## v0.30.0 — 2026-05-15 — Fix x-goog-api-key (real-runtime 403 from Google gateway)
+
+User v0.29.0 runtime error (screenshot):
+```
+SignInGaia failed:
+HttpError: HTTP 403:
+Requests to this API instantmessaging-pa.googleapis.com method
+google.internal.communications.instantmessaging.v1.Registration.SignInGaia
+are blocked.
+```
+
+This is Google's canonical "API key project doesn't have this API enabled"
+response. Real-runtime evidence proves all our prior fixes (cookie capture
+URL/format, WebSettings, /web/authentication endpoint) WORK — the WebView
+captured SAPISID, hid itself, called SignInGaia, and reached the server.
+Only the API key was wrong.
+
+### Reference (read this session)
+
+`/tmp/gmessages/pkg/libgm/util/constants.go` line 3:
+```go
+const GoogleAPIKey = "AIzaSyCA4RsOZUFrm9whhtGosPlJLmVPnfSHKz8"
+```
+
+Beeper's `libgojni.so` (`strings | grep AIzaSy`) contains exactly this key.
+
+### Change
+
+`GMessagesConstants.API_KEY`:
+- Before: `AIzaSyBVISctL4wnC5nctQ1nGYDRD6zybQjKCL8` (Textra's own Firebase key — wrong project for Tachyon)
+- After:  `AIzaSyCA4RsOZUFrm9whhtGosPlJLmVPnfSHKz8` (verified mautrix + Beeper key)
+
+### Verified on redroid15 Android 15
+
+- Build signed v2+v3, 76 MB (sha256 `1823849cd40a55836e3d4bb2df2f107931b1fd673f6c0f5e67f4339fafd7656f`)
+- DEX scan: old key absent, new key present
+- Install: Streamed Install Success
+- Launch: PID 24409 alive, no FATAL/AndroidRuntime/VerifyError
+
 ### Beeper Frida trace attempted but couldn't complete
 
 - Installed Beeper 4.44.2 on redroid15, attached Frida, hooked
