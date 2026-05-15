@@ -614,12 +614,11 @@
     .locals 1
 
     # TextRCS v0.38.0 — Central default-SMS check faked to always return true.
-    # This is the single method Textra uses for "am I the default SMS app";
-    # 7 callers depend on it (InitialSyncActivity, P4.p notifier, M6.j/b
-    # composer gates, c5.a, D4.b, F4.f). Faking true here lets Textra2 run
-    # its full default-SMS code path while the real OS default remains
-    # Google Messages — which is exactly what the user's architecture
-    # requires for cellular SMS to flow.
+    # v0.40 adds stack-trace logging so we can see WHO is asking.
+    const-string v0, "c5.d.Q called -> true"
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->noteWithStack(Ljava/lang/String;)V
+
     const/4 v0, 0x1
 
     return v0

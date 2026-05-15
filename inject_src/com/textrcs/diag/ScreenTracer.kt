@@ -42,7 +42,91 @@ object ScreenTracer {
     }
 
     /** Add an arbitrary line to the buffer from outside (e.g. boot provider). */
+    @JvmStatic
     fun note(line: String) = log(line)
+
+    /**
+     * Logs a line PLUS the caller's stack trace (up to 8 frames). Use from
+     * hot-paths where we want to know WHO called us. The smali wrappers on
+     * c5/d.Q etc. call this to identify which code path is checking the
+     * default-SMS status at any given moment.
+     */
+    @JvmStatic
+    fun noteWithStack(line: String) {
+        log(line)
+        try {
+            val st = Throwable().stackTrace
+            // Skip the first 2 frames (this method + the wrapper that called us).
+            for (i in 2 until minOf(st.size, 10)) {
+                val f = st[i]
+                log("  by ${f.className.substringAfterLast('.')}.${f.methodName}:${f.lineNumber}")
+            }
+        } catch (_: Throwable) {}
+    }
+
+    /**
+     * Periodic sampler that captures stack traces of every thread in the
+     * process every 1 second and writes the top 3 frames per thread into the
+     * trace buffer — filtered to frames within `com.textra2`, `com.textrcs`,
+     * and `com.mplus.lib` packages so we see what OUR app code is doing
+     * behind the scenes, not OS-internal idle frames.
+     *
+     * This is the closest we can get to "see every process running" without
+     * full method-level instrumentation — Java's Thread.getAllStackTraces()
+     * runs at the JVM level so it sees every thread in our process.
+     *
+     * Auto-stops after 5 minutes so the buffer doesn't bloat indefinitely.
+     */
+    private val samplerStartMs = System.currentTimeMillis()
+    private fun startThreadSampler() {
+        val t = Thread({
+            try {
+                // 250ms sample interval — finer-grained than 1s so we catch
+                // brief synchronous calls into c5/d.Q, role checks, etc.
+                while (System.currentTimeMillis() - samplerStartMs < 5 * 60 * 1000) {
+                    Thread.sleep(250)
+                    sampleThreads()
+                }
+                log("SAMPLER auto-stopped after 5 min")
+            } catch (e: InterruptedException) {
+                log("SAMPLER interrupted")
+            } catch (e: Throwable) {
+                log("SAMPLER failed: ${e.javaClass.simpleName}: ${e.message}")
+            }
+        }, "TextRCS-Sampler")
+        t.isDaemon = true
+        t.start()
+    }
+
+    private val sampleFilter = listOf(
+        "com.mplus.lib.",
+        "com.textra2.",
+        "com.textrcs.",
+    )
+
+    private fun sampleThreads() {
+        val all = try { Thread.getAllStackTraces() } catch (e: Throwable) { return }
+        val sb = StringBuilder()
+        for ((thread, stack) in all) {
+            if (thread == Thread.currentThread()) continue
+            // Filter: only threads whose stack contains at least one frame in
+            // our allowed package prefixes. Skips idle Binder, Profile, etc.
+            val ourFrames = stack.filter { f ->
+                val cn = f.className
+                sampleFilter.any { cn.startsWith(it) }
+            }
+            if (ourFrames.isEmpty()) continue
+            sb.append(thread.name).append('[').append(thread.state).append("]: ")
+            // Up to 3 most-recent ours-frames
+            for ((i, f) in ourFrames.take(3).withIndex()) {
+                if (i > 0) sb.append(" / ")
+                sb.append(f.className.substringAfterLast('.')).append('.')
+                  .append(f.methodName).append(':').append(f.lineNumber)
+            }
+            log("SAMPLE $sb")
+            sb.setLength(0)
+        }
+    }
 
     @Synchronized
     private fun log(line: String) {
@@ -67,6 +151,7 @@ object ScreenTracer {
         if (installed) return
         installed = true
         log("ST install hookedApp=${app.packageName}")
+        startThreadSampler()
         app.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
             override fun onActivityCreated(a: Activity, s: Bundle?) {
                 log("CREATE ${a.javaClass.name} savedInstance=${s != null}")
