@@ -104,3 +104,32 @@ transport changes yet — this is just the base.
 ### Build
 - Compiles, packages, signs, installs side-by-side, boots cleanly on redroid13.
 - `textra2_v0.3.0.apk` placed in project root for convenience.
+
+## v0.4.0 — 2026-05-15 — UKEY2 crypto building blocks
+
+### Added
+- `inject_src/com/textrcs/protocol/crypto/KeyDerivation.kt` — HKDF-SHA256
+  (RFC 5869) with `extract`, `expand`, and `derive` (matches mautrix's
+  `doHKDF(key, salt, info)` 32-byte one-shot). Built on `javax.crypto.Mac`
+  HmacSHA256 — no third-party crypto deps.
+- `inject_src/com/textrcs/protocol/crypto/Ukey2Emojis.kt` — verbatim port of
+  mautrix's `pairingEmojisV0` (298 emojis) and `pairingEmojisV1` (V0
+  deduplicated + 14 additions + 10 removals). `pick(version, authKey)`
+  derives the index as `Uint32BE(authKey[0..4]) % list.size` — corrects
+  PLAN.md's simplified `authKey[0] % 350`.
+- `inject_src/com/textrcs/protocol/crypto/EcP256.kt` — P-256 (secp256r1)
+  key operations:
+  - `generateKeyPair()` — ephemeral EC keypair for UKEY2 handshake
+  - `publicKeyFromXY(x, y)` — reconstruct a public key from the
+    `EcP256PublicKey` proto's raw 32-byte coordinates (accepts the 33-byte
+    leading-zero form Google sometimes sends)
+  - `xBytes`/`yBytes` — back to raw coordinate bytes for proto serialization
+  - `ecdh(ourPriv, theirPub)` — unhashed shared X coordinate; caller hashes
+    with SHA-256 before HKDF (matching the Go code's `sha256.Sum256(diffieHellman)`)
+
+### Confirmed (Beeper)
+- `mautrix/gmessages/pkg/libgm/` is standalone, zero Matrix imports.
+- Beeper's org repos contain no JVM/Kotlin port of libgm. Ours is the first.
+
+### Build
+- `textra2_v0.4.0.apk` (73M), still boots side-by-side with original Textra.
