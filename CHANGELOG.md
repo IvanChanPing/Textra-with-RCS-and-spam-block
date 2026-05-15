@@ -309,3 +309,24 @@ transport changes yet — this is just the base.
   EncryptedSharedPreferences.
 - Replace the default-SMS-app prompt in `InitialSyncActivity` with a
   redirect to `PairingActivity` if no session is stored.
+
+## v0.10.0 — 2026-05-15 — LongPollReceiver
+
+### Added
+- `inject_src/com/textrcs/protocol/longpoll/LongPollReceiver.kt` — port of
+  mautrix `pkg/libgm/longpoll.go::doLongPoll` + `readLongPoll`. Runnable
+  designed for one-shot pairing use AND ongoing message receive.
+  - Opens POST to `Messaging/ReceiveMessages` with `ReceiveMessagesRequest`
+    body (PBLite) carrying `AuthMessage{tachyonAuthToken, network=GDitto,
+    configVersion}`.
+  - Streams the server's `[[ frame1, frame2, ... ]]` JSON body.
+  - Buffers bytes until each frame parses as JSON, then decodes via
+    `PBLite.deserializeFromSlice` into a `LongPollingPayload`.
+  - Dispatches via `Handler` callbacks: `onIncomingRpc`, `onAck`,
+    `onHeartbeat`, `onStartRead`, `onConnected`, `onDisconnected`, `onError`.
+  - Exponential backoff (max 60s) between failed connect attempts.
+  - `stop()` is thread-safe; closes the current `StreamingResponse` to
+    interrupt a blocked read.
+
+### Build / boot
+- `textra2_v0.10.0.apk` (73M) installs side-by-side, boots cleanly.
