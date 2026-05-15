@@ -95,12 +95,25 @@ class PairingActivity : Activity() {
         introPanel.visibility = View.GONE
         webView.visibility = View.VISIBLE
 
-        webView.settings.javaScriptEnabled = true
-        webView.settings.domStorageEnabled = true
-        // Accept cookies and persist them in the system CookieManager.
-        val cm = CookieManager.getInstance()
-        cm.setAcceptCookie(true)
-        cm.setAcceptThirdPartyCookies(webView, true)
+        // WebSettings mirrored byte-exact from Beeper's BridgeAuthWebView
+        // (decompiled at /tmp/beeper_c3/sources/com/beeper/chat/booper/connect/webview/BridgeAuthWebView.java
+        // lines 54-89) for bridgeType="gmessages". Each line is verbatim from
+        // the working reference — do not change without a new reference read.
+        val s = webView.settings
+        s.javaScriptEnabled = true
+        s.javaScriptCanOpenWindowsAutomatically = true
+        s.domStorageEnabled = true
+        s.databaseEnabled = false
+        s.allowContentAccess = true
+        @Suppress("DEPRECATION")
+        s.allowFileAccess = true
+        s.useWideViewPort = true
+        s.loadWithOverviewMode = false
+        // Beeper BridgeAuthWebView.java:73 for bridgeType="gmessages"
+        s.userAgentString =
+            "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36"
+
+        CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
@@ -117,8 +130,13 @@ class PairingActivity : Activity() {
      * GMessagesHttpClient jar and proceed to SignInGaia.
      */
     private fun tryHarvestSapisid(url: String?) {
-        val rawCookie = CookieManager.getInstance().getCookie(".google.com")
-            ?: CookieManager.getInstance().getCookie("google.com")
+        // Cookie lookup URL mirrors Beeper's exact call.
+        //   WebUtils.java:25  -> CookieManager.getInstance().getCookie(domain)
+        //   NetworkArgsFactory.smali:568 -> domain = "https://messages.google.com"
+        //                                   (the only CookieDomain in the set
+        //                                    returned by androidCustomCookieDomain("gmessages"))
+        // We pass a full URL, NOT a bare domain like ".google.com".
+        val rawCookie = CookieManager.getInstance().getCookie("https://messages.google.com")
             ?: return
         // Quick guard: don't re-trigger after we've already started SignInGaia.
         if (signInTriggered) return
