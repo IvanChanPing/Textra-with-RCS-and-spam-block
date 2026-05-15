@@ -1092,6 +1092,55 @@ Beeper's `libgojni.so` (`strings | grep AIzaSy`) contains exactly this key.
 - Install: Streamed Install Success
 - Launch: PID 24409 alive, no FATAL/AndroidRuntime/VerifyError
 
+## v0.31.0 — 2026-05-15 — PBLite uint64-string decode (signed-overflow fix)
+
+User v0.30.0 runtime error (screenshot):
+```
+SignInGaia failed:
+NumberFormatException: For input string: "12703311362095547934"
+```
+
+API key fix from v0.30.0 worked — SignInGaia HTTP succeeded, returned a
+response body, and we got further into the decode path. New failure was
+parsing a uint64 value from PBLite JSON.
+
+### Diagnosis (verified)
+
+- `12703311362095547934` > `Long.MAX_VALUE` (9223372036854775807)
+- `String.toLong()` / `java.lang.Long.parseLong` throws on values outside
+  signed-long range.
+- `java.lang.Long.parseUnsignedLong` accepts the full uint64 range and
+  returns the bit-preserving signed-long reinterpretation.
+- Verified by javac+java smoke test this session:
+  `parseUnsignedLong("12703311362095547934") = -5743432711614003682`.
+
+Google's PBLite encoding writes uint64/int64 as JSON STRING (not number)
+to preserve precision past JSON's double-safe range. Our decode side has
+to use unsigned parsing on the String branch.
+
+### Change
+
+`PBLite.kt:182` parseScalar LONG branch String case:
+- Before: `rawVal.toLong()` — only handles signed range
+- After:  `java.lang.Long.parseUnsignedLong(rawVal)` — handles full uint64
+
+### Verified on redroid15 Android 15
+
+- Build signed v2+v3, 76 MB (sha256 `26f2904a6ec7ade2cec44d31e6aa7372b39ddd2e0c11d9f067fc272304b6ab46`)
+- Install: Streamed Install Success
+- Launch: PID 24623 alive
+- No FATAL/AndroidRuntime/VerifyError
+
+### Cumulative progress through the auth chain (per observed runtime errors)
+
+| Version | Symptom | Root cause |
+|---|---|---|
+| v0.27.0 | WebView stuck on JSON page after login | Wrong CookieManager.getCookie URL form |
+| v0.28.0 | WebView showed raw JSON | Wrong continue= URL (`/web/config` not `/web/authentication`) |
+| v0.29.0 | HTTP 403 "API blocked" | Wrong `x-goog-api-key` (Textra's Firebase key, not Tachyon key) |
+| v0.30.0 | NumberFormatException uint64 | PBLite decode used signed Long.parseLong on uint64 string |
+| v0.31.0 | (next observation) | TBD |
+
 ### Beeper Frida trace attempted but couldn't complete
 
 - Installed Beeper 4.44.2 on redroid15, attached Frida, hooked
