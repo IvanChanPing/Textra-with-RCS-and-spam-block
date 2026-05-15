@@ -179,7 +179,16 @@ object PBLite {
             FieldDescriptor.JavaType.INT -> (rawVal as Number).toInt()
             FieldDescriptor.JavaType.LONG -> when (rawVal) {
                 is Number -> rawVal.toLong()
-                is String -> rawVal.toLong()
+                // Google's PBLite encodes uint64/int64 as STRING (not number)
+                // specifically to preserve precision for values that exceed
+                // JSON's safe double range. We must parse it as UNSIGNED to
+                // accept values up to 2^64-1 — `String.toLong()` throws
+                // NumberFormatException for values > Long.MAX_VALUE.
+                // Real-runtime observed value: "12703311362095547934".
+                // `toULong().toLong()` is a bit-preserving cast: the proto
+                // int64 field stores the same 64 bits regardless of signed
+                // interpretation, so the value round-trips correctly.
+                is String -> java.lang.Long.parseUnsignedLong(rawVal)
                 else -> throw IllegalArgumentException("bad int64 type ${rawVal::class.java.name}")
             }
             FieldDescriptor.JavaType.FLOAT -> (rawVal as Number).toFloat()
