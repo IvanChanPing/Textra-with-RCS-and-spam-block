@@ -197,64 +197,24 @@ class SendManager private constructor(private val appContext: Context) {
         }
 
         /**
-         * Static-friendly entry point for the smali patch on Textra's
-         * `C5217d.m7450a0()`. The patched smali calls
-         * `SendManager.interceptOutgoingSend(applicationContext)`, which
-         * loads the next-to-send message from Textra's own DB, extracts
-         * recipient phone(s) and body, and routes through Google Messages.
+         * Entry point for the smali patch on Textra's `C5677d.mo6177m`
+         * (`e5/d.smali::m(String, List, ArrayList, ArrayList, int)`).
          *
-         * Loading from Textra's DB rather than receiving the message object
-         * keeps the smali patch tiny — just a 2-instruction replacement of
-         * the old WorkManager enqueue. The DB layer (C6894H + C6956w) is
-         * already populated by C5217d.mo6109u before m7450a0 is invoked.
+         * That method is Textra's last-mile SMS sender — the line just
+         * above `SmsManager.sendMultipartTextMessage(...)`. By the time it's
+         * called Textra has:
+         *   - Persisted the message to its own DB.
+         *   - Resolved the destination phone (param 1).
+         *   - Split the body into multipart segments (param 2).
+         *
+         * We hijack that handoff: join the segments back into a single body
+         * and route through Google Messages Web. The original SmsManager
+         * call never runs, so no actual SMS goes out the cellular radio.
          */
         @JvmStatic
-        fun interceptOutgoingSend(context: Context) {
-            val mgr = get(context)
-            // Reflect into Textra's data layer to pull the pending message:
-            //   C6894H.m8727X().f15190d.m8931C("", C6956w.f15421m)
-            //   → cursor over the SMS queue.
-            // For now the smali patch can pass body+phone directly via a
-            // second overload; the call-from-DB path is wired in a
-            // follow-up commit alongside the C6894H bridge.
-            mgr.sendExecutor.execute {
-                try {
-                    drainTextraOutgoingQueue(context, mgr)
-                } catch (e: Throwable) {
-                    Log.e(TAG, "drain failed", e)
-                }
-            }
-        }
-
-        /**
-         * Read Textra's outgoing-SMS queue via reflection and send each row
-         * through [SendManager.sendText]. Marks rows as handed-off so they
-         * don't re-trigger.
-         *
-         * The reflection contract (verified against textra_base smali):
-         *   - `Lcom/mplus/lib/r4/H;->X()Lcom/mplus/lib/r4/H;`            — singleton getter
-         *   - `Lcom/mplus/lib/r4/H;->d:Lcom/mplus/lib/r4/w;`             — DB wrapper field
-         *   - `Lcom/mplus/lib/r4/w;->C(Ljava/lang/String;...)Lcom/mplus/lib/r4/q;` — queue scanner
-         *   - `Lcom/mplus/lib/r4/j0;->h:Lcom/mplus/lib/r4/n;`            — recipients field
-         *   - `Lcom/mplus/lib/r4/j0;->i:Ljava/lang/String;`              — body field
-         *
-         * Because Textra's classes are obfuscated, we resolve them via
-         * Class.forName + reflective field/method access. Failures are
-         * logged; the message stays in the queue and we don't loop.
-         */
-        private fun drainTextraOutgoingQueue(context: Context, mgr: SendManager) {
-            try {
-                val hClass = Class.forName("com.mplus.lib.r4.H")
-                val singleton = hClass.getDeclaredMethod("X").invoke(null) ?: return
-                val dField = hClass.getDeclaredField("d").apply { isAccessible = true }
-                val dbWrapper = dField.get(singleton) ?: return
-                // For the first send slice we don't actually pull from the
-                // queue — we let Textra's UI also keep its native pending
-                // state. The receive-side service will reconcile in v0.15+.
-                @Suppress("UNUSED_EXPRESSION") dbWrapper.toString()
-            } catch (e: Throwable) {
-                Log.w(TAG, "Textra DB reflection unavailable on this build: ${e.message}")
-            }
+        fun sendSmsBridge(context: Context, destination: String, parts: List<*>) {
+            val body = parts.joinToString(separator = "") { it?.toString() ?: "" }
+            get(context).sendText(destination, body)
         }
     }
 }

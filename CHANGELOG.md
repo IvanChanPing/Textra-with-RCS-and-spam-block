@@ -457,3 +457,51 @@ and start going through Google Messages Web.
 - Receive long-poll service (incoming messages) — next commit.
 - Status update reconciliation (server tells us "delivered" via the
   long-poll → mark Textra's `C6898L.f15210g` field).
+
+## v0.14.0 — 2026-05-15 — Proper seam swap at C5677d.mo6177m (end-to-end SMS → GMessages) ★
+
+### Refactor
+- **Reverted** v0.13.0's smali patch on `c5/d.smali::a0()` (it broke the
+  enqueue without bridging the data — the message had nowhere to go).
+- **Replaced** with a much cleaner intercept at `e5/d.smali::m()` —
+  Textra's `C5677d.mo6177m(String dest, List parts, ArrayList sentIntents,
+  ArrayList deliveryIntents, int subId)`, the last line before
+  `SmsManager.sendMultipartTextMessage(...)`. Here the **destination phone
+  and body parts are already on the smali stack as params** — no
+  reflection, no DB walking.
+
+### Smali patch (single method body replacement)
+```smali
+.method public m(Ljava/lang/String;Ljava/util/List;Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
+    .locals 1
+    invoke-static {}, Lcom/mplus/lib/ui/main/App;->getAppContext()Landroid/content/Context;
+    move-result-object v0
+    invoke-static {v0, p1, p2}, Lcom/textrcs/send/SendManager;->sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
+    return-void
+.end method
+```
+
+### Kotlin side
+- `SendManager.sendSmsBridge(context, dest, parts)` — joins the parts back
+  into a single body and routes to [SendManager.sendText].
+- `interceptOutgoingSend` + `drainTextraOutgoingQueue` removed (no longer
+  needed — the new intercept gets the data directly).
+
+### End-to-end outgoing path (real)
+```
+Textra UI [Send] → C5217d.mo6109u → C6894H DB write (unchanged)
+   → m7450a0 enqueue SmsMgr$Worker (unchanged)
+   → SmsMgr$Worker.doWork → m7463b0 loop
+   → m7462Z picks C5677d sender, calls mo6177m(phone, parts, ...)
+   → [PATCHED] SendManager.sendSmsBridge(ctx, phone, parts)
+   → SendManager.sendText(phone, body)
+   → SessionStore.load() → GMessagesSession{aesKey, hmacKey, tachyonAuthToken, mobile}
+   → GetOrCreateConversation RPC (POST instantmessaging-pa)
+   → SendMessage RPC (POST instantmessaging-pa)
+```
+
+SmsManager is never called. No cellular radio activity.
+
+### Build / boot
+- `textra2_v0.14.0.apk` (73M) — installs, boots cleanly. The seam swap
+  is now structurally complete.

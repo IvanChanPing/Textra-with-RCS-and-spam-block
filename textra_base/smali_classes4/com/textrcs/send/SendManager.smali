@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,261:1\n1#2:262\n*E\n"
+    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,221:1\n1#2:222\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -159,16 +159,6 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$getSendExecutor$p(Lcom/textrcs/send/SendManager;)Ljava/util/concurrent/ExecutorService;
-    .registers 2
-    .param p0, "$this"    # Lcom/textrcs/send/SendManager;
-
-    .line 52
-    iget-object v0, p0, Lcom/textrcs/send/SendManager;->sendExecutor:Ljava/util/concurrent/ExecutorService;
-
-    return-object v0
-.end method
-
 .method public static final synthetic access$setInstance$cp(Lcom/textrcs/send/SendManager;)V
     .registers 1
     .param p0, "<set-?>"    # Lcom/textrcs/send/SendManager;
@@ -282,18 +272,6 @@
     return-object p5
 .end method
 
-.method public static final interceptOutgoingSend(Landroid/content/Context;)V
-    .registers 2
-    .annotation runtime Lkotlin/jvm/JvmStatic;
-    .end annotation
-
-    sget-object v0, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
-
-    invoke-virtual {v0, p0}, Lcom/textrcs/send/SendManager$Companion;->interceptOutgoingSend(Landroid/content/Context;)V
-
-    return-void
-.end method
-
 .method private static final sendExecutor$lambda$1(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .registers 5
     .param p0, "r"    # Ljava/lang/Runnable;
@@ -307,7 +285,7 @@
 
     move-object v1, v0
 
-    .line 262
+    .line 222
     .local v1, "$this$sendExecutor_u24lambda_u241_u24lambda_u240":Ljava/lang/Thread;
     const/4 v2, 0x0
 
@@ -626,6 +604,28 @@
 
     .line 185
     :cond_fb
+    return-void
+.end method
+
+.method public static final sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "*>;)V"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    sget-object v0, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
+
+    invoke-virtual {v0, p0, p1, p2}, Lcom/textrcs/send/SendManager$Companion;->sendSmsBridge(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
+
     return-void
 .end method
 
