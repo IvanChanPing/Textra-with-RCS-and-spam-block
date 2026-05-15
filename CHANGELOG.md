@@ -1001,6 +1001,58 @@ FinishGaiaPairing/signInGaiaGetToken/baseSignInGaiaPayload/HasCookies).
 - Launch: PID 23257 alive
 - No FATAL/AndroidRuntime/VerifyError
 
+## v0.29.0 — 2026-05-15 — Wire incoming GMessages → Textra's existing notification
+
+User noted: regular cellular SMS still came through Textra (correct — we didn't
+replace the SMS_DELIVER receive path, only outgoing). User wanted notifications
+to fire for incoming GMessages using Textra's existing notification system, not
+a new one.
+
+### Verified facts (read in this session)
+
+- `H.F0(j0)` (smali) enqueues DB write + posts `r4.r0` EventBus event + calls
+  `H.k0(j0.c, false)`. It does NOT invoke `H.H0` or `P4.p.T`.
+- `H.H0(messageId)` (smali line 1242-1272) is what fires notifications:
+  loads j0 from DB, then `P4.p.P() → P4.p.T(j0, P4.o)`. Only callers of H0
+  are in `r4/z.smali` (cellular SMS pipeline).
+- `P4.p.T(j0, P4.o)` (smali, full body read this session): queues a
+  `F4.f` Runnable on `App.multi()` executor and returns. Does NOT
+  synchronously read j0.c.
+- `P4.o` default ctor: 4 booleans (b=false, c=false, d=true, e=false).
+
+### Change
+
+`TextraDbBridge.writeIncoming` now reflectively invokes
+  `P4.p.P() → P4.p.T(j0, new P4.o())`
+right after `H.F0(j0)` returns. Wrapped in try/catch — if the reflection
+fails, the DB write still succeeds.
+
+Effect: incoming GMessages messages now use Textra's existing notification
+look/sound/icon — no new channel, no custom UI.
+
+### Verified on redroid15 Android 15
+
+- Build signed v2+v3, 76 MB (sha256 `a08fa6de1000dd60087d3282f125e2db0c0f60dff69b4a03414fca634bd80f89`)
+- Install: Streamed Install Success
+- Launch: PID 24186 alive
+- No FATAL/AndroidRuntime/VerifyError on resolution
+
+### Not done (per user direction)
+
+- SMS_DELIVER receiver chain (`il.smali`) intentionally left in place.
+  Cellular SMS continues to receive + notify via Textra's normal pipeline
+  (hybrid mode).
+- `markSent` stub left as-is. Outgoing sent-state reconciliation already
+  happens via `SendManager` firing `RESULT_OK` to the PendingIntent →
+  Textra's `c5/d.smali` catches it and clears `M.f15210g`. No extra work
+  needed.
+
+### Open question (needs runtime data)
+
+- Whether the notification actually appears when the long-poll delivers
+  a real GMessages message. Requires paired session, untestable from
+  pre-pairing state.
+
 ### Beeper Frida trace attempted but couldn't complete
 
 - Installed Beeper 4.44.2 on redroid15, attached Frida, hooked
