@@ -2,6 +2,7 @@ package com.textrcs.receive
 
 import android.content.Context
 import android.util.Log
+import com.textrcs.bridge.TextraDbBridge
 import com.textrcs.gmproto.events.UpdateEvents
 
 /**
@@ -36,6 +37,21 @@ object IncomingMessageHandler {
                     "msg id=${data.messageID} conv=${data.conversationID} " +
                         "ts=${data.timestamp} tmpId=${data.tmpID} parts=${data.messageInfoCount}"
                 )
+                // For messages we didn't send (tmpID empty), pull the text
+                // content and write into Textra's DB so it shows up in the
+                // conversation list.
+                if (data.tmpID.isBlank()) {
+                    val textParts = data.messageInfoList
+                        .mapNotNull { mi -> mi.messageContent?.content }
+                        .filter { it.isNotEmpty() }
+                    if (textParts.isNotEmpty()) {
+                        val body = textParts.joinToString("\n")
+                        val sender = data.participantID.ifBlank { data.conversationID }
+                        val ts = if (data.timestamp > 0) data.timestamp else System.currentTimeMillis()
+                        val wrote = TextraDbBridge.writeIncoming(sender, body, ts)
+                        Log.i(TAG, "wrote-to-textra-db=$wrote sender=$sender len=${body.length}")
+                    }
+                }
             }
         }
         if (events.hasConversationEvent()) {

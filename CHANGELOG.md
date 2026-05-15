@@ -578,3 +578,35 @@ SmsManager is never called. No cellular radio activity.
   written into Textra's own DB, so messages don't appear in the
   conversation UI. Wiring that requires a tiny smali bridge to call
   `com.mplus.lib.r4.H.m8737F0(C6949s0)` — saved for a future iteration.
+
+## v0.17.0 — 2026-05-15 — TextraDbBridge: incoming messages now appear in Textra's UI
+
+### Added
+- `inject_src/com/textrcs/bridge/TextraDbBridge.kt` — reflective bridge into
+  Textra's obfuscated `com.mplus.lib.r4.*` data layer. Verified signatures
+  in v0.16.0 textra_base smali:
+  - `Lcom/mplus/lib/r4/H;->X()` → singleton
+  - `Lcom/mplus/lib/r4/H;->F0(Lcom/mplus/lib/r4/j0;)V` → write incoming msg
+  - `Lcom/mplus/lib/r4/s0;` extends `j0` with no extra fields
+  - `j0.h:Lcom/mplus/lib/r4/n;`, `j0.i:Ljava/lang/String;`, `j0.j:J`
+  - `Lcom/mplus/lib/r4/l;-><init>(String, long, String)V` → recipient
+  - `Lcom/mplus/lib/r4/n;` extends ArrayList
+- `writeIncoming(senderPhone, body, timestampMs)`:
+  1. `new com.mplus.lib.r4.l(senderPhone, -1L, null)` — recipient POJO
+  2. `new com.mplus.lib.r4.n()` + `.add(l)` — recipient bag
+  3. `new com.mplus.lib.r4.s0()` — message POJO (extends `j0`)
+  4. Set `j0.h = recipients`, `j0.i = body`, `j0.j = timestamp`
+  5. `H.X().F0(s0)` — Textra's incoming-write entry point
+
+### IncomingMessageHandler wired
+- For every `MessageEvent.data` entry with empty `tmpID` (i.e. not echo of
+  our own send), pulls text from `messageInfoList[*].messageContent.content`,
+  joins parts on newline, and calls `TextraDbBridge.writeIncoming(sender,
+  body, timestamp)`. Sender resolved from `participantID` falling back to
+  `conversationID`.
+- Logs `wrote-to-textra-db=true/false` so logcat (`TextRCSIncoming` tag)
+  shows whether the bridge succeeded for each incoming.
+
+### Build / boot
+- `textra2_v0.17.0.apk` (73M) — installs side-by-side, boots cleanly.
+  Process stays up; no FATAL.
