@@ -1,4 +1,4 @@
-package com.textra2.protocol
+package com.textrcs.protocol
 
 /**
  * Constants for the Google Messages Web protocol (Tachyon / GDitto).
