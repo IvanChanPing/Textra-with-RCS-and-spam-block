@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="match_parent" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginBottom="32.0dp">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:id="@id/tabs" a:layout_width="match_parent" a:layout_height="48.0dp" a:layout_marginBottom="40.0dp" style="?settings_bubbleColorsDialog_tabs">
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/primaryTab" a:text="@string/settings_theme_color_dialog_primary_color" style="?settings_bubbleColorsDialog_tab" />
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/accentTab" a:text="@string/settings_theme_color_dialog_accent_color" style="?settings_bubbleColorsDialog_tab" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        <com.mplus.lib.ui.common.widgets.coverflow.CoverFlow a:id="@id/primaryCoverflow" a:layout_width="match_parent" a:layout_height="wrap_content" />
+        <com.mplus.lib.ui.common.widgets.coverflow.CoverFlow a:id="@id/accentCoverflow" a:visibility="gone" a:layout_width="match_parent" a:layout_height="wrap_content" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <include layout="@layout/common_dialog_ok_cancel_button_panel" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

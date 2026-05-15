@@ -1,0 +1,50 @@
+.class public Lfreemarker/ext/jython/_Jython25VersionAdapter;
+.super Lfreemarker/ext/jython/JythonVersionAdapter;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lfreemarker/ext/jython/JythonVersionAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getPythonClassName(Lorg/python/core/PyObject;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p1}, Lorg/python/core/PyObject;->getType()Lorg/python/core/PyType;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/python/core/PyType;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public isPyInstance(Ljava/lang/Object;)Z
+    .locals 0
+
+    instance-of p1, p1, Lorg/python/core/PyInstance;
+
+    return p1
+.end method
+
+.method public pyInstanceToJava(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Lorg/python/core/PyInstance;
+
+    const-class v0, Ljava/lang/Object;
+
+    invoke-virtual {p1, v0}, Lorg/python/core/PyInstance;->__tojava__(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

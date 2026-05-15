@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/empty" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="topHeavy"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center" a:layout_width="match_parent" a:layout_height="wrap_content" a:text="@string/signature_prompt_turnOnSignaturesHint" style="?signatures_empty" />
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

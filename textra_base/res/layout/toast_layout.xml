@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="wrap_content" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseCardView a:id="@id/toast_container" a:layout_width="wrap_content" a:layout_height="match_parent" app:cardCornerRadius="@dimen/roundedCornerRadius" app:cardElevation="5.0dp" app:cardUseCompatPadding="true">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:paddingLeft="16.0dp" a:paddingTop="8.0dp" a:paddingRight="16.0dp" a:paddingBottom="10.0dp" a:layout_width="wrap_content" a:layout_height="match_parent">
+            <co.paulburke.textratoast.CheckmarkView a:layout_gravity="center_vertical" a:id="@id/toast_icon" a:layout_width="24.0dp" a:layout_height="24.0dp" a:layout_marginRight="16.0dp" />
+            <com.mplus.lib.ui.common.base.BaseTextView a:textSize="16.0sp" a:textColor="@android:color/white" a:layout_gravity="center_vertical" a:id="@id/toast_text" a:layout_width="wrap_content" a:layout_height="wrap_content" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    </com.mplus.lib.ui.common.base.BaseCardView>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

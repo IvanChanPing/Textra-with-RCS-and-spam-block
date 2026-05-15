@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center" a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseButton a:id="@id/button" a:text="@string/notification_style_goto_android_settings_button" style="?common_raised_button_themecolor" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

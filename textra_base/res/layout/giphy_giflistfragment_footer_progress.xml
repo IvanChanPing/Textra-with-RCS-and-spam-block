@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="wrap_content" style="?common_giphy_gifListFragment_footer_progress"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_gravity="center" a:layout_width="wrap_content" a:layout_height="wrap_content">
+        <ProgressBar a:layout_gravity="center_vertical" a:id="@id/progress" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_giphy_gifListFragment_progress" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center_vertical" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/giphy_giflistfragment_loading" style="?common_giphy_gifListFragment_progressLabel" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

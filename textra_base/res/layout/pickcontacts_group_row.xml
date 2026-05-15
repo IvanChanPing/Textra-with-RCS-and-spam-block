@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:background="?screen_background" a:layout_width="match_parent" a:layout_height="wrap_content" a:minHeight="48.0dp" app:flatButtonBackgroundSelector="onScreenColor" style="?common_pickContacts_groupsList_row"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseCheckBox a:id="@id/contactCheckbox" a:focusable="false" style="?common_pickContacts_groupsList_checkbox" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/contactDisplayName" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1.0" app:emojify="true" style="?common_pickContacts_groupsList_displayName" />
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/expandContractButton" a:layout_width="48.0dp" a:layout_height="match_parent" style="?common_pickContacts_groupsLists_expandContactButton" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

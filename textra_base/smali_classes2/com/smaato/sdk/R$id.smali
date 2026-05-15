@@ -1,0 +1,81 @@
+.class public final Lcom/smaato/sdk/R$id;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/smaato/sdk/R;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "id"
+.end annotation
+
+
+# static fields
+.field public static btnBackward:I = 0x7f0a008f
+
+.field public static btnClose:I = 0x7f0a0090
+
+.field public static btnForward:I = 0x7f0a0091
+
+.field public static btnLayoutBottom:I = 0x7f0a0092
+
+.field public static btnLayoutTop:I = 0x7f0a0093
+
+.field public static btnOpenExternal:I = 0x7f0a0094
+
+.field public static btnRefresh:I = 0x7f0a0095
+
+.field public static close:I = 0x7f0a00de
+
+.field public static container:I = 0x7f0a00fb
+
+.field public static progressBar:I = 0x7f0a032d
+
+.field public static smaato_sdk_core_progress_view_id:I = 0x7f0a03f1
+
+.field public static smaato_sdk_interstitial_close:I = 0x7f0a03f2
+
+.field public static smaato_sdk_interstitial_content:I = 0x7f0a03f3
+
+.field public static smaato_sdk_interstitial_loading:I = 0x7f0a03f4
+
+.field public static smaato_sdk_rewarded_ads_close:I = 0x7f0a03f5
+
+.field public static smaato_sdk_rewarded_ads_content:I = 0x7f0a03f6
+
+.field public static smaato_sdk_video_companion_view_id:I = 0x7f0a03f7
+
+.field public static smaato_sdk_video_icon_view_id:I = 0x7f0a03f8
+
+.field public static smaato_sdk_video_mute_button:I = 0x7f0a03f9
+
+.field public static smaato_sdk_video_player_layout:I = 0x7f0a03fa
+
+.field public static smaato_sdk_video_player_surface_layout:I = 0x7f0a03fb
+
+.field public static smaato_sdk_video_skip_button:I = 0x7f0a03fc
+
+.field public static smaato_sdk_video_surface_holder_view_id:I = 0x7f0a03fd
+
+.field public static smaato_sdk_video_video_player_view_id:I = 0x7f0a03fe
+
+.field public static smaato_sdk_video_video_progress:I = 0x7f0a03ff
+
+.field public static smaato_sdk_video_watermark_button_id:I = 0x7f0a0400
+
+.field public static tvHostname:I = 0x7f0a04ad
+
+.field public static webView:I = 0x7f0a0512
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

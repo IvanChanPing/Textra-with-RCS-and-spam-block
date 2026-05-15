@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.plus.giphy.GiphyActivityLayout a:orientation="vertical" a:id="@id/main" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="navbarLine" style="?common_giphy"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/common_actionbar" />
+    <com.mplus.lib.ui.common.base.BaseDrawerLayout a:id="@id/drawer_layout" a:layout_width="match_parent" a:layout_height="match_parent">
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/content" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="topHeavy">
+            <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/giphy_category_grid_holder" a:layout_width="match_parent" a:layout_height="match_parent">
+                <fragment a:name="com.mplus.lib.ui.common.plus.giphy.category.GiphyCategoryGridFragment" a:id="@id/giphy_category_grid_fragment" a:layout_width="match_parent" a:layout_height="match_parent" />
+            </com.mplus.lib.ui.common.base.BaseFrameLayout>
+            <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/giphy_list_holder" a:layout_width="match_parent" a:layout_height="match_parent">
+                <fragment a:name="com.mplus.lib.ui.common.plus.giphy.gifs.GiphyGifsListFragment" a:id="@id/giphy_list_fragment" a:layout_width="match_parent" a:layout_height="match_parent" />
+            </com.mplus.lib.ui.common.base.BaseFrameLayout>
+        </com.mplus.lib.ui.common.base.BaseFrameLayout>
+        <fragment a:name="com.mplus.lib.ui.common.drawermenu.DrawerMenuFragment" a:layout_gravity="left" a:id="@id/giphy_menu" a:layout_width="200.0sp" a:layout_height="match_parent" />
+    </com.mplus.lib.ui.common.base.BaseDrawerLayout>
+</com.mplus.lib.ui.common.plus.giphy.GiphyActivityLayout>

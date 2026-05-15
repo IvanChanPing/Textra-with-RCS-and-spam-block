@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseButton a:layout_gravity="right" a:id="@id/applyNowButton" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/settings_message_limit_apply_now_button" style="?common_raised_button_themecolor"
+  xmlns:a="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/AppThemeBase">
+        <item name="calendar_chevronButton">@style/calendar_chevronButton_landscape</item>
+        <item name="calendar_day">@style/calendar_day_landscape</item>
+        <item name="calendar_weekDay">@style/calendar_weekDay_landscape</item>
+        <item name="common_linearlayout_orientation">@style/common_linearlayout_orientation_landscape</item>
+        <item name="plusPanel_schedulePanel_title">@style/plusPanel_schedulePanel_title_landscape</item>
+        <item name="settings_actionbar_extension_item">@style/settings_actionbar_extension_item_landscape</item>
+        <item name="settings_bubbleColorsDialog_tabs">@style/settings_bubbleColorsDialog_tabs_landscape</item>
+    </style>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="Widget.MaterialComponents.MaterialCalendar.HeaderSelection" parent="@style/Widget.AppCompat.TextView">
+        <item name="android:textAppearance">?textAppearanceHeadline6</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">@integer/mtrl_calendar_selection_text_lines</item>
+    </style>
+</resources>

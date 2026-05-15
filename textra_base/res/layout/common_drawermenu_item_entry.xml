@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.drawermenu.DrawerMenuEntryView a:layout_width="match_parent" a:layout_height="wrap_content" style="?common_drawerMenu_item_entry"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/drawer_menu_item_label" a:layout_width="match_parent" a:layout_height="match_parent" style="?common_drawerMenu_item_entry_label" />
+</com.mplus.lib.ui.common.drawermenu.DrawerMenuEntryView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/dialogButtonPanel" style="?common_dialog_buttonPanel"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseButton a:id="@id/cancel" a:text="@string/common_dialog_cancel" style="?common_dialog_buttonCommon" />
+    <com.mplus.lib.ui.common.base.BaseButton a:id="@id/ok" style="?common_dialog_okButton" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

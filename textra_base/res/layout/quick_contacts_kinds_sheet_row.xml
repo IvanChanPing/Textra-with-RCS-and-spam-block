@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:clickable="true" a:layout_width="wrap_content" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/quickContactKindsSheet_Icon" a:duplicateParentState="true" a:layout_width="48.0dp" a:layout_height="48.0dp" a:scaleType="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:textSize="18.0sp" a:id="@id/quickContactKindsSheet_Prompt" a:paddingLeft="8.0dp" a:paddingRight="16.0dp" a:duplicateParentState="true" a:layout_width="wrap_content" a:layout_height="wrap_content" a:maxLines="1" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/quickContactKindsSheet_Icon" app:layout_constraintTop_toTopOf="parent" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

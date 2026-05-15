@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/exo_controller" a:background="@android:color/transparent" a:layout_width="match_parent" a:layout_height="match_parent">
+        <com.mplus.lib.ui.common.base.BaseImageButton a:id="@id/exo_play_pause" a:layout_width="52.0dp" a:layout_height="52.0dp" app:layout_constraintBottom_toTopOf="@id/bottomBar" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" style="@style/ExoStyledControls.Button.Center.PlayPause" />
+        <com.mplus.lib.ui.common.base.BaseView a:id="@id/bottomBarScrim" a:layout_width="match_parent" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="@id/bottomBar" />
+        <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/bottomBar" a:layout_width="match_parent" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent">
+            <com.mplus.lib.ui.common.base.BaseTextView a:textSize="14.0sp" a:textColor="@android:color/white" a:id="@id/exo_position" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:text="0:00" a:includeFontPadding="false" app:calligraphyFontPath="?font_medium" app:layout_constraintBottom_toBottomOf="@id/progress_holder" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/progress_holder" />
+            <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/progress_holder" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/exo_position" app:layout_constraintRight_toLeftOf="@id/exo_duration">
+                <View a:id="@id/exo_progress_placeholder" a:layout_width="match_parent" a:layout_height="32.0dp" />
+            </com.mplus.lib.ui.common.base.BaseFrameLayout>
+            <com.mplus.lib.ui.common.base.BaseTextView a:textSize="14.0sp" a:textColor="@android:color/white" a:id="@id/exo_duration" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginRight="16.0dp" a:text="0:00" a:includeFontPadding="false" app:calligraphyFontPath="?font_medium" app:layout_constraintBottom_toBottomOf="@id/progress_holder" app:layout_constraintLeft_toRightOf="@id/progress_holder" app:layout_constraintRight_toRightOf="parent" />
+        </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+    </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+</merge>

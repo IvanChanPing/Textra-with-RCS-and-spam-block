@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:id="@id/playIconAndDuration" a:background="@drawable/play_icon_and_duration_background" a:paddingRight="6.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="4.0dp" a:layout_marginBottom="4.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent">
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/playIcon" a:layout_width="20.0dp" a:layout_height="20.0dp" app:srcVector="@drawable/ic_play_arrow_black_24dp" app:tintWith="white" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:textSize="12.0sp" a:textColor="@android:color/white" a:id="@id/durationText" a:layout_width="wrap_content" a:layout_height="wrap_content" a:includeFontPadding="false" app:calligraphyFontPath="?font_medium" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</merge>

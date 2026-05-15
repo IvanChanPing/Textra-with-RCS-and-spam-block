@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseView a:background="@drawable/listview_divider" a:layout_width="match_parent" a:layout_height="0.5dp"
+  xmlns:a="http://schemas.android.com/apk/res/android" />

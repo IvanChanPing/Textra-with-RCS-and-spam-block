@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="match_parent" style="?settings_support_help"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:id="@id/help_content" a:layout_width="match_parent" a:layout_height="match_parent">
+        <com.mplus.lib.ui.common.base.BaseCardView a:id="@id/card" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="14.0dp" a:layout_marginTop="16.0dp" a:layout_marginRight="14.0dp" a:layout_marginBottom="16.0dp" a:layout_weight="0.0" style="?settings_support_card">
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:layout_width="match_parent" a:layout_height="wrap_content">
+                <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center_vertical" a:id="@id/searchIcon" a:paddingLeft="16.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" app:srcVector="@drawable/ic_search_black_24dp" style="?settings_support_search_icon" />
+                <com.mplus.lib.ui.common.base.BaseEditText a:id="@id/searchText" a:layout_width="0.0dp" a:layout_height="48.0dp" a:layout_weight="1.0" style="?settings_support_search" />
+                <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center_vertical" a:id="@id/progressIndicator" a:visibility="gone" a:layout_width="48.0dp" a:layout_height="48.0dp" style="?settings_support_search_icon" />
+                <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center_vertical" a:id="@id/searchClearButton" a:visibility="gone" a:layout_width="48.0dp" a:layout_height="48.0dp" app:flatButtonBackgroundSelector="onScreenColor" app:srcVector="@drawable/ic_clear_black_24dp" style="?settings_support_search_icon" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        </com.mplus.lib.ui.common.base.BaseCardView>
+        <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@android:id/list" a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <com.mplus.lib.ui.common.fab.FloatingActionButtonBackground a:layout_gravity="right|bottom" a:id="@id/floatingButton" a:visibility="gone" a:layout_width="@dimen/floatingButtonSize" a:layout_height="@dimen/floatingButtonSize" a:layout_marginRight="8.0dp" a:layout_marginBottom="8.0dp" app:tintBackgroundWith="primaryColor">
+        <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:background="@null" a:layout_width="match_parent" a:layout_height="match_parent" a:scaleType="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:tintWith="primaryTextColor" />
+    </com.mplus.lib.ui.common.fab.FloatingActionButtonBackground>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_gravity="bottom" a:id="@id/make_default_app" style="?common_sheet_button_container">
+        <com.mplus.lib.ui.common.BaseSheetButton a:id="@id/make_default_app_button" a:text="@string/convolist_make_default_app_button" style="?common_sheet_button" />
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_gravity="bottom" a:orientation="vertical" a:id="@id/user_choice" style="?common_sheet_button_container">
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/trial_expired_text" a:paddingRight="96.0dp" style="?convoList_trial_license_expired_text" />
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_horizontal" a:orientation="horizontal" a:layout_width="match_parent" a:layout_height="wrap_content" app:applyEqualLayoutWeight="true">
+            <com.mplus.lib.ui.common.BaseSheetButton a:id="@id/show_ads" a:text="@string/convolist_show_ads" style="?common_sheet_button" />
+            <com.mplus.lib.ui.common.BaseSheetButton a:id="@id/upgrade_to_pro" a:text="@string/convolist_upgrade_to_pro" style="?common_sheet_button" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

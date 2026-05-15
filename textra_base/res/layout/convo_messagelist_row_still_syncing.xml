@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.convo.RowLayout a:id="@id/row" a:layout_width="match_parent" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseCardView a:id="@id/stillSyncing" a:layout_width="match_parent" a:layout_height="wrap_content" style="?convo_stillSynching_holder">
+        <com.mplus.lib.ui.common.base.BaseTextView a:layout_width="match_parent" a:layout_height="wrap_content" a:text="@string/initialsync_convo_still_syncing" style="?convo_stillSynching" />
+    </com.mplus.lib.ui.common.base.BaseCardView>
+</com.mplus.lib.ui.convo.RowLayout>

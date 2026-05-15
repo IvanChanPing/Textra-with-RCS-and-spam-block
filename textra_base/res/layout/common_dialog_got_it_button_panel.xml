@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout style="?common_dialog_buttonPanel"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseButton a:id="@id/got_it" a:text="@string/got_it" style="?common_dialog_okButton" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

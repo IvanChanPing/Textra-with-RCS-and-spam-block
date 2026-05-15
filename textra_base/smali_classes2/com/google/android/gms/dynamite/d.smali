@@ -1,0 +1,35 @@
+.class public final Lcom/google/android/gms/dynamite/d;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;
+
+
+# virtual methods
+.method public final selectModule(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$IVersions;)Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;
+    .locals 2
+
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;
+
+    invoke-direct {v0}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;-><init>()V
+
+    const/4 v1, 0x0
+
+    invoke-interface {p3, p1, p2, v1}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$IVersions;->zzb(Landroid/content/Context;Ljava/lang/String;Z)I
+
+    move-result p1
+
+    iput p1, v0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->remoteVersion:I
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x1
+
+    :goto_0
+    iput v1, v0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->selection:I
+
+    return-object v0
+.end method

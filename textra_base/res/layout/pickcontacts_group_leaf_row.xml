@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:background="?screen_background" a:paddingLeft="50.0dp" a:layout_width="match_parent" a:layout_height="wrap_content" app:flatButtonBackgroundSelector="onScreenColor" style="?common_pickContacts_contactsList_row"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/pickcontacts_contact_row_body" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

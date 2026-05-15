@@ -1,0 +1,80 @@
+.class public final Lcom/google/android/gms/ads/identifier/a;
+.super Ljava/lang/Thread;
+
+
+# instance fields
+.field public final synthetic a:Ljava/util/HashMap;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/HashMap;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/ads/identifier/a;->a:Ljava/util/HashMap;
+
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    const-string v0, ""
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/android/gms/ads/identifier/a;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/ads/identifier/zzc;->zza(Ljava/lang/String;)V
+
+    return-void
+.end method

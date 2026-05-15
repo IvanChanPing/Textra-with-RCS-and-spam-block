@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/adBar" a:background="?screen_background" a:layout_width="match_parent" a:layout_height="wrap_content" app:shadow="topHeavy" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="16.0dp" app:shadow="topHeavy" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

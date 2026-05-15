@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:textSize="18.0sp" a:textColor="?text_dark_gray" a:id="@id/text" a:paddingLeft="16.0dp" a:paddingTop="16.0dp" a:paddingRight="16.0dp" a:layout_width="match_parent" a:layout_height="match_parent" />
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/dialogButtonPanel" style="?common_dialog_buttonPanel">
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/ok" style="?common_dialog_okButton" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

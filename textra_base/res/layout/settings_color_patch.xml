@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseImageView a:layout_width="@dimen/color_patch_size" a:layout_height="@dimen/color_patch_size"
+  xmlns:a="http://schemas.android.com/apk/res/android" />

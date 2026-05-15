@@ -1,0 +1,28 @@
+.class public interface abstract Lcom/mplus/lib/d/f;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/IInterface;
+
+
+# virtual methods
+.method public abstract areNotificationsEnabled(Landroid/os/Bundle;)Landroid/os/Bundle;
+.end method
+
+.method public abstract cancelNotification(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract extraCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/IBinder;)Landroid/os/Bundle;
+.end method
+
+.method public abstract getActiveNotifications()Landroid/os/Bundle;
+.end method
+
+.method public abstract getSmallIconBitmap()Landroid/os/Bundle;
+.end method
+
+.method public abstract getSmallIconId()I
+.end method
+
+.method public abstract notifyNotificationWithChannel(Landroid/os/Bundle;)Landroid/os/Bundle;
+.end method

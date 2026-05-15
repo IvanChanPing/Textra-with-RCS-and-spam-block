@@ -1,0 +1,7 @@
+com.smaato.sdk.banner.injections.BannerModuleInterface
+com.smaato.sdk.rewarded.injections.RewardedAdsModuleInterface
+com.smaato.sdk.interstitial.injections.InterstitialModuleInterface
+com.smaato.sdk.richmedia.injections.RichMediaLightModuleInterface
+com.smaato.sdk.video.framework.VideoModuleInterface
+com.smaato.sdk.core.mvvm.injections.MvvmCommonInterface
+com.smaato.sdk.core.injections.CoreModuleInterface

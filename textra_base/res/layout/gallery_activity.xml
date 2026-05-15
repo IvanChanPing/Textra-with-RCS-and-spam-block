@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/main" a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseViewPager a:id="@id/viewPager" a:layout_width="0.0dp" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_gravity="top" a:id="@id/actionbarScrim" a:layout_width="match_parent" a:layout_height="0.0px" />
+    <include layout="@layout/common_actionbar" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/navbarScrim" a:layout_width="0.0dp" a:layout_height="0.0px" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

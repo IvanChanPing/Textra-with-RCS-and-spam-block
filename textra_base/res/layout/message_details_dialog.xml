@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="match_parent" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseScrollView a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:id="@id/details" a:layout_width="match_parent" a:layout_height="wrap_content" />
+    </com.mplus.lib.ui.common.base.BaseScrollView>
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/dialogButtonPanel" style="?common_dialog_buttonPanel">
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/ok" style="?common_dialog_okButton" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

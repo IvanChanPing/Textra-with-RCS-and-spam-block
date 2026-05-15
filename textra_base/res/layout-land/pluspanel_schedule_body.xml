@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.plus.schedule.SchedulePanelUiView a:orientation="vertical" a:id="@id/scheduleBody" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="top"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseRelativeLayout a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginTop="6.0dp" a:layout_marginRight="8.0dp">
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/unscheduleButton" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/sendarea_scheduledetails_new_reset" a:layout_alignParentRight="true" style="?common_raised_button_per_contact_themecolor" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/schedule_title" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/sendarea_scheduledetails_new_schedule" a:layout_alignTop="@id/unscheduleButton" a:layout_alignParentLeft="true" style="?plusPanel_schedulePanel_title" />
+    </com.mplus.lib.ui.common.base.BaseRelativeLayout>
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_marginLeft="16.0dp" a:layout_marginRight="8.0dp" a:layout_weight="1.0">
+        <com.mplus.lib.ui.common.base.BaseRelativeLayout a:layout_gravity="center_vertical" a:layout_width="match_parent" a:layout_height="wrap_content">
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/schedule_date_label" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/sendarea_scheduledetails_new_date_label" a:layout_alignParentLeft="true" style="?plusPanel_schedulePanel_picked_value_label" />
+            <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/schedule_date_field" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_below="@id/schedule_date_label" a:layout_alignParentLeft="true" app:shadow="bottomLine">
+                <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/pickedDate" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?plusPanel_schedulePanel_picked_value" />
+            </com.mplus.lib.ui.common.base.BaseFrameLayout>
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/schedule_time_label" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="64.0dp" a:text="@string/sendarea_scheduledetails_new_time_label" a:layout_toRightOf="@id/schedule_date_field" a:layout_alignBaseline="@id/schedule_date_label" style="?plusPanel_schedulePanel_picked_value_label" />
+            <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/schedule_time_field" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="64.0dp" a:layout_toRightOf="@id/schedule_date_field" a:layout_below="@id/schedule_date_label" app:shadow="bottomLine">
+                <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/pickedTime" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?plusPanel_schedulePanel_picked_value" />
+            </com.mplus.lib.ui.common.base.BaseFrameLayout>
+        </com.mplus.lib.ui.common.base.BaseRelativeLayout>
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+</com.mplus.lib.ui.common.plus.schedule.SchedulePanelUiView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:layout_width="match_parent" a:layout_height="wrap_content" style="?blacklisted_row"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/contactDisplayName" a:layout_width="0.0dp" a:layout_height="wrap_content" app:emojify="true" app:layout_constraintBottom_toTopOf="@id/contactNumber" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/menuButton" app:layout_constraintTop_toTopOf="parent" style="?blacklisted_displayName" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/contactNumber" a:layout_width="0.0dp" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/lastTime" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/menuButton" app:layout_constraintTop_toBottomOf="@id/contactDisplayName" style="?blacklisted_contactNumber" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/lastTime" a:layout_width="0.0dp" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/menuButton" app:layout_constraintTop_toBottomOf="@id/contactNumber" style="?blacklisted_contactNumber" />
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/menuButton" a:layout_width="48.0dp" a:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="?settings_base_menubutton_preference" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

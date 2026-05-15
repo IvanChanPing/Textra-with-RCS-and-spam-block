@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:id="@id/diagCAC" a:layout_width="match_parent" a:layout_height="?initialActionbarHeight" a:animateLayoutChanges="true" style="?common_actionbar_customview"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center_vertical" a:id="@id/title" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1000.0" app:emojify="true" style="?common_actionbar_customview_title" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

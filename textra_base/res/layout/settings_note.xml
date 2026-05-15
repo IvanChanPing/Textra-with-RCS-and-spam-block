@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:layout_width="match_parent" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@android:id/title" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="?settings_note" />
+    <com.mplus.lib.ui.common.base.BaseButton a:id="@id/gotItButton" a:text="@string/got_it" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@android:id/title" style="?common_dialog_okButton" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

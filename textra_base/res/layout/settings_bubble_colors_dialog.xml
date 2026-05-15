@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="match_parent" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:id="@id/tabs" a:layout_width="match_parent" a:layout_height="48.0dp" a:layout_marginBottom="16.0dp" style="?settings_bubbleColorsDialog_tabs">
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/incomingTab" a:text="@string/bubblestyle_incoming_bubble_tab" style="?settings_bubbleColorsDialog_tab" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/outgoingTab" a:text="@string/bubblestyle_outgoing_bubble_tab" style="?settings_bubbleColorsDialog_tab" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <ScrollView a:layout_width="match_parent" a:layout_height="match_parent">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="right" a:orientation="vertical" a:clipChildren="false" a:layout_width="match_parent" a:layout_height="wrap_content">
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:clipChildren="false" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="11.0dp" a:layout_marginTop="8.0dp" a:layout_marginRight="11.0dp" style="?common_linearlayout_orientation">
+                <com.mplus.lib.ui.convo.BubbleView a:id="@id/incoming" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="0.0dp" a:layout_marginTop="8.0dp" style="?convo_bubbleIncoming" />
+                <com.mplus.lib.ui.common.base.BaseFrameLayout a:clipChildren="false" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginTop="8.0dp">
+                    <com.mplus.lib.ui.convo.BubbleView a:layout_gravity="right" a:id="@id/outgoing" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="0.0dp" style="?convo_bubbleOutgoing" />
+                </com.mplus.lib.ui.common.base.BaseFrameLayout>
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+            <com.mplus.lib.ui.common.base.BaseTextView a:textSize="@dimen/settingsCategory_textSize" a:textColor="?text_dark_gray" a:layout_gravity="left|center" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginTop="16.0dp" a:layout_marginBottom="8.0dp" a:text="@string/bubblestyle_bubblecolor_title" />
+            <com.mplus.lib.ui.common.widgets.coverflow.CoverFlow a:id="@id/incomingCoverflow" a:layout_width="match_parent" a:layout_height="wrap_content" />
+            <com.mplus.lib.ui.common.widgets.coverflow.CoverFlow a:id="@id/outgoingCoverflow" a:visibility="gone" a:layout_width="match_parent" a:layout_height="wrap_content" />
+            <com.mplus.lib.ui.common.base.BaseTextView a:textSize="@dimen/settingsCategory_textSize" a:textColor="?text_dark_gray" a:layout_gravity="left|center" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginTop="16.0dp" a:layout_marginBottom="8.0dp" a:text="@string/bubblestyle_textcolor_title" />
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/incomingTextColors" style="?settings_bubbleColorsDialog_textColorOptions">
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/outgoingTextColors" style="?settings_bubbleColorsDialog_textColorOptions">
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+                <com.mplus.lib.ui.common.base.BaseImageView style="?settings_bubbleColorsDialog_textColorOption" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/dialogButtonPanel" style="?common_dialog_buttonPanel">
+                <com.mplus.lib.ui.common.base.BaseButton a:id="@id/matchButton" a:text="@string/settings_app_icon_color_button_match" style="?common_dialog_buttonCommon_squashable" />
+                <com.mplus.lib.ui.common.base.BaseButton a:id="@id/cancel" a:text="@string/common_dialog_cancel" style="?common_dialog_buttonCommon" />
+                <com.mplus.lib.ui.common.base.BaseButton a:id="@id/ok" style="?common_dialog_okButton" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    </ScrollView>
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

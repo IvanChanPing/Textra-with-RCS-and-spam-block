@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/AppThemeBase">
+        <item name="common_sendarea_text">@style/common_sendarea_text</item>
+    </style>
+    <style name="Base.Widget.AppCompat.DrawerArrowToggle" parent="@style/Base.Widget.AppCompat.DrawerArrowToggle.Common">
+        <item name="barLength">18.659973dp</item>
+        <item name="drawableSize">24.0dp</item>
+        <item name="gapBetweenBars">3.3299866dp</item>
+    </style>
+</resources>

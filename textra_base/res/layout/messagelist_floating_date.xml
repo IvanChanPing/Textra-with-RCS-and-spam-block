@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content" style="?convo_floatingDateLabel_bar"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/dateBarContainer" a:layout_width="match_parent" a:layout_height="wrap_content" app:shadow="topHeavy">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:id="@id/dateLabelContainer" a:paddingRight="4.0dp" a:layout_width="wrap_content" a:layout_height="40.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center_vertical" a:id="@id/dateLabel" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?convo_floatingDateLabel" />
+            <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center_vertical" a:id="@id/dateLabelDownArrow" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="4.0dp" app:srcVector="@drawable/ic_arrow_drop_down_black_24dp" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="16.0dp" app:shadow="topHeavy" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

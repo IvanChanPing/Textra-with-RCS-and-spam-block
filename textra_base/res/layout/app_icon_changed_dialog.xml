@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content" style="?appIconChangedDialog_titleHolder">
+        <com.mplus.lib.ui.common.base.BaseTextView a:layout_width="match_parent" a:layout_height="wrap_content" a:text="@string/app_icon_changed_body" style="?appIconChangedDialog_textBody" />
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/icon" a:layout_width="match_parent" a:layout_height="wrap_content" style="?appIconChangedDialog_icon" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <include layout="@layout/common_dialog_got_it_button_panel" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

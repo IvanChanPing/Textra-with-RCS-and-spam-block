@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:textSize="18.0sp" a:textColor="?text_dark_gray" a:id="@id/text" a:paddingLeft="16.0dp" a:paddingRight="16.0dp" a:layout_width="match_parent" a:layout_height="match_parent" a:text="@string/include_media_dialog_detail" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/settingHolder" a:layout_width="match_parent" a:layout_height="wrap_content" />
+    <include layout="@layout/common_dialog_ok_cancel_button_panel" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

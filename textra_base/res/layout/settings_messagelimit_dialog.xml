@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="match_parent" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <include a:id="@id/textHolder" layout="@layout/settings_messagelimit_dialog_single_limit" />
+    <include a:id="@id/mediaHolder" layout="@layout/settings_messagelimit_dialog_single_limit" />
+    <include layout="@layout/common_dialog_ok_cancel_button_panel" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

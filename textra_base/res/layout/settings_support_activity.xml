@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/main" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="navbarLine"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/common_actionbar" />
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:id="@id/support_content" a:layout_width="0.0dp" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/actionbarContainer">
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/actionbar_extension" a:layout_width="match_parent" a:layout_height="wrap_content" style="?settings_actionbar_extension" />
+        <com.mplus.lib.ui.common.tabs.FixedTabsViewWithSlider a:id="@id/tabs" a:layout_width="match_parent" a:layout_height="48.0dp" style="?settings_support_tabs" />
+        <com.mplus.lib.ui.common.base.BaseViewPager a:id="@id/pager" a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0" style="?settings_support_viewpager" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

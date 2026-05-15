@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <translate a:duration="@android:integer/config_shortAnimTime" a:fromYDelta="10.000002%p" a:toYDelta="0.0" />
+    <alpha a:duration="@android:integer/config_shortAnimTime" a:fromAlpha="0.0" a:toAlpha="1.0" />
+</set>

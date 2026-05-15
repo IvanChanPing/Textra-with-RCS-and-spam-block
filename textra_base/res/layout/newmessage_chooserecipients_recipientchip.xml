@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="wrap_content" a:layout_height="wrap_content" style="?newMessage_chooseRecipients_recipientChip"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseTextView a:gravity="center_vertical" a:layout_gravity="left|top" a:id="@id/contactName" a:layout_width="wrap_content" a:layout_height="32.0dp" a:singleLine="true" style="?newMessage_chooseRecipients_recipientChip_contactName" />
+    <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="left|top" a:id="@id/contactPhoto" a:layout_width="32.0dp" a:layout_height="32.0dp" style="?newMessage_chooseRecipients_recipientChip_photo" />
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

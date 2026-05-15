@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/main" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="navbarLine"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/common_actionbar" />
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="0.0dp" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/actionbarContainer" style="?settings_support_post_idea">
+        <com.mplus.lib.ui.common.base.BaseCardView a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="14.0dp" a:layout_marginTop="6.0dp" a:layout_marginRight="14.0dp" a:layout_marginBottom="16.0dp" style="?settings_support_card">
+            <com.mplus.lib.ui.common.base.BaseConstraintLayout a:layout_width="match_parent" a:layout_height="wrap_content">
+                <com.mplus.lib.ui.common.base.BaseEditText a:id="@id/ideaTitle" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="?settings_support_post_idea_title" />
+                <com.mplus.lib.ui.common.base.BaseView a:id="@id/hairline" a:layout_width="match_parent" a:layout_height="0.5dp" a:layout_marginTop="16.0dp" a:layout_marginBottom="8.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/ideaTitle" style="?settings_support_post_idea_separator" />
+                <com.mplus.lib.ui.common.base.BaseEditText a:id="@id/ideaDescription" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginTop="8.0dp" a:layout_marginRight="16.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/hairline" style="?settings_support_post_idea_description" />
+                <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center_vertical" a:id="@id/progressIndicator" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/nextButton" app:layout_constraintRight_toLeftOf="@id/nextButton" app:layout_constraintTop_toTopOf="@id/nextButton" style="?settings_support_search_icon" />
+                <com.mplus.lib.ui.common.base.BaseButton a:id="@id/nextButton" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/settings_support_post_idea_next_button" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/ideaDescription" style="?common_dialog_buttonCommon" />
+            </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+        </com.mplus.lib.ui.common.base.BaseCardView>
+        <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@android:id/list" a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

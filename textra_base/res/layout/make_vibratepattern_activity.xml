@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:id="@id/main" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="navbarLine"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/common_actionbar" />
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center" a:orientation="vertical" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="topHeavy">
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_gravity="center_horizontal" a:id="@id/vibrateControl" a:layout_width="230.0dp" a:layout_height="230.0dp" a:layout_marginTop="24.0dp">
+            <com.mplus.lib.ui.common.base.AutoResizeTextView a:gravity="center" a:layout_gravity="center" a:id="@id/tapToRecord" a:layout_width="wrap_content" a:layout_height="wrap_content" a:maxWidth="130.0dp" a:maxHeight="130.0dp" a:text="@string/settings_make_vibrate_pattern_tap_to_record" style="?settings_makeVibratePattern_tapToRecord" />
+            <com.mplus.lib.ui.common.base.AutoResizeTextView a:gravity="center" a:layout_gravity="center" a:id="@id/tapToVibrate" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content" a:maxWidth="130.0dp" a:maxHeight="130.0dp" a:text="@string/settings_make_vibrate_pattern_tap_to_vibrate" style="?settings_makeVibratePattern_tapToRecord" />
+            <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:id="@id/playButton" a:visibility="gone" a:layout_width="48.0dp" a:layout_height="48.0dp" a:src="@drawable/ic_play_arrow_black_24dp" app:tintWith="surfaceDarkGray" />
+            <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:id="@id/pauseButton" a:visibility="gone" a:layout_width="48.0dp" a:layout_height="48.0dp" a:src="@drawable/ic_pause_black_24dp" app:tintWith="surfaceDarkGray" />
+        </com.mplus.lib.ui.common.base.BaseFrameLayout>
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="80.0dp">
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_horizontal" a:orientation="horizontal" a:id="@id/buttonsHolder_recording" a:visibility="gone" a:layout_width="match_parent" a:layout_height="wrap_content">
+                <com.mplus.lib.ui.common.base.BaseButton a:id="@id/stopButton" a:text="@string/settings_make_vibrate_pattern_button_stop" style="?common_dialog_buttonCommon" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_horizontal" a:orientation="horizontal" a:id="@id/buttonsHolder_recorded" a:visibility="gone" a:layout_width="match_parent" a:layout_height="wrap_content">
+                <com.mplus.lib.ui.common.base.BaseButton a:id="@id/startAgainButton" a:text="@string/settings_make_vibrate_pattern_button_start_again" style="?common_dialog_buttonCommon" />
+                <com.mplus.lib.ui.common.base.BaseButton a:id="@id/saveButton" a:text="@string/settings_make_vibrate_pattern_button_save" style="?common_dialog_buttonCommon" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

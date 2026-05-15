@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="match_parent" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content">
+        <com.mplus.lib.ui.common.widgets.coverflow.CoverFlow a:id="@id/coverflow" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginTop="16.0dp" a:layout_marginBottom="16.0dp" />
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/transparencySettingHolder" a:layout_width="match_parent" a:layout_height="wrap_content" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:textSize="@dimen/settingsCategory_textSize" a:textColor="?text_medium_gray" a:layout_gravity="left|center" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp" a:layout_marginBottom="16.0dp" a:text="@string/settings_app_icon_color_dialog_restarted" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/dialogButtonPanel" style="?common_dialog_buttonPanel">
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/matchButton" a:text="@string/settings_app_icon_color_button_match" style="?common_dialog_buttonCommon_squashable" />
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/cancel" a:text="@string/common_dialog_cancel" style="?common_dialog_buttonCommon" />
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/ok" style="?common_dialog_okButton" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

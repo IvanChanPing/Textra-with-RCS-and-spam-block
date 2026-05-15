@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/smaato_sdk_interstitial_content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="bottom" android:id="@id/smaato_sdk_video_video_progress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="5.0dp" android:layout_margin="@dimen/smaato_sdk_core_activity_margin" android:elevation="3.0dp" style="@style/smaato_sdk_core_VideoProgressBar" />
+    </FrameLayout>
+    <ImageButton android:layout_gravity="start|top" android:id="@id/smaato_sdk_interstitial_close" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/smaato_sdk_core_activity_margin" android:src="@drawable/smaato_sdk_core_circle_close" android:contentDescription="Close Ad" />
+</merge>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.ClearableEditText a:id="@id/search_view" a:layout_width="match_parent" a:layout_height="wrap_content" style="?common_giphy_actionbar_customview_search_view"
+  xmlns:a="http://schemas.android.com/apk/res/android" />

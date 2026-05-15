@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:clipChildren="false" a:clipToPadding="false" a:layout_width="match_parent" a:layout_height="wrap_content" a:baselineAligned="false" style="?settings_row"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="vertical" a:duplicateParentState="true" a:clipChildren="false" a:clipToPadding="false" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1.0">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:id="@id/title_row_block" a:duplicateParentState="true" a:clipChildren="false" a:clipToPadding="false" a:layout_width="match_parent" a:layout_height="wrap_content">
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@android:id/title" a:duplicateParentState="true" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1.0" style="?settings_rowTitle" />
+            <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/title_row_holder" a:duplicateParentState="true" a:clipChildren="false" a:clipToPadding="false" a:layout_width="wrap_content" a:layout_height="wrap_content" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@android:id/summary" a:duplicateParentState="true" a:layout_width="match_parent" a:layout_height="wrap_content" style="?settings_rowSummary" />
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/summary_widget_frame" a:duplicateParentState="true" a:layout_width="match_parent" a:layout_height="wrap_content" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="vertical" a:id="@id/widget_frame" a:duplicateParentState="true" a:layout_width="wrap_content" a:layout_height="wrap_content" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

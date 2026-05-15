@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:id="@id/bubbleHolder" a:layout_width="wrap_content" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.convo.BubbleView a:id="@id/incoming" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?convo_bubbleIncoming" />
+    <com.mplus.lib.ui.convo.BubbleView a:id="@id/outgoing" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?convo_bubbleOutgoing" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

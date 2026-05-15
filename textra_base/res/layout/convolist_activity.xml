@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/main" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="navbarLine"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/layer_1" a:layout_width="0.0dp" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="match_parent">
+            <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@id/list" a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0" app:shadow="topHeavy" style="?convoList_list" />
+            <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/noData" a:visibility="gone" a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0">
+                <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/noDataText" a:layout_width="wrap_content" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="?convoList_noData_text" />
+                <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/noDataProgress" a:layout_width="48.0dp" a:layout_height="48.0dp" a:layout_marginBottom="16.0dp" app:layout_constraintBottom_toTopOf="@id/noDataText" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+            </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+            <ViewStub a:id="@id/sheets" a:layout="@layout/convolist_sheets" a:layout_width="match_parent" a:layout_height="wrap_content" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        <com.mplus.lib.ui.common.fab.FloatingActionButtonBackground a:layout_gravity="right|bottom" a:id="@id/floating_button_background" a:visibility="gone" a:layout_width="@dimen/floatingButtonSize" a:layout_height="@dimen/floatingButtonSize" a:layout_marginRight="8.0dp" a:layout_marginBottom="8.0dp">
+            <com.mplus.lib.ui.convolist.FloatingButton a:layout_gravity="center" a:id="@id/floating_button" a:layout_width="match_parent" a:layout_height="match_parent" a:scaleType="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        </com.mplus.lib.ui.common.fab.FloatingActionButtonBackground>
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <include layout="@layout/common_actionbar" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

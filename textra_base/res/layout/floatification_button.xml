@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseButton a:ellipsize="end" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginBottom="0.0dp" a:maxLines="1" style="?common_dialog_buttonCommon"
+  xmlns:a="http://schemas.android.com/apk/res/android" />

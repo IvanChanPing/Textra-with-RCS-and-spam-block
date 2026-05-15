@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseImageView a:layout_width="wrap_content" a:layout_height="wrap_content" a:scaleType="center" app:srcVector="@drawable/ic_collections_black_36dp" app:tintWith="primaryColorOrScrim"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

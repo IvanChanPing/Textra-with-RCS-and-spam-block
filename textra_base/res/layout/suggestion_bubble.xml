@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="wrap_content" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/text" a:layout_width="wrap_content" a:layout_height="wrap_content" app:emojify="true" style="?convo_suggestionBubble" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:textSize="8.0sp" a:id="@id/confidence" a:paddingLeft="0.0dp" a:paddingTop="0.0dp" a:paddingRight="0.0dp" a:paddingBottom="0.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="0.0dp" a:layout_marginTop="0.0dp" a:layout_marginRight="0.0dp" a:layout_marginBottom="0.0dp" style="?convo_suggestionBubble" />
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

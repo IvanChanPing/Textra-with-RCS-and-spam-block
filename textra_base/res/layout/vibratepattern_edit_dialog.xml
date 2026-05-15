@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseEditText a:id="@id/name" a:layout_width="match_parent" a:layout_height="match_parent" a:hint="@string/vibratepattern_edit_dialog_title_untitled" style="?settings_nameVibratePatternDialog_text" />
+    <include layout="@layout/common_dialog_ok_cancel_button_panel" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

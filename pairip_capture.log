@@ -1,0 +1,13 @@
+     ____
+    / _  |   Frida 17.9.6 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to localhost:5557 (id=socket@localhost:5557)
+Spawning `com.textra`...
+Failed to spawn: connection closed

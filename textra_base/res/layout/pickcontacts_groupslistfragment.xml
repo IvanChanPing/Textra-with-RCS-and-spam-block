@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="topHeavy" style="?common_pickContacts_groupsListFragment"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@android:id/list" a:layout_width="match_parent" a:layout_height="match_parent" style="?common_pickContacts_groupsListFragment_list" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

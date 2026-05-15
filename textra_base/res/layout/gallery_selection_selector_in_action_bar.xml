@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/selectedHolder" a:layout_width="wrap_content" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseButton a:textColor="@android:color/white" a:id="@id/chooseButton" a:layout_marginTop="0.0dp" a:layout_marginBottom="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toLeftOf="@id/selectedTick" app:layout_constraintTop_toTopOf="parent" style="?common_dialog_buttonCommon" />
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/selectedTick" a:paddingLeft="8.0dp" a:paddingTop="16.0dp" a:paddingRight="16.0dp" a:paddingBottom="16.0dp" a:layout_width="56.0dp" a:layout_height="56.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

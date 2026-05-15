@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseCheckBox a:id="@id/contactCheckbox" a:focusable="false" style="?common_pickContacts_contactsList_checkbox" />
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content">
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/contactDisplayName" a:layout_width="wrap_content" a:layout_height="wrap_content" app:emojify="true" style="?common_pickContacts_contactsList_displayName" />
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:layout_width="match_parent" a:layout_height="wrap_content">
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/contactTypeLabel" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_pickContacts_contactsList_typeLabel" />
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/contactNumber" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_pickContacts_contactsList_contactNumber" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</merge>

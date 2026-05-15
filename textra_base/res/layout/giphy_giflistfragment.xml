@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_width="match_parent" a:layout_height="match_parent" style="?common_giphy_gifListFragment"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.plus.giphy.gifs.GiphyListView a:id="@android:id/list" a:layout_width="match_parent" a:layout_height="match_parent" style="?common_giphy_gifListFragment_list" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

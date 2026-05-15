@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:background="@color/screen_background_black" a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.plus.camera.CameraPreview a:layout_gravity="center" a:id="@id/preview" a:layout_width="match_parent" a:layout_height="match_parent" />
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_gravity="top" a:orientation="horizontal" a:background="@android:color/transparent" a:layout_width="match_parent" a:layout_height="wrap_content">
+        <com.mplus.lib.ui.common.base.BaseView style="?plusCamera_placeholderButton" />
+        <com.mplus.lib.ui.common.base.BaseView style="?plusCamera_placeholderButton" />
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/changeCamera_button" style="?plusCamera_Button" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_gravity="bottom" a:orientation="horizontal" a:background="@android:color/transparent" a:layout_width="match_parent" a:layout_height="wrap_content">
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/video_button" style="?plusCamera_Button" />
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/shutter_button" style="?plusCamera_Button" />
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/fullscreen_button" style="?plusCamera_Button" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

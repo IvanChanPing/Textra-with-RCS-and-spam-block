@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="top"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@id/photosGrid" a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/choose_button_container" a:maxHeight="48.0dp" a:minHeight="48.0dp" style="?common_sheet_button_container">
+        <com.mplus.lib.ui.common.BaseSheetButton a:layout_gravity="center" a:id="@id/choose_button" a:layout_marginTop="0.0px" a:layout_marginBottom="0.0px" style="?common_sheet_button" />
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

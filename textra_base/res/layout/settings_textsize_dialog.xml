@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="match_parent" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp">
+        <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="left|bottom" a:id="@id/a1" a:layout_marginLeft="8.0dp" style="?settings_textSizeDialog_a" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center|bottom" a:id="@id/a2" style="?settings_textSizeDialog_a" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="right|bottom" a:id="@id/a3" a:layout_marginRight="3.0dp" style="?settings_textSizeDialog_a" />
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <com.mplus.lib.ui.common.base.BaseSlider a:id="@id/slider" a:paddingTop="16.0dp" a:paddingBottom="16.0dp" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp" />
+    <include layout="@layout/common_dialog_ok_cancel_button_panel" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

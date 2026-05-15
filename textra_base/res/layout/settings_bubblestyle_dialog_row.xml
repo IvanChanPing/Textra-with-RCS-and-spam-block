@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:descendantFocusability="blocksDescendants" a:layout_width="match_parent" a:layout_height="wrap_content" a:baselineAligned="false" style="?settings_row"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:clickable="false" a:duplicateParentState="true" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1.0">
+        <include layout="@layout/settings_bubble_colors" />
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <com.mplus.lib.ui.common.base.BaseRadioButton a:id="@id/radioButton" a:clickable="false" a:duplicateParentState="true" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?settings_base_radiobutton_preference" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/smaato_sdk_video_player_layout" android:padding="0.0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="0.0dp" />
+    <com.smaato.sdk.video.vast.widget.element.VastElementView android:id="@id/smaato_sdk_video_icon_view_id" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_margin="@dimen/smaato_sdk_core_activity_margin" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+    <com.smaato.sdk.video.vast.widget.element.VastElementView android:id="@id/smaato_sdk_video_companion_view_id" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_centerInParent="true" />
+    <com.smaato.sdk.core.ui.WatermarkImageButton android:id="@id/smaato_sdk_video_watermark_button_id" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

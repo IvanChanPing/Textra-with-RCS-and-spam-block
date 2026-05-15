@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:gravity="center_vertical" a:id="@id/row" a:layout_width="match_parent" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/row_buttons_left" a:visibility="gone" a:layout_width="match_parent" a:layout_height="match_parent" style="?convoList_buttons_left">
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/deleteButton" a:layout_width="64.0dp" a:layout_height="match_parent" style="?convoList_deleteButton" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/row_buttons_right" a:visibility="gone" a:layout_width="match_parent" a:layout_height="match_parent" style="?convoList_buttons_right">
+        <android.widget.Space a:layout_width="0.0dp" a:layout_height="match_parent" a:layout_weight="1.0" />
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/callButton" a:layout_width="64.0dp" a:layout_height="match_parent" style="?convoList_callButton" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <com.mplus.lib.ui.common.base.BaseConstraintLayout a:orientation="horizontal" a:id="@id/row_main" a:layout_width="match_parent" a:layout_height="match_parent" a:animateLayoutChanges="true" style="?convoList_rowMain">
+        <com.mplus.lib.ui.common.base.BaseCheckBox a:id="@id/checkbox" a:visibility="gone" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" style="?convoList_checkbox" />
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/contact_photo_combination" a:layout_width="51.0sp" a:layout_height="51.0sp" a:layout_marginLeft="16.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/checkbox" app:layout_constraintRight_toLeftOf="@id/display_name" app:layout_constraintTop_toTopOf="parent">
+            <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/contact_photo" a:layout_width="@dimen/thumb_contact_pic_size" a:layout_height="@dimen/thumb_contact_pic_size" />
+            <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="right|bottom" a:id="@id/unreadIndicator" a:layout_width="wrap_content" a:layout_height="wrap_content" />
+        </com.mplus.lib.ui.common.base.BaseFrameLayout>
+        <com.mplus.lib.ui.common.base.BaseTextView a:ellipsize="end" a:id="@id/display_name" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_marginLeft="14.0dp" a:singleLine="true" app:emojify="true" app:layout_constraintBottom_toTopOf="@id/last_message_text" app:layout_constraintLeft_toRightOf="@id/contact_photo_combination" app:layout_constraintRight_toLeftOf="@id/date_label" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="?convoList_displayName" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/date_label" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="6.0dp" a:layout_marginRight="16.0dp" app:layout_constraintBaseline_toBaselineOf="@id/display_name" app:layout_constraintLeft_toRightOf="@id/display_name" app:layout_constraintRight_toRightOf="parent" style="?convoList_dateLabel" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:ellipsize="end" a:id="@id/last_message_text" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_marginLeft="14.0dp" a:layout_marginRight="16.0dp" app:emojify="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/contact_photo_combination" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/display_name" style="?convoList_lastMessageText" />
+    </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

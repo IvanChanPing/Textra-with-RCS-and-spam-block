@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:clipChildren="false" a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/thumbnailImage" a:layout_width="0.0dp" a:layout_height="0.0dp" a:scaleType="fitXY" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/media_play_icon_and_duration" />
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/playIcon" a:layout_width="wrap_content" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/thumbnailImage" app:layout_constraintLeft_toLeftOf="@id/thumbnailImage" app:layout_constraintRight_toRightOf="@id/thumbnailImage" app:layout_constraintTop_toTopOf="@id/thumbnailImage" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/durationText" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginRight="8.0dp" a:layout_marginBottom="8.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" style="?media_duration" />
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/selectedSequenceNumber" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginTop="8.0dp" a:layout_marginRight="8.0dp" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

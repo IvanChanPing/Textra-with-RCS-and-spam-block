@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="match_parent" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseTextView a:textSize="@dimen/settingsCategory_textSize" a:textColor="?text_medium_gray" a:layout_gravity="left|center" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginTop="16.0dp" a:layout_marginRight="16.0dp" a:text="@string/confirm_view_video" />
+    <include layout="@layout/common_dialog_ok_cancel_button_panel" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

@@ -1,0 +1,2 @@
+.class public final Lcom/google/android/gms/internal/mlkit_language_id_common/zzku;
+.super Ljava/lang/Object;

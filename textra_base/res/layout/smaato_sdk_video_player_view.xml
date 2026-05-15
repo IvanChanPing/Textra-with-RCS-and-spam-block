@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/smaato_sdk_video_player_surface_layout" android:padding="0.0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="0.0dp" />
+    <ImageButton android:id="@id/smaato_sdk_video_mute_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/smaato_sdk_core_activity_margin" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/smaato_sdk_video_mute_button_text" android:layout_alignParentEnd="true" />
+    <ImageButton android:id="@id/smaato_sdk_video_skip_button" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/smaato_sdk_core_activity_margin" android:src="@drawable/smaato_sdk_video_skip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:contentDescription="@string/smaato_sdk_video_skip_button_text" android:layout_alignParentStart="true" />
+    <ProgressBar android:id="@id/smaato_sdk_video_video_progress" android:layout_width="match_parent" android:layout_height="5.0dp" android:layout_margin="@dimen/smaato_sdk_core_activity_margin" android:layout_alignParentBottom="true" style="@style/smaato_sdk_core_VideoProgressBar" />
+</RelativeLayout>

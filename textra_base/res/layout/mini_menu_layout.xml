@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/menu" a:layout_width="wrap_content" a:layout_height="wrap_content">
+        <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@id/overflow" a:scrollbars="vertical" a:layout_width="wrap_content" a:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/main" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:id="@id/main" a:background="@android:color/transparent" a:layout_width="wrap_content" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/overflow" style="?minimenu_menu" />
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/overflowButton" a:paddingLeft="8.0dp" a:paddingRight="8.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginRight="8.0dp" app:flatButtonBackgroundSelector="onScreenColor" app:flatButtonRippleBorderBehaviour="round" app:layout_constraintBottom_toBottomOf="@id/main" app:layout_constraintRight_toRightOf="@id/main" app:layout_constraintTop_toTopOf="@id/main" style="?minimenu_item" />
+    </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

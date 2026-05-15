@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.dialog.FrameLayoutWithMaxSize a:layout_gravity="center" a:id="@id/common_dialog_outer" a:layout_width="match_parent" a:layout_height="match_parent" style="?common_dialog_outer"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_gravity="center" a:id="@id/common_dialog_holder" a:layout_width="match_parent" a:layout_height="wrap_content" style="?common_dialog_holder">
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/common_dialog" style="?common_dialog">
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content">
+                <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:id="@id/titleHolder" a:visibility="gone" a:layout_width="match_parent" a:layout_height="wrap_content">
+                    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/title" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1.0" style="?common_dialog_title" />
+                </com.mplus.lib.ui.common.base.BaseLinearLayout>
+                <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/blurb" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_dialog_text" />
+                <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:id="@id/common_dialog_inner" style="?common_dialog_inner" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+</com.mplus.lib.ui.common.dialog.FrameLayoutWithMaxSize>

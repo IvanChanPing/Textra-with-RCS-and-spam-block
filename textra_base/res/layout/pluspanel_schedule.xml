@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/needPermissionContainer" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="top">
+        <com.mplus.lib.ui.common.base.BaseTextView a:textSize="16.0sp" a:textColor="?text_dark_gray" a:gravity="center_horizontal" a:id="@id/needPermissionText" a:paddingLeft="16.0dp" a:paddingRight="16.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/encourage_schedule_exact_alarm_dialog_text" app:layout_constraintBottom_toTopOf="@id/gotoSettingsButton" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" />
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/gotoSettingsButton" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginTop="16.0dp" a:text="@string/encourate_schedule_exact_alarm_dialog_go_to_settings_button" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/needPermissionText" style="?common_raised_button_themecolor" />
+    </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+    <include layout="@layout/pluspanel_schedule_body" />
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

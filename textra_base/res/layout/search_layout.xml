@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/diagSL" a:background="?screen_background" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="topHeavy"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@android:id/list" a:layout_width="match_parent" a:layout_height="match_parent" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_gravity="center" a:id="@id/noResultsView" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content">
+        <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:id="@id/noResultsGifAnimation" a:paddingBottom="60.0dp" a:layout_width="202.0dp" a:layout_height="167.0dp" a:scaleType="centerInside" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:paddingTop="60.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?search_noResults" />
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/longHoldTip" a:paddingLeft="16.0dp" a:paddingTop="16.0dp" a:paddingRight="16.0dp" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_margin="24.0dp">
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/tipText" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/search_long_hold_tip" app:layout_constraintBottom_toTopOf="@id/gotIt" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="?newMessage_favsHintText" />
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/gotIt" a:text="@string/got_it" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/tipText" style="?common_dialog_okButton" />
+    </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

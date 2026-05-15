@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set a:interpolator="@android:anim/linear_interpolator" a:duration="@integer/screen_change_animation_duration"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <translate a:fromXDelta="0.0%" a:toXDelta="0.0%" />
+</set>

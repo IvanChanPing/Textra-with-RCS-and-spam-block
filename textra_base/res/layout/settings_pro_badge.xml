@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="wrap_content" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseImageView a:layout_width="26.0sp" a:layout_height="39.0sp" style="?settings_pro_badge_garland" />
+    <com.mplus.lib.ui.common.base.BaseImageView a:layout_width="26.0sp" a:layout_height="39.0sp" style="?settings_pro_badge_ribbons" />
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

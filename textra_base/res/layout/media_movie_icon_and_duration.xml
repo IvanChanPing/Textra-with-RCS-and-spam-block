@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_horizontal" a:orientation="vertical" a:background="@drawable/play_icon_and_duration_background" a:padding="4.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/movieIcon" a:layout_width="20.0dp" a:layout_height="20.0dp" a:layout_marginBottom="4.0dp" app:srcVector="@drawable/ic_movie_24dp" app:tintWith="white" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:textSize="12.0sp" a:textColor="@android:color/white" a:id="@id/durationText" a:layout_width="wrap_content" a:layout_height="wrap_content" a:includeFontPadding="false" app:calligraphyFontPath="?font_medium" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

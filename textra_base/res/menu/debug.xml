@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <item a:id="@id/reset_db_for_test_menu_item" a:title="Reset Db for Test" />
+    <item a:title="Directly in built-in db...">
+        <menu>
+            <item a:id="@id/insert_message_directly" a:title="Insert some SMS" />
+            <item a:id="@id/insert_messages_directly" a:title="Insert 30 SMSes" />
+            <item a:id="@id/insert_mms_message_directly" a:title="Insert MMS" />
+            <item a:id="@id/mark_messages_as_read" a:title="Mark all messages as read" />
+        </menu>
+    </item>
+    <item a:title="Load...">
+        <menu>
+            <item a:id="@id/load_all_cases" a:title="Load all cases" />
+            <item a:id="@id/load_random1" a:title="Load random1.zip as MMS" />
+            <item a:id="@id/load_vcard" a:title="Load vcf as MMS" />
+            <item a:id="@id/load_ics" a:title="Load ics as MMS" />
+            <item a:id="@id/load_vcs" a:title="Load vcs as MMS" />
+        </menu>
+    </item>
+    <item a:id="@id/delete_test_dudes" a:title="Delete Test Dudes" />
+    <item a:id="@id/add_test_dudes" a:title="Add Test Dudes" />
+    <item a:id="@id/change_test_dude_display_name" a:title="Change Test Dude Display Name" />
+    <item a:title="Receive &amp; Send...">
+        <menu>
+            <item a:id="@id/clear_mms_queue" a:title="Clear MMS queue" />
+            <item a:id="@id/receive_sms" a:title="Receive SMS" />
+            <item a:id="@id/receive_lots_of_sms" a:title="Receive 100 SMS, one second apart" />
+            <item a:id="@id/receive_sms_delayed" a:title="Receive SMS Delayed (from test dude)" />
+            <item a:id="@id/receive_sms_delayed2" a:title="Receive SMS Delayed (from someone else)" />
+            <item a:id="@id/receive_sms_delayed3" a:title="Receive Emoji Delayed (from test dude)" />
+            <item a:id="@id/receive_emoji_hearts_sms" a:title="Receive Emoji Hearts SMS" />
+            <item a:id="@id/receive_multiple_sms_delayed" a:title="Receive multiple SMS delayed" />
+            <item a:id="@id/receive_mms_jpg_and_text_delayed" a:title="Receive MMS jpg + text delayed" />
+            <item a:id="@id/receive_audio_delayed" a:title="Receive group Audio Delayed" />
+            <item a:id="@id/receive_group_mms_delayed" a:title="Receive group MMS delayed" />
+            <item a:id="@id/receive_group_heart" a:title="Receive group heart emoji MMS" />
+            <item a:id="@id/receive_tapbacks" a:title="Receive group tapbacks" />
+            <item a:id="@id/receive_tapbacks_android" a:title="Receive Android-style group tapbacks" />
+            <item a:id="@id/receive_foreign_tapbacks" a:title="Receive foreign group tapbacks" />
+            <item a:id="@id/receive_generic_tapbacks" a:title="Receive generic tapbacks" />
+            <item a:id="@id/receive_generic_tapbacks_foreign" a:title="Receive foreign generic tapbacks" />
+            <item a:id="@id/receive_debug_tapback" a:title="Receive particular tapback string" />
+            <item a:id="@id/receive_group_emoji_mms_delayed" a:title="Receive group MMS emoji delayed" />
+            <item a:id="@id/receive_group_mms_jpgs_delayed" a:title="Receive group MMS jpgs delayed" />
+            <item a:id="@id/receive_group_mms_gif_delayed" a:title="Receive group MMS gif delayed" />
+            <item a:id="@id/receive_group_mms_video_delayed" a:title="Receive group MMS video delayed" />
+            <item a:id="@id/receive_large_group_mms" a:title="Receive large group MMS" />
+            <item a:id="@id/receive_respond_via_sms" a:title="Receive Respond via SMS" />
+            <item a:id="@id/receive_class0_sms" a:title="Receive Class0 SMS" />
+            <item a:id="@id/receive_duplicate_sms" a:title="Receive Duplicate SMS" />
+            <item a:id="@id/receive_long_sms_delayed" a:title="Receive Long SMS delayed" />
+            <item a:id="@id/receive_linkify_test_sms" a:title="Receive Linkify Test SMS" />
+            <item a:id="@id/send_html" a:title="Send HTML MMS" />
+            <item a:id="@id/receive_sms_cellbroadcast" a:title="Receive SMS Cellbroadcast (type=19)" />
+        </menu>
+    </item>
+    <item a:id="@id/process_notification_ind" a:title="Process Notification Ind" />
+    <item a:id="@id/upgrade_to_pro" a:title="Upgrade to Pro" />
+    <item a:id="@id/update_app_shortcuts_now" a:title="Update App Shortcuts now" />
+    <item a:title="Copy &amp; Export...">
+        <menu>
+            <item a:id="@id/copy_msg_log" a:title="Copy Msg Log to SD" />
+            <item a:id="@id/copy_db" a:title="Copy Db to SD" />
+            <item a:id="@id/export_contact_thumbs" a:title="Export Contact Thumbs to SD" />
+            <item a:id="@id/export_builtin_messaging_db" a:title="Export Builtin Messaging Db" />
+            <item a:id="@id/export_db" a:title="Export Db" />
+            <item a:id="@id/export_db_with_filecontent" a:title="Export Db with File Content" />
+        </menu>
+    </item>
+    <item a:title="Generate Test Data...">
+        <menu>
+            <item a:id="@id/generate_some_convos" a:title="Generate 10 convos * 150" />
+            <item a:id="@id/generate_big_convo" a:title="Generate 1 convo * 5000" />
+            <item a:id="@id/generate_new_convos" a:title="Generate 10 new convos * 1000" />
+            <item a:id="@id/generate_convo_with_emojis" a:title="Generate 1 convo * 5000 with emojis" />
+            <item a:id="@id/generate_convo_with_images" a:title="Generate 1 convo * 5000 with images" />
+            <item a:id="@id/generate_some_contacts" a:title="Generate 100 contacts" />
+            <item a:id="@id/delete_generated_contacts" a:title="Delete generated contacts" />
+            <item a:id="@id/generate_big_group" a:title="Generate 300 contacts in a group" />
+        </menu>
+    </item>
+    <item a:title="Generate Code...">
+        <menu>
+            <item a:id="@id/generate_theme_code" a:title="Generate theme code" />
+            <item a:id="@id/generate_activity_aliases" a:title="Generate activity aliases &amp; icons" />
+            <item a:id="@id/generate_heart" a:title="Generate heart" />
+            <item a:id="@id/generate_color_interpolation" a:title="Generate Color Interpolation" />
+            <item a:id="@id/generate_server_public_key" a:title="Generate Server Public Key Spec" />
+        </menu>
+    </item>
+    <item a:id="@id/toggle_periodic_unread_consistency_check" a:title="Toggle periodic unread consistency check" />
+    <item a:id="@id/crash" a:title="Crash" />
+    <item a:id="@id/report_caught_exception" a:title="Report caught Exception" />
+    <item a:title="Simulate...">
+        <menu>
+            <item a:id="@id/boot" a:title="Boot" />
+            <item a:id="@id/simulate_phone_state_no_service" a:title="Simulate phone has no service" />
+            <item a:id="@id/simulate_phone_state_in_service" a:title="Simulate phone has service" />
+        </menu>
+    </item>
+    <item a:id="@id/cleanup" a:title="Run cleanup now" />
+    <item a:id="@id/test_sent_sound" a:title="Play sent sound 5 times" />
+    <item a:title="Dump...">
+        <menu>
+            <item a:id="@id/dump_convo_records" a:title="Dump Convo Records" />
+            <item a:id="@id/dump_contacts" a:title="Dump Contacts" />
+            <item a:id="@id/dump_builtin_convos" a:title="Dump builtin threads table to log" />
+            <item a:id="@id/dump_builtin_sms" a:title="Dump builtin SMS table to log" />
+            <item a:id="@id/dump_builtin_mms" a:title="Dump builtin MMS table to log" />
+            <item a:id="@id/dump_delivery_infos" a:title="Dump delivery infos to log" />
+            <item a:id="@id/dump_font_metrics" a:title="Dump font metrics to log" />
+        </menu>
+    </item>
+    <item a:title="Perf test...">
+        <menu>
+            <item a:id="@id/performance_generate_emojis" a:title="Perf test generating emoji caches" />
+            <item a:id="@id/performance_remove_diacritics" a:title="Perf test remove diacritics" />
+            <item a:id="@id/performance_lookup_contact" a:title="Perf test lookup contact built-in db" />
+            <item a:id="@id/performance_refresh_contact" a:title="Perf test refresh contact" />
+            <item a:id="@id/performance_internationalise" a:title="Perf test canonicalise" />
+        </menu>
+    </item>
+    <item a:title="Video Compression...">
+        <menu>
+            <item a:id="@id/video_compression_test_all" a:title="Test all size limits" />
+            <item a:id="@id/video_compression_test_2MB" a:title="Test 2MB" />
+            <item a:id="@id/video_compression_test_1MB" a:title="Test 1MB" />
+            <item a:id="@id/video_compression_test_600K" a:title="Test 600K" />
+            <item a:id="@id/video_compression_test_300K" a:title="Test 300K" />
+            <item a:id="@id/video_compression_test_200K" a:title="Test 200K" />
+            <item a:id="@id/video_compression_test_100K" a:title="Test 100K" />
+        </menu>
+    </item>
+    <item a:title="Emojis...">
+        <menu>
+            <item a:id="@id/put_softbank_emoji_on_clipboard" a:title="Copy Softbank emoji to clipboard" />
+            <item a:id="@id/put_ios7_emojis_on_clipboard" a:title="Copy some iOS7 emojis to clipboard" />
+            <item a:id="@id/put_ios8_emojis_on_clipboard" a:title="Copy some iOS8 emojis to clipboard" />
+            <item a:id="@id/put_surrogate_pair_on_segment_boundary_on_clipboard" a:title="Put surrogate pair on segment boundary on clipboard" />
+            <item a:id="@id/send_all_emojis_to_iphone" a:title="Sends all of the emojis to iphone" />
+        </menu>
+    </item>
+    <item a:title="Integration...">
+        <menu>
+            <item a:id="@id/send_sms_from_external" a:title="Send SMS from external app" />
+        </menu>
+    </item>
+    <item a:id="@id/parse_pdus" a:title="Parse PDUs" />
+    <item a:title="Test...">
+        <menu>
+            <item a:id="@id/sqlite_test" a:title="SQLite test" />
+            <item a:id="@id/probe_largest_text" a:title="Probe largest text that build-in db will hold" />
+        </menu>
+    </item>
+    <item a:id="@id/query_msg_order" a:title="Query Message Order" />
+    <item a:id="@id/cause_security_exception" a:title="Cause SecurityException" />
+    <item a:id="@id/report_advert_config_error" a:title="Report Advert Config Error" />
+    <item a:id="@id/unlock_all_messages" a:title="Unlock all messages" />
+</menu>

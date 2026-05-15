@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseScrollView a:scrollbars="none" a:layout_width="match_parent" a:layout_height="match_parent">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:id="@id/options" a:layout_width="match_parent" a:layout_height="match_parent" />
+    </com.mplus.lib.ui.common.base.BaseScrollView>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

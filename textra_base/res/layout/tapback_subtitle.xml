@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/tapback_title" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_dialog_title" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/tapback_blurb" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_dialog_text" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

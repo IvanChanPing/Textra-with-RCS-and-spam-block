@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="wrap_content" style="?settings_support_row"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseCardView a:id="@id/card" a:layout_width="match_parent" a:layout_height="wrap_content" style="?settings_support_card">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:paddingTop="16.0dp" a:layout_width="match_parent" a:layout_height="match_parent">
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/title" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp" a:layout_marginBottom="8.0dp" style="?settings_support_row_title" />
+            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/summary" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp" a:layout_marginBottom="16.0dp" app:linkTextColorFollowsTextColor="true" style="?settings_support_row_summary" />
+            <com.mplus.lib.ui.common.base.BaseView a:id="@id/hairline" a:visibility="gone" a:layout_width="match_parent" a:layout_height="0.5dp" app:tintBackgroundWith="cardHairlineGray" />
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:id="@id/buttonPanel" a:paddingLeft="4.0dp" a:visibility="gone" a:layout_width="match_parent" a:layout_height="wrap_content" a:baselineAligned="false" a:minHeight="52.0dp">
+                <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/shareButton" app:srcVector="@drawable/ic_share_black_24dp" style="?settings_support_row_button" />
+                <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/likeButton" app:srcVector="@drawable/ic_thumb_up_black_24dp" app:tintWith="none" style="?settings_support_row_button" />
+                <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center_vertical" a:id="@id/votesLabel" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?settings_support_idea_votes_label" />
+                <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center_vertical" a:id="@id/completedLabel" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?settings_support_idea_votes_label" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    </com.mplus.lib.ui.common.base.BaseCardView>
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

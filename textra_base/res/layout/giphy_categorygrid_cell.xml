@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.plus.giphy.category.GiphyCategoryItemCell a:orientation="vertical" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_giphy_categorygrid_cell"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/image" a:layout_width="match_parent" a:layout_height="match_parent" style="?common_giphy_categorygrid_cell_image" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="left|bottom" a:id="@id/title" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?common_giphy_categorygrid_cell_label" />
+</com.mplus.lib.ui.common.plus.giphy.category.GiphyCategoryItemCell>

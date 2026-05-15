@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:layout_width="wrap_content" a:layout_height="match_parent" app:flatButtonBackgroundSelector="onScreenColor" app:flatButtonRippleBorderBehaviour="stopAtBorder"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/icon" a:layout_width="wrap_content" a:layout_height="match_parent" a:scaleType="fitCenter" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/text" app:layout_constraintTop_toTopOf="parent" style="?minimenu_itemImageButton" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/text" a:paddingLeft="4.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/icon" app:layout_constraintTop_toTopOf="parent" style="?minimenu_item" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/main" a:clipChildren="false" a:layout_width="match_parent" a:layout_height="match_parent"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/content" a:layout_width="match_parent" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="?convoContent">
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/contentControlledHeight" a:layout_width="match_parent" a:layout_height="match_parent" style="?convoContentControlledHeight">
+            <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:id="@id/send_panel" a:layout_width="match_parent" a:layout_height="match_parent">
+                <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/actionbarContainer" a:background="?actionBarBackground" a:layout_width="match_parent" a:layout_height="wrap_content">
+                    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/send_to_fragment" a:visibility="gone" a:layout_width="match_parent" a:layout_height="?initialActionbarHeight">
+                        <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:layout_width="match_parent" a:layout_height="match_parent">
+                            <com.mplus.lib.ui.common.base.BaseHorizontalScrollView a:id="@id/chipsScroller" a:scrollbars="none" a:layout_width="wrap_content" a:layout_height="match_parent" a:layout_centerVertical="true">
+                                <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:id="@id/chips" a:layout_width="wrap_content" a:layout_height="match_parent" a:animateLayoutChanges="true">
+                                    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/toText_Send" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="8.0dp" a:text="@string/new_message_to_hint" style="?newMessage_chooseRecipients_to" />
+                                </com.mplus.lib.ui.common.base.BaseLinearLayout>
+                            </com.mplus.lib.ui.common.base.BaseHorizontalScrollView>
+                        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+                        <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="right" a:id="@id/undoButton_Send" a:layout_height="match_parent" a:layout_marginRight="96.0dp" a:src="@drawable/ic_undo_black_24dp" style="?custom_actionbar_icon_untinted" />
+                        <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="right" a:id="@id/addPersonButton_Send" a:layout_height="match_parent" a:layout_marginRight="48.0dp" a:src="@drawable/ic_person_add_black_24dp" style="?custom_actionbar_icon_untinted" />
+                        <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="right" a:id="@id/doneButton_Send" a:layout_height="match_parent" a:src="@drawable/ic_close_black_24dp" style="?custom_actionbar_icon_untinted" />
+                    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+                </com.mplus.lib.ui.common.base.BaseFrameLayout>
+                <include layout="@layout/convo_messagelist_and_sendarea" />
+            </com.mplus.lib.ui.common.base.BaseLinearLayout>
+            <com.mplus.lib.ui.common.fab.FloatingActionButtonBackground a:layout_gravity="right|top" a:id="@id/undoButton_Floating" a:visibility="gone" a:layout_width="@dimen/floatingButtonSizeSmall" a:layout_height="@dimen/floatingButtonSizeSmall" a:layout_marginTop="0.0dp" a:layout_marginRight="96.0dp" a:layout_marginBottom="0.0dp" app:tintBackgroundWith="primaryColor">
+                <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:background="@null" a:layout_width="match_parent" a:layout_height="match_parent" a:src="@drawable/ic_undo_black_24dp" a:scaleType="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.mplus.lib.ui.common.fab.FloatingActionButtonBackground>
+            <com.mplus.lib.ui.common.fab.FloatingActionButtonBackground a:layout_gravity="right|top" a:id="@id/addPersonButton_Floating" a:visibility="gone" a:layout_width="@dimen/floatingButtonSizeSmall" a:layout_height="@dimen/floatingButtonSizeSmall" a:layout_marginTop="0.0dp" a:layout_marginRight="48.0dp" a:layout_marginBottom="0.0dp" app:tintBackgroundWith="primaryColor">
+                <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:background="@null" a:layout_width="match_parent" a:layout_height="match_parent" a:src="@drawable/ic_person_add_black_24dp" a:scaleType="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </com.mplus.lib.ui.common.fab.FloatingActionButtonBackground>
+            <com.mplus.lib.ui.common.fab.FloatingActionButtonBackground a:layout_gravity="right|top" a:id="@id/doneButton_Floating" a:visibility="gone" a:layout_width="@dimen/floatingButtonSizeSmall" a:layout_height="@dimen/floatingButtonSizeSmall" a:layout_marginTop="0.0dp" a:layout_marginRight="0.0dp" a:layout_marginBottom="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:tintBackgroundWith="primaryColor">
+                <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:background="@null" a:layout_width="match_parent" a:layout_height="match_parent" a:src="@drawable/ic_close_black_24dp" a:scaleType="center" />
+            </com.mplus.lib.ui.common.fab.FloatingActionButtonBackground>
+            <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/search_panel" a:visibility="gone" a:layout_width="match_parent" a:layout_height="match_parent">
+                <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="horizontal" a:id="@id/searchTextFieldActionBarLike" a:layout_width="0.0dp" a:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:tintBackgroundWith="primaryColor">
+                    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="70.0dp" a:layout_height="?initialActionbarHeight">
+                        <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center_vertical" a:id="@id/searchToText" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:text="@string/new_message_to_hint" style="?newMessage_chooseRecipients_to" />
+                        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/searchCloseButton" a:layout_width="60.0dp" a:layout_height="match_parent" a:layout_marginLeft="-6.0dp" a:src="@drawable/ic_arrow_back_black_24dp" style="?custom_actionbar_icon_untinted" />
+                    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+                    <com.mplus.lib.ui.common.base.BaseEditText a:id="@id/searchField" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1.0" style="?newMessage_chooseRecipients_toField" />
+                    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/addPeopleButton_Search" a:layout_width="56.0dp" a:src="@drawable/ic_people_add_black_24dp" style="?custom_actionbar_icon_untinted" />
+                    <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/doneButton_Search" a:src="@drawable/ic_close_black_24dp" style="?custom_actionbar_icon_untinted" />
+                </com.mplus.lib.ui.common.base.BaseLinearLayout>
+                <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/quick_contacts_fragment" a:visibility="gone" a:layout_width="0.0dp" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/searchTextFieldActionBarLike" app:shadow="navbarLine">
+                    <com.mplus.lib.ui.common.base.BaseView a:background="?screen_background" a:layout_width="match_parent" a:layout_height="48.0dp" />
+                    <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@id/quickContactsList" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="topHeavy" />
+                    <com.mplus.lib.ui.common.base.BaseFrameLayout a:gravity="center" a:layout_gravity="center" a:id="@id/noResultsView" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="match_parent">
+                        <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="center" a:id="@id/noResultsGifAnimation" a:paddingBottom="60.0dp" a:layout_width="202.0dp" a:layout_height="167.0dp" a:scaleType="centerInside" />
+                        <com.mplus.lib.ui.common.base.BaseTextView a:layout_gravity="center" a:paddingTop="60.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="24.0dp" a:layout_marginRight="24.0dp" a:text="@string/new_message_no_matching_contacts" style="?newMessage_noMatchingContacts" />
+                    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+                    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_gravity="center_horizontal" a:id="@id/favsHint" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="match_parent">
+                        <com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_gravity="center" a:orientation="vertical" a:id="@id/favsHintInner" a:paddingLeft="16.0dp" a:paddingTop="16.0dp" a:paddingRight="16.0dp" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginLeft="24.0dp" a:layout_marginRight="24.0dp">
+                            <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/favsHintText" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?newMessage_favsHintText" />
+                            <com.mplus.lib.ui.common.base.BaseButton a:layout_gravity="right" a:id="@id/gotIt" a:text="@string/got_it" style="?common_dialog_okButton" />
+                        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+                    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+                    <com.mplus.lib.ui.common.base.BaseConstraintLayout a:layout_gravity="right|bottom" a:id="@id/quickContactsKindSheet" a:background="@drawable/rounded_top_left" a:paddingRight="27.0dp" a:paddingBottom="27.0dp" a:layout_width="wrap_content" a:layout_height="wrap_content" app:tintBackgroundWith="primaryColor">
+                        <include a:id="@id/quickContactKindsSheet_Starred" a:layout_width="wrap_content" a:layout_height="48.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/quick_contacts_kinds_sheet_row" />
+                        <include a:id="@id/quickContactKindsSheet_Pinned" a:layout_width="wrap_content" a:layout_height="48.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/quickContactKindsSheet_Starred" layout="@layout/quick_contacts_kinds_sheet_row" />
+                        <include a:id="@id/quickContactKindsSheet_Recents" a:layout_width="wrap_content" a:layout_height="48.0dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/quickContactKindsSheet_Pinned" layout="@layout/quick_contacts_kinds_sheet_row" />
+                        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/quickContactsKindButton" a:layout_width="48.0dp" a:layout_height="48.0dp" a:scaleType="center" app:flatButtonBackgroundSelector="onThemeColor" app:flatButtonRippleBorderBehaviour="borderless" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" app:tintWith="primaryIconColor" />
+                    </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+                </com.mplus.lib.ui.common.base.BaseFrameLayout>
+            </com.mplus.lib.ui.common.base.BaseConstraintLayout>
+        </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/pluspanelContainer" a:layout_width="match_parent" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

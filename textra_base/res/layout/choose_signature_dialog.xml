@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseFrameLayout style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@android:id/list" a:layout_width="match_parent" a:layout_height="wrap_content" style="?settings_listpreference_dialog_list" />
+</com.mplus.lib.ui.common.base.BaseFrameLayout>

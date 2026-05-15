@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="horizontal" a:id="@id/diagSTFC" a:background="@android:color/transparent" a:layout_width="match_parent" a:layout_height="wrap_content" a:baselineAligned="true"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/searchField" a:layout_width="0.0dp" a:layout_height="wrap_content" a:layout_weight="1.0" app:tintWith="accentTextColor" style="?search_text" />
+    <com.mplus.lib.ui.common.base.BaseTextView a:textSize="18.0sp" a:layout_gravity="center_vertical" a:id="@id/scopeLabel" a:paddingLeft="16.0dp" a:layout_width="wrap_content" a:layout_height="match_parent" a:layout_marginRight="10.0dp" a:drawablePadding="4.0dp" app:drawableRightVector="@drawable/ic_arrow_drop_down_black_24dp" app:drawableTintWith="accentIconColor" app:tintWith="accentTextColor" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

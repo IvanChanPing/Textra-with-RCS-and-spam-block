@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:paddingBottom="16.0dp" a:clipChildren="false" a:clipToPadding="false" a:layout_width="wrap_content" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseTextView a:gravity="center" a:layout_gravity="center_horizontal" a:id="@id/title" a:layout_width="wrap_content" a:layout_height="@dimen/calendarHeaderHeight" style="?calendar_title" />
+    <com.mplus.lib.ui.common.base.BaseGridLayout a:layout_gravity="center_horizontal" a:orientation="vertical" a:id="@id/grid" a:clipChildren="false" a:layout_width="wrap_content" a:layout_height="wrap_content" a:useDefaultMargins="false" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_vertical" a:orientation="vertical" a:paddingLeft="4.0dp" a:layout_width="wrap_content" a:layout_height="match_parent" a:layout_marginLeft="8.0dp"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginTop="-2.0dp">
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/messageCount" a:visibility="gone" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?convoList_messageCount" />
+        <com.mplus.lib.ui.common.base.BaseImageView a:id="@id/progress" a:layout_width="wrap_content" a:layout_height="wrap_content" />
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/theWordMessages" a:layout_width="wrap_content" a:layout_height="wrap_content" a:text="@string/convolist_n_messages" style="?convoList_messageCountSubtitle" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

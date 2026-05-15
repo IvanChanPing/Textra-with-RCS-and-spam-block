@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:background="#80000000" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="topHeavy"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:background="?screen_background" a:layout_width="wrap_content" a:layout_height="wrap_content">
+        <com.mplus.lib.ui.common.base.BaseViewPager a:id="@id/viewPager" a:layout_width="match_parent" a:layout_height="wrap_content" app:supportWrapContent="true" />
+        <com.mplus.lib.ui.common.base.BaseFrameLayout a:clipChildren="false" a:clipToPadding="false" a:layout_width="match_parent" a:layout_height="@dimen/calendarHeaderHeight">
+            <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="left|center" a:id="@id/buttonPast" a:src="@drawable/ic_chevron_left_24dp" style="?calendar_chevronButton" />
+            <com.mplus.lib.ui.common.base.BaseImageView a:layout_gravity="right|center" a:id="@id/buttonFuture" a:src="@drawable/ic_chevron_right_24dp" style="?calendar_chevronButton" />
+        </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    </com.mplus.lib.ui.common.base.BaseFrameLayout>
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:layout_width="match_parent" a:layout_height="@dimen/calendarBottomShadow" app:shadow="topHeavy" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

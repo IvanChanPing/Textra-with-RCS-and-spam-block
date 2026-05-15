@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <com.mplus.lib.ui.common.base.BaseLinearLayout a:gravity="center_horizontal" a:layout_gravity="center_horizontal" a:layout_width="wrap_content" a:layout_height="wrap_content" a:layout_marginTop="8.0dp" style="?common_linearlayout_orientation">
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/amountText" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?settings_messageLimit_amount" />
+        <com.mplus.lib.ui.common.base.BaseTextView a:id="@id/scopeText" a:layout_width="wrap_content" a:layout_height="wrap_content" style="?settings_messageLimit_scope" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    <com.mplus.lib.ui.common.base.BaseSlider a:id="@id/slider" a:paddingTop="16.0dp" a:paddingBottom="16.0dp" a:layout_width="match_parent" a:layout_height="wrap_content" a:layout_marginLeft="16.0dp" a:layout_marginRight="16.0dp" />
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

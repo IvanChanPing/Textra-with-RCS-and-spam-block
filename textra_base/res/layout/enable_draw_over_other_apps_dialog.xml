@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseLinearLayout a:layout_height="wrap_content" style="?common_dialog_mainholder"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mplus.lib.ui.common.base.BaseScrollView a:scrollbars="vertical" a:layout_width="match_parent" a:layout_height="0.0dp" a:layout_weight="1.0" app:useScrollIndicatorBottom="true">
+        <com.mplus.lib.ui.common.base.BaseLinearLayout a:orientation="vertical" a:layout_width="match_parent" a:layout_height="wrap_content">
+            <com.mplus.lib.ui.common.base.BaseTextView a:paddingLeft="16.0dp" a:paddingTop="16.0dp" a:paddingRight="16.0dp" a:layout_width="match_parent" a:layout_height="wrap_content" a:text="@string/allow_overlay" style="?appIconChangedDialog_textBody" />
+            <com.mplus.lib.ui.common.base.BaseTextView a:paddingLeft="16.0dp" a:paddingTop="16.0dp" a:paddingRight="16.0dp" a:layout_width="match_parent" a:layout_height="wrap_content" a:text="@string/allow_overlay2" style="?appIconChangedDialog_textBody" />
+        </com.mplus.lib.ui.common.base.BaseLinearLayout>
+    </com.mplus.lib.ui.common.base.BaseScrollView>
+    <com.mplus.lib.ui.common.base.BaseLinearLayout style="?common_dialog_buttonPanel">
+        <com.mplus.lib.ui.common.base.BaseButton a:id="@id/gotoSettingsButton" a:text="@string/goto_settings" style="?common_dialog_okButton" />
+    </com.mplus.lib.ui.common.base.BaseLinearLayout>
+</com.mplus.lib.ui.common.base.BaseLinearLayout>

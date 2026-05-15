@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/main" a:layout_width="match_parent" a:layout_height="match_parent" app:shadow="navbarLine"
+  xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/common_actionbar" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/actionbar_extension" a:layout_width="0.0dp" a:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/actionbarContainer" style="?settings_actionbar_extension" />
+    <com.mplus.lib.ui.common.base.BaseRecyclerView a:id="@android:id/list" a:layout_width="0.0dp" a:layout_height="0.0dp" app:layout_constraintBottom_toTopOf="@id/footer" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/actionbar_extension" app:shadow="topHeavy" style="?settings_list" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/noData" a:visibility="gone" a:layout_width="0.0dp" a:layout_height="0.0dp" app:layout_constraintBottom_toTopOf="@id/footer" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/actionbar_extension" />
+    <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/footer" a:layout_width="0.0dp" a:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" style="?settings_footer" />
+</com.mplus.lib.ui.common.base.BaseConstraintLayout>

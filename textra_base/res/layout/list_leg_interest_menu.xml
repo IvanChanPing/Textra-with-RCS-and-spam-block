@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/cv_menu_item" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp">
+        <TextView android:textColor="@color/textColor" android:id="@id/tv_menu_all" android:background="?android:selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ALL" android:paddingStart="10.0dp" android:paddingEnd="10.0dp" android:paddingVertical="10.0dp" />
+        <TextView android:textColor="@color/textColor" android:id="@id/tv_menu_iab" android:background="?android:selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="IAB" android:paddingStart="10.0dp" android:paddingEnd="10.0dp" android:paddingVertical="10.0dp" />
+        <TextView android:textColor="@color/textColor" android:id="@id/tv_menu_non_iab" android:background="?android:selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Non-IAB" android:paddingStart="10.0dp" android:paddingEnd="10.0dp" android:paddingVertical="10.0dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
