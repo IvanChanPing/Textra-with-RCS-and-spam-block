@@ -41,6 +41,15 @@ object TextraDbBridge {
     private const val S0_CLASS = "com.mplus.lib.r4.s0"
     private const val N_CLASS = "com.mplus.lib.r4.n"
     private const val L_CLASS = "com.mplus.lib.r4.l"
+    // Verified from smali:
+    //   P4/p.smali line 47: public static declared-synchronized P()Lcom/mplus/lib/P4/p;
+    //   P4/p.smali line 1257: public final T(Lcom/mplus/lib/r4/j0;Lcom/mplus/lib/P4/o;)V
+    //   P4/o.smali: default-ctor sets b=false c=false d=true e=false (incoming-notif config)
+    // T(j0,o) queues a F4/f Runnable on App.multi() — so it does NOT synchronously
+    // read j0.c; safe to call right after H.F0 enqueues its DB write on the same
+    // executor (both jobs run sequentially via App.multi()).
+    private const val P_CLASS = "com.mplus.lib.P4.p"
+    private const val PO_CLASS = "com.mplus.lib.P4.o"
 
     /**
      * Insert a freshly-received message into Textra's DB.
@@ -80,6 +89,30 @@ object TextraDbBridge {
             val singleton = hClass.getDeclaredMethod("X").invoke(null) ?: return false
             val f0 = hClass.getDeclaredMethod("F0", j0Class)
             f0.invoke(singleton, msg)
+
+            // 6. Fire Textra's existing notification path:
+            //    NotificationMgr P4.p.P() singleton → P4.p.T(j0, new P4.o()).
+            //    Mirrors the chain in H.H0 (smali line 1242→1272) which is what
+            //    cellular SMS hits via il→g5.d.M→…→z.run→H.H0. We are NOT
+            //    creating our own notification channel — we are invoking
+            //    Textra's own NotificationMgr so the user gets the EXACT same
+            //    notification style/sound/look as for cellular SMS.
+            try {
+                val poClass = Class.forName(PO_CLASS)
+                val po = poClass.getDeclaredConstructor().newInstance()
+                val pClass = Class.forName(P_CLASS)
+                val pSingleton = pClass.getDeclaredMethod("P").invoke(null)
+                if (pSingleton != null) {
+                    val tMethod = pClass.getDeclaredMethod("T", j0Class, poClass)
+                    tMethod.invoke(pSingleton, msg, po)
+                } else {
+                    Log.w(TAG, "P4.p.P() returned null — notification skipped")
+                }
+            } catch (e: Throwable) {
+                Log.w(TAG, "P4.p.T notification trigger failed: ${e.javaClass.simpleName}: ${e.message}")
+                // Don't fail writeIncoming just because notification didn't fire —
+                // the DB write already succeeded.
+            }
             true
         } catch (e: Throwable) {
             Log.w(TAG, "writeIncoming reflection failed: ${e.javaClass.simpleName}: ${e.message}")
