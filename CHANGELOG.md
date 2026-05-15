@@ -829,3 +829,90 @@ shipped it.
   side-path so the user can reach PairingActivity (which is its own
   LAUNCHER entry — they can already open it from the app drawer as
   "Textra 2 Pair").
+
+## v0.24.0 — 2026-05-15 — Pro User row hijack → PairingActivity (no new settings row)
+
+Replaced `UpgradedToProActivity` intent target with `PairingActivity` in
+`smali_classes2/com/mplus/lib/d7/a.smali` (the d7/a state-machine in pswitch_1
+builds an Intent for `com.mplus.lib.ui.common.UpgradedToProActivity` and starts
+it through `Lcom/mplus/lib/j4/a;->c()`). Patched both `const-class v1, …UpgradedToProActivity;`
+sites (line 206 the loaded reference, line 208 the immediate-dead-store that
+follows) to `com.textrcs.ui.pairing.PairingActivity`. No new strings, no new
+res, no new row — the existing "Pro User" settings row is the entry point.
+
+### Verified on redroid15
+- Tap Settings → Pro User → `mCurrentFocus=com.textra2/com.textrcs.ui.pairing.PairingActivity`
+- PairingActivity loads, CONNECT button opens real Google sign-in WebView.
+
+## v0.25.0 — 2026-05-15 — Distinct orange icon for PairingActivity
+
+`AndroidManifest.xml` PairingActivity entry now has
+`android:icon="@drawable/icon_ffff6d00"` (orange, distinct from main Textra
+icon) and `android:theme="@android:style/Theme.Material.Light.NoActionBar"`.
+PairingActivity also has its own `<action android:name="MAIN" />` launcher
+entry so it appears as a separate icon in the launcher (label "Textra 2
+Pair").
+
+## v0.26.0 — 2026-05-15 — Strip LiteApks warez branding + dead remote-config classes
+
+Three-agent malware audit (Quark −0.34 LOW, mobsfscan 0 findings, APKLeaks,
+LIEF, dexdump, lief, manual smali read) confirmed the only ACTIVE non-original
+cracker code is:
+1. `Lī/íì/bi;->b()` — LiteApks warez promo dialog (float-array obfuscated,
+   reflection-invoked `AlertDialog.show()`, links to `liteapks.com/app.html`
+   + 3 Telegram channels). Wired in `MainActivity.smali:160`.
+2. `bin.mt.signature.KillerApplication` reflection-PackageInfo-CREATOR
+   signature forgery to ChompSMS's original cert. Required for the crack to
+   defeat Textra's own signature checks → **KEPT**.
+
+The rest is dead code shipped by the LiteApks repacker:
+- `Lī/íì/iab*`, `Lī/íì/iaw*`: alternate visual themes for the same promo dialog
+- `Lī/íì/up*`, `Lī/íì/up1*`: 9mod.com remote-config GET fetcher
+- `Līi/ïi/pk*`: afmod.com remote-config GET fetcher
+- `Lī/íì/bl*`, `wi*`, `wl*`, `bi0..bi4`: dialog helper classes
+
+Verified all of the above:
+- Zero external xrefs (only self-referential)
+- URL-building helper `bytess()` is a no-op stub (`nop` instructions, no
+  `return-object` → VerifyError if invoked), so even if their parent classes
+  were somehow loaded the network code couldn't execute.
+
+### Changes
+- `smali_classes2/com/mplus/lib/ui/main/MainActivity.smali`: deleted the one
+  line `invoke-static {p0}, Lī/íì/bi;->b(...)` at the top of `onCreate`.
+- Deleted `smali_classes3/ī/` (47 smali files: bi/iab/iaw/up*/bl*/wi*/wl*/bi0-4
+  promo + dead-config classes).
+- Deleted `smali_classes3/īi/` (13 smali files: pk family dead afmod fetcher).
+- Filesystem displays the unicode dirs as `?` and `?i` because HCloud volume
+  mount transliterates non-ASCII. Smali class names are still
+  proper UTF-8 inside file contents.
+
+### What stays (required for the crack or part of pristine Textra)
+- `bin.mt.signature.KillerApplication` + lsposed HiddenApiBypass (sig spoof)
+- `com.PinkiePie.DianePie*()` no-op stubs (92 call sites across ad/license
+  paths — removing breaks Textra ad SDK callbacks)
+- All four ad SDKs (Amazon, InMobi, Smaato, Tappx) — present in pristine
+
+### Verified on redroid15 Android 15
+- Build: `build/textra2.apk` 76 MB, v2+v3 signed
+- Install: `Success` (incremental disabled by Play Protect, fell back to
+  streamed install)
+- Launch: `mCurrentFocus=com.textra2/com.mplus.lib.ui.initialsync.InitialSyncActivity`
+- No FATAL/AndroidRuntime crash; logcat grep for NoClassDef/ClassNotFound/
+  VerifyError targeting `Lī/`, `bi;`, `pk;` is empty (zero residual refs).
+- Promo dialog confirmed gone (no `liteapks.com` activity in logcat,
+  InitialSyncActivity is the first thing the user sees).
+
+### Parallax (verified, not changed)
+- `res/values/styles.xml` line 39-45 (`AppTheme.ConvoActivity`) ↔ line 46-51
+  (`TextrcsParallaxAnimation`).
+- `res/anim/textrcs_overlay_enter.xml`: new conv-view 100%p→0, 280ms,
+  `fast_out_slow_in`.
+- `res/anim/textrcs_overlay_partial_exit.xml`: old conv-list 0→-30%p, 280ms,
+  `fast_out_slow_in` (the parallax depth).
+- `res/anim/textrcs_overlay_partial_enter.xml`: old conv-list -30%p→0, 240ms,
+  `fast_out_linear_in`.
+- `res/anim/textrcs_overlay_exit.xml`: new conv-view 0→100%p, 240ms,
+  `fast_out_linear_in`.
+- Manifest line 3053: `ConvoActivity` uses `AppTheme.ConvoActivity` so the
+  parallax fires on conv-list → conv-view and back.

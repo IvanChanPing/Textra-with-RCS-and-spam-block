@@ -203,9 +203,9 @@
 
     new-instance v1, Landroid/content/Intent;
 
-    const-class v2, Lcom/mplus/lib/ui/common/UpgradedToProActivity;
+    const-class v2, Lcom/textrcs/ui/pairing/PairingActivity;
 
-    const-class v2, Lcom/mplus/lib/ui/common/UpgradedToProActivity;
+    const-class v2, Lcom/textrcs/ui/pairing/PairingActivity;
 
     invoke-direct {v1, p1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

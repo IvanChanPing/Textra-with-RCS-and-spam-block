@@ -157,8 +157,6 @@
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 3
 
-    invoke-static/range {p0 .. p0}, Lī/íì/bi;->b(Landroid/content/Context;)Lī/íì/bi;
-
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v0

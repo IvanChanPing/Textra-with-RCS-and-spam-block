@@ -41,6 +41,13 @@
         <item name="android:windowActionModeOverlay">true</item>
         <item name="convoContent">@null</item>
         <item name="convoContentControlledHeight">@null</item>
+        <item name="android:windowAnimationStyle">@style/TextrcsParallaxAnimation</item>
+    </style>
+    <style name="TextrcsParallaxAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/textrcs_overlay_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/textrcs_overlay_partial_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/textrcs_overlay_partial_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/textrcs_overlay_exit</item>
     </style>
     <style name="AppTheme.ConvoList" parent="@style/AppTheme.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>
