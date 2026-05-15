@@ -41,3 +41,38 @@ transport changes yet — this is just the base.
 ### Not yet done
 - SMS/MMS transport replacement (Phase 1 of protocol port not started in textra_base)
 - `GMessagesConstants.kt` written at `inject_src/protocol/` but not yet compiled in
+
+## v0.2.0 — 2026-05-15 — proto layer integrated, boots
+
+### Added
+- `inject_src/com/textrcs/gmproto/` — 317 protoc-generated Java classes from
+  mautrix/gmessages's 9 `.proto` files + pblite vendor extension. Sub-packages:
+  authentication, client, config, conversations, events, rpc, settings, ukey,
+  util, pblite. Real protoc 3.21.12 output, not handwritten.
+- `inject_src/com/textrcs/protocol/GMessagesConstants.kt` — live API key
+  (`AIzaSyBVISctL4wnC5nctQ1nGYDRD6zybQjKCL8`), all endpoints, network names
+  (GDitto/Bugle/PHONE), UKEY2 + Ditto crypto strings, HTTP/reconnect/ping consts.
+- `build.sh` — 6-step pipeline: javac protos → proto.jar; kotlinc → app.jar;
+  d8 (protobuf-java + kotlin-stdlib bundled in); baksmali; merge into
+  `smali_classes4`; apktool b + apksigner.
+- `reference/beeper.apk` — Beeper 4.46.0 APK as research reference.
+- `docs/AUDIT_REPORT.md` — Premium-cracked malware audit (pre-pulled from sandbox).
+
+### Build
+- Injection moved from `smali_classes3` (overflowed 64k-ref limit) to fresh
+  `smali_classes4` slot.
+- Bundled deps: protobuf-java 3.24.4, kotlin-stdlib 1.9.22.
+- Output APK 73MB.
+
+### Boot verification
+- Installs side-by-side with original `com.textra` (still no provider conflict).
+- Process starts, App.onCreate runs, MainActivity reached.
+- No FATAL exception.
+
+### Not yet done
+- CryptoUtils (AES/HMAC/ECDH/HKDF/GCM)
+- SessionCrypto envelope
+- GMessagesHttpClient + SAPISIDHASH
+- UKEY2Handshake + Gaia pairing flow
+- LongPollService + GMessagesClient
+- C5217d integration

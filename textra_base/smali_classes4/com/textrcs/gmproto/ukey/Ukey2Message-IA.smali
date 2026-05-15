@@ -1,0 +1,3 @@
+.class public final synthetic Lcom/textrcs/gmproto/ukey/Ukey2Message-IA;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
