@@ -165,3 +165,42 @@ transport changes yet — this is just the base.
 
 ### Build / boot
 - `textra2_v0.5.0.apk` (73M) installs side-by-side, boots cleanly.
+
+## v0.6.0 — 2026-05-15 — PBLite + HTTPS transport
+
+### Added
+- `inject_src/com/textrcs/protocol/pblite/PBLite.kt` — port of
+  go.mau.fi/util/pblite (serialize.go + deserialize.go). PBLite is the
+  "protobuf as JSON array" format Google's `clients6.google.com` endpoints
+  use. Each message becomes a JSON array sized to the max field number;
+  field N goes at index (N-1); nested messages are nested arrays; bytes are
+  base64; enums are int; pblite_binary-annotated fields are serialized as
+  base64-of-binary-proto. Uses protobuf-java's reflection
+  (`Descriptors.FieldDescriptor` + `Message.getAllFields()`) and Android's
+  `org.json.JSONArray` / `android.util.Base64`.
+- `inject_src/com/textrcs/protocol/http/GMessagesHttpClient.kt` — full
+  HTTPS client for the Tachyon endpoints. Port of mautrix `pkg/libgm/http.go`
+  + `util/func.go::BuildRelayHeaders`. Features:
+  - Real `BuildRelayHeaders` (sec-ch-ua, x-user-agent grpc-web-javascript/0.1,
+    x-goog-api-key, user-agent, origin, sec-fetch-*, referer, accept-language).
+  - Real `SAPISIDHASH` computation: `SHA1(timestamp + " " + SAPISID + " " + origin)`
+    formatted as `SAPISIDHASH {timestamp}_{hex}`. Auto-attached on
+    clients6.google.com URLs when a SAPISID cookie is present.
+  - Cookie jar (mutable map) with `Set-Cookie` absorption from responses.
+  - Single-shot `postProto(url, body, contentType)` for binary or PBLite.
+  - `openLongPoll(url, body, contentType)` returns a `StreamingResponse`
+    with 90s read timeout for the receive long-poll.
+  - `decodeProto(body, contentType, builder)` parses either content type.
+
+### Quirks fixed during port
+- Kotlin **does** allow nested block comments. The doc comment `Messaging/*`
+  in a regex-looking explanatory line opened an inner block comment that
+  consumed the rest of the file. Trapped at v0.6.0 dev time; replaced with
+  prose to avoid recurrence.
+- `Descriptors.EnumValueDescriptor` is at the package level (not nested
+  inside `FieldDescriptor`).
+- protoc generates `ErrorResponse` under `com.textrcs.gmproto.authentication`,
+  not `config`.
+
+### Build / boot
+- `textra2_v0.6.0.apk` (73M) installs side-by-side, boots cleanly.

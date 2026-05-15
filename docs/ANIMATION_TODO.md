@@ -27,12 +27,39 @@ animation is a slide-with-alpha-fade (`slide_in_from_right_and_fade` +
   2. Bypassing `j4.a` for conv-view specifically, calling
      `overridePendingTransition` directly with new anim XMLs.
 
-**Research to do before implementing:**
-- What does the OnePlus overlay actually look like animation-wise? Parallax
-  with a translucent overlay? Easing curves? Duration? z-ordering?
-- Does it use a transition framework (Material `MaterialContainerTransform`)
-  or plain `<translate>`/`<alpha>` sets?
-- Are there public references in OxygenOS / ColorOS launcher source?
+**User clarification (after first explanation):**
+> "it was sliding over the other screen but while the other screen was also kind
+> of moving similar to OnePlus or even iOS. If that was too hard then just
+> removing alpha and slightly adjusting the speed would be fine."
+
+So the target is **iOS/OnePlus parallax**: new screen slides in fully from the
+right (100% → 0%) and the OLD screen slides part-way LEFT at the same time
+(0% → -30%), creating the "pushed underneath" illusion. Reverse on close.
+
+**Concrete animation values to ship when wiring this up:**
+```xml
+<!-- overlay_enter.xml — new screen full slide in -->
+<translate fromXDelta="100%p" toXDelta="0" duration="280"
+           interpolator="@android:interpolator/fast_out_slow_in"/>
+
+<!-- overlay_partial_exit.xml — old screen parallax left -->
+<translate fromXDelta="0" toXDelta="-30%p" duration="280"
+           interpolator="@android:interpolator/fast_out_slow_in"/>
+
+<!-- overlay_exit.xml — new screen full slide out (close) -->
+<translate fromXDelta="0" toXDelta="100%p" duration="240"
+           interpolator="@android:interpolator/fast_out_linear_in"/>
+
+<!-- overlay_partial_enter.xml — old screen back from -30% -->
+<translate fromXDelta="-30%p" toXDelta="0" duration="240"
+           interpolator="@android:interpolator/fast_out_linear_in"/>
+```
+
+(No alpha — that's the conv-view specific change. Settings keeps alpha.)
+
+**Fallback if the smali wiring proves brittle:**
+Use Android theme `android:windowAnimationStyle` on the ConvoActivity theme.
+That avoids touching `j4.a` and works at the OS animation layer.
 
 **File:line touch points when we're ready:**
 - `textra_base/res/anim/slide_in_from_right_and_fade.xml`
