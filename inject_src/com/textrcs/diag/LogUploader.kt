@@ -27,11 +27,20 @@ object LogUploader {
     private const val TAG = "TextRCSLogUploader"
     private const val URL_STRING = "https://example.invalid/api/logs/auto-upload"
     private const val BUILD_TYPE = "textrcs"
-    private const val BUILD_NUMBER = "v0.37.0"
+    private const val BUILD_NUMBER = "v0.39.0"
 
     private val executor = Executors.newSingleThreadExecutor { r ->
         Thread(r, "TextRCS-LogUploader").apply { isDaemon = true }
     }
+
+    /**
+     * Server-side rate limit observed empirically (2026-05-15 redroid15 test):
+     * back-to-back uploads within ~3s of each other return HTTP 429. We
+     * serialize via a single-thread executor AND sleep enough between
+     * successive posts to clear the limit. Generous 7s gap to be safe.
+     */
+    private const val MIN_GAP_MS = 65_000L  // 65s — 429 still observed at 7s
+    @Volatile private var lastPostMs: Long = 0L
 
     /**
      * Upload [body] in the background. Caller returns immediately.
@@ -40,6 +49,7 @@ object LogUploader {
     fun upload(tag: String, body: String) {
         executor.execute {
             try {
+                throttle()
                 postBlocking(tag, body)
             } catch (e: Throwable) {
                 Log.w(TAG, "upload failed: ${e.javaClass.simpleName}: ${e.message}")
@@ -47,8 +57,21 @@ object LogUploader {
         }
     }
 
+    private fun throttle() {
+        val now = System.currentTimeMillis()
+        val elapsed = now - lastPostMs
+        if (elapsed < MIN_GAP_MS) {
+            val wait = MIN_GAP_MS - elapsed
+            try { Thread.sleep(wait) } catch (_: InterruptedException) {}
+        }
+        lastPostMs = System.currentTimeMillis()
+    }
+
     /** Synchronous variant — only call when on a background thread. */
-    fun uploadBlocking(tag: String, body: String) = postBlocking(tag, body)
+    fun uploadBlocking(tag: String, body: String) {
+        throttle()
+        postBlocking(tag, body)
+    }
 
     private fun postBlocking(tag: String, body: String) {
         val padded = formatForValidator(tag, body)

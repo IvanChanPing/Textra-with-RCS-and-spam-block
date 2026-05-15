@@ -32,12 +32,26 @@ import java.io.StringWriter
 class CrashCatcherProvider : ContentProvider() {
 
     override fun onCreate(): Boolean {
-        // Boot ping so we can confirm in the server logs that the user actually
-        // launched this build (and how far it got before any crash).
-        LogUploader.upload(
-            "boot-provider",
-            "CrashCatcherProvider.onCreate ran. App process started.",
-        )
+        // Install app-wide screen tracer first so its buffer captures the boot
+        // line (instead of firing a separate upload — server rate-limit makes
+        // multiple uploads in <60s return HTTP 429, so we batch everything
+        // into the first per-screen upload).
+        try {
+            val app = (context?.applicationContext as? android.app.Application)
+            if (app != null) {
+                ScreenTracer.install(app)
+                ScreenTracer.note("BOOT  CrashCatcherProvider.onCreate ran. App process started.")
+            } else {
+                // Application not ready yet — fall back to a small standalone
+                // ping. Throttle will hold its position in the upload queue.
+                LogUploader.upload(
+                    "boot-provider-noapp",
+                    "CrashCatcherProvider.onCreate but app context null",
+                )
+            }
+        } catch (e: Throwable) {
+            LogUploader.upload("boot-screentracer-fail", "${e.javaClass.simpleName}: ${e.message}")
+        }
 
         val previous = Thread.getDefaultUncaughtExceptionHandler()
         Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
