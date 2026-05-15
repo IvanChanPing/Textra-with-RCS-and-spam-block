@@ -204,3 +204,28 @@ transport changes yet — this is just the base.
 
 ### Build / boot
 - `textra2_v0.6.0.apk` (73M) installs side-by-side, boots cleanly.
+
+## v0.7.0 — 2026-05-15 — Ditto session-key derivation
+
+### Added
+- `inject_src/com/textrcs/protocol/crypto/SessionCrypto.kt` — port of the
+  Ditto session-key chain from mautrix `pair_google.go::FinishGaiaPairing`.
+  Given the UKEY2 `nextKey` and the server's
+  `ConfirmedKeyDerivationVersion`, derives the session [AESCTRHelper]:
+  - **v0**: `aesKey = HKDF(nextKey, ENCRYPTION_KEY_INFO, "client")`,
+    `hmacKey = HKDF(nextKey, ENCRYPTION_KEY_INFO, "server")`.
+  - **v1**: derive client/server keys as v0, sort by Java-string-hashCode
+    of the bytes, build `[ENCRYPTION_KEY_INFO || sorted0 || sorted1]`
+    (3×32B = 96B), SHA-256, then HKDF with `Ditto salt 1 / info 1` and
+    `Ditto salt 2 / info 2` for AES and HMAC respectively.
+- The 32-byte `ENCRYPTION_KEY_INFO` is the verbatim mautrix constant.
+- Java's `String.hashCode()` semantics replicated for the byte ordering
+  (using `b.toInt()` on signed Kotlin bytes to match Go's `int8(b)`).
+
+### Animation TODO
+- `docs/ANIMATION_TODO.md` updated with the iOS/OnePlus parallax target
+  values (concrete `<translate>` deltas + durations + interpolators) and
+  the theme-level fallback path via `android:windowAnimationStyle`.
+
+### Build / boot
+- `textra2_v0.7.0.apk` (73M) installs side-by-side, boots cleanly.
