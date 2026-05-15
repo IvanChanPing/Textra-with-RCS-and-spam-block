@@ -916,3 +916,64 @@ Verified all of the above:
   `fast_out_linear_in`.
 - Manifest line 3053: `ConvoActivity` uses `AppTheme.ConvoActivity` so the
   parallax fires on conv-list → conv-view and back.
+
+## v0.27.0 — 2026-05-15 — Mirror Beeper's gmessages WebView pattern (byte-exact)
+
+User reported the WebView stuck on raw JSON from `messages.google.com/web/config`
+after completing Google login. Investigated by reading the working reference
+implementations directly — no guessing.
+
+### Verified references (line numbers from files read this session)
+
+- `/tmp/beeper_c3/sources/com/beeper/chat/booper/connect/webview/WebUtils.java:25`
+  `CookieManager.getInstance().getCookie(domain)` — takes a URL string.
+- `/tmp/beeper_c3/sources/com/beeper/chat/booper/connect/webview/BridgeAuthWebView.java:54-89`
+  Full WebSettings block. Line 73: gmessages User-Agent.
+- `decompiled_beeper_base/smali_classes3/.../NetworkArgsFactory.smali:562-572`
+  `androidCustomCookieDomain("gmessages")` returns Set containing one
+  `CookieDomain("gmessages", "https://messages.google.com")`.
+
+### Changes (PairingActivity.kt)
+
+1. **Cookie lookup URL**:
+   - Before: `getCookie(".google.com")` then fallback `getCookie("google.com")`.
+   - After: `getCookie("https://messages.google.com")` — verbatim from
+     NetworkArgsFactory.smali:568.
+
+2. **WebSettings (verbatim from BridgeAuthWebView.java:54-89 gmessages branch)**:
+   - `javaScriptCanOpenWindowsAutomatically = true` (added)
+   - `databaseEnabled = false` (added)
+   - `allowContentAccess = true` (added)
+   - `allowFileAccess = true` (added)
+   - `useWideViewPort = true` (added)
+   - `loadWithOverviewMode = false` (added)
+   - `userAgentString = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36"` (added — Beeper line 73)
+   - Removed `setAcceptCookie(true)` (Beeper does not call this).
+
+### Not changed (no verified reference)
+
+- `GAIA_LOGIN_URL`: Beeper's destination URL comes from `authRequirements.a`
+  which requires driving their account-login flow to reach the gmessages page.
+  Their account flow is gated by Beeper email login. Skipped.
+- `SignInGaiaClient`: already aligned with `pair_google.go:81-104`.
+
+### Verified on redroid15 Android 15
+
+- Build signed v2+v3, 76 MB.
+- Install: Streamed Install Success.
+- Launch: PID 21999 alive.
+- Logcat AndroidRuntime/FATAL/VerifyError filter: 0 hits.
+- Live SAPISID-detection behaviour: NOT yet observed (depends on user logging
+  in on device — open question whether `getCookie("https://messages.google.com")`
+  actually returns SAPISID on this account).
+
+### Beeper Frida trace attempted but couldn't complete
+
+- Installed Beeper 4.44.2 on redroid15, attached Frida, hooked
+  `WebView.loadUrl`, `CookieManager.getCookie`, `WebUtils.cookieManagerCookiesToMap`,
+  `BridgeAuthWebView.<init>`, `DynamicWebViewClient.onPageFinished`,
+  `WebSettings.setUserAgentString`.
+- Beeper requires an email-based Beeper account before reaching the gmessages
+  bridge; without one, could not drive the WebView flow. Hooks were installed
+  successfully (would capture exact runtime calls if Beeper account is provided).
+- Frida script saved at `/tmp/beeper_trace.js` for future use.
