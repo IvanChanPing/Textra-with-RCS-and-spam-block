@@ -967,6 +967,40 @@ implementations directly — no guessing.
   in on device — open question whether `getCookie("https://messages.google.com")`
   actually returns SAPISID on this account).
 
+## v0.28.0 — 2026-05-15 — Fix GAIA_LOGIN_URL: continue=/web/authentication (mautrix paths.go:5)
+
+User reported seeing the raw JSON config blob on screen after Google login on
+v0.27.0. Confirmed root cause by running curl against both URLs:
+
+| URL | content-type | body |
+|---|---|---|
+| `messages.google.com/web/config` (our v0.27.0) | text/plain | the JSON blob the user saw |
+| `messages.google.com/web/authentication` | text/html | actual Messages Web HTML app |
+
+### Reference
+
+`/tmp/gmessages/pkg/libgm/util/paths.go` line 5:
+```go
+const GoogleAuthenticationURL = MessagesBaseURL + "/web/authentication"
+```
+
+Also verified by `nm` that libgojni.so (Beeper's native lib) contains the same
+mautrix-gmessages binary (matching symbols for DoGaiaPairing/StartGaiaPairing/
+FinishGaiaPairing/signInGaiaGetToken/baseSignInGaiaPayload/HasCookies).
+
+### Change
+
+`GMessagesConstants.GAIA_LOGIN_URL`:
+- Before: `…/AccountChooser?continue=https://messages.google.com/web/config`
+- After:  `…/AccountChooser?continue=https://messages.google.com/web/authentication`
+
+### Verified on redroid15
+
+- Build signed v2+v3, 76 MB (sha256 `7369145903ff8c9dd49266164f807f465667352851fb06cf18ffbca9c47a99d5`)
+- Install: Streamed Install Success
+- Launch: PID 23257 alive
+- No FATAL/AndroidRuntime/VerifyError
+
 ### Beeper Frida trace attempted but couldn't complete
 
 - Installed Beeper 4.44.2 on redroid15, attached Frida, hooked
