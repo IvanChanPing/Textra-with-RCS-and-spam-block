@@ -3041,7 +3041,7 @@
             </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
         </activity-alias>
-        <activity android:name="com.mplus.lib.ui.initialsync.InitialSyncActivity" android:enabled="false" android:screenOrientation="portrait" android:theme="@style/AppTheme.InitialSyncActivity"/>
+        <activity android:name="com.mplus.lib.ui.initialsync.InitialSyncActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.InitialSyncActivity"/>
         <activity android:name="com.textrcs.ui.pairing.PairingActivity" android:exported="true" android:label="Textra 2 Pair" android:screenOrientation="portrait" android:theme="@android:style/Theme.Material.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

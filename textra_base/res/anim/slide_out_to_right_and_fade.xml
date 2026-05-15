@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:a="http://schemas.android.com/apk/res/android"
-    a:interpolator="@android:anim/linear_interpolator"
-    a:duration="100"
-    a:zAdjustment="top">
-    <translate
-        a:fromXDelta="0%"
-        a:toXDelta="40%"/>
-    <alpha
-        a:fromAlpha="1"
-        a:toAlpha="0.15"/>
+<set a:interpolator="@android:anim/linear_interpolator" a:duration="100" a:zAdjustment="top"
+  xmlns:a="http://schemas.android.com/apk/res/android">
+    <translate a:fromXDelta="0.0%" a:toXDelta="39.999996%" />
+    <alpha a:fromAlpha="1.0" a:toAlpha="0.15" />
 </set>

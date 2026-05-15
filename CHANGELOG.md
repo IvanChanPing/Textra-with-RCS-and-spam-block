@@ -758,3 +758,74 @@ After the user installs `textra2_v0.21.0.apk` and the app crashes:
 
 ### Build / boot
 - `textra2_v0.21.0.apk` (74M) — installs, boots cleanly on redroid13.
+
+## v0.23.0 — 2026-05-15 — Reverted to minimal-touch (Android 15 crash root-caused)
+
+### Root cause
+v0.16.0 added `android:enabled="false"` to InitialSyncActivity in the
+manifest. MainActivity.onCreate calls W() which calls startActivity(Intent
+explicit-class InitialSyncActivity). With the activity disabled in the
+manifest, that fires `ActivityNotFoundException`; Textra's j4/a
+ActivityStarter helper catches the exception and calls finish() on
+MainActivity. MainActivity gets onCreate but no onStart/onResume — the app
+silently exits to launcher.
+
+Verified by Frida runtime trace on redroid15:
+```
+[trace] MainActivity.W() called
+[trace] startActivity -> Intent { cmp=.../InitialSyncActivity }
+[trace] Throwable: Unable to find explicit activity class ...
+        have you declared this activity in your AndroidManifest.xml...
+[trace] FINISH com.mplus.lib.ui.main.MainActivity
+```
+
+### Lesson learned (saved to memory as feedback_cracker_did_the_work_dont_touch.md)
+The cracker's setup worked. Every "improvement" I made to their flow
+broke something. The minimum-touch rule: change ONLY what's required for
+our additions to integrate. Leave everything else exactly as the cracker
+shipped it.
+
+### Reverts
+- `textra_base/AndroidManifest.xml` — removed `android:enabled="false"` on
+  InitialSyncActivity (back to pristine cracked).
+- `textra_base/smali_classes2/com/mplus/lib/ui/initialsync/InitialSyncActivity.smali`
+  — fully restored from pristine (un-did my immediate-finish edit).
+- `textra_base/smali_classes2/com/mplus/lib/ui/main/MainActivity.smali::W()`
+  — fully restored from pristine (un-did my S4.b.N+return edit).
+- `textra_base/res/anim/slide_in_from_right_and_fade.xml`,
+  `slide_out_to_right_and_fade.xml` — restored from pristine.
+- `textra_base/res/values/styles.xml` — restored from pristine (removed the
+  conv-view parallax windowAnimationStyle).
+- Kept `textra_base/res/anim/textrcs_overlay_*.xml` because they're
+  harmless additions and don't break anything by sitting there unused.
+
+### What still differs from pristine (all genuinely required)
+- Manifest: package rename + 9 authority renames + 3 new components
+  (PairingActivity, ReceiveService, CrashCatcherProvider) + DYNAMIC_RECEIVER
+  permission + MMS taskAffinity rename
+- 17 smali files: all are package/authority string renames (`com.textra` →
+  `com.textra2`, `mplus` → `mplus2`, content://com.textra/* → content://com.textra2/*)
+- 1 smali file (`e5/d.smali::m()`): our SMS-send bridge patch (the actual
+  modification needed for the GMessages send seam)
+- 1 smali file (`bin/mt/signature/KillerApplication.smali`): line 13 string
+  rename (the spoofer's target packageName, matches our applicationId)
+- 1 smali file (`smali_classes2/c/mplus/lib/service/backup/TextraBackupAgent.smali`):
+  preferences filename string rename
+- 1 res file: `strings.xml` app_name + file_provider_authority
+- New: `smali_classes4/` (our injected Kotlin + protos + crash uploader)
+- New: 1 res/layout file (PairingActivity layout) + 4 res/anim files
+  (unused harmless additions)
+
+### Verified on redroid15 (Android 15 x86_64)
+- `mCurrentFocus=com.textra2/com.mplus.lib.ui.initialsync.InitialSyncActivity`
+- Screenshot shows the actual "Simple. Beautiful. Hyper Fast." onboarding
+  screen with "START USING TEXTRA" button — identical to pristine cracked
+  APK behavior.
+- PID stable, no FATAL.
+
+### Outstanding for next iteration
+- InitialSyncActivity will prompt the user to set Textra 2 as default SMS
+  app. For our GMessages routing this is irrelevant. We need to add a
+  side-path so the user can reach PairingActivity (which is its own
+  LAUNCHER entry — they can already open it from the app drawer as
+  "Textra 2 Pair").
