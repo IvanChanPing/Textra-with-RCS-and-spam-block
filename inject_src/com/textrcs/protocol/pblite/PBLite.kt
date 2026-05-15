@@ -176,7 +176,16 @@ object PBLite {
             FieldDescriptor.JavaType.BYTE_STRING -> {
                 ByteString.copyFrom(Base64.decode(rawVal as String, Base64.NO_WRAP))
             }
-            FieldDescriptor.JavaType.INT -> (rawVal as Number).toInt()
+            FieldDescriptor.JavaType.INT -> when (rawVal) {
+                is Number -> rawVal.toInt()
+                // Defensive: Google's PBLite normally encodes int32/uint32 as
+                // JSON number (always safe), but some proto fields with uint32
+                // semantics could in principle be serialised as string. Use
+                // unsigned parse so values up to 2^32-1 are accepted, then
+                // bit-cast to signed Int (proto int32 storage preserves bits).
+                is String -> Integer.parseUnsignedInt(rawVal)
+                else -> throw IllegalArgumentException("bad int32 type ${rawVal::class.java.name}")
+            }
             FieldDescriptor.JavaType.LONG -> when (rawVal) {
                 is Number -> rawVal.toLong()
                 // Google's PBLite encodes uint64/int64 as STRING (not number)

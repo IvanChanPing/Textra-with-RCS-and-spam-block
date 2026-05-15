@@ -141,7 +141,24 @@ class GaiaPairingOrchestrator(
     private fun startLongPoll() {
         val handler = object : LongPollReceiver.Handler {
             override fun onIncomingRpc(msg: IncomingRPCMessage) {
-                val waiter = pendingResponses[msg.responseID]
+                // Response correlation: mautrix `session_handler.go:123` matches
+                // by `msg.Message.SessionID` — i.e. the SessionID field of the
+                // inner RPCMessageData decoded from messageData(12). That's the
+                // field the server echoes our OutgoingRPCData.RequestID into.
+                // We previously matched by `msg.responseID` (the OUTER field 1
+                // of IncomingRPCMessage), which is a different value set by the
+                // server for its own bookkeeping — that mismatch caused the
+                // long-poll handler to grab the wrong frame (often a heartbeat
+                // or unrelated push) whose messageData parsed to all-defaults,
+                // yielding an empty Ukey2Message with messageType =
+                // UNKNOWN_DO_NOT_USE.
+                val correlationId = try {
+                    RPCMessageData.parseFrom(msg.messageData).sessionID
+                } catch (_: Throwable) {
+                    return
+                }
+                if (correlationId.isEmpty()) return
+                val waiter = pendingResponses[correlationId]
                 waiter?.offer(msg)
             }
             override fun onError(e: Throwable) {
