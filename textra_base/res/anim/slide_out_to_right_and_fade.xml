@@ -6,4 +6,7 @@
     <translate
         a:fromXDelta="0%"
         a:toXDelta="40%"/>
+    <alpha
+        a:fromAlpha="1"
+        a:toAlpha="0.15"/>
 </set>
