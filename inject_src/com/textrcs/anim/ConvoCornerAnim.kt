@@ -40,6 +40,22 @@ object ConvoCornerAnim {
     // density without being overdone.
     private const val START_RADIUS_DP = 24f
 
+    /** v0.51: callable from finish() / onPause smali patches to guarantee
+     *  clipToOutline is OFF before any close-direction window animation
+     *  begins. Defensive: if the open animation was interrupted mid-flight,
+     *  onAnimationEnd may not have fired and the decor view would still
+     *  have an active outline clip. That can produce edge artifacts
+     *  ("line on right" / "screen looks shorter") during the close slide. */
+    @JvmStatic
+    fun reset(activity: Activity) {
+        if (Build.VERSION.SDK_INT < 22) return
+        val window = activity.window ?: return
+        val decor = window.decorView
+        decor.clipToOutline = false
+        decor.outlineProvider = ViewOutlineProvider.BACKGROUND
+        try { window.setClipToOutline(false) } catch (_: Throwable) {}
+    }
+
     @JvmStatic
     fun attach(activity: Activity) {
         if (Build.VERSION.SDK_INT < 22) return  // Window.setClipToOutline is API 22+
@@ -71,14 +87,17 @@ object ConvoCornerAnim {
             decor.invalidateOutline()
         }
         anim.addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationEnd(animation: Animator) {
+            private fun cleanup() {
                 // Restore square decor + drop the outline clip so the
                 // remainder of the activity's life has zero outline-rebuild
-                // cost on resize / scroll.
+                // cost on resize / scroll AND no residual clip during a
+                // close-direction window animation.
                 decor.clipToOutline = false
                 decor.outlineProvider = ViewOutlineProvider.BACKGROUND
                 try { window.setClipToOutline(false) } catch (_: Throwable) {}
             }
+            override fun onAnimationEnd(animation: Animator) = cleanup()
+            override fun onAnimationCancel(animation: Animator) = cleanup()
         })
         anim.start()
     }

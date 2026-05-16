@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCrashCatcherProvider.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CrashCatcherProvider.kt\ncom/textrcs/diag/CrashCatcherProvider\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,124:1\n1#2:125\n*E\n"
+    value = "SMAP\nCrashCatcherProvider.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CrashCatcherProvider.kt\ncom/textrcs/diag/CrashCatcherProvider\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,130:1\n1#2:131\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -79,16 +79,16 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 80
+    .line 86
     nop
 
-    .line 81
+    .line 87
     :try_start_6
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 82
+    .line 88
     .local v0, "sw":Ljava/io/StringWriter;
     new-instance v1, Ljava/io/PrintWriter;
 
@@ -100,12 +100,12 @@
 
     invoke-virtual {p3, v1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 83
+    .line 89
     invoke-direct {p0}, Lcom/textrcs/diag/CrashCatcherProvider;->recentLogcat()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 84
+    .line 90
     .local v1, "tail":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -116,7 +116,7 @@
     .local v3, "$this$onCreate_u24lambda_u241_u24lambda_u240":Ljava/lang/StringBuilder;
     const/4 v4, 0x0
 
-    .line 85
+    .line 91
     .local v4, "$i$a$-buildString-CrashCatcherProvider$onCreate$1$body$1":I
     const-string v5, "Thread: "
 
@@ -136,7 +136,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 86
+    .line 92
     const-string v5, "Throwable: "
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -171,19 +171,19 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 87
+    .line 93
     const-string v5, "--- stack ---\n"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 88
+    .line 94
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 89
+    .line 95
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -214,13 +214,13 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 90
+    .line 96
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 91
+    .line 97
     nop
 
-    .line 84
+    .line 90
     .end local v3    # "$this$onCreate_u24lambda_u241_u24lambda_u240":Ljava/lang/StringBuilder;
     .end local v4    # "$i$a$-buildString-CrashCatcherProvider$onCreate$1$body$1":I
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -231,7 +231,7 @@
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 92
+    .line 98
     .local v2, "body":Ljava/lang/String;
     sget-object v3, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
@@ -246,17 +246,17 @@
     .end local v2    # "body":Ljava/lang/String;
     goto :goto_99
 
-    .line 93
+    .line 99
     :catchall_98
     move-exception v0
 
-    .line 97
+    .line 103
     :goto_99
     if-eqz p1, :cond_9e
 
     invoke-interface {p1, p2, p3}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
-    .line 98
+    .line 104
     :cond_9e
     return-void
 .end method
@@ -264,10 +264,10 @@
 .method private final recentLogcat()Ljava/lang/String;
     .registers 7
 
-    .line 103
+    .line 109
     nop
 
-    .line 104
+    .line 110
     :try_start_1
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -277,7 +277,7 @@
 
     move-result-object v0
 
-    .line 105
+    .line 111
     .local v0, "pid":Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -337,7 +337,7 @@
 
     move-result-object v1
 
-    .line 106
+    .line 112
     .local v1, "process":Ljava/lang/Process;
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -362,11 +362,11 @@
 
     check-cast v3, Ljava/io/BufferedReader;
 
-    .line 125
+    .line 131
     .local v3, "it":Ljava/io/BufferedReader;
     const/4 v4, 0x0
 
-    .line 106
+    .line 112
     .local v4, "$i$a$-use-CrashCatcherProvider$recentLogcat$1":I
     move-object v5, v3
 
@@ -411,13 +411,13 @@
     :try_end_67
     .catchall {:try_start_63 .. :try_end_67} :catchall_67
 
-    .line 107
+    .line 113
     .end local v0    # "pid":Ljava/lang/String;
     .end local v1    # "process":Ljava/lang/Process;
     :catchall_67
     move-exception v0
 
-    .line 108
+    .line 114
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -459,7 +459,7 @@
 
     move-result-object v5
 
-    .line 103
+    .line 109
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_91
     return-object v5
@@ -477,7 +477,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 119
+    .line 125
     const/4 v0, 0x0
 
     return v0
@@ -491,7 +491,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 117
+    .line 123
     const/4 v0, 0x0
 
     return-object v0
@@ -506,7 +506,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 118
+    .line 124
     const/4 v0, 0x0
 
     return-object v0
@@ -549,7 +549,7 @@
     .line 41
     .local v2, "app":Landroid/app/Application;
     :cond_16
-    if-eqz v2, :cond_77
+    if-eqz v2, :cond_7c
 
     .line 42
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
@@ -561,13 +561,25 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_22
-    .catchall {:try_start_2 .. :try_end_22} :catchall_81
+    .catchall {:try_start_2 .. :try_end_22} :catchall_86
 
-    .line 50
+    .line 49
+    :try_start_22
+    invoke-static {}, Lcom/textrcs/diag/CryptoSelfTest;->run()V
+    :try_end_25
+    .catchall {:try_start_22 .. :try_end_25} :catchall_26
+
+    goto :goto_27
+
+    :catchall_26
+    move-exception v1
+
+    .line 56
+    :goto_27
     nop
 
-    .line 51
-    :try_start_23
+    .line 57
+    :try_start_28
     new-instance v1, Lcom/textrcs/protocol/SessionStore;
 
     move-object v3, v2
@@ -576,20 +588,20 @@
 
     invoke-direct {v1, v3}, Lcom/textrcs/protocol/SessionStore;-><init>(Landroid/content/Context;)V
 
-    .line 52
+    .line 58
     .local v1, "sessionStore":Lcom/textrcs/protocol/SessionStore;
     invoke-virtual {v1}, Lcom/textrcs/protocol/SessionStore;->load()Lcom/textrcs/protocol/GMessagesSession;
 
     move-result-object v3
 
-    if-eqz v3, :cond_45
+    if-eqz v3, :cond_4a
 
-    .line 53
+    .line 59
     const-string v3, "BOOT  paired session found \u2014 starting ReceiveService"
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 54
+    .line 60
     new-instance v3, Landroid/content/Intent;
 
     move-object v4, v2
@@ -600,34 +612,34 @@
 
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 55
+    .line 61
     .local v3, "svcIntent":Landroid/content/Intent;
     nop
 
-    .line 56
+    .line 62
     invoke-virtual {v2, v3}, Landroid/app/Application;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    goto :goto_aa
+    goto :goto_af
 
-    .line 61
+    .line 67
     .end local v3    # "svcIntent":Landroid/content/Intent;
-    :cond_45
+    :cond_4a
     const-string v3, "BOOT  no paired session \u2014 ReceiveService stays dormant"
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
-    :try_end_4a
-    .catchall {:try_start_23 .. :try_end_4a} :catchall_4b
+    :try_end_4f
+    .catchall {:try_start_28 .. :try_end_4f} :catchall_50
 
     .end local v1    # "sessionStore":Lcom/textrcs/protocol/SessionStore;
-    goto :goto_aa
+    goto :goto_af
 
-    .line 63
-    :catchall_4b
+    .line 69
+    :catchall_50
     move-exception v1
 
-    .line 64
+    .line 70
     .local v1, "e":Ljava/lang/Throwable;
-    :try_start_4c
+    :try_start_51
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -669,31 +681,31 @@
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
     .end local v1    # "e":Ljava/lang/Throwable;
-    goto :goto_aa
-
-    .line 69
-    :cond_77
-    sget-object v1, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
-
-    .line 70
-    const-string v3, "boot-provider-noapp"
-
-    .line 71
-    const-string v4, "CrashCatcherProvider.onCreate but app context null"
-
-    .line 69
-    invoke-virtual {v1, v3, v4}, Lcom/textrcs/diag/LogUploader;->upload(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_80
-    .catchall {:try_start_4c .. :try_end_80} :catchall_81
-
-    .end local v2    # "app":Landroid/app/Application;
-    goto :goto_aa
-
-    .line 74
-    :catchall_81
-    move-exception v1
+    goto :goto_af
 
     .line 75
+    :cond_7c
+    sget-object v1, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
+
+    .line 76
+    const-string v3, "boot-provider-noapp"
+
+    .line 77
+    const-string v4, "CrashCatcherProvider.onCreate but app context null"
+
+    .line 75
+    invoke-virtual {v1, v3, v4}, Lcom/textrcs/diag/LogUploader;->upload(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_85
+    .catchall {:try_start_51 .. :try_end_85} :catchall_86
+
+    .end local v2    # "app":Landroid/app/Application;
+    goto :goto_af
+
+    .line 80
+    :catchall_86
+    move-exception v1
+
+    .line 81
     .restart local v1    # "e":Ljava/lang/Throwable;
     sget-object v2, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
@@ -733,14 +745,14 @@
 
     invoke-virtual {v2, v3, v0}, Lcom/textrcs/diag/LogUploader;->upload(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 78
+    .line 84
     .end local v1    # "e":Ljava/lang/Throwable;
-    :goto_aa
+    :goto_af
     invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v0
 
-    .line 79
+    .line 85
     .local v0, "previous":Ljava/lang/Thread$UncaughtExceptionHandler;
     new-instance v1, Lcom/textrcs/diag/CrashCatcherProvider$$ExternalSyntheticLambda0;
 
@@ -748,7 +760,7 @@
 
     invoke-static {v1}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
-    .line 99
+    .line 105
     const/4 v1, 0x1
 
     return v1
@@ -766,7 +778,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 116
+    .line 122
     const/4 v0, 0x0
 
     return-object v0
@@ -783,7 +795,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 122
+    .line 128
     const/4 v0, 0x0
 
     return v0

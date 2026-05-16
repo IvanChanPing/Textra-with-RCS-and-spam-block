@@ -8,14 +8,16 @@
      a shade fading in over the underneath; on light themes it reads
      as a slight desaturation. True overlay dim would need a separate
      drawn view in ConvoActivity onCreate (not anim-XML-only). -->
-<!-- v0.48: duration bumped 350→450ms while foreground stays 350ms.
-     Underneath now drifts for 100ms AFTER the foreground lands — gives
-     the iOS-style "linger" / "settle" effect where the back screen keeps
-     moving subtly even after the front has arrived. Strong-feeling
-     parallax. -->
+<!-- v0.51: reverted v0.48's 450ms because the 100ms duration mismatch
+     against the foreground's 350ms left a visible right-edge gap during
+     back-out (window background showing where the foreground had already
+     finished sliding off but underneath still hadn't reached x=0). Both
+     anims back to 350ms — synced. To preserve the "slower" feel without
+     a duration mismatch, dropped translate distance from -30%p to -20%p
+     (same time, less travel = lower pixels-per-ms = visually slower). -->
 <set xmlns:a="http://schemas.android.com/apk/res/android" a:shareInterpolator="true"
     a:interpolator="@android:interpolator/fast_out_slow_in"
-    a:duration="450">
-    <translate a:fromXDelta="0" a:toXDelta="-30%p" />
+    a:duration="350">
+    <translate a:fromXDelta="0" a:toXDelta="-20%p" />
     <alpha a:fromAlpha="1.0" a:toAlpha="0.70" />
 </set>

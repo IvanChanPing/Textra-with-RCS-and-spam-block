@@ -41,6 +41,12 @@ class CrashCatcherProvider : ContentProvider() {
             if (app != null) {
                 ScreenTracer.install(app)
                 ScreenTracer.note("BOOT  CrashCatcherProvider.onCreate ran. App process started.")
+                // v0.51: one-shot crypto self-test with fixed inputs.
+                // Output (lines starting "CST ") can be diffed against the
+                // server-side `/tmp/textrcs-runtime-diff/go-ref.out` to
+                // tell us whether Android's Conscrypt produces the same
+                // intermediates as mautrix Go for identical inputs.
+                try { CryptoSelfTest.run() } catch (_: Throwable) {}
 
                 // v0.45: auto-start ReceiveService at process boot if there's
                 // a paired session. Previously only PairingActivity started

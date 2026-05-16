@@ -6,7 +6,7 @@
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0007\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\nH\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082T\u00a2\u0006\u0002\n\u0000"
+        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0007\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\nH\u0007J\u0010\u0010\u000b\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\nH\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082T\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/anim/ConvoCornerAnim;",
@@ -19,7 +19,8 @@
         "attach",
         "",
         "activity",
-        "Landroid/app/Activity;"
+        "Landroid/app/Activity;",
+        "reset"
     }
     k = 0x1
     mv = {
@@ -79,10 +80,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 45
+    .line 61
     nop
 
-    .line 46
+    .line 62
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -91,7 +92,7 @@
 
     return-void
 
-    .line 47
+    .line 63
     .local v0, "window":Landroid/view/Window;
     :cond_d
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -102,7 +103,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 48
+    .line 64
     .local v1, "decor":Landroid/view/View;
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -114,13 +115,13 @@
 
     iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    .line 49
+    .line 65
     .local v2, "density":F
     const/high16 v3, 0x41c00000    # 24.0f
 
     mul-float/2addr v3, v2
 
-    .line 52
+    .line 68
     .local v3, "startPx":F
     const/4 v4, 0x1
 
@@ -130,7 +131,7 @@
 
     aput v3, v5, v6
 
-    .line 54
+    .line 70
     .local v5, "state":[F
     new-instance v7, Lcom/textrcs/anim/ConvoCornerAnim$attach$1;
 
@@ -140,10 +141,10 @@
 
     invoke-virtual {v1, v7}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 59
+    .line 75
     invoke-virtual {v1, v4}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 60
+    .line 76
     :try_start_36
     invoke-virtual {v0, v4}, Landroid/view/Window;->setClipToOutline(Z)V
     :try_end_39
@@ -154,7 +155,7 @@
     :catchall_3a
     move-exception v7
 
-    .line 62
+    .line 78
     :goto_3b
     const/4 v7, 0x2
 
@@ -175,13 +176,13 @@
     .local v7, "$this$attach_u24lambda_u240":Landroid/animation/ValueAnimator;
     const/4 v8, 0x0
 
-    .line 63
+    .line 79
     .local v8, "$i$a$-apply-ConvoCornerAnim$attach$anim$1":I
     const-wide/16 v9, 0x15e
 
     invoke-virtual {v7, v9, v10}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 67
+    .line 83
     new-instance v9, Landroid/view/animation/PathInterpolator;
 
     const v10, 0x3e4ccccd    # 0.2f
@@ -196,15 +197,15 @@
 
     invoke-virtual {v7, v9}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 68
+    .line 84
     nop
 
-    .line 62
+    .line 78
     .end local v7    # "$this$attach_u24lambda_u240":Landroid/animation/ValueAnimator;
     .end local v8    # "$i$a$-apply-ConvoCornerAnim$attach$anim$1":I
     nop
 
-    .line 69
+    .line 85
     .local v4, "anim":Landroid/animation/ValueAnimator;
     new-instance v6, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda0;
 
@@ -212,7 +213,7 @@
 
     invoke-virtual {v4, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 73
+    .line 89
     new-instance v6, Lcom/textrcs/anim/ConvoCornerAnim$attach$3;
 
     invoke-direct {v6, v1, v0}, Lcom/textrcs/anim/ConvoCornerAnim$attach$3;-><init>(Landroid/view/View;Landroid/view/Window;)V
@@ -221,10 +222,10 @@
 
     invoke-virtual {v4, v6}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 83
+    .line 102
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 84
+    .line 103
     return-void
 .end method
 
@@ -246,7 +247,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 70
+    .line 86
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -265,9 +266,69 @@
 
     aput v0, p0, v1
 
-    .line 71
+    .line 87
     invoke-virtual {p1}, Landroid/view/View;->invalidateOutline()V
 
-    .line 72
+    .line 88
+    return-void
+.end method
+
+.method public static final reset(Landroid/app/Activity;)V
+    .registers 5
+    .param p0, "activity"    # Landroid/app/Activity;
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "activity"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 51
+    nop
+
+    .line 52
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    if-nez v0, :cond_d
+
+    return-void
+
+    .line 53
+    .local v0, "window":Landroid/view/Window;
+    :cond_d
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v1
+
+    const-string v2, "getDecorView(...)"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 54
+    .local v1, "decor":Landroid/view/View;
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setClipToOutline(Z)V
+
+    .line 55
+    sget-object v3, Landroid/view/ViewOutlineProvider;->BACKGROUND:Landroid/view/ViewOutlineProvider;
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    .line 56
+    :try_start_1f
+    invoke-virtual {v0, v2}, Landroid/view/Window;->setClipToOutline(Z)V
+    :try_end_22
+    .catchall {:try_start_1f .. :try_end_22} :catchall_23
+
+    goto :goto_24
+
+    :catchall_23
+    move-exception v2
+
+    .line 57
+    :goto_24
     return-void
 .end method
