@@ -13,6 +13,8 @@ import com.textrcs.gmproto.events.UpdateEvents
 import com.textrcs.gmproto.rpc.ActionType
 import com.textrcs.gmproto.rpc.IncomingRPCMessage
 import com.textrcs.gmproto.rpc.RPCMessageData
+import com.textrcs.diag.ScreenTracer
+import com.textrcs.protocol.RpcResponseRouter
 import com.textrcs.protocol.SessionStore
 import com.textrcs.protocol.TokenRefreshClient
 import com.textrcs.protocol.crypto.AESCTRHelper
@@ -138,6 +140,10 @@ class ReceiveService : Service() {
     /**
      * Decrypt the incoming RPC, parse to UpdateEvents (proto), hand off to
      * [IncomingMessageHandler] for DB write.
+     *
+     * v0.41: also publishes every typed response to [RpcResponseRouter] so
+     * SendManager's GetOrCreateConversation can await the canonical convID
+     * from the server instead of falling back to phone-as-convID.
      */
     private fun dispatchRpc(msg: IncomingRPCMessage) {
         try {
@@ -150,15 +156,29 @@ class ReceiveService : Service() {
                 !rpcData.unencryptedData.isEmpty -> rpcData.unencryptedData
                 else -> return
             }
+            ScreenTracer.note("RCV dispatchRpc action=${rpcData.action} responseID=${msg.responseID.take(8)} plaintext.len=${plaintext.size()}")
+            // v0.41: publish to the response router first. SendManager waits
+            // here for GetOrCreate/SendMessage typed replies.
+            val claimed = RpcResponseRouter.deliver(
+                responseID = msg.responseID,
+                action = rpcData.action,
+                plaintext = plaintext.toByteArray(),
+            )
+            if (claimed) {
+                ScreenTracer.note("RCV dispatchRpc CLAIMED by router action=${rpcData.action}")
+                return
+            }
             // mautrix's session_handler routes by action; we currently
-            // recognise UPDATE_EVENTS and let everything else log+drop.
+            // recognise UPDATE_EVENTS for live incoming-message push.
             if (rpcData.action == ActionType.GET_UPDATES) {
                 val events = UpdateEvents.parseFrom(plaintext)
                 IncomingMessageHandler.onUpdateEvents(applicationContext, events)
             } else {
+                ScreenTracer.note("RCV dispatchRpc UNCLAIMED+unhandled action=${rpcData.action}")
                 Log.d(TAG, "Unhandled action: ${rpcData.action} (responseID=${msg.responseID})")
             }
         } catch (e: Throwable) {
+            ScreenTracer.note("RCV dispatchRpc THREW ${e.javaClass.simpleName}: ${e.message}")
             Log.w(TAG, "Failed to dispatch incoming RPC: ${e.message}")
         }
     }

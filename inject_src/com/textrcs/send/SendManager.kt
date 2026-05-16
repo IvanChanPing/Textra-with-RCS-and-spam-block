@@ -11,6 +11,7 @@ import com.textrcs.gmproto.client.GetOrCreateConversationRequest
 import com.textrcs.gmproto.client.GetOrCreateConversationResponse
 import com.textrcs.gmproto.client.SendMessageRequest
 import com.textrcs.gmproto.client.SendMessageResponse
+import com.textrcs.protocol.RpcResponseRouter
 import com.textrcs.gmproto.conversations.ContactNumber
 import com.textrcs.gmproto.conversations.MessageContent
 import com.textrcs.gmproto.client.MessagePayload
@@ -183,22 +184,50 @@ class SendManager private constructor(private val appContext: Context) {
                     .build()
             )
             .build()
-        // GetOrCreate response arrives on the long-poll; we don't have a
-        // receive loop in SendManager yet. Use the response embedded in the
-        // SendMessage HTTP response body when present, or — until the receive
-        // service lands — call SendMessage with the original recipient phone
-        // as a fallback conversation hint. mautrix's first-message-path uses
-        // GetOrCreate, so for now we POST GetOrCreate and rely on the server
-        // to wire conversationID from the phone alone for new conversations.
+        // v0.41: register a response waiter BEFORE posting so we never miss
+        // a fast-arriving reply, then POST, then await the typed response
+        // on the long-poll stream (routed via ReceiveService →
+        // RpcResponseRouter).
         ScreenTracer.note("SEND getOrCreateConv pre-rpc phone=${redact(recipientPhone)}")
-        sendRpc(http, session, crypto, sessionId, ActionType.GET_OR_CREATE_CONVERSATION, req.toByteArray())
-        ScreenTracer.note("SEND getOrCreateConv post-rpc returning phone-as-convId")
-        // Best-effort: use the phone as a deterministic conversation key for
-        // the first send; the server will reconcile on its end. SendMessage
-        // accepts phone-as-conversation for fresh conversations.
-        return recipientPhone
+        val requestID = sendRpc(http, session, crypto, sessionId,
+            ActionType.GET_OR_CREATE_CONVERSATION, req.toByteArray())
+        ScreenTracer.note("SEND getOrCreateConv awaiting response requestID=${requestID.take(8)}")
+        return awaitConversationID(requestID, recipientPhone)
     }
 
+    /**
+     * Block waiting for the typed GetOrCreateConversationResponse to arrive
+     * on the long-poll. mautrix observes <2s typical round-trip; we allow
+     * 15s. On timeout / parse failure we fall back to the phone string —
+     * worse than nothing, but no worse than v0.40 was.
+     */
+    private fun awaitConversationID(requestID: String, fallbackPhone: String): String {
+        val pending = RpcResponseRouter.register(requestID)
+        val delivery = pending.await(15_000L)
+        if (delivery == null) {
+            RpcResponseRouter.unregister(requestID)
+            ScreenTracer.note("SEND awaitConvID TIMEOUT requestID=${requestID.take(8)} → fallback to phone")
+            return fallbackPhone
+        }
+        try {
+            val resp = GetOrCreateConversationResponse.parseFrom(delivery.plaintext)
+            val convId = resp.conversation.conversationID
+            ScreenTracer.note("SEND awaitConvID convId=$convId status=${resp.status} hasConv=${resp.hasConversation()}")
+            return if (convId.isNotEmpty()) convId else {
+                ScreenTracer.note("SEND awaitConvID empty convId → fallback to phone")
+                fallbackPhone
+            }
+        } catch (e: Throwable) {
+            ScreenTracer.note("SEND awaitConvID PARSE FAIL ${e.javaClass.simpleName}: ${e.message} → fallback to phone")
+            return fallbackPhone
+        }
+    }
+
+    /**
+     * POSTs an OutgoingRPCMessage to GMessages and returns the generated
+     * requestID so the caller can await the typed response via
+     * [RpcResponseRouter] if needed.
+     */
     private fun sendRpc(
         http: GMessagesHttpClient,
         session: com.textrcs.protocol.GMessagesSession,
@@ -206,7 +235,7 @@ class SendManager private constructor(private val appContext: Context) {
         sessionId: String,
         action: ActionType,
         innerProtoBytes: ByteArray,
-    ) {
+    ): String {
         val requestID = UUID.randomUUID().toString()
         val encrypted = crypto.encrypt(innerProtoBytes)
         val data = OutgoingRPCData.newBuilder()
@@ -255,6 +284,7 @@ class SendManager private constructor(private val appContext: Context) {
         if (!resp.isSuccess) {
             Log.w(TAG, "RPC $action HTTP ${resp.statusCode}: ${String(resp.body).take(200)}")
         }
+        return requestID
     }
 
     companion object {

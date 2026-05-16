@@ -1,5 +1,55 @@
 # TextRCS Changelog
 
+## v0.41.0 — 2026-05-16 — fix send: use real convID from GetOrCreate response
+
+v0.40 trace pinpointed two bugs in the send pipeline. Both fixed here.
+
+### Bug 1: SendManager threw away the real conversationID
+v0.40 logs show `GetOrCreate` returns HTTP 200 with a body containing the
+canonical convID (e.g. `[[null,"15377015794721273093"],"1778891856843697"]`)
+but `getOrCreateConversation()` ignored the response and returned the
+recipient phone string as the conversationID. Google's server accepts the
+follow-up `SendMessage` with phone-as-convID and ACKs HTTP 200, but the
+message lands in a phantom conversation that never fans out to the recipient.
+
+### Bug 2: ReceiveService dropped the typed response
+The actual `GetOrCreateConversationResponse` is delivered as a frame on the
+long-poll stream — but `ReceiveService.dispatchRpc()` only routed
+`ActionType.GET_UPDATES` to a handler. Every other action including
+GET_OR_CREATE_CONVERSATION and SEND_MESSAGE responses got logged as
+"Unhandled action" and dropped, so even if SendManager waited, nothing
+published to it.
+
+### Fix
+New `com.textrcs.protocol.RpcResponseRouter` — a `ConcurrentHashMap`-backed
+correlation table keyed by `requestID`. Each waiter uses a
+`SynchronousQueue<Delivery>` so a slow receive never OOMs and a late delivery
+to a timed-out waiter drops silently.
+
+`ReceiveService.dispatchRpc()` now publishes every decrypted incoming RPC
+to the router first; if a waiter claimed it the frame is consumed. Otherwise
+it falls through to the existing GET_UPDATES path.
+
+`SendManager.getOrCreateConversation()`:
+- registers a waiter with the new `requestID` BEFORE POSTing
+- POSTs the GetOrCreate RPC
+- awaits the typed response (15s timeout, generous vs mautrix's <2s typical)
+- parses `GetOrCreateConversationResponse.conversation.conversationID`
+- returns that real ID — only falls back to the phone string on timeout or
+  parse failure (no worse than v0.40's behaviour)
+
+`SendManager.sendRpc()` now returns the generated `requestID` so callers can
+register waiters.
+
+### Trace additions
+- `SEND getOrCreateConv awaiting response requestID=...`
+- `SEND awaitConvID convId=... status=... hasConv=...` (or TIMEOUT / PARSE FAIL)
+- `RCV dispatchRpc action=... responseID=... plaintext.len=...`
+- `RCV dispatchRpc CLAIMED by router action=...`
+
+### Output
+- `textra2_v0.41.0.apk` (74 MB)
+
 ## v0.40.0 — 2026-05-16 — 1Hz observability + SendManager instrumentation
 
 Pairing succeeds on user's OnePlus 12 (Google Messages shows paired) but SMS
