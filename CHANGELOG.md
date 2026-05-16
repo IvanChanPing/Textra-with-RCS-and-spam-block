@@ -1,5 +1,49 @@
 # TextRCS Changelog
 
+## v0.42.0 — 2026-05-16 — send actually works + smoother conv parallax
+
+### Send fixes — exhaustive mautrix-gmessages source review (see memory
+`reference_mautrix_gmessages_protocol_2026_05_16.md`) showed v0.41 had three
+distinct bugs. All fixed:
+
+1. **Correlation key**: ReceiveService now keys responses by
+   `RPCMessageData.sessionID` (decoded inner field 1), not
+   `IncomingRPCMessage.responseID` (per-frame ack ID). mautrix's
+   session_handler.go::receiveResponse uses `msg.Message.SessionID` —
+   we matched it.
+2. **Filter intermediate frames**: Google's relay (on Gaia-cookie paired
+   sessions) emits frames with `unencryptedData!=null && encryptedData==null`
+   and `action=UNSPECIFIED` between the POST ack and the real typed
+   response. v0.41 was forwarding their unencrypted bytes as plaintext,
+   causing `InvalidWireTypeException` when parsed as
+   `GetOrCreateConversationResponse`. Now skipped per mautrix's filter
+   (except CREATE_GAIA_PAIRING_CLIENT_INIT/FINISHED which are real).
+3. **SendManager.sendRpc**: `OutgoingRPCData.sessionID` now equals
+   `requestID` (same UUID). The response's sessionID echoes the outgoing
+   sessionID — both must match. Previously we used a separate
+   per-conversation UUID, breaking correlation.
+4. **awaitConversationID timeout**: 15s → 60s. mautrix has no hard
+   timeout at all (just a 5s ping short-circuit); 17-second long-poll
+   round-trips are normal.
+
+### Animation tweaks — conversation list ↔ conversation view only
+
+`TextrcsParallaxAnimation` (applied only to `AppTheme.ConvoActivity`):
+- All four anim files: duration unified to **350ms** (was 280ms open / 240ms close)
+- All four files: interpolator unified to `fast_out_slow_in` (was mixed with
+  `fast_out_linear_in` on close)
+- Slide distances unchanged: incoming `100%p → 0`, outgoing `0 → -30%p`
+  (the parallax)
+
+Effect: the rushed-return asymmetry is gone; both directions feel like the
+same single iOS-push-style transition, with more frame-time per pixel.
+
+Scope is unchanged: only ConvoActivity has the windowAnimationStyle. Other
+activities (Settings, Pairing, etc.) keep their existing transitions.
+
+### Output
+- `textra2_v0.42.0.apk` — 74 MB
+
 ## v0.41.0 — 2026-05-16 — fix send: use real convID from GetOrCreate response
 
 v0.40 trace pinpointed two bugs in the send pipeline. Both fixed here.

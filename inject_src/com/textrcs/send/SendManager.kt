@@ -203,7 +203,11 @@ class SendManager private constructor(private val appContext: Context) {
      */
     private fun awaitConversationID(requestID: String, fallbackPhone: String): String {
         val pending = RpcResponseRouter.register(requestID)
-        val delivery = pending.await(15_000L)
+        // v0.42: bumped 15s → 60s. mautrix has no hard timeout at all (just
+        // a 5s short-circuit ping to nudge the phone) and observed long-poll
+        // RTTs of 17s+ on slow networks. 60s keeps us conservative without
+        // hanging forever on a truly broken session.
+        val delivery = pending.await(60_000L)
         if (delivery == null) {
             RpcResponseRouter.unregister(requestID)
             ScreenTracer.note("SEND awaitConvID TIMEOUT requestID=${requestID.take(8)} → fallback to phone")
@@ -232,16 +236,22 @@ class SendManager private constructor(private val appContext: Context) {
         http: GMessagesHttpClient,
         session: com.textrcs.protocol.GMessagesSession,
         crypto: AESCTRHelper,
-        sessionId: String,
+        @Suppress("UNUSED_PARAMETER") sessionId: String,  // kept for API stability; not used (see v0.42 fix below)
         action: ActionType,
         innerProtoBytes: ByteArray,
     ): String {
         val requestID = UUID.randomUUID().toString()
         val encrypted = crypto.encrypt(innerProtoBytes)
+        // v0.42 fix: OutgoingRPCData.sessionID must equal requestID so that
+        // the incoming response's RPCMessageData.sessionID echoes back the
+        // same value, which is the correlation key used by ReceiveService →
+        // RpcResponseRouter. mautrix sets both fields to the same UUID
+        // (session_handler.go::buildMessage). v0.41 used a separate
+        // per-conversation UUID for sessionID, breaking correlation.
         val data = OutgoingRPCData.newBuilder()
             .setRequestID(requestID)
             .setAction(action)
-            .setSessionID(sessionId)
+            .setSessionID(requestID)
             .setEncryptedProtoData(ByteString.copyFrom(encrypted))
             .build()
         val outer = OutgoingRPCMessage.newBuilder()

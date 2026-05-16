@@ -148,6 +148,24 @@ class ReceiveService : Service() {
     private fun dispatchRpc(msg: IncomingRPCMessage) {
         try {
             val rpcData = RPCMessageData.parseFrom(msg.messageData)
+
+            // v0.42: filter "weird intermediate" frames per mautrix's
+            // session_handler.go::receiveResponse. On Google-account paired
+            // sessions (HasCookies()), Google's relay emits frames between
+            // the POST ack and the real typed response that have
+            // unencryptedData set + encryptedData empty + action=UNSPECIFIED
+            // or a pairing action. mautrix discards these. Without this
+            // filter, v0.41's router published their unencrypted bytes as if
+            // they were the typed plaintext, causing parse failures.
+            val isIntermediate = !rpcData.unencryptedData.isEmpty && rpcData.encryptedData.isEmpty
+            if (isIntermediate &&
+                rpcData.action != ActionType.CREATE_GAIA_PAIRING_CLIENT_INIT &&
+                rpcData.action != ActionType.CREATE_GAIA_PAIRING_CLIENT_FINISHED
+            ) {
+                ScreenTracer.note("RCV dispatchRpc SKIP intermediate sessionID=${rpcData.sessionID.take(8)} action=${rpcData.action} unenc.len=${rpcData.unencryptedData.size()}")
+                return
+            }
+
             val plaintext: ByteString = when {
                 !rpcData.encryptedData.isEmpty -> {
                     val ct = crypto ?: return
@@ -156,26 +174,30 @@ class ReceiveService : Service() {
                 !rpcData.unencryptedData.isEmpty -> rpcData.unencryptedData
                 else -> return
             }
-            ScreenTracer.note("RCV dispatchRpc action=${rpcData.action} responseID=${msg.responseID.take(8)} plaintext.len=${plaintext.size()}")
-            // v0.41: publish to the response router first. SendManager waits
-            // here for GetOrCreate/SendMessage typed replies.
+            ScreenTracer.note("RCV dispatchRpc action=${rpcData.action} sessionID=${rpcData.sessionID.take(8)} responseID=${msg.responseID.take(8)} plaintext.len=${plaintext.size()}")
+
+            // v0.42: correlate by RPCMessageData.sessionID (the inner decoded
+            // field 1), not IncomingRPCMessage.responseID. The outgoing
+            // request's sessionID echoes back here. responseID is just a
+            // per-frame server ack ID — wrong key. (mautrix uses
+            // msg.Message.SessionID; we mirror.)
             val claimed = RpcResponseRouter.deliver(
-                responseID = msg.responseID,
+                responseID = rpcData.sessionID,
                 action = rpcData.action,
                 plaintext = plaintext.toByteArray(),
             )
             if (claimed) {
-                ScreenTracer.note("RCV dispatchRpc CLAIMED by router action=${rpcData.action}")
+                ScreenTracer.note("RCV dispatchRpc CLAIMED by router sessionID=${rpcData.sessionID.take(8)} action=${rpcData.action}")
                 return
             }
-            // mautrix's session_handler routes by action; we currently
-            // recognise UPDATE_EVENTS for live incoming-message push.
+            // Unsolicited event: only GET_UPDATES carries push notifications
+            // for now. Everything else logs and drops.
             if (rpcData.action == ActionType.GET_UPDATES) {
                 val events = UpdateEvents.parseFrom(plaintext)
                 IncomingMessageHandler.onUpdateEvents(applicationContext, events)
             } else {
                 ScreenTracer.note("RCV dispatchRpc UNCLAIMED+unhandled action=${rpcData.action}")
-                Log.d(TAG, "Unhandled action: ${rpcData.action} (responseID=${msg.responseID})")
+                Log.d(TAG, "Unhandled action: ${rpcData.action} (sessionID=${rpcData.sessionID})")
             }
         } catch (e: Throwable) {
             ScreenTracer.note("RCV dispatchRpc THREW ${e.javaClass.simpleName}: ${e.message}")

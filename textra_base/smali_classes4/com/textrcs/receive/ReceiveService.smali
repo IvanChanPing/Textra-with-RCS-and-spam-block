@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nReceiveService.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReceiveService.kt\ncom/textrcs/receive/ReceiveService\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,216:1\n1#2:217\n*E\n"
+    value = "SMAP\nReceiveService.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReceiveService.kt\ncom/textrcs/receive/ReceiveService\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,238:1\n1#2:239\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -164,10 +164,10 @@
 .method private final buildOngoingNotification()Landroid/app/Notification;
     .registers 6
 
-    .line 189
+    .line 211
     nop
 
-    .line 190
+    .line 212
     const-class v0, Landroid/app/NotificationManager;
 
     invoke-virtual {p0, v0}, Lcom/textrcs/receive/ReceiveService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -176,7 +176,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    .line 191
+    .line 213
     .local v0, "mgr":Landroid/app/NotificationManager;
     const-string v1, "textrcs_receive"
 
@@ -186,40 +186,40 @@
 
     if-nez v2, :cond_29
 
-    .line 192
+    .line 214
     new-instance v2, Landroid/app/NotificationChannel;
 
-    .line 193
+    .line 215
     nop
 
-    .line 194
+    .line 216
     const-string v3, "Google Messages connection"
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    .line 195
+    .line 217
     nop
 
-    .line 192
+    .line 214
     const/4 v4, 0x2
 
     invoke-direct {v2, v1, v3, v4}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    .line 197
+    .line 219
     .local v2, "ch":Landroid/app/NotificationChannel;
     const-string v3, "Required for receiving new messages."
 
     invoke-virtual {v2, v3}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
 
-    .line 198
+    .line 220
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
 
-    .line 199
+    .line 221
     invoke-virtual {v0, v2}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
 
-    .line 202
+    .line 224
     .end local v0    # "mgr":Landroid/app/NotificationManager;
     .end local v2    # "ch":Landroid/app/NotificationChannel;
     :cond_29
@@ -231,7 +231,7 @@
 
     invoke-direct {v0, v2, v1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 203
+    .line 225
     const-string v1, "Textra 2"
 
     check-cast v1, Ljava/lang/CharSequence;
@@ -240,7 +240,7 @@
 
     move-result-object v0
 
-    .line 204
+    .line 226
     const-string v1, "Connected to Google Messages"
 
     check-cast v1, Ljava/lang/CharSequence;
@@ -249,14 +249,14 @@
 
     move-result-object v0
 
-    .line 205
+    .line 227
     const v1, 0x108007c
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 206
+    .line 228
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
@@ -267,10 +267,10 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 202
+    .line 224
     nop
 
-    .line 207
+    .line 229
     .local v0, "builder":Landroid/app/Notification$Builder;
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
@@ -284,158 +284,135 @@
 .end method
 
 .method private final dispatchRpc(Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;)V
-    .registers 10
+    .registers 14
     .param p1, "msg"    # Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
 
     .line 149
-    const-string v0, "getResponseID(...)"
-
-    const-string v1, "TextRCSReceive"
+    const-string v0, "TextRCSReceive"
 
     .line 150
-    :try_start_4
+    :try_start_2
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getMessageData()Lcom/google/protobuf/ByteString;
 
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->parseFrom(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/RPCMessageData;
+
+    move-result-object v1
+
+    .line 160
+    .local v1, "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
+
     move-result-object v2
 
-    invoke-static {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->parseFrom(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/RPCMessageData;
+    invoke-virtual {v2}, Lcom/google/protobuf/ByteString;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_20
+
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
 
     move-result-object v2
 
-    .line 151
-    .local v2, "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
-    nop
+    invoke-virtual {v2}, Lcom/google/protobuf/ByteString;->isEmpty()Z
 
-    .line 152
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
+    move-result v2
+    :try_end_1c
+    .catchall {:try_start_2 .. :try_end_1c} :catchall_1c1
 
-    move-result-object v3
+    if-eqz v2, :cond_20
 
-    invoke-virtual {v3}, Lcom/google/protobuf/ByteString;->isEmpty()Z
+    const/4 v2, 0x1
 
-    move-result v3
-    :try_end_15
-    .catchall {:try_start_4 .. :try_end_15} :catchall_12c
+    goto :goto_21
 
-    const-string v4, "toByteArray(...)"
+    :cond_20
+    const/4 v2, 0x0
 
-    if-nez v3, :cond_36
+    .line 161
+    .local v2, "isIntermediate":Z
+    :goto_21
+    const-string v3, " action="
 
-    .line 153
-    :try_start_19
-    iget-object v3, p0, Lcom/textrcs/receive/ReceiveService;->crypto:Lcom/textrcs/protocol/crypto/AESCTRHelper;
+    const/16 v4, 0x8
 
-    if-nez v3, :cond_1e
+    const-string v5, "getSessionID(...)"
 
-    return-void
+    if-eqz v2, :cond_79
 
-    .line 154
-    .local v3, "ct":Lcom/textrcs/protocol/crypto/AESCTRHelper;
-    :cond_1e
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcom/google/protobuf/ByteString;->toByteArray()[B
-
-    move-result-object v5
-
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3, v5}, Lcom/textrcs/protocol/crypto/AESCTRHelper;->decrypt([B)[B
-
-    move-result-object v5
-
-    invoke-static {v5}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
-
-    move-result-object v5
-
-    .line 152
-    .end local v3    # "ct":Lcom/textrcs/protocol/crypto/AESCTRHelper;
-    nop
-
-    .line 154
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    goto :goto_49
-
-    .line 156
-    :cond_36
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/google/protobuf/ByteString;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_12b
-
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
-
-    move-result-object v5
-
-    const-string v3, "getUnencryptedData(...)"
-
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 151
-    :goto_49
-    nop
-
-    .line 159
-    .local v5, "plaintext":Lcom/google/protobuf/ByteString;
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "RCV dispatchRpc action="
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+    .line 162
+    :try_start_29
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v7, Lcom/textrcs/gmproto/rpc/ActionType;->CREATE_GAIA_PAIRING_CLIENT_INIT:Lcom/textrcs/gmproto/rpc/ActionType;
 
-    move-result-object v3
+    if-eq v6, v7, :cond_79
 
-    const-string v6, " responseID="
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
+    .line 163
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v6
 
-    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    sget-object v7, Lcom/textrcs/gmproto/rpc/ActionType;->CREATE_GAIA_PAIRING_CLIENT_FINISHED:Lcom/textrcs/gmproto/rpc/ActionType;
 
-    const/16 v7, 0x8
+    if-eq v6, v7, :cond_79
 
-    invoke-static {v6, v7}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+    .line 165
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "RCV dispatchRpc SKIP intermediate sessionID="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getSessionID()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v7, v4}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    const-string v6, " plaintext.len="
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    invoke-virtual {v5}, Lcom/google/protobuf/ByteString;->size()I
+    const-string v4, " unenc.len="
 
-    move-result v6
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v3
+
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/google/protobuf/ByteString;->size()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -445,53 +422,237 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 162
-    sget-object v3, Lcom/textrcs/protocol/RpcResponseRouter;->INSTANCE:Lcom/textrcs/protocol/RpcResponseRouter;
+    .line 166
+    return-void
 
-    .line 163
-    invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
+    .line 169
+    :cond_79
+    nop
+
+    .line 170
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
 
     move-result-object v6
 
-    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v6}, Lcom/google/protobuf/ByteString;->isEmpty()Z
 
-    .line 164
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+    move-result v6
+    :try_end_82
+    .catchall {:try_start_29 .. :try_end_82} :catchall_1c1
 
-    move-result-object v0
+    const-string v7, "toByteArray(...)"
 
-    const-string v7, "getAction(...)"
+    if-nez v6, :cond_a3
 
-    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 171
+    :try_start_86
+    iget-object v6, p0, Lcom/textrcs/receive/ReceiveService;->crypto:Lcom/textrcs/protocol/crypto/AESCTRHelper;
 
-    .line 165
-    invoke-virtual {v5}, Lcom/google/protobuf/ByteString;->toByteArray()[B
+    if-nez v6, :cond_8b
+
+    return-void
+
+    .line 172
+    .local v6, "ct":Lcom/textrcs/protocol/crypto/AESCTRHelper;
+    :cond_8b
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/google/protobuf/ByteString;->toByteArray()[B
+
+    move-result-object v8
+
+    invoke-static {v8, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v6, v8}, Lcom/textrcs/protocol/crypto/AESCTRHelper;->decrypt([B)[B
+
+    move-result-object v8
+
+    invoke-static {v8}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
+
+    move-result-object v8
+
+    .line 170
+    .end local v6    # "ct":Lcom/textrcs/protocol/crypto/AESCTRHelper;
+    nop
+
+    .line 172
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    goto :goto_b6
+
+    .line 174
+    :cond_a3
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/google/protobuf/ByteString;->isEmpty()Z
+
+    move-result v6
+
+    if-nez v6, :cond_1c0
+
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
+
+    move-result-object v8
+
+    const-string v6, "getUnencryptedData(...)"
+
+    invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 169
+    :goto_b6
+    nop
+
+    .line 177
+    .local v8, "plaintext":Lcom/google/protobuf/ByteString;
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "RCV dispatchRpc action="
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+
+    move-result-object v9
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v9, " sessionID="
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getSessionID()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v9, v4}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v9, " responseID="
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v10, "getResponseID(...)"
+
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v9, v4}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v9, " plaintext.len="
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v8}, Lcom/google/protobuf/ByteString;->size()I
+
+    move-result v9
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 184
+    sget-object v6, Lcom/textrcs/protocol/RpcResponseRouter;->INSTANCE:Lcom/textrcs/protocol/RpcResponseRouter;
+
+    .line 185
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getSessionID()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 186
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+
+    move-result-object v10
+
+    const-string v11, "getAction(...)"
+
+    invoke-static {v10, v11}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 187
+    invoke-virtual {v8}, Lcom/google/protobuf/ByteString;->toByteArray()[B
+
+    move-result-object v11
+
+    invoke-static {v11, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 184
+    invoke-virtual {v6, v9, v10, v11}, Lcom/textrcs/protocol/RpcResponseRouter;->deliver(Ljava/lang/String;Lcom/textrcs/gmproto/rpc/ActionType;[B)Z
+
+    move-result v6
+
+    .line 189
+    .local v6, "claimed":Z
+    if-eqz v6, :cond_158
+
+    .line 190
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "RCV dispatchRpc CLAIMED by router sessionID="
+
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    invoke-static {v7, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getSessionID()Ljava/lang/String;
 
-    .line 162
-    invoke-virtual {v3, v6, v0, v7}, Lcom/textrcs/protocol/RpcResponseRouter;->deliver(Ljava/lang/String;Lcom/textrcs/gmproto/rpc/ActionType;[B)Z
+    move-result-object v9
 
-    move-result v0
+    invoke-static {v9, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 167
-    .local v0, "claimed":Z
-    if-eqz v0, :cond_c3
+    invoke-static {v9, v4}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
 
-    .line 168
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, "RCV dispatchRpc CLAIMED by router action="
+    move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v4
 
@@ -505,45 +666,45 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 169
+    .line 191
     return-void
 
-    .line 173
-    :cond_c3
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+    .line 195
+    :cond_158
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v3
 
     sget-object v4, Lcom/textrcs/gmproto/rpc/ActionType;->GET_UPDATES:Lcom/textrcs/gmproto/rpc/ActionType;
 
-    if-ne v3, v4, :cond_e2
+    if-ne v3, v4, :cond_177
 
-    .line 174
-    invoke-static {v5}, Lcom/textrcs/gmproto/events/UpdateEvents;->parseFrom(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/events/UpdateEvents;
+    .line 196
+    invoke-static {v8}, Lcom/textrcs/gmproto/events/UpdateEvents;->parseFrom(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/events/UpdateEvents;
 
     move-result-object v3
 
-    .line 175
+    .line 197
     .local v3, "events":Lcom/textrcs/gmproto/events/UpdateEvents;
     sget-object v4, Lcom/textrcs/receive/IncomingMessageHandler;->INSTANCE:Lcom/textrcs/receive/IncomingMessageHandler;
 
     invoke-virtual {p0}, Lcom/textrcs/receive/ReceiveService;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v6
+    move-result-object v5
 
     const-string v7, "getApplicationContext(...)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    invoke-virtual {v4, v6, v3}, Lcom/textrcs/receive/IncomingMessageHandler;->onUpdateEvents(Landroid/content/Context;Lcom/textrcs/gmproto/events/UpdateEvents;)V
+    invoke-virtual {v4, v5, v3}, Lcom/textrcs/receive/IncomingMessageHandler;->onUpdateEvents(Landroid/content/Context;Lcom/textrcs/gmproto/events/UpdateEvents;)V
 
     .end local v3    # "events":Lcom/textrcs/gmproto/events/UpdateEvents;
-    goto/16 :goto_173
+    goto/16 :goto_208
 
-    .line 177
-    :cond_e2
+    .line 199
+    :cond_177
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -554,7 +715,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v4
 
@@ -568,7 +729,7 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 178
+    .line 200
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -579,7 +740,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v4
 
@@ -587,13 +748,13 @@
 
     move-result-object v3
 
-    const-string v4, " (responseID="
+    const-string v4, " (sessionID="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getSessionID()Ljava/lang/String;
 
     move-result-object v4
 
@@ -611,25 +772,26 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_12a
-    .catchall {:try_start_19 .. :try_end_12a} :catchall_12c
+    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1bf
+    .catchall {:try_start_86 .. :try_end_1bf} :catchall_1c1
 
-    goto :goto_173
+    goto :goto_208
 
-    .line 157
-    .end local v0    # "claimed":Z
-    .end local v5    # "plaintext":Lcom/google/protobuf/ByteString;
-    :cond_12b
+    .line 175
+    .end local v6    # "claimed":Z
+    .end local v8    # "plaintext":Lcom/google/protobuf/ByteString;
+    :cond_1c0
     return-void
 
-    .line 180
-    .end local v2    # "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
-    :catchall_12c
-    move-exception v0
+    .line 202
+    .end local v1    # "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
+    .end local v2    # "isIntermediate":Z
+    :catchall_1c1
+    move-exception v1
 
-    .line 181
-    .local v0, "e":Ljava/lang/Throwable;
+    .line 203
+    .local v1, "e":Ljava/lang/Throwable;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -640,7 +802,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
@@ -658,7 +820,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -672,7 +834,7 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 182
+    .line 204
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -683,7 +845,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -695,11 +857,11 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
-    .end local v0    # "e":Ljava/lang/Throwable;
-    :goto_173
+    .line 206
+    .end local v1    # "e":Ljava/lang/Throwable;
+    :goto_208
     return-void
 .end method
 
@@ -716,7 +878,7 @@
 
     move-object v1, v0
 
-    .line 217
+    .line 239
     .local v1, "$this$refreshScheduler_u24lambda_u241_u24lambda_u240":Ljava/lang/Thread;
     const/4 v2, 0x0
 

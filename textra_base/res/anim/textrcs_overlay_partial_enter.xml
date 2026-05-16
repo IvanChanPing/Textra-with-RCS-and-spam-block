@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Old (conv-list) screen slides back from the -30% parallax offset to 0
-     while the new screen exits to the right. -->
+     while the new screen exits to the right.
+     v0.42: 240ms → 350ms and fast_out_linear_in → fast_out_slow_in to kill
+     the rushed-return asymmetry. Open + close now share the same curve and
+     duration. -->
 <translate xmlns:a="http://schemas.android.com/apk/res/android"
     a:fromXDelta="-30%p"
     a:toXDelta="0"
-    a:duration="240"
-    a:interpolator="@android:interpolator/fast_out_linear_in"/>
+    a:duration="350"
+    a:interpolator="@android:interpolator/fast_out_slow_in"/>

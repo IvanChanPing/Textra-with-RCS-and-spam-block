@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,332:1\n1#2:333\n*E\n"
+    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,342:1\n1#2:343\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -192,26 +192,26 @@
 
     move-result-object v0
 
-    .line 206
+    .line 210
     .local v0, "pending":Lcom/textrcs/protocol/RpcResponseRouter$Pending;
-    const-wide/16 v1, 0x3a98
+    const-wide/32 v1, 0xea60
 
     invoke-virtual {v0, v1, v2}, Lcom/textrcs/protocol/RpcResponseRouter$Pending;->await(J)Lcom/textrcs/protocol/RpcResponseRouter$Delivery;
 
     move-result-object v1
 
-    .line 207
+    .line 211
     .local v1, "delivery":Lcom/textrcs/protocol/RpcResponseRouter$Delivery;
     const-string v2, " \u2192 fallback to phone"
 
-    if-nez v1, :cond_36
+    if-nez v1, :cond_37
 
-    .line 208
+    .line 212
     sget-object v3, Lcom/textrcs/protocol/RpcResponseRouter;->INSTANCE:Lcom/textrcs/protocol/RpcResponseRouter;
 
     invoke-virtual {v3, p1}, Lcom/textrcs/protocol/RpcResponseRouter;->unregister(Ljava/lang/String;)V
 
-    .line 209
+    .line 213
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -242,15 +242,15 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 210
+    .line 214
     return-object p2
 
-    .line 212
-    :cond_36
+    .line 216
+    :cond_37
     nop
 
-    .line 213
-    :try_start_37
+    .line 217
+    :try_start_38
     invoke-virtual {v1}, Lcom/textrcs/protocol/RpcResponseRouter$Delivery;->getPlaintext()[B
 
     move-result-object v3
@@ -259,7 +259,7 @@
 
     move-result-object v3
 
-    .line 214
+    .line 218
     .local v3, "resp":Lcom/textrcs/gmproto/client/GetOrCreateConversationResponse;
     invoke-virtual {v3}, Lcom/textrcs/gmproto/client/GetOrCreateConversationResponse;->getConversation()Lcom/textrcs/gmproto/conversations/Conversation;
 
@@ -269,7 +269,7 @@
 
     move-result-object v4
 
-    .line 215
+    .line 219
     .local v4, "convId":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -319,7 +319,7 @@
 
     invoke-static {v5}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 216
+    .line 220
     invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     move-object v5, v4
@@ -330,44 +330,44 @@
 
     move-result v5
 
-    if-lez v5, :cond_87
+    if-lez v5, :cond_88
 
     const/4 v5, 0x1
 
-    goto :goto_88
+    goto :goto_89
 
-    :cond_87
+    :cond_88
     const/4 v5, 0x0
 
-    :goto_88
-    if-eqz v5, :cond_8c
+    :goto_89
+    if-eqz v5, :cond_8d
 
     move-object v2, v4
 
-    goto :goto_92
+    goto :goto_93
 
-    .line 217
-    :cond_8c
+    .line 221
+    :cond_8d
     const-string v5, "SEND awaitConvID empty convId \u2192 fallback to phone"
 
     invoke-static {v5}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
-    :try_end_91
-    .catchall {:try_start_37 .. :try_end_91} :catchall_93
+    :try_end_92
+    .catchall {:try_start_38 .. :try_end_92} :catchall_94
 
-    .line 218
+    .line 222
     move-object v2, p2
 
-    .line 216
-    :goto_92
+    .line 220
+    :goto_93
     return-object v2
 
-    .line 220
+    .line 224
     .end local v3    # "resp":Lcom/textrcs/gmproto/client/GetOrCreateConversationResponse;
     .end local v4    # "convId":Ljava/lang/String;
-    :catchall_93
+    :catchall_94
     move-exception v3
 
-    .line 221
+    .line 225
     .local v3, "e":Ljava/lang/Throwable;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -415,7 +415,7 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 222
+    .line 226
     return-object p2
 .end method
 
@@ -952,7 +952,7 @@
 
     move-object v1, v0
 
-    .line 333
+    .line 343
     .local v1, "$this$sendExecutor_u24lambda_u241_u24lambda_u240":Ljava/lang/Thread;
     const/4 v2, 0x0
 
@@ -968,7 +968,7 @@
 .end method
 
 .method private final sendRpc(Lcom/textrcs/protocol/http/GMessagesHttpClient;Lcom/textrcs/protocol/GMessagesSession;Lcom/textrcs/protocol/crypto/AESCTRHelper;Ljava/lang/String;Lcom/textrcs/gmproto/rpc/ActionType;[B)Ljava/lang/String;
-    .registers 28
+    .registers 27
     .param p1, "http"    # Lcom/textrcs/protocol/http/GMessagesHttpClient;
     .param p2, "session"    # Lcom/textrcs/protocol/GMessagesSession;
     .param p3, "crypto"    # Lcom/textrcs/protocol/crypto/AESCTRHelper;
@@ -976,7 +976,7 @@
     .param p5, "action"    # Lcom/textrcs/gmproto/rpc/ActionType;
     .param p6, "innerProtoBytes"    # [B
 
-    .line 239
+    .line 243
     move-object/from16 v1, p5
 
     const-string v2, ": "
@@ -995,7 +995,7 @@
 
     move-object v3, v0
 
-    .line 240
+    .line 244
     .local v3, "requestID":Ljava/lang/String;
     move-object/from16 v4, p3
 
@@ -1005,196 +1005,194 @@
 
     move-result-object v6
 
-    .line 241
+    .line 251
     .local v6, "encrypted":[B
     invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 242
+    .line 252
     invoke-virtual {v0, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 243
+    .line 253
     invoke-virtual {v0, v1}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setAction(Lcom/textrcs/gmproto/rpc/ActionType;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 244
-    move-object/from16 v7, p4
-
-    invoke-virtual {v0, v7}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setSessionID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
+    .line 254
+    invoke-virtual {v0, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setSessionID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 245
+    .line 255
     invoke-static {v6}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-virtual {v0, v8}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setEncryptedProtoData(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
+    invoke-virtual {v0, v7}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setEncryptedProtoData(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 246
+    .line 256
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCData;
 
     move-result-object v0
 
-    .line 241
-    move-object v8, v0
+    .line 251
+    move-object v7, v0
 
-    .line 247
-    .local v8, "data":Lcom/textrcs/gmproto/rpc/OutgoingRPCData;
+    .line 257
+    .local v7, "data":Lcom/textrcs/gmproto/rpc/OutgoingRPCData;
     invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
     move-result-object v0
 
-    .line 248
+    .line 258
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/protocol/GMessagesSession;->getMobileDevice()Lcom/textrcs/gmproto/authentication/Device;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-virtual {v0, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setMobile(Lcom/textrcs/gmproto/authentication/Device;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
+    invoke-virtual {v0, v8}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setMobile(Lcom/textrcs/gmproto/authentication/Device;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
     move-result-object v0
-
-    .line 250
-    invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
-
-    move-result-object v9
-
-    .line 251
-    invoke-virtual {v9, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
-
-    move-result-object v9
-
-    .line 252
-    sget-object v10, Lcom/textrcs/gmproto/rpc/BugleRoute;->DataEvent:Lcom/textrcs/gmproto/rpc/BugleRoute;
-
-    invoke-virtual {v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setBugleRoute(Lcom/textrcs/gmproto/rpc/BugleRoute;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
-
-    move-result-object v9
-
-    .line 254
-    invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
-
-    move-result-object v10
-
-    .line 255
-    invoke-static {}, Lcom/textrcs/gmproto/util/EmptyArr;->getDefaultInstance()Lcom/textrcs/gmproto/util/EmptyArr;
-
-    move-result-object v11
-
-    invoke-virtual {v10, v11}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->setEmptyArr(Lcom/textrcs/gmproto/util/EmptyArr;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
-
-    move-result-object v10
-
-    .line 256
-    sget-object v11, Lcom/textrcs/gmproto/rpc/MessageType;->BUGLE_MESSAGE:Lcom/textrcs/gmproto/rpc/MessageType;
-
-    invoke-virtual {v10, v11}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->setMessageType(Lcom/textrcs/gmproto/rpc/MessageType;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
-
-    move-result-object v10
-
-    .line 257
-    invoke-virtual {v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;
-
-    move-result-object v10
-
-    .line 253
-    invoke-virtual {v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setMessageTypeData(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
-
-    move-result-object v9
-
-    .line 259
-    invoke-virtual {v8}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData;->toByteString()Lcom/google/protobuf/ByteString;
-
-    move-result-object v10
-
-    invoke-virtual {v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setMessageData(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
-
-    move-result-object v9
 
     .line 260
-    invoke-virtual {v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;
+    invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
 
-    move-result-object v9
+    move-result-object v8
 
-    .line 249
-    invoke-virtual {v0, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setData(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
+    .line 261
+    invoke-virtual {v8, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
 
-    move-result-object v0
+    move-result-object v8
 
-    .line 263
-    invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+    .line 262
+    sget-object v9, Lcom/textrcs/gmproto/rpc/BugleRoute;->DataEvent:Lcom/textrcs/gmproto/rpc/BugleRoute;
 
-    move-result-object v9
+    invoke-virtual {v8, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setBugleRoute(Lcom/textrcs/gmproto/rpc/BugleRoute;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
+
+    move-result-object v8
 
     .line 264
-    invoke-virtual {v9, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+    invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
 
     move-result-object v9
 
     .line 265
-    invoke-virtual/range {p2 .. p2}, Lcom/textrcs/protocol/GMessagesSession;->getTachyonAuthToken()[B
+    invoke-static {}, Lcom/textrcs/gmproto/util/EmptyArr;->getDefaultInstance()Lcom/textrcs/gmproto/util/EmptyArr;
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
-
-    move-result-object v10
-
-    invoke-virtual {v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->setTachyonAuthToken(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+    invoke-virtual {v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->setEmptyArr(Lcom/textrcs/gmproto/util/EmptyArr;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
 
     move-result-object v9
 
     .line 266
-    sget-object v10, Lcom/textrcs/protocol/SignInGaiaClient;->Companion:Lcom/textrcs/protocol/SignInGaiaClient$Companion;
+    sget-object v10, Lcom/textrcs/gmproto/rpc/MessageType;->BUGLE_MESSAGE:Lcom/textrcs/gmproto/rpc/MessageType;
 
-    invoke-virtual {v10}, Lcom/textrcs/protocol/SignInGaiaClient$Companion;->getCONFIG_VERSION()Lcom/textrcs/gmproto/authentication/ConfigVersion;
-
-    move-result-object v10
-
-    invoke-virtual {v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->setConfigVersion(Lcom/textrcs/gmproto/authentication/ConfigVersion;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+    invoke-virtual {v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->setMessageType(Lcom/textrcs/gmproto/rpc/MessageType;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
 
     move-result-object v9
 
     .line 267
-    invoke-virtual {v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;
+    invoke-virtual {v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;
 
     move-result-object v9
 
-    .line 262
-    invoke-virtual {v0, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setAuth(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
+    .line 263
+    invoke-virtual {v8, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setMessageTypeData(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
 
-    move-result-object v0
+    move-result-object v8
 
     .line 269
-    const-wide/32 v9, 0x11e1a300
+    invoke-virtual {v7}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData;->toByteString()Lcom/google/protobuf/ByteString;
 
-    invoke-virtual {v0, v9, v10}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setTTL(J)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setMessageData(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
+
+    move-result-object v8
+
+    .line 270
+    invoke-virtual {v8}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;
+
+    move-result-object v8
+
+    .line 259
+    invoke-virtual {v0, v8}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setData(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
     move-result-object v0
 
-    .line 270
+    .line 273
+    invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+
+    move-result-object v8
+
+    .line 274
+    invoke-virtual {v8, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+
+    move-result-object v8
+
+    .line 275
+    invoke-virtual/range {p2 .. p2}, Lcom/textrcs/protocol/GMessagesSession;->getTachyonAuthToken()[B
+
+    move-result-object v9
+
+    invoke-static {v9}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->setTachyonAuthToken(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+
+    move-result-object v8
+
+    .line 276
+    sget-object v9, Lcom/textrcs/protocol/SignInGaiaClient;->Companion:Lcom/textrcs/protocol/SignInGaiaClient$Companion;
+
+    invoke-virtual {v9}, Lcom/textrcs/protocol/SignInGaiaClient$Companion;->getCONFIG_VERSION()Lcom/textrcs/gmproto/authentication/ConfigVersion;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->setConfigVersion(Lcom/textrcs/gmproto/authentication/ConfigVersion;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
+
+    move-result-object v8
+
+    .line 277
+    invoke-virtual {v8}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;
+
+    move-result-object v8
+
+    .line 272
+    invoke-virtual {v0, v8}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setAuth(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
+
+    move-result-object v0
+
+    .line 279
+    const-wide/32 v8, 0x11e1a300
+
+    invoke-virtual {v0, v8, v9}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setTTL(J)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
+
+    move-result-object v0
+
+    .line 280
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage;
 
     move-result-object v0
 
-    .line 247
-    move-object v9, v0
+    .line 257
+    move-object v8, v0
 
-    .line 272
-    .local v9, "outer":Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage;
+    .line 282
+    .local v8, "outer":Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage;
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "SEND sendRpc action="
+    const-string v9, "SEND sendRpc action="
 
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1202,37 +1200,37 @@
 
     move-result-object v0
 
-    const-string v11, " requestID="
+    const-string v10, " requestID="
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const/16 v11, 0x8
-
-    invoke-static {v3, v11}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v11, " encrypted.len="
+    const/16 v10, 0x8
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v10}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v10
 
-    array-length v11, v6
-
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v11, " POST\u2192https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/SendMessage"
+    const-string v10, " encrypted.len="
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    array-length v10, v6
+
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v10, " POST\u2192https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/SendMessage"
+
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1242,198 +1240,198 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 273
-    nop
-
-    .line 274
-    nop
-
-    .line 275
-    :try_start_e8
-    const-string v0, "https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/SendMessage"
-
-    .line 276
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    move-object v11, v9
-
-    check-cast v11, Lcom/google/protobuf/Message;
-
-    .line 277
-    sget-object v12, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;->PROTO_PBLITE:Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;
-    :try_end_f2
-    .catchall {:try_start_e8 .. :try_end_f2} :catchall_1a5
-
-    .line 274
-    move-object/from16 v13, p1
-
-    :try_start_f4
-    invoke-virtual {v13, v0, v11, v12}, Lcom/textrcs/protocol/http/GMessagesHttpClient;->postProto(Ljava/lang/String;Lcom/google/protobuf/Message;Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;)Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;
-
-    move-result-object v0
-    :try_end_f8
-    .catchall {:try_start_f4 .. :try_end_f8} :catchall_1a3
-
-    .line 273
-    nop
-
     .line 283
-    .local v0, "resp":Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string v11, " HTTP "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getStatusCode()I
-
-    move-result v12
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string v12, " success="
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->isSuccess()Z
-
-    move-result v12
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string v12, " body.len="
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getBody()[B
-
-    move-result-object v12
-
-    array-length v12, v12
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string v12, " body.preview="
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    new-instance v12, Ljava/lang/String;
-
-    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getBody()[B
-
-    move-result-object v14
-
-    sget-object v15, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-direct {v12, v14, v15}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-
-    const/16 v14, 0xc8
-
-    invoke-static {v12, v14}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v15
-
-    const/16 v19, 0x4
-
-    const/16 v20, 0x0
-
-    const/16 v16, 0xa
-
-    const/16 v17, 0x20
-
-    const/16 v18, 0x0
-
-    invoke-static/range {v15 .. v20}, Lkotlin/text/StringsKt;->replace$default(Ljava/lang/String;CCZILjava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-static {v10}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+    nop
 
     .line 284
-    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->isSuccess()Z
-
-    move-result v10
-
-    if-nez v10, :cond_1a2
+    nop
 
     .line 285
+    :try_start_e6
+    const-string v0, "https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/SendMessage"
+
+    .line 286
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    move-object v10, v8
+
+    check-cast v10, Lcom/google/protobuf/Message;
+
+    .line 287
+    sget-object v11, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;->PROTO_PBLITE:Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;
+    :try_end_f0
+    .catchall {:try_start_e6 .. :try_end_f0} :catchall_1a3
+
+    .line 284
+    move-object/from16 v12, p1
+
+    :try_start_f2
+    invoke-virtual {v12, v0, v10, v11}, Lcom/textrcs/protocol/http/GMessagesHttpClient;->postProto(Ljava/lang/String;Lcom/google/protobuf/Message;Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;)Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;
+
+    move-result-object v0
+    :try_end_f6
+    .catchall {:try_start_f2 .. :try_end_f6} :catchall_1a1
+
+    .line 283
+    nop
+
+    .line 293
+    .local v0, "resp":Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v12, "RPC "
+    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v9
 
-    move-result-object v10
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v9
 
-    move-result-object v10
+    const-string v10, " HTTP "
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v9
 
     invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getStatusCode()I
 
     move-result v11
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v11, " success="
 
-    move-result-object v2
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v10, Ljava/lang/String;
+    move-result-object v9
+
+    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->isSuccess()Z
+
+    move-result v11
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v11, " body.len="
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
 
     invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getBody()[B
 
     move-result-object v11
 
-    sget-object v12, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
+    array-length v11, v11
 
-    invoke-direct {v10, v11, v12}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v10, v14}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+    move-result-object v9
+
+    const-string v11, " body.preview="
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    new-instance v11, Ljava/lang/String;
+
+    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getBody()[B
+
+    move-result-object v13
+
+    sget-object v14, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-direct {v11, v13, v14}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    const/16 v13, 0xc8
+
+    invoke-static {v11, v13}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v14
+
+    const/16 v18, 0x4
+
+    const/16 v19, 0x0
+
+    const/16 v15, 0xa
+
+    const/16 v16, 0x20
+
+    const/16 v17, 0x0
+
+    invoke-static/range {v14 .. v19}, Lkotlin/text/StringsKt;->replace$default(Ljava/lang/String;CCZILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 294
+    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->isSuccess()Z
+
+    move-result v9
+
+    if-nez v9, :cond_1a0
+
+    .line 295
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "RPC "
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getStatusCode()I
+
+    move-result v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    new-instance v9, Ljava/lang/String;
+
+    invoke-virtual {v0}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->getBody()[B
 
     move-result-object v10
 
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v11, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    invoke-static {v9, v13}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1441,68 +1439,68 @@
 
     move-result-object v2
 
-    const-string v10, "TextRCSSend"
+    const-string v9, "TextRCSSend"
 
-    invoke-static {v10, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
-    :cond_1a2
+    .line 297
+    :cond_1a0
     return-object v3
 
-    .line 279
+    .line 289
     .end local v0    # "resp":Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;
+    :catchall_1a1
+    move-exception v0
+
+    goto :goto_1a6
+
     :catchall_1a3
     move-exception v0
 
-    goto :goto_1a8
+    move-object/from16 v12, p1
 
-    :catchall_1a5
-    move-exception v0
-
-    move-object/from16 v13, p1
-
-    .line 280
+    .line 290
     .local v0, "t":Ljava/lang/Throwable;
-    :goto_1a8
-    new-instance v11, Ljava/lang/StringBuilder;
+    :goto_1a6
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v9
 
-    const-string v11, " HTTP_THREW "
+    const-string v10, " HTTP_THREW "
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v10
+    move-result-object v9
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-virtual {v11}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1512,7 +1510,7 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 281
+    .line 291
     throw v0
 .end method
 
