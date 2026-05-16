@@ -62,6 +62,22 @@ class SendManager private constructor(private val appContext: Context) {
     }
 
     /**
+     * v0.44: process-wide singleton sessionID. mautrix's `sessionHandler.sessionID`
+     * is minted once per long-poll connection by `ResetSessionID()` inside
+     * `SetActiveSession()` and reused on every subsequent outgoing RPC.
+     * Without registering this singleton with the server, the relay does
+     * not enter "encrypted routing" mode and only emits unencrypted
+     * intermediate frames (per mautrix `session_handler.go:116-117`).
+     *
+     * `setActiveSession()` mints a new value here and POSTs a GET_UPDATES
+     * RPC with `requestID == sessionID == this singleton` (mirroring
+     * mautrix `methods.go::SetActiveSession`). All subsequent regular RPCs
+     * pass this same singleton in `OutgoingRPCData.sessionID` while keeping
+     * a per-RPC `requestID` for response correlation.
+     */
+    @Volatile private var activeSessionID: String? = null
+
+    /**
      * Queue a real outgoing send. Returns immediately; runs off-main-thread.
      *
      * After the GMessages POST completes (success OR failure), [sentIntents]
@@ -103,6 +119,82 @@ class SendManager private constructor(private val appContext: Context) {
 
     private fun redact(phone: String): String =
         if (phone.length <= 4) phone else "***${phone.takeLast(4)}"
+
+    /**
+     * v0.44: mautrix's `SetActiveSession` handshake. Mints a new singleton
+     * sessionID and POSTs a `GET_UPDATES` RPC with `requestID == sessionID
+     * == singleton`, no encrypted body, no TTL. This is what registers our
+     * client session with Google's relay so subsequent typed responses
+     * arrive with `encryptedData` populated (instead of the "weird
+     * intermediate" `unencryptedData`+`UNSPECIFIED` frame format).
+     *
+     * Idempotent — safe to call on every long-poll reconnect. Each call
+     * resets the singleton (mirrors mautrix's `ResetSessionID()` inside
+     * `SetActiveSession()`). Subsequent sends use the new singleton.
+     *
+     * Runs on the [sendExecutor] so a long POST doesn't block the caller.
+     */
+    fun setActiveSession() {
+        sendExecutor.execute {
+            try {
+                val session = store.load() ?: run {
+                    ScreenTracer.note("SET_ACTIVE_SESSION skip — no paired session")
+                    return@execute
+                }
+                val newSessionID = UUID.randomUUID().toString()
+                activeSessionID = newSessionID
+                ScreenTracer.note("SET_ACTIVE_SESSION new singleton=${newSessionID.take(8)}")
+
+                val http = GMessagesHttpClient(session.cookies.toMutableMap())
+
+                // mautrix methods.go::SetActiveSession: SendMessageParams{
+                //   Action: GET_UPDATES, OmitTTL: true, RequestID: singleton,
+                //   Data: nil   // no encrypted body
+                // }
+                // Build the outer RPCMessage manually since sendRpc encrypts.
+                val data = OutgoingRPCData.newBuilder()
+                    .setRequestID(newSessionID)
+                    .setAction(ActionType.GET_UPDATES)
+                    .setSessionID(newSessionID)
+                    .build()
+                val outer = OutgoingRPCMessage.newBuilder()
+                    .setMobile(session.mobileDevice)
+                    .setData(
+                        OutgoingRPCMessage.Data.newBuilder()
+                            .setRequestID(newSessionID)
+                            .setBugleRoute(BugleRoute.DataEvent)
+                            .setMessageTypeData(
+                                OutgoingRPCMessage.Data.Type.newBuilder()
+                                    .setEmptyArr(EmptyArr.getDefaultInstance())
+                                    .setMessageType(MessageType.BUGLE_MESSAGE)
+                                    .build()
+                            )
+                            .setMessageData(data.toByteString())
+                            .build()
+                    )
+                    .setAuth(
+                        OutgoingRPCMessage.Auth.newBuilder()
+                            .setRequestID(newSessionID)
+                            .setTachyonAuthToken(ByteString.copyFrom(session.tachyonAuthToken))
+                            .setConfigVersion(SignInGaiaClient.CONFIG_VERSION)
+                            .build()
+                    )
+                    // NB: TTL deliberately omitted to mirror mautrix OmitTTL=true.
+                    .build()
+
+                ScreenTracer.note("SET_ACTIVE_SESSION POST→${GMessagesConstants.URL_SEND_MESSAGE} singleton=${newSessionID.take(8)}")
+                val resp = http.postProto(
+                    url = GMessagesConstants.URL_SEND_MESSAGE,
+                    body = outer,
+                    contentType = GMessagesHttpClient.ContentType.PROTO_PBLITE,
+                )
+                ScreenTracer.note("SET_ACTIVE_SESSION HTTP ${resp.statusCode} success=${resp.isSuccess} body.preview=${String(resp.body).take(200).replace('\n', ' ')}")
+            } catch (e: Throwable) {
+                ScreenTracer.note("SET_ACTIVE_SESSION THREW ${e.javaClass.simpleName}: ${e.message}")
+                Log.w(TAG, "setActiveSession failed: ${e.message}")
+            }
+        }
+    }
 
     private fun fireSentIntents(sentIntents: List<PendingIntent>, ok: Boolean) {
         val resultCode = if (ok) Activity.RESULT_OK else SmsManager.RESULT_ERROR_GENERIC_FAILURE
@@ -236,22 +328,29 @@ class SendManager private constructor(private val appContext: Context) {
         http: GMessagesHttpClient,
         session: com.textrcs.protocol.GMessagesSession,
         crypto: AESCTRHelper,
-        @Suppress("UNUSED_PARAMETER") sessionId: String,  // kept for API stability; not used (see v0.42 fix below)
+        @Suppress("UNUSED_PARAMETER") sessionId: String,  // kept for API stability; ignored
         action: ActionType,
         innerProtoBytes: ByteArray,
     ): String {
         val requestID = UUID.randomUUID().toString()
         val encrypted = crypto.encrypt(innerProtoBytes)
-        // v0.42 fix: OutgoingRPCData.sessionID must equal requestID so that
-        // the incoming response's RPCMessageData.sessionID echoes back the
-        // same value, which is the correlation key used by ReceiveService →
-        // RpcResponseRouter. mautrix sets both fields to the same UUID
-        // (session_handler.go::buildMessage). v0.41 used a separate
-        // per-conversation UUID for sessionID, breaking correlation.
+        // v0.44 fix: OutgoingRPCData.sessionID is the SINGLETON (mautrix's
+        // sessionHandler.sessionID), NOT the per-request requestID. v0.42's
+        // unified-UUID approach was wrong — the agent audit (2026-05-16)
+        // showed mautrix sets them to two DIFFERENT values:
+        //   - field 1 requestID  = per-call UUID (correlation key)
+        //   - field 6 sessionID  = process-wide singleton (session identity)
+        // Response correlation still works because the server echoes our
+        // outgoing `requestID` into `RPCMessageData.sessionID` (field 1 of
+        // RPCMessageData, NOT the same proto-name as our `sessionID` field 6).
+        // Fall back to requestID if setActiveSession hasn't run yet so the
+        // first send doesn't break — but the singleton path is the one the
+        // server expects.
+        val singleton = activeSessionID ?: requestID
         val data = OutgoingRPCData.newBuilder()
             .setRequestID(requestID)
             .setAction(action)
-            .setSessionID(requestID)
+            .setSessionID(singleton)
             .setEncryptedProtoData(ByteString.copyFrom(encrypted))
             .build()
         val outer = OutgoingRPCMessage.newBuilder()

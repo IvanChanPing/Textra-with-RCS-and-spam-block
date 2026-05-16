@@ -84,12 +84,20 @@ class ReceiveService : Service() {
                 dispatchRpc(msg)
             }
             override fun onConnected() {
+                ScreenTracer.note("LP onConnected — Google clients6 long-poll OPEN")
                 Log.i(TAG, "Long-poll connected")
+                // v0.44: register our session with Google's relay. Without
+                // this handshake the server emits unencrypted intermediate
+                // frames only — typed encrypted responses never arrive.
+                // Mirrors mautrix `client.go::postConnect → SetActiveSession`.
+                com.textrcs.send.SendManager.get(applicationContext).setActiveSession()
             }
             override fun onDisconnected(cleanClose: Boolean) {
+                ScreenTracer.note("LP onDisconnected clean=$cleanClose — Google clients6 long-poll CLOSED")
                 Log.i(TAG, "Long-poll disconnected (clean=$cleanClose)")
             }
             override fun onError(e: Throwable) {
+                ScreenTracer.note("LP onError ${e.javaClass.simpleName}: ${e.message} — Google may have rejected our auth")
                 Log.w(TAG, "Long-poll error: ${e.message}")
             }
         }

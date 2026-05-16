@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nReceiveService.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReceiveService.kt\ncom/textrcs/receive/ReceiveService\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,238:1\n1#2:239\n*E\n"
+    value = "SMAP\nReceiveService.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReceiveService.kt\ncom/textrcs/receive/ReceiveService\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,246:1\n1#2:247\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -164,10 +164,10 @@
 .method private final buildOngoingNotification()Landroid/app/Notification;
     .registers 6
 
-    .line 211
+    .line 219
     nop
 
-    .line 212
+    .line 220
     const-class v0, Landroid/app/NotificationManager;
 
     invoke-virtual {p0, v0}, Lcom/textrcs/receive/ReceiveService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -176,7 +176,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    .line 213
+    .line 221
     .local v0, "mgr":Landroid/app/NotificationManager;
     const-string v1, "textrcs_receive"
 
@@ -186,40 +186,40 @@
 
     if-nez v2, :cond_29
 
-    .line 214
+    .line 222
     new-instance v2, Landroid/app/NotificationChannel;
 
-    .line 215
+    .line 223
     nop
 
-    .line 216
+    .line 224
     const-string v3, "Google Messages connection"
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    .line 217
+    .line 225
     nop
 
-    .line 214
+    .line 222
     const/4 v4, 0x2
 
     invoke-direct {v2, v1, v3, v4}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    .line 219
+    .line 227
     .local v2, "ch":Landroid/app/NotificationChannel;
     const-string v3, "Required for receiving new messages."
 
     invoke-virtual {v2, v3}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
 
-    .line 220
+    .line 228
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
 
-    .line 221
+    .line 229
     invoke-virtual {v0, v2}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
 
-    .line 224
+    .line 232
     .end local v0    # "mgr":Landroid/app/NotificationManager;
     .end local v2    # "ch":Landroid/app/NotificationChannel;
     :cond_29
@@ -231,7 +231,7 @@
 
     invoke-direct {v0, v2, v1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 225
+    .line 233
     const-string v1, "Textra 2"
 
     check-cast v1, Ljava/lang/CharSequence;
@@ -240,7 +240,7 @@
 
     move-result-object v0
 
-    .line 226
+    .line 234
     const-string v1, "Connected to Google Messages"
 
     check-cast v1, Ljava/lang/CharSequence;
@@ -249,14 +249,14 @@
 
     move-result-object v0
 
-    .line 227
+    .line 235
     const v1, 0x108007c
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 228
+    .line 236
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
@@ -267,10 +267,10 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 224
+    .line 232
     nop
 
-    .line 229
+    .line 237
     .local v0, "builder":Landroid/app/Notification$Builder;
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
@@ -287,10 +287,10 @@
     .registers 14
     .param p1, "msg"    # Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
 
-    .line 149
+    .line 157
     const-string v0, "TextRCSReceive"
 
-    .line 150
+    .line 158
     :try_start_2
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getMessageData()Lcom/google/protobuf/ByteString;
 
@@ -300,7 +300,7 @@
 
     move-result-object v1
 
-    .line 160
+    .line 168
     .local v1, "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
 
@@ -331,7 +331,7 @@
     :cond_20
     const/4 v2, 0x0
 
-    .line 161
+    .line 169
     .local v2, "isIntermediate":Z
     :goto_21
     const-string v3, " action="
@@ -342,7 +342,7 @@
 
     if-eqz v2, :cond_79
 
-    .line 162
+    .line 170
     :try_start_29
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
@@ -352,7 +352,7 @@
 
     if-eq v6, v7, :cond_79
 
-    .line 163
+    .line 171
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v6
@@ -361,7 +361,7 @@
 
     if-eq v6, v7, :cond_79
 
-    .line 165
+    .line 173
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -422,14 +422,14 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 166
+    .line 174
     return-void
 
-    .line 169
+    .line 177
     :cond_79
     nop
 
-    .line 170
+    .line 178
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
 
     move-result-object v6
@@ -444,7 +444,7 @@
 
     if-nez v6, :cond_a3
 
-    .line 171
+    .line 179
     :try_start_86
     iget-object v6, p0, Lcom/textrcs/receive/ReceiveService;->crypto:Lcom/textrcs/protocol/crypto/AESCTRHelper;
 
@@ -452,7 +452,7 @@
 
     return-void
 
-    .line 172
+    .line 180
     .local v6, "ct":Lcom/textrcs/protocol/crypto/AESCTRHelper;
     :cond_8b
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
@@ -473,16 +473,16 @@
 
     move-result-object v8
 
-    .line 170
+    .line 178
     .end local v6    # "ct":Lcom/textrcs/protocol/crypto/AESCTRHelper;
     nop
 
-    .line 172
+    .line 180
     invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     goto :goto_b6
 
-    .line 174
+    .line 182
     :cond_a3
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
 
@@ -502,11 +502,11 @@
 
     invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 169
+    .line 177
     :goto_b6
     nop
 
-    .line 177
+    .line 185
     .local v8, "plaintext":Lcom/google/protobuf/ByteString;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -588,17 +588,17 @@
 
     invoke-static {v6}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 184
+    .line 192
     sget-object v6, Lcom/textrcs/protocol/RpcResponseRouter;->INSTANCE:Lcom/textrcs/protocol/RpcResponseRouter;
 
-    .line 185
+    .line 193
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getSessionID()Ljava/lang/String;
 
     move-result-object v9
 
     invoke-static {v9, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 186
+    .line 194
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v10
@@ -607,23 +607,23 @@
 
     invoke-static {v10, v11}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 187
+    .line 195
     invoke-virtual {v8}, Lcom/google/protobuf/ByteString;->toByteArray()[B
 
     move-result-object v11
 
     invoke-static {v11, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 184
+    .line 192
     invoke-virtual {v6, v9, v10, v11}, Lcom/textrcs/protocol/RpcResponseRouter;->deliver(Ljava/lang/String;Lcom/textrcs/gmproto/rpc/ActionType;[B)Z
 
     move-result v6
 
-    .line 189
+    .line 197
     .local v6, "claimed":Z
     if-eqz v6, :cond_158
 
-    .line 190
+    .line 198
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -666,10 +666,10 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 191
+    .line 199
     return-void
 
-    .line 195
+    .line 203
     :cond_158
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
@@ -679,12 +679,12 @@
 
     if-ne v3, v4, :cond_177
 
-    .line 196
+    .line 204
     invoke-static {v8}, Lcom/textrcs/gmproto/events/UpdateEvents;->parseFrom(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/events/UpdateEvents;
 
     move-result-object v3
 
-    .line 197
+    .line 205
     .local v3, "events":Lcom/textrcs/gmproto/events/UpdateEvents;
     sget-object v4, Lcom/textrcs/receive/IncomingMessageHandler;->INSTANCE:Lcom/textrcs/receive/IncomingMessageHandler;
 
@@ -703,7 +703,7 @@
     .end local v3    # "events":Lcom/textrcs/gmproto/events/UpdateEvents;
     goto/16 :goto_208
 
-    .line 199
+    .line 207
     :cond_177
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -729,7 +729,7 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 200
+    .line 208
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -778,19 +778,19 @@
 
     goto :goto_208
 
-    .line 175
+    .line 183
     .end local v6    # "claimed":Z
     .end local v8    # "plaintext":Lcom/google/protobuf/ByteString;
     :cond_1c0
     return-void
 
-    .line 202
+    .line 210
     .end local v1    # "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
     .end local v2    # "isIntermediate":Z
     :catchall_1c1
     move-exception v1
 
-    .line 203
+    .line 211
     .local v1, "e":Ljava/lang/Throwable;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -834,7 +834,7 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 204
+    .line 212
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -859,7 +859,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
+    .line 214
     .end local v1    # "e":Ljava/lang/Throwable;
     :goto_208
     return-void
@@ -878,7 +878,7 @@
 
     move-object v1, v0
 
-    .line 239
+    .line 247
     .local v1, "$this$refreshScheduler_u24lambda_u241_u24lambda_u240":Ljava/lang/Thread;
     const/4 v2, 0x0
 
@@ -897,7 +897,7 @@
     .registers 9
     .param p1, "session"    # Lcom/textrcs/protocol/GMessagesSession;
 
-    .line 114
+    .line 122
     invoke-virtual {p1}, Lcom/textrcs/protocol/GMessagesSession;->getTokenTtlSeconds()J
 
     move-result-wide v0
@@ -919,7 +919,7 @@
     :cond_11
     move-wide v3, v1
 
-    .line 115
+    .line 123
     .local v3, "ttl":J
     :goto_12
     sub-long v0, v3, v1
@@ -930,7 +930,7 @@
 
     move-result-wide v0
 
-    .line 116
+    .line 124
     .local v0, "refreshAtSeconds":J
     iget-object v2, p0, Lcom/textrcs/receive/ReceiveService;->refreshScheduler:Ljava/util/concurrent/ScheduledExecutorService;
 
@@ -942,7 +942,7 @@
 
     invoke-interface {v2, v5, v0, v1, v6}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    .line 117
+    .line 125
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -981,7 +981,7 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
+    .line 126
     return-void
 .end method
 
@@ -993,7 +993,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 116
+    .line 124
     invoke-direct {p0}, Lcom/textrcs/receive/ReceiveService;->tryRefreshAndReschedule()V
 
     return-void
@@ -1070,7 +1070,7 @@
 
     invoke-direct {v2, p0}, Lcom/textrcs/receive/ReceiveService$startReceiveLoop$handler$1;-><init>(Lcom/textrcs/receive/ReceiveService;)V
 
-    .line 97
+    .line 105
     .local v2, "handler":Lcom/textrcs/receive/ReceiveService$startReceiveLoop$handler$1;
     new-instance v3, Lcom/textrcs/protocol/longpoll/LongPollReceiver;
 
@@ -1088,11 +1088,11 @@
 
     invoke-direct {v3, v4, v5, v6}, Lcom/textrcs/protocol/longpoll/LongPollReceiver;-><init>(Lcom/textrcs/protocol/http/GMessagesHttpClient;[BLcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;)V
 
-    .line 98
+    .line 106
     .local v3, "recv":Lcom/textrcs/protocol/longpoll/LongPollReceiver;
     iput-object v3, p0, Lcom/textrcs/receive/ReceiveService;->receiver:Lcom/textrcs/protocol/longpoll/LongPollReceiver;
 
-    .line 99
+    .line 107
     new-instance v4, Ljava/lang/Thread;
 
     move-object v5, v3
@@ -1108,34 +1108,34 @@
     .local v5, "$this$startReceiveLoop_u24lambda_u242":Ljava/lang/Thread;
     const/4 v6, 0x0
 
-    .line 100
+    .line 108
     .local v6, "$i$a$-apply-ReceiveService$startReceiveLoop$1":I
     const/4 v7, 0x0
 
     invoke-virtual {v5, v7}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 101
+    .line 109
     invoke-virtual {v5}, Ljava/lang/Thread;->start()V
 
-    .line 102
+    .line 110
     nop
 
-    .line 99
+    .line 107
     .end local v5    # "$this$startReceiveLoop_u24lambda_u242":Ljava/lang/Thread;
     .end local v6    # "$i$a$-apply-ReceiveService$startReceiveLoop$1":I
     iput-object v4, p0, Lcom/textrcs/receive/ReceiveService;->receiverThread:Ljava/lang/Thread;
 
-    .line 103
+    .line 111
     invoke-direct {p0, v1}, Lcom/textrcs/receive/ReceiveService;->scheduleTokenRefresh(Lcom/textrcs/protocol/GMessagesSession;)V
 
-    .line 104
+    .line 112
     return-void
 .end method
 
 .method private final tryRefreshAndReschedule()V
     .registers 9
 
-    .line 121
+    .line 129
     new-instance v0, Lcom/textrcs/protocol/SessionStore;
 
     move-object v1, p0
@@ -1144,7 +1144,7 @@
 
     invoke-direct {v0, v1}, Lcom/textrcs/protocol/SessionStore;-><init>(Landroid/content/Context;)V
 
-    .line 122
+    .line 130
     .local v0, "store":Lcom/textrcs/protocol/SessionStore;
     invoke-virtual {v0}, Lcom/textrcs/protocol/SessionStore;->load()Lcom/textrcs/protocol/GMessagesSession;
 
@@ -1154,7 +1154,7 @@
 
     return-void
 
-    .line 123
+    .line 131
     .local v1, "current":Lcom/textrcs/protocol/GMessagesSession;
     :cond_f
     invoke-virtual {v1}, Lcom/textrcs/protocol/GMessagesSession;->getRefreshKeyPkcs8()[B
@@ -1177,19 +1177,19 @@
 
     if-eqz v2, :cond_23
 
-    .line 124
+    .line 132
     const-string v2, "session has no refreshKeyPkcs8 (older pairing) \u2014 skipping refresh"
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
+    .line 133
     return-void
 
-    .line 127
+    .line 135
     :cond_23
     nop
 
-    .line 128
+    .line 136
     :try_start_24
     iget-object v2, p0, Lcom/textrcs/receive/ReceiveService;->http:Lcom/textrcs/protocol/http/GMessagesHttpClient;
 
@@ -1207,7 +1207,7 @@
 
     invoke-direct {v2, v4}, Lcom/textrcs/protocol/http/GMessagesHttpClient;-><init>(Ljava/util/Map;)V
 
-    .line 129
+    .line 137
     .local v2, "httpClient":Lcom/textrcs/protocol/http/GMessagesHttpClient;
     :cond_35
     new-instance v4, Lcom/textrcs/protocol/TokenRefreshClient;
@@ -1218,11 +1218,11 @@
 
     move-result-object v4
 
-    .line 130
+    .line 138
     .local v4, "refreshed":Lcom/textrcs/protocol/GMessagesSession;
     invoke-virtual {v0, v4}, Lcom/textrcs/protocol/SessionStore;->save(Lcom/textrcs/protocol/GMessagesSession;)V
 
-    .line 131
+    .line 139
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1253,7 +1253,7 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
+    .line 140
     invoke-direct {p0, v4}, Lcom/textrcs/receive/ReceiveService;->scheduleTokenRefresh(Lcom/textrcs/protocol/GMessagesSession;)V
     :try_end_64
     .catchall {:try_start_24 .. :try_end_64} :catchall_65
@@ -1262,11 +1262,11 @@
     .end local v4    # "refreshed":Lcom/textrcs/protocol/GMessagesSession;
     goto :goto_a0
 
-    .line 133
+    .line 141
     :catchall_65
     move-exception v2
 
-    .line 134
+    .line 142
     .local v2, "e":Ljava/lang/Throwable;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1310,7 +1310,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
+    .line 144
     iget-object v3, p0, Lcom/textrcs/receive/ReceiveService;->refreshScheduler:Ljava/util/concurrent/ScheduledExecutorService;
 
     new-instance v4, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;
@@ -1323,7 +1323,7 @@
 
     invoke-interface {v3, v4, v5, v6, v7}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    .line 138
+    .line 146
     .end local v2    # "e":Ljava/lang/Throwable;
     :goto_a0
     return-void
@@ -1337,7 +1337,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 136
+    .line 144
     invoke-direct {p0}, Lcom/textrcs/receive/ReceiveService;->tryRefreshAndReschedule()V
 
     return-void

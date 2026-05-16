@@ -97,6 +97,7 @@ class LongPollReceiver(
             )
             .build()
 
+        com.textrcs.diag.ScreenTracer.note("LP openOneConnection POST→${GMessagesConstants.URL_RECEIVE_MESSAGES} tachyon.len=${tachyonAuthToken.size}")
         val stream = http.openLongPoll(
             url = GMessagesConstants.URL_RECEIVE_MESSAGES,
             body = request,
@@ -104,6 +105,7 @@ class LongPollReceiver(
         )
         currentStream = stream
 
+        com.textrcs.diag.ScreenTracer.note("LP HTTP ${stream.statusCode} headers.n=N/A")
         if (stream.statusCode !in 200..299) {
             stream.close()
             throw IllegalStateException("long-poll HTTP ${stream.statusCode}")
@@ -178,10 +180,23 @@ class LongPollReceiver(
 
     private fun dispatch(msg: LongPollingPayload) {
         when {
-            msg.hasData() -> handler.onIncomingRpc(msg.data)
-            msg.hasAck() -> handler.onAck(msg.ack)
-            msg.hasHeartbeat() -> handler.onHeartbeat()
-            msg.hasStartRead() -> handler.onStartRead()
+            msg.hasData() -> {
+                com.textrcs.diag.ScreenTracer.note("LP frame=data responseID=${msg.data.responseID.take(8)} bugleRoute=${msg.data.bugleRoute}")
+                handler.onIncomingRpc(msg.data)
+            }
+            msg.hasAck() -> {
+                com.textrcs.diag.ScreenTracer.note("LP frame=ack count=${msg.ack.count}")
+                handler.onAck(msg.ack)
+            }
+            msg.hasHeartbeat() -> {
+                com.textrcs.diag.ScreenTracer.note("LP frame=heartbeat")
+                handler.onHeartbeat()
+            }
+            msg.hasStartRead() -> {
+                com.textrcs.diag.ScreenTracer.note("LP frame=startRead")
+                handler.onStartRead()
+            }
+            else -> com.textrcs.diag.ScreenTracer.note("LP frame=UNKNOWN")
         }
     }
 }

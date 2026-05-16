@@ -1,5 +1,66 @@
 # TextRCS Changelog
 
+## v0.44.0 — 2026-05-16 — SetActiveSession handshake (real root cause of unencrypted responses)
+
+Sub-agent exhaustive audit (textrcs vs mautrix-gmessages vs Beeper APK)
+identified 3 protocol divergences. v0.42's "unify sessionID = requestID"
+fix was actually WRONG and is reverted in this build.
+
+### Bug 1: OutgoingRPCData.sessionID is the WRONG VALUE
+mautrix `session_handler.go:189-249` sets:
+- `OutgoingRPCData.requestID` (field 1) = per-call UUID (correlation key)
+- `OutgoingRPCData.sessionID` (field 6) = **process-wide singleton**
+
+v0.42 made them equal. v0.44 makes the singleton path the default and
+falls back to requestID only before `setActiveSession()` has run.
+
+Correlation still works because the server echoes our outgoing
+`requestID` into the response's `RPCMessageData.sessionID` (field 1,
+different proto-name but same wire position). Our `ReceiveService`
+correlation by `rpcData.sessionID` is therefore still correct.
+
+### Bug 2: Missing SetActiveSession handshake — the actual root cause
+mautrix `client.go::postConnect` calls `SetActiveSession()` after the
+long-poll opens (`methods.go:138-145`):
+- Mints a new singleton sessionID (`ResetSessionID()`)
+- POSTs a `GET_UPDATES` RPC with `requestID == sessionID == singleton`,
+  no encrypted body, no TTL
+- This is the registration that puts the server into "encrypted routing"
+  mode for our session
+
+Without it, the server only emits unencrypted intermediate frames (the
+"weird intermediate" frames mautrix filters out — see
+session_handler.go:114-120). Real typed encrypted responses never arrive.
+That's why v0.43 saw `RPCMessageData{unencryptedData populated,
+encryptedData empty, action=UNSPECIFIED}` for our GetOrCreate requestID.
+
+v0.44 adds `SendManager.setActiveSession()` and calls it from
+`ReceiveService.onConnected()` after every long-poll connection.
+
+### Trace additions
+- `SET_ACTIVE_SESSION new singleton=...` — at handshake start
+- `SET_ACTIVE_SESSION POST→... singleton=...` — at HTTP POST
+- `SET_ACTIVE_SESSION HTTP <code> success=<bool> body.preview=...`
+- `SET_ACTIVE_SESSION THREW ...` on error
+
+Plus the connection-status logging from this session:
+- `LP openOneConnection POST→...`
+- `LP HTTP <status>`
+- `LP onConnected/onDisconnected/onError`
+- `LP frame=data responseID=... bugleRoute=...`
+- `LP frame=ack count=...`
+- `LP frame=heartbeat`
+- `LP frame=startRead`
+
+### Bug 3: destRegistrationIDs not set on regular sends (DEFERRED)
+mautrix appends at least an empty list (and the paired-phone reg-ID when
+known) to every outgoing message. We only set it during pairing and drop
+it afterward. NOT FIXED in v0.44 — agent recommended C.1+C.2+C.3 first
+and adding C.4 only if the lighter fix isn't sufficient.
+
+### Output
+- `textra2_v0.44.0.apk` (74 MB)
+
 ## v0.43.0 — 2026-05-16 — animation actually applies (smali patch on pswitch_12)
 
 v0.42's animation tweaks didn't visibly change anything because
