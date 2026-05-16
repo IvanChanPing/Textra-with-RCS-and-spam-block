@@ -1,5 +1,53 @@
 # TextRCS Changelog
 
+## v0.46.0 — 2026-05-16 — shade overlay on parallax + key-hash diagnostics
+
+### Animation enhancement (per user request)
+
+Both `textrcs_overlay_partial_exit.xml` and `textrcs_overlay_partial_enter.xml`
+now combine `<translate>` AND `<alpha>` in an `<set>`:
+- Open partial_exit: translate `0 → -30%p` + alpha `1.0 → 0.85`
+  (the underneath layer slides AND dims as the foreground covers it)
+- Close partial_enter: translate `-30%p → 0` + alpha `0.85 → 1.0`
+  (shade lifts off as the underneath returns to full brightness)
+
+Both `350ms`, `fast_out_slow_in`. The foreground anim XMLs
+(textrcs_overlay_enter / textrcs_overlay_exit) stay PURE TRANSLATE with
+NO alpha, per the user's earlier "remove the alpha fade" instruction —
+only the underneath dims.
+
+This is a pure-XML approximation of iOS's UINavigationController parallax
+behaviour. A true "dark overlay fading in over top" would need a custom
+View drawn in ConvoActivity's onCreate (Kotlin code, not XML) — deferred.
+
+Rounded corners on the incoming activity also deferred per user.
+
+### Crypto diagnostics (per agent audit completion)
+
+Sub-agent audit verified H1–H5 and H7–H8 byte-for-byte against
+mautrix-gmessages source. SessionStore (H6) was the only path not
+verified. I read it: structurally fine (base64 round-trip, no
+transposition between aesKey and hmacKey). But the HMAC-mismatch symptom
+on the v0.45 long-poll could still be a runtime corruption I can't see
+from static inspection.
+
+Added SHA-256 short-hash logging at save AND load time so the next test
+prints both — if they match, keys round-trip; if not, SessionStore has a
+write-then-read bug:
+
+```
+SESSION save aesKey.len=32 aesKey.sha256=<8hex> hmacKey.len=32 hmacKey.sha256=<8hex>
+SESSION load aesKey.len=32 aesKey.sha256=<8hex> hmacKey.len=32 hmacKey.sha256=<8hex>
+```
+
+If save and load hashes match but decrypt still fails, the bug is
+somewhere else: server-side key rotation, asymmetric directional keys
+that the audit missed, or the wire format of incoming `EncryptedData`
+diverging from outgoing's encrypted layout.
+
+### Output
+- `textra2_v0.46.0.apk` (74 MB)
+
 ## v0.45.0 — 2026-05-16 — back animation parallax + auto-start ReceiveService
 
 User reported v0.44: "got the enter animation but not the back animation".

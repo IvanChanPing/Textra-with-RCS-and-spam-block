@@ -46,6 +46,17 @@ class SessionStore(context: Context) {
             put("savedAtMs", System.currentTimeMillis())
         }
         prefs.edit().putString(KEY_BLOB, json.toString()).apply()
+        // v0.46: log the key hashes at save time so we can compare against
+        // load-time hashes in the next boot's trace. If they differ,
+        // SessionStore is corrupting the bytes round-trip (H6 from agent
+        // crypto audit). If they match but decrypt still fails, the bug is
+        // elsewhere (server-side rotation, asymmetric keys, etc.).
+        try {
+            com.textrcs.diag.ScreenTracer.note(
+                "SESSION save aesKey.len=${session.aesKey.size} aesKey.sha256=${shortHash(session.aesKey)} " +
+                "hmacKey.len=${session.hmacKey.size} hmacKey.sha256=${shortHash(session.hmacKey)}"
+            )
+        } catch (_: Throwable) {}
     }
 
     fun load(): GMessagesSession? {
@@ -55,7 +66,7 @@ class SessionStore(context: Context) {
             val cookieJson = json.getJSONObject("cookies")
             val cookieMap = LinkedHashMap<String, String>()
             for (key in cookieJson.keys()) cookieMap[key] = cookieJson.getString(key)
-            GMessagesSession(
+            val s = GMessagesSession(
                 tachyonAuthToken = unb64(json.getString("tachyonAuthToken")),
                 tokenTtlSeconds = json.getLong("tokenTtlSeconds"),
                 browserUuid = json.getString("browserUuid"),
@@ -65,8 +76,27 @@ class SessionStore(context: Context) {
                 cookies = cookieMap,
                 refreshKeyPkcs8 = unb64(json.optString("refreshKeyPkcs8", "")),
             )
+            // v0.46: same hashes as save (see note above).
+            try {
+                com.textrcs.diag.ScreenTracer.note(
+                    "SESSION load aesKey.len=${s.aesKey.size} aesKey.sha256=${shortHash(s.aesKey)} " +
+                    "hmacKey.len=${s.hmacKey.size} hmacKey.sha256=${shortHash(s.hmacKey)}"
+                )
+            } catch (_: Throwable) {}
+            s
         } catch (_: Throwable) {
             null
+        }
+    }
+
+    private fun shortHash(bytes: ByteArray): String {
+        return try {
+            val md = java.security.MessageDigest.getInstance("SHA-256")
+            val h = md.digest(bytes)
+            // First 8 bytes as hex — enough to detect any corruption.
+            h.take(8).joinToString("") { "%02x".format(it) }
+        } catch (e: Throwable) {
+            "hash-fail:${e.javaClass.simpleName}"
         }
     }
 

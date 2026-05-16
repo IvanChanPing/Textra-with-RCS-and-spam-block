@@ -3,9 +3,12 @@
      while the new screen exits to the right.
      v0.42: 240ms → 350ms and fast_out_linear_in → fast_out_slow_in to kill
      the rushed-return asymmetry. Open + close now share the same curve and
-     duration. -->
-<translate xmlns:a="http://schemas.android.com/apk/res/android"
-    a:fromXDelta="-30%p"
-    a:toXDelta="0"
-    a:duration="350"
-    a:interpolator="@android:interpolator/fast_out_slow_in"/>
+     duration.
+     v0.46: alpha 0.85→1.0 mirrors the open's dim — shade lifts off as the
+     underlying layer returns to full brightness. -->
+<set xmlns:a="http://schemas.android.com/apk/res/android" a:shareInterpolator="true"
+    a:interpolator="@android:interpolator/fast_out_slow_in"
+    a:duration="350">
+    <translate a:fromXDelta="-30%p" a:toXDelta="0" />
+    <alpha a:fromAlpha="0.85" a:toAlpha="1.0" />
+</set>
