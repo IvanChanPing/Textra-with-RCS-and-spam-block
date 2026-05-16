@@ -6,9 +6,14 @@
      duration.
      v0.46: alpha 0.85→1.0 mirrors the open's dim — shade lifts off as the
      underlying layer returns to full brightness. -->
+<!-- v0.48: duration bumped 350→450ms while foreground stays 350ms.
+     Mirror of partial_exit: on back-out the foreground (ConvoActivity)
+     slides off-screen in 350ms, but the underneath (MainActivity)
+     drifts back to its resting position over 450ms — keeps moving for
+     100ms after foreground has left. -->
 <set xmlns:a="http://schemas.android.com/apk/res/android" a:shareInterpolator="true"
     a:interpolator="@android:interpolator/fast_out_slow_in"
-    a:duration="350">
+    a:duration="450">
     <translate a:fromXDelta="-30%p" a:toXDelta="0" />
     <alpha a:fromAlpha="0.70" a:toAlpha="1.0" />
 </set>
