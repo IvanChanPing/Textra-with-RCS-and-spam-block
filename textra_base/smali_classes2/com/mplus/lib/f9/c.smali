@@ -894,9 +894,17 @@
     :pswitch_16
     const/4 v5, 0x3
 
-    const v1, 0x7f01002b
+    # textrcs v0.45: was stay_still (0x7f01002b) + slide_out_to_right_and_fade
+    # (0x7f01002a) — 100ms 40%-translate with alpha 1→0.15. This is the
+    # CLOSE counterpart of pswitch_12 (the conv-view → conv-list back
+    # transition). Replaced with textrcs_overlay_partial_enter
+    # (0x7f010006, -30%p→0 underlying activity returning) and
+    # textrcs_overlay_exit (0x7f010001, 0→100%p leaving activity sliding
+    # right off-screen), both 350ms fast_out_slow_in, NO alpha. This
+    # mirrors the open transition's full parallax.
+    const v1, 0x7f010006
 
-    const v2, 0x7f01002a
+    const v2, 0x7f010001
 
     invoke-virtual {v0, v1, v2}, Lcom/mplus/lib/j4/a;->b(II)V
 

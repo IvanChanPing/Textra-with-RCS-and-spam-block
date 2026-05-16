@@ -1,5 +1,57 @@
 # TextRCS Changelog
 
+## v0.45.0 — 2026-05-16 — back animation parallax + auto-start ReceiveService
+
+User reported v0.44: "got the enter animation but not the back animation".
+Trace also showed v0.44's `SET_ACTIVE_SESSION` events never appeared and
+no `TextRCS-Receive` thread samples — ReceiveService isn't running at
+all, because it was only ever started from `PairingActivity.onCreate`.
+If the user opens Textra directly to MainActivity (the conversation
+list), the long-poll never opens and the SetActiveSession handshake
+never runs.
+
+### Fix 1: Back-animation parallax — pswitch_16 in f9/c.smali
+
+v0.43 patched `pswitch_12` (the OPEN path). The CLOSE path goes through
+`pswitch_16` in the same file (different switch table, fired by the
+ConvoActivity close flow). pswitch_16 was passing:
+- enter = `0x7f01002b` (stay_still — no movement on returning layer)
+- exit = `0x7f01002a` (slide_out_to_right_and_fade — 100ms, 40% slide
+  with alpha 1→0.15)
+
+Patched to:
+- enter = `0x7f010006` (textrcs_overlay_partial_enter — -30%p → 0,
+  350ms, fast_out_slow_in, NO alpha)
+- exit = `0x7f010001` (textrcs_overlay_exit — 0 → 100%p, 350ms,
+  fast_out_slow_in, NO alpha)
+
+Result on conv-view → conv-list (CLOSE direction):
+- MainActivity returns from -30% offset to 0 (the parallax)
+- ConvoActivity slides fully out to the right (no alpha fade)
+- 350ms duration (was 100ms)
+
+### Fix 2: Auto-start ReceiveService at process boot
+
+`CrashCatcherProvider.onCreate` now checks `SessionStore.load()` and
+calls `startForegroundService(ReceiveService::class)` if there's a
+paired session. This is the earliest user-code hook (runs before
+`Application.onCreate`), so the long-poll opens as soon as the process
+starts — no longer dependent on the user happening to open
+PairingActivity in this app session.
+
+This is the reason v0.44's `SET_ACTIVE_SESSION` never fired: it's
+triggered by `ReceiveService.onConnected` → and ReceiveService was
+never started. v0.45 should now show the SET_ACTIVE_SESSION POST in
+the trace, followed by encrypted typed responses.
+
+### Trace additions
+- `BOOT paired session found — starting ReceiveService` or
+- `BOOT no paired session — ReceiveService stays dormant` or
+- `BOOT ReceiveService start FAILED: <class>: <msg>`
+
+### Output
+- `textra2_v0.45.0.apk` (74 MB)
+
 ## v0.44.0 — 2026-05-16 — SetActiveSession handshake (real root cause of unencrypted responses)
 
 Sub-agent exhaustive audit (textrcs vs mautrix-gmessages vs Beeper APK)

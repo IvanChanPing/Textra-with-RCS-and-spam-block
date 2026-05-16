@@ -41,6 +41,28 @@ class CrashCatcherProvider : ContentProvider() {
             if (app != null) {
                 ScreenTracer.install(app)
                 ScreenTracer.note("BOOT  CrashCatcherProvider.onCreate ran. App process started.")
+
+                // v0.45: auto-start ReceiveService at process boot if there's
+                // a paired session. Previously only PairingActivity started
+                // it, so opening Textra directly to MainActivity left the
+                // long-poll closed — no SET_ACTIVE_SESSION, no encrypted
+                // response routing, sends always timed out.
+                try {
+                    val sessionStore = com.textrcs.protocol.SessionStore(app)
+                    if (sessionStore.load() != null) {
+                        ScreenTracer.note("BOOT  paired session found — starting ReceiveService")
+                        val svcIntent = android.content.Intent(app, com.textrcs.receive.ReceiveService::class.java)
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                            app.startForegroundService(svcIntent)
+                        } else {
+                            app.startService(svcIntent)
+                        }
+                    } else {
+                        ScreenTracer.note("BOOT  no paired session — ReceiveService stays dormant")
+                    }
+                } catch (e: Throwable) {
+                    ScreenTracer.note("BOOT  ReceiveService start FAILED: ${e.javaClass.simpleName}: ${e.message}")
+                }
             } else {
                 // Application not ready yet — fall back to a small standalone
                 // ping. Throttle will hold its position in the upload queue.
