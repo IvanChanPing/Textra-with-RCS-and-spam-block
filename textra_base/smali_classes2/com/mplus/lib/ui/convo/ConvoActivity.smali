@@ -835,6 +835,10 @@
 
     invoke-super {p0, p1}, Lcom/mplus/lib/s5/q;->onCreate(Landroid/os/Bundle;)V
 
+    # textrcs v0.49: corner-radius fade 24dp→0 over 350ms, runs in parallel
+    # with the slide-in window animation (textrcs_overlay_enter).
+    invoke-static {p0}, Lcom/textrcs/anim/ConvoCornerAnim;->attach(Landroid/app/Activity;)V
+
     invoke-virtual {p0, p1}, Lcom/mplus/lib/s5/q;->V(Landroid/os/Bundle;)V
 
     new-instance p1, Lcom/mplus/lib/v6/h;
