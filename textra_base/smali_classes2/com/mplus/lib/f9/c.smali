@@ -714,9 +714,16 @@
     goto :goto_3
 
     :pswitch_12
-    const v2, 0x7f010029
+    # textrcs v0.43: was slide_in_from_right_and_fade (0x7f010029) +
+    # stay_still (0x7f01002b) — 140ms 40%-translate WITH alpha 0.15→1.
+    # Replaced with textrcs_overlay_enter (0x7f010000) full 100%p→0 slide
+    # + textrcs_overlay_partial_exit (0x7f010007) -30%p parallax, both
+    # 350ms fast_out_slow_in NO alpha. This is what overrides
+    # ConvoActivity's windowAnimationStyle for the OPEN direction (which
+    # would otherwise pick up TextrcsParallaxAnimation from the theme).
+    const v2, 0x7f010000
 
-    const v3, 0x7f01002b
+    const v3, 0x7f010007
 
     const/4 v5, 0x6
 

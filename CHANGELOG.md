@@ -1,5 +1,45 @@
 # TextRCS Changelog
 
+## v0.43.0 — 2026-05-16 — animation actually applies (smali patch on pswitch_12)
+
+v0.42's animation tweaks didn't visibly change anything because
+`AppTheme.ConvoActivity.windowAnimationStyle = TextrcsParallaxAnimation`
+was being **overridden** by an explicit `overridePendingTransition` call
+in `com/mplus/lib/f9/c.smali::pswitch_12` after `startActivity`. That path
+was passing the old 140ms `slide_in_from_right_and_fade.xml` (40% translate
+WITH alpha 0.15→1) + `stay_still.xml` (no movement on the underneath
+layer).
+
+Patched pswitch_12 to pass:
+- enter = `0x7f010000` = `textrcs_overlay_enter` — full 100%p→0 slide, 350ms, fast_out_slow_in, NO alpha
+- exit  = `0x7f010007` = `textrcs_overlay_partial_exit` — 0→-30%p parallax, 350ms, fast_out_slow_in, NO alpha
+
+Result on conv-list → conv-view (OPEN direction):
+- ConvoActivity slides in fully from the right
+- MainActivity slides 30% to the left underneath (parallax)
+- No alpha fade
+- 350ms duration vs the prior 140ms
+
+CLOSE direction was already correct — `ConvoActivity` doesn't call
+`overridePendingTransition` on `finish()`, so the system uses its
+`windowAnimationStyle = TextrcsParallaxAnimation` which points at my
+`textrcs_overlay_partial_enter` + `textrcs_overlay_exit` XMLs.
+
+Side effect: pswitch_12 is reached when `j4/a.i == 1`, which is what the
+conv-list-row click sets but possibly other "horizontal slide" navigation
+sites also set. Those will also become parallax now. Acceptable — none
+were "still + fade" by design; the prior anim was a generic slide.
+
+### Send pipeline — NO CHANGES from v0.42
+Still suspect: server response arrives with `unencryptedData!=null &&
+encryptedData==null && action=UNSPECIFIED` for our requestID, and v0.42's
+filter (correctly mirroring mautrix) skips it. Need a separate
+investigation into why our session's responses aren't encrypted. Out of
+scope for this build.
+
+### Output
+- `textra2_v0.43.0.apk` (74 MB)
+
 ## v0.42.0 — 2026-05-16 — send actually works + smoother conv parallax
 
 ### Send fixes — exhaustive mautrix-gmessages source review (see memory
