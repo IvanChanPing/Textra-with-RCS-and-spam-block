@@ -1,5 +1,39 @@
 # TextRCS Changelog
 
+## v0.47.0 — 2026-05-16 — darker shade + decrypt-failure diagnostics + encryptedData2 fallback
+
+### Animation
+- Underlying-layer alpha now `1.0 → 0.70` (was 0.85) — more pronounced
+  dim during the slide, matching iOS push-style. Foreground stays
+  pure-translate, no alpha.
+
+### Crypto diagnostics
+v0.46 logs proved keys round-trip cleanly through SessionStore
+(`aesKey.sha256=59c36daff9e8174c`, `hmacKey.sha256=430ba7b7da19fb4c` —
+identical across multiple loads). So H6 is REFUTED — the keys we
+decrypt with are the same keys we stored at pairing time. But HMAC
+mismatches persist, so the bug is elsewhere.
+
+Added on decrypt failure:
+- Dumps `encrypted.len`, `first16` hex, `last16` hex — so we can compare
+  wire layout against mautrix's reference (`ciphertext || iv(16) || hmac(32)`)
+- Falls back to `RPCMessageData.encryptedData2` (proto field 11) if
+  `encryptedData` (field 8) fails — mautrix proto has both fields and the
+  audit didn't determine which one is actually used for incoming. If
+  encryptedData2 decrypts successfully, that's the bug + fix.
+- Returns early on decrypt failure instead of throwing — prevents the
+  receive loop from being interrupted by individual bad frames (matches
+  mautrix's "log and continue" approach).
+
+A new sub-agent is auditing:
+1. encryptedData vs encryptedData2 field selection in mautrix's
+   `event_handler.go::decryptInternalMessage`
+2. Whether mautrix has version-aware wire layouts (v0 vs v1 differs?)
+3. How mautrix handles stale-key events queued from a prior pair
+
+### Output
+- `textra2_v0.47.0.apk` (74 MB)
+
 ## v0.46.0 — 2026-05-16 — shade overlay on parallax + key-hash diagnostics
 
 ### Animation enhancement (per user request)

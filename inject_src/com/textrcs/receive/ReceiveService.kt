@@ -177,7 +177,37 @@ class ReceiveService : Service() {
             val plaintext: ByteString = when {
                 !rpcData.encryptedData.isEmpty -> {
                     val ct = crypto ?: return
-                    ByteString.copyFrom(ct.decrypt(rpcData.encryptedData.toByteArray()))
+                    val enc = rpcData.encryptedData.toByteArray()
+                    try {
+                        ByteString.copyFrom(ct.decrypt(enc))
+                    } catch (e: IllegalArgumentException) {
+                        // v0.47: dump first/last bytes so we can verify the
+                        // wire layout (ciphertext||iv||hmac) matches what
+                        // the server is sending. If we see a different
+                        // layout (e.g. iv at front), the bug is layout, not
+                        // keys. SessionStore round-trip already verified
+                        // (keys are stable across save/load).
+                        val firstHex = enc.take(16).joinToString("") { "%02x".format(it) }
+                        val lastHex = enc.takeLast(16).joinToString("") { "%02x".format(it) }
+                        ScreenTracer.note("RCV decrypt FAIL action=${rpcData.action} sessionID=${rpcData.sessionID.take(8)} encrypted.len=${enc.size} first16=$firstHex last16=$lastHex err=${e.message}")
+                        // v0.47: also try encryptedData2 if encryptedData fails — mautrix's
+                        // RPCMessageData has both fields (8 + 11). If responses use the
+                        // alternate slot we'd see successful decryption here.
+                        if (!rpcData.encryptedData2.isEmpty) {
+                            val enc2 = rpcData.encryptedData2.toByteArray()
+                            try {
+                                val pt2 = ct.decrypt(enc2)
+                                ScreenTracer.note("RCV decrypt OK on encryptedData2 len=${enc2.size} plaintext.len=${pt2.size}")
+                                ByteString.copyFrom(pt2)
+                            } catch (e2: Throwable) {
+                                ScreenTracer.note("RCV decrypt FAIL also on encryptedData2 len=${enc2.size} err=${e2.message}")
+                                return
+                            }
+                        } else {
+                            // Not retriable — skip this frame so the receive loop survives.
+                            return
+                        }
+                    }
                 }
                 !rpcData.unencryptedData.isEmpty -> rpcData.unencryptedData
                 else -> return

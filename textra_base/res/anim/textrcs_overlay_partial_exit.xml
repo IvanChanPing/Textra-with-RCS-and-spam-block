@@ -12,5 +12,5 @@
     a:interpolator="@android:interpolator/fast_out_slow_in"
     a:duration="350">
     <translate a:fromXDelta="0" a:toXDelta="-30%p" />
-    <alpha a:fromAlpha="1.0" a:toAlpha="0.85" />
+    <alpha a:fromAlpha="1.0" a:toAlpha="0.70" />
 </set>
