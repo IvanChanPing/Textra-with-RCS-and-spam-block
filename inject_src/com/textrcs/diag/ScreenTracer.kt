@@ -75,19 +75,19 @@ object ScreenTracer {
      * full method-level instrumentation — Java's Thread.getAllStackTraces()
      * runs at the JVM level so it sees every thread in our process.
      *
-     * Auto-stops after 5 minutes so the buffer doesn't bloat indefinitely.
+     * v0.40: Never auto-stops — user wants persistent observability across
+     * the whole send-path debugging session. The buffer self-truncates at
+     * MAX_BUF (see log()) so memory stays bounded.
      */
-    private val samplerStartMs = System.currentTimeMillis()
     private fun startThreadSampler() {
         val t = Thread({
             try {
                 // 250ms sample interval — finer-grained than 1s so we catch
                 // brief synchronous calls into c5/d.Q, role checks, etc.
-                while (System.currentTimeMillis() - samplerStartMs < 5 * 60 * 1000) {
+                while (true) {
                     Thread.sleep(250)
                     sampleThreads()
                 }
-                log("SAMPLER auto-stopped after 5 min")
             } catch (e: InterruptedException) {
                 log("SAMPLER interrupted")
             } catch (e: Throwable) {
@@ -142,8 +142,20 @@ object ScreenTracer {
     /** Install lifecycle hooks. Safe to call multiple times — no-ops after first. */
     @Volatile private var installed = false
     private val mainHandler = Handler(Looper.getMainLooper())
-    private val pendingUploader = Runnable {
-        upload("delayed-resume")
+
+    /**
+     * v0.40: 1-second cadence uploader. Re-posts itself every 1000ms so the
+     * server gets a fresh snapshot every second for as long as the app
+     * process is alive. Server rate-limited to 1s (see server.js:271);
+     * LogUploader throttles at 1100ms to stay just above that.
+     */
+    private val cadenceUploader = object : Runnable {
+        override fun run() {
+            try {
+                upload("cadence-1s")
+            } catch (_: Throwable) {}
+            mainHandler.postDelayed(this, 1000L)
+        }
     }
 
     @Synchronized
@@ -152,6 +164,8 @@ object ScreenTracer {
         installed = true
         log("ST install hookedApp=${app.packageName}")
         startThreadSampler()
+        // v0.40: kick off the 1-second cadence upload loop. Runs forever.
+        mainHandler.postDelayed(cadenceUploader, 1000L)
         app.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
             override fun onActivityCreated(a: Activity, s: Bundle?) {
                 log("CREATE ${a.javaClass.name} savedInstance=${s != null}")
@@ -162,18 +176,9 @@ object ScreenTracer {
             override fun onActivityResumed(a: Activity) {
                 log("RESUME ${a.javaClass.name}")
                 captureScreenState(a)
-                // Server rate-limits bursts (HTTP 429 when 2 uploads within
-                // ~200ms). Schedule a delayed upload 3s after resume — if the
-                // user stays on the screen, this captures the snapshot. If
-                // they navigate away earlier, onPause fires its own upload
-                // and we cancel this one.
-                mainHandler.removeCallbacks(pendingUploader)
-                mainHandler.postDelayed(pendingUploader, 3000)
             }
             override fun onActivityPaused(a: Activity) {
                 log("PAUSE  ${a.javaClass.name}")
-                mainHandler.removeCallbacks(pendingUploader)
-                upload("transition-${a.javaClass.simpleName}")
             }
             override fun onActivityStopped(a: Activity) {
                 log("STOP   ${a.javaClass.name}")

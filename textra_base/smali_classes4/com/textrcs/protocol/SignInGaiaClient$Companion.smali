@@ -42,7 +42,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 163
+    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,7 +60,7 @@
     .registers 2
     .param p0, "$this"    # Lcom/textrcs/protocol/SignInGaiaClient$Companion;
 
-    .line 163
+    .line 197
     invoke-direct {p0}, Lcom/textrcs/protocol/SignInGaiaClient$Companion;->randomSessionId()[B
 
     move-result-object v0
@@ -71,7 +71,7 @@
 .method private final randomSessionId()[B
     .registers 5
 
-    .line 177
+    .line 211
     const/16 v0, 0x10
 
     new-array v0, v0, [B
@@ -81,7 +81,7 @@
     .local v1, "it":[B
     const/4 v2, 0x0
 
-    .line 178
+    .line 212
     .local v2, "$i$a$-also-SignInGaiaClient$Companion$randomSessionId$1":I
     new-instance v3, Ljava/security/SecureRandom;
 
@@ -89,15 +89,15 @@
 
     invoke-virtual {v3, v1}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 179
+    .line 213
     nop
 
-    .line 177
+    .line 211
     .end local v1    # "it":[B
     .end local v2    # "$i$a$-also-SignInGaiaClient$Companion$randomSessionId$1":I
     nop
 
-    .line 179
+    .line 213
     return-object v0
 .end method
 
@@ -106,7 +106,7 @@
 .method public final getCONFIG_VERSION()Lcom/textrcs/gmproto/authentication/ConfigVersion;
     .registers 2
 
-    .line 169
+    .line 203
     # getter for: Lcom/textrcs/protocol/SignInGaiaClient;->CONFIG_VERSION:Lcom/textrcs/gmproto/authentication/ConfigVersion;
     invoke-static {}, Lcom/textrcs/protocol/SignInGaiaClient;->access$getCONFIG_VERSION$cp()Lcom/textrcs/gmproto/authentication/ConfigVersion;
 

@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,269:1\n1#2:270\n*E\n"
+    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,302:1\n1#2:303\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -56,7 +56,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 229
+    .line 260
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,7 +82,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 236
+    .line 267
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getInstance$cp()Lcom/textrcs/send/SendManager;
 
@@ -94,7 +94,7 @@
 
     const/4 v0, 0x0
 
-    .line 237
+    .line 268
     .local v0, "$i$a$-synchronized-SendManager$Companion$get$1":I
     :try_start_d
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
@@ -120,11 +120,11 @@
 
     move-object v2, v1
 
-    .line 270
+    .line 303
     .local v2, "it":Lcom/textrcs/send/SendManager;
     const/4 v3, 0x0
 
-    .line 237
+    .line 268
     .local v3, "$i$a$-also-SendManager$Companion$get$1$1":I
     sget-object v4, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
 
@@ -132,7 +132,7 @@
     :try_end_29
     .catchall {:try_start_d .. :try_end_29} :catchall_2c
 
-    .line 236
+    .line 267
     .end local v0    # "$i$a$-synchronized-SendManager$Companion$get$1":I
     .end local v2    # "it":Lcom/textrcs/send/SendManager;
     .end local v3    # "$i$a$-also-SendManager$Companion$get$1$1":I
@@ -189,7 +189,70 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 263
+    .line 294
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "SEND sendSmsBridge ENTRY dest.tail="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-static {p2, v1}, Lkotlin/text/StringsKt;->takeLast(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " parts.n="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " sentIntents.n="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    if-eqz p4, :cond_3e
+
+    invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    goto :goto_3f
+
+    :cond_3e
+    const/4 v1, 0x0
+
+    :goto_3f
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 295
     move-object v1, p3
 
     check-cast v1, Ljava/lang/Iterable;
@@ -222,9 +285,9 @@
 
     move-result-object v0
 
-    .line 264
+    .line 296
     .local v0, "body":Ljava/lang/String;
-    if-eqz p4, :cond_32
+    if-eqz p4, :cond_6d
 
     move-object v1, p4
 
@@ -234,22 +297,67 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_36
+    if-nez v1, :cond_71
 
-    :cond_32
+    :cond_6d
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
-    .line 265
+    .line 297
     .local v1, "intents":Ljava/util/List;
-    :cond_36
+    :cond_71
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "SEND sendSmsBridge body.len="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " intents.n="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " \u2192 SendManager.get().sendText"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 298
     invoke-virtual {p0, p1}, Lcom/textrcs/send/SendManager$Companion;->get(Landroid/content/Context;)Lcom/textrcs/send/SendManager;
 
     move-result-object v2
 
     invoke-virtual {v2, p2, v0, v1}, Lcom/textrcs/send/SendManager;->sendText(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 266
+    .line 299
     return-void
 .end method

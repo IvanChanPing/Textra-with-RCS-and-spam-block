@@ -68,7 +68,7 @@
 
 .field public static final ACTION_CREATE_GAIA_PAIRING_CLIENT_INIT:Ljava/lang/String; = "CREATE_GAIA_PAIRING_CLIENT_INIT"
 
-.field public static final API_KEY:Ljava/lang/String; = "AIzaSyBVISctL4wnC5nctQ1nGYDRD6zybQjKCL8"
+.field public static final API_KEY:Ljava/lang/String; = "AIzaSyCA4RsOZUFrm9whhtGosPlJLmVPnfSHKz8"
 
 .field public static final CONNECT_TIMEOUT_MS:I = 0x3a98
 
@@ -84,7 +84,7 @@
 
 .field public static final DITTO_SALT_2:Ljava/lang/String; = "Ditto salt 2"
 
-.field public static final GAIA_LOGIN_URL:Ljava/lang/String; = "https://accounts.google.com/AccountChooser?continue=https://messages.google.com/web/config"
+.field public static final GAIA_LOGIN_URL:Ljava/lang/String; = "https://accounts.google.com/AccountChooser?continue=https://messages.google.com/web/authentication"
 
 .field public static final INSTANCE:Lcom/textrcs/protocol/GMessagesConstants;
 

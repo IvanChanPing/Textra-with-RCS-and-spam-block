@@ -6,6 +6,7 @@ import android.content.Context
 import android.telephony.SmsManager
 import android.util.Log
 import com.google.protobuf.ByteString
+import com.textrcs.diag.ScreenTracer
 import com.textrcs.gmproto.client.GetOrCreateConversationRequest
 import com.textrcs.gmproto.client.GetOrCreateConversationResponse
 import com.textrcs.gmproto.client.SendMessageRequest
@@ -78,28 +79,42 @@ class SendManager private constructor(private val appContext: Context) {
         body: String,
         sentIntents: List<PendingIntent>? = null,
     ) {
+        ScreenTracer.note("SEND sendText ENTRY phone=${redact(recipientPhone)} body.len=${body.length} sentIntents=${sentIntents?.size ?: 0}")
         sendExecutor.execute {
+            ScreenTracer.note("SEND sendText executor BEGIN phone=${redact(recipientPhone)}")
             val ok = try {
                 sendTextBlocking(recipientPhone, body)
+                ScreenTracer.note("SEND sendText BLOCKING_OK phone=${redact(recipientPhone)}")
                 true
             } catch (e: Throwable) {
-                Log.e(TAG, "send failed: phone=$recipientPhone body.len=${body.length}", e)
+                ScreenTracer.note("SEND sendText THREW ${e.javaClass.simpleName}: ${e.message}")
+                Log.e(TAG, "send failed: phone=${redact(recipientPhone)} body.len=${body.length}", e)
                 false
             }
             if (sentIntents != null) {
+                ScreenTracer.note("SEND fireSentIntents count=${sentIntents.size} ok=$ok")
                 fireSentIntents(sentIntents, ok)
+            } else {
+                ScreenTracer.note("SEND no sentIntents to fire")
             }
         }
     }
 
+    private fun redact(phone: String): String =
+        if (phone.length <= 4) phone else "***${phone.takeLast(4)}"
+
     private fun fireSentIntents(sentIntents: List<PendingIntent>, ok: Boolean) {
         val resultCode = if (ok) Activity.RESULT_OK else SmsManager.RESULT_ERROR_GENERIC_FAILURE
-        for (pi in sentIntents) {
+        ScreenTracer.note("SEND fireSentIntents resultCode=$resultCode count=${sentIntents.size}")
+        for ((i, pi) in sentIntents.withIndex()) {
             try {
                 pi.send(appContext, resultCode, null)
+                ScreenTracer.note("SEND PI[$i].send OK code=$resultCode")
             } catch (e: PendingIntent.CanceledException) {
+                ScreenTracer.note("SEND PI[$i].send CANCELED ${e.message}")
                 Log.w(TAG, "PendingIntent already canceled: ${e.message}")
             } catch (e: Throwable) {
+                ScreenTracer.note("SEND PI[$i].send FAIL ${e.javaClass.simpleName}: ${e.message}")
                 Log.w(TAG, "PendingIntent.send failed: ${e.javaClass.simpleName}: ${e.message}")
             }
         }
@@ -110,17 +125,22 @@ class SendManager private constructor(private val appContext: Context) {
      * non-success for the sentIntents callback).
      */
     private fun sendTextBlocking(recipientPhone: String, body: String) {
+        ScreenTracer.note("SEND sendTextBlocking step=session.load")
         val session = store.load() ?: run {
+            ScreenTracer.note("SEND sendTextBlocking FAIL session=null — not paired")
             Log.w(TAG, "no GMessages session — message dropped. User must complete PairingActivity first.")
             throw IllegalStateException("not paired")
         }
+        ScreenTracer.note("SEND sendTextBlocking session.loaded mobile.present=${session.mobileDevice != null} cookies.n=${session.cookies.size} tachyon.len=${session.tachyonAuthToken.size}")
 
         val http = GMessagesHttpClient(session.cookies.toMutableMap())
         val crypto = AESCTRHelper(session.aesKey, session.hmacKey)
         val sessionId = UUID.randomUUID().toString()
+        ScreenTracer.note("SEND sendTextBlocking sessionId=${sessionId.take(8)} step=getOrCreateConv")
 
         // Step 1: ensure conversation exists.
         val conversationID = getOrCreateConversation(http, session, crypto, sessionId, recipientPhone)
+        ScreenTracer.note("SEND sendTextBlocking convId=$conversationID step=buildSendReq")
 
         // Step 2: send the message.
         val tmpId = "tmp_" + UUID.randomUUID().toString()
@@ -141,8 +161,10 @@ class SendManager private constructor(private val appContext: Context) {
                     .build()
             )
             .build()
+        ScreenTracer.note("SEND sendTextBlocking step=sendRpc tmpId=${tmpId.take(12)}")
         sendRpc(http, session, crypto, sessionId, ActionType.SEND_MESSAGE, sendReq.toByteArray())
-        Log.i(TAG, "sent tmpId=$tmpId to $recipientPhone (len=${body.length})")
+        ScreenTracer.note("SEND sendTextBlocking step=sendRpc.RETURNED tmpId=${tmpId.take(12)}")
+        Log.i(TAG, "sent tmpId=$tmpId to ${redact(recipientPhone)} (len=${body.length})")
     }
 
     private fun getOrCreateConversation(
@@ -168,7 +190,9 @@ class SendManager private constructor(private val appContext: Context) {
         // as a fallback conversation hint. mautrix's first-message-path uses
         // GetOrCreate, so for now we POST GetOrCreate and rely on the server
         // to wire conversationID from the phone alone for new conversations.
+        ScreenTracer.note("SEND getOrCreateConv pre-rpc phone=${redact(recipientPhone)}")
         sendRpc(http, session, crypto, sessionId, ActionType.GET_OR_CREATE_CONVERSATION, req.toByteArray())
+        ScreenTracer.note("SEND getOrCreateConv post-rpc returning phone-as-convId")
         // Best-effort: use the phone as a deterministic conversation key for
         // the first send; the server will reconcile on its end. SendMessage
         // accepts phone-as-conversation for fresh conversations.
@@ -216,11 +240,18 @@ class SendManager private constructor(private val appContext: Context) {
             .setTTL(300L * 1_000_000L)
             .build()
 
-        val resp = http.postProto(
-            url = GMessagesConstants.URL_SEND_MESSAGE,
-            body = outer,
-            contentType = GMessagesHttpClient.ContentType.PROTO_PBLITE,
-        )
+        ScreenTracer.note("SEND sendRpc action=$action requestID=${requestID.take(8)} encrypted.len=${encrypted.size} POST→${GMessagesConstants.URL_SEND_MESSAGE}")
+        val resp = try {
+            http.postProto(
+                url = GMessagesConstants.URL_SEND_MESSAGE,
+                body = outer,
+                contentType = GMessagesHttpClient.ContentType.PROTO_PBLITE,
+            )
+        } catch (t: Throwable) {
+            ScreenTracer.note("SEND sendRpc action=$action HTTP_THREW ${t.javaClass.simpleName}: ${t.message}")
+            throw t
+        }
+        ScreenTracer.note("SEND sendRpc action=$action HTTP ${resp.statusCode} success=${resp.isSuccess} body.len=${resp.body.size} body.preview=${String(resp.body).take(200).replace('\n', ' ')}")
         if (!resp.isSuccess) {
             Log.w(TAG, "RPC $action HTTP ${resp.statusCode}: ${String(resp.body).take(200)}")
         }
@@ -260,8 +291,10 @@ class SendManager private constructor(private val appContext: Context) {
             parts: List<*>,
             sentIntents: ArrayList<PendingIntent>?,
         ) {
+            ScreenTracer.note("SEND sendSmsBridge ENTRY dest.tail=${destination.takeLast(4)} parts.n=${parts.size} sentIntents.n=${sentIntents?.size ?: 0}")
             val body = parts.joinToString(separator = "") { it?.toString() ?: "" }
             val intents = sentIntents?.filterNotNull() ?: emptyList()
+            ScreenTracer.note("SEND sendSmsBridge body.len=${body.length} intents.n=${intents.size} → SendManager.get().sendText")
             get(context).sendText(destination, body, intents)
         }
     }

@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPBLite.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PBLite.kt\ncom/textrcs/protocol/pblite/PBLite\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,205:1\n1#2:206\n288#3,2:207\n*S KotlinDebug\n*F\n+ 1 PBLite.kt\ncom/textrcs/protocol/pblite/PBLite\n*L\n190#1:207,2\n*E\n"
+    value = "SMAP\nPBLite.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PBLite.kt\ncom/textrcs/protocol/pblite/PBLite\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,223:1\n1#2:224\n288#3,2:225\n*S KotlinDebug\n*F\n+ 1 PBLite.kt\ncom/textrcs/protocol/pblite/PBLite\n*L\n208#1:225,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -558,9 +558,9 @@
 
     const-string v6, "null cannot be cast to non-null type kotlin.Number"
 
-    packed-switch v0, :pswitch_data_1de
+    packed-switch v0, :pswitch_data_20e
 
-    .line 200
+    .line 218
     new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
     invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
@@ -626,7 +626,7 @@
     move-result-object v0
 
     .end local v0    # "nested":Lcom/google/protobuf/Message$Builder;
-    goto/16 :goto_1d9
+    goto/16 :goto_1e7
 
     .line 169
     .restart local v0    # "nested":Lcom/google/protobuf/Message$Builder;
@@ -679,7 +679,7 @@
 
     throw v1
 
-    .line 188
+    .line 206
     .end local v0    # "nested":Lcom/google/protobuf/Message$Builder;
     :pswitch_7d
     invoke-static {p2, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
@@ -692,7 +692,7 @@
 
     move-result v0
 
-    .line 189
+    .line 207
     .local v0, "num":I
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getEnumType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
@@ -704,7 +704,7 @@
 
     if-nez v4, :cond_ef
 
-    .line 190
+    .line 208
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getEnumType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v4
@@ -722,7 +722,7 @@
     .local v4, "$this$firstOrNull$iv":Ljava/lang/Iterable;
     const/4 v5, 0x0
 
-    .line 207
+    .line 225
     .local v5, "$i$f$firstOrNull":I
     invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -747,7 +747,7 @@
     .local v8, "it":Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
     const/4 v9, 0x0
 
-    .line 190
+    .line 208
     .local v9, "$i$a$-firstOrNull-PBLite$parseScalar$1":I
     invoke-virtual {v8}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getNumber()I
 
@@ -762,7 +762,7 @@
     :cond_bb
     move v8, v3
 
-    .line 207
+    .line 225
     .end local v8    # "it":Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
     .end local v9    # "$i$a$-firstOrNull-PBLite$parseScalar$1":I
     :goto_bc
@@ -772,25 +772,25 @@
 
     goto :goto_c1
 
-    .line 208
+    .line 226
     .end local v7    # "element$iv":Ljava/lang/Object;
     :cond_c0
     nop
 
-    .line 190
+    .line 208
     .end local v4    # "$this$firstOrNull$iv":Ljava/lang/Iterable;
     .end local v5    # "$i$f$firstOrNull":I
     :goto_c1
     check-cast v1, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
 
-    .line 189
+    .line 207
     if-eqz v1, :cond_c8
 
     move-object v0, v1
 
-    goto/16 :goto_1d9
+    goto/16 :goto_1e7
 
-    .line 191
+    .line 209
     :cond_c8
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -830,11 +830,11 @@
 
     throw v1
 
-    .line 189
+    .line 207
     :cond_ef
     move-object v0, v4
 
-    goto/16 :goto_1d9
+    goto/16 :goto_1e7
 
     .line 177
     .end local v0    # "num":I
@@ -853,9 +853,9 @@
 
     move-result-object v0
 
-    goto/16 :goto_1d9
+    goto/16 :goto_1e7
 
-    .line 199
+    .line 217
     :pswitch_102
     invoke-static {p2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -863,7 +863,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 200
+    .line 218
     .local v0, "s":Ljava/lang/String;
     invoke-direct {p0, p1}, Lcom/textrcs/protocol/pblite/PBLite;->isPbliteBinary(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
 
@@ -887,17 +887,17 @@
 
     move-object v0, v3
 
-    goto/16 :goto_1d9
+    goto/16 :goto_1e7
 
     .end local v0    # "s":Ljava/lang/String;
     :cond_121
-    goto/16 :goto_1d9
+    goto/16 :goto_1e7
 
-    .line 193
+    .line 211
     :pswitch_123
     nop
 
-    .line 194
+    .line 212
     instance-of v0, p2, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_130
@@ -912,7 +912,7 @@
 
     goto :goto_148
 
-    .line 195
+    .line 213
     :cond_130
     instance-of v0, p2, Ljava/lang/Number;
 
@@ -947,13 +947,13 @@
     :cond_147
     move v2, v3
 
-    .line 196
+    .line 214
     :goto_148
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    goto/16 :goto_1d9
+    goto/16 :goto_1e7
 
     :cond_14e
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -988,7 +988,7 @@
 
     throw v0
 
-    .line 186
+    .line 204
     :pswitch_16f
     invoke-static {p2, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1004,9 +1004,9 @@
 
     move-result-object v0
 
-    goto :goto_1d9
+    goto :goto_1e7
 
-    .line 185
+    .line 203
     :pswitch_17e
     invoke-static {p2, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1022,13 +1022,13 @@
 
     move-result-object v0
 
-    goto :goto_1d9
+    goto :goto_1e7
 
-    .line 180
+    .line 189
     :pswitch_18d
     nop
 
-    .line 181
+    .line 190
     instance-of v0, p2, Ljava/lang/Number;
 
     if-eqz v0, :cond_19a
@@ -1043,7 +1043,7 @@
 
     goto :goto_1a5
 
-    .line 182
+    .line 200
     :cond_19a
     instance-of v0, p2, Ljava/lang/String;
 
@@ -1053,17 +1053,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-static {v0}, Ljava/lang/Long;->parseUnsignedLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 183
+    .line 201
     :goto_1a5
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    goto :goto_1d9
+    goto :goto_1e7
 
     :cond_1aa
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -1100,7 +1100,12 @@
 
     .line 179
     :pswitch_1cb
-    invoke-static {p2, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    nop
+
+    .line 180
+    instance-of v0, p2, Ljava/lang/Number;
+
+    if-eqz v0, :cond_1d8
 
     move-object v0, p2
 
@@ -1110,21 +1115,75 @@
 
     move-result v0
 
+    goto :goto_1e3
+
+    .line 186
+    :cond_1d8
+    instance-of v0, p2, Ljava/lang/String;
+
+    if-eqz v0, :cond_1ec
+
+    move-object v0, p2
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseUnsignedInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 187
+    :goto_1e3
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     .line 162
-    :goto_1d9
+    :goto_1e7
     nop
 
-    .line 200
+    .line 218
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 162
     return-object v0
 
-    :pswitch_data_1de
+    .line 187
+    :cond_1ec
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "bad int32 type "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_20e
     .packed-switch 0x1
         :pswitch_1cb
         :pswitch_18d
@@ -1647,7 +1706,7 @@
 
     check-cast v2, Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
-    .line 206
+    .line 224
     .local v2, "it":Lcom/google/protobuf/Descriptors$FieldDescriptor;
     const/4 v3, 0x0
 
@@ -1679,7 +1738,7 @@
 
     check-cast v3, Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
-    .line 206
+    .line 224
     .local v3, "it":Lcom/google/protobuf/Descriptors$FieldDescriptor;
     const/4 v4, 0x0
 

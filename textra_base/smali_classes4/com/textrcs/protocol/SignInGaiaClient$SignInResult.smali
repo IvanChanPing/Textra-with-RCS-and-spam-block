@@ -15,7 +15,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0012\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\u0008\u0086\u0008\u0018\u00002\u00020\u0001B3\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\t\u0012\u0006\u0010\u000b\u001a\u00020\u000c\u00a2\u0006\u0002\u0010\rJ\t\u0010\u0018\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u0019\u001a\u00020\u0005H\u00c6\u0003J\t\u0010\u001a\u001a\u00020\u0007H\u00c6\u0003J\u000f\u0010\u001b\u001a\u0008\u0012\u0004\u0012\u00020\n0\tH\u00c6\u0003J\t\u0010\u001c\u001a\u00020\u000cH\u00c6\u0003JA\u0010\u001d\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u00072\u000e\u0008\u0002\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\t2\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u000cH\u00c6\u0001J\u0013\u0010\u001e\u001a\u00020\u001f2\u0008\u0010 \u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010!\u001a\u00020\"H\u00d6\u0001J\t\u0010#\u001a\u00020\u0007H\u00d6\u0001R\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000e\u0010\u000fR\u0017\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0010\u0010\u0011R\u0011\u0010\u000b\u001a\u00020\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0012\u0010\u0013R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0014\u0010\u0015R\u0011\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0016\u0010\u0017"
+        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0015\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\u0008\u0086\u0008\u0018\u00002\u00020\u0001B=\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\t\u0012\u0006\u0010\u000b\u001a\u00020\u000c\u0012\u0008\u0010\r\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0002\u0010\u000eJ\t\u0010\u001a\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u001b\u001a\u00020\u0005H\u00c6\u0003J\t\u0010\u001c\u001a\u00020\u0007H\u00c6\u0003J\u000f\u0010\u001d\u001a\u0008\u0012\u0004\u0012\u00020\n0\tH\u00c6\u0003J\t\u0010\u001e\u001a\u00020\u000cH\u00c6\u0003J\u000b\u0010\u001f\u001a\u0004\u0018\u00010\u0007H\u00c6\u0003JM\u0010 \u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u00072\u000e\u0008\u0002\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\t2\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u000c2\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u0007H\u00c6\u0001J\u0013\u0010!\u001a\u00020\"2\u0008\u0010#\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010$\u001a\u00020%H\u00d6\u0001J\t\u0010&\u001a\u00020\u0007H\u00d6\u0001R\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000f\u0010\u0010R\u0013\u0010\r\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0011\u0010\u0010R\u0017\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0012\u0010\u0013R\u0011\u0010\u000b\u001a\u00020\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0014\u0010\u0015R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0016\u0010\u0017R\u0011\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0018\u0010\u0019"
     }
     d2 = {
         "Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;",
@@ -31,9 +31,11 @@
         "Lcom/textrcs/gmproto/authentication/Device;",
         "refreshKeyPair",
         "Ljava/security/KeyPair;",
-        "([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;)V",
+        "destRegistrationId",
+        "([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;Ljava/lang/String;)V",
         "getBrowserUuid",
         "()Ljava/lang/String;",
+        "getDestRegistrationId",
         "getDevices",
         "()Ljava/util/List;",
         "getRefreshKeyPair",
@@ -47,6 +49,7 @@
         "component3",
         "component4",
         "component5",
+        "component6",
         "copy",
         "equals",
         "",
@@ -68,6 +71,8 @@
 # instance fields
 .field private final browserUuid:Ljava/lang/String;
 
+.field private final destRegistrationId:Ljava/lang/String;
+
 .field private final devices:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -86,13 +91,14 @@
 
 
 # direct methods
-.method public constructor <init>([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;)V
-    .registers 8
+.method public constructor <init>([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;Ljava/lang/String;)V
+    .registers 9
     .param p1, "tachyonAuthToken"    # [B
     .param p2, "tokenTtlSeconds"    # J
     .param p4, "browserUuid"    # Ljava/lang/String;
     .param p5, "devices"    # Ljava/util/List;
     .param p6, "refreshKeyPair"    # Ljava/security/KeyPair;
+    .param p7, "destRegistrationId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([BJ",
@@ -101,6 +107,7 @@
             "Lcom/textrcs/gmproto/authentication/Device;",
             ">;",
             "Ljava/security/KeyPair;",
+            "Ljava/lang/String;",
             ")V"
         }
     .end annotation
@@ -139,53 +146,65 @@
     .line 56
     iput-object p6, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->refreshKeyPair:Ljava/security/KeyPair;
 
+    .line 70
+    iput-object p7, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
+
     .line 51
     return-void
 .end method
 
-.method public static synthetic copy$default(Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;[BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;ILjava/lang/Object;)Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
-    .registers 9
+.method public static synthetic copy$default(Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;[BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;Ljava/lang/String;ILjava/lang/Object;)Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
+    .registers 10
 
-    and-int/lit8 p8, p7, 0x1
+    and-int/lit8 p9, p8, 0x1
 
-    if-eqz p8, :cond_6
+    if-eqz p9, :cond_6
 
     iget-object p1, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->tachyonAuthToken:[B
 
     :cond_6
-    and-int/lit8 p8, p7, 0x2
+    and-int/lit8 p9, p8, 0x2
 
-    if-eqz p8, :cond_c
+    if-eqz p9, :cond_c
 
     iget-wide p2, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->tokenTtlSeconds:J
 
     :cond_c
-    and-int/lit8 p8, p7, 0x4
+    and-int/lit8 p9, p8, 0x4
 
-    if-eqz p8, :cond_12
+    if-eqz p9, :cond_12
 
     iget-object p4, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->browserUuid:Ljava/lang/String;
 
     :cond_12
-    and-int/lit8 p8, p7, 0x8
+    and-int/lit8 p9, p8, 0x8
 
-    if-eqz p8, :cond_18
+    if-eqz p9, :cond_18
 
     iget-object p5, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->devices:Ljava/util/List;
 
     :cond_18
-    and-int/lit8 p7, p7, 0x10
+    and-int/lit8 p9, p8, 0x10
 
-    if-eqz p7, :cond_1e
+    if-eqz p9, :cond_1e
 
     iget-object p6, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->refreshKeyPair:Ljava/security/KeyPair;
 
     :cond_1e
-    move-object p7, p5
+    and-int/lit8 p8, p8, 0x20
 
+    if-eqz p8, :cond_24
+
+    iget-object p7, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
+
+    :cond_24
     move-object p8, p6
 
+    move-object p9, p7
+
     move-object p6, p4
+
+    move-object p7, p5
 
     move-wide p4, p2
 
@@ -193,7 +212,7 @@
 
     move-object p3, p1
 
-    invoke-virtual/range {p2 .. p8}, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->copy([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;)Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
+    invoke-virtual/range {p2 .. p9}, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->copy([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;Ljava/lang/String;)Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
 
     move-result-object p0
 
@@ -250,8 +269,16 @@
     return-object v0
 .end method
 
-.method public final copy([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;)Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
-    .registers 15
+.method public final component6()Ljava/lang/String;
+    .registers 2
+
+    iget-object v0, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final copy([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;Ljava/lang/String;)Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
+    .registers 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([BJ",
@@ -260,6 +287,7 @@
             "Lcom/textrcs/gmproto/authentication/Device;",
             ">;",
             "Ljava/security/KeyPair;",
+            "Ljava/lang/String;",
             ")",
             "Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;"
         }
@@ -293,7 +321,9 @@
 
     move-object v7, p6
 
-    invoke-direct/range {v1 .. v7}, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;-><init>([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;)V
+    move-object/from16 v8, p7
+
+    invoke-direct/range {v1 .. v8}, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;-><init>([BJLjava/lang/String;Ljava/util/List;Ljava/security/KeyPair;Ljava/lang/String;)V
 
     return-object v1
 .end method
@@ -373,17 +403,30 @@
     :cond_37
     iget-object v3, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->refreshKeyPair:Ljava/security/KeyPair;
 
-    iget-object v1, v1, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->refreshKeyPair:Ljava/security/KeyPair;
+    iget-object v4, v1, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->refreshKeyPair:Ljava/security/KeyPair;
+
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_42
+
+    return v2
+
+    :cond_42
+    iget-object v3, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
+
+    iget-object v1, v1, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
 
     invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_42
+    if-nez v1, :cond_4d
 
     return v2
 
-    :cond_42
+    :cond_4d
     return v0
 .end method
 
@@ -392,6 +435,15 @@
 
     .line 54
     iget-object v0, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->browserUuid:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getDestRegistrationId()Ljava/lang/String;
+    .registers 2
+
+    .line 70
+    iget-object v0, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -489,7 +541,27 @@
 
     add-int/2addr v0, v2
 
-    return v0
+    mul-int/lit8 v1, v0, 0x1f
+
+    iget-object v2, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
+
+    if-nez v2, :cond_32
+
+    const/4 v2, 0x0
+
+    goto :goto_38
+
+    :cond_32
+    iget-object v2, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_38
+    add-int/2addr v1, v2
+
+    return v1
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -560,6 +632,18 @@
     iget-object v1, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->refreshKeyPair:Ljava/security/KeyPair;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", destRegistrationId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->destRegistrationId:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

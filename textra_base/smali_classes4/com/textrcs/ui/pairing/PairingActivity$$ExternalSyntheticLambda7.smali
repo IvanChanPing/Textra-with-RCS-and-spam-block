@@ -36,7 +36,7 @@
 
     iget-object v1, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda7;->f$1:Ljava/lang/Throwable;
 
-    invoke-static {v0, v1}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$C8mzc_20gd5Zlwe2zGpuiPEv8jk(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$Re25ReBC9nWxe1kg_aKnJDJ4638(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
 
     return-void
 .end method

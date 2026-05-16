@@ -1,5 +1,52 @@
 # TextRCS Changelog
 
+## v0.40.0 — 2026-05-16 — 1Hz observability + SendManager instrumentation
+
+Pairing succeeds on user's OnePlus 12 (Google Messages shows paired) but SMS
+sending fails silently for both RCS and non-RCS recipients. The send path is
+invisible because `SendManager` only writes to logcat. v0.40 makes the send
+path observable end-to-end and trims upload latency from minutes to seconds.
+
+### Server (`tester-server/server.js`)
+- `/api/logs/auto-upload` rate limit: **10s → 1s** (line 271)
+- Restart via `systemctl restart tester-server` (unit on port 8484)
+- Probe verified 200 OK with valid log payload
+
+### `inject_src/com/textrcs/diag/LogUploader.kt`
+- `BUILD_NUMBER`: `v0.39.0` → `v0.40.0`
+- `MIN_GAP_MS`: `65_000` → `1_100` (just above the 1s server limit)
+
+### `inject_src/com/textrcs/diag/ScreenTracer.kt`
+- **Removed 5-minute auto-stop** on the thread sampler (`while (true)` now);
+  user wants persistent observability across the full debug session
+- **Added 1-second cadence uploader** (`cadenceUploader`) — self-reposting
+  `Handler` runnable that calls `upload("cadence-1s")` every 1000ms; runs
+  forever from `install()`
+- Removed the 3-second `postDelayed` "delayed-resume" upload (cadence covers it)
+
+### `inject_src/com/textrcs/send/SendManager.kt` — instrumentation
+Added `ScreenTracer.note(...)` calls at every step of the send pipeline so
+the trace shows exactly where the send fails:
+- `sendSmsBridge` entry (smali bridge proves Textra reached us)
+- `sendText` entry + executor begin + blocking outcome + sentIntents
+- `sendTextBlocking` step markers (session.load, sessionId, getOrCreateConv,
+  buildSendReq, sendRpc, sendRpc.RETURNED)
+- `getOrCreateConversation` pre/post-rpc
+- `sendRpc` action, requestID, encrypted length, URL, HTTP status, success
+  flag, body length, body preview (first 200 bytes)
+- `fireSentIntents` result code + per-PI outcome
+- Phone numbers redacted to last 4 digits in trace lines
+
+### Output
+- `textra2_v0.40.0.apk` — 76MB, sha256
+  `8c4c43e05a5177f4ab8330a0269516900dfaf126c19aaae58959ef995d36b6b8`
+
+### Expected behavior on next install
+- Trace uploads every 1 second instead of every 65s
+- Sampler runs forever (no "SAMPLER auto-stopped" line)
+- A real SMS send attempt will produce a complete `SEND ...` trace from
+  smali bridge entry through to GMessages HTTP response
+
 ## v0.1.0 — 2026-05-15 — first boot of renamed base
 
 Renamed Textra Premium v4.84 (cracked) installs side-by-side with original `com.textra`

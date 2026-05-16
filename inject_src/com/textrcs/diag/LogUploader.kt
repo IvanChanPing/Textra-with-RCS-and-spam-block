@@ -27,19 +27,17 @@ object LogUploader {
     private const val TAG = "TextRCSLogUploader"
     private const val URL_STRING = "https://example.invalid/api/logs/auto-upload"
     private const val BUILD_TYPE = "textrcs"
-    private const val BUILD_NUMBER = "v0.39.0"
+    private const val BUILD_NUMBER = "v0.40.0"
 
     private val executor = Executors.newSingleThreadExecutor { r ->
         Thread(r, "TextRCS-LogUploader").apply { isDaemon = true }
     }
 
     /**
-     * Server-side rate limit observed empirically (2026-05-15 redroid15 test):
-     * back-to-back uploads within ~3s of each other return HTTP 429. We
-     * serialize via a single-thread executor AND sleep enough between
-     * successive posts to clear the limit. Generous 7s gap to be safe.
+     * Server-side rate limit lowered to 1s in v0.40 (server.js:271). We post
+     * just above that so we never trip 429. Single-thread executor serializes.
      */
-    private const val MIN_GAP_MS = 65_000L  // 65s — 429 still observed at 7s
+    private const val MIN_GAP_MS = 1_100L
     @Volatile private var lastPostMs: Long = 0L
 
     /**

@@ -42,7 +42,7 @@
 
     iget-object v2, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda3;->f$2:Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
 
-    invoke-static {v0, v1, v2}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$exThO5HrsEaF-nVgH82s7c1K2A4(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
+    invoke-static {v0, v1, v2}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$m6tebyuMQlfXdy-QdoMi4DtCpZU(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
 
     return-void
 .end method

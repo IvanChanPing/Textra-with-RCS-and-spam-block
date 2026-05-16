@@ -30,7 +30,7 @@
     .line 0
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda4;->f$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
-    invoke-static {v0}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$W9nsfDQMkjhBJdt_sX1EV6D0Il0(Lcom/textrcs/ui/pairing/PairingActivity;)V
+    invoke-static {v0}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$sMnl1llxWsXbsLLoHfwxxOd2u00(Lcom/textrcs/ui/pairing/PairingActivity;)V
 
     return-void
 .end method

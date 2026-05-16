@@ -498,7 +498,7 @@
     .line 152
     const-string v0, "x-goog-api-key"
 
-    const-string v1, "AIzaSyBVISctL4wnC5nctQ1nGYDRD6zybQjKCL8"
+    const-string v1, "AIzaSyCA4RsOZUFrm9whhtGosPlJLmVPnfSHKz8"
 
     invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 

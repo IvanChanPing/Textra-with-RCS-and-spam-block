@@ -83,12 +83,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 100
+    .line 114
     invoke-static {}, Lcom/textrcs/gmproto/authentication/SignInGaiaResponse;->newBuilder()Lcom/textrcs/gmproto/authentication/SignInGaiaResponse$Builder;
 
     move-result-object v0
 
-    .line 101
+    .line 115
     .local v0, "b":Lcom/textrcs/gmproto/authentication/SignInGaiaResponse$Builder;
     iget-object v1, p0, Lcom/textrcs/protocol/SignInGaiaClient$signIn$response$1;->this$0:Lcom/textrcs/protocol/SignInGaiaClient;
 
@@ -103,7 +103,7 @@
 
     invoke-virtual {v1, p1, p2, v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient;->decodeProto([BLjava/lang/String;Lcom/google/protobuf/Message$Builder;)Lcom/google/protobuf/Message$Builder;
 
-    .line 102
+    .line 116
     invoke-virtual {v0}, Lcom/textrcs/gmproto/authentication/SignInGaiaResponse$Builder;->build()Lcom/textrcs/gmproto/authentication/SignInGaiaResponse;
 
     move-result-object v1
@@ -116,7 +116,7 @@
     .param p1, "p1"    # Ljava/lang/Object;
     .param p2, "p2"    # Ljava/lang/Object;
 
-    .line 95
+    .line 109
     move-object v0, p1
 
     check-cast v0, [B
