@@ -396,7 +396,7 @@
 
 # virtual methods
 .method public final ecdh(Ljava/security/interfaces/ECPrivateKey;Ljava/security/interfaces/ECPublicKey;)[B
-    .registers 6
+    .registers 7
     .param p1, "ourPrivate"    # Ljava/security/interfaces/ECPrivateKey;
     .param p2, "theirPublic"    # Ljava/security/interfaces/ECPublicKey;
 
@@ -408,14 +408,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 109
+    .line 117
     const-string v0, "ECDH"
 
     invoke-static {v0}, Ljavax/crypto/KeyAgreement;->getInstance(Ljava/lang/String;)Ljavax/crypto/KeyAgreement;
 
     move-result-object v0
 
-    .line 110
+    .line 118
     .local v0, "ka":Ljavax/crypto/KeyAgreement;
     move-object v1, p1
 
@@ -423,7 +423,7 @@
 
     invoke-virtual {v0, v1}, Ljavax/crypto/KeyAgreement;->init(Ljava/security/Key;)V
 
-    .line 111
+    .line 119
     move-object v1, p2
 
     check-cast v1, Ljava/security/Key;
@@ -432,16 +432,62 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/crypto/KeyAgreement;->doPhase(Ljava/security/Key;Z)Ljava/security/Key;
 
-    .line 112
+    .line 120
     invoke-virtual {v0}, Ljavax/crypto/KeyAgreement;->generateSecret()[B
 
     move-result-object v1
 
-    const-string v2, "generateSecret(...)"
+    .line 121
+    .local v1, "raw":[B
+    array-length v2, v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    const/16 v3, 0x20
 
-    return-object v1
+    if-ne v2, v3, :cond_2b
+
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    move-object v2, v1
+
+    goto :goto_44
+
+    .line 122
+    :cond_2b
+    array-length v2, v1
+
+    if-ge v2, v3, :cond_3a
+
+    array-length v2, v1
+
+    sub-int/2addr v3, v2
+
+    new-array v2, v3, [B
+
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    invoke-static {v2, v1}, Lkotlin/collections/ArraysKt;->plus([B[B)[B
+
+    move-result-object v2
+
+    goto :goto_44
+
+    .line 123
+    :cond_3a
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    array-length v2, v1
+
+    sub-int/2addr v2, v3
+
+    array-length v3, v1
+
+    invoke-static {v1, v2, v3}, Lkotlin/collections/ArraysKt;->copyOfRange([BII)[B
+
+    move-result-object v2
+
+    .line 121
+    :goto_44
+    return-object v2
 .end method
 
 .method public final generateKeyPair()Ljava/security/KeyPair;

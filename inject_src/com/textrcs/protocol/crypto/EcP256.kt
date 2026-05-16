@@ -104,11 +104,22 @@ object EcP256 {
      *
      * The Go code further hashes this with SHA-256 before HKDF — that hashing
      * step is left to the caller.
+     *
+     * v0.50: Java's `KeyAgreement.generateSecret()` is documented (see
+     * JDK-8014618 + JDK-8281628) to strip leading zero bytes from the output
+     * — so if the high byte of the x-coordinate happens to be 0x00 (probability
+     * ~1/256 per session), the returned array is 31 bytes instead of 32.
+     * mautrix Go's `crypto/ecdh` always returns a fixed-length 32-byte slice
+     * (SEC 1 §2.3.5). Left-pad with zeros to 32 bytes so our SHA-256 input
+     * matches Go byte-for-byte regardless of whether the JCE provider strips.
      */
     fun ecdh(ourPrivate: ECPrivateKey, theirPublic: ECPublicKey): ByteArray {
         val ka = KeyAgreement.getInstance("ECDH")
         ka.init(ourPrivate)
         ka.doPhase(theirPublic, true)
-        return ka.generateSecret()
+        val raw = ka.generateSecret()
+        return if (raw.size == 32) raw
+        else if (raw.size < 32) ByteArray(32 - raw.size) + raw
+        else raw.copyOfRange(raw.size - 32, raw.size)  // ≥33 → trim any leading sign byte
     }
 }
