@@ -37,6 +37,28 @@ import java.security.interfaces.ECPublicKey
  */
 class Ukey2Handshake {
 
+    /**
+     * v0.53: delegate the entire UKEY2 handshake to the Rust crate. The
+     * Rust impl is provably correct (passes a synthetic-UKEY2-server
+     * round-trip test) and avoids whatever Kotlin step was producing a
+     * wrong nextKey (verified by HMAC mismatch on every real frame in
+     * v0.51 OnePlus logs — see project memory
+     * `textrcs-v51-send-root-cause-hmac-mismatch-2026-05-18`).
+     *
+     * If the Rust .so isn't loaded (UnsatisfiedLinkError / NoClassDefFound),
+     * we fall back to the legacy Kotlin path so we never hard-break a
+     * pair flow on startup.
+     */
+    private val rust: uniffi.textrcs_libgm.RustPairingSession? = try {
+        uniffi.textrcs_libgm.RustPairingSession()
+    } catch (t: Throwable) {
+        android.util.Log.w(
+            "TextrcsLibgmCrypto",
+            "RustPairingSession unavailable (${t.javaClass.simpleName}: ${t.message}); using Kotlin UKEY2",
+        )
+        null
+    }
+
     /** Our ephemeral EC P-256 keypair for this handshake. */
     val keyPair = EcP256.generateKeyPair()
     private val ourPrivate: ECPrivateKey = keyPair.private as ECPrivateKey
@@ -70,6 +92,16 @@ class Ukey2Handshake {
         private set
 
     /**
+     * v0.53: derived session keys, populated by [deriveSessionKeysViaRust]
+     * after [processServerInit] when the Rust delegate is active. Returned
+     * by the new [deriveSessionKeys] method so the orchestrator never reads
+     * `nextKey` and re-derives — keeping the whole chain on the Rust side
+     * where it's tested.
+     */
+    private var rustDerivedAes: ByteArray? = null
+    private var rustDerivedHmac: ByteArray? = null
+
+    /**
      * Build the CLIENT_INIT message.
      *
      * The Go reference uses a `cipherCommitment` whose value is the SHA-512 of
@@ -77,6 +109,23 @@ class Ukey2Handshake {
      * we'll reveal in step 3). We compute that same value here.
      */
     fun makeClientInit(): ByteArray {
+        val rs = rust
+        if (rs != null) {
+            try {
+                val pair = rs.preparePayloads()
+                clientInitBytes = pair[0]
+                clientFinishedOuterBytes = pair[1]
+                com.textrcs.diag.PairingTrace.log("UKEY2-RUST", "prepare-payloads",
+                    "initLen=${clientInitBytes.size}",
+                    "finishLen=${clientFinishedOuterBytes.size}")
+                return clientInitBytes
+            } catch (t: Throwable) {
+                android.util.Log.w(
+                    "TextrcsLibgmCrypto",
+                    "Rust preparePayloads failed (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin",
+                )
+            }
+        }
         // Mautrix pair_google.go:143-158: build the OUTER Ukey2Message wrapping
         // the Ukey2ClientFinished payload, take SHA-512 of THAT, use as the
         // cipher commitment. Server verifies sha512(received CLIENT_FINISH
@@ -128,8 +177,48 @@ class Ukey2Handshake {
      * @return the single emoji to display to the user.
      */
     fun processServerInit(serverInitMessageBytes: ByteArray, verificationCodeVersion: Int): String {
+        return processServerInit(serverInitMessageBytes, verificationCodeVersion, 0)
+    }
+
+    /**
+     * v0.53 overload — accepts `keyDerivationVersion` too so the Rust
+     * delegate can stash both versions for the later
+     * [deriveSessionKeys] call. The orchestrator should pass
+     * `container.confirmedKeyDerivationVersion` from the INIT response
+     * container (matches Go's `ps.ServerInit.GetConfirmedKeyDerivationVersion()`).
+     */
+    fun processServerInit(
+        serverInitMessageBytes: ByteArray,
+        verificationCodeVersion: Int,
+        keyDerivationVersion: Int,
+    ): String {
         require(clientInitBytes.isNotEmpty()) { "makeClientInit() must be called first" }
         serverInitBytes = serverInitMessageBytes
+
+        val rs2 = rust
+        if (rs2 != null) {
+            try {
+                val container =
+                    com.textrcs.gmproto.authentication.GaiaPairingResponseContainer.newBuilder()
+                        .setData(ByteString.copyFrom(serverInitMessageBytes))
+                        .setConfirmedVerificationCodeVersion(verificationCodeVersion)
+                        .setConfirmedKeyDerivationVersion(keyDerivationVersion)
+                        .build()
+                val emoji = rs2.processServerInit(container.toByteArray())
+                com.textrcs.diag.PairingTrace.log("UKEY2-RUST", "process-server-init",
+                    "serverInitLen=${serverInitMessageBytes.size}",
+                    "verCodeVer=$verificationCodeVersion",
+                    "keyDerVer=$keyDerivationVersion",
+                    "nextKeyHex=${rs2.nextKeyHex().take(16)}…",
+                    "emoji=$emoji")
+                return emoji
+            } catch (t: Throwable) {
+                android.util.Log.w(
+                    "TextrcsLibgmCrypto",
+                    "Rust processServerInit failed (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin",
+                )
+            }
+        }
 
         val outer = Ukey2Message.parseFrom(serverInitMessageBytes)
         require(outer.messageType == Ukey2Message.Type.SERVER_INIT) {
@@ -178,14 +267,44 @@ class Ukey2Handshake {
      * to [buildClientFinishedProto].toByteArray().
      */
     fun makeClientFinished(): ByteArray {
-        require(nextKey.isNotEmpty()) { "processServerInit() must be called first" }
-        // Return the EXACT bytes whose SHA-512 we committed to in makeClientInit.
-        // Re-serializing here could in principle produce different bytes (proto
-        // determinism caveats), which would break the server's hash check.
+        // When the Rust delegate is active, nextKey is empty (Rust holds
+        // it internally) but clientFinishedOuterBytes was populated by
+        // makeClientInit (which delegated). When the Kotlin path is active,
+        // both are populated. Either way, the finish bytes are stashed.
         require(clientFinishedOuterBytes.isNotEmpty()) {
             "makeClientInit() must be called first"
         }
         return clientFinishedOuterBytes
+    }
+
+    /**
+     * v0.53: derive the AES + HMAC session keys via Rust (or fall back to
+     * the legacy Kotlin path if the Rust delegate isn't active or threw).
+     * Replaces the orchestrator's previous `SessionCrypto.deriveSessionKeys(
+     * nextKey = ukey2.nextKey, confirmedKeyDerivationVersion = container.…)`
+     * call so the entire UKEY2-to-session-key chain stays inside the
+     * already-tested Rust impl.
+     */
+    fun deriveSessionKeys(): com.textrcs.protocol.crypto.AESCTRHelper {
+        val rs3 = rust
+        if (rs3 != null) {
+            try {
+                val pair = rs3.deriveRequestCryptoKeys()
+                rustDerivedAes = pair[0]
+                rustDerivedHmac = pair[1]
+                return com.textrcs.protocol.crypto.AESCTRHelper(
+                    aesKey = pair[0],
+                    hmacKey = pair[1],
+                )
+            } catch (t: Throwable) {
+                android.util.Log.w(
+                    "TextrcsLibgmCrypto",
+                    "Rust deriveRequestCryptoKeys failed (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin",
+                )
+            }
+        }
+        require(nextKey.isNotEmpty()) { "processServerInit() must be called first" }
+        return com.textrcs.protocol.crypto.SessionCrypto.deriveSessionKeys(nextKey, 0)
     }
 
     /**

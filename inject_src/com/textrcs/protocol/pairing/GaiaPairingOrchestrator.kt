@@ -115,10 +115,16 @@ class GaiaPairingOrchestrator(
             )
         }
         // SERVER_INIT comes nested inside `container.data` as a Ukey2Message.
+        // v0.53: pass BOTH confirmedVersions so the Rust delegate has
+        // everything it needs for the later deriveSessionKeys call.
+        // Go's pair_google.go:454 reads confirmedKeyDerivationVersion
+        // from the init-response container's serverInit field, not the
+        // finish-response container — so we capture it HERE not in finishPairing.
         return try {
             ukey2.processServerInit(
                 containerDataBytes,
                 container.confirmedVerificationCodeVersion,
+                container.confirmedKeyDerivationVersion,
             )
         } catch (e: IllegalArgumentException) {
             // Re-throw with the bytes that produced it so we can debug from
@@ -167,10 +173,19 @@ class GaiaPairingOrchestrator(
                 "errorCode=${container.finishErrorCode}",
             )
         }
-        val crypto = SessionCrypto.deriveSessionKeys(
-            nextKey = ukey2.nextKey,
-            confirmedKeyDerivationVersion = container.confirmedKeyDerivationVersion,
-        )
+        // v0.53: derive via the Rust delegate inside ukey2. Falls back to
+        // Kotlin path if Rust is unavailable. Note: we previously passed
+        // container.confirmedKeyDerivationVersion from the FINISH response;
+        // Rust uses the version from the INIT response (which is what
+        // Go's pair_google.go:454 does). One of these is wrong if the
+        // server returns different values for the two responses — we'll
+        // know which when the parity diagnostic in PairingTrace shows
+        // the actual values.
+        val crypto = ukey2.deriveSessionKeys()
+        com.textrcs.diag.PairingTrace.log("ORCH", "derive-session-keys",
+            "finishContainer.keyDerVer=${container.confirmedKeyDerivationVersion}",
+            "aes.fingerprint=${com.textrcs.diag.PairingTrace.hexShort(crypto.aesKey, 8)}",
+            "hmac.fingerprint=${com.textrcs.diag.PairingTrace.hexShort(crypto.hmacKey, 8)}")
         return GMessagesSession(
             tachyonAuthToken = signInResult.tachyonAuthToken,
             tokenTtlSeconds = signInResult.tokenTtlSeconds,

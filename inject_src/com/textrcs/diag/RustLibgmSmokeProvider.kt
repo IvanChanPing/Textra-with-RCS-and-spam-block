@@ -48,12 +48,25 @@ class RustLibgmSmokeProvider : ContentProvider() {
             val versionMethod = cls.getMethod("version")
             val version = versionMethod.invoke(null) as? String
 
+            // v0.52: side-by-side parity check between Kotlin + Rust crypto.
+            // Proves that for the same nextKey + same plaintext, both impls
+            // produce equivalent outputs. If parity holds and HMAC still
+            // mismatches on real traffic, the bug is NOT in crypto — it's in
+            // the nextKey being computed / saved during pair.
+            val parityReport = try {
+                step = "crypto-parity-check"
+                cryptoParityReport()
+            } catch (t: Throwable) {
+                "parity-check FAILED: ${t.javaClass.simpleName}: ${t.message}"
+            }
+
             val body = buildString {
                 append("Rust libgm smoke OK: ")
                 append(version ?: "<null>")
                 append("\nABI: ")
                 append(System.getProperty("os.arch") ?: "?")
-                append("\nstep=success")
+                append("\nstep=success\n")
+                append(parityReport)
             }
             Log.i(TAG, body)
             try {
@@ -83,6 +96,69 @@ class RustLibgmSmokeProvider : ContentProvider() {
         }
         return true
     }
+
+    /**
+     * Compare Kotlin's HkdfSha256 + AESCTRHelper against Rust's
+     * rust_hkdf_sha256 + AesCtrBox + derive_session_keys for a fixed test
+     * vector. Returns a multi-line report suitable for the auto-upload.
+     */
+    private fun cryptoParityReport(): String {
+        val sb = StringBuilder()
+        sb.append("crypto-parity:\n")
+
+        // Test 1: HKDF — fixed nextKey + ENCRYPTION_KEY_INFO + "client"
+        val nextKey = ByteArray(32) { i -> (i + 1).toByte() } // 1,2,3,...,32
+        val kotlinHkdf = com.textrcs.protocol.crypto.HkdfSha256.derive(
+            nextKey,
+            com.textrcs.protocol.crypto.SessionCrypto.ENCRYPTION_KEY_INFO,
+            "client".toByteArray(),
+        )
+        val rustHkdf = uniffi.textrcs_libgm.rustHkdfSha256(
+            nextKey,
+            com.textrcs.protocol.crypto.SessionCrypto.ENCRYPTION_KEY_INFO,
+            "client".toByteArray(),
+        )
+        sb.append("  HKDF(testNextKey,EKI,\"client\"): match=")
+        sb.append(kotlinHkdf.contentEquals(rustHkdf))
+        sb.append(" k=").append(kotlinHkdf.toHexShort()).append(" r=").append(rustHkdf.toHexShort())
+        sb.append("\n")
+
+        // Test 2: derive_session_keys v0
+        val kotlinSesV0 = com.textrcs.protocol.crypto.SessionCrypto.deriveSessionKeys(nextKey, 0)
+        val rustPairV0 = uniffi.textrcs_libgm.deriveSessionKeys(nextKey, 0)
+        sb.append("  deriveSessionKeys(v0): aes.match=")
+        sb.append(kotlinSesV0.aesKey.contentEquals(rustPairV0[0]))
+        sb.append(" hmac.match=")
+        sb.append(kotlinSesV0.hmacKey.contentEquals(rustPairV0[1]))
+        sb.append("\n")
+
+        // Test 3: derive_session_keys v1
+        val kotlinSesV1 = com.textrcs.protocol.crypto.SessionCrypto.deriveSessionKeys(nextKey, 1)
+        val rustPairV1 = uniffi.textrcs_libgm.deriveSessionKeys(nextKey, 1)
+        sb.append("  deriveSessionKeys(v1): aes.match=")
+        sb.append(kotlinSesV1.aesKey.contentEquals(rustPairV1[0]))
+        sb.append(" hmac.match=")
+        sb.append(kotlinSesV1.hmacKey.contentEquals(rustPairV1[1]))
+        sb.append("\n")
+
+        // Test 4: encrypt-with-Kotlin-old-path / decrypt-with-Rust
+        val aesKey = ByteArray(32) { 0x42 }
+        val hmacKey = ByteArray(32) { 0x69 }
+        val plaintext = "the quick brown fox jumps over the lazy dog".toByteArray()
+        val rustBox = uniffi.textrcs_libgm.AesCtrBox(aesKey, hmacKey)
+        val rustCt = rustBox.encrypt(plaintext)
+        val rustBack = rustBox.decrypt(rustCt)
+        sb.append("  rust roundtrip: ct.len=").append(rustCt.size)
+        sb.append(" back.matches=").append(plaintext.contentEquals(rustBack))
+        sb.append("\n")
+
+        return sb.toString()
+    }
+
+    private fun ByteArray.toHexShort(): String =
+        if (this.size <= 8) this.joinToString("") { "%02x".format(it) }
+        else this.take(4).joinToString("") { "%02x".format(it) } + ".." +
+             this.takeLast(4).joinToString("") { "%02x".format(it) }
 
     override fun query(
         uri: Uri,

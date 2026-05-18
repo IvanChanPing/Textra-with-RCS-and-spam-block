@@ -743,6 +743,34 @@ internal interface UniffiForeignFutureCompleteVoid : com.sun.jna.Callback {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // A JNA Library to expose the extern-C FFI definitions.
 // This is an implementation detail which will be called internally by the public API.
 
@@ -762,6 +790,16 @@ internal interface UniffiLib : Library {
         }
     }
 
+    fun uniffi_textrcs_libgm_fn_clone_aesctrbox(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): Pointer
+    fun uniffi_textrcs_libgm_fn_free_aesctrbox(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): Unit
+    fun uniffi_textrcs_libgm_fn_constructor_aesctrbox_new(`aesKey`: RustBuffer.ByValue,`hmacKey`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+    ): Pointer
+    fun uniffi_textrcs_libgm_fn_method_aesctrbox_decrypt(`ptr`: Pointer,`encrypted`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_method_aesctrbox_encrypt(`ptr`: Pointer,`plaintext`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
     fun uniffi_textrcs_libgm_fn_clone_client(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
     ): Pointer
     fun uniffi_textrcs_libgm_fn_free_client(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
@@ -787,6 +825,28 @@ internal interface UniffiLib : Library {
     fun uniffi_textrcs_libgm_fn_free_pairingsession(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
     ): Unit
     fun uniffi_textrcs_libgm_fn_method_pairingsession_emoji(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_clone_rustpairingsession(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): Pointer
+    fun uniffi_textrcs_libgm_fn_free_rustpairingsession(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): Unit
+    fun uniffi_textrcs_libgm_fn_constructor_rustpairingsession_new(uniffi_out_err: UniffiRustCallStatus, 
+    ): Pointer
+    fun uniffi_textrcs_libgm_fn_method_rustpairingsession_derive_request_crypto_keys(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_method_rustpairingsession_next_key_hex(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_method_rustpairingsession_pairing_uuid(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_method_rustpairingsession_prepare_payloads(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_method_rustpairingsession_process_server_init(`ptr`: Pointer,`gaiaPairingResponseContainerBytes`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_method_rustpairingsession_start_timestamp_millis(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
+    ): Long
+    fun uniffi_textrcs_libgm_fn_func_derive_session_keys(`nextKey`: RustBuffer.ByValue,`confirmedKeyDerivationVersion`: Int,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_func_rust_hkdf_sha256(`ikm`: RustBuffer.ByValue,`salt`: RustBuffer.ByValue,`info`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
     fun uniffi_textrcs_libgm_fn_func_version(uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
@@ -902,7 +962,15 @@ internal interface UniffiLib : Library {
     ): Unit
     fun ffi_textrcs_libgm_rust_future_complete_void(`handle`: Long,uniffi_out_err: UniffiRustCallStatus, 
     ): Unit
+    fun uniffi_textrcs_libgm_checksum_func_derive_session_keys(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_func_rust_hkdf_sha256(
+    ): Short
     fun uniffi_textrcs_libgm_checksum_func_version(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_aesctrbox_decrypt(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_aesctrbox_encrypt(
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_client_await_gaia_confirm(
     ): Short
@@ -918,9 +986,25 @@ internal interface UniffiLib : Library {
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_pairingsession_emoji(
     ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustpairingsession_derive_request_crypto_keys(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustpairingsession_next_key_hex(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustpairingsession_pairing_uuid(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustpairingsession_prepare_payloads(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustpairingsession_process_server_init(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustpairingsession_start_timestamp_millis(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_constructor_aesctrbox_new(
+    ): Short
     fun uniffi_textrcs_libgm_checksum_constructor_client_load_from_json(
     ): Short
     fun uniffi_textrcs_libgm_checksum_constructor_client_new(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_constructor_rustpairingsession_new(
     ): Short
     fun ffi_textrcs_libgm_uniffi_contract_version(
     ): Int
@@ -939,7 +1023,19 @@ private fun uniffiCheckContractApiVersion(lib: UniffiLib) {
 
 @Suppress("UNUSED_PARAMETER")
 private fun uniffiCheckApiChecksums(lib: UniffiLib) {
+    if (lib.uniffi_textrcs_libgm_checksum_func_derive_session_keys() != 30030.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_func_rust_hkdf_sha256() != 38940.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
     if (lib.uniffi_textrcs_libgm_checksum_func_version() != 28784.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_aesctrbox_decrypt() != 55350.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_aesctrbox_encrypt() != 21371.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_client_await_gaia_confirm() != 3150.toShort()) {
@@ -963,10 +1059,34 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
     if (lib.uniffi_textrcs_libgm_checksum_method_pairingsession_emoji() != 16049.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustpairingsession_derive_request_crypto_keys() != 52711.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustpairingsession_next_key_hex() != 14670.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustpairingsession_pairing_uuid() != 8098.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustpairingsession_prepare_payloads() != 51758.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustpairingsession_process_server_init() != 29895.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustpairingsession_start_timestamp_millis() != 45848.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_constructor_aesctrbox_new() != 63717.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
     if (lib.uniffi_textrcs_libgm_checksum_constructor_client_load_from_json() != 17909.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_constructor_client_new() != 61997.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_constructor_rustpairingsession_new() != 15774.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
 }
@@ -1059,6 +1179,52 @@ object NoPointer
 /**
  * @suppress
  */
+public object FfiConverterInt: FfiConverter<Int, Int> {
+    override fun lift(value: Int): Int {
+        return value
+    }
+
+    override fun read(buf: ByteBuffer): Int {
+        return buf.getInt()
+    }
+
+    override fun lower(value: Int): Int {
+        return value
+    }
+
+    override fun allocationSize(value: Int) = 4UL
+
+    override fun write(value: Int, buf: ByteBuffer) {
+        buf.putInt(value)
+    }
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterLong: FfiConverter<Long, Long> {
+    override fun lift(value: Long): Long {
+        return value
+    }
+
+    override fun read(buf: ByteBuffer): Long {
+        return buf.getLong()
+    }
+
+    override fun lower(value: Long): Long {
+        return value
+    }
+
+    override fun allocationSize(value: Long) = 8UL
+
+    override fun write(value: Long, buf: ByteBuffer) {
+        buf.putLong(value)
+    }
+}
+
+/**
+ * @suppress
+ */
 public object FfiConverterBoolean: FfiConverter<Boolean, Byte> {
     override fun lift(value: Byte): Boolean {
         return value.toInt() != 0
@@ -1133,6 +1299,25 @@ public object FfiConverterString: FfiConverter<String, RustBuffer.ByValue> {
         val byteBuf = toUtf8(value)
         buf.putInt(byteBuf.limit())
         buf.put(byteBuf)
+    }
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterByteArray: FfiConverterRustBuffer<ByteArray> {
+    override fun read(buf: ByteBuffer): ByteArray {
+        val len = buf.getInt()
+        val byteArr = ByteArray(len)
+        buf.get(byteArr)
+        return byteArr
+    }
+    override fun allocationSize(value: ByteArray): ULong {
+        return 4UL + value.size.toULong()
+    }
+    override fun write(value: ByteArray, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        buf.put(value)
     }
 }
 
@@ -1298,6 +1483,291 @@ private class JavaLangRefCleanable(
 ) : UniffiCleaner.Cleanable {
     override fun clean() = cleanable.clean()
 }
+/**
+ * Holds a 32-byte AES key + 32-byte HMAC key. Construct from the same
+ * `aesKey` / `hmacKey` Kotlin currently stores in `GMessagesSession`.
+ */
+public interface AesCtrBoxInterface {
+    
+    /**
+     * Decrypt: input must be [ciphertext || iv(16) || hmac(32)]. Verifies
+     * HMAC before decrypting (constant-time). Returns the plaintext or
+     * `LibgmError::Crypto("HMAC mismatch")` on tamper.
+     */
+    fun `decrypt`(`encrypted`: kotlin.ByteArray): kotlin.ByteArray
+    
+    /**
+     * Encrypt: returns [ciphertext || iv(16) || hmac(32)].
+     */
+    fun `encrypt`(`plaintext`: kotlin.ByteArray): kotlin.ByteArray
+    
+    companion object
+}
+
+/**
+ * Holds a 32-byte AES key + 32-byte HMAC key. Construct from the same
+ * `aesKey` / `hmacKey` Kotlin currently stores in `GMessagesSession`.
+ */
+open class AesCtrBox: Disposable, AutoCloseable, AesCtrBoxInterface {
+
+    constructor(pointer: Pointer) {
+        this.pointer = pointer
+        this.cleanable = UniffiLib.CLEANER.register(this, UniffiCleanAction(pointer))
+    }
+
+    /**
+     * This constructor can be used to instantiate a fake object. Only used for tests. Any
+     * attempt to actually use an object constructed this way will fail as there is no
+     * connected Rust object.
+     */
+    @Suppress("UNUSED_PARAMETER")
+    constructor(noPointer: NoPointer) {
+        this.pointer = null
+        this.cleanable = UniffiLib.CLEANER.register(this, UniffiCleanAction(pointer))
+    }
+    /**
+     * Construct from the same 32+32 byte keys Kotlin stores.
+     */
+    constructor(`aesKey`: kotlin.ByteArray, `hmacKey`: kotlin.ByteArray) :
+        this(
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_constructor_aesctrbox_new(
+        FfiConverterByteArray.lower(`aesKey`),FfiConverterByteArray.lower(`hmacKey`),_status)
+}
+    )
+
+    protected val pointer: Pointer?
+    protected val cleanable: UniffiCleaner.Cleanable
+
+    private val wasDestroyed = AtomicBoolean(false)
+    private val callCounter = AtomicLong(1)
+
+    override fun destroy() {
+        // Only allow a single call to this method.
+        // TODO: maybe we should log a warning if called more than once?
+        if (this.wasDestroyed.compareAndSet(false, true)) {
+            // This decrement always matches the initial count of 1 given at creation time.
+            if (this.callCounter.decrementAndGet() == 0L) {
+                cleanable.clean()
+            }
+        }
+    }
+
+    @Synchronized
+    override fun close() {
+        this.destroy()
+    }
+
+    internal inline fun <R> callWithPointer(block: (ptr: Pointer) -> R): R {
+        // Check and increment the call counter, to keep the object alive.
+        // This needs a compare-and-set retry loop in case of concurrent updates.
+        do {
+            val c = this.callCounter.get()
+            if (c == 0L) {
+                throw IllegalStateException("${this.javaClass.simpleName} object has already been destroyed")
+            }
+            if (c == Long.MAX_VALUE) {
+                throw IllegalStateException("${this.javaClass.simpleName} call counter would overflow")
+            }
+        } while (! this.callCounter.compareAndSet(c, c + 1L))
+        // Now we can safely do the method call without the pointer being freed concurrently.
+        try {
+            return block(this.uniffiClonePointer())
+        } finally {
+            // This decrement always matches the increment we performed above.
+            if (this.callCounter.decrementAndGet() == 0L) {
+                cleanable.clean()
+            }
+        }
+    }
+
+    // Use a static inner class instead of a closure so as not to accidentally
+    // capture `this` as part of the cleanable's action.
+    private class UniffiCleanAction(private val pointer: Pointer?) : Runnable {
+        override fun run() {
+            pointer?.let { ptr ->
+                uniffiRustCall { status ->
+                    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_free_aesctrbox(ptr, status)
+                }
+            }
+        }
+    }
+
+    fun uniffiClonePointer(): Pointer {
+        return uniffiRustCall() { status ->
+            UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_clone_aesctrbox(pointer!!, status)
+        }
+    }
+
+    
+    /**
+     * Decrypt: input must be [ciphertext || iv(16) || hmac(32)]. Verifies
+     * HMAC before decrypting (constant-time). Returns the plaintext or
+     * `LibgmError::Crypto("HMAC mismatch")` on tamper.
+     */
+    @Throws(LibgmException::class)override fun `decrypt`(`encrypted`: kotlin.ByteArray): kotlin.ByteArray {
+            return FfiConverterByteArray.lift(
+    callWithPointer {
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_aesctrbox_decrypt(
+        it, FfiConverterByteArray.lower(`encrypted`),_status)
+}
+    }
+    )
+    }
+    
+
+    
+    /**
+     * Encrypt: returns [ciphertext || iv(16) || hmac(32)].
+     */
+    @Throws(LibgmException::class)override fun `encrypt`(`plaintext`: kotlin.ByteArray): kotlin.ByteArray {
+            return FfiConverterByteArray.lift(
+    callWithPointer {
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_aesctrbox_encrypt(
+        it, FfiConverterByteArray.lower(`plaintext`),_status)
+}
+    }
+    )
+    }
+    
+
+    
+
+    
+    
+    companion object
+    
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeAesCtrBox: FfiConverter<AesCtrBox, Pointer> {
+
+    override fun lower(value: AesCtrBox): Pointer {
+        return value.uniffiClonePointer()
+    }
+
+    override fun lift(value: Pointer): AesCtrBox {
+        return AesCtrBox(value)
+    }
+
+    override fun read(buf: ByteBuffer): AesCtrBox {
+        // The Rust code always writes pointers as 8 bytes, and will
+        // fail to compile if they don't fit.
+        return lift(Pointer(buf.getLong()))
+    }
+
+    override fun allocationSize(value: AesCtrBox) = 8UL
+
+    override fun write(value: AesCtrBox, buf: ByteBuffer) {
+        // The Rust code always expects pointers written as 8 bytes,
+        // and will fail to compile if they don't fit.
+        buf.putLong(Pointer.nativeValue(lower(value)))
+    }
+}
+
+
+// This template implements a class for working with a Rust struct via a Pointer/Arc<T>
+// to the live Rust struct on the other side of the FFI.
+//
+// Each instance implements core operations for working with the Rust `Arc<T>` and the
+// Kotlin Pointer to work with the live Rust struct on the other side of the FFI.
+//
+// There's some subtlety here, because we have to be careful not to operate on a Rust
+// struct after it has been dropped, and because we must expose a public API for freeing
+// theq Kotlin wrapper object in lieu of reliable finalizers. The core requirements are:
+//
+//   * Each instance holds an opaque pointer to the underlying Rust struct.
+//     Method calls need to read this pointer from the object's state and pass it in to
+//     the Rust FFI.
+//
+//   * When an instance is no longer needed, its pointer should be passed to a
+//     special destructor function provided by the Rust FFI, which will drop the
+//     underlying Rust struct.
+//
+//   * Given an instance, calling code is expected to call the special
+//     `destroy` method in order to free it after use, either by calling it explicitly
+//     or by using a higher-level helper like the `use` method. Failing to do so risks
+//     leaking the underlying Rust struct.
+//
+//   * We can't assume that calling code will do the right thing, and must be prepared
+//     to handle Kotlin method calls executing concurrently with or even after a call to
+//     `destroy`, and to handle multiple (possibly concurrent!) calls to `destroy`.
+//
+//   * We must never allow Rust code to operate on the underlying Rust struct after
+//     the destructor has been called, and must never call the destructor more than once.
+//     Doing so may trigger memory unsafety.
+//
+//   * To mitigate many of the risks of leaking memory and use-after-free unsafety, a `Cleaner`
+//     is implemented to call the destructor when the Kotlin object becomes unreachable.
+//     This is done in a background thread. This is not a panacea, and client code should be aware that
+//      1. the thread may starve if some there are objects that have poorly performing
+//     `drop` methods or do significant work in their `drop` methods.
+//      2. the thread is shared across the whole library. This can be tuned by using `android_cleaner = true`,
+//         or `android = true` in the [`kotlin` section of the `uniffi.toml` file](https://mozilla.github.io/uniffi-rs/kotlin/configuration.html).
+//
+// If we try to implement this with mutual exclusion on access to the pointer, there is the
+// possibility of a race between a method call and a concurrent call to `destroy`:
+//
+//    * Thread A starts a method call, reads the value of the pointer, but is interrupted
+//      before it can pass the pointer over the FFI to Rust.
+//    * Thread B calls `destroy` and frees the underlying Rust struct.
+//    * Thread A resumes, passing the already-read pointer value to Rust and triggering
+//      a use-after-free.
+//
+// One possible solution would be to use a `ReadWriteLock`, with each method call taking
+// a read lock (and thus allowed to run concurrently) and the special `destroy` method
+// taking a write lock (and thus blocking on live method calls). However, we aim not to
+// generate methods with any hidden blocking semantics, and a `destroy` method that might
+// block if called incorrectly seems to meet that bar.
+//
+// So, we achieve our goals by giving each instance an associated `AtomicLong` counter to track
+// the number of in-flight method calls, and an `AtomicBoolean` flag to indicate whether `destroy`
+// has been called. These are updated according to the following rules:
+//
+//    * The initial value of the counter is 1, indicating a live object with no in-flight calls.
+//      The initial value for the flag is false.
+//
+//    * At the start of each method call, we atomically check the counter.
+//      If it is 0 then the underlying Rust struct has already been destroyed and the call is aborted.
+//      If it is nonzero them we atomically increment it by 1 and proceed with the method call.
+//
+//    * At the end of each method call, we atomically decrement and check the counter.
+//      If it has reached zero then we destroy the underlying Rust struct.
+//
+//    * When `destroy` is called, we atomically flip the flag from false to true.
+//      If the flag was already true we silently fail.
+//      Otherwise we atomically decrement and check the counter.
+//      If it has reached zero then we destroy the underlying Rust struct.
+//
+// Astute readers may observe that this all sounds very similar to the way that Rust's `Arc<T>` works,
+// and indeed it is, with the addition of a flag to guard against multiple calls to `destroy`.
+//
+// The overall effect is that the underlying Rust struct is destroyed only when `destroy` has been
+// called *and* all in-flight method calls have completed, avoiding violating any of the expectations
+// of the underlying Rust code.
+//
+// This makes a cleaner a better alternative to _not_ calling `destroy()` as
+// and when the object is finished with, but the abstraction is not perfect: if the Rust object's `drop`
+// method is slow, and/or there are many objects to cleanup, and it's on a low end Android device, then the cleaner
+// thread may be starved, and the app will leak memory.
+//
+// In this case, `destroy`ing manually may be a better solution.
+//
+// The cleaner can live side by side with the manual calling of `destroy`. In the order of responsiveness, uniffi objects
+// with Rust peers are reclaimed:
+//
+// 1. By calling the `destroy` method of the object, which calls `rustObject.free()`. If that doesn't happen:
+// 2. When the object becomes unreachable, AND the Cleaner thread gets to call `rustObject.free()`. If the thread is starved then:
+// 3. The memory is reclaimed when the process terminates.
+//
+// [1] https://stackoverflow.com/questions/24376768/can-java-finalize-an-object-when-it-is-still-in-scope/24380219
+//
+
+
 /**
  * Public Client object exposed to Kotlin. Wraps `ClientEngine` and a
  * pending pairing session, surfaces the high-level lifecycle methods.
@@ -1838,6 +2308,389 @@ public object FfiConverterTypePairingSession: FfiConverter<PairingSession, Point
 }
 
 
+// This template implements a class for working with a Rust struct via a Pointer/Arc<T>
+// to the live Rust struct on the other side of the FFI.
+//
+// Each instance implements core operations for working with the Rust `Arc<T>` and the
+// Kotlin Pointer to work with the live Rust struct on the other side of the FFI.
+//
+// There's some subtlety here, because we have to be careful not to operate on a Rust
+// struct after it has been dropped, and because we must expose a public API for freeing
+// theq Kotlin wrapper object in lieu of reliable finalizers. The core requirements are:
+//
+//   * Each instance holds an opaque pointer to the underlying Rust struct.
+//     Method calls need to read this pointer from the object's state and pass it in to
+//     the Rust FFI.
+//
+//   * When an instance is no longer needed, its pointer should be passed to a
+//     special destructor function provided by the Rust FFI, which will drop the
+//     underlying Rust struct.
+//
+//   * Given an instance, calling code is expected to call the special
+//     `destroy` method in order to free it after use, either by calling it explicitly
+//     or by using a higher-level helper like the `use` method. Failing to do so risks
+//     leaking the underlying Rust struct.
+//
+//   * We can't assume that calling code will do the right thing, and must be prepared
+//     to handle Kotlin method calls executing concurrently with or even after a call to
+//     `destroy`, and to handle multiple (possibly concurrent!) calls to `destroy`.
+//
+//   * We must never allow Rust code to operate on the underlying Rust struct after
+//     the destructor has been called, and must never call the destructor more than once.
+//     Doing so may trigger memory unsafety.
+//
+//   * To mitigate many of the risks of leaking memory and use-after-free unsafety, a `Cleaner`
+//     is implemented to call the destructor when the Kotlin object becomes unreachable.
+//     This is done in a background thread. This is not a panacea, and client code should be aware that
+//      1. the thread may starve if some there are objects that have poorly performing
+//     `drop` methods or do significant work in their `drop` methods.
+//      2. the thread is shared across the whole library. This can be tuned by using `android_cleaner = true`,
+//         or `android = true` in the [`kotlin` section of the `uniffi.toml` file](https://mozilla.github.io/uniffi-rs/kotlin/configuration.html).
+//
+// If we try to implement this with mutual exclusion on access to the pointer, there is the
+// possibility of a race between a method call and a concurrent call to `destroy`:
+//
+//    * Thread A starts a method call, reads the value of the pointer, but is interrupted
+//      before it can pass the pointer over the FFI to Rust.
+//    * Thread B calls `destroy` and frees the underlying Rust struct.
+//    * Thread A resumes, passing the already-read pointer value to Rust and triggering
+//      a use-after-free.
+//
+// One possible solution would be to use a `ReadWriteLock`, with each method call taking
+// a read lock (and thus allowed to run concurrently) and the special `destroy` method
+// taking a write lock (and thus blocking on live method calls). However, we aim not to
+// generate methods with any hidden blocking semantics, and a `destroy` method that might
+// block if called incorrectly seems to meet that bar.
+//
+// So, we achieve our goals by giving each instance an associated `AtomicLong` counter to track
+// the number of in-flight method calls, and an `AtomicBoolean` flag to indicate whether `destroy`
+// has been called. These are updated according to the following rules:
+//
+//    * The initial value of the counter is 1, indicating a live object with no in-flight calls.
+//      The initial value for the flag is false.
+//
+//    * At the start of each method call, we atomically check the counter.
+//      If it is 0 then the underlying Rust struct has already been destroyed and the call is aborted.
+//      If it is nonzero them we atomically increment it by 1 and proceed with the method call.
+//
+//    * At the end of each method call, we atomically decrement and check the counter.
+//      If it has reached zero then we destroy the underlying Rust struct.
+//
+//    * When `destroy` is called, we atomically flip the flag from false to true.
+//      If the flag was already true we silently fail.
+//      Otherwise we atomically decrement and check the counter.
+//      If it has reached zero then we destroy the underlying Rust struct.
+//
+// Astute readers may observe that this all sounds very similar to the way that Rust's `Arc<T>` works,
+// and indeed it is, with the addition of a flag to guard against multiple calls to `destroy`.
+//
+// The overall effect is that the underlying Rust struct is destroyed only when `destroy` has been
+// called *and* all in-flight method calls have completed, avoiding violating any of the expectations
+// of the underlying Rust code.
+//
+// This makes a cleaner a better alternative to _not_ calling `destroy()` as
+// and when the object is finished with, but the abstraction is not perfect: if the Rust object's `drop`
+// method is slow, and/or there are many objects to cleanup, and it's on a low end Android device, then the cleaner
+// thread may be starved, and the app will leak memory.
+//
+// In this case, `destroy`ing manually may be a better solution.
+//
+// The cleaner can live side by side with the manual calling of `destroy`. In the order of responsiveness, uniffi objects
+// with Rust peers are reclaimed:
+//
+// 1. By calling the `destroy` method of the object, which calls `rustObject.free()`. If that doesn't happen:
+// 2. When the object becomes unreachable, AND the Cleaner thread gets to call `rustObject.free()`. If the thread is starved then:
+// 3. The memory is reclaimed when the process terminates.
+//
+// [1] https://stackoverflow.com/questions/24376768/can-java-finalize-an-object-when-it-is-still-in-scope/24380219
+//
+
+
+/**
+ * UniFFI-exposed pairing session — wraps `pair_google::PairingSession`.
+ */
+public interface RustPairingSessionInterface {
+    
+    /**
+     * Derive the AES-CTR + HMAC session keys. Must be called AFTER
+     * `process_server_init` has populated next_key + server_init.
+     * Returns `[aes_key, hmac_key]` as a 2-element Vec.
+     */
+    fun `deriveRequestCryptoKeys`(): List<kotlin.ByteArray>
+    
+    /**
+     * The internal `next_key` — exposed for diagnostic only (to compare
+     * Kotlin's Ukey2Handshake.nextKey vs the Rust impl byte-for-byte).
+     */
+    fun `nextKeyHex`(): kotlin.String
+    
+    /**
+     * UUID string of this pairing session (used as pairingAttemptID in
+     * the GaiaPairingRequestContainer).
+     */
+    fun `pairingUuid`(): kotlin.String
+    
+    /**
+     * Build CLIENT_INIT + CLIENT_FINISH UKEY2 payloads. Returns a
+     * 2-element Vec: `[init_bytes, finish_bytes]`. Both are stashed
+     * internally; `process_server_init` will SHA-512-commit-check
+     * against the stored finish_bytes.
+     */
+    fun `preparePayloads`(): List<kotlin.ByteArray>
+    
+    /**
+     * Process the SERVER_INIT response wrapped in a
+     * GaiaPairingResponseContainer. Caller provides the raw container
+     * bytes (the wire-decoded version of what Google sent back on the
+     * long-poll); we re-decode internally to keep the Rust crate the
+     * sole source of truth on container shape.
+     *
+     * Returns the emoji string to display to the user.
+     */
+    fun `processServerInit`(`gaiaPairingResponseContainerBytes`: kotlin.ByteArray): kotlin.String
+    
+    /**
+     * Unix milliseconds — for the GaiaPairingRequestContainer.startTimestamp.
+     */
+    fun `startTimestampMillis`(): kotlin.Long
+    
+    companion object
+}
+
+/**
+ * UniFFI-exposed pairing session — wraps `pair_google::PairingSession`.
+ */
+open class RustPairingSession: Disposable, AutoCloseable, RustPairingSessionInterface {
+
+    constructor(pointer: Pointer) {
+        this.pointer = pointer
+        this.cleanable = UniffiLib.CLEANER.register(this, UniffiCleanAction(pointer))
+    }
+
+    /**
+     * This constructor can be used to instantiate a fake object. Only used for tests. Any
+     * attempt to actually use an object constructed this way will fail as there is no
+     * connected Rust object.
+     */
+    @Suppress("UNUSED_PARAMETER")
+    constructor(noPointer: NoPointer) {
+        this.pointer = null
+        this.cleanable = UniffiLib.CLEANER.register(this, UniffiCleanAction(pointer))
+    }
+    constructor() :
+        this(
+    uniffiRustCall() { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_constructor_rustpairingsession_new(
+        _status)
+}
+    )
+
+    protected val pointer: Pointer?
+    protected val cleanable: UniffiCleaner.Cleanable
+
+    private val wasDestroyed = AtomicBoolean(false)
+    private val callCounter = AtomicLong(1)
+
+    override fun destroy() {
+        // Only allow a single call to this method.
+        // TODO: maybe we should log a warning if called more than once?
+        if (this.wasDestroyed.compareAndSet(false, true)) {
+            // This decrement always matches the initial count of 1 given at creation time.
+            if (this.callCounter.decrementAndGet() == 0L) {
+                cleanable.clean()
+            }
+        }
+    }
+
+    @Synchronized
+    override fun close() {
+        this.destroy()
+    }
+
+    internal inline fun <R> callWithPointer(block: (ptr: Pointer) -> R): R {
+        // Check and increment the call counter, to keep the object alive.
+        // This needs a compare-and-set retry loop in case of concurrent updates.
+        do {
+            val c = this.callCounter.get()
+            if (c == 0L) {
+                throw IllegalStateException("${this.javaClass.simpleName} object has already been destroyed")
+            }
+            if (c == Long.MAX_VALUE) {
+                throw IllegalStateException("${this.javaClass.simpleName} call counter would overflow")
+            }
+        } while (! this.callCounter.compareAndSet(c, c + 1L))
+        // Now we can safely do the method call without the pointer being freed concurrently.
+        try {
+            return block(this.uniffiClonePointer())
+        } finally {
+            // This decrement always matches the increment we performed above.
+            if (this.callCounter.decrementAndGet() == 0L) {
+                cleanable.clean()
+            }
+        }
+    }
+
+    // Use a static inner class instead of a closure so as not to accidentally
+    // capture `this` as part of the cleanable's action.
+    private class UniffiCleanAction(private val pointer: Pointer?) : Runnable {
+        override fun run() {
+            pointer?.let { ptr ->
+                uniffiRustCall { status ->
+                    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_free_rustpairingsession(ptr, status)
+                }
+            }
+        }
+    }
+
+    fun uniffiClonePointer(): Pointer {
+        return uniffiRustCall() { status ->
+            UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_clone_rustpairingsession(pointer!!, status)
+        }
+    }
+
+    
+    /**
+     * Derive the AES-CTR + HMAC session keys. Must be called AFTER
+     * `process_server_init` has populated next_key + server_init.
+     * Returns `[aes_key, hmac_key]` as a 2-element Vec.
+     */
+    @Throws(LibgmException::class)override fun `deriveRequestCryptoKeys`(): List<kotlin.ByteArray> {
+            return FfiConverterSequenceByteArray.lift(
+    callWithPointer {
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustpairingsession_derive_request_crypto_keys(
+        it, _status)
+}
+    }
+    )
+    }
+    
+
+    
+    /**
+     * The internal `next_key` — exposed for diagnostic only (to compare
+     * Kotlin's Ukey2Handshake.nextKey vs the Rust impl byte-for-byte).
+     */override fun `nextKeyHex`(): kotlin.String {
+            return FfiConverterString.lift(
+    callWithPointer {
+    uniffiRustCall() { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustpairingsession_next_key_hex(
+        it, _status)
+}
+    }
+    )
+    }
+    
+
+    
+    /**
+     * UUID string of this pairing session (used as pairingAttemptID in
+     * the GaiaPairingRequestContainer).
+     */override fun `pairingUuid`(): kotlin.String {
+            return FfiConverterString.lift(
+    callWithPointer {
+    uniffiRustCall() { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustpairingsession_pairing_uuid(
+        it, _status)
+}
+    }
+    )
+    }
+    
+
+    
+    /**
+     * Build CLIENT_INIT + CLIENT_FINISH UKEY2 payloads. Returns a
+     * 2-element Vec: `[init_bytes, finish_bytes]`. Both are stashed
+     * internally; `process_server_init` will SHA-512-commit-check
+     * against the stored finish_bytes.
+     */
+    @Throws(LibgmException::class)override fun `preparePayloads`(): List<kotlin.ByteArray> {
+            return FfiConverterSequenceByteArray.lift(
+    callWithPointer {
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustpairingsession_prepare_payloads(
+        it, _status)
+}
+    }
+    )
+    }
+    
+
+    
+    /**
+     * Process the SERVER_INIT response wrapped in a
+     * GaiaPairingResponseContainer. Caller provides the raw container
+     * bytes (the wire-decoded version of what Google sent back on the
+     * long-poll); we re-decode internally to keep the Rust crate the
+     * sole source of truth on container shape.
+     *
+     * Returns the emoji string to display to the user.
+     */
+    @Throws(LibgmException::class)override fun `processServerInit`(`gaiaPairingResponseContainerBytes`: kotlin.ByteArray): kotlin.String {
+            return FfiConverterString.lift(
+    callWithPointer {
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustpairingsession_process_server_init(
+        it, FfiConverterByteArray.lower(`gaiaPairingResponseContainerBytes`),_status)
+}
+    }
+    )
+    }
+    
+
+    
+    /**
+     * Unix milliseconds — for the GaiaPairingRequestContainer.startTimestamp.
+     */override fun `startTimestampMillis`(): kotlin.Long {
+            return FfiConverterLong.lift(
+    callWithPointer {
+    uniffiRustCall() { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustpairingsession_start_timestamp_millis(
+        it, _status)
+}
+    }
+    )
+    }
+    
+
+    
+
+    
+    
+    companion object
+    
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeRustPairingSession: FfiConverter<RustPairingSession, Pointer> {
+
+    override fun lower(value: RustPairingSession): Pointer {
+        return value.uniffiClonePointer()
+    }
+
+    override fun lift(value: Pointer): RustPairingSession {
+        return RustPairingSession(value)
+    }
+
+    override fun read(buf: ByteBuffer): RustPairingSession {
+        // The Rust code always writes pointers as 8 bytes, and will
+        // fail to compile if they don't fit.
+        return lift(Pointer(buf.getLong()))
+    }
+
+    override fun allocationSize(value: RustPairingSession) = 8UL
+
+    override fun write(value: RustPairingSession, buf: ByteBuffer) {
+        // The Rust code always expects pointers written as 8 bytes,
+        // and will fail to compile if they don't fit.
+        buf.putLong(Pointer.nativeValue(lower(value)))
+    }
+}
+
+
 
 
 
@@ -2022,6 +2875,34 @@ public object FfiConverterTypeLibgmError : FfiConverterRustBuffer<LibgmException
 /**
  * @suppress
  */
+public object FfiConverterSequenceByteArray: FfiConverterRustBuffer<List<kotlin.ByteArray>> {
+    override fun read(buf: ByteBuffer): List<kotlin.ByteArray> {
+        val len = buf.getInt()
+        return List<kotlin.ByteArray>(len) {
+            FfiConverterByteArray.read(buf)
+        }
+    }
+
+    override fun allocationSize(value: List<kotlin.ByteArray>): ULong {
+        val sizeForLength = 4UL
+        val sizeForItems = value.map { FfiConverterByteArray.allocationSize(it) }.sum()
+        return sizeForLength + sizeForItems
+    }
+
+    override fun write(value: List<kotlin.ByteArray>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        value.iterator().forEach {
+            FfiConverterByteArray.write(it, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
 public object FfiConverterMapStringString: FfiConverterRustBuffer<Map<kotlin.String, kotlin.String>> {
     override fun read(buf: ByteBuffer): Map<kotlin.String, kotlin.String> {
         val len = buf.getInt()
@@ -2061,6 +2942,39 @@ public object FfiConverterMapStringString: FfiConverterRustBuffer<Map<kotlin.Str
 
 
 
+
+        /**
+         * One-shot session-key derivation. Drop-in for Kotlin's
+         * `SessionCrypto.deriveSessionKeys(nextKey, confirmedKeyDerivationVersion)`.
+         * Returns `(aes_key, hmac_key)` as a 2-element `Vec<Vec<u8>>` because
+         * UniFFI's tuple support is limited.
+         *
+         * Implements both v0 (direct mapping) and v1 (sorted-concat + HKDF). Both
+         * match the Go reference at pair_google.go:452-473 byte-for-byte.
+         */
+    @Throws(LibgmException::class) fun `deriveSessionKeys`(`nextKey`: kotlin.ByteArray, `confirmedKeyDerivationVersion`: kotlin.Int): List<kotlin.ByteArray> {
+            return FfiConverterSequenceByteArray.lift(
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_derive_session_keys(
+        FfiConverterByteArray.lower(`nextKey`),FfiConverterInt.lower(`confirmedKeyDerivationVersion`),_status)
+}
+    )
+    }
+    
+
+        /**
+         * HKDF-SHA256 → 32 bytes. Direct port of mautrix's `doHKDF(key, salt, info)`.
+         * Exposes the same primitive Kotlin's SessionCrypto needs.
+         */
+    @Throws(LibgmException::class) fun `rustHkdfSha256`(`ikm`: kotlin.ByteArray, `salt`: kotlin.ByteArray, `info`: kotlin.ByteArray): kotlin.ByteArray {
+            return FfiConverterByteArray.lift(
+    uniffiRustCallWithError(LibgmException) { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_rust_hkdf_sha256(
+        FfiConverterByteArray.lower(`ikm`),FfiConverterByteArray.lower(`salt`),FfiConverterByteArray.lower(`info`),_status)
+}
+    )
+    }
+    
  fun `version`(): kotlin.String {
             return FfiConverterString.lift(
     uniffiRustCall() { _status ->

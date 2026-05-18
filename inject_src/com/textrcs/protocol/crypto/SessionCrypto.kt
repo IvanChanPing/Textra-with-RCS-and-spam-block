@@ -50,6 +50,28 @@ object SessionCrypto {
      * @return an [AESCTRHelper] ready to encrypt/decrypt session envelopes.
      */
     fun deriveSessionKeys(nextKey: ByteArray, confirmedKeyDerivationVersion: Int): AESCTRHelper {
+        // v0.52: delegate to Rust to rule out a Kotlin-side derivation bug as
+        // the cause of the HMAC-mismatch issue (see project memory
+        // `textrcs-v51-send-root-cause-hmac-mismatch-2026-05-18`). On any
+        // Rust failure (e.g. .so not loaded), fall back to the Kotlin path
+        // so we never break a working pair. Both impls are byte-for-byte
+        // mirrors of mautrix Go pair_google.go:452-473; this lets us A/B
+        // test which one Google's server accepts.
+        try {
+            val pair = uniffi.textrcs_libgm.deriveSessionKeys(nextKey, confirmedKeyDerivationVersion)
+            val aes = pair[0]
+            val hmac = pair[1]
+            android.util.Log.i(
+                "TextrcsLibgmCrypto",
+                "deriveSessionKeys via Rust ver=$confirmedKeyDerivationVersion aes.len=${aes.size} hmac.len=${hmac.size} nextKey.len=${nextKey.size}",
+            )
+            return AESCTRHelper(aesKey = aes, hmacKey = hmac)
+        } catch (t: Throwable) {
+            android.util.Log.w(
+                "TextrcsLibgmCrypto",
+                "Rust deriveSessionKeys failed (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin path",
+            )
+        }
         val clientKey = HkdfSha256.derive(nextKey, ENCRYPTION_KEY_INFO, "client".toByteArray())
         val serverKey = HkdfSha256.derive(nextKey, ENCRYPTION_KEY_INFO, "server".toByteArray())
 

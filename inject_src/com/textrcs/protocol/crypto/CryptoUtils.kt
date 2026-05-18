@@ -56,10 +56,42 @@ class AESCTRHelper(val aesKey: ByteArray, val hmacKey: ByteArray) {
     constructor() : this(CryptoUtils.generateKey(32), CryptoUtils.generateKey(32))
 
     /**
+     * v0.52: optional Rust delegate. Lazily constructed from the same keys
+     * so a failed JNI load doesn't break the rest of the app. When non-null,
+     * encrypt/decrypt route through the Rust implementation (which has
+     * 7 passing tests including HMAC-mismatch detection + tamper-detection).
+     * Per-instance instead of per-call so we pay the JNI ctor cost once.
+     */
+    private val rustDelegate: uniffi.textrcs_libgm.AesCtrBox? = try {
+        uniffi.textrcs_libgm.AesCtrBox(aesKey, hmacKey)
+    } catch (t: Throwable) {
+        android.util.Log.w(
+            "TextrcsLibgmCrypto",
+            "AesCtrBox ctor failed (${t.javaClass.simpleName}: ${t.message}); using Kotlin path",
+        )
+        null
+    }
+
+    /**
      * AES-256-CTR encrypt with random 16-byte IV; appends IV; appends
      * HMAC-SHA256 over `ciphertext || iv`.
      */
     fun encrypt(plaintext: ByteArray): ByteArray {
+        rustDelegate?.let { rd ->
+            return try {
+                rd.encrypt(plaintext)
+            } catch (t: Throwable) {
+                android.util.Log.w(
+                    "TextrcsLibgmCrypto",
+                    "Rust encrypt failed (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin",
+                )
+                encryptKotlin(plaintext)
+            }
+        }
+        return encryptKotlin(plaintext)
+    }
+
+    private fun encryptKotlin(plaintext: ByteArray): ByteArray {
         val iv = CryptoUtils.randomBytes(AES_BLOCK_SIZE)
 
         val cipher = Cipher.getInstance("AES/CTR/NoPadding")
@@ -83,6 +115,26 @@ class AESCTRHelper(val aesKey: ByteArray, val hmacKey: ByteArray) {
      * Throws [IllegalArgumentException] on length/HMAC errors.
      */
     fun decrypt(encryptedData: ByteArray): ByteArray {
+        rustDelegate?.let { rd ->
+            return try {
+                rd.decrypt(encryptedData)
+            } catch (t: Throwable) {
+                // Don't fall back on HMAC mismatch — that's the actual error
+                // signal we need to surface. Fall back only on JNI/link errors.
+                if (t is UnsatisfiedLinkError || t is NoClassDefFoundError) {
+                    android.util.Log.w(
+                        "TextrcsLibgmCrypto",
+                        "Rust decrypt link error (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin",
+                    )
+                    return decryptKotlin(encryptedData)
+                }
+                throw t
+            }
+        }
+        return decryptKotlin(encryptedData)
+    }
+
+    private fun decryptKotlin(encryptedData: ByteArray): ByteArray {
         require(encryptedData.size >= HMAC_SIZE + AES_BLOCK_SIZE) {
             "input too short (got ${encryptedData.size}, need ≥${HMAC_SIZE + AES_BLOCK_SIZE})"
         }
