@@ -27,6 +27,13 @@ KOTLIN_STDLIB="$GRADLE/org.jetbrains.kotlin/kotlin-stdlib/1.9.22/d6c44cd08d8f3f9
 JB_ANNOTATIONS="$GRADLE/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar"
 TROVE4J="$GRADLE/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar"
 PROTOBUF_JAVA="$GRADLE/com.google.protobuf/protobuf-java/3.24.4/a773e5a3845e6baa5c4ede5532c426ebe6c53330/protobuf-java-3.24.4.jar"
+# JNA — needed by the UniFFI-generated Kotlin bindings (uniffi/textrcs_libgm/textrcs_libgm.kt).
+# We bundle the @aar variant's classes.jar at $PROJ/build-deps/jna-5.13.0.jar and
+# its per-ABI libjnidispatch.so files are already in $BASE/lib/<abi>/.
+JNA_JAR="$PROJ/build-deps/jna-5.13.0.jar"
+# kotlinx-coroutines — UniFFI Kotlin uses suspend fns for async Rust exports.
+COROUTINES_CORE="$PROJ/build-deps/kotlinx-coroutines-core-jvm-1.7.3.jar"
+COROUTINES_ANDROID="$PROJ/build-deps/kotlinx-coroutines-android-1.7.3.jar"
 
 KEYSTORE="$PROJ/textrcs.keystore"
 KS_PASS="textrcs-pass"
@@ -64,7 +71,7 @@ else
   java -cp "$KOTLIN_COMPILER:$KOTLIN_STDLIB:$TROVE4J:$JB_ANNOTATIONS" \
     org.jetbrains.kotlin.cli.jvm.K2JVMCompiler \
     $KT_SOURCES \
-    -classpath "$ANDROID_JAR:$KOTLIN_STDLIB:$PROTOBUF_JAVA:${PROTO_JAR:-}" \
+    -classpath "$ANDROID_JAR:$KOTLIN_STDLIB:$PROTOBUF_JAVA:$JNA_JAR:$COROUTINES_CORE:$COROUTINES_ANDROID:${PROTO_JAR:-}" \
     -no-stdlib \
     -d "$BUILD/app.jar" \
     -jvm-target 1.8 \
@@ -80,6 +87,11 @@ rm -f "$BUILD/classes.dex"
 D8_INPUTS=()
 [ -n "$PROTO_JAR" ] && D8_INPUTS+=("$PROTO_JAR") && D8_INPUTS+=("$PROTOBUF_JAVA")
 [ -n "$APP_JAR" ]   && D8_INPUTS+=("$APP_JAR")   && D8_INPUTS+=("$KOTLIN_STDLIB")
+# JNA classes — UniFFI Kotlin bindings depend on com.sun.jna.*
+D8_INPUTS+=("$JNA_JAR")
+# kotlinx-coroutines — UniFFI uses suspend fns
+D8_INPUTS+=("$COROUTINES_CORE")
+D8_INPUTS+=("$COROUTINES_ANDROID")
 "$D8" "${D8_INPUTS[@]}" \
   --classpath "$ANDROID_JAR" \
   --min-api 27 \
@@ -91,23 +103,57 @@ D8_INPUTS=()
 # ─────────────────────────────────────────────────────────────────────
 echo "[4/6] baksmali → smali"
 rm -rf "$SMALI_OUT"
-"$BAKSMALI" disassemble "$BUILD/classes.dex" -o "$SMALI_OUT" 2>&1
+# d8 may emit multiple dex files (classes.dex, classes2.dex, ...) when the
+# input exceeds the 64K-method limit per dex. baksmali each in turn into
+# the same output dir; later passes overlay missing classes (no overlap
+# in practice since each class lives in exactly one dex).
+for dex in "$BUILD"/classes*.dex; do
+  echo "  baksmali $(basename $dex)"
+  "$BAKSMALI" disassemble "$dex" -o "$SMALI_OUT" 2>&1
+done
 
 # ─────────────────────────────────────────────────────────────────────
 # 5. Merge into textra_base
 # ─────────────────────────────────────────────────────────────────────
 echo "[5/6] merge into $INJECT_DEX_SLOT"
-# Wipe previous textrcs injection + dep stdlibs (avoid stale)
-rm -rf "$INJECT_DEX_SLOT/com/textrcs" "$INJECT_DEX_SLOT/com/google/protobuf" "$INJECT_DEX_SLOT/kotlin"
-for d in com/textrcs com/google/protobuf kotlin; do
-  if [ -d "$SMALI_OUT/$d" ]; then
-    mkdir -p "$INJECT_DEX_SLOT/$(dirname $d)"
-    cp -r "$SMALI_OUT/$d" "$INJECT_DEX_SLOT/$(dirname $d)/"
-  fi
-done
-echo "  textrcs:        $(find "$INJECT_DEX_SLOT/com/textrcs"        -name '*.smali' 2>/dev/null | wc -l)"
-echo "  protobuf:       $(find "$INJECT_DEX_SLOT/com/google/protobuf" -name '*.smali' 2>/dev/null | wc -l)"
-echo "  kotlin stdlib:  $(find "$INJECT_DEX_SLOT/kotlin"             -name '*.smali' 2>/dev/null | wc -l)"
+# Strategy: smali_classes4 stayed pristine pre-textrcs (3862 cracker files).
+# Adding ALL our new classes into one new slot put us over the 64K-method
+# per-dex limit again (65551). Split across 3 new slots:
+#   smali_classes5: kotlin stdlib (bulky, single namespace)
+#   smali_classes6: kotlinx + _COROUTINE (suspend-fn impls are method-heavy)
+#   smali_classes7: protobuf + jna + uniffi + textrcs (mixed)
+DEX_SLOT5="$BASE/smali_classes5"
+DEX_SLOT6="$BASE/smali_classes6"
+DEX_SLOT7="$BASE/smali_classes7"
+# Wipe any prior textrcs/dep injection — drop them everywhere they could
+# have landed from a previous build.
+rm -rf "$INJECT_DEX_SLOT/com/textrcs" "$INJECT_DEX_SLOT/com/google/protobuf" "$INJECT_DEX_SLOT/kotlin" "$INJECT_DEX_SLOT/kotlinx" "$INJECT_DEX_SLOT/com/sun/jna" "$INJECT_DEX_SLOT/uniffi" "$INJECT_DEX_SLOT/_COROUTINE"
+rm -rf "$DEX_SLOT5" "$DEX_SLOT6" "$DEX_SLOT7"
+mkdir -p "$DEX_SLOT5" "$DEX_SLOT6/com" "$DEX_SLOT7/com"
+
+# slot5: kotlin
+[ -d "$SMALI_OUT/kotlin" ] && cp -r "$SMALI_OUT/kotlin" "$DEX_SLOT5/"
+
+# slot6: kotlinx + _COROUTINE
+[ -d "$SMALI_OUT/kotlinx" ]    && cp -r "$SMALI_OUT/kotlinx"    "$DEX_SLOT6/"
+[ -d "$SMALI_OUT/_COROUTINE" ] && cp -r "$SMALI_OUT/_COROUTINE" "$DEX_SLOT6/"
+
+# slot7: protobuf + jna + uniffi + textrcs
+[ -d "$SMALI_OUT/com/google/protobuf" ] && mkdir -p "$DEX_SLOT7/com/google" && cp -r "$SMALI_OUT/com/google/protobuf" "$DEX_SLOT7/com/google/"
+[ -d "$SMALI_OUT/com/sun/jna" ]         && mkdir -p "$DEX_SLOT7/com/sun"   && cp -r "$SMALI_OUT/com/sun/jna"         "$DEX_SLOT7/com/sun/"
+[ -d "$SMALI_OUT/com/textrcs" ]         && mkdir -p "$DEX_SLOT7/com"       && cp -r "$SMALI_OUT/com/textrcs"         "$DEX_SLOT7/com/"
+[ -d "$SMALI_OUT/uniffi" ]              && cp -r "$SMALI_OUT/uniffi"      "$DEX_SLOT7/"
+
+echo "  smali_classes5 (kotlin):"
+echo "    kotlin:         $(find "$DEX_SLOT5/kotlin" -name '*.smali' 2>/dev/null | wc -l)"
+echo "  smali_classes6 (kotlinx + _COROUTINE):"
+echo "    kotlinx:        $(find "$DEX_SLOT6/kotlinx" -name '*.smali' 2>/dev/null | wc -l)"
+echo "    _COROUTINE:     $(find "$DEX_SLOT6/_COROUTINE" -name '*.smali' 2>/dev/null | wc -l)"
+echo "  smali_classes7 (protobuf + jna + uniffi + textrcs):"
+echo "    protobuf:       $(find "$DEX_SLOT7/com/google/protobuf" -name '*.smali' 2>/dev/null | wc -l)"
+echo "    jna:            $(find "$DEX_SLOT7/com/sun/jna" -name '*.smali' 2>/dev/null | wc -l)"
+echo "    uniffi:         $(find "$DEX_SLOT7/uniffi" -name '*.smali' 2>/dev/null | wc -l)"
+echo "    textrcs:        $(find "$DEX_SLOT7/com/textrcs" -name '*.smali' 2>/dev/null | wc -l)"
 
 # ─────────────────────────────────────────────────────────────────────
 # 6. apktool b → sign
