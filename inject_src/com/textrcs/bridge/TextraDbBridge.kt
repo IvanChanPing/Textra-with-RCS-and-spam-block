@@ -2,6 +2,7 @@ package com.textrcs.bridge
 
 import android.content.Context
 import android.util.Log
+import com.textrcs.control.Hooks
 
 /**
  * Reflective bridge into Textra's obfuscated data layer (`com.mplus.lib.r4.*`).
@@ -60,13 +61,29 @@ object TextraDbBridge {
      * @return true if the write succeeded
      */
     fun writeIncoming(senderPhone: String, body: String, timestampMs: Long): Boolean {
+        // [REMOTE_HOOK v0.58] dbbridge_write_skip — short-circuit the DB
+        // write entirely (debug: see if writes are the cause of UI dup).
+        if (Hooks.shouldSkip("dbbridge_write_skip", mapOf("senderTail" to senderPhone.takeLast(4), "len" to body.length))) {
+            Log.w(TAG, "writeIncoming SKIPPED by hook")
+            return false
+        }
+        // [REMOTE_HOOK v0.58] dbbridge_phone_override — override the sender
+        // phone (useful when the sender field from libgm is a name not phone,
+        // which is the documented dup root cause).
+        val effSender = Hooks.overrideString("dbbridge_phone_override", senderPhone)
+        // [REMOTE_HOOK v0.58] dbbridge_recipient_id_override — sometimes the
+        // dup bug needs the recipient row's `b` field set explicitly.
+        val recipientIdOverride = Hooks.overrideLong("dbbridge_recipient_id_override", -1L)
+        // [REMOTE_HOOK v0.58] dbbridge_notif_skip — write to DB but skip
+        // the P4.p.T notification trigger (debug duplicate-notif theories).
+        val skipNotif = Hooks.shouldSkip("dbbridge_notif_skip")
         return try {
             // 1. Build a r4.l recipient.
             val lClass = Class.forName(L_CLASS)
             val lCtor = lClass.getDeclaredConstructor(
                 String::class.java, java.lang.Long.TYPE, String::class.java,
             )
-            val recipient = lCtor.newInstance(senderPhone, -1L, null)
+            val recipient = lCtor.newInstance(effSender, recipientIdOverride, null)
 
             // 2. Build the r4.n recipient list and add the recipient to it.
             val nClass = Class.forName(N_CLASS)
@@ -98,15 +115,19 @@ object TextraDbBridge {
             //    Textra's own NotificationMgr so the user gets the EXACT same
             //    notification style/sound/look as for cellular SMS.
             try {
-                val poClass = Class.forName(PO_CLASS)
-                val po = poClass.getDeclaredConstructor().newInstance()
-                val pClass = Class.forName(P_CLASS)
-                val pSingleton = pClass.getDeclaredMethod("P").invoke(null)
-                if (pSingleton != null) {
-                    val tMethod = pClass.getDeclaredMethod("T", j0Class, poClass)
-                    tMethod.invoke(pSingleton, msg, po)
+                if (skipNotif) {
+                    Log.w(TAG, "P4.p.T notification SKIPPED by hook")
                 } else {
-                    Log.w(TAG, "P4.p.P() returned null — notification skipped")
+                    val poClass = Class.forName(PO_CLASS)
+                    val po = poClass.getDeclaredConstructor().newInstance()
+                    val pClass = Class.forName(P_CLASS)
+                    val pSingleton = pClass.getDeclaredMethod("P").invoke(null)
+                    if (pSingleton != null) {
+                        val tMethod = pClass.getDeclaredMethod("T", j0Class, poClass)
+                        tMethod.invoke(pSingleton, msg, po)
+                    } else {
+                        Log.w(TAG, "P4.p.P() returned null — notification skipped")
+                    }
                 }
             } catch (e: Throwable) {
                 Log.w(TAG, "P4.p.T notification trigger failed: ${e.javaClass.simpleName}: ${e.message}")

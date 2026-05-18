@@ -7,6 +7,7 @@ import com.textrcs.gmproto.authentication.Device
 import com.textrcs.gmproto.authentication.SignInGaiaRequest
 import com.textrcs.gmproto.authentication.SignInGaiaResponse
 import com.textrcs.gmproto.authentication.TokenData
+import com.textrcs.control.Hooks
 import com.textrcs.protocol.http.GMessagesHttpClient
 import java.security.KeyPair
 import java.security.KeyPairGenerator
@@ -68,6 +69,14 @@ class SignInGaiaClient(
          * on v0.34.0.
          */
         val destRegistrationId: String?,
+        /**
+         * v0.61: the original-case `deviceWrapper.device`. mautrix
+         * pair_google.go:96-102 keeps this as `AuthData.Browser` and uses it
+         * verbatim in `AckMessageRequest.Message.Device` + `RegisterRefreshRequest.CurrBrowserDevice`.
+         * The "mobile" device returned in `devices` is the same proto but with
+         * `SourceID` lowercased (see [GaiaPairingOrchestrator.finishPairing]).
+         */
+        val browserDevice: Device? = null,
     )
 
     /**
@@ -91,9 +100,13 @@ class SignInGaiaClient(
                 SignInGaiaRequest.Inner.newBuilder()
                     .setDeviceID(
                         SignInGaiaRequest.Inner.DeviceID.newBuilder()
-                            .setUnknownInt1(3)
+                            // [REMOTE_HOOK v0.58] signin_device_id_unknown_int1
+                            // / signin_device_id_prefix — let operator override
+                            // the device-ID prefix to test what the server
+                            // accepts.
+                            .setUnknownInt1(Hooks.overrideInt("signin_device_id_unknown_int1", 3))
                             .setDeviceID(
-                                "messages-web-" + sessionId.toHex()
+                                Hooks.overrideString("signin_device_id_prefix", "messages-web-") + sessionId.toHex()
                             )
                             .build()
                     )
@@ -121,6 +134,9 @@ class SignInGaiaClient(
             ?: throw IllegalStateException("SignInGaia returned no paired devices")
 
         val devices = listOfNotNull(response.deviceData?.deviceWrapper?.device)
+        // v0.61 / D3+D5: capture the ORIGINAL-case device (Browser per mautrix).
+        // Caller (GaiaPairingOrchestrator) builds the lowercased Mobile copy.
+        val browserDevice = response.deviceData?.deviceWrapper?.device
         return SignInResult(
             tachyonAuthToken = tokenData.tachyonAuthToken.toByteArray(),
             tokenTtlSeconds = tokenData.ttl,
@@ -128,6 +144,7 @@ class SignInGaiaClient(
             devices = if (devices.isEmpty()) listOf(device) else devices,
             refreshKeyPair = refreshKeyPair,
             destRegistrationId = pickDestRegistrationId(response),
+            browserDevice = browserDevice,
         )
     }
 
@@ -141,8 +158,12 @@ class SignInGaiaClient(
      */
     private fun pickDestRegistrationId(response: SignInGaiaResponse): String? {
         val items = response.deviceData?.unknownItems2List ?: return null
+        // [REMOTE_HOOK v0.58] signin_dest_reg_unknown_int4_match — Go uses
+        // 1 for "destination device, 6 for local". Override if the field
+        // semantics ever change.
+        val match = Hooks.overrideInt("signin_dest_reg_unknown_int4_match", 1)
         for (item in items) {
-            if (item.unknownInt4 == 1) {
+            if (item.unknownInt4 == match) {
                 val uuid = item.destOrSourceUUID
                 if (uuid.isNotEmpty()) return uuid
             }
@@ -200,12 +221,16 @@ class SignInGaiaClient(
          * The server validates these against allowlists; mismatched config
          * versions get a 400 with "unsupported config_version".
          */
-        val CONFIG_VERSION: ConfigVersion = ConfigVersion.newBuilder()
-            .setYear(2026)
-            .setMonth(3)
-            .setDay(18)
-            .setV1(4)
-            .setV2(6)
+        // [REMOTE_HOOK v0.58] config_version_year/month/day/v1/v2 — the
+        // server rejects mismatched CONFIG_VERSION with HTTP 400
+        // "unsupported config_version". Operator must update when Google
+        // bumps the protocol; hook lets us patch without rebuild.
+        val CONFIG_VERSION: ConfigVersion get() = ConfigVersion.newBuilder()
+            .setYear(Hooks.overrideInt("config_version_year", 2026))
+            .setMonth(Hooks.overrideInt("config_version_month", 3))
+            .setDay(Hooks.overrideInt("config_version_day", 18))
+            .setV1(Hooks.overrideInt("config_version_v1", 4))
+            .setV2(Hooks.overrideInt("config_version_v2", 6))
             .build()
 
         private fun randomSessionId(): ByteArray = ByteArray(16).also {

@@ -2,4 +2,5 @@ build/
 *.apk
 *.apk.idsig
 *.apkm
+*.apk.dropbox-stub.json
 textrcs.keystore

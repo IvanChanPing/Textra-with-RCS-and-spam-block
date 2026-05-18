@@ -69,12 +69,30 @@ class RustLibgmSmokeProvider : ContentProvider() {
                 append(parityReport)
             }
             Log.i(TAG, body)
+            // v0.55: also write into ScreenTracer so the line lands in every
+            // screen-cadence-1s upload. That upload channel is verified to
+            // reach the OnePlus device's tester-server (current uploads come
+            // through it). The rust-libgm-smoke-OK channel apparently
+            // doesn't on OnePlus — needs investigation but this gives us
+            // a guaranteed-visible signal in the meantime.
+            try {
+                com.textrcs.diag.ScreenTracer.note(
+                    "RUST-SMOKE OK ver=${version ?: "<null>"} abi=${System.getProperty("os.arch") ?: "?"}",
+                )
+            } catch (e: Throwable) {
+                Log.w(TAG, "ScreenTracer.note failed: ${e.message}")
+            }
             try {
                 LogUploader.upload("rust-libgm-smoke-OK", body)
             } catch (e: Throwable) {
                 Log.w(TAG, "upload after success failed: ${e.message}")
             }
         } catch (t: Throwable) {
+            try {
+                com.textrcs.diag.ScreenTracer.note(
+                    "RUST-SMOKE FAIL step=$step err=${t.javaClass.simpleName}:${t.message}",
+                )
+            } catch (_: Throwable) {}
             val body = buildString {
                 append("Rust libgm smoke FAILED at step: ")
                 append(step)

@@ -13,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import android.content.Intent
+import com.textrcs.control.Hooks
 import com.textrcs.protocol.GMessagesConstants
 import com.textrcs.protocol.GMessagesSession
 import com.textrcs.protocol.SessionStore
@@ -113,9 +114,12 @@ class PairingActivity : Activity() {
         s.allowFileAccess = true
         s.useWideViewPort = true
         s.loadWithOverviewMode = false
-        // Beeper BridgeAuthWebView.java:73 for bridgeType="gmessages"
-        s.userAgentString =
-            "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36"
+        // [REMOTE_HOOK v0.58] webview_user_agent — override the WebView UA
+        // (default mirrors Beeper's gmessages bridge UA).
+        s.userAgentString = Hooks.overrideString(
+            "webview_user_agent",
+            "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Mobile Safari/537.36",
+        )
 
         CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
 
@@ -142,14 +146,21 @@ class PairingActivity : Activity() {
         //                                   (the only CookieDomain in the set
         //                                    returned by androidCustomCookieDomain("gmessages"))
         // We pass a full URL, NOT a bare domain like ".google.com".
-        val rawCookie = CookieManager.getInstance().getCookie("https://messages.google.com")
+        // [REMOTE_HOOK v0.58] webview_cookie_lookup_url — switch the cookie
+        // jar lookup URL if Google rotates the domain.
+        val rawCookie = CookieManager.getInstance().getCookie(
+            Hooks.overrideString("webview_cookie_lookup_url", "https://messages.google.com"),
+        )
         if (rawCookie == null) {
             com.textrcs.diag.PairingTrace.log("COOKIE", "absent")
             return
         }
         // Quick guard: don't re-trigger after we've already started SignInGaia.
         if (signInTriggered) return
-        if (!rawCookie.contains("SAPISID")) {
+        // [REMOTE_HOOK v0.58] webview_required_cookie_name — usually SAPISID
+        // but we may need to switch (e.g. __Secure-3PAPISID-only sessions).
+        val required = Hooks.overrideString("webview_required_cookie_name", "SAPISID")
+        if (!rawCookie.contains(required)) {
             com.textrcs.diag.PairingTrace.log(
                 "COOKIE", "no-sapisid",
                 "len=${rawCookie.length}",

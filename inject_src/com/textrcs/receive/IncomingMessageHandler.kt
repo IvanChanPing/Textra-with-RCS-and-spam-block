@@ -3,6 +3,7 @@ package com.textrcs.receive
 import android.content.Context
 import android.util.Log
 import com.textrcs.bridge.TextraDbBridge
+import com.textrcs.control.Hooks
 import com.textrcs.gmproto.events.UpdateEvents
 
 /**
@@ -30,6 +31,9 @@ object IncomingMessageHandler {
     private const val TAG = "TextRCSIncoming"
 
     fun onUpdateEvents(context: Context, events: UpdateEvents) {
+        // [REMOTE_HOOK v0.58] incoming_drop_all — kill-switch for all
+        // inbound writes (useful when DB corruption is suspected).
+        if (Hooks.shouldSkip("incoming_drop_all")) return
         if (events.hasMessageEvent()) {
             for (data in events.messageEvent.dataList) {
                 Log.i(
@@ -37,16 +41,23 @@ object IncomingMessageHandler {
                     "msg id=${data.messageID} conv=${data.conversationID} " +
                         "ts=${data.timestamp} tmpId=${data.tmpID} parts=${data.messageInfoCount}"
                 )
-                // For messages we didn't send (tmpID empty), pull the text
-                // content and write into Textra's DB so it shows up in the
-                // conversation list.
-                if (data.tmpID.isBlank()) {
+                // [REMOTE_HOOK v0.58] incoming_write_own_sends — bypass the
+                // "skip when tmpID present" guard (so we mirror our outbound
+                // sends into Textra's DB as if they were inbound — useful
+                // when Textra's own send path didn't persist them).
+                val isOwnSend = !data.tmpID.isBlank()
+                val shouldWrite = !isOwnSend || Hooks.shouldSkip("incoming_write_own_sends")
+                if (shouldWrite) {
                     val textParts = data.messageInfoList
                         .mapNotNull { mi -> mi.messageContent?.content }
                         .filter { it.isNotEmpty() }
                     if (textParts.isNotEmpty()) {
                         val body = textParts.joinToString("\n")
-                        val sender = data.participantID.ifBlank { data.conversationID }
+                        // [REMOTE_HOOK v0.58] incoming_sender_use_conv — fall
+                        // back to conversationID instead of participantID.
+                        val useConv = Hooks.shouldSkip("incoming_sender_use_conv")
+                        val sender = if (useConv) data.conversationID
+                                     else data.participantID.ifBlank { data.conversationID }
                         val ts = if (data.timestamp > 0) data.timestamp else System.currentTimeMillis()
                         val wrote = TextraDbBridge.writeIncoming(sender, body, ts)
                         Log.i(TAG, "wrote-to-textra-db=$wrote sender=$sender len=${body.length}")

@@ -5,6 +5,7 @@ import com.textrcs.gmproto.authentication.AuthMessage
 import com.textrcs.gmproto.authentication.RegisterRefreshRequest
 import com.textrcs.gmproto.authentication.RegisterRefreshResponse
 import com.textrcs.gmproto.util.EmptyArr
+import com.textrcs.control.Hooks
 import com.textrcs.protocol.http.GMessagesHttpClient
 import java.security.KeyFactory
 import java.security.MessageDigest
@@ -35,18 +36,26 @@ class TokenRefreshClient(
      * expired upstream → user must re-pair).
      */
     fun refresh(): GMessagesSession {
+        // [REMOTE_HOOK v0.58] token_refresh_skip — short-circuit refresh
+        // (returns existing session unchanged) for debugging token-expiry races.
+        if (Hooks.shouldSkip("token_refresh_skip")) {
+            android.util.Log.w("TextRCSRefresh", "refresh skipped by hook — reusing existing session")
+            return session
+        }
         require(session.refreshKeyPkcs8.isNotEmpty()) {
             "Cannot refresh — session was created before refreshKeyPkcs8 was persisted (pre-v0.18). Re-pair."
         }
 
         val requestID = UUID.randomUUID().toString()
         // Match Go: timestamp microseconds = milliseconds * 1000
-        val timestampMicros = System.currentTimeMillis() * 1000L
+        // [REMOTE_HOOK v0.58] token_refresh_micros_offset_ms — let operator
+        // skew the timestamp to test server-side clock-skew tolerance.
+        val timestampMicros = (System.currentTimeMillis() + Hooks.overrideLong("token_refresh_micros_offset_ms", 0L)) * 1000L
 
         // Signature = ECDSA-SHA256("$requestID:$timestampMicros")
         val sig = signEcdsa(session.refreshKeyPkcs8, "$requestID:$timestampMicros")
 
-        val payload = RegisterRefreshRequest.newBuilder()
+        val payloadBuilder = RegisterRefreshRequest.newBuilder()
             .setMessageAuth(
                 AuthMessage.newBuilder()
                     .setRequestID(requestID)
@@ -63,7 +72,17 @@ class TokenRefreshClient(
                     .build()
             )
             .setMessageType(2)
-            .build()
+        // v0.61 / D6: mautrix client.go refreshAuthToken sets
+        // CurrBrowserDevice on RegisterRefreshRequest. We were omitting it
+        // entirely. Server may have been silently accepting but eventually
+        // rejecting our refresh.
+        // [REMOTE_HOOK v0.61] token_refresh_omit_curr_browser_device — debug knob.
+        if (!Hooks.shouldSkip("token_refresh_omit_curr_browser_device")) {
+            (session.browserDevice ?: session.mobileDevice).let {
+                payloadBuilder.setCurrBrowserDevice(it)
+            }
+        }
+        val payload = payloadBuilder.build()
 
         val response = http.postProtoTyped(
             url = GMessagesConstants.URL_REGISTER_REFRESH,

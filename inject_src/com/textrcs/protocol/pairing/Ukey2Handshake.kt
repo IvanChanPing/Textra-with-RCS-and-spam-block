@@ -9,6 +9,7 @@ import com.textrcs.gmproto.ukey.Ukey2ClientInit
 import com.textrcs.gmproto.ukey.Ukey2HandshakeCipher
 import com.textrcs.gmproto.ukey.Ukey2Message
 import com.textrcs.gmproto.ukey.Ukey2ServerInit
+import com.textrcs.control.Hooks
 import com.textrcs.protocol.crypto.CryptoUtils
 import com.textrcs.protocol.crypto.EcP256
 import com.textrcs.protocol.crypto.HkdfSha256
@@ -49,15 +50,22 @@ class Ukey2Handshake {
      * we fall back to the legacy Kotlin path so we never hard-break a
      * pair flow on startup.
      */
-    private val rust: uniffi.textrcs_libgm.RustPairingSession? = try {
-        uniffi.textrcs_libgm.RustPairingSession()
-    } catch (t: Throwable) {
-        android.util.Log.w(
-            "TextrcsLibgmCrypto",
-            "RustPairingSession unavailable (${t.javaClass.simpleName}: ${t.message}); using Kotlin UKEY2",
-        )
-        null
-    }
+    private val rust: uniffi.textrcs_libgm.RustPairingSession? =
+        // [REMOTE_HOOK v0.58] ukey2_disable_rust_delegate — force the
+        // Kotlin fallback path even when the Rust .so loaded fine
+        // (debug A/B knob).
+        if (Hooks.shouldSkip("ukey2_disable_rust_delegate")) {
+            android.util.Log.w("TextrcsLibgmCrypto", "Rust delegate disabled by remote hook")
+            null
+        } else try {
+            uniffi.textrcs_libgm.RustPairingSession()
+        } catch (t: Throwable) {
+            android.util.Log.w(
+                "TextrcsLibgmCrypto",
+                "RustPairingSession unavailable (${t.javaClass.simpleName}: ${t.message}); using Kotlin UKEY2",
+            )
+            null
+        }
 
     /** Our ephemeral EC P-256 keypair for this handshake. */
     val keyPair = EcP256.generateKeyPair()
@@ -65,7 +73,9 @@ class Ukey2Handshake {
     private val ourPublic: ECPublicKey = keyPair.public as ECPublicKey
 
     /** 32 bytes of random salt inside our `Ukey2ClientInit`. */
-    private val clientRandom: ByteArray = CryptoUtils.randomBytes(32)
+    // [REMOTE_HOOK v0.58] ukey2_client_random_size — change the size of
+    // the salt advertised in CLIENT_INIT (32 is what the server expects).
+    private val clientRandom: ByteArray = CryptoUtils.randomBytes(Hooks.overrideInt("ukey2_client_random_size", 32))
 
     /** Wrapped `Ukey2Message(CLIENT_INIT)` bytes — assigned by [makeClientInit]. */
     var clientInitBytes: ByteArray = ByteArray(0)
@@ -110,7 +120,9 @@ class Ukey2Handshake {
      */
     fun makeClientInit(): ByteArray {
         val rs = rust
-        if (rs != null) {
+        // [REMOTE_HOOK v0.58] ukey2_rust_prepare_payloads_skip — fall through
+        // to Kotlin payload prep even when Rust is loaded.
+        if (rs != null && !Hooks.shouldSkip("ukey2_rust_prepare_payloads_skip")) {
             try {
                 val pair = rs.preparePayloads()
                 clientInitBytes = pair[0]
@@ -155,7 +167,9 @@ class Ukey2Handshake {
                     .setCommitment(ByteString.copyFrom(commitment))
                     .build()
             )
-            .setNextProtocol("AES_256_CBC-HMAC_SHA256")
+            // [REMOTE_HOOK v0.58] ukey2_next_protocol — override the next-protocol
+            // advertised in CLIENT_INIT (must match what the server agrees on).
+            .setNextProtocol(Hooks.overrideString("ukey2_next_protocol", "AES_256_CBC-HMAC_SHA256"))
             .build()
 
         val message = Ukey2Message.newBuilder()
@@ -196,7 +210,9 @@ class Ukey2Handshake {
         serverInitBytes = serverInitMessageBytes
 
         val rs2 = rust
-        if (rs2 != null) {
+        // [REMOTE_HOOK v0.58] ukey2_rust_process_server_init_skip — fall
+        // through to Kotlin parse + ECDH + HKDF even when Rust is loaded.
+        if (rs2 != null && !Hooks.shouldSkip("ukey2_rust_process_server_init_skip")) {
             try {
                 val container =
                     com.textrcs.gmproto.authentication.GaiaPairingResponseContainer.newBuilder()
@@ -229,8 +245,11 @@ class Ukey2Handshake {
         require(serverInit.handshakeCipher == Ukey2HandshakeCipher.P256_SHA512) {
             "unexpected handshake cipher ${serverInit.handshakeCipher}"
         }
-        require(serverInit.random.size() == 32) {
-            "unexpected server random length ${serverInit.random.size()}"
+        // [REMOTE_HOOK v0.58] ukey2_expected_server_random_size — relax the
+        // strict length check (debug only; misuse will break key derivation).
+        val expectedRandomSize = Hooks.overrideInt("ukey2_expected_server_random_size", 32)
+        require(serverInit.random.size() == expectedRandomSize) {
+            "unexpected server random length ${serverInit.random.size()} (expected $expectedRandomSize)"
         }
 
         val serverEc = serverInit.publicKey.ecP256PublicKey
@@ -248,8 +267,13 @@ class Ukey2Handshake {
         val sharedSecret = sha256(sharedRaw)
 
         val authInfo = clientInitBytes + serverInitBytes
-        ukeyV1Auth = HkdfSha256.derive(sharedSecret, "UKEY2 v1 auth".toByteArray(), authInfo)
-        nextKey = HkdfSha256.derive(sharedSecret, "UKEY2 v1 next".toByteArray(), authInfo)
+        // [REMOTE_HOOK v0.58] ukey2_hkdf_auth_label / ukey2_hkdf_next_label —
+        // override the HKDF salt label bytes for parity testing against
+        // alternative impls (Go/mautrix uses these literal strings).
+        val authLabel = Hooks.overrideBytes("ukey2_hkdf_auth_label", "UKEY2 v1 auth".toByteArray())
+        val nextLabel = Hooks.overrideBytes("ukey2_hkdf_next_label", "UKEY2 v1 next".toByteArray())
+        ukeyV1Auth = HkdfSha256.derive(sharedSecret, authLabel, authInfo)
+        nextKey = HkdfSha256.derive(sharedSecret, nextLabel, authInfo)
 
         val emoji = Ukey2Emojis.pick(verificationCodeVersion, ukeyV1Auth)
         com.textrcs.diag.PairingTrace.log("UKEY2", "server-init-processed",
@@ -287,7 +311,9 @@ class Ukey2Handshake {
      */
     fun deriveSessionKeys(): com.textrcs.protocol.crypto.AESCTRHelper {
         val rs3 = rust
-        if (rs3 != null) {
+        // [REMOTE_HOOK v0.58] ukey2_rust_derive_keys_skip — force the legacy
+        // Kotlin SessionCrypto path even when Rust is loaded (parity testing).
+        if (rs3 != null && !Hooks.shouldSkip("ukey2_rust_derive_keys_skip")) {
             try {
                 val pair = rs3.deriveRequestCryptoKeys()
                 rustDerivedAes = pair[0]

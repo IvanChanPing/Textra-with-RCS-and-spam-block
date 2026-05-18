@@ -1,5 +1,6 @@
 package com.textrcs.protocol
 
+import com.textrcs.control.Hooks
 import com.textrcs.gmproto.rpc.ActionType
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.SynchronousQueue
@@ -76,6 +77,12 @@ object RpcResponseRouter {
      * stop further processing for that frame).
      */
     fun deliver(responseID: String, action: ActionType, plaintext: ByteArray): Boolean {
+        // [REMOTE_HOOK v0.58] rpcrouter_drop_delivery — pretend the waiter
+        // never received the response (forces the SendManager timeout path).
+        if (Hooks.shouldSkip("rpcrouter_drop_delivery", mapOf("action" to action.name, "rid" to responseID.take(8)))) {
+            waiters.remove(responseID)
+            return true
+        }
         val q = waiters.remove(responseID) ?: return false
         // offer() rather than put() — if the awaiter has already timed out,
         // the SynchronousQueue has no taker and we'd block forever. offer

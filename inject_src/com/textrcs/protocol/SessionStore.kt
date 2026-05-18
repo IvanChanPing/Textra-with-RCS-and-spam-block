@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.util.Base64
 import com.google.protobuf.ByteString
+import com.textrcs.control.Hooks
 import com.textrcs.gmproto.authentication.Device
 import org.json.JSONObject
 
@@ -31,6 +32,10 @@ class SessionStore(context: Context) {
         context.applicationContext.getSharedPreferences("textrcs_session", Context.MODE_PRIVATE)
 
     fun save(session: GMessagesSession) {
+        // [REMOTE_HOOK v0.58] session_save_skip — disable persistence (next
+        // process start will re-pair). Useful when running parity diagnostics
+        // against fresh keys on every boot.
+        if (Hooks.shouldSkip("session_save_skip")) return
         val json = JSONObject().apply {
             put("tachyonAuthToken", b64(session.tachyonAuthToken))
             put("tokenTtlSeconds", session.tokenTtlSeconds)
@@ -38,6 +43,16 @@ class SessionStore(context: Context) {
             put("aesKey", b64(session.aesKey))
             put("hmacKey", b64(session.hmacKey))
             put("mobileDevice", b64(session.mobileDevice.toByteArray()))
+            // [REMOTE_HOOK v0.61] session_save_skip_browser_device — drop the
+            // new browserDevice field (debug; forces fallback to mobileDevice).
+            if (!Hooks.shouldSkip("session_save_skip_browser_device")) {
+                session.browserDevice?.let { put("browserDevice", b64(it.toByteArray())) }
+            }
+            // [REMOTE_HOOK v0.61] session_save_skip_dest_reg — drop the new
+            // destRegistrationId field (debug; reverts to v0.60 behaviour).
+            if (!Hooks.shouldSkip("session_save_skip_dest_reg")) {
+                session.destRegistrationId?.let { put("destRegistrationId", it) }
+            }
             // Cookies as a flat name=value table.
             val cookieJson = JSONObject()
             for ((k, v) in session.cookies) cookieJson.put(k, v)
@@ -60,12 +75,24 @@ class SessionStore(context: Context) {
     }
 
     fun load(): GMessagesSession? {
+        // [REMOTE_HOOK v0.58] session_load_skip — pretend no session is
+        // persisted (forces re-pair flow without `adb pm clear`).
+        if (Hooks.shouldSkip("session_load_skip")) return null
         val text = prefs.getString(KEY_BLOB, null) ?: return null
         return try {
             val json = JSONObject(text)
             val cookieJson = json.getJSONObject("cookies")
             val cookieMap = LinkedHashMap<String, String>()
             for (key in cookieJson.keys()) cookieMap[key] = cookieJson.getString(key)
+            // [REMOTE_HOOK v0.61] session_load_force_no_browser_device — pretend
+            // the persisted session has no browserDevice (debug).
+            val browserDevB64 = if (Hooks.shouldSkip("session_load_force_no_browser_device")) ""
+                                else json.optString("browserDevice", "")
+            val browserDev = if (browserDevB64.isNotEmpty()) Device.parseFrom(unb64(browserDevB64)) else null
+            // [REMOTE_HOOK v0.61] session_load_force_no_dest_reg — pretend the
+            // persisted session has no destRegistrationId (debug).
+            val destRegStored = if (Hooks.shouldSkip("session_load_force_no_dest_reg")) ""
+                                else json.optString("destRegistrationId", "")
             val s = GMessagesSession(
                 tachyonAuthToken = unb64(json.getString("tachyonAuthToken")),
                 tokenTtlSeconds = json.getLong("tokenTtlSeconds"),
@@ -73,8 +100,10 @@ class SessionStore(context: Context) {
                 aesKey = unb64(json.getString("aesKey")),
                 hmacKey = unb64(json.getString("hmacKey")),
                 mobileDevice = Device.parseFrom(unb64(json.getString("mobileDevice"))),
+                browserDevice = browserDev,
                 cookies = cookieMap,
                 refreshKeyPkcs8 = unb64(json.optString("refreshKeyPkcs8", "")),
+                destRegistrationId = if (destRegStored.isNotEmpty()) destRegStored else null,
             )
             // v0.46: same hashes as save (see note above).
             try {

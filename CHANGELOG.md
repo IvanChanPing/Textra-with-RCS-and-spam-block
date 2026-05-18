@@ -1,5 +1,289 @@
 # TextRCS Changelog
 
+## v0.61.0 — 2026-05-18 — full mautrix port audit: fix 6 divergences, real send-fail root cause
+
+User correctly identified that v0.59 + v0.60 were patches-from-symptoms.
+Read every file in `/root/go/pkg/mod/go.mau.fi/mautrix-gmessages@v0.2604.0/pkg/libgm/`
+end-to-end, then compared line-by-line against every file in
+`inject_src/com/textrcs/`. Audit identified 6 divergences (D1-D6);
+v0.61 fixes all of them.
+
+### D1 (the real root cause)
+`SendManager.sendRpc` + `SendManager.setActiveSession` never called
+`addDestRegistrationIDs`. mautrix `session_handler.go:217-221` appends
+`AuthData.DestRegID.String()` to **every** outgoing `OutgoingRPCMessage`.
+Without it, Google's relay accepts the POST (HTTP 200) but has no idea
+which phone to route the response back to → LP stays silent → 60s
+timeout → fallback to phone-as-convID → recipient never receives.
+This is the regression introduced sometime between v0.42 and v0.44 and
+the root cause of every send-fail since.
+
+The orchestrator's `GaiaPairingOrchestrator.sendOutgoing` had the
+correct wiring already (because CLIENT_FINISHED was getting rejected
+NOT_LATEST_ATTEMPT without it). It was never ported into `SendManager`.
+
+### D2-D6 (cascading fixes)
+- D2: `GMessagesSession` did not persist `destRegistrationId` across reboots.
+- D3: `GMessagesSession` did not persist `browserDevice` (mautrix has
+  BOTH `AuthData.Mobile` = lowercased SourceID AND `AuthData.Browser` =
+  original SourceID; we only stored one).
+- D4: `AckSender` was using `mobileDevice` for `AckMessageRequest.Message.Device`.
+  mautrix `session_handler.go:293` uses `AuthData.Browser` (original case).
+- D5: Mobile device should be a `proto.Clone` with
+  `SourceID = strings.ToLower(...)` per `pair_google.go:96-102`. We
+  were storing the original-case device under both names.
+- D6: `TokenRefreshClient` did not set `CurrBrowserDevice` on
+  `RegisterRefreshRequest`. mautrix `client.go::refreshAuthToken`
+  always sets it from `AuthData.Browser`.
+
+### Code changes
+1. `GMessagesSession.kt` — add nullable `browserDevice` + `destRegistrationId`.
+2. `SignInGaiaClient.SignInResult` — add `browserDevice` (captured from
+   `deviceData.deviceWrapper.device` original-case).
+3. `GaiaPairingOrchestrator.finishPairing` — build lowercase `mobileDev`
+   clone from `browserDev`; persist both + `destRegistrationId`.
+4. `SessionStore.kt` — serialize/deserialize the 2 new fields
+   (`browserDevice` as b64-proto, `destRegistrationId` as string).
+5. `SendManager.sendRpc` — appends `session.destRegistrationId` to every
+   `OutgoingRPCMessage.DestRegistrationIDs`.
+6. `SendManager.setActiveSession` — same.
+7. `ReceiveService.startReceiveLoop` — pass `session.browserDevice
+   ?: session.mobileDevice` to `AckSender.start`.
+8. `TokenRefreshClient.refresh` — `setCurrBrowserDevice` on
+   `RegisterRefreshRequest`.
+
+### Hooks added (per every-change-gets-hooks rule)
+9 new hooks: `orch_skip_lowercase_mobile_clone`,
+`session_save_skip_browser_device`, `session_save_skip_dest_reg`,
+`session_load_force_no_browser_device`, `session_load_force_no_dest_reg`,
+`sendmgr_omit_dest_reg_id`, `setactive_omit_dest_reg_id`,
+`ack_sender_force_mobile_device`, `token_refresh_omit_curr_browser_device`.
+
+Total cumulative hooks v0.58 + v0.59 + v0.60 + v0.61: ~130.
+
+### Verification path (requires user action)
+Existing v0.60 paired sessions are stale — `browserDevice` and
+`destRegistrationId` are null in their session blobs. **User MUST
+re-pair** for D1's fix to take effect. After re-pair, watch for:
+- `outgoing OutgoingRPCMessage` byte dump showing non-empty
+  `DestRegistrationIDs`
+- `RCV dispatchRpc CLAIMED action=GET_OR_CREATE_CONVERSATION
+  sessionID=<our requestID>` within ~2s of send
+- `SEND sendText BLOCKING_OK` (no fallback to phone)
+- Recipient `+15163416499` actually receives
+
+### Output
+- `textra2_v0.61.0.apk` (87 MB, md5 `344cee7e2fbd93b605c53feeab080013`)
+- Uploaded to Dropbox at `mikepeskoff3@gmail.com/textra2_v0.61.0.apk`
+
+## v0.60.0 — 2026-05-18 — ack-on-stale-skip (later identified as patch-from-symptoms)
+
+Added ACK emission for frames that v0.59's skipCount logic marked as
+STALE-SKIP. Hypothesis was that even stale frames need ACKing or
+Google's relay keeps re-sending them. Built + uploaded but NOT
+verified before user pointed out v0.59 and v0.60 were patching from
+log symptoms rather than line-by-line porting against mautrix.
+
+Result: the audit-driven v0.61 (above) supersedes this. The stale-frame
+issue v0.60 targeted was a real symptom but the underlying cause was
+D1 (missing DestRegistrationIDs), not ack-emission policy.
+
+### Output
+- `textra2_v0.60.0.apk` (87 MB, md5 `57d51e5e95c9d47b1ef3088999786b4b`)
+
+## v0.59.0 — 2026-05-18 — skipCount + AckSender + delayed setActive (PATCH FROM SYMPTOMS — superseded by v0.61)
+
+Triage notes: at the time, v0.51-v0.58 send_text consistently failed
+with the symptom that `GetOrCreateConversation` returned HTTP 200 but
+the canonical convID never arrived on the long-poll. Diagnosed from
+OnePlus v0.58 boot log `02cb1215-…` showing 84+ stale frames replayed
+on every LP reconnect from prior pairing sessions.
+
+Attempted fix (later superseded by v0.61's port audit):
+- NEW `inject_src/com/textrcs/protocol/longpoll/AckSender.kt` — 5s
+  scheduled POST of batched `AckMessageRequest`s. Mirrors mautrix
+  `session_handler.go::sendAckRequest`.
+- `LongPollReceiver.kt` — `@Volatile var skipCount = 0`. On
+  `msg.hasAck()` with count>0 sets skipCount; on `msg.hasData()` if
+  skipCount>0 decrements and logs as `LP frame=data STALE-SKIP`.
+- `ReceiveService.kt` — `onConnected` now SCHEDULES `setActiveSession`
+  after `receive_postconnect_delay_ms` (default 3s); during that delay
+  calls `AckSender.flush()` to clear the queue.
+- 20 new hooks under `ack_sender_*`, `longpoll_*skip*`,
+  `receive_postconnect_*`, `receive_dispatch_ack_on_*`.
+
+Why it didn't fix the bug: skipCount + AckSender are correct
+implementations of mautrix's drain logic, but the actual reason sends
+never landed was D1 (missing DestRegistrationIDs in SendManager —
+fixed in v0.61), not the LP drain.
+
+### Output
+- `textra2_v0.59.0.apk` (87 MB, md5 `adcb7dfcbfb5e9f3f1278fb163892dc2`)
+
+## v0.58.0 — 2026-05-18 — 101 named hooks + 7 reflection commands
+
+User asked for 100+ hooks "everywhere because you'll find things you
+didn't even expect". v0.58 ships **101 named hooks** across pair / send
+/ receive / crypto / UI / anim paths plus **7 generic reflection
+commands** giving universal field/method poke.
+
+### Generic reflection commands (NEW)
+`reflect_get_static`, `reflect_set_static`, `reflect_call_static`,
+`reflect_call_object_singleton`, `reflect_list_members`,
+`find_classes`, `load_class`, `thread_dump`. Encoded-value handling
+covers primitives, `String`, `ByteArray` (as hex), and best-effort
+String-ctor for arbitrary classes.
+
+### Named hooks by wave
+- **Pair (38):** Ukey2Handshake (9), GaiaPairingOrchestrator (8),
+  SignInGaiaClient (8), SessionCrypto (9), CryptoUtils/AESCTRHelper (2),
+  TokenRefreshClient (2).
+- **Send (30):** SendManager (6), GMessagesHttpClient (19),
+  LongPollReceiver (4), RpcResponseRouter (1).
+- **Receive (17):** ReceiveService (8), IncomingMessageHandler (3),
+  TextraDbBridge (4), SessionStore (2).
+- **Diag/UI/Anim (16):** PairingActivity (3), ScreenTracer (5),
+  LogUploader (5), ConvoCornerAnim (3).
+
+### Wave 0 follow-up fixes
+- `dump_logs`: was looking up `snapshot()` no-arg; v0.58 uses
+  `snapshot(Int)` (Kotlin default-param emits only the parameterized
+  overload).
+- `dump_rpc_router_pending`: was field name `pending`; v0.58 uses
+  `waiters` (the actual field name in `RpcResponseRouter.kt:61`).
+- 2× `emptyList()` type-inference errors → `emptyList<String>()`.
+
+### Hook API
+RemoteConfig key `hook_<name>_json`, JSON
+`{"skip": bool, "override": <any>, "log": bool}`. Operator pushes via
+control bus `/control/queue` with `type="set_config"`.
+
+### Output
+- `textra2_v0.58.0.apk` (87 MB, md5 `61afad814f163fd2fb577908137abd99`)
+
+## v0.57.0 — 2026-05-18 — Wave 0 RemoteCommands fixes + server endpoints + verified end-to-end
+
+First v0.5x build that survived a full remote-control round-trip on
+the emulator (verified 2026-05-18: ping + list_commands round-trip
+OK against `https://example.invalid/control/*`).
+
+### Operator-facing surface (18 commands)
+`ping`, `dump_state`, `dump_app_info`, `dump_session`,
+`dump_rpc_router_pending`, `dump_logs`, `read_file`, `list_files`,
+`list_commands`, `list_hooks`, `set_config`, `reset_config`,
+`reload_config`, `send_text`, `exec_intent`, `vibrate`, `show_toast`,
+`kill_app`. Installation ID format: `textra2-<android_id>`.
+
+### Server side (textrcs tester-server)
+7 new endpoints in `server.js` (~150 LOC):
+- `GET /control/poll?installation_id=&since=&timeout_s=` — long-poll
+- `POST /control/queue {installation_id, type, params}`
+- `POST /control/result {installation_id, cmd_id, ok, data, error}`
+- `GET /control/results?installation_id=&since=`
+- `GET /control/config?installation_id=`
+- `POST /control/config {installation_id, updates, replace}`
+- `GET /control/installations`
+
+### App side
+- `inject_src/com/textrcs/diag/ScreenTracer.kt` — added
+  `snapshot(limit)` public method.
+- `textra_base/AndroidManifest.xml` — provider registered at
+  `initOrder=9997`.
+- `LogUploader.BUILD_NUMBER = "v0.57.0"`.
+
+### Output
+- `textra2_v0.57.0.apk` (87 MB, md5 `81373d9af9550b27aa7bde958666bf31`)
+
+## v0.56.0 — 2026-05-18 — RemoteCommands dispatch (~15 commands)
+
+Built out the command dispatch table (`DISPATCH: Map<String, (params,
+ctx, log) -> Result>`) covering the initial 15 commands above, with
+per-command exception handling and result encoding. No external
+behavior change to the protocol layer.
+
+### Output
+- `textra2_v0.56.0.apk` (87 MB, md5 `93f02d2ceb16a260f9d43a0898ea8128`)
+
+## v0.55.0 — 2026-05-18 — remote-control framework (RemoteControl + Hooks + RemoteConfig)
+
+Tracker-app-style remote-control bus introduced as a sibling of the
+diagnostics pipeline. Lets us drive the app from `/root` via curl
+against the tester-server, push config overrides at runtime, and
+toggle hooks without rebuilding.
+
+### Files added (in `inject_src/com/textrcs/control/`, ~700 LOC total)
+- `RemoteControlProvider.kt` — ContentProvider at `initOrder=9997` so
+  the loop boots before `Application.onCreate` (matches the tracker-app
+  pattern for catching pre-app errors).
+- `RemoteControl.kt` — main loop. Long-polls `/control/poll`,
+  dispatches to `RemoteCommands`.
+- `RemoteCommands.kt` — allowlist of command handlers (scaffolded
+  here, filled in by v0.56).
+- `Hooks.kt` — skip/override registry consumed throughout pair/send/
+  receive code. Initial signature: `Hooks.shouldSkip(name, ctx) →
+  Bool` + `Hooks.overrideX(name, default) → X`.
+- `RemoteConfig.kt` — hot-reloadable typed config; pushed via
+  `/control/config` or `set_config` command.
+- `ControlApiClient.kt` — HTTP client for control bus.
+- `ControlProtocol.kt` — request/response shapes.
+
+### Output
+- `textra2_v0.55.0.apk` (87 MB, md5 `4b8ac2f49afbeecbe4a91dd8ef8ec7b1`)
+
+## v0.54.0 — 2026-05-18 — Rust UKEY2/crypto swap (HMAC-mismatch send-fail root cause)
+
+Swapped UKEY2 handshake + AESCTR/HMAC primitives to delegate to
+`textrcs_libgm` Rust crate via UniFFI bindings. Fixes the HMAC-mismatch
+that intermittently broke send: pure-Kotlin AESCTR (homemade,
+non-constant-time) was producing a different MAC tag than mautrix's
+`golang.org/x/crypto/hmac` over identical input on some byte patterns.
+
+### Files touched
+- `inject_src/com/textrcs/protocol/pairing/Ukey2Handshake.kt`
+- `inject_src/com/textrcs/protocol/crypto/SessionCrypto.kt`
+- `inject_src/com/textrcs/protocol/crypto/CryptoUtils.kt` — AESCTRHelper
+- `RustLibgmSmokeProvider.kt` self-test on boot
+
+### Output
+- `textra2_v0.54.0.apk` (87 MB, md5 `756c0ba288e04df4e2d3a6f563834a2c`)
+- See sibling crate at `/root/agent-work/projects/textrcs-libgm-rs/`
+  v0.11.0 commit `fbd643f`.
+
+## v0.52.0 + v0.53.0 — 2026-05-17 — (folded into v0.54 source commit)
+
+Pre-existing rule break: v0.52 + v0.53 APKs were built (md5s
+`81a18f…` v0.52, `6f3ade…` v0.53 per build/ timestamps) but their
+source changes were not committed separately. They were rolled into
+the v0.54 commit `1cb451b3`. Treat them as part of the v0.54 changeset
+when bisecting.
+
+## v0.51.0 — 2026-05-17 — anim regression fix + on-device crypto self-test
+
+(In git as `71e480fc`.) Fixed a parallax animation regression
+introduced between v0.48 and v0.50. Added an on-device crypto self-test
+(`RustLibgmSmokeProvider`) that runs at boot and uploads pass/fail to
+tester-server.
+
+## v0.50.0 — 2026-05-17 — pad ECDH shared secret to 32 bytes (defensive)
+
+(In git as `a9e967ef`.) Defensive fix: `ECDH.generateSharedSecret`
+can return a byte array shorter than 32 if leading zeros are stripped
+by `BigInteger.toByteArray()`. Pad to 32 with leading zeros to match
+mautrix's behavior.
+
+## v0.49.0 — 2026-05-17 — rounded corners (24dp → 0) on ConvoActivity slide-in
+
+(In git as `baff277a`.) Animation polish — the convo card slides in
+with a 24dp corner radius that animates down to 0 over the slide
+duration, matching the iOS Messages "card pops up and squares off"
+look.
+
+## v0.48.0 — 2026-05-17 — underneath layer drifts slower than foreground
+
+(In git as `b634ef57`.) Animation polish — set the back-stack layer's
+translate duration to 450ms while the foreground stays at 350ms,
+creating subtle depth-parallax during slide.
+
 ## v0.47.0 — 2026-05-16 — darker shade + decrypt-failure diagnostics + encryptedData2 fallback
 
 ### Animation

@@ -1,5 +1,6 @@
 package com.textrcs.protocol.crypto
 
+import com.textrcs.control.Hooks
 import java.security.SecureRandom
 import javax.crypto.Cipher
 import javax.crypto.Mac
@@ -62,15 +63,22 @@ class AESCTRHelper(val aesKey: ByteArray, val hmacKey: ByteArray) {
      * 7 passing tests including HMAC-mismatch detection + tamper-detection).
      * Per-instance instead of per-call so we pay the JNI ctor cost once.
      */
-    private val rustDelegate: uniffi.textrcs_libgm.AesCtrBox? = try {
-        uniffi.textrcs_libgm.AesCtrBox(aesKey, hmacKey)
-    } catch (t: Throwable) {
-        android.util.Log.w(
-            "TextrcsLibgmCrypto",
-            "AesCtrBox ctor failed (${t.javaClass.simpleName}: ${t.message}); using Kotlin path",
-        )
-        null
-    }
+    // [REMOTE_HOOK v0.58] aesctr_disable_rust_delegate — when true, every
+    // encrypt/decrypt goes through the Kotlin Cipher/Mac path even if Rust
+    // is loaded.
+    private val rustDelegate: uniffi.textrcs_libgm.AesCtrBox? =
+        if (Hooks.shouldSkip("aesctr_disable_rust_delegate")) {
+            android.util.Log.w("TextrcsLibgmCrypto", "AesCtrBox rust delegate disabled by hook")
+            null
+        } else try {
+            uniffi.textrcs_libgm.AesCtrBox(aesKey, hmacKey)
+        } catch (t: Throwable) {
+            android.util.Log.w(
+                "TextrcsLibgmCrypto",
+                "AesCtrBox ctor failed (${t.javaClass.simpleName}: ${t.message}); using Kotlin path",
+            )
+            null
+        }
 
     /**
      * AES-256-CTR encrypt with random 16-byte IV; appends IV; appends
@@ -115,17 +123,23 @@ class AESCTRHelper(val aesKey: ByteArray, val hmacKey: ByteArray) {
      * Throws [IllegalArgumentException] on length/HMAC errors.
      */
     fun decrypt(encryptedData: ByteArray): ByteArray {
+        // [REMOTE_HOOK v0.58] aesctr_decrypt_swallow_hmac_mismatch — for
+        // forensic capture, allow decrypt to succeed (returning plaintext
+        // computed from the AES half) even if HMAC fails. DEBUG ONLY.
+        val swallowHmac = Hooks.shouldSkip("aesctr_decrypt_swallow_hmac_mismatch")
         rustDelegate?.let { rd ->
             return try {
                 rd.decrypt(encryptedData)
             } catch (t: Throwable) {
-                // Don't fall back on HMAC mismatch — that's the actual error
-                // signal we need to surface. Fall back only on JNI/link errors.
                 if (t is UnsatisfiedLinkError || t is NoClassDefFoundError) {
                     android.util.Log.w(
                         "TextrcsLibgmCrypto",
                         "Rust decrypt link error (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin",
                     )
+                    return decryptKotlin(encryptedData)
+                }
+                if (swallowHmac) {
+                    android.util.Log.w("TextrcsLibgmCrypto", "swallowing HMAC mismatch by hook")
                     return decryptKotlin(encryptedData)
                 }
                 throw t

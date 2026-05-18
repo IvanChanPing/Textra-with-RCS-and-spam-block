@@ -2,6 +2,7 @@ package com.textrcs.diag
 
 import android.os.Build
 import android.util.Log
+import com.textrcs.control.Hooks
 import org.json.JSONObject
 import java.io.OutputStream
 import java.net.HttpURLConnection
@@ -27,7 +28,7 @@ object LogUploader {
     private const val TAG = "TextRCSLogUploader"
     private const val URL_STRING = "https://example.invalid/api/logs/auto-upload"
     private const val BUILD_TYPE = "textrcs"
-    private const val BUILD_NUMBER = "v0.51.0"
+    private const val BUILD_NUMBER = "v0.61.0"
 
     private val executor = Executors.newSingleThreadExecutor { r ->
         Thread(r, "TextRCS-LogUploader").apply { isDaemon = true }
@@ -45,6 +46,9 @@ object LogUploader {
      * Pads to 3 lines so the server validator accepts short messages.
      */
     fun upload(tag: String, body: String) {
+        // [REMOTE_HOOK v0.58] log_uploader_disable — pause all log uploads
+        // (e.g. while doing isolated network debugging).
+        if (Hooks.shouldSkip("log_uploader_disable")) return
         executor.execute {
             try {
                 throttle()
@@ -56,10 +60,13 @@ object LogUploader {
     }
 
     private fun throttle() {
+        // [REMOTE_HOOK v0.58] log_uploader_min_gap_ms — change server-side
+        // rate-limit margin (default 1100 ms).
+        val gap = Hooks.overrideLong("log_uploader_min_gap_ms", MIN_GAP_MS)
         val now = System.currentTimeMillis()
         val elapsed = now - lastPostMs
-        if (elapsed < MIN_GAP_MS) {
-            val wait = MIN_GAP_MS - elapsed
+        if (elapsed < gap) {
+            val wait = gap - elapsed
             try { Thread.sleep(wait) } catch (_: InterruptedException) {}
         }
         lastPostMs = System.currentTimeMillis()
@@ -82,10 +89,14 @@ object LogUploader {
             put("uploadedAt", nowIso())
         }.toString().toByteArray(Charsets.UTF_8)
 
-        val conn = URL(URL_STRING).openConnection() as HttpURLConnection
+        // [REMOTE_HOOK v0.58] log_uploader_url — repoint uploads to a
+        // different sink without rebuilding.
+        val url = Hooks.overrideString("log_uploader_url", URL_STRING)
+        val conn = URL(url).openConnection() as HttpURLConnection
         conn.requestMethod = "POST"
-        conn.connectTimeout = 5_000
-        conn.readTimeout = 10_000
+        // [REMOTE_HOOK v0.58] log_uploader_connect_timeout_ms / log_uploader_read_timeout_ms
+        conn.connectTimeout = Hooks.overrideInt("log_uploader_connect_timeout_ms", 5_000)
+        conn.readTimeout = Hooks.overrideInt("log_uploader_read_timeout_ms", 10_000)
         conn.doOutput = true
         conn.setRequestProperty("Content-Type", "application/json")
         try {

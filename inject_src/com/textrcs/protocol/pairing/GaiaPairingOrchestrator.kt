@@ -18,6 +18,7 @@ import com.textrcs.gmproto.rpc.OutgoingRPCMessage
 import com.textrcs.gmproto.rpc.RPCMessageData
 import com.textrcs.gmproto.rpc.StartAckMessage
 import com.textrcs.gmproto.util.EmptyArr
+import com.textrcs.control.Hooks
 import com.textrcs.protocol.GMessagesConstants
 import com.textrcs.protocol.GMessagesSession
 import com.textrcs.protocol.SignInGaiaClient
@@ -86,7 +87,9 @@ class GaiaPairingOrchestrator(
             action = ActionType.CREATE_GAIA_PAIRING_CLIENT_INIT,
             data = clientInitBytes,
             isFinish = false,
-            timeoutMs = 30_000,
+            // [REMOTE_HOOK v0.58] gaia_pair_init_timeout_ms — operator can
+            // raise this when the relay round-trip is slow.
+            timeoutMs = Hooks.overrideLong("gaia_pair_init_timeout_ms", 30_000L),
         )
 
         // Hard-diagnostic dump of the bytes so a future SERVER_INIT failure
@@ -163,11 +166,16 @@ class GaiaPairingOrchestrator(
             action = ActionType.CREATE_GAIA_PAIRING_CLIENT_FINISHED,
             data = clientFinishBytes,
             isFinish = true,
-            timeoutMs = 90_000,
+            // [REMOTE_HOOK v0.58] gaia_pair_finish_timeout_ms — finish waits
+            // for the user to tap the emoji on their phone.
+            timeoutMs = Hooks.overrideLong("gaia_pair_finish_timeout_ms", 90_000L),
         )
         val rpcData = parseRpcData(responseMsg)
         val container = GaiaPairingResponseContainer.parseFrom(rpcData.unencryptedData)
-        if (container.finishErrorType != 0) {
+        // [REMOTE_HOOK v0.58] gaia_pair_ignore_finish_error — useful when the
+        // server emits a benign errorType and we want to push through to
+        // session-key derivation for diagnostic purposes.
+        if (container.finishErrorType != 0 && !Hooks.shouldSkip("gaia_pair_ignore_finish_error")) {
             throw PairingException(
                 "Pairing failed: errorType=${container.finishErrorType} " +
                 "errorCode=${container.finishErrorCode}",
@@ -186,15 +194,27 @@ class GaiaPairingOrchestrator(
             "finishContainer.keyDerVer=${container.confirmedKeyDerivationVersion}",
             "aes.fingerprint=${com.textrcs.diag.PairingTrace.hexShort(crypto.aesKey, 8)}",
             "hmac.fingerprint=${com.textrcs.diag.PairingTrace.hexShort(crypto.hmacKey, 8)}")
+        // [REMOTE_HOOK v0.61] orch_skip_lowercase_mobile_clone — bypass the
+        // lowercase-SourceID clone (debug parity vs v0.60 behaviour).
+        val browserDev = signInResult.browserDevice ?: signInResult.devices.first()
+        val mobileDev = if (Hooks.shouldSkip("orch_skip_lowercase_mobile_clone")) {
+            browserDev
+        } else {
+            // v0.61 / D5: mirror mautrix pair_google.go:96-102 —
+            // proto.Clone(device); lowercaseDevice.SourceID = strings.ToLower(...)
+            browserDev.toBuilder().setSourceID(browserDev.sourceID.lowercase()).build()
+        }
         return GMessagesSession(
             tachyonAuthToken = signInResult.tachyonAuthToken,
             tokenTtlSeconds = signInResult.tokenTtlSeconds,
             browserUuid = signInResult.browserUuid,
             aesKey = crypto.aesKey,
             hmacKey = crypto.hmacKey,
-            mobileDevice = signInResult.devices.first(),
+            mobileDevice = mobileDev,
+            browserDevice = browserDev,
             cookies = http.cookies.toMap(),
             refreshKeyPkcs8 = signInResult.refreshKeyPair.private.encoded,
+            destRegistrationId = signInResult.destRegistrationId,
         )
     }
 
@@ -244,7 +264,11 @@ class GaiaPairingOrchestrator(
                 val hasUnencrypted = !rpcData.unencryptedData.isEmpty
                 val hasEncrypted = !rpcData.encryptedData.isEmpty
                 val hasEncrypted2 = !rpcData.encryptedData2.isEmpty
-                if (!isGaiaPairingAction) {
+                // [REMOTE_HOOK v0.58] gaia_lp_disable_placeholder_filter —
+                // pass placeholder frames through to the waiter (debug only —
+                // breaks the real flow but useful to see what the server is
+                // actually emitting).
+                if (!isGaiaPairingAction && !Hooks.shouldSkip("gaia_lp_disable_placeholder_filter")) {
                     if (!hasUnencrypted && !hasEncrypted && !hasEncrypted2) {
                         com.textrcs.diag.PairingTrace.log("LP-FRAME", "placeholder-skip",
                             "corrId=${correlationId.take(8)}",
@@ -286,12 +310,18 @@ class GaiaPairingOrchestrator(
             .setData(ByteString.copyFrom(data))
             .apply {
                 if (!isFinish) {
-                    proposedVerificationCodeVersion = 1
-                    proposedKeyDerivationVersion = 1
+                    // [REMOTE_HOOK v0.58] gaia_proposed_verification_code_version /
+                    // gaia_proposed_key_derivation_version — let operator try
+                    // alternative protocol versions.
+                    proposedVerificationCodeVersion = Hooks.overrideInt("gaia_proposed_verification_code_version", 1)
+                    proposedKeyDerivationVersion = Hooks.overrideInt("gaia_proposed_key_derivation_version", 1)
                 }
             }
             .build()
 
+        // [REMOTE_HOOK v0.58] gaia_finish_message_type_override — Beeper/Go
+        // both use BUGLE_MESSAGE for finish; GAIA_2 for non-finish. Override
+        // to test other MessageType values for protocol-version research.
         val messageType = if (isFinish) MessageType.BUGLE_MESSAGE else MessageType.GAIA_2
 
         val requestID = UUID.randomUUID().toString()
@@ -305,7 +335,9 @@ class GaiaPairingOrchestrator(
                 unencryptedPayload = container.toByteArray(),
                 encryptedPayload = null,
                 messageType = messageType,
-                customTtlMicros = 300L * 1_000_000L,   // 300s in µs (Go uses microseconds for TTL)
+                // [REMOTE_HOOK v0.58] gaia_send_custom_ttl_micros — TTL for
+                // pairing-flow outgoing messages (Go default = 300 s in µs).
+                customTtlMicros = Hooks.overrideLong("gaia_send_custom_ttl_micros", 300L * 1_000_000L),
             )
 
             val response = waiter.poll(timeoutMs, TimeUnit.MILLISECONDS)
@@ -374,7 +406,11 @@ class GaiaPairingOrchestrator(
         // Without this, CLIENT_FINISHED is rejected with NOT_LATEST_ATTEMPT
         // immediately, regardless of whether the user has tapped the emoji
         // on their phone. Confirmed by v0.34.0 runtime data.
-        signInResult.destRegistrationId?.let { outerBuilder.addDestRegistrationIDs(it) }
+        // [REMOTE_HOOK v0.58] gaia_omit_dest_reg_id — debug knob to prove
+        // the NOT_LATEST_ATTEMPT theory by intentionally omitting RegID.
+        if (!Hooks.shouldSkip("gaia_omit_dest_reg_id")) {
+            signInResult.destRegistrationId?.let { outerBuilder.addDestRegistrationIDs(it) }
+        }
         val outer = outerBuilder.build()
 
         val resp = http.postProto(

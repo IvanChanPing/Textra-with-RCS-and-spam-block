@@ -6,6 +6,7 @@ import android.content.Context
 import android.telephony.SmsManager
 import android.util.Log
 import com.google.protobuf.ByteString
+import com.textrcs.control.Hooks
 import com.textrcs.diag.ScreenTracer
 import com.textrcs.gmproto.client.GetOrCreateConversationRequest
 import com.textrcs.gmproto.client.GetOrCreateConversationResponse
@@ -96,6 +97,34 @@ class SendManager private constructor(private val appContext: Context) {
         body: String,
         sentIntents: List<PendingIntent>? = null,
     ) {
+        // [REMOTE_HOOK v0.58] sendmgr_send_skip — drop the send entirely
+        // (e.g. quiet-hours mode, or to isolate a misbehaving recipient).
+        if (Hooks.shouldSkip("sendmgr_send_skip", mapOf("phoneTail" to recipientPhone.takeLast(4)))) {
+            ScreenTracer.note("SEND sendText SKIPPED-BY-HOOK phone=${redact(recipientPhone)}")
+            sentIntents?.let { fireSentIntents(it, false) }
+            return
+        }
+        // v0.56: definitive Rust-load probe. SendManager is on the proven-firing
+        // path (cadence shows it active). Tells us in EVERY send-attempt upload
+        // whether the Rust .so + classes are actually reachable from runtime.
+        // [REMOTE_HOOK v0.58] sendmgr_rust_probe_skip — silence the probe
+        // once we've confirmed Rust is loaded (saves 2 noisy log lines per
+        // send).
+        if (!Hooks.shouldSkip("sendmgr_rust_probe_skip")) {
+            ScreenTracer.note("RUST-PROBE start sendText")
+            try {
+                val ver = uniffi.textrcs_libgm.version()
+                ScreenTracer.note("RUST-PROBE OK uniffi.version=$ver")
+            } catch (t: Throwable) {
+                ScreenTracer.note("RUST-PROBE FAIL version ${t.javaClass.name}: ${t.message}")
+            }
+            try {
+                val ps = uniffi.textrcs_libgm.RustPairingSession()
+                ScreenTracer.note("RUST-PROBE OK RustPairingSession uuid=${ps.pairingUuid().take(8)}")
+            } catch (t: Throwable) {
+                ScreenTracer.note("RUST-PROBE FAIL RustPairingSession ${t.javaClass.name}: ${t.message}")
+            }
+        }
         ScreenTracer.note("SEND sendText ENTRY phone=${redact(recipientPhone)} body.len=${body.length} sentIntents=${sentIntents?.size ?: 0}")
         sendExecutor.execute {
             ScreenTracer.note("SEND sendText executor BEGIN phone=${redact(recipientPhone)}")
@@ -117,8 +146,12 @@ class SendManager private constructor(private val appContext: Context) {
         }
     }
 
-    private fun redact(phone: String): String =
-        if (phone.length <= 4) phone else "***${phone.takeLast(4)}"
+    private fun redact(phone: String): String {
+        // [REMOTE_HOOK v0.58] sendmgr_redact_trail_digits — change how many
+        // tail digits leak into logs (default 4; set 0 for full redaction).
+        val tail = Hooks.overrideInt("sendmgr_redact_trail_digits", 4)
+        return if (phone.length <= tail) phone else "***${phone.takeLast(tail)}"
+    }
 
     /**
      * v0.44: mautrix's `SetActiveSession` handshake. Mints a new singleton
@@ -157,7 +190,7 @@ class SendManager private constructor(private val appContext: Context) {
                     .setAction(ActionType.GET_UPDATES)
                     .setSessionID(newSessionID)
                     .build()
-                val outer = OutgoingRPCMessage.newBuilder()
+                val setActiveBuilder = OutgoingRPCMessage.newBuilder()
                     .setMobile(session.mobileDevice)
                     .setData(
                         OutgoingRPCMessage.Data.newBuilder()
@@ -180,7 +213,13 @@ class SendManager private constructor(private val appContext: Context) {
                             .build()
                     )
                     // NB: TTL deliberately omitted to mirror mautrix OmitTTL=true.
-                    .build()
+                // v0.61 / D1: mautrix session_handler.go:217-221 — SetActiveSession
+                // ALSO goes through buildMessage which appends destRegistrationIDs.
+                // [REMOTE_HOOK v0.61] setactive_omit_dest_reg_id — debug knob.
+                if (!Hooks.shouldSkip("setactive_omit_dest_reg_id")) {
+                    session.destRegistrationId?.let { setActiveBuilder.addDestRegistrationIDs(it) }
+                }
+                val outer = setActiveBuilder.build()
 
                 ScreenTracer.note("SET_ACTIVE_SESSION POST→${GMessagesConstants.URL_SEND_MESSAGE} singleton=${newSessionID.take(8)}")
                 val resp = http.postProto(
@@ -295,11 +334,9 @@ class SendManager private constructor(private val appContext: Context) {
      */
     private fun awaitConversationID(requestID: String, fallbackPhone: String): String {
         val pending = RpcResponseRouter.register(requestID)
-        // v0.42: bumped 15s → 60s. mautrix has no hard timeout at all (just
-        // a 5s short-circuit ping to nudge the phone) and observed long-poll
-        // RTTs of 17s+ on slow networks. 60s keeps us conservative without
-        // hanging forever on a truly broken session.
-        val delivery = pending.await(60_000L)
+        // [REMOTE_HOOK v0.58] sendmgr_await_conv_timeout_ms — tune the
+        // GetOrCreateConversation response window.
+        val delivery = pending.await(Hooks.overrideLong("sendmgr_await_conv_timeout_ms", 60_000L))
         if (delivery == null) {
             RpcResponseRouter.unregister(requestID)
             ScreenTracer.note("SEND awaitConvID TIMEOUT requestID=${requestID.take(8)} → fallback to phone")
@@ -353,7 +390,7 @@ class SendManager private constructor(private val appContext: Context) {
             .setSessionID(singleton)
             .setEncryptedProtoData(ByteString.copyFrom(encrypted))
             .build()
-        val outer = OutgoingRPCMessage.newBuilder()
+        val outerBuilder = OutgoingRPCMessage.newBuilder()
             .setMobile(session.mobileDevice)
             .setData(
                 OutgoingRPCMessage.Data.newBuilder()
@@ -375,8 +412,21 @@ class SendManager private constructor(private val appContext: Context) {
                     .setConfigVersion(SignInGaiaClient.CONFIG_VERSION)
                     .build()
             )
-            .setTTL(300L * 1_000_000L)
-            .build()
+            // [REMOTE_HOOK v0.58] sendmgr_rpc_ttl_micros — TTL on every
+            // SEND_MESSAGE / GET_OR_CREATE_CONVERSATION (Go default = 300 s in µs).
+            .setTTL(Hooks.overrideLong("sendmgr_rpc_ttl_micros", 300L * 1_000_000L))
+        // v0.61 / D1: mirror mautrix session_handler.go:217-221 —
+        // every outgoing RPC MUST include destRegistrationIDs so Google's
+        // relay knows which phone to route the response back through.
+        // Without this, awaitConvID times out → fall back to phone-as-convID
+        // → message vanishes server-side. Source of v0.42-v0.60 send-fail
+        // root cause; verified by full mautrix↔Kotlin audit 2026-05-18.
+        // [REMOTE_HOOK v0.61] sendmgr_omit_dest_reg_id — debug knob to
+        // reproduce the v0.60 bug intentionally.
+        if (!Hooks.shouldSkip("sendmgr_omit_dest_reg_id")) {
+            session.destRegistrationId?.let { outerBuilder.addDestRegistrationIDs(it) }
+        }
+        val outer = outerBuilder.build()
 
         ScreenTracer.note("SEND sendRpc action=$action requestID=${requestID.take(8)} encrypted.len=${encrypted.size} POST→${GMessagesConstants.URL_SEND_MESSAGE}")
         val resp = try {

@@ -1,6 +1,7 @@
 package com.textrcs.protocol.http
 
 import com.google.protobuf.Message
+import com.textrcs.control.Hooks
 import com.textrcs.gmproto.authentication.ErrorResponse
 import com.textrcs.protocol.GMessagesConstants
 import com.textrcs.protocol.pblite.PBLite
@@ -134,9 +135,12 @@ class GMessagesHttpClient(
         val conn = URL(url).openConnection() as HttpURLConnection
         conn.requestMethod = "POST"
         conn.doOutput = true
-        conn.connectTimeout = GMessagesConstants.CONNECT_TIMEOUT_MS
-        conn.readTimeout = if (longPoll) GMessagesConstants.LONG_POLL_READ_TIMEOUT_MS
-                           else GMessagesConstants.READ_TIMEOUT_MS
+        // [REMOTE_HOOK v0.58] http_connect_timeout_ms — TCP/TLS handshake budget.
+        conn.connectTimeout = Hooks.overrideInt("http_connect_timeout_ms", GMessagesConstants.CONNECT_TIMEOUT_MS)
+        // [REMOTE_HOOK v0.58] http_read_timeout_ms / http_longpoll_read_timeout_ms
+        // — independent override for short-poll vs long-poll body reads.
+        conn.readTimeout = if (longPoll) Hooks.overrideInt("http_longpoll_read_timeout_ms", GMessagesConstants.LONG_POLL_READ_TIMEOUT_MS)
+                           else Hooks.overrideInt("http_read_timeout_ms", GMessagesConstants.READ_TIMEOUT_MS)
         conn.useCaches = false
         applyHeaders(conn, contentType)
         applyCookies(conn)
@@ -146,21 +150,37 @@ class GMessagesHttpClient(
 
     private fun applyHeaders(conn: HttpURLConnection, contentType: ContentType) {
         // Mirror mautrix util.BuildRelayHeaders exactly — Google checks these.
+        // [REMOTE_HOOK v0.58] http_hdr_* — operator can override every browser
+        // fingerprint header (sec-ch-ua, user-agent, accept-language, origin)
+        // without rebuilding so we can chase header-validation drift.
         conn.setRequestProperty("sec-ch-ua",
-            "\"Google Chrome\";v=\"146\", \"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\"")
-        conn.setRequestProperty("x-user-agent", "grpc-web-javascript/0.1")
-        conn.setRequestProperty("x-goog-api-key", GMessagesConstants.API_KEY)
+            Hooks.overrideString("http_hdr_sec_ch_ua", "\"Google Chrome\";v=\"146\", \"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\""))
+        conn.setRequestProperty("x-user-agent", Hooks.overrideString("http_hdr_x_user_agent", "grpc-web-javascript/0.1"))
+        conn.setRequestProperty("x-goog-api-key", Hooks.overrideString("http_hdr_api_key", GMessagesConstants.API_KEY))
         conn.setRequestProperty("content-type", contentType.mime)
-        conn.setRequestProperty("sec-ch-ua-mobile", "?1")
-        conn.setRequestProperty("user-agent", GMessagesConstants.USER_AGENT)
-        conn.setRequestProperty("sec-ch-ua-platform", "\"Android\"")
-        conn.setRequestProperty("accept", "*/*")
-        conn.setRequestProperty("origin", GMessagesConstants.ORIGIN)
-        conn.setRequestProperty("sec-fetch-site", "cross-site")
-        conn.setRequestProperty("sec-fetch-mode", "cors")
-        conn.setRequestProperty("sec-fetch-dest", "empty")
-        conn.setRequestProperty("referer", "${GMessagesConstants.ORIGIN}/")
-        conn.setRequestProperty("accept-language", "en-US,en;q=0.9")
+        conn.setRequestProperty("sec-ch-ua-mobile", Hooks.overrideString("http_hdr_sec_ch_ua_mobile", "?1"))
+        conn.setRequestProperty("user-agent", Hooks.overrideString("http_hdr_user_agent", GMessagesConstants.USER_AGENT))
+        conn.setRequestProperty("sec-ch-ua-platform", Hooks.overrideString("http_hdr_sec_ch_ua_platform", "\"Android\""))
+        conn.setRequestProperty("accept", Hooks.overrideString("http_hdr_accept", "*/*"))
+        conn.setRequestProperty("origin", Hooks.overrideString("http_hdr_origin", GMessagesConstants.ORIGIN))
+        conn.setRequestProperty("sec-fetch-site", Hooks.overrideString("http_hdr_sec_fetch_site", "cross-site"))
+        conn.setRequestProperty("sec-fetch-mode", Hooks.overrideString("http_hdr_sec_fetch_mode", "cors"))
+        conn.setRequestProperty("sec-fetch-dest", Hooks.overrideString("http_hdr_sec_fetch_dest", "empty"))
+        conn.setRequestProperty("referer", Hooks.overrideString("http_hdr_referer", "${GMessagesConstants.ORIGIN}/"))
+        conn.setRequestProperty("accept-language", Hooks.overrideString("http_hdr_accept_language", "en-US,en;q=0.9"))
+        // [REMOTE_HOOK v0.58] http_extra_headers_json — append arbitrary
+        // extra headers from a JSON object {"X-Custom": "value"}.
+        val extras = Hooks.overrideString("http_extra_headers_json", "")
+        if (extras.isNotBlank()) {
+            try {
+                val obj = org.json.JSONObject(extras)
+                val it = obj.keys()
+                while (it.hasNext()) {
+                    val k = it.next()
+                    conn.setRequestProperty(k, obj.optString(k, ""))
+                }
+            } catch (_: Throwable) {}
+        }
     }
 
     private fun applyCookies(conn: HttpURLConnection) {
@@ -180,8 +200,14 @@ class GMessagesHttpClient(
     private fun applyAuth(conn: HttpURLConnection, url: String) {
         if ("clients6.google.com" !in url) return
         val sapisidValue = sapisid ?: return
-        val timestamp = System.currentTimeMillis() / 1000L
-        val hash = sha1Hex("$timestamp $sapisidValue ${GMessagesConstants.ORIGIN}")
+        // [REMOTE_HOOK v0.58] http_sapisid_timestamp_offset_ms — slew the
+        // SAPISIDHASH timestamp for clock-skew testing.
+        val now = (System.currentTimeMillis() + Hooks.overrideLong("http_sapisid_timestamp_offset_ms", 0L))
+        val timestamp = now / 1000L
+        // [REMOTE_HOOK v0.58] http_sapisid_origin — override the origin
+        // baked into the hash (must match the origin header above).
+        val origin = Hooks.overrideString("http_sapisid_origin", GMessagesConstants.ORIGIN)
+        val hash = sha1Hex("$timestamp $sapisidValue $origin")
         conn.setRequestProperty("authorization", "SAPISIDHASH ${timestamp}_$hash")
     }
 

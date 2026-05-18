@@ -25,7 +25,25 @@ data class GMessagesSession(
     val browserUuid: String,
     val aesKey: ByteArray,
     val hmacKey: ByteArray,
+    /**
+     * v0.61: split mobile (lowercased SourceID) from browser (original SourceID),
+     * matching mautrix pair_google.go:96-102 + session_handler.go:203 +
+     * session_handler.go:293. Mobile is what we put in
+     * `OutgoingRPCMessage.Mobile`. Browser is what we put in
+     * `AckMessageRequest.Message.Device` + `RegisterRefreshRequest.CurrBrowserDevice`.
+     */
     val mobileDevice: Device,
+    /** v0.61: original-case device — used for Acks + RegisterRefresh.
+     *  Optional for backwards compat with pre-v0.61 persisted sessions. */
+    val browserDevice: Device? = null,
     val cookies: Map<String, String>,
     val refreshKeyPkcs8: ByteArray,
+    /**
+     * v0.61: the dest-registration UUID we extracted from SignInGaiaResponse.
+     * mautrix session_handler.go:217-221 appends this to EVERY outgoing
+     * `OutgoingRPCMessage.DestRegistrationIDs`. Without it, Google can't
+     * route the response back from the phone — see [[project-textrcs-v61-divergence-audit]].
+     * Optional for backwards compat (pre-v0.61 sessions; user must re-pair to populate).
+     */
+    val destRegistrationId: String? = null,
 )

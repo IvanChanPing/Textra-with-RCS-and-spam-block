@@ -1,5 +1,6 @@
 package com.textrcs.protocol.longpoll
 
+import com.textrcs.control.Hooks
 import com.textrcs.gmproto.authentication.AuthMessage
 import com.textrcs.gmproto.rpc.IncomingRPCMessage
 import com.textrcs.gmproto.rpc.LongPollingPayload
@@ -54,6 +55,23 @@ class LongPollReceiver(
     private val running = AtomicBoolean(true)
     @Volatile private var currentStream: AutoCloseable? = null
 
+    /**
+     * [REMOTE_HOOK v0.59] longpoll_skip_count_initial — override the
+     * initial skipCount manually (debug).
+     *
+     * Mirrors mautrix client.go skipCount semantics: when the server
+     * sends an `ack` frame with count > 0, the next `count` data frames
+     * are STALE (already-acked from prior pairings or replays) and
+     * should be dropped rather than dispatched. Without this, the
+     * 84+-frame replay buffer poisons our RpcResponseRouter with
+     * sessionIDs that no current waiter recognizes — and our REAL
+     * send response gets lost in the noise / fails to deliver.
+     */
+    @Volatile private var skipCount: Int = 0
+
+    /** Read-only accessor for diagnostics (dump_state, hooks). */
+    fun currentSkipCount(): Int = skipCount
+
     /** Stop the receive loop. Safe to call from another thread. */
     fun stop() {
         running.set(false)
@@ -63,6 +81,12 @@ class LongPollReceiver(
     override fun run() {
         var errorCount = 0
         while (running.get()) {
+            // [REMOTE_HOOK v0.58] longpoll_disable — pause the long-poll
+            // loop entirely (useful when debugging server-side dedup).
+            if (Hooks.shouldSkip("longpoll_disable")) {
+                try { Thread.sleep(2000) } catch (_: InterruptedException) { break }
+                continue
+            }
             try {
                 openOneConnection()
                 errorCount = 0
@@ -70,7 +94,11 @@ class LongPollReceiver(
                 if (!running.get()) break
                 handler.onError(e)
                 errorCount++
-                val sleepSeconds = ((errorCount + 1) * 5).coerceAtMost(60).toLong()
+                // [REMOTE_HOOK v0.58] longpoll_backoff_base_s / longpoll_backoff_max_s —
+                // tune reconnect backoff. Default formula: (errorCount+1)*5 capped at 60s.
+                val base = Hooks.overrideInt("longpoll_backoff_base_s", 5)
+                val cap = Hooks.overrideInt("longpoll_backoff_max_s", 60)
+                val sleepSeconds = ((errorCount + 1) * base).coerceAtMost(cap).toLong()
                 try {
                     Thread.sleep(sleepSeconds * 1000)
                 } catch (_: InterruptedException) {
@@ -122,7 +150,9 @@ class LongPollReceiver(
     }
 
     private fun readFrames(input: InputStream): Boolean {
-        val buf = ByteArray(64 * 1024)
+        // [REMOTE_HOOK v0.58] longpoll_read_buf_kib — tune the chunked read
+        // buffer (default 64 KiB).
+        val buf = ByteArray(Hooks.overrideInt("longpoll_read_buf_kib", 64) * 1024)
         val accumulated = StringBuilder()
 
         // Expect the opening `[[`
@@ -181,11 +211,40 @@ class LongPollReceiver(
     private fun dispatch(msg: LongPollingPayload) {
         when {
             msg.hasData() -> {
-                com.textrcs.diag.ScreenTracer.note("LP frame=data responseID=${msg.data.responseID.take(8)} bugleRoute=${msg.data.bugleRoute}")
-                handler.onIncomingRpc(msg.data)
+                // [REMOTE_HOOK v0.59] longpoll_disable_skip_count — turn off
+                // stale-frame skipping (debug: revert to v0.58 behavior).
+                val skipping = skipCount > 0 && !Hooks.shouldSkip("longpoll_disable_skip_count")
+                if (skipping) {
+                    skipCount--
+                    // [REMOTE_HOOK v0.60] longpoll_skip_no_ack — by default we
+                    // STILL queue an ack for stale-skipped frames so the
+                    // server-side queue actually drains. v0.59 logged-and-
+                    // ignored stale frames WITHOUT acking; Google's relay
+                    // then refuses to deliver new responses while the queue
+                    // is unACKed. Set this hook to disable acking-on-skip
+                    // (debug: revert to v0.59 behavior).
+                    if (!Hooks.shouldSkip("longpoll_skip_no_ack")) {
+                        AckSender.add(msg.data.responseID)
+                    }
+                    com.textrcs.diag.ScreenTracer.note("LP frame=data STALE-SKIP+ACK responseID=${msg.data.responseID.take(8)} bugleRoute=${msg.data.bugleRoute} skipCount=$skipCount")
+                } else {
+                    com.textrcs.diag.ScreenTracer.note("LP frame=data responseID=${msg.data.responseID.take(8)} bugleRoute=${msg.data.bugleRoute}")
+                    handler.onIncomingRpc(msg.data)
+                }
             }
             msg.hasAck() -> {
-                com.textrcs.diag.ScreenTracer.note("LP frame=ack count=${msg.ack.count}")
+                com.textrcs.diag.ScreenTracer.note("LP frame=ack count=${msg.ack.count} prevSkipCount=$skipCount")
+                // [REMOTE_HOOK v0.59] longpoll_ack_skip_arm_threshold — minimum
+                // ack.count value before arming skipCount (default 0 = arm
+                // on any positive count, mirroring mautrix).
+                val armThreshold = Hooks.overrideInt("longpoll_ack_skip_arm_threshold", 0)
+                if (msg.ack.count > armThreshold) {
+                    // Server is announcing N stale frames are about to be
+                    // replayed. Set skipCount so we drop them rather than
+                    // dispatching them as if they were real responses.
+                    skipCount = Hooks.overrideInt("longpoll_skip_count_initial", msg.ack.count)
+                    com.textrcs.diag.ScreenTracer.note("LP STALE-SKIP-ARM skipCount=$skipCount")
+                }
                 handler.onAck(msg.ack)
             }
             msg.hasHeartbeat() -> {

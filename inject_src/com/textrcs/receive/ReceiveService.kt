@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import com.google.protobuf.ByteString
+import com.textrcs.control.Hooks
 import com.textrcs.gmproto.events.UpdateEvents
 import com.textrcs.gmproto.rpc.ActionType
 import com.textrcs.gmproto.rpc.IncomingRPCMessage
@@ -19,6 +20,7 @@ import com.textrcs.protocol.SessionStore
 import com.textrcs.protocol.TokenRefreshClient
 import com.textrcs.protocol.crypto.AESCTRHelper
 import com.textrcs.protocol.http.GMessagesHttpClient
+import com.textrcs.protocol.longpoll.AckSender
 import com.textrcs.protocol.longpoll.LongPollReceiver
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -86,11 +88,39 @@ class ReceiveService : Service() {
             override fun onConnected() {
                 ScreenTracer.note("LP onConnected — Google clients6 long-poll OPEN")
                 Log.i(TAG, "Long-poll connected")
-                // v0.44: register our session with Google's relay. Without
-                // this handshake the server emits unencrypted intermediate
-                // frames only — typed encrypted responses never arrive.
-                // Mirrors mautrix `client.go::postConnect → SetActiveSession`.
-                com.textrcs.send.SendManager.get(applicationContext).setActiveSession()
+                // [REMOTE_HOOK v0.59] receive_postconnect_immediate — revert
+                // to v0.58 behavior (call setActiveSession immediately, no
+                // wait for stale-frame drain).
+                if (Hooks.shouldSkip("receive_postconnect_immediate")) {
+                    ScreenTracer.note("RCV onConnected IMMEDIATE-MODE by hook")
+                    com.textrcs.send.SendManager.get(applicationContext).setActiveSession()
+                    return
+                }
+                // [REMOTE_HOOK v0.59] receive_postconnect_delay_ms — match
+                // mautrix client.go postConnect() flow: wait for stale-frame
+                // replay to drain + acks to flush BEFORE registering our
+                // singleton via SetActiveSession. Calling SetActiveSession
+                // before drain corrupts the server-side singleton mapping
+                // and our real send responses never arrive.
+                val delayMs = Hooks.overrideLong("receive_postconnect_delay_ms", 3_000L)
+                refreshScheduler.schedule({
+                    runCatching {
+                        // [REMOTE_HOOK v0.59] receive_postconnect_skip_ack_flush
+                        // — skip the pre-SetActive ack flush.
+                        if (!Hooks.shouldSkip("receive_postconnect_skip_ack_flush")) {
+                            AckSender.flush()
+                        }
+                        Thread.sleep(Hooks.overrideLong("receive_postconnect_post_ack_delay_ms", 1_000L))
+                        // [REMOTE_HOOK v0.59] receive_postconnect_skip_set_active
+                        // — skip the SetActiveSession call entirely (debug).
+                        if (Hooks.shouldSkip("receive_postconnect_skip_set_active")) {
+                            ScreenTracer.note("RCV postConnect setActiveSession SKIPPED by hook")
+                        } else {
+                            ScreenTracer.note("RCV postConnect → setActiveSession after ${delayMs}ms drain")
+                            com.textrcs.send.SendManager.get(applicationContext).setActiveSession()
+                        }
+                    }
+                }, delayMs, TimeUnit.MILLISECONDS)
             }
             override fun onDisconnected(cleanClose: Boolean) {
                 ScreenTracer.note("LP onDisconnected clean=$cleanClose — Google clients6 long-poll CLOSED")
@@ -108,6 +138,16 @@ class ReceiveService : Service() {
             isDaemon = false
             start()
         }
+        // [REMOTE_HOOK v0.59] ack_sender_disable — disable AckSender entirely.
+        if (!Hooks.shouldSkip("ack_sender_disable")) {
+            // v0.61 / D4: mautrix sendAckRequest uses AuthData.Browser (original
+            // case), NOT Mobile (lowercased). Fall back to mobileDevice if a
+            // pre-v0.61 session is loaded (browserDevice will be null).
+            // [REMOTE_HOOK v0.61] ack_sender_force_mobile_device — debug knob.
+            val ackDev = if (Hooks.shouldSkip("ack_sender_force_mobile_device")) session.mobileDevice
+                         else (session.browserDevice ?: session.mobileDevice)
+            AckSender.start(http!!, session.tachyonAuthToken, ackDev)
+        }
         scheduleTokenRefresh(session)
     }
 
@@ -117,10 +157,17 @@ class ReceiveService : Service() {
      * the new TTL on success.
      */
     private fun scheduleTokenRefresh(session: com.textrcs.protocol.GMessagesSession) {
-        // ttl can be 0 from older sessions; in that case run an immediate
-        // refresh attempt and let the server return a current ttl.
-        val ttl = if (session.tokenTtlSeconds > 0) session.tokenTtlSeconds else 3600L
-        val refreshAtSeconds = (ttl - 3600L).coerceAtLeast(60L)
+        // [REMOTE_HOOK v0.58] receive_refresh_fallback_ttl_s — default TTL
+        // when the persisted session is from a pre-v0.18 build with no TTL.
+        val ttl = if (session.tokenTtlSeconds > 0) session.tokenTtlSeconds
+                  else Hooks.overrideLong("receive_refresh_fallback_ttl_s", 3600L)
+        // [REMOTE_HOOK v0.58] receive_refresh_safety_margin_s — refresh how
+        // many seconds before expiry (default 60 min = 3600 s).
+        val margin = Hooks.overrideLong("receive_refresh_safety_margin_s", 3600L)
+        // [REMOTE_HOOK v0.58] receive_refresh_min_delay_s — clamp to at
+        // least this many seconds away.
+        val minDelay = Hooks.overrideLong("receive_refresh_min_delay_s", 60L)
+        val refreshAtSeconds = (ttl - margin).coerceAtLeast(minDelay)
         refreshScheduler.schedule({ tryRefreshAndReschedule() }, refreshAtSeconds, TimeUnit.SECONDS)
         Log.d(TAG, "scheduled token refresh in ${refreshAtSeconds}s (ttl=${ttl}s)")
     }
@@ -140,8 +187,10 @@ class ReceiveService : Service() {
             scheduleTokenRefresh(refreshed)
         } catch (e: Throwable) {
             Log.w(TAG, "token refresh failed: ${e.javaClass.simpleName}: ${e.message}")
-            // Retry in 5min.
-            refreshScheduler.schedule({ tryRefreshAndReschedule() }, 5L, TimeUnit.MINUTES)
+            // [REMOTE_HOOK v0.58] receive_refresh_retry_minutes — how soon
+            // to retry after a refresh failure (5 min default).
+            refreshScheduler.schedule({ tryRefreshAndReschedule() },
+                Hooks.overrideLong("receive_refresh_retry_minutes", 5L), TimeUnit.MINUTES)
         }
     }
 
@@ -166,7 +215,9 @@ class ReceiveService : Service() {
             // filter, v0.41's router published their unencrypted bytes as if
             // they were the typed plaintext, causing parse failures.
             val isIntermediate = !rpcData.unencryptedData.isEmpty && rpcData.encryptedData.isEmpty
-            if (isIntermediate &&
+            // [REMOTE_HOOK v0.58] receive_disable_intermediate_filter — let
+            // every frame through (debug: see what server is emitting).
+            if (isIntermediate && !Hooks.shouldSkip("receive_disable_intermediate_filter") &&
                 rpcData.action != ActionType.CREATE_GAIA_PAIRING_CLIENT_INIT &&
                 rpcData.action != ActionType.CREATE_GAIA_PAIRING_CLIENT_FINISHED
             ) {
@@ -226,11 +277,26 @@ class ReceiveService : Service() {
             )
             if (claimed) {
                 ScreenTracer.note("RCV dispatchRpc CLAIMED by router sessionID=${rpcData.sessionID.take(8)} action=${rpcData.action}")
+                // [REMOTE_HOOK v0.59] receive_dispatch_ack_on_claimed — skip
+                // adding claimed frames to ack queue (debug).
+                if (!Hooks.shouldSkip("receive_dispatch_ack_on_claimed")) {
+                    AckSender.add(msg.responseID)
+                }
                 return
+            }
+            // Queue ack for non-claimed but processed frames too (matches mautrix
+            // event_handler.go:181/185 — every consumed frame gets queued for ack).
+            // [REMOTE_HOOK v0.59] receive_dispatch_ack_on_unclaimed — skip
+            // adding unclaimed frames to ack queue (debug).
+            if (!Hooks.shouldSkip("receive_dispatch_ack_on_unclaimed")) {
+                AckSender.add(msg.responseID)
             }
             // Unsolicited event: only GET_UPDATES carries push notifications
             // for now. Everything else logs and drops.
-            if (rpcData.action == ActionType.GET_UPDATES) {
+            // [REMOTE_HOOK v0.58] receive_accept_all_actions — try parsing
+            // every action as UpdateEvents for diagnostic capture.
+            val acceptAll = Hooks.shouldSkip("receive_accept_all_actions")
+            if (rpcData.action == ActionType.GET_UPDATES || acceptAll) {
                 val events = UpdateEvents.parseFrom(plaintext)
                 IncomingMessageHandler.onUpdateEvents(applicationContext, events)
             } else {
@@ -259,9 +325,12 @@ class ReceiveService : Service() {
                 mgr.createNotificationChannel(ch)
             }
         }
+        // [REMOTE_HOOK v0.58] receive_notif_title / receive_notif_text —
+        // change the ongoing-notification copy (useful when running A/B
+        // builds side-by-side to tell them apart visually).
         val builder = Notification.Builder(this, CHANNEL_ID)
-            .setContentTitle("Textra 2")
-            .setContentText("Connected to Google Messages")
+            .setContentTitle(Hooks.overrideString("receive_notif_title", "Textra 2"))
+            .setContentText(Hooks.overrideString("receive_notif_text", "Connected to Google Messages"))
             .setSmallIcon(android.R.drawable.stat_notify_sync)
             .setOngoing(true)
         return builder.build()

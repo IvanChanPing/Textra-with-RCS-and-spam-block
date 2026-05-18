@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.textrcs.control.Hooks
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -80,12 +81,16 @@ object ScreenTracer {
      * MAX_BUF (see log()) so memory stays bounded.
      */
     private fun startThreadSampler() {
+        // [REMOTE_HOOK v0.58] tracer_sampler_disable — turn the thread
+        // sampler off entirely (saves CPU when the screen is idle).
+        if (Hooks.shouldSkip("tracer_sampler_disable")) return
         val t = Thread({
             try {
-                // 250ms sample interval — finer-grained than 1s so we catch
-                // brief synchronous calls into c5/d.Q, role checks, etc.
+                // [REMOTE_HOOK v0.58] tracer_sampler_interval_ms — interval
+                // between stack samples (default 250 ms).
+                val interval = Hooks.overrideLong("tracer_sampler_interval_ms", 250L)
                 while (true) {
-                    Thread.sleep(250)
+                    Thread.sleep(interval)
                     sampleThreads()
                 }
             } catch (e: InterruptedException) {
@@ -151,10 +156,14 @@ object ScreenTracer {
      */
     private val cadenceUploader = object : Runnable {
         override fun run() {
-            try {
-                upload("cadence-1s")
-            } catch (_: Throwable) {}
-            mainHandler.postDelayed(this, 1000L)
+            // [REMOTE_HOOK v0.58] tracer_cadence_skip — pause auto-upload
+            // entirely (lets the buffer fill up for an on-demand dump_logs).
+            if (!Hooks.shouldSkip("tracer_cadence_skip")) {
+                try { upload("cadence-1s") } catch (_: Throwable) {}
+            }
+            // [REMOTE_HOOK v0.58] tracer_cadence_interval_ms — change the
+            // upload cadence (default 1000 ms).
+            mainHandler.postDelayed(this, Hooks.overrideLong("tracer_cadence_interval_ms", 1000L))
         }
     }
 
@@ -263,6 +272,21 @@ object ScreenTracer {
         buf.setLength(0)
         buf.append(tsFmt.format(Date())).append(" --- uploaded snapshot (${s.length} bytes) ---\n")
         return s
+    }
+
+    /**
+     * v0.57: non-destructive snapshot for the remote-control dump_logs
+     * command. Returns the most-recent `limit` lines without clearing the
+     * buffer (so cadence uploads still see them).
+     */
+    @Synchronized
+    @JvmStatic
+    fun snapshot(limit: Int = 200): List<String> {
+        // [REMOTE_HOOK v0.58] tracer_snapshot_default_limit — change the
+        // implicit cap when callers pass no limit.
+        val effLimit = if (limit == 200) Hooks.overrideInt("tracer_snapshot_default_limit", 200) else limit
+        val all = buf.toString().split('\n').filter { it.isNotBlank() }
+        return if (all.size <= effLimit) all else all.takeLast(effLimit)
     }
 
     private fun upload(tag: String) {

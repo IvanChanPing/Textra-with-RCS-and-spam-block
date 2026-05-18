@@ -9,6 +9,7 @@ import android.os.Build
 import android.view.View
 import android.view.ViewOutlineProvider
 import android.view.animation.PathInterpolator
+import com.textrcs.control.Hooks
 
 /**
  * Animates the ConvoActivity window's corners from a rounded 24dp radius
@@ -59,10 +60,15 @@ object ConvoCornerAnim {
     @JvmStatic
     fun attach(activity: Activity) {
         if (Build.VERSION.SDK_INT < 22) return  // Window.setClipToOutline is API 22+
+        // [REMOTE_HOOK v0.58] convo_corner_anim_disable — skip the corner
+        // animation entirely (drops to a plain slide-in).
+        if (Hooks.shouldSkip("convo_corner_anim_disable")) return
         val window = activity.window ?: return
         val decor: View = window.decorView
         val density = activity.resources.displayMetrics.density
-        val startPx = START_RADIUS_DP * density
+        // [REMOTE_HOOK v0.58] convo_corner_start_radius_dp — tweak the
+        // initial corner radius (default 24 dp).
+        val startPx = Hooks.overrideDouble("convo_corner_start_radius_dp", START_RADIUS_DP.toDouble()).toFloat() * density
 
         // Mutable radius read by the provider on every invalidateOutline().
         val state = floatArrayOf(startPx)
@@ -76,7 +82,10 @@ object ConvoCornerAnim {
         try { window.setClipToOutline(true) } catch (_: Throwable) {}
 
         val anim = ValueAnimator.ofFloat(startPx, 0f).apply {
-            duration = DURATION_MS
+            // [REMOTE_HOOK v0.58] convo_corner_anim_duration_ms — duration
+            // of the corner-round animation (default 350 ms, matches the
+            // window slide).
+            duration = Hooks.overrideLong("convo_corner_anim_duration_ms", DURATION_MS)
             // PathInterpolator(0.4, 0, 0.2, 1) IS the cubic-bezier
             // definition of @android:interpolator/fast_out_slow_in — keeps
             // the corner curve in lock-step with the slide.

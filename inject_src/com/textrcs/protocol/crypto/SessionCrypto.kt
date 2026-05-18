@@ -1,5 +1,6 @@
 package com.textrcs.protocol.crypto
 
+import com.textrcs.control.Hooks
 import java.security.MessageDigest
 
 /**
@@ -50,15 +51,16 @@ object SessionCrypto {
      * @return an [AESCTRHelper] ready to encrypt/decrypt session envelopes.
      */
     fun deriveSessionKeys(nextKey: ByteArray, confirmedKeyDerivationVersion: Int): AESCTRHelper {
-        // v0.52: delegate to Rust to rule out a Kotlin-side derivation bug as
-        // the cause of the HMAC-mismatch issue (see project memory
-        // `textrcs-v51-send-root-cause-hmac-mismatch-2026-05-18`). On any
-        // Rust failure (e.g. .so not loaded), fall back to the Kotlin path
-        // so we never break a working pair. Both impls are byte-for-byte
-        // mirrors of mautrix Go pair_google.go:452-473; this lets us A/B
-        // test which one Google's server accepts.
-        try {
-            val pair = uniffi.textrcs_libgm.deriveSessionKeys(nextKey, confirmedKeyDerivationVersion)
+        // [REMOTE_HOOK v0.58] session_crypto_force_version — let operator
+        // force v0 or v1 derivation regardless of server's confirmed value
+        // (parity testing).
+        val effectiveVersion = Hooks.overrideInt("session_crypto_force_version", confirmedKeyDerivationVersion)
+        // [REMOTE_HOOK v0.58] session_crypto_disable_rust_delegate — bypass
+        // Rust derive even when .so is loaded.
+        if (Hooks.shouldSkip("session_crypto_disable_rust_delegate")) {
+            // Fall straight through to Kotlin path below.
+        } else try {
+            val pair = uniffi.textrcs_libgm.deriveSessionKeys(nextKey, effectiveVersion)
             val aes = pair[0]
             val hmac = pair[1]
             android.util.Log.i(
@@ -72,14 +74,19 @@ object SessionCrypto {
                 "Rust deriveSessionKeys failed (${t.javaClass.simpleName}: ${t.message}); falling back to Kotlin path",
             )
         }
-        val clientKey = HkdfSha256.derive(nextKey, ENCRYPTION_KEY_INFO, "client".toByteArray())
-        val serverKey = HkdfSha256.derive(nextKey, ENCRYPTION_KEY_INFO, "server".toByteArray())
+        // [REMOTE_HOOK v0.58] session_crypto_encryption_info / session_crypto_client_salt /
+        // session_crypto_server_salt — override the salts used in HKDF derive.
+        val info = Hooks.overrideBytes("session_crypto_encryption_info", ENCRYPTION_KEY_INFO)
+        val clientSalt = Hooks.overrideBytes("session_crypto_client_salt", "client".toByteArray())
+        val serverSalt = Hooks.overrideBytes("session_crypto_server_salt", "server".toByteArray())
+        val clientKey = HkdfSha256.derive(nextKey, info, clientSalt)
+        val serverKey = HkdfSha256.derive(nextKey, info, serverSalt)
 
-        return when (confirmedKeyDerivationVersion) {
+        return when (effectiveVersion) {
             0 -> AESCTRHelper(aesKey = clientKey, hmacKey = serverKey)
             1 -> deriveV1(clientKey, serverKey)
             else -> throw IllegalArgumentException(
-                "unsupported key derivation version $confirmedKeyDerivationVersion"
+                "unsupported key derivation version $effectiveVersion"
             )
         }
     }
@@ -100,15 +107,18 @@ object SessionCrypto {
 
         val concattedHash = MessageDigest.getInstance("SHA-256").digest(concatted)
 
+        // [REMOTE_HOOK v0.58] session_crypto_ditto_salt1/info1/salt2/info2 —
+        // override the v1 Ditto-chain salts/infos (Go uses literal "Ditto salt 1"
+        // etc.). Tweak if Google changes the labels in a future protocol bump.
         val aes = HkdfSha256.derive(
             concattedHash,
-            "Ditto salt 1".toByteArray(),
-            "Ditto info 1".toByteArray(),
+            Hooks.overrideBytes("session_crypto_ditto_salt1", "Ditto salt 1".toByteArray()),
+            Hooks.overrideBytes("session_crypto_ditto_info1", "Ditto info 1".toByteArray()),
         )
         val hmac = HkdfSha256.derive(
             concattedHash,
-            "Ditto salt 2".toByteArray(),
-            "Ditto info 2".toByteArray(),
+            Hooks.overrideBytes("session_crypto_ditto_salt2", "Ditto salt 2".toByteArray()),
+            Hooks.overrideBytes("session_crypto_ditto_info2", "Ditto info 2".toByteArray()),
         )
         return AESCTRHelper(aesKey = aes, hmacKey = hmac)
     }
