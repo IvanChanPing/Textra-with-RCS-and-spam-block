@@ -81,7 +81,7 @@
     .registers 3
     .param p1, "it"    # B
 
-    .line 1968
+    .line 2129
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterBoolean;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterBoolean;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterBoolean;->lift(B)Ljava/lang/Boolean;
@@ -95,7 +95,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 1957
+    .line 2118
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;

@@ -1,5 +1,209 @@
 # TextRCS Changelog
 
+## v0.69.0 — 2026-05-20 — send + receive switched to the Rust libgm crate
+
+After ~27 versions chasing the same send bug in the hand-written Kotlin
+libgm port — `GET_OR_CREATE_CONVERSATION` POSTs HTTP 200 but the
+long-poll never becomes a live receiver, so every typed RPC response is
+buffered server-side and replayed stale on reconnect — the live send +
+receive path is now driven entirely by the Rust `textrcs_libgm` crate
+(a structural 1:1 translation of mautrix-gmessages' Go libgm).
+
+### Root cause the Rust path fixes
+
+mautrix `Client.Connect` runs `go doLongPoll(true, false, c.postConnect)`
+— `postConnect` is an `onFirstConnect` callback that runs **after** the
+long-poll stream has opened and started reading (`longpoll.go:398-401`).
+`postConnect` sleeps 2s, flushes acks, then POSTs `SetActiveSession`
+(GET_UPDATES). The long-poll is therefore already bound and reading
+**before** SetActiveSession registers it. The Kotlin port scheduled
+SetActiveSession on a timer that raced (and often lost to) the stream
+open, and never ran a real `postConnect` ordering — so Google never
+bound the long-poll as the active receiver.
+
+The Rust crate (`client.rs`) was audited against the Go source and had
+the same gap — `connect()` spawned the long-poll but never called
+`set_active_session()`. This release adds the faithful port:
+
+  - `ClientEngine::connect` → `bumpNextDataReceiveCheck(10m)` then spawns
+    the long-poll with an `on_first_connect` hook.
+  - `run_long_poll` triggers `post_connect` exactly once, after the
+    first stream opens, concurrently with the stream read.
+  - `post_connect` = sleep 2s → drain acks → sleep 1s →
+    `SET_ACTIVE_SESSION` → `IS_BUGLE_DEFAULT` (client.go:241-282).
+  - a ditto-pinger task per long-poll generation fires
+    `NOTIFY_DITTO_ACTIVITY` every 60s (longpoll.go dittoPinger.Loop) —
+    without it Google stops live-pushing.
+  - `skip_count` from the startup `ack` frame, decremented per stale
+    data event which is marked `is_old` (event_handler.go:202-205).
+  - `refresh_auth_token` guard fixed to Go semantics (a 0 expiry now
+    refreshes, matching `time.Until(zeroTime) > buffer == false`).
+
+### Kotlin wiring
+
+- New `com.textrcs.bridge.RustBridge` — the single integration point.
+  Reads the persisted `GMessagesSession` from `SessionStore`, maps it to
+  the Rust `RustSession` FFI record, builds a `RustClient`, and connects
+  (long-poll + postConnect + pinger, all in Rust). Implements the
+  `RustEventSink` callback: an unsolicited `GET_UPDATES` DataEvent is
+  parsed as `UpdateEvents` and handed to `IncomingMessageHandler`
+  exactly as before.
+- `SendManager.sendTextBlocking` now delegates to `RustBridge.sendText`
+  (two-step GetOrCreateConversation + SendMessage, driven in Rust). The
+  legacy hand-written Kotlin send is kept behind the
+  `sendmgr_use_kotlin_path` hook for A/B debugging only.
+- `ReceiveService` is reduced to the Android foreground-service shell +
+  `RustBridge.start`/`stop`. The Kotlin `LongPollReceiver` / `AckSender`
+  / `RpcResponseRouter` / `TokenRefreshClient` stack is off the live
+  path (still compiled — used by Gaia pairing + diagnostics).
+- Pairing (`PairingActivity`, `GaiaPairingOrchestrator`,
+  `SignInGaiaClient`) is unchanged — it still drives Gaia login + UKEY2
+  and persists to `SessionStore`.
+
+### Rust crate (textrcs_libgm v0.12.0)
+
+- `src/ffi.rs` — new UniFFI surface: `RustSession` (record),
+  `RustClient` (send/connect/disconnect/markRead/fetch/list), and the
+  `RustEventSink` foreign callback interface.
+- `src/client.rs` — `postConnect`, ditto-pinger loop, `skip_count`,
+  `bump_next_data_receive_check`, faithful 5s-short-circuit re-wait.
+- `src/crypto/ecdsa.rs` — `Jwk::from_pkcs8_der` so the persisted
+  RefreshKey rebuilds for `RegisterRefresh` signing.
+- 102 unit tests pass; `.so` built for all 4 ABIs via `build.sh`.
+
+### New remote hooks
+
+`rust_bridge_disable` (kill the Rust path entirely),
+`sendmgr_use_kotlin_path` (force the legacy Kotlin send).
+
+## v0.68.0 — 2026-05-20 — wire-dump A/B diagnostics (superseded by v0.69)
+
+Added `wire_dump_disable`-gated protobuf text-format dumps of every
+outgoing `OutgoingRPCData` / `OutgoingRPCMessage` so the Kotlin send
+envelope could be diffed field-by-field against mautrix `buildMessage`.
+The diff confirmed the envelope was correct — the bug was the long-poll
+binding order, not the wire shape. Superseded by the v0.69 Rust switch.
+
+## v0.67.0 — 2026-05-20 — one shared cookie jar (match mautrix's single AuthData.Cookies)
+
+v0.66 device test: ack-every-frame + the SendMessage body fix both
+verified, SET_ACTIVE_SESSION now prompt — but the send still timed out
+and the server's stale-frame backlog kept GROWING every session (ack
+count 39 → 77 → 152). The long-poll gets only the startup replay then
+goes silent; RPC responses are buffered server-side, not pushed.
+
+mautrix keeps ONE `AuthData.Cookies` map shared by every request — the
+long-poll, sends, acks, ditto-pings, SetActiveSession (`client.go:50-80`,
+`http.go:50,59`). textra2 built a fresh `GMessagesHttpClient` — a fresh,
+independent cookie jar — for the long-poll, for each send, for
+SetActiveSession and for the ditto-ping (four jars). A `Set-Cookie`
+rotation absorbed by one never reached the others, so the long-poll and
+the SET_ACTIVE_SESSION POST drift onto different cookie identities and
+Google never binds the long-poll to the registered active session.
+
+Fix: `GMessagesHttpClient.shared(session)` — a client backed by ONE
+process-wide cookie jar (`ConcurrentHashMap`), seeded from the session
+(`putIfAbsent`, never clobbering a live rotation). All five send/receive
+construction sites (`ReceiveService` ×2, `SendManager` ×3) now use it;
+`AckSender` already shares `ReceiveService`'s client. Faithful port of
+mautrix's single shared cookie store.
+
+## v0.66.0 — 2026-05-20 — ack every frame + correct SendMessage body
+
+Two faithful ports from mautrix-gmessages, fixing the remaining send-fail:
+
+**ack-every-frame** (`ReceiveService.dispatchRpc`). mautrix `HandleRPCMsg`
+(`event_handler.go:181,185`) calls `queueMessageAck(ResponseID)` BEFORE
+any decode/route/skip decision — even on a decrypt failure. textra2 only
+acked on the success paths, skipping the decrypt-fail / exception /
+intermediate-frame-filter `return` paths. On-device the long-poll showed
+`ack count=77` then only ~15 frames then total silence: one unacked
+frame in the replay batch stalls Google's pending queue and it stops
+pushing. Fix: `AckSender.add(msg.responseID)` unconditionally at the top
+of `dispatchRpc` (AckSender dedupes, so later add() calls are no-ops).
+
+**correct SendMessage body** (`SendManager.sendTextBlocking`). The message
+text was put in `MessagePayload.messagePayloadContent`; mautrix
+`ConvertMatrixMessage` (`connector/handlematrix.go:110-146`) leaves that
+field nil and puts the body in `MessagePayload.messageInfo[]` as
+`MessageInfo{messageContent{content}}`, plus `tmpID2 == tmpID` and
+`participantID = conversation.defaultOutgoingID`. As built before, Google
+received a `SendMessageRequest` with an empty body. `getOrCreateConversation`
+now also returns the conversation's `defaultOutgoingID`.
+
+## v0.65.0 — 2026-05-20 — SET_ACTIVE_SESSION off the send executor
+
+`SendManager.setActiveSession()` ran on the single-thread `sendExecutor`,
+which a 60s-blocking `sendText` occupies. Device trace: long-poll
+connected 22:21:20, SET_ACTIVE_SESSION did not POST until 22:24:22 — 3
+minutes late. SET_ACTIVE_SESSION registers the long-poll as the active
+receiver server-side; until it runs, Google pushes nothing. Moved to
+`pingExecutor` so it runs promptly (~4s post-connect, as mautrix
+`postConnect` does).
+
+## v0.64.0 — 2026-05-20 — ditto-pinger off the send executor
+
+v0.63's `notifyDittoActivity()` shared `sendExecutor` with the
+60s-blocking send, so the keep-alive pings were starved and fired in a
+burst only after a send finished. Moved to a dedicated `pingExecutor` —
+pings now fire on a clean 60s cadence regardless of in-flight sends.
+
+## v0.63.0 — 2026-05-20 — send-fail root cause: long-poll dropped RPC responses
+
+The full installer→textra2 pipeline finally ran on the real phone (see
+the textrcs-installer changelog) and a send was driven end-to-end: the
+`GET_OR_CREATE_CONVERSATION` RPC POSTed and got HTTP 200, but its typed
+response never arrived on the receive long-poll — 60s timeout, fallback
+to phone-as-convID, message lands in a phantom conversation.
+
+A 3-agent line-by-line audit vs mautrix-gmessages `@v0.2604.0/pkg/libgm`
+(+ decompiled Beeper) found:
+
+### R1 — the long-poll DROPPED RPC responses (root cause)
+`LongPollReceiver.dispatch` discarded every `data` frame whenever
+`skipCount > 0`, BEFORE handing it to `RpcResponseRouter`. mautrix
+(`event_handler.go:185-206`) runs `receiveResponse` (the RPC-response
+router) FIRST, ALWAYS; `skipCount` there only marks an unsolicited
+update event `IsOld` and NEVER drops a frame or affects response
+routing. Runtime proof: device logs showed `skipCount` permanently
+30-46 (`LP frame=ack count=46 prevSkipCount=37`), 16 consecutive
+`STALE-SKIP`s, and `RCV dispatchRpc` firing zero times — every real RPC
+response (incl. our GET_OR_CREATE reply) was silently discarded.
+Fix: a `data` frame is now ALWAYS handed to the receiver; `skipCount`
+only yields an advisory `isOld` flag that suppresses re-emission of
+stale update events (never response routing). Hook
+`longpoll_legacy_skip_drop` reverts to the broken behavior for A/B.
+
+### R2 — no ditto-pinger
+mautrix `doLongPoll` spawns `dittoPinger.Loop()` POSTing
+`NOTIFY_DITTO_ACTIVITY` every 60s; without it Google stops live-pushing
+to the long-poll and only replays buffered frames on the next
+reconnect — so a response never lands inside the send's 60s await.
+textra2 had no pinger. Added `SendManager.notifyDittoActivity()` and a
+60s schedule in `ReceiveService.schedulePinger()`. Hooks
+`sendmgr_ditto_ping_skip`, `receive_ditto_ping_interval_ms`.
+
+### R6 — long-poll read timeout
+`LONG_POLL_READ_TIMEOUT_MS` 90s → 30 min (mautrix's `lphttp` budget) so
+an idle gap no longer churns the long-poll into a reconnect.
+
+Crypto (AES-CTR/GCM, HKDF, ECDSA, UKEY2, Ditto key derivation) audited
+byte-for-byte correct — not a crypto bug. Send-side proto items
+(`MessageInfo[]` vs `MessagePayloadContent`; `ContactNumber.mysteriousInt`
+7 vs 2) are flagged for a follow-up once GET_OR_CREATE response routing
+is confirmed on-device.
+
+## v0.62.0 — 2026-05-20 — ScreenTracer sampler live re-check
+
+Diagnostics-only. `ScreenTracer.startThreadSampler` now re-checks the
+`tracer_sampler_disable` hook on EVERY iteration — v0.58 checked it once
+at startup, so an operator could never stop a running 250 ms sampler,
+which floods the trace buffer and drowns the send-path event lines.
+Added the `tracer_sampler_idle_recheck_ms` hook; `tracer_sampler_interval_ms`
+is now re-read each iteration too. No send-path change. (Built by the
+originating session but never committed — that session hit the
+usage-policy block; committed here alongside v0.63.)
+
 ## v0.61.0 — 2026-05-18 — full mautrix port audit: fix 6 divergences, real send-fail root cause
 
 User correctly identified that v0.59 + v0.60 were patches-from-symptoms.

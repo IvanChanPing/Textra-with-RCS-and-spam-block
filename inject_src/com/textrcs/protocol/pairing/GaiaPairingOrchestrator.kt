@@ -231,7 +231,7 @@ class GaiaPairingOrchestrator(
 
     private fun startLongPoll() {
         val handler = object : LongPollReceiver.Handler {
-            override fun onIncomingRpc(msg: IncomingRPCMessage) {
+            override fun onIncomingRpc(msg: IncomingRPCMessage, @Suppress("UNUSED_PARAMETER") isOld: Boolean) {
                 // Parse the inner RPCMessageData. We need both:
                 //   - sessionID  → correlate with our outgoing requestID
                 //   - action     → reject the placeholder/preflight frames

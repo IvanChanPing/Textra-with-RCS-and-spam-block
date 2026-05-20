@@ -43,13 +43,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1451
+    .line 1612
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1452
+    .line 1613
     iput-object p1, p0, Luniffi/textrcs_libgm/UniffiJnaCleanable;->cleanable:Lcom/sun/jna/internal/Cleaner$Cleanable;
 
-    .line 1451
+    .line 1612
     return-void
 .end method
 
@@ -58,7 +58,7 @@
 .method public clean()V
     .registers 2
 
-    .line 1454
+    .line 1615
     iget-object v0, p0, Luniffi/textrcs_libgm/UniffiJnaCleanable;->cleanable:Lcom/sun/jna/internal/Cleaner$Cleanable;
 
     invoke-interface {v0}, Lcom/sun/jna/internal/Cleaner$Cleanable;->clean()V

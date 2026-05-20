@@ -54,7 +54,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 266
+    .line 290
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +85,7 @@
 
     invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 265
+    .line 289
     iput p1, p0, Lcom/textrcs/protocol/http/HttpError;->status:I
 
     iput-object p3, p0, Lcom/textrcs/protocol/http/HttpError;->body:[B
@@ -98,7 +98,7 @@
 .method public final getBody()[B
     .registers 2
 
-    .line 265
+    .line 289
     iget-object v0, p0, Lcom/textrcs/protocol/http/HttpError;->body:[B
 
     return-object v0
@@ -107,7 +107,7 @@
 .method public final getStatus()I
     .registers 2
 
-    .line 265
+    .line 289
     iget v0, p0, Lcom/textrcs/protocol/http/HttpError;->status:I
 
     return v0

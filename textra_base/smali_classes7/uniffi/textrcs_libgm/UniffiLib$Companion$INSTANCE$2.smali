@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,2989:1\n391#2:2990\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n*L\n780#1:2990\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4211:1\n391#2:4212\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n*L\n846#1:4212\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -80,7 +80,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .registers 2
 
-    .line 779
+    .line 845
     invoke-virtual {p0}, Luniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2;->invoke()Luniffi/textrcs_libgm/UniffiLib;
 
     move-result-object v0
@@ -91,13 +91,13 @@
 .method public final invoke()Luniffi/textrcs_libgm/UniffiLib;
     .registers 5
 
-    .line 780
+    .line 846
     const-string v0, "textrcs_libgm"
 
     .local v0, "componentName$iv":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 2990
+    .line 4212
     .local v1, "$i$f$loadIndirect":I
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->findLibraryName(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v0}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$findLibraryName(Ljava/lang/String;)Ljava/lang/String;
@@ -114,7 +114,7 @@
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 781
+    .line 847
     .end local v0    # "componentName$iv":Ljava/lang/String;
     .end local v1    # "$i$f$loadIndirect":I
     move-object v0, v2
@@ -124,19 +124,24 @@
     .local v0, "lib":Luniffi/textrcs_libgm/UniffiLib;
     const/4 v1, 0x0
 
-    .line 782
+    .line 848
     .local v1, "$i$a$-also-UniffiLib$Companion$INSTANCE$2$1":I
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckContractApiVersion(Luniffi/textrcs_libgm/UniffiLib;)V
     invoke-static {v0}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckContractApiVersion(Luniffi/textrcs_libgm/UniffiLib;)V
 
-    .line 783
+    .line 849
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckApiChecksums(Luniffi/textrcs_libgm/UniffiLib;)V
     invoke-static {v0}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckApiChecksums(Luniffi/textrcs_libgm/UniffiLib;)V
 
-    .line 784
+    .line 850
+    sget-object v3, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;
+
+    invoke-virtual {v3, v0}, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;->register$main(Luniffi/textrcs_libgm/UniffiLib;)V
+
+    .line 851
     nop
 
-    .line 781
+    .line 847
     .end local v0    # "lib":Luniffi/textrcs_libgm/UniffiLib;
     .end local v1    # "$i$a$-also-UniffiLib$Companion$INSTANCE$2$1":I
     check-cast v2, Luniffi/textrcs_libgm/UniffiLib;

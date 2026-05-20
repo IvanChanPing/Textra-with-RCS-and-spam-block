@@ -52,7 +52,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 2758
+    .line 3948
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,7 +72,7 @@
     .registers 3
     .param p1, "error_buf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 2758
+    .line 3948
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/LibgmException$ErrorHandler;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/LibgmException;
 
     move-result-object v0
@@ -88,7 +88,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2759
+    .line 3949
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterTypeLibgmError;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypeLibgmError;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeLibgmError;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;

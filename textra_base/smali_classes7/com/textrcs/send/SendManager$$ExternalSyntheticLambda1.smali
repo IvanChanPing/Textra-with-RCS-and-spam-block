@@ -3,52 +3,28 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic f$0:Lcom/textrcs/send/SendManager;
-
-.field public final synthetic f$1:Ljava/lang/String;
-
-.field public final synthetic f$2:Ljava/lang/String;
-
-.field public final synthetic f$3:Ljava/util/List;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/textrcs/send/SendManager;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-    .registers 5
+.method public synthetic constructor <init>()V
+    .registers 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$0:Lcom/textrcs/send/SendManager;
-
-    iput-object p2, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$1:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$2:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$3:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .registers 5
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .registers 2
 
     .line 0
-    iget-object v0, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$0:Lcom/textrcs/send/SendManager;
+    invoke-static {p1}, Lcom/textrcs/send/SendManager;->$r8$lambda$i-mYQdLvrzZOuRwtPjpYhxQUqcM(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
-    iget-object v1, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$1:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v2, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$2:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda1;->f$3:Ljava/util/List;
-
-    invoke-static {v0, v1, v2, v3}, Lcom/textrcs/send/SendManager;->$r8$lambda$UMlgfMMv_dGVmJPtxsUHK34y2nQ(Lcom/textrcs/send/SendManager;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-
-    return-void
+    return-object p1
 .end method

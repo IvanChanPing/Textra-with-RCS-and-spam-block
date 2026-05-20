@@ -70,7 +70,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 1647
+    .line 1808
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,7 +82,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1647
+    .line 1808
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/AesCtrBox;
@@ -102,7 +102,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1663
+    .line 1824
     const-wide/16 v0, 0x8
 
     return-wide v0
@@ -112,7 +112,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1647
+    .line 1808
     move-object v0, p1
 
     check-cast v0, Lcom/sun/jna/Pointer;
@@ -132,7 +132,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1654
+    .line 1815
     new-instance v0, Luniffi/textrcs_libgm/AesCtrBox;
 
     invoke-direct {v0, p1}, Luniffi/textrcs_libgm/AesCtrBox;-><init>(Lcom/sun/jna/Pointer;)V
@@ -144,7 +144,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 1647
+    .line 1808
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeAesCtrBox;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/AesCtrBox;
 
     move-result-object v0
@@ -156,7 +156,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 1647
+    .line 1808
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -174,7 +174,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1650
+    .line 1811
     invoke-virtual {p1}, Luniffi/textrcs_libgm/AesCtrBox;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
     move-result-object v0
@@ -186,7 +186,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1647
+    .line 1808
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/AesCtrBox;
@@ -202,7 +202,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1647
+    .line 1808
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/AesCtrBox;
@@ -218,7 +218,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/AesCtrBox;
 
-    .line 1647
+    .line 1808
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -230,7 +230,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 1647
+    .line 1808
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeAesCtrBox;->read(Ljava/nio/ByteBuffer;)Luniffi/textrcs_libgm/AesCtrBox;
 
     move-result-object v0
@@ -246,7 +246,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1660
+    .line 1821
     new-instance v0, Lcom/sun/jna/Pointer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
@@ -267,7 +267,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 1647
+    .line 1808
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/AesCtrBox;
@@ -290,7 +290,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1668
+    .line 1829
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeAesCtrBox;->lower(Luniffi/textrcs_libgm/AesCtrBox;)Lcom/sun/jna/Pointer;
 
     move-result-object v0
@@ -301,6 +301,6 @@
 
     invoke-virtual {p2, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 1669
+    .line 1830
     return-void
 .end method

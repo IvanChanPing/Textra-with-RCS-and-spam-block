@@ -3,34 +3,28 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic f$0:Lcom/textrcs/send/SendManager;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/textrcs/send/SendManager;)V
-    .registers 2
+.method public synthetic constructor <init>()V
+    .registers 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda2;->f$0:Lcom/textrcs/send/SendManager;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .registers 2
 
     .line 0
-    iget-object v0, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda2;->f$0:Lcom/textrcs/send/SendManager;
+    invoke-static {p1}, Lcom/textrcs/send/SendManager;->$r8$lambda$i3JW560vWUda2AkN__jYPOD43ws(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
-    invoke-static {v0}, Lcom/textrcs/send/SendManager;->$r8$lambda$bdxR2uyVfacT6YzjKahKh7hqnOk(Lcom/textrcs/send/SendManager;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

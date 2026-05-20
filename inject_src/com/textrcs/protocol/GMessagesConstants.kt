@@ -167,8 +167,14 @@ object GMessagesConstants {
     /** Read timeout for non-long-poll requests. */
     const val READ_TIMEOUT_MS = 30_000
 
-    /** Read timeout for the receive long-poll. 90s matches mautrix/gmessages. */
-    const val LONG_POLL_READ_TIMEOUT_MS = 90_000
+    /**
+     * Read timeout for the receive long-poll. v0.63 / R6: was 90_000 —
+     * too tight, churned the connection on every idle gap. mautrix's
+     * lphttp client uses a 30-minute timeout; with the v0.63 ditto-pinger
+     * keeping ~60s traffic this just avoids needless reconnect churn.
+     * Tunable via the http_longpoll_read_timeout_ms hook.
+     */
+    const val LONG_POLL_READ_TIMEOUT_MS = 1_800_000
 
     /** Content-Type used for protobuf-JSON requests. */
     const val CONTENT_TYPE_PROTO_JSON = "application/json+protobuf"

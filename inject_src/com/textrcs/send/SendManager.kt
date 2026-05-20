@@ -15,8 +15,10 @@ import com.textrcs.gmproto.client.SendMessageResponse
 import com.textrcs.protocol.RpcResponseRouter
 import com.textrcs.gmproto.conversations.ContactNumber
 import com.textrcs.gmproto.conversations.MessageContent
+import com.textrcs.gmproto.conversations.MessageInfo
 import com.textrcs.gmproto.client.MessagePayload
 import com.textrcs.gmproto.client.MessagePayloadContent
+import com.textrcs.gmproto.client.NotifyDittoActivityRequest
 import com.textrcs.gmproto.rpc.ActionType
 import com.textrcs.gmproto.rpc.BugleRoute
 import com.textrcs.gmproto.rpc.MessageType
@@ -60,6 +62,16 @@ class SendManager private constructor(private val appContext: Context) {
     private val store = SessionStore(appContext)
     private val sendExecutor = Executors.newSingleThreadExecutor { r ->
         Thread(r, "TextRCS-Send").apply { isDaemon = true }
+    }
+
+    // v0.64: the ditto-pinger MUST NOT share sendExecutor. A sendText's
+    // getOrCreate await blocks that single thread for up to 60s, starving
+    // the keep-alive pings — v0.63 saw the scheduled pings queue up behind
+    // a blocked send and all fire in a burst only once it finished. A
+    // dedicated thread keeps the 60s ping cadence regardless of in-flight
+    // sends, which is the whole point of the keep-alive.
+    private val pingExecutor = Executors.newSingleThreadExecutor { r ->
+        Thread(r, "TextRCS-DittoPing").apply { isDaemon = true }
     }
 
     /**
@@ -168,7 +180,14 @@ class SendManager private constructor(private val appContext: Context) {
      * Runs on the [sendExecutor] so a long POST doesn't block the caller.
      */
     fun setActiveSession() {
-        sendExecutor.execute {
+        // v0.65: pingExecutor, NOT sendExecutor. SET_ACTIVE_SESSION is what
+        // registers the long-poll as the active receiver server-side and
+        // must run promptly (~4s) after the long-poll connects — mautrix
+        // postConnect does exactly that. On sendExecutor it was starved for
+        // MINUTES behind 60s-blocking sends (device trace: LP connected
+        // 22:21:20, SET_ACTIVE_SESSION did not POST until 22:24:22), so the
+        // server never registered the long-poll and pushed it nothing.
+        pingExecutor.execute {
             try {
                 val session = store.load() ?: run {
                     ScreenTracer.note("SET_ACTIVE_SESSION skip — no paired session")
@@ -178,7 +197,7 @@ class SendManager private constructor(private val appContext: Context) {
                 activeSessionID = newSessionID
                 ScreenTracer.note("SET_ACTIVE_SESSION new singleton=${newSessionID.take(8)}")
 
-                val http = GMessagesHttpClient(session.cookies.toMutableMap())
+                val http = GMessagesHttpClient.shared(session)   // v0.67: shared cookie jar
 
                 // mautrix methods.go::SetActiveSession: SendMessageParams{
                 //   Action: GET_UPDATES, OmitTTL: true, RequestID: singleton,
@@ -221,6 +240,11 @@ class SendManager private constructor(private val appContext: Context) {
                 }
                 val outer = setActiveBuilder.build()
 
+                // [REMOTE_HOOK v0.68] wire_dump_disable — v0.68 wire-diff.
+                if (!Hooks.shouldSkip("wire_dump_disable")) {
+                    ScreenTracer.note("WIRE SETACTIVE OutgoingRPCData={ ${data.toString().replace('\n', ' ')} }")
+                    ScreenTracer.note("WIRE SETACTIVE OutgoingRPCMessage={ ${outer.toString().replace('\n', ' ')} }")
+                }
                 ScreenTracer.note("SET_ACTIVE_SESSION POST→${GMessagesConstants.URL_SEND_MESSAGE} singleton=${newSessionID.take(8)}")
                 val resp = http.postProto(
                     url = GMessagesConstants.URL_SEND_MESSAGE,
@@ -231,6 +255,37 @@ class SendManager private constructor(private val appContext: Context) {
             } catch (e: Throwable) {
                 ScreenTracer.note("SET_ACTIVE_SESSION THREW ${e.javaClass.simpleName}: ${e.message}")
                 Log.w(TAG, "setActiveSession failed: ${e.message}")
+            }
+        }
+    }
+
+    /**
+     * v0.63 / R2: mautrix's ditto-pinger. mautrix `doLongPoll` spawns
+     * `dittoPinger.Loop()` which POSTs a `NOTIFY_DITTO_ACTIVITY` RPC every
+     * 60s (`methods.go::NotifyDittoActivity`, `client.go pingInterval`).
+     * Without it Google stops live-pushing to the long-poll and only
+     * replays buffered frames on the next reconnect — so a typed RPC
+     * response (GET_OR_CREATE_CONVERSATION) never lands inside the send's
+     * 60s await window. Fire-and-forget; runs on [sendExecutor].
+     */
+    fun notifyDittoActivity() {
+        // [REMOTE_HOOK v0.63] sendmgr_ditto_ping_skip — disable the pinger.
+        if (Hooks.shouldSkip("sendmgr_ditto_ping_skip")) return
+        // v0.64: pingExecutor, NOT sendExecutor — see the field comment.
+        pingExecutor.execute {
+            try {
+                val session = store.load() ?: run {
+                    ScreenTracer.note("DITTO ping skip — no paired session")
+                    return@execute
+                }
+                val http = GMessagesHttpClient.shared(session)   // v0.67: shared cookie jar
+                val crypto = AESCTRHelper(session.aesKey, session.hmacKey)
+                val req = NotifyDittoActivityRequest.newBuilder().setSuccess(true).build()
+                ScreenTracer.note("DITTO ping POST NOTIFY_DITTO_ACTIVITY")
+                sendRpc(http, session, crypto, UUID.randomUUID().toString(),
+                    ActionType.NOTIFY_DITTO_ACTIVITY, req.toByteArray())
+            } catch (e: Throwable) {
+                ScreenTracer.note("DITTO ping THREW ${e.javaClass.simpleName}: ${e.message}")
             }
         }
     }
@@ -253,10 +308,44 @@ class SendManager private constructor(private val appContext: Context) {
     }
 
     /**
-     * Throws on any GMessages POST failure (caller treats failure as
-     * non-success for the sentIntents callback).
+     * v0.69: outgoing send is now driven entirely by the Rust
+     * `textrcs_libgm` crate via [com.textrcs.bridge.RustBridge].
+     *
+     * The hand-written Kotlin two-step send (getOrCreateConversation +
+     * sendRpc, below — kept for reference / A/B fallback only) carried an
+     * unsolved bug across ~27 versions: the long-poll never became a live
+     * receiver, so the `GET_OR_CREATE_CONVERSATION` typed response was
+     * buffered server-side and never pushed inside the send's await
+     * window. The Rust `ClientEngine` runs the faithful mautrix
+     * `Connect → doLongPoll(onFirstConnect=postConnect)` ordering plus a
+     * ditto-pinger, which is the exact thing the Kotlin port could not
+     * reproduce.
+     *
+     * `RustBridge.sendText` performs GetOrCreateConversation + SendMessage
+     * in Rust; the typed responses correlate off the live long-poll. It
+     * throws on any failure (so the caller fires the failure sentIntent).
+     *
+     * [REMOTE_HOOK v0.69] sendmgr_use_kotlin_path — fall back to the old
+     * hand-written Kotlin send (debug only; expected to keep failing).
      */
     private fun sendTextBlocking(recipientPhone: String, body: String) {
+        if (Hooks.shouldSkip("sendmgr_use_kotlin_path")) {
+            ScreenTracer.note("SEND sendTextBlocking using LEGACY Kotlin path (hook)")
+            sendTextBlockingKotlinLegacy(recipientPhone, body)
+            return
+        }
+        ScreenTracer.note("SEND sendTextBlocking → RustBridge.sendText")
+        com.textrcs.bridge.RustBridge.sendText(appContext, recipientPhone, body)
+        ScreenTracer.note("SEND sendTextBlocking RustBridge.sendText RETURNED")
+        Log.i(TAG, "sent (rust) to ${redact(recipientPhone)} (len=${body.length})")
+    }
+
+    /**
+     * The legacy hand-written Kotlin send path. Kept ONLY behind the
+     * `sendmgr_use_kotlin_path` hook for A/B debugging; the Rust path is
+     * the shipping path. Throws on any GMessages POST failure.
+     */
+    private fun sendTextBlockingKotlinLegacy(recipientPhone: String, body: String) {
         ScreenTracer.note("SEND sendTextBlocking step=session.load")
         val session = store.load() ?: run {
             ScreenTracer.note("SEND sendTextBlocking FAIL session=null — not paired")
@@ -265,16 +354,22 @@ class SendManager private constructor(private val appContext: Context) {
         }
         ScreenTracer.note("SEND sendTextBlocking session.loaded mobile.present=${session.mobileDevice != null} cookies.n=${session.cookies.size} tachyon.len=${session.tachyonAuthToken.size}")
 
-        val http = GMessagesHttpClient(session.cookies.toMutableMap())
+        val http = GMessagesHttpClient.shared(session)   // v0.67: shared cookie jar
         val crypto = AESCTRHelper(session.aesKey, session.hmacKey)
         val sessionId = UUID.randomUUID().toString()
         ScreenTracer.note("SEND sendTextBlocking sessionId=${sessionId.take(8)} step=getOrCreateConv")
 
         // Step 1: ensure conversation exists.
-        val conversationID = getOrCreateConversation(http, session, crypto, sessionId, recipientPhone)
-        ScreenTracer.note("SEND sendTextBlocking convId=$conversationID step=buildSendReq")
+        val (conversationID, outgoingID) = getOrCreateConversation(http, session, crypto, sessionId, recipientPhone)
+        ScreenTracer.note("SEND sendTextBlocking convId=$conversationID outgoingID=$outgoingID step=buildSendReq")
 
-        // Step 2: send the message.
+        // Step 2: send the message — built EXACTLY as mautrix
+        // ConvertMatrixMessage (connector/handlematrix.go:110-146): the body
+        // text goes in MessagePayload.messageInfo[] as
+        // MessageInfo{messageContent{content}}; messagePayloadContent is left
+        // UNSET (mautrix sets it nil); tmpID2 == tmpID; participantID is the
+        // conversation's defaultOutgoingID. v0.65 and earlier wrongly put the
+        // body in messagePayloadContent → Google received an empty message.
         val tmpId = "tmp_" + UUID.randomUUID().toString()
         val sendReq = SendMessageRequest.newBuilder()
             .setConversationID(conversationID)
@@ -282,9 +377,11 @@ class SendManager private constructor(private val appContext: Context) {
             .setMessagePayload(
                 MessagePayload.newBuilder()
                     .setTmpID(tmpId)
+                    .setTmpID2(tmpId)
                     .setConversationID(conversationID)
-                    .setMessagePayloadContent(
-                        MessagePayloadContent.newBuilder()
+                    .setParticipantID(outgoingID)
+                    .addMessageInfo(
+                        MessageInfo.newBuilder()
                             .setMessageContent(
                                 MessageContent.newBuilder().setContent(body).build()
                             )
@@ -305,7 +402,7 @@ class SendManager private constructor(private val appContext: Context) {
         crypto: AESCTRHelper,
         sessionId: String,
         recipientPhone: String,
-    ): String {
+    ): Pair<String, String> {
         val req = GetOrCreateConversationRequest.newBuilder()
             .addNumbers(
                 ContactNumber.newBuilder()
@@ -332,7 +429,7 @@ class SendManager private constructor(private val appContext: Context) {
      * 15s. On timeout / parse failure we fall back to the phone string —
      * worse than nothing, but no worse than v0.40 was.
      */
-    private fun awaitConversationID(requestID: String, fallbackPhone: String): String {
+    private fun awaitConversationID(requestID: String, fallbackPhone: String): Pair<String, String> {
         val pending = RpcResponseRouter.register(requestID)
         // [REMOTE_HOOK v0.58] sendmgr_await_conv_timeout_ms — tune the
         // GetOrCreateConversation response window.
@@ -340,19 +437,24 @@ class SendManager private constructor(private val appContext: Context) {
         if (delivery == null) {
             RpcResponseRouter.unregister(requestID)
             ScreenTracer.note("SEND awaitConvID TIMEOUT requestID=${requestID.take(8)} → fallback to phone")
-            return fallbackPhone
+            return Pair(fallbackPhone, "")
         }
         try {
             val resp = GetOrCreateConversationResponse.parseFrom(delivery.plaintext)
             val convId = resp.conversation.conversationID
-            ScreenTracer.note("SEND awaitConvID convId=$convId status=${resp.status} hasConv=${resp.hasConversation()}")
-            return if (convId.isNotEmpty()) convId else {
+            // v0.66: also surface the conversation's defaultOutgoingID — it is
+            // the SendMessageRequest participantID (mautrix handlematrix.go:116
+            // ParticipantID = portalMeta.OutgoingID, sourced from
+            // conv.DefaultOutgoingID at chatinfo.go:178-179).
+            val outgoingID = resp.conversation.defaultOutgoingID
+            ScreenTracer.note("SEND awaitConvID convId=$convId outgoingID=$outgoingID status=${resp.status} hasConv=${resp.hasConversation()}")
+            return if (convId.isNotEmpty()) Pair(convId, outgoingID) else {
                 ScreenTracer.note("SEND awaitConvID empty convId → fallback to phone")
-                fallbackPhone
+                Pair(fallbackPhone, "")
             }
         } catch (e: Throwable) {
             ScreenTracer.note("SEND awaitConvID PARSE FAIL ${e.javaClass.simpleName}: ${e.message} → fallback to phone")
-            return fallbackPhone
+            return Pair(fallbackPhone, "")
         }
     }
 
@@ -428,6 +530,13 @@ class SendManager private constructor(private val appContext: Context) {
         }
         val outer = outerBuilder.build()
 
+        // [REMOTE_HOOK v0.68] wire_dump_disable — v0.68 wire-diff: dump the
+        // exact outgoing proto structure (protobuf text format, one-lined)
+        // so it can be compared field-by-field against mautrix buildMessage.
+        if (!Hooks.shouldSkip("wire_dump_disable")) {
+            ScreenTracer.note("WIRE sendRpc/$action OutgoingRPCData={ ${data.toString().replace('\n', ' ')} }")
+            ScreenTracer.note("WIRE sendRpc/$action OutgoingRPCMessage={ ${outer.toString().replace('\n', ' ')} }")
+        }
         ScreenTracer.note("SEND sendRpc action=$action requestID=${requestID.take(8)} encrypted.len=${encrypted.size} POST→${GMessagesConstants.URL_SEND_MESSAGE}")
         val resp = try {
             http.postProto(

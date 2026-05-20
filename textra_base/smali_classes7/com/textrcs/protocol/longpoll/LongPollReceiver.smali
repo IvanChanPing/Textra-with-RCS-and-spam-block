@@ -123,135 +123,120 @@
     .registers 10
     .param p1, "msg"    # Lcom/textrcs/gmproto/rpc/LongPollingPayload;
 
-    .line 212
+    .line 216
     nop
 
-    .line 213
+    .line 217
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->hasData()Z
 
     move-result v0
 
-    if-eqz v0, :cond_ca
+    if-eqz v0, :cond_d0
 
-    .line 216
+    .line 226
     iget v0, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->skipCount:I
 
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    if-lez v0, :cond_19
-
-    sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
-
-    const-string v3, "longpoll_disable_skip_count"
-
-    invoke-static {v0, v3, v2, v1, v2}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_19
+    if-lez v0, :cond_d
 
     const/4 v0, 0x1
 
-    goto :goto_1a
+    goto :goto_e
 
-    :cond_19
+    :cond_d
     const/4 v0, 0x0
 
-    .line 217
-    .local v0, "skipping":Z
-    :goto_1a
-    const-string v3, " bugleRoute="
-
-    const/16 v4, 0x8
-
-    const-string v5, "getResponseID(...)"
-
-    if-eqz v0, :cond_85
-
-    .line 218
-    iget v6, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->skipCount:I
-
-    add-int/lit8 v6, v6, -0x1
-
-    iput v6, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->skipCount:I
-
-    .line 226
-    sget-object v6, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
-
-    const-string v7, "longpoll_skip_no_ack"
-
-    invoke-static {v6, v7, v2, v1, v2}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_42
-
     .line 227
-    sget-object v1, Lcom/textrcs/protocol/longpoll/AckSender;->INSTANCE:Lcom/textrcs/protocol/longpoll/AckSender;
+    .local v0, "isOld":Z
+    :goto_e
+    if-eqz v0, :cond_16
+
+    iget v1, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->skipCount:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->skipCount:I
+
+    .line 230
+    :cond_16
+    const-string v1, " skipCount="
+
+    const/16 v2, 0x8
+
+    const-string v3, "getResponseID(...)"
+
+    if-eqz v0, :cond_75
+
+    sget-object v4, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+
+    const-string v5, "longpoll_legacy_skip_drop"
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x2
+
+    invoke-static {v4, v5, v6, v7, v6}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_75
+
+    .line 231
+    sget-object v4, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+
+    const-string v5, "longpoll_skip_no_ack"
+
+    invoke-static {v4, v5, v6, v7, v6}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_44
+
+    .line 232
+    sget-object v4, Lcom/textrcs/protocol/longpoll/AckSender;->INSTANCE:Lcom/textrcs/protocol/longpoll/AckSender;
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getData()Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/textrcs/protocol/longpoll/AckSender;->add(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Lcom/textrcs/protocol/longpoll/AckSender;->add(Ljava/lang/String;)V
 
-    .line 229
-    :cond_42
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 234
+    :cond_44
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "LP frame=data STALE-SKIP+ACK responseID="
+    const-string v5, "LP frame=data LEGACY-DROP responseID="
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getData()Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {v2, v4}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    move-result-object v4
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getData()Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
 
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v5, v2}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getBugleRoute()Lcom/textrcs/gmproto/rpc/BugleRoute;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " skipCount="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -267,51 +252,73 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    goto/16 :goto_173
+    goto/16 :goto_179
 
-    .line 231
-    :cond_85
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 236
+    :cond_75
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "LP frame=data responseID="
+    const-string v5, "LP frame=data responseID="
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getData()Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {v2, v4}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    move-result-object v4
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getData()Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
 
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getResponseID()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v5, v2}, Lkotlin/text/StringsKt;->take(Ljava/lang/String;I)Ljava/lang/String;
+
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getBugleRoute()Lcom/textrcs/gmproto/rpc/BugleRoute;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v3, " bugleRoute="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getData()Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getBugleRoute()Lcom/textrcs/gmproto/rpc/BugleRoute;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " isOld="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->skipCount:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -321,7 +328,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 232
+    .line 237
     iget-object v1, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getData()Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
@@ -332,20 +339,20 @@
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v2}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onIncomingRpc(Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;)V
+    invoke-interface {v1, v2, v0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onIncomingRpc(Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;Z)V
 
-    .end local v0    # "skipping":Z
-    goto/16 :goto_173
+    .end local v0    # "isOld":Z
+    goto/16 :goto_179
 
-    .line 235
-    :cond_ca
+    .line 240
+    :cond_d0
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->hasAck()Z
 
     move-result v0
 
-    if-eqz v0, :cond_14c
+    if-eqz v0, :cond_152
 
-    .line 236
+    .line 241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -386,7 +393,7 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 240
+    .line 245
     sget-object v1, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v5, 0x4
@@ -403,7 +410,7 @@
 
     move-result v0
 
-    .line 241
+    .line 246
     .local v0, "armThreshold":I
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getAck()Lcom/textrcs/gmproto/rpc/StartAckMessage;
 
@@ -413,9 +420,9 @@
 
     move-result v1
 
-    if-le v1, v0, :cond_13d
+    if-le v1, v0, :cond_143
 
-    .line 245
+    .line 250
     sget-object v2, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getAck()Lcom/textrcs/gmproto/rpc/StartAckMessage;
@@ -440,7 +447,7 @@
 
     iput v1, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->skipCount:I
 
-    .line 246
+    .line 251
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -463,8 +470,8 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 248
-    :cond_13d
+    .line 253
+    :cond_143
     iget-object v1, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->getAck()Lcom/textrcs/gmproto/rpc/StartAckMessage;
@@ -478,61 +485,61 @@
     invoke-interface {v1, v2}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onAck(Lcom/textrcs/gmproto/rpc/StartAckMessage;)V
 
     .end local v0    # "armThreshold":I
-    goto :goto_173
+    goto :goto_179
 
-    .line 250
-    :cond_14c
+    .line 255
+    :cond_152
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->hasHeartbeat()Z
 
     move-result v0
 
-    if-eqz v0, :cond_15d
+    if-eqz v0, :cond_163
 
-    .line 251
+    .line 256
     const-string v0, "LP frame=heartbeat"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 252
+    .line 257
     iget-object v0, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
 
     invoke-interface {v0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onHeartbeat()V
 
-    goto :goto_173
+    goto :goto_179
 
-    .line 254
-    :cond_15d
+    .line 259
+    :cond_163
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->hasStartRead()Z
 
     move-result v0
 
-    if-eqz v0, :cond_16e
+    if-eqz v0, :cond_174
 
-    .line 255
+    .line 260
     const-string v0, "LP frame=startRead"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 256
+    .line 261
     iget-object v0, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
 
     invoke-interface {v0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onStartRead()V
 
-    goto :goto_173
+    goto :goto_179
 
-    .line 258
-    :cond_16e
+    .line 263
+    :cond_174
     const-string v0, "LP frame=UNKNOWN"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 260
-    :goto_173
+    .line 265
+    :goto_179
     return-void
 .end method
 
 .method private final openOneConnection()V
-    .registers 6
+    .registers 12
 
     .line 112
     invoke-static {}, Lcom/textrcs/gmproto/client/ReceiveMessagesRequest;->newBuilder()Lcom/textrcs/gmproto/client/ReceiveMessagesRequest$Builder;
@@ -626,177 +633,240 @@
     move-result-object v0
 
     .line 112
-    nop
+    move-object v1, v0
 
-    .line 128
-    .local v0, "request":Lcom/textrcs/gmproto/client/ReceiveMessagesRequest;
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 129
+    .local v1, "request":Lcom/textrcs/gmproto/client/ReceiveMessagesRequest;
+    sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v2, 0x2
+
+    const-string v3, "wire_dump_disable"
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v3, v4, v2, v4}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8b
+
+    .line 130
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "WIRE ReceiveMessagesRequest={ "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Lcom/textrcs/gmproto/client/ReceiveMessagesRequest;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v2, "toString(...)"
+
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v9, 0x4
+
+    const/4 v10, 0x0
+
+    const/16 v6, 0xa
+
+    const/16 v7, 0x20
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v5 .. v10}, Lkotlin/text/StringsKt;->replace$default(Ljava/lang/String;CCZILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " }"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 132
+    :cond_8b
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "LP openOneConnection POST\u2192https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/ReceiveMessages tachyon.len="
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
     iget-object v2, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->tachyonAuthToken:[B
 
     array-length v2, v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 129
-    iget-object v1, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->http:Lcom/textrcs/protocol/http/GMessagesHttpClient;
+    .line 133
+    iget-object v0, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->http:Lcom/textrcs/protocol/http/GMessagesHttpClient;
 
-    .line 130
+    .line 134
     nop
 
-    .line 131
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+    .line 135
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    move-object v2, v0
+    move-object v2, v1
 
     check-cast v2, Lcom/google/protobuf/Message;
 
-    .line 132
+    .line 136
     sget-object v3, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;->PROTO_PBLITE:Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;
 
-    .line 129
-    const-string v4, "https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/ReceiveMessages"
+    .line 133
+    const-string v5, "https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/ReceiveMessages"
 
-    invoke-virtual {v1, v4, v2, v3}, Lcom/textrcs/protocol/http/GMessagesHttpClient;->openLongPoll(Ljava/lang/String;Lcom/google/protobuf/Message;Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;)Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;
+    invoke-virtual {v0, v5, v2, v3}, Lcom/textrcs/protocol/http/GMessagesHttpClient;->openLongPoll(Ljava/lang/String;Lcom/google/protobuf/Message;Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;)Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 134
-    .local v1, "stream":Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;
-    move-object v2, v1
+    .line 138
+    .local v2, "stream":Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;
+    move-object v0, v2
 
-    check-cast v2, Ljava/lang/AutoCloseable;
+    check-cast v0, Ljava/lang/AutoCloseable;
 
-    iput-object v2, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->currentStream:Ljava/lang/AutoCloseable;
+    iput-object v0, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->currentStream:Ljava/lang/AutoCloseable;
 
-    .line 136
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 140
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "LP HTTP "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStatusCode()I
+    invoke-virtual {v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStatusCode()I
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
     const-string v3, " headers.n=N/A"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 137
-    invoke-virtual {v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStatusCode()I
+    .line 141
+    invoke-virtual {v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStatusCode()I
 
-    move-result v2
+    move-result v0
 
     const/16 v3, 0xc8
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    if-gt v3, v2, :cond_ac
+    if-gt v3, v0, :cond_e8
 
     const/16 v3, 0x12c
 
-    if-ge v2, v3, :cond_ac
+    if-ge v0, v3, :cond_e8
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    :cond_ac
-    if-eqz v4, :cond_d1
-
-    .line 142
-    iget-object v2, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
-
-    invoke-interface {v2}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onConnected()V
-
-    .line 143
-    nop
-
-    .line 144
-    const/4 v2, 0x0
-
-    :try_start_b5
-    invoke-virtual {v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStream()Ljava/io/InputStream;
-
-    move-result-object v3
-
-    invoke-direct {p0, v3}, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->readFrames(Ljava/io/InputStream;)Z
-
-    move-result v3
-    :try_end_bd
-    .catchall {:try_start_b5 .. :try_end_bd} :catchall_ca
+    :cond_e8
+    if-eqz v5, :cond_10c
 
     .line 146
-    invoke-virtual {v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->close()V
+    iget-object v0, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
+
+    invoke-interface {v0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onConnected()V
 
     .line 147
-    iput-object v2, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->currentStream:Ljava/lang/AutoCloseable;
+    nop
 
     .line 148
-    nop
+    :try_start_f0
+    invoke-virtual {v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStream()Ljava/io/InputStream;
 
-    .line 143
-    nop
+    move-result-object v0
 
-    .line 149
-    .local v3, "cleanClose":Z
-    iget-object v2, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
+    invoke-direct {p0, v0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->readFrames(Ljava/io/InputStream;)Z
 
-    invoke-interface {v2, v3}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onDisconnected(Z)V
+    move-result v0
+    :try_end_f8
+    .catchall {:try_start_f0 .. :try_end_f8} :catchall_105
 
     .line 150
-    return-void
+    invoke-virtual {v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->close()V
 
-    .line 146
-    .end local v3    # "cleanClose":Z
-    :catchall_ca
-    move-exception v3
+    .line 151
+    iput-object v4, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->currentStream:Ljava/lang/AutoCloseable;
 
-    invoke-virtual {v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->close()V
+    .line 152
+    nop
 
     .line 147
-    iput-object v2, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->currentStream:Ljava/lang/AutoCloseable;
+    nop
 
-    throw v3
+    .line 153
+    .local v0, "cleanClose":Z
+    iget-object v3, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->handler:Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;
 
-    .line 138
-    :cond_d1
-    invoke-virtual {v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->close()V
+    invoke-interface {v3, v0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;->onDisconnected(Z)V
 
-    .line 139
-    new-instance v2, Ljava/lang/IllegalStateException;
+    .line 154
+    return-void
+
+    .line 150
+    .end local v0    # "cleanClose":Z
+    :catchall_105
+    move-exception v0
+
+    invoke-virtual {v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->close()V
+
+    .line 151
+    iput-object v4, p0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->currentStream:Ljava/lang/AutoCloseable;
+
+    throw v0
+
+    .line 142
+    :cond_10c
+    invoke-virtual {v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->close()V
+
+    .line 143
+    new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -808,7 +878,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStatusCode()I
+    invoke-virtual {v2}, Lcom/textrcs/protocol/http/GMessagesHttpClient$StreamingResponse;->getStatusCode()I
 
     move-result v4
 
@@ -820,16 +890,16 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v2
+    throw v0
 .end method
 
 .method private final readFrames(Ljava/io/InputStream;)Z
     .registers 18
     .param p1, "input"    # Ljava/io/InputStream;
 
-    .line 155
+    .line 159
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -854,50 +924,50 @@
 
     new-array v2, v2, [B
 
-    .line 156
+    .line 160
     .local v2, "buf":[B
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 159
+    .line 163
     .local v3, "accumulated":Ljava/lang/StringBuilder;
     const/4 v4, 0x2
 
     new-array v5, v4, [B
 
-    .line 160
+    .line 164
     .local v5, "opening":[B
     const/4 v6, 0x0
 
-    .line 161
+    .line 165
     .local v6, "read":I
     :goto_1e
     const/4 v7, 0x0
 
     if-ge v6, v4, :cond_2c
 
-    .line 162
+    .line 166
     rsub-int/lit8 v8, v6, 0x2
 
     invoke-virtual {v1, v5, v6, v8}, Ljava/io/InputStream;->read([BII)I
 
     move-result v8
 
-    .line 163
+    .line 167
     .local v8, "n":I
     if-gez v8, :cond_2a
 
     return v7
 
-    .line 164
+    .line 168
     :cond_2a
     add-int/2addr v6, v8
 
     .end local v8    # "n":I
     goto :goto_1e
 
-    .line 166
+    .line 170
     :cond_2c
     new-instance v8, Ljava/lang/String;
 
@@ -915,15 +985,15 @@
 
     return v7
 
-    .line 168
+    .line 172
     :cond_3c
     const/4 v8, 0x0
 
-    .line 169
+    .line 173
     .local v8, "receivedEvents":Z
     const/4 v9, 0x1
 
-    .line 170
+    .line 174
     .local v9, "firstFrame":Z
     :goto_3e
     iget-object v10, v0, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->running:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -934,18 +1004,18 @@
 
     if-eqz v10, :cond_bd
 
-    .line 171
+    .line 175
     invoke-virtual {v1, v2}, Ljava/io/InputStream;->read([B)I
 
     move-result v10
 
-    .line 172
+    .line 176
     .local v10, "n":I
     if-gez v10, :cond_4d
 
     return v8
 
-    .line 175
+    .line 179
     :cond_4d
     move-object v11, v3
 
@@ -981,14 +1051,14 @@
 
     if-ne v11, v13, :cond_69
 
-    .line 176
+    .line 180
     return v8
 
-    .line 180
+    .line 184
     :cond_69
     const/4 v11, 0x0
 
-    .line 181
+    .line 185
     .local v11, "offset":I
     move-object v13, v3
 
@@ -1016,10 +1086,10 @@
 
     if-ne v12, v13, :cond_80
 
-    .line 182
+    .line 186
     const/4 v11, 0x1
 
-    .line 184
+    .line 188
     :cond_80
     new-instance v12, Ljava/lang/String;
 
@@ -1031,7 +1101,7 @@
 
     invoke-virtual {v3, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 187
+    .line 191
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v12
@@ -1040,28 +1110,28 @@
 
     invoke-static {v12, v13}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 188
+    .line 192
     .local v12, "candidate":Ljava/lang/String;
     invoke-direct {v0, v12}, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->tryParseJson(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v13
 
-    .line 189
+    .line 193
     .local v13, "parsed":Lorg/json/JSONArray;
     if-eqz v13, :cond_bb
 
-    .line 191
+    .line 195
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 192
+    .line 196
     const/4 v9, 0x0
 
-    .line 194
+    .line 198
     invoke-static {}, Lcom/textrcs/gmproto/rpc/LongPollingPayload;->newBuilder()Lcom/textrcs/gmproto/rpc/LongPollingPayload$Builder;
 
     move-result-object v14
 
-    .line 195
+    .line 199
     .local v14, "payload":Lcom/textrcs/gmproto/rpc/LongPollingPayload$Builder;
     sget-object v15, Lcom/textrcs/protocol/pblite/PBLite;->INSTANCE:Lcom/textrcs/protocol/pblite/PBLite;
 
@@ -1073,18 +1143,18 @@
 
     invoke-virtual {v15, v13, v4}, Lcom/textrcs/protocol/pblite/PBLite;->deserializeFromSlice(Lorg/json/JSONArray;Lcom/google/protobuf/Message$Builder;)V
 
-    .line 196
+    .line 200
     invoke-virtual {v14}, Lcom/textrcs/gmproto/rpc/LongPollingPayload$Builder;->build()Lcom/textrcs/gmproto/rpc/LongPollingPayload;
 
     move-result-object v4
 
-    .line 197
+    .line 201
     .local v4, "msg":Lcom/textrcs/gmproto/rpc/LongPollingPayload;
     invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-direct {v0, v4}, Lcom/textrcs/protocol/longpoll/LongPollReceiver;->dispatch(Lcom/textrcs/gmproto/rpc/LongPollingPayload;)V
 
-    .line 198
+    .line 202
     const/4 v8, 0x1
 
     const/4 v4, 0x2
@@ -1097,7 +1167,7 @@
     .end local v14    # "payload":Lcom/textrcs/gmproto/rpc/LongPollingPayload$Builder;
     goto :goto_3e
 
-    .line 189
+    .line 193
     .restart local v10    # "n":I
     .restart local v11    # "offset":I
     .restart local v12    # "candidate":Ljava/lang/String;
@@ -1107,7 +1177,7 @@
 
     goto :goto_3e
 
-    .line 200
+    .line 204
     .end local v10    # "n":I
     .end local v11    # "offset":I
     .end local v12    # "candidate":Ljava/lang/String;
@@ -1120,10 +1190,10 @@
     .registers 4
     .param p1, "text"    # Ljava/lang/String;
 
-    .line 204
+    .line 208
     nop
 
-    .line 205
+    .line 209
     :try_start_1
     new-instance v0, Lorg/json/JSONArray;
 
@@ -1133,17 +1203,17 @@
 
     goto :goto_a
 
-    .line 206
+    .line 210
     :catchall_7
     move-exception v0
 
-    .line 207
+    .line 211
     .local v0, "_":Ljava/lang/Throwable;
     const/4 v1, 0x0
 
     move-object v0, v1
 
-    .line 204
+    .line 208
     .end local v0    # "_":Ljava/lang/Throwable;
     :goto_a
     return-object v0

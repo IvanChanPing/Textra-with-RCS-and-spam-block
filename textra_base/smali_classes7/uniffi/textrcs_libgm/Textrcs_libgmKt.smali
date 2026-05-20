@@ -5,14 +5,19 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n+ 2 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,2989:1\n275#1,4:2990\n275#1,4:3005\n275#1,4:3009\n275#1,4:3013\n315#1:3017\n275#1,4:3018\n314#2,11:2994\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n315#1:2990,4\n1129#1:3005,4\n2957#1:3009,4\n2971#1:3013,4\n2980#1:3017\n2980#1:3018,4\n1119#1:2994,11\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n+ 2 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,4211:1\n275#1,4:4212\n275#1,4:4227\n275#1,4:4231\n275#1,4:4235\n315#1:4239\n275#1,4:4240\n314#2,11:4216\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n315#1:4212,4\n1290#1:4227,4\n4179#1:4231,4\n4193#1:4235,4\n4202#1:4239\n4202#1:4240,4\n1280#1:4216,11\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u00a8\u0001\n\u0000\n\u0002\u0010\u0005\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010 \n\u0002\u0010\u0012\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0003\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\u001c\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\r0\u000c2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\u0010\u001a\u0010\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u0012H\u0002\u001a\"\u0010\u0014\u001a\u0002H\u0015\"\n\u0008\u0000\u0010\u0015\u0018\u0001*\u00020\u00162\u0006\u0010\u0013\u001a\u00020\u0012H\u0082\u0008\u00a2\u0006\u0002\u0010\u0017\u001a\u001e\u0010\u0018\u001a\u00020\r2\u0006\u0010\u0019\u001a\u00020\r2\u0006\u0010\u001a\u001a\u00020\r2\u0006\u0010\u001b\u001a\u00020\r\u001a\u0010\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001fH\u0002\u001a,\u0010 \u001a\u00020\u001d\"\u000c\u0008\u0000\u0010!*\u00060\"j\u0002`#2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u0002H!0%2\u0006\u0010&\u001a\u00020\'H\u0002\u001a\u0010\u0010(\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001fH\u0002\u001a(\u0010)\u001a\u0002H*\"\u0004\u0008\u0000\u0010*2\u0012\u0010+\u001a\u000e\u0012\u0004\u0012\u00020\'\u0012\u0004\u0012\u0002H*0,H\u0082\u0008\u00a2\u0006\u0002\u0010-\u001a\u00a0\u0001\u0010.\u001a\u0002H/\"\u0004\u0008\u0000\u0010/\"\u0004\u0008\u0001\u00100\"\u000c\u0008\u0002\u0010!*\u00060\"j\u0002`#2\u0006\u00101\u001a\u0002022\u001e\u00103\u001a\u001a\u0012\u0004\u0012\u000202\u0012\u0004\u0012\u000205\u0012\u0004\u0012\u000202\u0012\u0004\u0012\u00020\u001d042\u0018\u00106\u001a\u0014\u0012\u0004\u0012\u000202\u0012\u0004\u0012\u00020\'\u0012\u0004\u0012\u0002H0072\u0012\u00108\u001a\u000e\u0012\u0004\u0012\u000202\u0012\u0004\u0012\u00020\u001d0,2\u0012\u00109\u001a\u000e\u0012\u0004\u0012\u0002H0\u0012\u0004\u0012\u0002H/0,2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u0002H!0%H\u0080@\u00a2\u0006\u0002\u0010:\u001aD\u0010;\u001a\u0002H*\"\u0004\u0008\u0000\u0010*\"\u000c\u0008\u0001\u0010!*\u00060\"j\u0002`#2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u0002H!0%2\u0012\u0010+\u001a\u000e\u0012\u0004\u0012\u00020\'\u0012\u0004\u0012\u0002H*0,H\u0082\u0008\u00a2\u0006\u0002\u0010<\u001a<\u0010=\u001a\u00020\u001d\"\u0004\u0008\u0000\u0010/2\u0006\u0010>\u001a\u00020\'2\u000c\u0010?\u001a\u0008\u0012\u0004\u0012\u0002H/0@2\u0012\u0010A\u001a\u000e\u0012\u0004\u0012\u0002H/\u0012\u0004\u0012\u00020\u001d0,H\u0080\u0008\u00f8\u0001\u0000\u001a\\\u0010B\u001a\u00020\u001d\"\u0004\u0008\u0000\u0010/\"\n\u0008\u0001\u0010!\u0018\u0001*\u00020C2\u0006\u0010>\u001a\u00020\'2\u000c\u0010?\u001a\u0008\u0012\u0004\u0012\u0002H/0@2\u0012\u0010A\u001a\u000e\u0012\u0004\u0012\u0002H/\u0012\u0004\u0012\u00020\u001d0,2\u0012\u0010D\u001a\u000e\u0012\u0004\u0012\u0002H!\u0012\u0004\u0012\u00020E0,H\u0080\u0008\u00f8\u0001\u0000\u001a\u0006\u0010F\u001a\u00020\u0012\u001a\u000c\u0010G\u001a\u00020H*\u00020IH\u0002\u001a;\u0010J\u001a\u0002HK\"\n\u0008\u0000\u0010/*\u0004\u0018\u00010L\"\u0004\u0008\u0001\u0010K*\u0002H/2\u0012\u0010M\u001a\u000e\u0012\u0004\u0012\u0002H/\u0012\u0004\u0012\u0002HK0,H\u0086\u0008\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010N\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0002\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0003\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0004\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0005\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\" \u0010\u0006\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00010\u00080\u0007X\u0080\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\t\u0010\n\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001"
+        "\u0000\u00aa\u0001\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\u0005\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010 \n\u0002\u0010\u0012\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0003\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\u001c\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\u00120\u00112\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u0001\u001a\u0010\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u0016H\u0002\u001a\"\u0010\u0018\u001a\u0002H\u0019\"\n\u0008\u0000\u0010\u0019\u0018\u0001*\u00020\u001a2\u0006\u0010\u0017\u001a\u00020\u0016H\u0082\u0008\u00a2\u0006\u0002\u0010\u001b\u001a\u001e\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u00122\u0006\u0010\u001e\u001a\u00020\u00122\u0006\u0010\u001f\u001a\u00020\u0012\u001a\u0010\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020#H\u0002\u001a,\u0010$\u001a\u00020!\"\u000c\u0008\u0000\u0010%*\u00060&j\u0002`\'2\u000c\u0010(\u001a\u0008\u0012\u0004\u0012\u0002H%0)2\u0006\u0010*\u001a\u00020+H\u0002\u001a\u0010\u0010,\u001a\u00020!2\u0006\u0010\"\u001a\u00020#H\u0002\u001a(\u0010-\u001a\u0002H.\"\u0004\u0008\u0000\u0010.2\u0012\u0010/\u001a\u000e\u0012\u0004\u0012\u00020+\u0012\u0004\u0012\u0002H.00H\u0082\u0008\u00a2\u0006\u0002\u00101\u001a\u00a0\u0001\u00102\u001a\u0002H3\"\u0004\u0008\u0000\u00103\"\u0004\u0008\u0001\u00104\"\u000c\u0008\u0002\u0010%*\u00060&j\u0002`\'2\u0006\u00105\u001a\u0002062\u001e\u00107\u001a\u001a\u0012\u0004\u0012\u000206\u0012\u0004\u0012\u000209\u0012\u0004\u0012\u000206\u0012\u0004\u0012\u00020!082\u0018\u0010:\u001a\u0014\u0012\u0004\u0012\u000206\u0012\u0004\u0012\u00020+\u0012\u0004\u0012\u0002H40;2\u0012\u0010<\u001a\u000e\u0012\u0004\u0012\u000206\u0012\u0004\u0012\u00020!002\u0012\u0010=\u001a\u000e\u0012\u0004\u0012\u0002H4\u0012\u0004\u0012\u0002H3002\u000c\u0010(\u001a\u0008\u0012\u0004\u0012\u0002H%0)H\u0080@\u00a2\u0006\u0002\u0010>\u001aD\u0010?\u001a\u0002H.\"\u0004\u0008\u0000\u0010.\"\u000c\u0008\u0001\u0010%*\u00060&j\u0002`\'2\u000c\u0010(\u001a\u0008\u0012\u0004\u0012\u0002H%0)2\u0012\u0010/\u001a\u000e\u0012\u0004\u0012\u00020+\u0012\u0004\u0012\u0002H.00H\u0082\u0008\u00a2\u0006\u0002\u0010@\u001a<\u0010A\u001a\u00020!\"\u0004\u0008\u0000\u001032\u0006\u0010B\u001a\u00020+2\u000c\u0010C\u001a\u0008\u0012\u0004\u0012\u0002H30D2\u0012\u0010E\u001a\u000e\u0012\u0004\u0012\u0002H3\u0012\u0004\u0012\u00020!00H\u0080\u0008\u00f8\u0001\u0000\u001a\\\u0010F\u001a\u00020!\"\u0004\u0008\u0000\u00103\"\n\u0008\u0001\u0010%\u0018\u0001*\u00020G2\u0006\u0010B\u001a\u00020+2\u000c\u0010C\u001a\u0008\u0012\u0004\u0012\u0002H30D2\u0012\u0010E\u001a\u000e\u0012\u0004\u0012\u0002H3\u0012\u0004\u0012\u00020!002\u0012\u0010H\u001a\u000e\u0012\u0004\u0012\u0002H%\u0012\u0004\u0012\u00020I00H\u0080\u0008\u00f8\u0001\u0000\u001a\u0006\u0010J\u001a\u00020\u0016\u001a\u000c\u0010K\u001a\u00020L*\u00020MH\u0002\u001a;\u0010N\u001a\u0002HO\"\n\u0008\u0000\u00103*\u0004\u0018\u00010P\"\u0004\u0008\u0001\u0010O*\u0002H32\u0012\u0010Q\u001a\u000e\u0012\u0004\u0012\u0002H3\u0012\u0004\u0012\u0002HO00H\u0086\u0008\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010R\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0002\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0003\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0004\u001a\u00020\u0001X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0005\u001a\u00020\u0006X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0007\u001a\u00020\u0006X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0008\u001a\u00020\u0006X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\t\u001a\u00020\u0006X\u0080T\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\n\u001a\u00020\u0006X\u0080T\u00a2\u0006\u0002\n\u0000\" \u0010\u000b\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00060\r0\u000cX\u0080\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000e\u0010\u000f\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001"
     }
     d2 = {
+        "IDX_CALLBACK_FREE",
+        "",
+        "UNIFFI_CALLBACK_ERROR",
+        "UNIFFI_CALLBACK_SUCCESS",
+        "UNIFFI_CALLBACK_UNEXPECTED_ERROR",
         "UNIFFI_CALL_ERROR",
         "",
         "UNIFFI_CALL_SUCCESS",
@@ -29,7 +34,6 @@
         "",
         "nextKey",
         "confirmedKeyDerivationVersion",
-        "",
         "findLibraryName",
         "",
         "componentName",
@@ -104,6 +108,14 @@
 
 
 # static fields
+.field public static final IDX_CALLBACK_FREE:I = 0x0
+
+.field public static final UNIFFI_CALLBACK_ERROR:I = 0x1
+
+.field public static final UNIFFI_CALLBACK_SUCCESS:I = 0x0
+
+.field public static final UNIFFI_CALLBACK_UNEXPECTED_ERROR:I = 0x2
+
 .field public static final UNIFFI_CALL_ERROR:B = 0x1t
 
 .field public static final UNIFFI_CALL_SUCCESS:B = 0x0t
@@ -130,7 +142,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    .line 1100
+    .line 1261
     new-instance v0, Luniffi/textrcs_libgm/UniffiHandleMap;
 
     invoke-direct {v0}, Luniffi/textrcs_libgm/UniffiHandleMap;-><init>()V
@@ -199,16 +211,16 @@
     .registers 3
     .param p0, "$this$create"    # Luniffi/textrcs_libgm/UniffiCleaner$Companion;
 
-    .line 1462
+    .line 1623
     nop
 
-    .line 1467
+    .line 1628
     :try_start_1
     const-string v0, "java.lang.ref.Cleaner"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 1468
+    .line 1629
     new-instance v0, Luniffi/textrcs_libgm/JavaLangRefCleaner;
 
     invoke-direct {v0}, Luniffi/textrcs_libgm/JavaLangRefCleaner;-><init>()V
@@ -219,11 +231,11 @@
 
     goto :goto_17
 
-    .line 1469
+    .line 1630
     :catch_e
     move-exception v0
 
-    .line 1471
+    .line 1632
     .local v0, "e":Ljava/lang/ClassNotFoundException;
     new-instance v1, Luniffi/textrcs_libgm/UniffiJnaCleaner;
 
@@ -233,7 +245,7 @@
 
     move-object v0, v1
 
-    .line 1472
+    .line 1633
     .end local v0    # "e":Ljava/lang/ClassNotFoundException;
     :goto_17
     return-object v0
@@ -261,10 +273,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2956
+    .line 4178
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterSequenceByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterSequenceByteArray;
 
-    .line 2957
+    .line 4179
     sget-object v1, Luniffi/textrcs_libgm/LibgmException;->ErrorHandler:Luniffi/textrcs_libgm/LibgmException$ErrorHandler;
 
     check-cast v1, Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
@@ -272,20 +284,20 @@
     .local v1, "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v2, 0x0
 
-    .line 3009
+    .line 4231
     .local v2, "$i$f$uniffiRustCallWithError":I
     new-instance v3, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v3}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 3010
+    .line 4232
     .local v3, "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v4, v3
 
     .local v4, "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v5, 0x0
 
-    .line 2958
+    .line 4180
     .local v5, "$i$a$-uniffiRustCallWithError-Textrcs_libgmKt$deriveSessionKeys$1":I
     sget-object v6, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -293,7 +305,7 @@
 
     move-result-object v6
 
-    .line 2959
+    .line 4181
     sget-object v7, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v7, p0}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lower(Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -310,25 +322,25 @@
 
     move-result v8
 
-    .line 2958
+    .line 4180
     invoke-interface {v6, v7, v8, v4}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_func_derive_session_keys(Luniffi/textrcs_libgm/RustBuffer$ByValue;ILuniffi/textrcs_libgm/UniffiRustCallStatus;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v4
 
-    .line 3010
+    .line 4232
     .end local v4    # "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v5    # "$i$a$-uniffiRustCallWithError-Textrcs_libgmKt$deriveSessionKeys$1":I
     nop
 
-    .line 3011
+    .line 4233
     .local v4, "return_value$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v1, v3}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 3012
+    .line 4234
     nop
 
-    .line 2956
+    .line 4178
     .end local v1    # "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v2    # "$i$f$uniffiRustCallWithError":I
     .end local v3    # "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
@@ -428,7 +440,7 @@
         }
     .end annotation
 
-    .line 1100
+    .line 1261
     sget-object v0, Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiContinuationHandleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
 
     return-object v0
@@ -507,10 +519,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2970
+    .line 4192
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
-    .line 2971
+    .line 4193
     sget-object v1, Luniffi/textrcs_libgm/LibgmException;->ErrorHandler:Luniffi/textrcs_libgm/LibgmException$ErrorHandler;
 
     check-cast v1, Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
@@ -518,20 +530,20 @@
     .local v1, "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v2, 0x0
 
-    .line 3013
+    .line 4235
     .local v2, "$i$f$uniffiRustCallWithError":I
     new-instance v3, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v3}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 3014
+    .line 4236
     .local v3, "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v4, v3
 
     .local v4, "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v5, 0x0
 
-    .line 2972
+    .line 4194
     .local v5, "$i$a$-uniffiRustCallWithError-Textrcs_libgmKt$rustHkdfSha256$1":I
     sget-object v6, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -539,7 +551,7 @@
 
     move-result-object v6
 
-    .line 2973
+    .line 4195
     sget-object v7, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v7, p0}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lower(Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -558,25 +570,25 @@
 
     move-result-object v9
 
-    .line 2972
+    .line 4194
     invoke-interface {v6, v7, v8, v9, v4}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_func_rust_hkdf_sha256(Luniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/UniffiRustCallStatus;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v4
 
-    .line 3014
+    .line 4236
     .end local v4    # "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v5    # "$i$a$-uniffiRustCallWithError-Textrcs_libgmKt$rustHkdfSha256$1":I
     nop
 
-    .line 3015
+    .line 4237
     .local v4, "return_value$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v1, v3}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 3016
+    .line 4238
     nop
 
-    .line 2970
+    .line 4192
     .end local v1    # "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v2    # "$i$f$uniffiRustCallWithError":I
     .end local v3    # "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
@@ -594,7 +606,7 @@
     .registers 4
     .param p0, "lib"    # Luniffi/textrcs_libgm/UniffiLib;
 
-    .line 1026
+    .line 1151
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_func_derive_session_keys()S
 
     move-result v0
@@ -603,329 +615,309 @@
 
     const-string v2, "UniFFI API checksum mismatch: try cleaning and rebuilding your project"
 
-    if-ne v0, v1, :cond_131
+    if-ne v0, v1, :cond_1d9
 
-    .line 1029
+    .line 1154
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_func_rust_hkdf_sha256()S
 
     move-result v0
 
     const/16 v1, -0x67e4
 
-    if-ne v0, v1, :cond_12b
+    if-ne v0, v1, :cond_1d3
 
-    .line 1032
+    .line 1157
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_func_version()S
 
     move-result v0
 
     const/16 v1, 0x7070
 
-    if-ne v0, v1, :cond_125
+    if-ne v0, v1, :cond_1cd
 
-    .line 1035
+    .line 1160
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_aesctrbox_decrypt()S
 
     move-result v0
 
     const/16 v1, -0x27ca
 
-    if-ne v0, v1, :cond_11f
+    if-ne v0, v1, :cond_1c7
 
-    .line 1038
+    .line 1163
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_aesctrbox_encrypt()S
 
     move-result v0
 
     const/16 v1, 0x537b
 
-    if-ne v0, v1, :cond_119
+    if-ne v0, v1, :cond_1c1
 
-    .line 1041
+    .line 1166
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_client_await_gaia_confirm()S
 
     move-result v0
 
     const/16 v1, 0xc4e
 
-    if-ne v0, v1, :cond_113
+    if-ne v0, v1, :cond_1bb
 
-    .line 1044
+    .line 1169
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_client_connect()S
 
     move-result v0
 
     const/16 v1, -0x58c6
 
-    if-ne v0, v1, :cond_10d
+    if-ne v0, v1, :cond_1b5
 
-    .line 1047
+    .line 1172
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_client_disconnect()S
 
     move-result v0
 
     const/16 v1, 0x1d37
 
-    if-ne v0, v1, :cond_107
+    if-ne v0, v1, :cond_1af
 
-    .line 1050
+    .line 1175
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_client_is_paired()S
 
     move-result v0
 
     const/16 v1, 0x4352
 
-    if-ne v0, v1, :cond_101
+    if-ne v0, v1, :cond_1a9
 
-    .line 1053
+    .line 1178
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_client_save_auth_data_json()S
 
     move-result v0
 
     const/16 v1, 0x5be2
 
-    if-ne v0, v1, :cond_fb
+    if-ne v0, v1, :cond_1a3
 
-    .line 1056
+    .line 1181
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_client_start_gaia_pair()S
 
     move-result v0
 
     const/16 v1, -0x4030
 
-    if-ne v0, v1, :cond_f5
+    if-ne v0, v1, :cond_19d
 
-    .line 1059
+    .line 1184
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_pairingsession_emoji()S
 
     move-result v0
 
     const/16 v1, 0x3eb1
 
-    if-ne v0, v1, :cond_ef
+    if-ne v0, v1, :cond_197
 
-    .line 1062
+    .line 1187
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustclient_connect()S
+
+    move-result v0
+
+    const/16 v1, -0x2c1f
+
+    if-ne v0, v1, :cond_191
+
+    .line 1190
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustclient_disconnect()S
+
+    move-result v0
+
+    const/16 v1, -0x6586
+
+    if-ne v0, v1, :cond_18b
+
+    .line 1193
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustclient_fetch_messages()S
+
+    move-result v0
+
+    const/16 v1, -0x5685
+
+    if-ne v0, v1, :cond_185
+
+    .line 1196
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustclient_is_connected()S
+
+    move-result v0
+
+    const/16 v1, 0x1324
+
+    if-ne v0, v1, :cond_17f
+
+    .line 1199
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustclient_list_conversations()S
+
+    move-result v0
+
+    const/16 v1, -0x120
+
+    if-ne v0, v1, :cond_179
+
+    .line 1202
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustclient_mark_read()S
+
+    move-result v0
+
+    const/16 v1, 0x4387
+
+    if-ne v0, v1, :cond_173
+
+    .line 1205
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustclient_send_text()S
+
+    move-result v0
+
+    const/16 v1, 0x765c
+
+    if-ne v0, v1, :cond_16d
+
+    .line 1208
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rusteventsink_on_data_event()S
+
+    move-result v0
+
+    const/16 v1, -0x245b
+
+    if-ne v0, v1, :cond_167
+
+    .line 1211
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rusteventsink_on_phone_not_responding()S
+
+    move-result v0
+
+    const/16 v1, 0x66f2
+
+    if-ne v0, v1, :cond_161
+
+    .line 1214
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rusteventsink_on_phone_responding_again()S
+
+    move-result v0
+
+    const/16 v1, -0x4f6f
+
+    if-ne v0, v1, :cond_15b
+
+    .line 1217
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rusteventsink_on_pair_event()S
+
+    move-result v0
+
+    const/16 v1, -0x7c20
+
+    if-ne v0, v1, :cond_155
+
+    .line 1220
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustpairingsession_derive_request_crypto_keys()S
 
     move-result v0
 
     const/16 v1, -0x3219
 
-    if-ne v0, v1, :cond_e9
+    if-ne v0, v1, :cond_14f
 
-    .line 1065
+    .line 1223
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustpairingsession_next_key_hex()S
 
     move-result v0
 
     const/16 v1, 0x394e
 
-    if-ne v0, v1, :cond_e3
+    if-ne v0, v1, :cond_149
 
-    .line 1068
+    .line 1226
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustpairingsession_pairing_uuid()S
 
     move-result v0
 
     const/16 v1, 0x1fa2
 
-    if-ne v0, v1, :cond_dd
+    if-ne v0, v1, :cond_143
 
-    .line 1071
+    .line 1229
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustpairingsession_prepare_payloads()S
 
     move-result v0
 
     const/16 v1, -0x35d2
 
-    if-ne v0, v1, :cond_d7
+    if-ne v0, v1, :cond_13d
 
-    .line 1074
+    .line 1232
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustpairingsession_process_server_init()S
 
     move-result v0
 
     const/16 v1, 0x74c7
 
-    if-ne v0, v1, :cond_d1
+    if-ne v0, v1, :cond_137
 
-    .line 1077
+    .line 1235
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_method_rustpairingsession_start_timestamp_millis()S
 
     move-result v0
 
     const/16 v1, -0x4ce8
 
-    if-ne v0, v1, :cond_cb
+    if-ne v0, v1, :cond_131
 
-    .line 1080
+    .line 1238
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_constructor_aesctrbox_new()S
 
     move-result v0
 
     const/16 v1, -0x71b
 
-    if-ne v0, v1, :cond_c5
+    if-ne v0, v1, :cond_12b
 
-    .line 1083
+    .line 1241
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_constructor_client_load_from_json()S
 
     move-result v0
 
     const/16 v1, 0x45f5
 
-    if-ne v0, v1, :cond_bf
+    if-ne v0, v1, :cond_125
 
-    .line 1086
+    .line 1244
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_constructor_client_new()S
 
     move-result v0
 
     const/16 v1, -0xdd3
 
-    if-ne v0, v1, :cond_b9
+    if-ne v0, v1, :cond_11f
 
-    .line 1089
+    .line 1247
+    invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_constructor_rustclient_new()S
+
+    move-result v0
+
+    const/16 v1, -0x123e
+
+    if-ne v0, v1, :cond_119
+
+    .line 1250
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_checksum_constructor_rustpairingsession_new()S
 
     move-result v0
 
     const/16 v1, 0x3d9e
 
-    if-ne v0, v1, :cond_b3
+    if-ne v0, v1, :cond_113
 
-    .line 1092
+    .line 1253
     return-void
 
-    .line 1090
-    :cond_b3
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1087
-    :cond_b9
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1084
-    :cond_bf
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1081
-    :cond_c5
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1078
-    :cond_cb
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1075
-    :cond_d1
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1072
-    :cond_d7
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1069
-    :cond_dd
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1066
-    :cond_e3
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1063
-    :cond_e9
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1060
-    :cond_ef
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1057
-    :cond_f5
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1054
-    :cond_fb
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1051
-    :cond_101
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1048
-    :cond_107
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1045
-    :cond_10d
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1042
+    .line 1251
     :cond_113
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -933,7 +925,7 @@
 
     throw v0
 
-    .line 1039
+    .line 1248
     :cond_119
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -941,7 +933,7 @@
 
     throw v0
 
-    .line 1036
+    .line 1245
     :cond_11f
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -949,7 +941,7 @@
 
     throw v0
 
-    .line 1033
+    .line 1242
     :cond_125
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -957,7 +949,7 @@
 
     throw v0
 
-    .line 1030
+    .line 1239
     :cond_12b
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -965,8 +957,232 @@
 
     throw v0
 
-    .line 1027
+    .line 1236
     :cond_131
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1233
+    :cond_137
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1230
+    :cond_13d
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1227
+    :cond_143
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1224
+    :cond_149
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1221
+    :cond_14f
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1218
+    :cond_155
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1215
+    :cond_15b
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1212
+    :cond_161
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1209
+    :cond_167
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1206
+    :cond_16d
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1203
+    :cond_173
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1200
+    :cond_179
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1197
+    :cond_17f
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1194
+    :cond_185
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1191
+    :cond_18b
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1188
+    :cond_191
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1185
+    :cond_197
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1182
+    :cond_19d
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1179
+    :cond_1a3
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1176
+    :cond_1a9
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1173
+    :cond_1af
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1170
+    :cond_1b5
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1167
+    :cond_1bb
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1164
+    :cond_1c1
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1161
+    :cond_1c7
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1158
+    :cond_1cd
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1155
+    :cond_1d3
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1152
+    :cond_1d9
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
@@ -1100,23 +1316,23 @@
     .registers 5
     .param p0, "lib"    # Luniffi/textrcs_libgm/UniffiLib;
 
-    .line 1016
+    .line 1141
     const/16 v0, 0x1a
 
-    .line 1018
+    .line 1143
     .local v0, "bindings_contract_version":I
     invoke-interface {p0}, Luniffi/textrcs_libgm/UniffiLib;->ffi_textrcs_libgm_uniffi_contract_version()I
 
     move-result v1
 
-    .line 1019
+    .line 1144
     .local v1, "scaffolding_contract_version":I
     if-ne v0, v1, :cond_9
 
-    .line 1022
+    .line 1147
     return-void
 
-    .line 1020
+    .line 1145
     :cond_9
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -1153,24 +1369,24 @@
     .local v1, "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v2, 0x0
 
-    .line 2990
+    .line 4212
     .local v2, "$i$f$uniffiRustCallWithError":I
     new-instance v3, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v3}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 2991
+    .line 4213
     .local v3, "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     invoke-interface {p0, v3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 2992
+    .line 4214
     .local v4, "return_value$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v1, v3}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 2993
+    .line 4215
     nop
 
     .line 315
@@ -1262,7 +1478,7 @@
 
     move-result-object v0
 
-    .line 1109
+    .line 1270
     iget v3, v1, Luniffi/textrcs_libgm/Textrcs_libgmKt$uniffiRustCallAsync$1;->label:I
 
     packed-switch v3, :pswitch_data_11e
@@ -1334,7 +1550,7 @@
 
     goto/16 :goto_cc
 
-    .line 1132
+    .line 1293
     .end local v3    # "$i$f$suspendCancellableCoroutine":I
     .end local v6    # "errorHandler":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v7    # "liftFunc":Lkotlin/jvm/functions/Function1;
@@ -1345,7 +1561,7 @@
 
     goto/16 :goto_116
 
-    .line 1109
+    .line 1270
     .end local v4    # "rustFuture":J
     .end local v8    # "freeFunc":Lkotlin/jvm/functions/Function1;
     :pswitch_55
@@ -1368,7 +1584,7 @@
     .local v8, "completeFunc":Lkotlin/jvm/functions/Function2;
     move-object/from16 v9, p5
 
-    .line 1117
+    .line 1278
     .local v9, "liftFunc":Lkotlin/jvm/functions/Function1;
     move-object v10, v8
 
@@ -1382,7 +1598,7 @@
 
     move-wide v4, v3
 
-    .line 1119
+    .line 1280
     .end local v3    # "rustFuture":J
     .end local v5    # "pollFunc":Lkotlin/jvm/functions/Function3;
     .restart local v4    # "rustFuture":J
@@ -1393,7 +1609,7 @@
     :goto_6a
     const/4 v3, 0x0
 
-    .line 2994
+    .line 4216
     .local v3, "$i$f$suspendCancellableCoroutine":I
     :try_start_6b
     iput-object v10, v1, Luniffi/textrcs_libgm/Textrcs_libgmKt$uniffiRustCallAsync$1;->L$0:Ljava/lang/Object;
@@ -1419,7 +1635,7 @@
     .local v12, "uCont$iv":Lkotlin/coroutines/Continuation;
     const/4 v13, 0x0
 
-    .line 2995
+    .line 4217
     .local v13, "$i$a$-suspendCoroutineUninterceptedOrReturn-CancellableContinuationKt$suspendCancellableCoroutine$2$iv":I
     new-instance v14, Lkotlinx/coroutines/CancellableContinuationImpl;
 
@@ -1429,11 +1645,11 @@
 
     invoke-direct {v14, v15, v11}, Lkotlinx/coroutines/CancellableContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;I)V
 
-    .line 3001
+    .line 4223
     .local v14, "cancellable$iv":Lkotlinx/coroutines/CancellableContinuationImpl;
     invoke-virtual {v14}, Lkotlinx/coroutines/CancellableContinuationImpl;->initCancellability()V
 
-    .line 3002
+    .line 4224
     move-object v11, v14
 
     check-cast v11, Lkotlinx/coroutines/CancellableContinuation;
@@ -1443,11 +1659,11 @@
     .local v11, "continuation":Lkotlinx/coroutines/CancellableContinuation;
     const/4 v15, 0x0
 
-    .line 1120
+    .line 1281
     .local v15, "$i$a$-suspendCancellableCoroutine-Textrcs_libgmKt$uniffiRustCallAsync$pollResult$1":I
     nop
 
-    .line 1121
+    .line 1282
     move-object/from16 p0, v1
 
     .end local v1    # "$continuation":Lkotlin/coroutines/Continuation;
@@ -1459,7 +1675,7 @@
     :try_end_95
     .catchall {:try_start_91 .. :try_end_95} :catchall_10b
 
-    .line 1122
+    .line 1283
     move-object/from16 p1, v2
 
     .end local v2    # "$result":Ljava/lang/Object;
@@ -1467,7 +1683,7 @@
     :try_start_97
     sget-object v2, Luniffi/textrcs_libgm/uniffiRustFutureContinuationCallbackImpl;->INSTANCE:Luniffi/textrcs_libgm/uniffiRustFutureContinuationCallbackImpl;
 
-    .line 1123
+    .line 1284
     move/from16 p2, v3
 
     .end local v3    # "$i$f$suspendCancellableCoroutine":I
@@ -1484,23 +1700,23 @@
 
     move-result-object v3
 
-    .line 1120
+    .line 1281
     invoke-interface {v10, v1, v2, v3}, Lkotlin/jvm/functions/Function3;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1125
+    .line 1286
     nop
 
-    .line 3002
+    .line 4224
     .end local v11    # "continuation":Lkotlinx/coroutines/CancellableContinuation;
     .end local v15    # "$i$a$-suspendCancellableCoroutine-Textrcs_libgmKt$uniffiRustCallAsync$pollResult$1":I
     nop
 
-    .line 3003
+    .line 4225
     invoke-virtual {v14}, Lkotlinx/coroutines/CancellableContinuationImpl;->getResult()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 2994
+    .line 4216
     .end local v12    # "uCont$iv":Lkotlin/coroutines/Continuation;
     .end local v13    # "$i$a$-suspendCoroutineUninterceptedOrReturn-CancellableContinuationKt$suspendCancellableCoroutine$2$iv":I
     .end local v14    # "cancellable$iv":Lkotlinx/coroutines/CancellableContinuationImpl;
@@ -1521,10 +1737,10 @@
     :cond_bd
     if-ne v2, v0, :cond_c0
 
-    .line 1109
+    .line 1270
     return-object v0
 
-    .line 2994
+    .line 4216
     :cond_c0
     move-object/from16 v1, p0
 
@@ -1544,7 +1760,7 @@
 
     move/from16 v4, p2
 
-    .line 3004
+    .line 4226
     .end local v6    # "errorHandler":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local p0    # "$continuation":Lkotlin/coroutines/Continuation;
     .end local p1    # "$result":Ljava/lang/Object;
@@ -1561,7 +1777,7 @@
     :goto_cc
     nop
 
-    .line 1119
+    .line 1280
     .end local v4    # "$i$f$suspendCancellableCoroutine":I
     :try_start_cd
     check-cast v2, Ljava/lang/Number;
@@ -1570,33 +1786,33 @@
 
     move-result v2
 
-    .line 1126
+    .line 1287
     .local v2, "pollResult":B
     if-nez v2, :cond_f7
 
-    .line 1128
+    .line 1289
     .end local v2    # "pollResult":B
     .end local v11    # "pollFunc":Lkotlin/jvm/functions/Function3;
     nop
 
-    .line 1129
+    .line 1290
     .end local v8    # "liftFunc":Lkotlin/jvm/functions/Function1;
     const/4 v0, 0x0
 
-    .line 3005
+    .line 4227
     .local v0, "$i$f$uniffiRustCallWithError":I
     new-instance v2, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v2}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 3006
+    .line 4228
     .local v2, "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v4, v2
 
     .local v4, "status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v11, 0x0
 
-    .line 1129
+    .line 1290
     .local v11, "$i$a$-uniffiRustCallWithError-Textrcs_libgmKt$uniffiRustCallAsync$2":I
     invoke-static {v5, v6}, Lkotlin/coroutines/jvm/internal/Boxing;->boxLong(J)Ljava/lang/Long;
 
@@ -1606,22 +1822,22 @@
 
     move-result-object v12
 
-    .line 3006
+    .line 4228
     .end local v4    # "status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v10    # "completeFunc":Lkotlin/jvm/functions/Function2;
     .end local v11    # "$i$a$-uniffiRustCallWithError-Textrcs_libgmKt$uniffiRustCallAsync$2":I
     nop
 
-    .line 3007
+    .line 4229
     .local v12, "return_value$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v7, v2}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 3008
+    .line 4230
     .end local v7    # "errorHandler":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     nop
 
-    .line 1128
+    .line 1289
     .end local v0    # "$i$f$uniffiRustCallWithError":I
     .end local v2    # "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v12    # "return_value$iv":Ljava/lang/Object;
@@ -1631,19 +1847,19 @@
     :try_end_ef
     .catchall {:try_start_cd .. :try_end_ef} :catchall_100
 
-    .line 1132
+    .line 1293
     invoke-static {v5, v6}, Lkotlin/coroutines/jvm/internal/Boxing;->boxLong(J)Ljava/lang/Long;
 
     move-result-object v2
 
     invoke-interface {v9, v2}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1128
+    .line 1289
     .end local v5    # "rustFuture":J
     .end local v9    # "freeFunc":Lkotlin/jvm/functions/Function1;
     return-object v0
 
-    .line 1126
+    .line 1287
     .local v2, "pollResult":B
     .restart local v5    # "rustFuture":J
     .restart local v7    # "errorHandler":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
@@ -1668,7 +1884,7 @@
 
     goto/16 :goto_6a
 
-    .line 1132
+    .line 1293
     .end local v2    # "pollResult":B
     .end local v7    # "errorHandler":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v8    # "liftFunc":Lkotlin/jvm/functions/Function1;
@@ -2004,11 +2220,11 @@
 
     const/4 v0, 0x0
 
-    .line 1161
+    .line 1322
     .local v0, "$i$f$use":I
     nop
 
-    .line 1162
+    .line 1323
     :try_start_7
     invoke-interface {p1, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2016,10 +2232,10 @@
     :try_end_b
     .catchall {:try_start_7 .. :try_end_b} :catchall_15
 
-    .line 1164
+    .line 1325
     nop
 
-    .line 1166
+    .line 1327
     if-eqz p0, :cond_13
 
     :try_start_e
@@ -2029,7 +2245,7 @@
 
     goto :goto_13
 
-    .line 1167
+    .line 1328
     :catchall_12
     move-exception v2
 
@@ -2037,14 +2253,14 @@
     :goto_13
     nop
 
-    .line 1170
+    .line 1331
     return-object v1
 
-    .line 1164
+    .line 1325
     :catchall_15
     move-exception v1
 
-    .line 1166
+    .line 1327
     if-eqz p0, :cond_1d
 
     :try_start_18
@@ -2054,7 +2270,7 @@
 
     goto :goto_1d
 
-    .line 1167
+    .line 1328
     :catchall_1c
     move-exception v2
 
@@ -2066,13 +2282,13 @@
 .method public static final version()Ljava/lang/String;
     .registers 8
 
-    .line 2979
+    .line 4201
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
-    .line 2980
+    .line 4202
     const/4 v1, 0x0
 
-    .line 3017
+    .line 4239
     .local v1, "$i$f$uniffiRustCall":I
     sget-object v2, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -2081,20 +2297,20 @@
     .local v2, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v3, 0x0
 
-    .line 3018
+    .line 4240
     .local v3, "$i$f$uniffiRustCallWithError":I
     new-instance v4, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v4}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 3019
+    .line 4241
     .local v4, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v5, v4
 
     .local v5, "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v6, 0x0
 
-    .line 2981
+    .line 4203
     .local v6, "$i$a$-uniffiRustCall-Textrcs_libgmKt$version$1":I
     sget-object v7, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -2102,35 +2318,35 @@
 
     move-result-object v7
 
-    .line 2982
+    .line 4204
     nop
 
-    .line 2981
+    .line 4203
     invoke-interface {v7, v5}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_func_version(Luniffi/textrcs_libgm/UniffiRustCallStatus;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v5
 
-    .line 3019
+    .line 4241
     .end local v5    # "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v6    # "$i$a$-uniffiRustCall-Textrcs_libgmKt$version$1":I
     nop
 
-    .line 3020
+    .line 4242
     .local v5, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v2, v4}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 3021
+    .line 4243
     nop
 
-    .line 3017
+    .line 4239
     .end local v2    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v3    # "$i$f$uniffiRustCallWithError":I
     .end local v4    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v5    # "return_value$iv$iv":Ljava/lang/Object;
     nop
 
-    .line 2979
+    .line 4201
     .end local v1    # "$i$f$uniffiRustCall":I
     invoke-virtual {v0, v5}, Luniffi/textrcs_libgm/FfiConverterString;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/String;
 

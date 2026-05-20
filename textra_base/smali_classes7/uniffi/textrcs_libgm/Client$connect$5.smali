@@ -80,7 +80,7 @@
     .registers 4
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 1915
+    .line 2076
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;
@@ -100,7 +100,7 @@
     .registers 4
     .param p1, "future"    # J
 
-    .line 1924
+    .line 2085
     sget-object v0, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
     invoke-virtual {v0}, Luniffi/textrcs_libgm/UniffiLib$Companion;->getINSTANCE$main()Luniffi/textrcs_libgm/UniffiLib;

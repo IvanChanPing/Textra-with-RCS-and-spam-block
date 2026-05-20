@@ -260,6 +260,30 @@ class GMessagesHttpClient(
         }
         return builder
     }
+
+    companion object {
+        // v0.67: ONE process-wide shared cookie jar. mautrix keeps a single
+        // AuthData.Cookies map shared by EVERY request — long-poll, send,
+        // ack, ditto-ping and SetActiveSession (client.go:50-80, http.go:50,59).
+        // textra2 built a fresh GMessagesHttpClient (a fresh, independent jar)
+        // per call, so a Set-Cookie rotation absorbed by one client never
+        // reached the others — the long-poll and the SET_ACTIVE_SESSION POST
+        // drifted onto different cookie identities and Google never bound the
+        // long-poll to the active session (it buffered every response instead
+        // of pushing it). This shared jar unifies them, mirroring mautrix.
+        private val sharedJar: MutableMap<String, String> =
+            java.util.concurrent.ConcurrentHashMap()
+
+        /**
+         * A client backed by the ONE shared cookie jar. Seeds any cookie the
+         * jar is missing from the freshly-loaded session, but never clobbers
+         * a rotation already absorbed this process run (putIfAbsent).
+         */
+        fun shared(session: com.textrcs.protocol.GMessagesSession): GMessagesHttpClient {
+            for ((k, v) in session.cookies) sharedJar.putIfAbsent(k, v)
+            return GMessagesHttpClient(sharedJar)
+        }
+    }
 }
 
 class HttpError(val status: Int, message: String, val body: ByteArray) :

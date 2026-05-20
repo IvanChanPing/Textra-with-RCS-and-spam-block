@@ -81,7 +81,7 @@ object RemoteCommands {
             put("ok", true)
             put("now_ms", System.currentTimeMillis())
             put("install_id", RemoteControl.installationId())
-            put("build", "v0.61.0")
+            put("build", "v0.69.0")
         }
 
     private fun listCommands(@Suppress("UNUSED_PARAMETER") cmd: ControlCommand, @Suppress("UNUSED_PARAMETER") ctx: Context): JSONArray =

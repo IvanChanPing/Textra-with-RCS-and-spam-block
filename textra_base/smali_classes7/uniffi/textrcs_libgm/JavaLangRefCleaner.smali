@@ -45,17 +45,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 1474
+    .line 1635
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1475
+    .line 1636
     invoke-static {}, Ljava/lang/ref/Cleaner;->create()Ljava/lang/ref/Cleaner;
 
     move-result-object v0
 
     iput-object v0, p0, Luniffi/textrcs_libgm/JavaLangRefCleaner;->cleaner:Ljava/lang/ref/Cleaner;
 
-    .line 1474
+    .line 1635
     return-void
 .end method
 
@@ -64,7 +64,7 @@
 .method public final getCleaner()Ljava/lang/ref/Cleaner;
     .registers 2
 
-    .line 1475
+    .line 1636
     iget-object v0, p0, Luniffi/textrcs_libgm/JavaLangRefCleaner;->cleaner:Ljava/lang/ref/Cleaner;
 
     return-object v0
@@ -83,7 +83,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1478
+    .line 1639
     new-instance v0, Luniffi/textrcs_libgm/JavaLangRefCleanable;
 
     iget-object v1, p0, Luniffi/textrcs_libgm/JavaLangRefCleaner;->cleaner:Ljava/lang/ref/Cleaner;

@@ -43,7 +43,7 @@ class LongPollReceiver(
 ) : Runnable {
 
     interface Handler {
-        fun onIncomingRpc(msg: IncomingRPCMessage)
+        fun onIncomingRpc(msg: IncomingRPCMessage, isOld: Boolean)
         fun onAck(ack: StartAckMessage) {}
         fun onHeartbeat() {}
         fun onStartRead() {}
@@ -125,6 +125,10 @@ class LongPollReceiver(
             )
             .build()
 
+        // [REMOTE_HOOK v0.68] wire_dump_disable — v0.68 wire-diff.
+        if (!Hooks.shouldSkip("wire_dump_disable")) {
+            com.textrcs.diag.ScreenTracer.note("WIRE ReceiveMessagesRequest={ ${request.toString().replace('\n', ' ')} }")
+        }
         com.textrcs.diag.ScreenTracer.note("LP openOneConnection POST→${GMessagesConstants.URL_RECEIVE_MESSAGES} tachyon.len=${tachyonAuthToken.size}")
         val stream = http.openLongPoll(
             url = GMessagesConstants.URL_RECEIVE_MESSAGES,
@@ -211,25 +215,26 @@ class LongPollReceiver(
     private fun dispatch(msg: LongPollingPayload) {
         when {
             msg.hasData() -> {
-                // [REMOTE_HOOK v0.59] longpoll_disable_skip_count — turn off
-                // stale-frame skipping (debug: revert to v0.58 behavior).
-                val skipping = skipCount > 0 && !Hooks.shouldSkip("longpoll_disable_skip_count")
-                if (skipping) {
-                    skipCount--
-                    // [REMOTE_HOOK v0.60] longpoll_skip_no_ack — by default we
-                    // STILL queue an ack for stale-skipped frames so the
-                    // server-side queue actually drains. v0.59 logged-and-
-                    // ignored stale frames WITHOUT acking; Google's relay
-                    // then refuses to deliver new responses while the queue
-                    // is unACKed. Set this hook to disable acking-on-skip
-                    // (debug: revert to v0.59 behavior).
+                // v0.63 / R1 FIX — a data frame is ALWAYS handed to the
+                // receiver. mautrix event_handler.go:185-206 runs
+                // receiveResponse (the RPC-response router) BEFORE the
+                // skipCount check; skipCount NEVER drops a frame, it only
+                // marks an unsolicited update event isOld. v0.62 dropped
+                // data frames while skipCount>0 — which silently discarded
+                // real RPC responses (incl. GET_OR_CREATE_CONVERSATION),
+                // so every send timed out. skipCount is now advisory only.
+                val isOld = skipCount > 0
+                if (isOld) skipCount--
+                // [REMOTE_HOOK v0.63] longpoll_legacy_skip_drop — revert to
+                // the broken v0.62 drop-while-skipping behavior (A/B debug).
+                if (isOld && Hooks.shouldSkip("longpoll_legacy_skip_drop")) {
                     if (!Hooks.shouldSkip("longpoll_skip_no_ack")) {
                         AckSender.add(msg.data.responseID)
                     }
-                    com.textrcs.diag.ScreenTracer.note("LP frame=data STALE-SKIP+ACK responseID=${msg.data.responseID.take(8)} bugleRoute=${msg.data.bugleRoute} skipCount=$skipCount")
+                    com.textrcs.diag.ScreenTracer.note("LP frame=data LEGACY-DROP responseID=${msg.data.responseID.take(8)} skipCount=$skipCount")
                 } else {
-                    com.textrcs.diag.ScreenTracer.note("LP frame=data responseID=${msg.data.responseID.take(8)} bugleRoute=${msg.data.bugleRoute}")
-                    handler.onIncomingRpc(msg.data)
+                    com.textrcs.diag.ScreenTracer.note("LP frame=data responseID=${msg.data.responseID.take(8)} bugleRoute=${msg.data.bugleRoute} isOld=$isOld skipCount=$skipCount")
+                    handler.onIncomingRpc(msg.data, isOld)
                 }
             }
             msg.hasAck() -> {

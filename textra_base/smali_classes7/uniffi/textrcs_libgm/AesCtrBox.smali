@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/AesCtrBox\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,2989:1\n1565#1,11:2999\n1578#1,2:3014\n1565#1,11:3016\n1578#1,2:3031\n275#2,4:2990\n315#2:2994\n275#2,4:2995\n275#2,4:3010\n275#2,4:3027\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/AesCtrBox\n*L\n1610#1:2999,11\n1610#1:3014,2\n1626#1:3016,11\n1626#1:3031,2\n1533#1:2990,4\n1597#1:2994\n1597#1:2995,4\n1611#1:3010,4\n1627#1:3027,4\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/AesCtrBox\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4211:1\n1726#1,11:4221\n1739#1,2:4236\n1726#1,11:4238\n1739#1,2:4253\n275#2,4:4212\n315#2:4216\n275#2,4:4217\n275#2,4:4232\n275#2,4:4249\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/AesCtrBox\n*L\n1771#1:4221,11\n1771#1:4236,2\n1787#1:4238,11\n1787#1:4253,2\n1694#1:4212,4\n1758#1:4216\n1758#1:4217,4\n1772#1:4232,4\n1788#1:4249,4\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -116,10 +116,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1513
+    .line 1674
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1542
+    .line 1703
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -128,7 +128,7 @@
 
     iput-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->wasDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 1543
+    .line 1704
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v1, 0x1
@@ -137,10 +137,10 @@
 
     iput-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 1514
+    .line 1675
     iput-object p1, p0, Luniffi/textrcs_libgm/AesCtrBox;->pointer:Lcom/sun/jna/Pointer;
 
-    .line 1515
+    .line 1676
     sget-object v0, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
     invoke-virtual {v0}, Luniffi/textrcs_libgm/UniffiLib$Companion;->getCLEANER$main()Luniffi/textrcs_libgm/UniffiCleaner;
@@ -159,7 +159,7 @@
 
     iput-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
-    .line 1516
+    .line 1677
     return-void
 .end method
 
@@ -171,10 +171,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1524
+    .line 1685
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1542
+    .line 1703
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -183,7 +183,7 @@
 
     iput-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->wasDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 1543
+    .line 1704
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v1, 0x1
@@ -192,12 +192,12 @@
 
     iput-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 1525
+    .line 1686
     const/4 v0, 0x0
 
     iput-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->pointer:Lcom/sun/jna/Pointer;
 
-    .line 1526
+    .line 1687
     sget-object v0, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
     invoke-virtual {v0}, Luniffi/textrcs_libgm/UniffiLib$Companion;->getCLEANER$main()Luniffi/textrcs_libgm/UniffiCleaner;
@@ -218,7 +218,7 @@
 
     iput-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
-    .line 1527
+    .line 1688
     return-void
 .end method
 
@@ -235,10 +235,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1532
+    .line 1693
     nop
 
-    .line 1533
+    .line 1694
     sget-object v0, Luniffi/textrcs_libgm/LibgmException;->ErrorHandler:Luniffi/textrcs_libgm/LibgmException$ErrorHandler;
 
     check-cast v0, Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
@@ -246,20 +246,20 @@
     .local v0, "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v1, 0x0
 
-    .line 2990
+    .line 4212
     .local v1, "$i$f$uniffiRustCallWithError":I
     new-instance v2, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v2}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 2991
+    .line 4213
     .local v2, "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v3, v2
 
     .local v3, "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v4, 0x0
 
-    .line 1534
+    .line 1695
     .local v4, "$i$a$-uniffiRustCallWithError-AesCtrBox$1":I
     sget-object v5, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -267,7 +267,7 @@
 
     move-result-object v5
 
-    .line 1535
+    .line 1696
     sget-object v6, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v6, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lower(Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -280,32 +280,32 @@
 
     move-result-object v7
 
-    .line 1534
+    .line 1695
     invoke-interface {v5, v6, v7, v3}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_constructor_aesctrbox_new(Luniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/UniffiRustCallStatus;)Lcom/sun/jna/Pointer;
 
     move-result-object v3
 
-    .line 2991
+    .line 4213
     .end local v3    # "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v4    # "$i$a$-uniffiRustCallWithError-AesCtrBox$1":I
     nop
 
-    .line 2992
+    .line 4214
     .local v3, "return_value$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v0, v2}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 2993
+    .line 4215
     nop
 
-    .line 1532
+    .line 1693
     .end local v0    # "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v1    # "$i$f$uniffiRustCallWithError":I
     .end local v2    # "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v3    # "return_value$iv":Ljava/lang/Object;
     invoke-direct {p0, v3}, Luniffi/textrcs_libgm/AesCtrBox;-><init>(Lcom/sun/jna/Pointer;)V
 
-    .line 1537
+    .line 1698
     return-void
 .end method
 
@@ -313,7 +313,7 @@
     .registers 2
     .param p0, "$this"    # Luniffi/textrcs_libgm/AesCtrBox;
 
-    .line 1511
+    .line 1672
     iget-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
 
     return-object v0
@@ -323,7 +323,7 @@
     .registers 2
     .param p0, "$this"    # Luniffi/textrcs_libgm/AesCtrBox;
 
-    .line 1511
+    .line 1672
     iget-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
     return-object v0
@@ -352,7 +352,7 @@
 
     const/4 v0, 0x0
 
-    .line 1565
+    .line 1726
     .local v0, "$i$f$callWithPointer$main":I
     :cond_6
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
@@ -364,7 +364,7 @@
 
     move-result-wide v1
 
-    .line 1566
+    .line 1727
     .local v1, "c":J
     const-wide/16 v3, 0x0
 
@@ -372,14 +372,14 @@
 
     if-eqz v5, :cond_7e
 
-    .line 1569
+    .line 1730
     const-wide v5, 0x7fffffffffffffffL
 
     cmp-long v5, v1, v5
 
     if-eqz v5, :cond_5d
 
-    .line 1572
+    .line 1733
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {p0}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCallCounter$p(Luniffi/textrcs_libgm/AesCtrBox;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -395,11 +395,11 @@
 
     if-eqz v5, :cond_6
 
-    .line 1574
+    .line 1735
     .end local v1    # "c":J
     nop
 
-    .line 1575
+    .line 1736
     :try_start_2b
     invoke-virtual {p0}, Luniffi/textrcs_libgm/AesCtrBox;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
@@ -411,7 +411,7 @@
     :try_end_33
     .catchall {:try_start_2b .. :try_end_33} :catchall_48
 
-    .line 1578
+    .line 1739
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {p0}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCallCounter$p(Luniffi/textrcs_libgm/AesCtrBox;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -425,7 +425,7 @@
 
     if-nez v2, :cond_46
 
-    .line 1579
+    .line 1740
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {p0}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCleanable(Luniffi/textrcs_libgm/AesCtrBox;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -436,10 +436,10 @@
     :cond_46
     nop
 
-    .line 1575
+    .line 1736
     return-object v1
 
-    .line 1578
+    .line 1739
     :catchall_48
     move-exception v1
 
@@ -456,7 +456,7 @@
 
     if-nez v2, :cond_5c
 
-    .line 1579
+    .line 1740
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {p0}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCleanable(Luniffi/textrcs_libgm/AesCtrBox;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -467,7 +467,7 @@
     :cond_5c
     throw v1
 
-    .line 1570
+    .line 1731
     .restart local v1    # "c":J
     :cond_5d
     new-instance v3, Ljava/lang/IllegalStateException;
@@ -502,7 +502,7 @@
 
     throw v3
 
-    .line 1567
+    .line 1728
     :cond_7e
     new-instance v3, Ljava/lang/IllegalStateException;
 
@@ -542,18 +542,18 @@
 
     monitor-enter p0
 
-    .line 1558
+    .line 1719
     :try_start_1
     invoke-virtual {p0}, Luniffi/textrcs_libgm/AesCtrBox;->destroy()V
     :try_end_4
     .catchall {:try_start_1 .. :try_end_4} :catchall_6
 
-    .line 1559
+    .line 1720
     monitor-exit p0
 
     return-void
 
-    .line 1557
+    .line 1718
     .end local p0    # "this":Luniffi/textrcs_libgm/AesCtrBox;
     :catchall_6
     move-exception v0
@@ -579,16 +579,16 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1609
+    .line 1770
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
-    .line 1610
+    .line 1771
     move-object v1, p0
 
     .local v1, "this_$iv":Luniffi/textrcs_libgm/AesCtrBox;
     const/4 v2, 0x0
 
-    .line 2999
+    .line 4221
     .local v2, "$i$f$callWithPointer$main":I
     :cond_9
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
@@ -600,7 +600,7 @@
 
     move-result-wide v3
 
-    .line 3000
+    .line 4222
     .local v3, "c$iv":J
     const-wide/16 v5, 0x0
 
@@ -608,14 +608,14 @@
 
     if-eqz v7, :cond_a7
 
-    .line 3003
+    .line 4225
     const-wide v7, 0x7fffffffffffffffL
 
     cmp-long v7, v3, v7
 
     if-eqz v7, :cond_86
 
-    .line 3006
+    .line 4228
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCallCounter$p(Luniffi/textrcs_libgm/AesCtrBox;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -631,11 +631,11 @@
 
     if-eqz v7, :cond_9
 
-    .line 3008
+    .line 4230
     .end local v3    # "c$iv":J
     nop
 
-    .line 3009
+    .line 4231
     :try_start_2e
     invoke-virtual {v1}, Luniffi/textrcs_libgm/AesCtrBox;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
@@ -644,7 +644,7 @@
     .local v3, "it":Lcom/sun/jna/Pointer;
     const/4 v4, 0x0
 
-    .line 1611
+    .line 1772
     .local v4, "$i$a$-callWithPointer$main-AesCtrBox$decrypt$1":I
     sget-object v7, Luniffi/textrcs_libgm/LibgmException;->ErrorHandler:Luniffi/textrcs_libgm/LibgmException$ErrorHandler;
 
@@ -653,20 +653,20 @@
     .local v7, "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v8, 0x0
 
-    .line 3010
+    .line 4232
     .local v8, "$i$f$uniffiRustCallWithError":I
     new-instance v9, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v9}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 3011
+    .line 4233
     .local v9, "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v10, v9
 
     .local v10, "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v11, 0x0
 
-    .line 1612
+    .line 1773
     .local v11, "$i$a$-uniffiRustCallWithError-AesCtrBox$decrypt$1$1":I
     sget-object v12, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -674,46 +674,46 @@
 
     move-result-object v12
 
-    .line 1613
+    .line 1774
     sget-object v13, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v13, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lower(Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v13
 
-    .line 1612
+    .line 1773
     invoke-interface {v12, v3, v13, v10}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_method_aesctrbox_decrypt(Lcom/sun/jna/Pointer;Luniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/UniffiRustCallStatus;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v12
 
-    .line 3011
+    .line 4233
     .end local v10    # "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v11    # "$i$a$-uniffiRustCallWithError-AesCtrBox$decrypt$1$1":I
     nop
 
-    .line 3012
+    .line 4234
     .local v12, "return_value$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v7, v9}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     :try_end_53
     .catchall {:try_start_2e .. :try_end_53} :catchall_71
 
-    .line 3013
+    .line 4235
     nop
 
-    .line 1611
+    .line 1772
     .end local v7    # "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v8    # "$i$f$uniffiRustCallWithError":I
     .end local v9    # "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v12    # "return_value$iv":Ljava/lang/Object;
     nop
 
-    .line 3009
+    .line 4231
     .end local v3    # "it":Lcom/sun/jna/Pointer;
     .end local v4    # "$i$a$-callWithPointer$main-AesCtrBox$decrypt$1":I
     nop
 
-    .line 3014
+    .line 4236
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCallCounter$p(Luniffi/textrcs_libgm/AesCtrBox;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -727,7 +727,7 @@
 
     if-nez v3, :cond_69
 
-    .line 3015
+    .line 4237
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCleanable(Luniffi/textrcs_libgm/AesCtrBox;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -735,11 +735,11 @@
 
     invoke-interface {v3}, Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;->clean()V
 
-    .line 3009
+    .line 4231
     :cond_69
     nop
 
-    .line 1609
+    .line 1770
     .end local v1    # "this_$iv":Luniffi/textrcs_libgm/AesCtrBox;
     .end local v2    # "$i$f$callWithPointer$main":I
     invoke-virtual {v0, v12}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
@@ -750,7 +750,7 @@
 
     return-object v0
 
-    .line 3014
+    .line 4236
     .restart local v1    # "this_$iv":Luniffi/textrcs_libgm/AesCtrBox;
     .restart local v2    # "$i$f$callWithPointer$main":I
     :catchall_71
@@ -769,7 +769,7 @@
 
     if-nez v3, :cond_85
 
-    .line 3015
+    .line 4237
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCleanable(Luniffi/textrcs_libgm/AesCtrBox;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -780,7 +780,7 @@
     :cond_85
     throw v0
 
-    .line 3004
+    .line 4226
     .local v3, "c$iv":J
     :cond_86
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -815,7 +815,7 @@
 
     throw v0
 
-    .line 3001
+    .line 4223
     :cond_a7
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -853,7 +853,7 @@
 .method public destroy()V
     .registers 5
 
-    .line 1548
+    .line 1709
     iget-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->wasDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -866,7 +866,7 @@
 
     if-eqz v0, :cond_1b
 
-    .line 1550
+    .line 1711
     iget-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->decrementAndGet()J
@@ -879,12 +879,12 @@
 
     if-nez v0, :cond_1b
 
-    .line 1551
+    .line 1712
     iget-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
     invoke-interface {v0}, Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;->clean()V
 
-    .line 1554
+    .line 1715
     :cond_1b
     return-void
 .end method
@@ -902,16 +902,16 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1625
+    .line 1786
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
-    .line 1626
+    .line 1787
     move-object v1, p0
 
     .local v1, "this_$iv":Luniffi/textrcs_libgm/AesCtrBox;
     const/4 v2, 0x0
 
-    .line 3016
+    .line 4238
     .local v2, "$i$f$callWithPointer$main":I
     :cond_9
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
@@ -923,7 +923,7 @@
 
     move-result-wide v3
 
-    .line 3017
+    .line 4239
     .local v3, "c$iv":J
     const-wide/16 v5, 0x0
 
@@ -931,14 +931,14 @@
 
     if-eqz v7, :cond_a7
 
-    .line 3020
+    .line 4242
     const-wide v7, 0x7fffffffffffffffL
 
     cmp-long v7, v3, v7
 
     if-eqz v7, :cond_86
 
-    .line 3023
+    .line 4245
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCallCounter$p(Luniffi/textrcs_libgm/AesCtrBox;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -954,11 +954,11 @@
 
     if-eqz v7, :cond_9
 
-    .line 3025
+    .line 4247
     .end local v3    # "c$iv":J
     nop
 
-    .line 3026
+    .line 4248
     :try_start_2e
     invoke-virtual {v1}, Luniffi/textrcs_libgm/AesCtrBox;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
@@ -967,7 +967,7 @@
     .local v3, "it":Lcom/sun/jna/Pointer;
     const/4 v4, 0x0
 
-    .line 1627
+    .line 1788
     .local v4, "$i$a$-callWithPointer$main-AesCtrBox$encrypt$1":I
     sget-object v7, Luniffi/textrcs_libgm/LibgmException;->ErrorHandler:Luniffi/textrcs_libgm/LibgmException$ErrorHandler;
 
@@ -976,20 +976,20 @@
     .local v7, "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v8, 0x0
 
-    .line 3027
+    .line 4249
     .local v8, "$i$f$uniffiRustCallWithError":I
     new-instance v9, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v9}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 3028
+    .line 4250
     .local v9, "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v10, v9
 
     .local v10, "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v11, 0x0
 
-    .line 1628
+    .line 1789
     .local v11, "$i$a$-uniffiRustCallWithError-AesCtrBox$encrypt$1$1":I
     sget-object v12, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -997,46 +997,46 @@
 
     move-result-object v12
 
-    .line 1629
+    .line 1790
     sget-object v13, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v13, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lower(Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v13
 
-    .line 1628
+    .line 1789
     invoke-interface {v12, v3, v13, v10}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_method_aesctrbox_encrypt(Lcom/sun/jna/Pointer;Luniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/UniffiRustCallStatus;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v12
 
-    .line 3028
+    .line 4250
     .end local v10    # "_status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v11    # "$i$a$-uniffiRustCallWithError-AesCtrBox$encrypt$1$1":I
     nop
 
-    .line 3029
+    .line 4251
     .local v12, "return_value$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v7, v9}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     :try_end_53
     .catchall {:try_start_2e .. :try_end_53} :catchall_71
 
-    .line 3030
+    .line 4252
     nop
 
-    .line 1627
+    .line 1788
     .end local v7    # "errorHandler$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v8    # "$i$f$uniffiRustCallWithError":I
     .end local v9    # "status$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v12    # "return_value$iv":Ljava/lang/Object;
     nop
 
-    .line 3026
+    .line 4248
     .end local v3    # "it":Lcom/sun/jna/Pointer;
     .end local v4    # "$i$a$-callWithPointer$main-AesCtrBox$encrypt$1":I
     nop
 
-    .line 3031
+    .line 4253
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCallCounter$p(Luniffi/textrcs_libgm/AesCtrBox;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -1050,7 +1050,7 @@
 
     if-nez v3, :cond_69
 
-    .line 3032
+    .line 4254
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCleanable(Luniffi/textrcs_libgm/AesCtrBox;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1058,11 +1058,11 @@
 
     invoke-interface {v3}, Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;->clean()V
 
-    .line 3026
+    .line 4248
     :cond_69
     nop
 
-    .line 1625
+    .line 1786
     .end local v1    # "this_$iv":Luniffi/textrcs_libgm/AesCtrBox;
     .end local v2    # "$i$f$callWithPointer$main":I
     invoke-virtual {v0, v12}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
@@ -1073,7 +1073,7 @@
 
     return-object v0
 
-    .line 3031
+    .line 4253
     .restart local v1    # "this_$iv":Luniffi/textrcs_libgm/AesCtrBox;
     .restart local v2    # "$i$f$callWithPointer$main":I
     :catchall_71
@@ -1092,7 +1092,7 @@
 
     if-nez v3, :cond_85
 
-    .line 3032
+    .line 4254
     # getter for: Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v1}, Luniffi/textrcs_libgm/AesCtrBox;->access$getCleanable(Luniffi/textrcs_libgm/AesCtrBox;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1103,7 +1103,7 @@
     :cond_85
     throw v0
 
-    .line 3021
+    .line 4243
     .local v3, "c$iv":J
     :cond_86
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -1138,7 +1138,7 @@
 
     throw v0
 
-    .line 3018
+    .line 4240
     :cond_a7
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1176,7 +1176,7 @@
 .method protected final getCleanable()Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     .registers 2
 
-    .line 1540
+    .line 1701
     iget-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
     return-object v0
@@ -1185,7 +1185,7 @@
 .method protected final getPointer()Lcom/sun/jna/Pointer;
     .registers 2
 
-    .line 1539
+    .line 1700
     iget-object v0, p0, Luniffi/textrcs_libgm/AesCtrBox;->pointer:Lcom/sun/jna/Pointer;
 
     return-object v0
@@ -1194,10 +1194,10 @@
 .method public final uniffiClonePointer()Lcom/sun/jna/Pointer;
     .registers 9
 
-    .line 1597
+    .line 1758
     const/4 v0, 0x0
 
-    .line 2994
+    .line 4216
     .local v0, "$i$f$uniffiRustCall":I
     sget-object v1, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -1206,20 +1206,20 @@
     .local v1, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v2, 0x0
 
-    .line 2995
+    .line 4217
     .local v2, "$i$f$uniffiRustCallWithError":I
     new-instance v3, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v3}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 2996
+    .line 4218
     .local v3, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v4, v3
 
     .local v4, "status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v5, 0x0
 
-    .line 1598
+    .line 1759
     .local v5, "$i$a$-uniffiRustCall-AesCtrBox$uniffiClonePointer$1":I
     sget-object v6, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -1235,27 +1235,27 @@
 
     move-result-object v4
 
-    .line 2996
+    .line 4218
     .end local v4    # "status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v5    # "$i$a$-uniffiRustCall-AesCtrBox$uniffiClonePointer$1":I
     nop
 
-    .line 2997
+    .line 4219
     .local v4, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v1, v3}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 2998
+    .line 4220
     nop
 
-    .line 2994
+    .line 4216
     .end local v1    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v2    # "$i$f$uniffiRustCallWithError":I
     .end local v3    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v4    # "return_value$iv$iv":Ljava/lang/Object;
     nop
 
-    .line 1597
+    .line 1758
     .end local v0    # "$i$f$uniffiRustCall":I
     return-object v4
 .end method

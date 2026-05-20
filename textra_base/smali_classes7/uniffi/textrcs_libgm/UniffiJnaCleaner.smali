@@ -43,17 +43,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 1444
+    .line 1605
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1445
+    .line 1606
     invoke-static {}, Lcom/sun/jna/internal/Cleaner;->getCleaner()Lcom/sun/jna/internal/Cleaner;
 
     move-result-object v0
 
     iput-object v0, p0, Luniffi/textrcs_libgm/UniffiJnaCleaner;->cleaner:Lcom/sun/jna/internal/Cleaner;
 
-    .line 1444
+    .line 1605
     return-void
 .end method
 
@@ -72,7 +72,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1448
+    .line 1609
     new-instance v0, Luniffi/textrcs_libgm/UniffiJnaCleanable;
 
     iget-object v1, p0, Luniffi/textrcs_libgm/UniffiJnaCleaner;->cleaner:Lcom/sun/jna/internal/Cleaner;

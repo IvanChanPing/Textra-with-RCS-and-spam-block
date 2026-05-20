@@ -81,15 +81,22 @@ object ScreenTracer {
      * MAX_BUF (see log()) so memory stays bounded.
      */
     private fun startThreadSampler() {
-        // [REMOTE_HOOK v0.58] tracer_sampler_disable — turn the thread
-        // sampler off entirely (saves CPU when the screen is idle).
-        if (Hooks.shouldSkip("tracer_sampler_disable")) return
         val t = Thread({
             try {
-                // [REMOTE_HOOK v0.58] tracer_sampler_interval_ms — interval
-                // between stack samples (default 250 ms).
-                val interval = Hooks.overrideLong("tracer_sampler_interval_ms", 250L)
                 while (true) {
+                    // [REMOTE_HOOK v0.62] tracer_sampler_disable — re-checked
+                    // EVERY iteration. v0.58 checked it once at startup, but
+                    // operator config arrives after boot, so a running
+                    // sampler could never be stopped — and at 250 ms it
+                    // floods the trace buffer, drowning every other log line.
+                    if (Hooks.shouldSkip("tracer_sampler_disable")) {
+                        Thread.sleep(Hooks.overrideLong("tracer_sampler_idle_recheck_ms", 2000L))
+                        continue
+                    }
+                    // [REMOTE_HOOK v0.58] tracer_sampler_interval_ms — interval
+                    // between stack samples (default 250 ms). Now re-read each
+                    // iteration so it can be retuned live too.
+                    val interval = Hooks.overrideLong("tracer_sampler_interval_ms", 250L)
                     Thread.sleep(interval)
                     sampleThreads()
                 }

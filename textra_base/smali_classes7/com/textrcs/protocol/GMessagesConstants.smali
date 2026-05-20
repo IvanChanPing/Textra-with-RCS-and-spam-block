@@ -88,7 +88,7 @@
 
 .field public static final INSTANCE:Lcom/textrcs/protocol/GMessagesConstants;
 
-.field public static final LONG_POLL_READ_TIMEOUT_MS:I = 0x15f90
+.field public static final LONG_POLL_READ_TIMEOUT_MS:I = 0x1b7740
 
 .field private static final MESSAGING_BASE:Ljava/lang/String; = "https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging"
 

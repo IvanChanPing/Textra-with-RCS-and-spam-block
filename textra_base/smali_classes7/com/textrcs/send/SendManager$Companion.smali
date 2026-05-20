@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,491:1\n1#2:492\n*E\n"
+    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,600:1\n1#2:601\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -56,7 +56,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 449
+    .line 558
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,7 +82,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 456
+    .line 565
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getInstance$cp()Lcom/textrcs/send/SendManager;
 
@@ -94,7 +94,7 @@
 
     const/4 v0, 0x0
 
-    .line 457
+    .line 566
     .local v0, "$i$a$-synchronized-SendManager$Companion$get$1":I
     :try_start_d
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
@@ -120,11 +120,11 @@
 
     move-object v2, v1
 
-    .line 492
+    .line 601
     .local v2, "it":Lcom/textrcs/send/SendManager;
     const/4 v3, 0x0
 
-    .line 457
+    .line 566
     .local v3, "$i$a$-also-SendManager$Companion$get$1$1":I
     sget-object v4, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
 
@@ -132,7 +132,7 @@
     :try_end_29
     .catchall {:try_start_d .. :try_end_29} :catchall_2c
 
-    .line 456
+    .line 565
     .end local v0    # "$i$a$-synchronized-SendManager$Companion$get$1":I
     .end local v2    # "it":Lcom/textrcs/send/SendManager;
     .end local v3    # "$i$a$-also-SendManager$Companion$get$1$1":I
@@ -189,7 +189,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 483
+    .line 592
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -252,7 +252,7 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 484
+    .line 593
     move-object v1, p3
 
     check-cast v1, Ljava/lang/Iterable;
@@ -285,7 +285,7 @@
 
     move-result-object v0
 
-    .line 485
+    .line 594
     .local v0, "body":Ljava/lang/String;
     if-eqz p4, :cond_6d
 
@@ -304,7 +304,7 @@
 
     move-result-object v1
 
-    .line 486
+    .line 595
     .local v1, "intents":Ljava/util/List;
     :cond_71
     new-instance v2, Ljava/lang/StringBuilder;
@@ -351,13 +351,13 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 487
+    .line 596
     invoke-virtual {p0, p1}, Lcom/textrcs/send/SendManager$Companion;->get(Landroid/content/Context;)Lcom/textrcs/send/SendManager;
 
     move-result-object v2
 
     invoke-virtual {v2, p2, v0, v1}, Lcom/textrcs/send/SendManager;->sendText(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 488
+    .line 597
     return-void
 .end method

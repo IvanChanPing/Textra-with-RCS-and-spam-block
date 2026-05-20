@@ -71,7 +71,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 1251
+    .line 1412
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -83,7 +83,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1251
+    .line 1412
     move-object v0, p1
 
     check-cast v0, Ljava/lang/String;
@@ -103,10 +103,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1293
+    .line 1454
     const-wide/16 v0, 0x4
 
-    .line 1294
+    .line 1455
     .local v0, "sizeForLength":J
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -126,7 +126,7 @@
 
     move-result-wide v2
 
-    .line 1295
+    .line 1456
     .local v2, "sizeForString":J
     add-long v4, v0, v2
 
@@ -141,7 +141,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1251
+    .line 1412
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -161,10 +161,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1256
+    .line 1417
     nop
 
-    .line 1257
+    .line 1418
     :try_start_6
     iget-wide v0, p1, Luniffi/textrcs_libgm/RustBuffer$ByValue;->len:J
 
@@ -172,7 +172,7 @@
 
     new-array v0, v0, [B
 
-    .line 1258
+    .line 1419
     .local v0, "byteArr":[B
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustBuffer$ByValue;->asByteBuffer()Ljava/nio/ByteBuffer;
 
@@ -184,24 +184,24 @@
 
     new-instance v1, Ljava/lang/String;
 
-    .line 1259
+    .line 1420
     sget-object v2, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-direct {v1, v0, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
     :try_end_1c
     .catchall {:try_start_6 .. :try_end_1c} :catchall_22
 
-    .line 1261
+    .line 1422
     .end local v0    # "byteArr":[B
     sget-object v2, Luniffi/textrcs_libgm/RustBuffer;->Companion:Luniffi/textrcs_libgm/RustBuffer$Companion;
 
     invoke-virtual {v2, p1}, Luniffi/textrcs_libgm/RustBuffer$Companion;->free$main(Luniffi/textrcs_libgm/RustBuffer$ByValue;)V
 
-    .line 1259
+    .line 1420
     .restart local v0    # "byteArr":[B
     return-object v1
 
-    .line 1261
+    .line 1422
     .end local v0    # "byteArr":[B
     :catchall_22
     move-exception v0
@@ -217,7 +217,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 1251
+    .line 1412
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterString;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/String;
 
     move-result-object v0
@@ -229,7 +229,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 1251
+    .line 1412
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -243,7 +243,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1251
+    .line 1412
     move-object v0, p1
 
     check-cast v0, Ljava/lang/String;
@@ -263,12 +263,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1281
+    .line 1442
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterString;->toUtf8(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 1284
+    .line 1445
     .local v0, "byteBuf":Ljava/nio/ByteBuffer;
     sget-object v1, Luniffi/textrcs_libgm/RustBuffer;->Companion:Luniffi/textrcs_libgm/RustBuffer$Companion;
 
@@ -286,7 +286,7 @@
 
     move-result-object v1
 
-    .line 1285
+    .line 1446
     .local v1, "rbuf":Luniffi/textrcs_libgm/RustBuffer$ByValue;
     invoke-virtual {v1}, Luniffi/textrcs_libgm/RustBuffer$ByValue;->asByteBuffer()Ljava/nio/ByteBuffer;
 
@@ -296,7 +296,7 @@
 
     invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    .line 1286
+    .line 1447
     return-object v1
 .end method
 
@@ -304,7 +304,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1251
+    .line 1412
     move-object v0, p1
 
     check-cast v0, Ljava/lang/String;
@@ -320,7 +320,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/String;
 
-    .line 1251
+    .line 1412
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -332,7 +332,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 1251
+    .line 1412
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterString;->read(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v0
@@ -348,22 +348,22 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1266
+    .line 1427
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 1267
+    .line 1428
     .local v0, "len":I
     new-array v1, v0, [B
 
-    .line 1268
+    .line 1429
     .local v1, "byteArr":[B
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     new-instance v2, Ljava/lang/String;
 
-    .line 1269
+    .line 1430
     sget-object v3, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-direct {v2, v1, v3}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
@@ -379,7 +379,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1274
+    .line 1435
     sget-object v0, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v0}, Ljava/nio/charset/Charset;->newEncoder()Ljava/nio/charset/CharsetEncoder;
@@ -389,13 +389,13 @@
     .local v0, "$this$toUtf8_u24lambda_u240":Ljava/nio/charset/CharsetEncoder;
     const/4 v1, 0x0
 
-    .line 1275
+    .line 1436
     .local v1, "$i$a$-run-FfiConverterString$toUtf8$1":I
     sget-object v2, Ljava/nio/charset/CodingErrorAction;->REPORT:Ljava/nio/charset/CodingErrorAction;
 
     invoke-virtual {v0, v2}, Ljava/nio/charset/CharsetEncoder;->onMalformedInput(Ljava/nio/charset/CodingErrorAction;)Ljava/nio/charset/CharsetEncoder;
 
-    .line 1276
+    .line 1437
     move-object v2, p1
 
     check-cast v2, Ljava/lang/CharSequence;
@@ -408,7 +408,7 @@
 
     move-result-object v0
 
-    .line 1274
+    .line 1435
     .end local v0    # "$this$toUtf8_u24lambda_u240":Ljava/nio/charset/CharsetEncoder;
     .end local v1    # "$i$a$-run-FfiConverterString$toUtf8$1":I
     const-string v1, "run(...)"
@@ -423,7 +423,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 1251
+    .line 1412
     move-object v0, p1
 
     check-cast v0, Ljava/lang/String;
@@ -446,12 +446,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1299
+    .line 1460
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterString;->toUtf8(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 1300
+    .line 1461
     .local v0, "byteBuf":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
@@ -459,9 +459,9 @@
 
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 1301
+    .line 1462
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    .line 1302
+    .line 1463
     return-void
 .end method

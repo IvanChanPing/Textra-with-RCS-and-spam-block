@@ -5942,7 +5942,7 @@
     .line 84
     const-string v3, "build"
 
-    const-string v4, "v0.61.0"
+    const-string v4, "v0.69.0"
 
     invoke-virtual {v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 

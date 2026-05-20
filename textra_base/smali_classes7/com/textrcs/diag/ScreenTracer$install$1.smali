@@ -51,7 +51,7 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 178
+    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +68,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 180
+    .line 187
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -120,7 +120,7 @@
     # invokes: Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/textrcs/diag/ScreenTracer;->access$log(Lcom/textrcs/diag/ScreenTracer;Ljava/lang/String;)V
 
-    .line 181
+    .line 188
     return-void
 .end method
 
@@ -132,7 +132,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 199
+    .line 206
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -164,7 +164,7 @@
     # invokes: Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/textrcs/diag/ScreenTracer;->access$log(Lcom/textrcs/diag/ScreenTracer;Ljava/lang/String;)V
 
-    .line 200
+    .line 207
     return-void
 .end method
 
@@ -176,7 +176,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 190
+    .line 197
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -208,7 +208,7 @@
     # invokes: Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/textrcs/diag/ScreenTracer;->access$log(Lcom/textrcs/diag/ScreenTracer;Ljava/lang/String;)V
 
-    .line 191
+    .line 198
     return-void
 .end method
 
@@ -220,7 +220,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 186
+    .line 193
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -252,13 +252,13 @@
     # invokes: Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/textrcs/diag/ScreenTracer;->access$log(Lcom/textrcs/diag/ScreenTracer;Ljava/lang/String;)V
 
-    .line 187
+    .line 194
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     # invokes: Lcom/textrcs/diag/ScreenTracer;->captureScreenState(Landroid/app/Activity;)V
     invoke-static {v0, p1}, Lcom/textrcs/diag/ScreenTracer;->access$captureScreenState(Lcom/textrcs/diag/ScreenTracer;Landroid/app/Activity;)V
 
-    .line 188
+    .line 195
     return-void
 .end method
 
@@ -275,7 +275,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 197
+    .line 204
     return-void
 .end method
 
@@ -287,7 +287,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 183
+    .line 190
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -319,7 +319,7 @@
     # invokes: Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/textrcs/diag/ScreenTracer;->access$log(Lcom/textrcs/diag/ScreenTracer;Ljava/lang/String;)V
 
-    .line 184
+    .line 191
     return-void
 .end method
 
@@ -331,7 +331,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 193
+    .line 200
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -363,6 +363,6 @@
     # invokes: Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/textrcs/diag/ScreenTracer;->access$log(Lcom/textrcs/diag/ScreenTracer;Ljava/lang/String;)V
 
-    .line 194
+    .line 201
     return-void
 .end method
