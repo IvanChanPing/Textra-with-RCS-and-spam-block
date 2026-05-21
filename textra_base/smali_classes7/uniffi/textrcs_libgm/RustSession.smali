@@ -188,37 +188,37 @@
 
     invoke-static {p10, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3804
+    .line 3852
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3808
+    .line 3856
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->tachyonAuthToken:[B
 
-    .line 3812
+    .line 3860
     iput-wide p2, p0, Luniffi/textrcs_libgm/RustSession;->tokenTtlSeconds:J
 
-    .line 3816
+    .line 3864
     iput-object p4, p0, Luniffi/textrcs_libgm/RustSession;->aesKey:[B
 
-    .line 3820
+    .line 3868
     iput-object p5, p0, Luniffi/textrcs_libgm/RustSession;->hmacKey:[B
 
-    .line 3824
+    .line 3872
     iput-object p6, p0, Luniffi/textrcs_libgm/RustSession;->mobileDeviceProto:[B
 
-    .line 3829
+    .line 3877
     iput-object p7, p0, Luniffi/textrcs_libgm/RustSession;->browserDeviceProto:[B
 
-    .line 3833
+    .line 3881
     iput-object p8, p0, Luniffi/textrcs_libgm/RustSession;->cookies:Ljava/util/Map;
 
-    .line 3838
+    .line 3886
     iput-object p9, p0, Luniffi/textrcs_libgm/RustSession;->refreshKeyPkcs8:[B
 
-    .line 3843
+    .line 3891
     iput-object p10, p0, Luniffi/textrcs_libgm/RustSession;->destRegistrationId:Ljava/lang/String;
 
-    .line 3804
+    .line 3852
     return-void
 .end method
 
@@ -614,7 +614,7 @@
 .method public final getAesKey()[B
     .registers 2
 
-    .line 3816
+    .line 3864
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->aesKey:[B
 
     return-object v0
@@ -623,7 +623,7 @@
 .method public final getBrowserDeviceProto()[B
     .registers 2
 
-    .line 3829
+    .line 3877
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->browserDeviceProto:[B
 
     return-object v0
@@ -641,7 +641,7 @@
         }
     .end annotation
 
-    .line 3833
+    .line 3881
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->cookies:Ljava/util/Map;
 
     return-object v0
@@ -650,7 +650,7 @@
 .method public final getDestRegistrationId()Ljava/lang/String;
     .registers 2
 
-    .line 3843
+    .line 3891
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->destRegistrationId:Ljava/lang/String;
 
     return-object v0
@@ -659,7 +659,7 @@
 .method public final getHmacKey()[B
     .registers 2
 
-    .line 3820
+    .line 3868
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->hmacKey:[B
 
     return-object v0
@@ -668,7 +668,7 @@
 .method public final getMobileDeviceProto()[B
     .registers 2
 
-    .line 3824
+    .line 3872
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->mobileDeviceProto:[B
 
     return-object v0
@@ -677,7 +677,7 @@
 .method public final getRefreshKeyPkcs8()[B
     .registers 2
 
-    .line 3838
+    .line 3886
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->refreshKeyPkcs8:[B
 
     return-object v0
@@ -686,7 +686,7 @@
 .method public final getTachyonAuthToken()[B
     .registers 2
 
-    .line 3808
+    .line 3856
     iget-object v0, p0, Luniffi/textrcs_libgm/RustSession;->tachyonAuthToken:[B
 
     return-object v0
@@ -695,7 +695,7 @@
 .method public final getTokenTtlSeconds()J
     .registers 3
 
-    .line 3812
+    .line 3860
     iget-wide v0, p0, Luniffi/textrcs_libgm/RustSession;->tokenTtlSeconds:J
 
     return-wide v0
@@ -801,7 +801,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3816
+    .line 3864
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->aesKey:[B
 
     return-void
@@ -815,7 +815,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3829
+    .line 3877
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->browserDeviceProto:[B
 
     return-void
@@ -838,7 +838,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3833
+    .line 3881
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->cookies:Ljava/util/Map;
 
     return-void
@@ -852,7 +852,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3843
+    .line 3891
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->destRegistrationId:Ljava/lang/String;
 
     return-void
@@ -866,7 +866,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3820
+    .line 3868
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->hmacKey:[B
 
     return-void
@@ -880,7 +880,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3824
+    .line 3872
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->mobileDeviceProto:[B
 
     return-void
@@ -894,7 +894,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3838
+    .line 3886
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->refreshKeyPkcs8:[B
 
     return-void
@@ -908,7 +908,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3808
+    .line 3856
     iput-object p1, p0, Luniffi/textrcs_libgm/RustSession;->tachyonAuthToken:[B
 
     return-void
@@ -918,7 +918,7 @@
     .registers 3
     .param p1, "<set-?>"    # J
 
-    .line 3812
+    .line 3860
     iput-wide p1, p0, Luniffi/textrcs_libgm/RustSession;->tokenTtlSeconds:J
 
     return-void

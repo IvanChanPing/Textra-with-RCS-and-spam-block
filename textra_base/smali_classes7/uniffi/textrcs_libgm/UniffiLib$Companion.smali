@@ -77,7 +77,7 @@
 
     sput-object v0, Luniffi/textrcs_libgm/UniffiLib$Companion;->$$INSTANCE:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
-    .line 845
+    .line 847
     sget-object v0, Luniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2;->INSTANCE:Luniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2;
 
     check-cast v0, Lkotlin/jvm/functions/Function0;
@@ -88,7 +88,7 @@
 
     sput-object v0, Luniffi/textrcs_libgm/UniffiLib$Companion;->INSTANCE$delegate:Lkotlin/Lazy;
 
-    .line 855
+    .line 857
     sget-object v0, Luniffi/textrcs_libgm/UniffiLib$Companion$CLEANER$2;->INSTANCE:Luniffi/textrcs_libgm/UniffiLib$Companion$CLEANER$2;
 
     check-cast v0, Lkotlin/jvm/functions/Function0;
@@ -105,7 +105,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 844
+    .line 846
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -116,7 +116,7 @@
 .method public final getCLEANER$main()Luniffi/textrcs_libgm/UniffiCleaner;
     .registers 2
 
-    .line 855
+    .line 857
     sget-object v0, Luniffi/textrcs_libgm/UniffiLib$Companion;->CLEANER$delegate:Lkotlin/Lazy;
 
     invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
@@ -131,7 +131,7 @@
 .method public final getINSTANCE$main()Luniffi/textrcs_libgm/UniffiLib;
     .registers 2
 
-    .line 845
+    .line 847
     sget-object v0, Luniffi/textrcs_libgm/UniffiLib$Companion;->INSTANCE$delegate:Lkotlin/Lazy;
 
     invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;

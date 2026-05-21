@@ -76,7 +76,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .registers 2
 
-    .line 855
+    .line 857
     invoke-virtual {p0}, Luniffi/textrcs_libgm/UniffiLib$Companion$CLEANER$2;->invoke()Luniffi/textrcs_libgm/UniffiCleaner;
 
     move-result-object v0
@@ -87,7 +87,7 @@
 .method public final invoke()Luniffi/textrcs_libgm/UniffiCleaner;
     .registers 2
 
-    .line 856
+    .line 858
     sget-object v0, Luniffi/textrcs_libgm/UniffiCleaner;->Companion:Luniffi/textrcs_libgm/UniffiCleaner$Companion;
 
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->create(Luniffi/textrcs_libgm/UniffiCleaner$Companion;)Luniffi/textrcs_libgm/UniffiCleaner;

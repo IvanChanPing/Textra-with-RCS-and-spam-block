@@ -1,5 +1,23 @@
 # TextRCS Changelog
 
+## v0.76.0 — 2026-05-21 — media-download FFI wired (MMS receive, part 1)
+
+Groundwork for inbound MMS. The Rust `textrcs_libgm` crate already had a
+complete `download_media` (AES-GCM download + decrypt, port of
+`media.go:265`) but it was not reachable from Kotlin. Exposed it:
+
+- `textrcs-libgm-rs/src/ffi.rs` — new
+  `RustClient::download_media(media_id, decryption_key) -> ByteArray`.
+- Rebuilt all 4 ABI `libtextrcs_libgm.so` + regenerated the UniFFI
+  Kotlin bindings (only `+48` lines — the new method, no other churn).
+- `RustBridge.downloadMedia(context, mediaId, key)` — blocking wrapper.
+
+No behaviour change yet — nothing calls it; `IncomingMessageHandler`
+still writes text only. Verified the 4-ABI rebuild does not regress:
+pairing, connect, long-poll and `is_bugle_default` all healthy on the
+emulator after install. The remaining MMS work is `IncomingMessageHandler`
+media handling + delivering the attachment into Textra's MMS pipeline.
+
 ## v0.75.0 — 2026-05-21 — receive: thread by real phone, not participantID
 
 Received messages were threading into bogus conversations. Verified live

@@ -70,7 +70,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .registers 2
 
-    .line 3351
+    .line 3399
     invoke-virtual {p0}, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPairEvent$callback$makeCall$1;->invoke()V
 
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -81,10 +81,10 @@
 .method public final invoke()V
     .registers 4
 
-    .line 3352
+    .line 3400
     iget-object v0, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPairEvent$callback$makeCall$1;->$uniffiObj:Luniffi/textrcs_libgm/RustEventSink;
 
-    .line 3353
+    .line 3401
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterInt;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterInt;
 
     iget v2, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPairEvent$callback$makeCall$1;->$route:I
@@ -97,9 +97,9 @@
 
     move-result v1
 
-    .line 3352
+    .line 3400
     invoke-interface {v0, v1}, Luniffi/textrcs_libgm/RustEventSink;->onPairEvent(I)V
 
-    .line 3355
+    .line 3403
     return-void
 .end method

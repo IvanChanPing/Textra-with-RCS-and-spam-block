@@ -837,6 +837,8 @@ internal open class UniffiVTableCallbackInterfaceRustEventSink(
 
 
 
+
+
 // A JNA Library to expose the extern-C FFI definitions.
 // This is an implementation detail which will be called internally by the public API.
 
@@ -902,6 +904,8 @@ internal interface UniffiLib : Library {
     fun uniffi_textrcs_libgm_fn_method_rustclient_connect(`ptr`: Pointer,`sink`: Pointer,
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_disconnect(`ptr`: Pointer,
+    ): Long
+    fun uniffi_textrcs_libgm_fn_method_rustclient_download_media(`ptr`: Pointer,`mediaId`: RustBuffer.ByValue,`decryptionKey`: RustBuffer.ByValue,
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_fetch_messages(`ptr`: Pointer,`conversationId`: RustBuffer.ByValue,`count`: Long,
     ): Long
@@ -1091,6 +1095,8 @@ internal interface UniffiLib : Library {
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_disconnect(
     ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustclient_download_media(
+    ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_fetch_messages(
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_is_connected(
@@ -1188,6 +1194,9 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_disconnect() != 39546.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_download_media() != 53142.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_fetch_messages() != 43387.toShort()) {
@@ -2592,6 +2601,16 @@ public interface RustClientInterface {
     suspend fun `disconnect`()
     
     /**
+     * Download + AES-GCM-decrypt an incoming attachment (MMS media).
+     *
+     * `media_id` and `decryption_key` come straight from the inbound
+     * `MediaContent` proto (`mediaID` + `decryptionKey`). Returns the raw
+     * decrypted file bytes (e.g. the JPEG/PNG). Port of
+     * `ClientEngine::download_media` (media.go:265).
+     */
+    suspend fun `downloadMedia`(`mediaId`: kotlin.String, `decryptionKey`: kotlin.ByteArray): kotlin.ByteArray
+    
+    /**
      * Fetch recent messages for a conversation (port of methods.go:73).
      * Returns the binary-proto bytes of `ListMessagesResponse` for Kotlin
      * to parse with its generated protos.
@@ -2787,6 +2806,35 @@ open class RustClient: Disposable, AutoCloseable, RustClientInterface {
         
         // Error FFI converter
         UniffiNullRustCallStatusErrorHandler,
+    )
+    }
+
+    
+    /**
+     * Download + AES-GCM-decrypt an incoming attachment (MMS media).
+     *
+     * `media_id` and `decryption_key` come straight from the inbound
+     * `MediaContent` proto (`mediaID` + `decryptionKey`). Returns the raw
+     * decrypted file bytes (e.g. the JPEG/PNG). Port of
+     * `ClientEngine::download_media` (media.go:265).
+     */
+    @Throws(LibgmException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `downloadMedia`(`mediaId`: kotlin.String, `decryptionKey`: kotlin.ByteArray) : kotlin.ByteArray {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustclient_download_media(
+                thisPtr,
+                FfiConverterString.lower(`mediaId`),FfiConverterByteArray.lower(`decryptionKey`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterByteArray.lift(it) },
+        // Error FFI converter
+        LibgmException.ErrorHandler,
     )
     }
 

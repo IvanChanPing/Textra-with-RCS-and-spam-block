@@ -66,7 +66,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 3852
+    .line 3900
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,7 +78,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3852
+    .line 3900
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustSession;
@@ -98,7 +98,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3868
+    .line 3916
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getTachyonAuthToken()[B
@@ -109,7 +109,7 @@
 
     move-result-wide v0
 
-    .line 3869
+    .line 3917
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterLong;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterLong;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getTokenTtlSeconds()J
@@ -126,7 +126,7 @@
 
     move-result-wide v0
 
-    .line 3870
+    .line 3918
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getAesKey()[B
@@ -143,7 +143,7 @@
 
     move-result-wide v0
 
-    .line 3871
+    .line 3919
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getHmacKey()[B
@@ -160,7 +160,7 @@
 
     move-result-wide v0
 
-    .line 3872
+    .line 3920
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getMobileDeviceProto()[B
@@ -177,7 +177,7 @@
 
     move-result-wide v0
 
-    .line 3873
+    .line 3921
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getBrowserDeviceProto()[B
@@ -194,7 +194,7 @@
 
     move-result-wide v0
 
-    .line 3874
+    .line 3922
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterMapStringString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterMapStringString;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getCookies()Ljava/util/Map;
@@ -211,7 +211,7 @@
 
     move-result-wide v0
 
-    .line 3875
+    .line 3923
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getRefreshKeyPkcs8()[B
@@ -228,7 +228,7 @@
 
     move-result-wide v0
 
-    .line 3876
+    .line 3924
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getDestRegistrationId()Ljava/lang/String;
@@ -252,7 +252,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3852
+    .line 3900
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -268,7 +268,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 3852
+    .line 3900
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustSession;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/RustSession;
 
     move-result-object v0
@@ -280,7 +280,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 3852
+    .line 3900
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lift(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -294,7 +294,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 3852
+    .line 3900
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustSession;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/RustSession;
 
     move-result-object v0
@@ -306,7 +306,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 3852
+    .line 3900
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -320,7 +320,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3852
+    .line 3900
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustSession;
@@ -336,7 +336,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3852
+    .line 3900
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustSession;
@@ -352,7 +352,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustSession;
 
-    .line 3852
+    .line 3900
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lower(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -364,7 +364,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3852
+    .line 3900
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustSession;
@@ -380,7 +380,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustSession;
 
-    .line 3852
+    .line 3900
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -392,7 +392,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 3852
+    .line 3900
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustSession;->read(Ljava/nio/ByteBuffer;)Luniffi/textrcs_libgm/RustSession;
 
     move-result-object v0
@@ -408,17 +408,17 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3854
+    .line 3902
     new-instance v1, Luniffi/textrcs_libgm/RustSession;
 
-    .line 3855
+    .line 3903
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->read(Ljava/nio/ByteBuffer;)[B
 
     move-result-object v2
 
-    .line 3856
+    .line 3904
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterLong;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterLong;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterLong;->read(Ljava/nio/ByteBuffer;)Ljava/lang/Long;
@@ -429,56 +429,56 @@
 
     move-result-wide v3
 
-    .line 3857
+    .line 3905
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->read(Ljava/nio/ByteBuffer;)[B
 
     move-result-object v5
 
-    .line 3858
+    .line 3906
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->read(Ljava/nio/ByteBuffer;)[B
 
     move-result-object v6
 
-    .line 3859
+    .line 3907
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->read(Ljava/nio/ByteBuffer;)[B
 
     move-result-object v7
 
-    .line 3860
+    .line 3908
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->read(Ljava/nio/ByteBuffer;)[B
 
     move-result-object v8
 
-    .line 3861
+    .line 3909
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterMapStringString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterMapStringString;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterMapStringString;->read(Ljava/nio/ByteBuffer;)Ljava/util/Map;
 
     move-result-object v9
 
-    .line 3862
+    .line 3910
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->read(Ljava/nio/ByteBuffer;)[B
 
     move-result-object v10
 
-    .line 3863
+    .line 3911
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterString;->read(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 3854
+    .line 3902
     invoke-direct/range {v1 .. v11}, Luniffi/textrcs_libgm/RustSession;-><init>([BJ[B[B[B[BLjava/util/Map;[BLjava/lang/String;)V
 
     return-object v1
@@ -489,7 +489,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 3852
+    .line 3900
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustSession;
@@ -512,7 +512,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3880
+    .line 3928
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getTachyonAuthToken()[B
@@ -521,7 +521,7 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterByteArray;->write([BLjava/nio/ByteBuffer;)V
 
-    .line 3881
+    .line 3929
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterLong;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterLong;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getTokenTtlSeconds()J
@@ -530,7 +530,7 @@
 
     invoke-virtual {v0, v1, v2, p2}, Luniffi/textrcs_libgm/FfiConverterLong;->write(JLjava/nio/ByteBuffer;)V
 
-    .line 3882
+    .line 3930
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getAesKey()[B
@@ -539,7 +539,7 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterByteArray;->write([BLjava/nio/ByteBuffer;)V
 
-    .line 3883
+    .line 3931
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getHmacKey()[B
@@ -548,7 +548,7 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterByteArray;->write([BLjava/nio/ByteBuffer;)V
 
-    .line 3884
+    .line 3932
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getMobileDeviceProto()[B
@@ -557,7 +557,7 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterByteArray;->write([BLjava/nio/ByteBuffer;)V
 
-    .line 3885
+    .line 3933
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getBrowserDeviceProto()[B
@@ -566,7 +566,7 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterByteArray;->write([BLjava/nio/ByteBuffer;)V
 
-    .line 3886
+    .line 3934
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterMapStringString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterMapStringString;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getCookies()Ljava/util/Map;
@@ -575,7 +575,7 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterMapStringString;->write(Ljava/util/Map;Ljava/nio/ByteBuffer;)V
 
-    .line 3887
+    .line 3935
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getRefreshKeyPkcs8()[B
@@ -584,7 +584,7 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterByteArray;->write([BLjava/nio/ByteBuffer;)V
 
-    .line 3888
+    .line 3936
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustSession;->getDestRegistrationId()Ljava/lang/String;
@@ -593,6 +593,6 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 3889
+    .line 3937
     return-void
 .end method

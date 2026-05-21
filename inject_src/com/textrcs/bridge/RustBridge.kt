@@ -242,4 +242,22 @@ object RustBridge {
             }
         }
     }
+
+    /**
+     * Download + AES-GCM-decrypt an incoming MMS attachment. Blocking —
+     * the caller must run this off the main thread. Returns the raw
+     * decrypted file bytes (e.g. the JPEG). Throws on any failure.
+     */
+    fun downloadMedia(context: Context, mediaId: String, decryptionKey: ByteArray): ByteArray {
+        if (!connected) {
+            if (!start(context)) {
+                throw IllegalStateException("RustBridge not connected (not paired?)")
+            }
+        }
+        val rc = client ?: throw IllegalStateException("RustBridge has no client")
+        ScreenTracer.note("RUST downloadMedia → mediaId.len=${mediaId.length} key.len=${decryptionKey.size}")
+        val bytes = runBlocking { rc.downloadMedia(mediaId, decryptionKey) }
+        ScreenTracer.note("RUST downloadMedia OK bytes=${bytes.size}")
+        return bytes
+    }
 }

@@ -71,7 +71,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 1343
+    .line 1352
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -83,7 +83,7 @@
     .registers 4
     .param p1, "value"    # I
 
-    .line 1356
+    .line 1365
     const-wide/16 v0, 0x4
 
     return-wide v0
@@ -93,7 +93,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1343
+    .line 1352
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;
@@ -113,7 +113,7 @@
     .registers 3
     .param p1, "value"    # I
 
-    .line 1345
+    .line 1354
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -125,7 +125,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1343
+    .line 1352
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;
@@ -145,7 +145,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 1343
+    .line 1352
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -159,7 +159,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 1343
+    .line 1352
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterInt;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -171,7 +171,7 @@
     .registers 3
     .param p1, "value"    # I
 
-    .line 1353
+    .line 1362
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -183,7 +183,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1343
+    .line 1352
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;
@@ -203,7 +203,7 @@
     .registers 3
     .param p1, "value"    # I
 
-    .line 1343
+    .line 1352
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -219,7 +219,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 1343
+    .line 1352
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;
@@ -243,7 +243,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1349
+    .line 1358
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
@@ -259,7 +259,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 1343
+    .line 1352
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterInt;->read(Ljava/nio/ByteBuffer;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -276,10 +276,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1359
+    .line 1368
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 1360
+    .line 1369
     return-void
 .end method
 
@@ -288,7 +288,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 1343
+    .line 1352
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;

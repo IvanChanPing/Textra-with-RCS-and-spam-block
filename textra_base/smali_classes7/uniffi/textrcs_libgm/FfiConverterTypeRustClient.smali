@@ -70,7 +70,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 2943
+    .line 2991
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,7 +82,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 2943
+    .line 2991
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustClient;
@@ -102,7 +102,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2959
+    .line 3007
     const-wide/16 v0, 0x8
 
     return-wide v0
@@ -112,7 +112,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 2943
+    .line 2991
     move-object v0, p1
 
     check-cast v0, Lcom/sun/jna/Pointer;
@@ -132,7 +132,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2950
+    .line 2998
     new-instance v0, Luniffi/textrcs_libgm/RustClient;
 
     invoke-direct {v0, p1}, Luniffi/textrcs_libgm/RustClient;-><init>(Lcom/sun/jna/Pointer;)V
@@ -144,7 +144,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 2943
+    .line 2991
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustClient;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/RustClient;
 
     move-result-object v0
@@ -156,7 +156,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 2943
+    .line 2991
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -174,7 +174,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2946
+    .line 2994
     invoke-virtual {p1}, Luniffi/textrcs_libgm/RustClient;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
     move-result-object v0
@@ -186,7 +186,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 2943
+    .line 2991
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustClient;
@@ -202,7 +202,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 2943
+    .line 2991
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustClient;
@@ -218,7 +218,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustClient;
 
-    .line 2943
+    .line 2991
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -230,7 +230,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 2943
+    .line 2991
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustClient;->read(Ljava/nio/ByteBuffer;)Luniffi/textrcs_libgm/RustClient;
 
     move-result-object v0
@@ -246,7 +246,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2956
+    .line 3004
     new-instance v0, Lcom/sun/jna/Pointer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
@@ -267,7 +267,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 2943
+    .line 2991
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustClient;
@@ -290,7 +290,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2964
+    .line 3012
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustClient;->lower(Luniffi/textrcs_libgm/RustClient;)Lcom/sun/jna/Pointer;
 
     move-result-object v0
@@ -301,6 +301,6 @@
 
     invoke-virtual {p2, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 2965
+    .line 3013
     return-void
 .end method

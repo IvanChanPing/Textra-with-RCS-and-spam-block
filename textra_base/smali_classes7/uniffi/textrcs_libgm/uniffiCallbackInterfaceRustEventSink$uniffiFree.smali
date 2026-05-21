@@ -59,7 +59,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 3361
+    .line 3409
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -71,7 +71,7 @@
     .registers 4
     .param p1, "handle"    # J
 
-    .line 3363
+    .line 3411
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;
 
     invoke-virtual {v0}, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->getHandleMap$main()Luniffi/textrcs_libgm/UniffiHandleMap;
@@ -80,6 +80,6 @@
 
     invoke-virtual {v0, p1, p2}, Luniffi/textrcs_libgm/UniffiHandleMap;->remove(J)Ljava/lang/Object;
 
-    .line 3364
+    .line 3412
     return-void
 .end method
