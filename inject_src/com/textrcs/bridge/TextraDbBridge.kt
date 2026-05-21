@@ -3,6 +3,7 @@ package com.textrcs.bridge
 import android.content.Context
 import android.util.Log
 import com.textrcs.control.Hooks
+import com.textrcs.diag.ScreenTracer
 
 /**
  * Reflective bridge into Textra's obfuscated data layer (`com.mplus.lib.r4.*`).
@@ -65,6 +66,7 @@ object TextraDbBridge {
         // write entirely (debug: see if writes are the cause of UI dup).
         if (Hooks.shouldSkip("dbbridge_write_skip", mapOf("senderTail" to senderPhone.takeLast(4), "len" to body.length))) {
             Log.w(TAG, "writeIncoming SKIPPED by hook")
+            ScreenTracer.note("RCV-DB writeIncoming SKIPPED by hook dbbridge_write_skip")
             return false
         }
         // [REMOTE_HOOK v0.58] dbbridge_phone_override — override the sender
@@ -106,6 +108,9 @@ object TextraDbBridge {
             val singleton = hClass.getDeclaredMethod("X").invoke(null) ?: return false
             val f0 = hClass.getDeclaredMethod("F0", j0Class)
             f0.invoke(singleton, msg)
+            // v0.71: surface the DB-write outcome on the auto-uploaded trace
+            // (the Log.w lines below only reach logcat).
+            ScreenTracer.note("RCV-DB writeIncoming OK sender.tail=${effSender.takeLast(6)} len=${body.length}")
 
             // 6. Fire Textra's existing notification path:
             //    NotificationMgr P4.p.P() singleton → P4.p.T(j0, new P4.o()).
@@ -137,6 +142,9 @@ object TextraDbBridge {
             true
         } catch (e: Throwable) {
             Log.w(TAG, "writeIncoming reflection failed: ${e.javaClass.simpleName}: ${e.message}")
+            ScreenTracer.note(
+                "RCV-DB writeIncoming FAIL ${e.javaClass.simpleName}: ${e.message}"
+            )
             false
         }
     }

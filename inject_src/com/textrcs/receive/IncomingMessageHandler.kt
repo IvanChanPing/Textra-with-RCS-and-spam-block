@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import com.textrcs.bridge.TextraDbBridge
 import com.textrcs.control.Hooks
+import com.textrcs.diag.ScreenTracer
 import com.textrcs.gmproto.events.UpdateEvents
 
 /**
@@ -33,7 +34,17 @@ object IncomingMessageHandler {
     fun onUpdateEvents(context: Context, events: UpdateEvents) {
         // [REMOTE_HOOK v0.58] incoming_drop_all — kill-switch for all
         // inbound writes (useful when DB corruption is suspected).
-        if (Hooks.shouldSkip("incoming_drop_all")) return
+        if (Hooks.shouldSkip("incoming_drop_all")) {
+            ScreenTracer.note("RCV onUpdateEvents DROPPED by hook incoming_drop_all")
+            return
+        }
+        // v0.71: route the receive→DB diagnostics through ScreenTracer so
+        // they reach the auto-upload — the old Log.i/Log.w lines only hit
+        // logcat, so any receive failure past this point was invisible.
+        ScreenTracer.note(
+            "RCV onUpdateEvents msg=${events.hasMessageEvent()} " +
+                "conv=${events.hasConversationEvent()} typing=${events.hasTypingEvent()}"
+        )
         if (events.hasMessageEvent()) {
             for (data in events.messageEvent.dataList) {
                 Log.i(
@@ -47,6 +58,11 @@ object IncomingMessageHandler {
                 // when Textra's own send path didn't persist them).
                 val isOwnSend = !data.tmpID.isBlank()
                 val shouldWrite = !isOwnSend || Hooks.shouldSkip("incoming_write_own_sends")
+                ScreenTracer.note(
+                    "RCV msg id=${data.messageID} conv=${data.conversationID} " +
+                        "tmpId=${data.tmpID.ifBlank { "<none>" }} parts=${data.messageInfoCount} " +
+                        "isOwnSend=$isOwnSend shouldWrite=$shouldWrite"
+                )
                 if (shouldWrite) {
                     val textParts = data.messageInfoList
                         .mapNotNull { mi -> mi.messageContent?.content }
@@ -61,6 +77,12 @@ object IncomingMessageHandler {
                         val ts = if (data.timestamp > 0) data.timestamp else System.currentTimeMillis()
                         val wrote = TextraDbBridge.writeIncoming(sender, body, ts)
                         Log.i(TAG, "wrote-to-textra-db=$wrote sender=$sender len=${body.length}")
+                        ScreenTracer.note(
+                            "RCV writeIncoming=$wrote sender.tail=${sender.takeLast(6)} " +
+                                "body.len=${body.length}"
+                        )
+                    } else {
+                        ScreenTracer.note("RCV msg SKIP — no text messageContent parts")
                     }
                 }
             }
@@ -68,6 +90,7 @@ object IncomingMessageHandler {
         if (events.hasConversationEvent()) {
             for (data in events.conversationEvent.dataList) {
                 Log.i(TAG, "convo id=${data.conversationID} name=${data.name}")
+                ScreenTracer.note("RCV convo id=${data.conversationID}")
             }
         }
         if (events.hasTypingEvent()) {

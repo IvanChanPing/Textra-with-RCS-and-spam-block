@@ -42,6 +42,13 @@
         <item name="convoContent">@null</item>
         <item name="convoContentControlledHeight">@null</item>
         <item name="android:windowAnimationStyle">@style/TextrcsParallaxAnimation</item>
+        <!-- corner-v1/v2 (ported from textrcs-corner): translucent so
+             ConvoCornerAnim's rounded outline clip reveals the conv-list
+             behind during the parallax slide; transparent windowBackground
+             so RenderThread clears the surface (else the clipped corner
+             renders solid black). Same combo as UpgradedToProTheme. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
     <style name="TextrcsParallaxAnimation" parent="@android:style/Animation">
         <item name="android:activityOpenEnterAnimation">@anim/textrcs_overlay_enter</item>

@@ -1,5 +1,34 @@
 # TextRCS Changelog
 
+## v0.71.0 — 2026-05-21 — rounded-corner parallax transition + receive-path tracing
+
+### Rounded corners on the ConvoActivity parallax slide
+
+Ported the rounded-parallax-corner work from the `textrcs-corner` fork
+(its v1→v7 iteration). Three files:
+
+- `res/values/styles.xml` — `AppTheme.ConvoActivity` gains
+  `windowIsTranslucent=true` + `windowBackground=@android:color/transparent`
+  so `ConvoCornerAnim`'s rounded outline clip reveals the conv-list behind
+  (an opaque Surface clips to black/square).
+- `inject_src/com/textrcs/anim/ConvoCornerAnim.kt` — replaced with the
+  textrcs-corner version: `attachClose()` for close-direction corners,
+  `FLAG_DIM_BEHIND` + animated `setDimAmount()` (0↔0.35) for the dark
+  scrim, radius resolved from the device's physical screen corner radius
+  (`Display.getRoundedCorner()`, API 31+; 28dp fallback), and the
+  `startDelay` hold so the corners stay visibly round for the whole slide.
+- `ConvoActivity.smali` — added the `attachClose` hook in the parallax
+  close branch (the `attach` open hook was already present since v0.49).
+
+### Receive→DB path now traced to the auto-upload
+
+`IncomingMessageHandler` and `TextraDbBridge` logged only via
+`Log.i`/`Log.w` (logcat) — so when a received message failed to land in
+Textra's DB, nothing showed in the uploaded traces. Both now also emit
+`ScreenTracer.note` lines (`RCV onUpdateEvents …`, `RCV msg …`,
+`RCV writeIncoming=… `, `RCV-DB writeIncoming OK/FAIL/SKIPPED …`) so the
+exact failing step of the receive path is visible in the next test.
+
 ## v0.70.0 — 2026-05-21 — Rust libgm crate bumped to v0.13.0 (full re-audit fixes)
 
 Picks up `textrcs_libgm` v0.13.0 — a full line-by-line re-audit of the

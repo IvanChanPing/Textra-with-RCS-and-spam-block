@@ -145,6 +145,10 @@
 
     invoke-direct {v0, v1, p0}, Lcom/mplus/lib/j4/a;-><init>(ILjava/lang/Object;)V
 
+    # corner-v3 (ported from textrcs-corner): round the conv-view corners
+    # as it slides out — parallax close path only (non-compose branch).
+    invoke-static {p0}, Lcom/textrcs/anim/ConvoCornerAnim;->attachClose(Landroid/app/Activity;)V
+
     :goto_0
     const/4 v2, 0x4
 

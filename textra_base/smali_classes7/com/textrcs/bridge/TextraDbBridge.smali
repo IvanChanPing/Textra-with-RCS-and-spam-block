@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTextraDbBridge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TextraDbBridge.kt\ncom/textrcs/bridge/TextraDbBridge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,165:1\n1#2:166\n*E\n"
+    value = "SMAP\nTextraDbBridge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TextraDbBridge.kt\ncom/textrcs/bridge/TextraDbBridge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,173:1\n1#2:174\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -81,7 +81,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -98,7 +98,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 161
+    .line 169
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +137,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
+    .line 170
     return p2
 .end method
 
@@ -161,7 +161,7 @@
 
     invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 66
+    .line 67
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v8, 0x2
@@ -214,18 +214,23 @@
 
     const-string v11, "TextraDbBridge"
 
-    if-eqz v0, :cond_48
+    if-eqz v0, :cond_4d
 
-    .line 67
+    .line 68
     const-string v0, "writeIncoming SKIPPED by hook"
 
     invoke-static {v11, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
+    .line 69
+    const-string v0, "RCV-DB writeIncoming SKIPPED by hook dbbridge_write_skip"
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 70
     return v9
 
-    .line 73
-    :cond_48
+    .line 75
+    :cond_4d
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v4, 0x4
@@ -240,7 +245,7 @@
 
     move-result-object v1
 
-    .line 76
+    .line 78
     .local v1, "effSender":Ljava/lang/String;
     sget-object v12, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -258,7 +263,7 @@
 
     move-result-wide v2
 
-    .line 79
+    .line 81
     .local v2, "recipientIdOverride":J
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -268,12 +273,12 @@
 
     move-result v4
 
-    .line 80
+    .line 82
     .local v4, "skipNotif":Z
     nop
 
-    .line 82
-    :try_start_6c
+    .line 84
+    :try_start_71
     const-string v0, "com.mplus.lib.r4.l"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -282,11 +287,11 @@
 
     move-object v12, v0
 
-    .line 83
+    .line 85
     .local v12, "lClass":Ljava/lang/Class;
     nop
 
-    .line 84
+    .line 86
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -303,14 +308,14 @@
 
     aput-object v13, v0, v8
 
-    .line 83
+    .line 85
     invoke-virtual {v12, v0}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
     move-object v13, v0
 
-    .line 86
+    .line 88
     .local v13, "lCtor":Ljava/lang/reflect/Constructor;
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -326,7 +331,7 @@
 
     move-object v14, v0
 
-    .line 89
+    .line 91
     .local v14, "recipient":Ljava/lang/Object;
     const-string v0, "com.mplus.lib.r4.n"
 
@@ -336,7 +341,7 @@
 
     move-object v15, v0
 
-    .line 90
+    .line 92
     .local v15, "nClass":Ljava/lang/Class;
     new-array v0, v9, [Ljava/lang/Class;
 
@@ -352,7 +357,7 @@
 
     move-object v8, v0
 
-    .line 92
+    .line 94
     .local v8, "recipients":Ljava/lang/Object;
     const-string v0, "null cannot be cast to non-null type java.util.ArrayList<kotlin.Any?>"
 
@@ -364,7 +369,7 @@
 
     invoke-virtual {v0, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 95
+    .line 97
     const-string v0, "com.mplus.lib.r4.s0"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -373,7 +378,7 @@
 
     move-object/from16 v17, v0
 
-    .line 96
+    .line 98
     .local v17, "s0Class":Ljava/lang/Class;
     new-array v0, v9, [Ljava/lang/Class;
 
@@ -393,7 +398,7 @@
 
     move-object v10, v0
 
-    .line 99
+    .line 101
     .local v10, "msg":Ljava/lang/Object;
     const-string v0, "com.mplus.lib.r4.j0"
 
@@ -403,194 +408,252 @@
 
     move-object/from16 v19, v0
 
-    .line 100
+    .line 102
     .local v19, "j0Class":Ljava/lang/Class;
     const-string v0, "h"
-    :try_end_d5
-    .catchall {:try_start_6c .. :try_end_d5} :catchall_22d
+    :try_end_da
+    .catchall {:try_start_71 .. :try_end_da} :catchall_272
 
     move-object/from16 v9, v19
 
     .end local v19    # "j0Class":Ljava/lang/Class;
     .local v9, "j0Class":Ljava/lang/Class;
-    :try_start_d7
+    :try_start_dc
     invoke-virtual {v9, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
-    :try_end_db
-    .catchall {:try_start_d7 .. :try_end_db} :catchall_223
+    :try_end_e0
+    .catchall {:try_start_dc .. :try_end_e0} :catchall_268
 
     move-object/from16 v19, v0
 
-    .line 166
+    .line 174
     .local v19, "$this$writeIncoming_u24lambda_u240":Ljava/lang/reflect/Field;
     const/16 v21, 0x0
 
-    .line 100
+    .line 102
     .local v21, "$i$a$-apply-TextraDbBridge$writeIncoming$1":I
-    move-object/from16 v22, v1
+    move-wide/from16 v22, v2
 
-    move-wide/from16 v23, v2
+    move-object/from16 v2, v19
 
-    move-object/from16 v1, v19
+    const/4 v3, 0x1
 
-    const/4 v2, 0x1
-
-    .end local v2    # "recipientIdOverride":J
     .end local v19    # "$this$writeIncoming_u24lambda_u240":Ljava/lang/reflect/Field;
-    .local v1, "$this$writeIncoming_u24lambda_u240":Ljava/lang/reflect/Field;
-    .local v22, "effSender":Ljava/lang/String;
-    .local v23, "recipientIdOverride":J
-    :try_start_e6
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    .local v2, "$this$writeIncoming_u24lambda_u240":Ljava/lang/reflect/Field;
+    .local v22, "recipientIdOverride":J
+    :try_start_e9
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .end local v1    # "$this$writeIncoming_u24lambda_u240":Ljava/lang/reflect/Field;
+    .end local v2    # "$this$writeIncoming_u24lambda_u240":Ljava/lang/reflect/Field;
     .end local v21    # "$i$a$-apply-TextraDbBridge$writeIncoming$1":I
     invoke-virtual {v0, v10, v8}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 101
+    .line 103
     const-string v0, "i"
 
     invoke-virtual {v9, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    move-object v1, v0
+    move-object v2, v0
 
-    .line 166
-    .local v1, "$this$writeIncoming_u24lambda_u241":Ljava/lang/reflect/Field;
-    const/4 v2, 0x0
+    .line 174
+    .local v2, "$this$writeIncoming_u24lambda_u241":Ljava/lang/reflect/Field;
+    const/4 v3, 0x0
 
-    .line 101
-    .local v2, "$i$a$-apply-TextraDbBridge$writeIncoming$2":I
+    .line 103
+    .local v3, "$i$a$-apply-TextraDbBridge$writeIncoming$2":I
+    move/from16 v19, v3
+
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    .end local v3    # "$i$a$-apply-TextraDbBridge$writeIncoming$2":I
+    .local v19, "$i$a$-apply-TextraDbBridge$writeIncoming$2":I
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .end local v1    # "$this$writeIncoming_u24lambda_u241":Ljava/lang/reflect/Field;
-    .end local v2    # "$i$a$-apply-TextraDbBridge$writeIncoming$2":I
+    .end local v2    # "$this$writeIncoming_u24lambda_u241":Ljava/lang/reflect/Field;
+    .end local v19    # "$i$a$-apply-TextraDbBridge$writeIncoming$2":I
     invoke-virtual {v0, v10, v6}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 102
+    .line 104
     const-string v0, "j"
 
     invoke-virtual {v9, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    move-object v1, v0
+    move-object v2, v0
 
-    .line 166
-    .local v1, "$this$writeIncoming_u24lambda_u242":Ljava/lang/reflect/Field;
-    const/4 v2, 0x0
+    .line 174
+    .local v2, "$this$writeIncoming_u24lambda_u242":Ljava/lang/reflect/Field;
+    const/4 v3, 0x0
 
-    .line 102
-    .local v2, "$i$a$-apply-TextraDbBridge$writeIncoming$3":I
+    .line 104
+    .local v3, "$i$a$-apply-TextraDbBridge$writeIncoming$3":I
+    move/from16 v19, v3
+
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    .end local v3    # "$i$a$-apply-TextraDbBridge$writeIncoming$3":I
+    .local v19, "$i$a$-apply-TextraDbBridge$writeIncoming$3":I
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    move-wide/from16 v1, p3
+    move-wide/from16 v2, p3
 
-    .end local v1    # "$this$writeIncoming_u24lambda_u242":Ljava/lang/reflect/Field;
-    .end local v2    # "$i$a$-apply-TextraDbBridge$writeIncoming$3":I
-    invoke-virtual {v0, v10, v1, v2}, Ljava/lang/reflect/Field;->setLong(Ljava/lang/Object;J)V
+    .end local v2    # "$this$writeIncoming_u24lambda_u242":Ljava/lang/reflect/Field;
+    .end local v19    # "$i$a$-apply-TextraDbBridge$writeIncoming$3":I
+    invoke-virtual {v0, v10, v2, v3}, Ljava/lang/reflect/Field;->setLong(Ljava/lang/Object;J)V
 
-    .line 105
+    .line 107
     const-string v0, "com.mplus.lib.r4.H"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    move-object v3, v0
+    move-object/from16 v19, v0
 
-    .line 106
-    .local v3, "hClass":Ljava/lang/Class;
+    .line 108
+    .local v19, "hClass":Ljava/lang/Class;
     const-string v0, "X"
-    :try_end_115
-    .catchall {:try_start_e6 .. :try_end_115} :catchall_21d
+    :try_end_11d
+    .catchall {:try_start_e9 .. :try_end_11d} :catchall_260
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    :try_start_116
-    new-array v2, v1, [Ljava/lang/Class;
+    :try_start_11e
+    new-array v3, v2, [Ljava/lang/Class;
+    :try_end_120
+    .catchall {:try_start_11e .. :try_end_120} :catchall_258
 
-    invoke-virtual {v3, v0, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    move-object/from16 v2, v19
 
-    move-result-object v0
-
-    new-array v2, v1, [Ljava/lang/Object;
-    :try_end_11e
-    .catchall {:try_start_116 .. :try_end_11e} :catchall_217
-
-    move/from16 v20, v1
-
-    const/4 v1, 0x0
-
-    :try_start_121
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    .end local v19    # "hClass":Ljava/lang/Class;
+    .local v2, "hClass":Ljava/lang/Class;
+    :try_start_122
+    invoke-virtual {v2, v0, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
-
-    if-nez v0, :cond_128
-
-    return v20
-
-    :cond_128
-    move-object v1, v0
-
-    .line 107
-    .local v1, "singleton":Ljava/lang/Object;
-    const-string v0, "F0"
-    :try_end_12b
-    .catchall {:try_start_121 .. :try_end_12b} :catchall_215
+    :try_end_126
+    .catchall {:try_start_122 .. :try_end_126} :catchall_260
 
     move/from16 v19, v4
 
-    const/4 v2, 0x1
+    const/4 v3, 0x0
 
     .end local v4    # "skipNotif":Z
     .local v19, "skipNotif":Z
+    :try_start_129
+    new-array v4, v3, [Ljava/lang/Object;
+    :try_end_12b
+    .catchall {:try_start_129 .. :try_end_12b} :catchall_252
+
+    move/from16 v20, v3
+
+    const/4 v3, 0x0
+
     :try_start_12e
-    new-array v4, v2, [Ljava/lang/Class;
-
-    aput-object v9, v4, v20
-    :try_end_132
-    .catchall {:try_start_12e .. :try_end_132} :catchall_213
-
-    :try_start_132
-    invoke-virtual {v3, v0, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v0, v3, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v2, v0
+    if-nez v0, :cond_135
 
-    .line 108
-    .local v2, "f0":Ljava/lang/reflect/Method;
+    return v20
+
+    :cond_135
+    move-object v3, v0
+
+    .line 109
+    .local v3, "singleton":Ljava/lang/Object;
+    const-string v0, "F0"
+
+    move-object/from16 v21, v5
+
+    const/4 v4, 0x1
+
+    .end local v5    # "s0Class":Ljava/lang/Class;
+    .local v21, "s0Class":Ljava/lang/Class;
+    new-array v5, v4, [Ljava/lang/Class;
+
+    aput-object v9, v5, v20
+    :try_end_13f
+    .catchall {:try_start_12e .. :try_end_13f} :catchall_24e
+
+    :try_start_13f
+    invoke-virtual {v2, v0, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    .line 110
+    .local v4, "f0":Ljava/lang/reflect/Method;
     filled-new-array {v10}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v2, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_13e
-    .catchall {:try_start_132 .. :try_end_13e} :catchall_20f
+    invoke-virtual {v4, v3, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 117
+    .line 113
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "RCV-DB writeIncoming OK sender.tail="
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/4 v5, 0x6
+
+    invoke-static {v1, v5}, Lkotlin/text/StringsKt;->takeLast(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v5, " len="
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+    :try_end_174
+    .catchall {:try_start_13f .. :try_end_174} :catchall_248
+
+    .line 122
     nop
 
-    .line 118
-    if-eqz v19, :cond_15d
+    .line 123
+    if-eqz v19, :cond_193
 
-    .line 119
-    :try_start_141
+    .line 124
+    :try_start_177
     const-string v0, "P4.p.T notification SKIPPED by hook"
 
     invoke-static {v11, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_146
-    .catchall {:try_start_141 .. :try_end_146} :catchall_150
+    :try_end_17c
+    .catchall {:try_start_177 .. :try_end_17c} :catchall_186
 
-    move-object/from16 v21, v1
+    move-object/from16 v24, v1
 
     move-object/from16 v26, v2
 
@@ -598,13 +661,13 @@
 
     const/16 v17, 0x1
 
-    goto/16 :goto_20c
+    goto/16 :goto_242
 
-    .line 132
-    :catchall_150
+    .line 137
+    :catchall_186
     move-exception v0
 
-    move-object/from16 v21, v1
+    move-object/from16 v24, v1
 
     move-object/from16 v26, v2
 
@@ -614,29 +677,29 @@
 
     const/16 v20, 0x0
 
-    goto/16 :goto_1e2
+    goto/16 :goto_218
 
-    .line 121
-    :cond_15d
-    :try_start_15d
+    .line 126
+    :cond_193
+    :try_start_193
     const-string v0, "com.mplus.lib.P4.o"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
-    :try_end_163
-    .catchall {:try_start_15d .. :try_end_163} :catchall_1d7
+    :try_end_199
+    .catchall {:try_start_193 .. :try_end_199} :catchall_20d
 
-    .line 122
+    .line 127
     .local v0, "poClass":Ljava/lang/Class;
-    move-object/from16 v21, v1
+    move-object/from16 v24, v1
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .end local v1    # "singleton":Ljava/lang/Object;
-    .local v21, "singleton":Ljava/lang/Object;
-    :try_start_166
-    new-array v1, v4, [Ljava/lang/Class;
+    .end local v1    # "effSender":Ljava/lang/String;
+    .local v24, "effSender":Ljava/lang/String;
+    :try_start_19c
+    new-array v1, v5, [Ljava/lang/Class;
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
@@ -646,16 +709,16 @@
 
     .end local v0    # "poClass":Ljava/lang/Class;
     .local v25, "poClass":Ljava/lang/Class;
-    new-array v0, v4, [Ljava/lang/Object;
-    :try_end_170
-    .catchall {:try_start_166 .. :try_end_170} :catchall_1cd
+    new-array v0, v5, [Ljava/lang/Object;
+    :try_end_1a6
+    .catchall {:try_start_19c .. :try_end_1a6} :catchall_203
 
-    :try_start_170
+    :try_start_1a6
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 123
+    .line 128
     .local v0, "po":Ljava/lang/Object;
     const-string v1, "com.mplus.lib.P4.p"
 
@@ -663,11 +726,11 @@
 
     move-result-object v1
 
-    .line 124
+    .line 129
     .local v1, "pClass":Ljava/lang/Class;
-    const-string v4, "P"
-    :try_end_17c
-    .catchall {:try_start_170 .. :try_end_17c} :catchall_1c3
+    const-string v5, "P"
+    :try_end_1b2
+    .catchall {:try_start_1a6 .. :try_end_1b2} :catchall_1f9
 
     move-object/from16 v26, v2
 
@@ -675,84 +738,84 @@
 
     const/4 v2, 0x0
 
-    .end local v2    # "f0":Ljava/lang/reflect/Method;
-    .end local v3    # "hClass":Ljava/lang/Class;
-    .local v26, "f0":Ljava/lang/reflect/Method;
-    .local v27, "hClass":Ljava/lang/Class;
-    :try_start_181
+    .end local v2    # "hClass":Ljava/lang/Class;
+    .end local v3    # "singleton":Ljava/lang/Object;
+    .local v26, "hClass":Ljava/lang/Class;
+    .local v27, "singleton":Ljava/lang/Object;
+    :try_start_1b7
     new-array v3, v2, [Ljava/lang/Class;
 
-    invoke-virtual {v1, v4, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v1, v5, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
-    new-array v4, v2, [Ljava/lang/Object;
-    :try_end_189
-    .catchall {:try_start_181 .. :try_end_189} :catchall_1bd
+    new-array v5, v2, [Ljava/lang/Object;
+    :try_end_1bf
+    .catchall {:try_start_1b7 .. :try_end_1bf} :catchall_1f3
 
     const/4 v2, 0x0
 
-    :try_start_18a
-    invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_1c0
+    invoke-virtual {v3, v2, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 125
+    .line 130
     .local v2, "pSingleton":Ljava/lang/Object;
-    if-eqz v2, :cond_1ab
+    if-eqz v2, :cond_1e1
 
-    .line 126
+    .line 131
     const-string v3, "T"
 
-    const/4 v4, 0x2
+    const/4 v5, 0x2
 
-    new-array v4, v4, [Ljava/lang/Class;
-    :try_end_195
-    .catchall {:try_start_18a .. :try_end_195} :catchall_1b7
+    new-array v5, v5, [Ljava/lang/Class;
+    :try_end_1cb
+    .catchall {:try_start_1c0 .. :try_end_1cb} :catchall_1ed
 
     const/16 v20, 0x0
 
-    :try_start_197
-    aput-object v9, v4, v20
-    :try_end_199
-    .catchall {:try_start_197 .. :try_end_199} :catchall_1a9
+    :try_start_1cd
+    aput-object v9, v5, v20
+    :try_end_1cf
+    .catchall {:try_start_1cd .. :try_end_1cf} :catchall_1df
 
     const/16 v17, 0x1
 
-    :try_start_19b
-    aput-object v25, v4, v17
+    :try_start_1d1
+    aput-object v25, v5, v17
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v1, v3, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
-    .line 127
+    .line 132
     .local v3, "tMethod":Ljava/lang/reflect/Method;
     filled-new-array {v10, v0}, [Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v2, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_20c
+    goto :goto_242
 
-    .line 132
+    .line 137
     .end local v0    # "po":Ljava/lang/Object;
     .end local v1    # "pClass":Ljava/lang/Class;
     .end local v2    # "pSingleton":Ljava/lang/Object;
     .end local v3    # "tMethod":Ljava/lang/reflect/Method;
     .end local v25    # "poClass":Ljava/lang/Class;
-    :catchall_1a9
+    :catchall_1df
     move-exception v0
 
-    goto :goto_1c0
+    goto :goto_1f6
 
-    .line 129
+    .line 134
     .restart local v0    # "po":Ljava/lang/Object;
     .restart local v1    # "pClass":Ljava/lang/Class;
     .restart local v2    # "pSingleton":Ljava/lang/Object;
     .restart local v25    # "poClass":Ljava/lang/Class;
-    :cond_1ab
+    :cond_1e1
     const/16 v17, 0x1
 
     const/16 v20, 0x0
@@ -760,45 +823,45 @@
     const-string v3, "P4.p.P() returned null \u2014 notification skipped"
 
     invoke-static {v11, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1b4
-    .catchall {:try_start_19b .. :try_end_1b4} :catchall_1b5
+    :try_end_1ea
+    .catchall {:try_start_1d1 .. :try_end_1ea} :catchall_1eb
 
-    goto :goto_20c
+    goto :goto_242
 
-    .line 132
+    .line 137
     .end local v0    # "po":Ljava/lang/Object;
     .end local v1    # "pClass":Ljava/lang/Class;
     .end local v2    # "pSingleton":Ljava/lang/Object;
     .end local v25    # "poClass":Ljava/lang/Class;
-    :catchall_1b5
+    :catchall_1eb
     move-exception v0
 
-    goto :goto_1e2
+    goto :goto_218
 
-    :catchall_1b7
+    :catchall_1ed
     move-exception v0
 
     const/16 v17, 0x1
 
     const/16 v20, 0x0
 
-    goto :goto_1e2
+    goto :goto_218
 
-    :catchall_1bd
+    :catchall_1f3
     move-exception v0
 
     move/from16 v20, v2
 
-    :goto_1c0
+    :goto_1f6
     const/16 v17, 0x1
 
-    goto :goto_1e2
+    goto :goto_218
 
-    .end local v26    # "f0":Ljava/lang/reflect/Method;
-    .end local v27    # "hClass":Ljava/lang/Class;
-    .local v2, "f0":Ljava/lang/reflect/Method;
-    .local v3, "hClass":Ljava/lang/Class;
-    :catchall_1c3
+    .end local v26    # "hClass":Ljava/lang/Class;
+    .end local v27    # "singleton":Ljava/lang/Object;
+    .local v2, "hClass":Ljava/lang/Class;
+    .local v3, "singleton":Ljava/lang/Object;
+    :catchall_1f9
     move-exception v0
 
     move-object/from16 v26, v2
@@ -809,36 +872,36 @@
 
     const/16 v20, 0x0
 
-    goto :goto_1d6
+    goto :goto_20c
 
-    :catchall_1cd
+    :catchall_203
     move-exception v0
 
     move-object/from16 v26, v2
 
     move-object/from16 v27, v3
 
-    move/from16 v20, v4
+    move/from16 v20, v5
 
     const/16 v17, 0x1
 
-    .end local v2    # "f0":Ljava/lang/reflect/Method;
-    .end local v3    # "hClass":Ljava/lang/Class;
-    .restart local v26    # "f0":Ljava/lang/reflect/Method;
-    .restart local v27    # "hClass":Ljava/lang/Class;
-    :goto_1d6
-    goto :goto_1e2
+    .end local v2    # "hClass":Ljava/lang/Class;
+    .end local v3    # "singleton":Ljava/lang/Object;
+    .restart local v26    # "hClass":Ljava/lang/Class;
+    .restart local v27    # "singleton":Ljava/lang/Object;
+    :goto_20c
+    goto :goto_218
 
-    .end local v21    # "singleton":Ljava/lang/Object;
-    .end local v26    # "f0":Ljava/lang/reflect/Method;
-    .end local v27    # "hClass":Ljava/lang/Class;
-    .local v1, "singleton":Ljava/lang/Object;
-    .restart local v2    # "f0":Ljava/lang/reflect/Method;
-    .restart local v3    # "hClass":Ljava/lang/Class;
-    :catchall_1d7
+    .end local v24    # "effSender":Ljava/lang/String;
+    .end local v26    # "hClass":Ljava/lang/Class;
+    .end local v27    # "singleton":Ljava/lang/Object;
+    .local v1, "effSender":Ljava/lang/String;
+    .restart local v2    # "hClass":Ljava/lang/Class;
+    .restart local v3    # "singleton":Ljava/lang/Object;
+    :catchall_20d
     move-exception v0
 
-    move-object/from16 v21, v1
+    move-object/from16 v24, v1
 
     move-object/from16 v26, v2
 
@@ -848,16 +911,16 @@
 
     const/16 v20, 0x0
 
-    .line 133
-    .end local v1    # "singleton":Ljava/lang/Object;
-    .end local v2    # "f0":Ljava/lang/reflect/Method;
-    .end local v3    # "hClass":Ljava/lang/Class;
+    .line 138
+    .end local v1    # "effSender":Ljava/lang/String;
+    .end local v2    # "hClass":Ljava/lang/Class;
+    .end local v3    # "singleton":Ljava/lang/Object;
     .local v0, "e":Ljava/lang/Throwable;
-    .restart local v21    # "singleton":Ljava/lang/Object;
-    .restart local v26    # "f0":Ljava/lang/reflect/Method;
-    .restart local v27    # "hClass":Ljava/lang/Class;
-    :goto_1e2
-    :try_start_1e2
+    .restart local v24    # "effSender":Ljava/lang/String;
+    .restart local v26    # "hClass":Ljava/lang/Class;
+    .restart local v27    # "singleton":Ljava/lang/Object;
+    :goto_218
+    :try_start_218
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -897,15 +960,15 @@
     move-result-object v1
 
     invoke-static {v11, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_20c
-    .catchall {:try_start_1e2 .. :try_end_20c} :catchall_213
+    :try_end_242
+    .catchall {:try_start_218 .. :try_end_242} :catchall_246
 
-    .line 137
+    .line 142
     .end local v0    # "e":Ljava/lang/Throwable;
-    :goto_20c
+    :goto_242
     move/from16 v9, v17
 
-    .end local v5    # "s0Class":Ljava/lang/Class;
+    .end local v4    # "f0":Ljava/lang/reflect/Method;
     .end local v8    # "recipients":Ljava/lang/Object;
     .end local v9    # "j0Class":Ljava/lang/Class;
     .end local v10    # "msg":Ljava/lang/Object;
@@ -913,92 +976,117 @@
     .end local v13    # "lCtor":Ljava/lang/reflect/Constructor;
     .end local v14    # "recipient":Ljava/lang/Object;
     .end local v15    # "nClass":Ljava/lang/Class;
-    .end local v21    # "singleton":Ljava/lang/Object;
-    .end local v26    # "f0":Ljava/lang/reflect/Method;
-    .end local v27    # "hClass":Ljava/lang/Class;
-    goto :goto_262
+    .end local v21    # "s0Class":Ljava/lang/Class;
+    .end local v26    # "hClass":Ljava/lang/Class;
+    .end local v27    # "singleton":Ljava/lang/Object;
+    goto/16 :goto_2d1
 
-    .line 138
-    :catchall_20f
+    .line 143
+    :catchall_246
     move-exception v0
+
+    goto :goto_27b
+
+    .end local v24    # "effSender":Ljava/lang/String;
+    .restart local v1    # "effSender":Ljava/lang/String;
+    :catchall_248
+    move-exception v0
+
+    move-object/from16 v24, v1
 
     const/16 v20, 0x0
 
-    goto :goto_236
+    goto :goto_257
 
-    :catchall_213
+    :catchall_24e
     move-exception v0
 
-    goto :goto_236
+    move-object/from16 v24, v1
+
+    goto :goto_257
+
+    :catchall_252
+    move-exception v0
+
+    move-object/from16 v24, v1
+
+    move/from16 v20, v3
+
+    .end local v1    # "effSender":Ljava/lang/String;
+    .restart local v24    # "effSender":Ljava/lang/String;
+    :goto_257
+    goto :goto_27b
 
     .end local v19    # "skipNotif":Z
-    .restart local v4    # "skipNotif":Z
-    :catchall_215
+    .end local v24    # "effSender":Ljava/lang/String;
+    .restart local v1    # "effSender":Ljava/lang/String;
+    .local v4, "skipNotif":Z
+    :catchall_258
     move-exception v0
 
-    goto :goto_21a
+    move-object/from16 v24, v1
 
-    :catchall_217
-    move-exception v0
+    move/from16 v20, v2
 
-    move/from16 v20, v1
-
-    :goto_21a
     move/from16 v19, v4
 
-    goto :goto_222
+    goto :goto_267
 
-    :catchall_21d
+    :catchall_260
     move-exception v0
+
+    move-object/from16 v24, v1
 
     move/from16 v19, v4
 
     const/16 v20, 0x0
 
+    .end local v1    # "effSender":Ljava/lang/String;
     .end local v4    # "skipNotif":Z
     .restart local v19    # "skipNotif":Z
-    :goto_222
-    goto :goto_236
+    .restart local v24    # "effSender":Ljava/lang/String;
+    :goto_267
+    goto :goto_27b
 
     .end local v19    # "skipNotif":Z
-    .end local v22    # "effSender":Ljava/lang/String;
-    .end local v23    # "recipientIdOverride":J
-    .local v1, "effSender":Ljava/lang/String;
+    .end local v22    # "recipientIdOverride":J
+    .end local v24    # "effSender":Ljava/lang/String;
+    .restart local v1    # "effSender":Ljava/lang/String;
     .local v2, "recipientIdOverride":J
     .restart local v4    # "skipNotif":Z
-    :catchall_223
+    :catchall_268
     move-exception v0
 
-    move-object/from16 v22, v1
+    move-object/from16 v24, v1
 
-    move-wide/from16 v23, v2
+    move-wide/from16 v22, v2
 
     move/from16 v19, v4
 
     const/16 v20, 0x0
 
-    goto :goto_236
+    goto :goto_27b
 
-    :catchall_22d
+    :catchall_272
     move-exception v0
 
-    move-object/from16 v22, v1
+    move-object/from16 v24, v1
 
-    move-wide/from16 v23, v2
+    move-wide/from16 v22, v2
 
     move/from16 v19, v4
 
     move/from16 v20, v9
 
-    .line 139
+    .line 144
     .end local v1    # "effSender":Ljava/lang/String;
     .end local v2    # "recipientIdOverride":J
     .end local v4    # "skipNotif":Z
     .restart local v0    # "e":Ljava/lang/Throwable;
     .restart local v19    # "skipNotif":Z
-    .restart local v22    # "effSender":Ljava/lang/String;
-    .restart local v23    # "recipientIdOverride":J
-    :goto_236
+    .restart local v22    # "recipientIdOverride":J
+    .restart local v24    # "effSender":Ljava/lang/String;
+    :goto_27b
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1039,11 +1127,53 @@
 
     invoke-static {v11, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
+    .line 146
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "RCV-DB writeIncoming FAIL "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 145
+    invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 148
     move/from16 v9, v20
 
-    .line 80
+    .line 82
     .end local v0    # "e":Ljava/lang/Throwable;
-    :goto_262
+    :goto_2d1
     return v9
 .end method
