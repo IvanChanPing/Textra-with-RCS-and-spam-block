@@ -1,0 +1,69 @@
+================================================================
+  WIRING THE RUST "libgm" CRATE INTO YOUR APP
+  (plain-language guide — for a human developer)
+================================================================
+
+WHAT IT IS
+----------
+`messaging-engine-rust/` is a Rust library that speaks the Google Messages
+"Messages for web" protocol — the same protocol the Google Messages
+website uses to pair with your phone, send texts, and receive them.
+
+You do NOT call Rust directly. The crate is compiled to a native `.so`
+library and comes with auto-generated Kotlin "bindings" (via a tool
+called UniFFI) — so from your app you just call ordinary Kotlin classes.
+
+WHAT YOUR PROJECT NEEDS
+-----------------------
+This is the bigger of the two integrations. You need:
+  - a Rust toolchain (rustup),
+  - the Android NDK,
+  - `cargo-ndk` (one `cargo install cargo-ndk`).
+If you don't build Rust today, budget time for setting that up once.
+
+THE STEPS, IN ORDER
+-------------------
+1. CROSS-COMPILE THE LIBRARY.
+   Inside `messaging-engine-rust/` there is a `build.sh`. Point it at your
+   NDK and run it. It produces `libtextrcs_libgm.so` for all four
+   Android CPU types (arm64-v8a, armeabi-v7a, x86, x86_64).
+
+2. ADD THE LIBRARY TO YOUR APP.
+   Copy each `libtextrcs_libgm.so` into your app module under
+   `src/main/jniLibs/<abi>/`. Android packages and loads them
+   automatically.
+
+3. ADD THE KOTLIN BINDINGS.
+   The crate already ships the generated Kotlin file at
+   `generated/uniffi/uniffi/textrcs_libgm/textrcs_libgm.kt`. Copy it
+   into your source tree, keeping the folder path `uniffi/textrcs_libgm/`
+   (Kotlin package `uniffi.textrcs_libgm`).
+
+4. ADD TWO GRADLE DEPENDENCIES.
+   The generated bindings use JNA and Kotlin coroutines:
+       implementation("net.java.dev.jna:jna:5.13.0@aar")
+       implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+       implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+5. CALL IT.
+   The main class is `uniffi.textrcs_libgm.RustClient`:
+     - construct it with a `RustSession` (your saved pairing details);
+     - call `connect(...)`, passing an object that implements
+       `RustEventSink` — the crate calls back into that for every
+       incoming message;
+     - call `sendText(phoneNumber, messageBody)` to send.
+   Incoming messages arrive on `RustEventSink.onDataEvent(...)` as the
+   raw `UpdateEvents` protobuf bytes for your app to parse.
+
+ABOUT PAIRING
+-------------
+`RustClient` handles SEND and RECEIVE once you already have a paired
+session. Getting that paired session in the first place — the Google
+sign-in and the secure handshake with the phone — is a separate flow.
+The crate includes the cryptography for it, but the Google login screen
+and the HTTP calls are something your app drives. See the crate's
+`PHASE_9_WIRING.md`. Treat pairing as a later milestone; get send/receive
+building first.
+
+The detailed, step-by-step technical version of all this — written so an
+AI assistant can execute it — is in Instructions for the AI.md, section 1.

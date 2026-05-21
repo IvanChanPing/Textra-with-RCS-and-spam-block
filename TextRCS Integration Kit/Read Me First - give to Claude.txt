@@ -1,0 +1,82 @@
+================================================================
+  READ THIS FIRST
+  Hand this whole folder to Claude (or any capable AI coding
+  assistant) before touching anything else.
+================================================================
+
+WHAT THIS FOLDER IS
+-------------------
+An integration hand-off bundle. It contains two pieces of working
+software plus the instructions to wire them into an Android
+messaging app's SOURCE CODE — a normal Gradle / Android Studio
+project, NOT a decompiled or smali-patched APK:
+
+  1. messaging-engine-rust/  — a Rust port of the Google Messages "libgm"
+     web protocol library (the client half of the open-source
+     mautrix-gmessages bridge). It speaks the Google Messages
+     pairing + send + receive protocol and is exposed to Kotlin /
+     Java through UniFFI bindings.
+
+  2. A rounded-corner parallax Activity transition — the iOS /
+     OnePlus look where a screen slides in with rounded leading
+     corners while the screen behind it dims. Built entirely with
+     standard Android APIs.
+
+
+INSTRUCTIONS FOR THE AI READING THIS
+------------------------------------
+A human has given you this folder because they want to integrate
+the above into their app. Do the following IN ORDER:
+
+  STEP 1 — Read every file in this bundle now:
+
+    Read Me First - give to Claude.txt
+        This file.
+    Instructions for the AI.md
+        The detailed technical playbook, written for you. This is
+        your primary working reference for both integrations.
+    Guide 1 - Adding the Messaging Engine.txt
+        Plain-language guide to the Rust crate integration — the
+        human-facing version of Instructions for the AI.md section 1.
+    Guide 2 - Rounded-Corner Slide Animation.txt
+        Plain-language guide to the parallax + rounded corners —
+        the human-facing version of Instructions for the AI.md section 2.
+    messaging-engine-rust/
+        The Rust crate source. Read its README.md, CHANGELOG.md,
+        and PHASE_9_WIRING.md.
+    Files to Add to Your App/
+        Ready-to-use source files:
+          ConvoCornerAnim.kt              — corner/dim/parallax animator
+          res/anim/textrcs_overlay_*.xml  — the 4 slide animations
+          res/values/styles-parallax-snippet.xml — styles to merge
+    TextRCS-reference-build.apk
+        A reference build of the finished app — install it on a
+        device to see both integrations working. For comparison
+        only; you do not modify or rebuild this APK.
+
+  STEP 2 — Do NOT edit any of the human's code yet.
+
+  STEP 3 — In your NEXT reply to the human, explain — in plain,
+  non-jargon language:
+    - what this bundle contains, one line per file (the file name
+      and what it is / does);
+    - what the two integrations actually achieve for their app;
+    - what their project must have for each:
+        * Rust crate: a Rust toolchain, the Android NDK, and
+          cargo-ndk — this is the larger, more involved integration;
+        * parallax/corners: nothing unusual — plain Kotlin + XML;
+    - the high-level sequence of steps for each integration;
+    - then ASK the human:
+        (a) which of the two they want to start with, and
+        (b) whether their project is genuine source code or a
+            decompiled APK — these instructions assume real source;
+            if it is a decompiled APK, say so and stop, because the
+            wiring is different.
+
+  STEP 4 — Only after the human answers, begin the work, following
+  Instructions for the AI.md.
+
+Be honest with the human about effort and risk. Do not promise the
+Rust integration is quick — it needs a working NDK and a
+cross-compile step. The parallax/corners integration is small and
+self-contained and is a safe place to start.

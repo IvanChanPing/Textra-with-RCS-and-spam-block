@@ -1,0 +1,113 @@
+[package]
+name = "textrcs_libgm"
+version = "0.14.0"
+edition = "2021"
+rust-version = "1.95"
+description = "Rust port of mautrix-gmessages/pkg/libgm. JNI-bridged for the textrcs-standalone Android app."
+license = "MIT OR Apache-2.0"
+
+# Build .so files for Android JNI consumption. cdylib emits a system shared
+# library (.so) loadable from Java's System.loadLibrary(). staticlib kept for
+# host-side unit tests that link the crate without JNI.
+[lib]
+name = "textrcs_libgm"
+crate-type = ["cdylib", "staticlib", "rlib"]
+
+# UniFFI 0.28 needs a small bin target to run the Kotlin/Swift bindings
+# generator. Keeps the .so loadable from System.loadLibrary() while
+# letting us regenerate Kotlin bindings on demand via
+# `cargo run --bin uniffi-bindgen -- generate --library ...`.
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+
+[dependencies]
+# --- Protobuf ---
+# prost generates Rust structs from .proto at compile time (replaces Go's
+# .pb.go layer — same .proto inputs, see /proto/).
+# prost-reflect provides runtime reflection (DescriptorPool, DynamicMessage)
+# — the equivalent of Go's protoreflect, which pblite walks dynamically.
+prost = "0.14"
+prost-types = "0.14"
+prost-reflect = { version = "0.16", features = ["derive", "serde"] }
+once_cell = "1"  # for lazy_static-style descriptor pool init
+
+# --- Async runtime ---
+# Direct equivalent of Go's goroutine+channel model: tokio futures + mpsc.
+tokio = { version = "1", features = ["full"] }
+
+# --- HTTP + streaming ---
+# reqwest for Tachyon RPC calls (replaces net/http) and long-poll streaming
+# response body. Use rustls instead of native-tls to avoid system OpenSSL on
+# Android (musl/aarch64 cross-compile pain).
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls", "gzip"] }
+bytes = "1"
+http = "1"
+url = "2"
+
+# --- Crypto stack (matches libgm/crypto/*.go) ---
+aes-gcm = "0.10"            # aesgcm.go
+aes     = "0.8"             # aesctr.go base
+ctr     = "0.9"             # aesctr.go stream cipher
+hmac    = "0.12"            # AES-CTR HMAC layer
+sha2    = "0.10"            # HMAC-SHA256
+sha1    = "0.10"            # request-signing fallback
+p256    = { version = "0.13", features = ["ecdh", "ecdsa", "pkcs8"] }
+hkdf    = "0.12"            # session key derivation
+rand    = { version = "0.8", features = ["getrandom"] }
+rand_core = "0.6"
+base64  = "0.22"
+hex     = "0.4"
+
+# --- Serialization ---
+# AuthData / SessionStore round-trip = JSON. Direct port of struct json tags.
+serde       = { version = "1", features = ["derive"] }
+serde_json  = "1"
+serde_bytes = "0.11"
+
+# --- Errors ---
+thiserror = "1"
+anyhow    = "1"
+
+# --- Logging (Android logcat surface via android_logger when on Android) ---
+log = "0.4"
+
+# --- UUID for request IDs ---
+uuid = { version = "1", features = ["v4"] }
+
+# --- UniFFI: Kotlin bindings generator + scaffolding macros ---
+# UniFFI emits the .so JNI exports + Kotlin glue from src/lib.udl. Mozilla
+# Firefox + matrix-rust-sdk ship on this exact stack. Chose over jni-rs
+# because we have ~25 exposed Client methods + async fns; UniFFI generates
+# them all from one .udl file vs hand-writing per-method JNI signatures.
+uniffi = { version = "0.28", features = ["build", "cli", "tokio"] }
+
+# --- Android-only logger glue (so log::info!() writes to logcat) ---
+[target.'cfg(target_os = "android")'.dependencies]
+android_logger = "0.14"
+jni            = "0.21"
+
+[build-dependencies]
+prost-build         = "0.14"
+prost-reflect-build = "0.16"   # wraps prost-build + emits ReflectMessage impls
+uniffi              = { version = "0.28", features = ["build"] }
+
+[features]
+default = []
+# Enable to skip the JNI/UniFFI export layer when building the crate for
+# host-side cargo test (faster turnaround for unit-testing the protocol
+# layer without an emulator).
+no-ffi = []
+
+# --- Profile tuning for shipped Android .so size ---
+# Per bitdrift's published Rust-mobile-size guidance: opt-level=s, LTO,
+# panic=abort, codegen-units=1, strip=debuginfo gets the lib down to ~1MB
+# compressed from a ~5MB unstripped baseline. References:
+#   https://blog.bitdrift.io/post/optimizing-rust-mobile-sdk-binary-size
+[profile.release]
+opt-level     = "s"
+lto           = "fat"
+codegen-units = 1
+panic         = "abort"
+strip         = "debuginfo"
+incremental   = false

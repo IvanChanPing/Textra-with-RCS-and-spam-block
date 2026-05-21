@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Old (conv-list) screen slides part-way left while new screen overlays it.
+     This is what produces the "pushed underneath" iOS/OnePlus look.
+     v0.42: 280ms → 350ms; matches enter for synchronized motion.
+     v0.46: added alpha 1.0→0.85 to give the underlying layer a subtle
+     "dim" while the foreground covers it (iOS UINavigationController
+     parallax behaviour). Against a dark app background this reads as
+     a shade fading in over the underneath; on light themes it reads
+     as a slight desaturation. True overlay dim would need a separate
+     drawn view in ConvoActivity onCreate (not anim-XML-only). -->
+<!-- v0.51: reverted v0.48's 450ms because the 100ms duration mismatch
+     against the foreground's 350ms left a visible right-edge gap during
+     back-out (window background showing where the foreground had already
+     finished sliding off but underneath still hadn't reached x=0). Both
+     anims back to 350ms — synced. To preserve the "slower" feel without
+     a duration mismatch, dropped translate distance from -30%p to -20%p
+     (same time, less travel = lower pixels-per-ms = visually slower). -->
+<set xmlns:a="http://schemas.android.com/apk/res/android" a:shareInterpolator="true"
+    a:interpolator="@android:interpolator/fast_out_slow_in"
+    a:duration="350">
+    <translate a:fromXDelta="0" a:toXDelta="-20%p" />
+    <alpha a:fromAlpha="1.0" a:toAlpha="0.70" />
+</set>

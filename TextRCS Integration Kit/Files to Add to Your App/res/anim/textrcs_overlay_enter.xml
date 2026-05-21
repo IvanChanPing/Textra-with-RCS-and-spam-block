@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- New (conv-view) screen slides fully in from the right. iOS/OnePlus parallax.
+     v0.42: 280ms → 350ms for a smoother, more frame-dense feel (matches iOS
+     UINavigationController push). -->
+<translate xmlns:a="http://schemas.android.com/apk/res/android"
+    a:fromXDelta="100%p"
+    a:toXDelta="0"
+    a:duration="350"
+    a:interpolator="@android:interpolator/fast_out_slow_in"/>

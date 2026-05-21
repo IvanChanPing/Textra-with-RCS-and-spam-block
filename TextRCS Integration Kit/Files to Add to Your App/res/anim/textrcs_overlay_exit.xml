@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- New (conv-view) screen slides fully out to the right on close.
+     v0.42: 240ms → 350ms and fast_out_linear_in → fast_out_slow_in to
+     match the open transition. -->
+<translate xmlns:a="http://schemas.android.com/apk/res/android"
+    a:fromXDelta="0"
+    a:toXDelta="100%p"
+    a:duration="350"
+    a:interpolator="@android:interpolator/fast_out_slow_in"/>

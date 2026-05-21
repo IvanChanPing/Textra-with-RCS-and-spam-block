@@ -4,3 +4,4 @@ build/
 *.apkm
 *.apk.dropbox-stub.json
 textrcs.keystore
+/TextRCS-Integration-Kit.zip

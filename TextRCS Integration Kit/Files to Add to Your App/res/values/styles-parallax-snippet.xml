@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  styles-parallax-snippet.xml  —  NOT a drop-in file by itself.
+
+  MERGE the two <style> blocks below into your project's res/values/styles.xml
+  (or themes.xml). Do not copy this whole file in as-is.
+
+  STEP 1 — the sliding Activity's theme.
+  Find (or create) the theme used by the Activity that should slide in with
+  rounded corners — call it ConvoActivityTheme below — and add these three
+  items to it. The translucency two are REQUIRED for ConvoCornerAnim's clip
+  to reveal the screen behind (an opaque window clips to black/square).
+
+      <item name="android:windowAnimationStyle">@style/ParallaxAnimation</item>
+      <item name="android:windowIsTranslucent">true</item>
+      <item name="android:windowBackground">@android:color/transparent</item>
+
+  Example (adjust the name + parent to your project):
+-->
+<resources>
+
+    <style name="ConvoActivityTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- ...your existing theme items... -->
+        <item name="android:windowAnimationStyle">@style/ParallaxAnimation</item>
+        <!-- REQUIRED for the rounded-corner clip to show the screen behind: -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--
+      STEP 2 — the parallax transition itself. This wires the
+      res/anim/textrcs_overlay_*.xml files (also in "Files to Add to Your
+      App/") to the open/close of the Activity. The "enter"/"exit" anims
+      slide the INCOMING Activity. The two "partial" anims are meant for
+      the screen behind — but with a translucent theme Android skips them,
+      so ConvoCornerAnim.kt slides the screen behind in code instead. They
+      are left wired as a harmless fallback for non-translucent setups.
+      The corner rounding + dim are also done by ConvoCornerAnim.kt.
+    -->
+    <style name="ParallaxAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/textrcs_overlay_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/textrcs_overlay_partial_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/textrcs_overlay_partial_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/textrcs_overlay_exit</item>
+    </style>
+
+</resources>

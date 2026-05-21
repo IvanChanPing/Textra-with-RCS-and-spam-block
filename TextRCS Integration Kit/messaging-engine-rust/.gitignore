@@ -1,0 +1,5 @@
+target/
+jniLibs-out/
+generated-kotlin/
+Cargo.lock
+*.so

@@ -1,0 +1,93 @@
+================================================================
+  THE PARALLAX SLIDE + ROUNDED-CORNER TRANSITION
+  (plain-language guide — for a human developer)
+================================================================
+
+WHAT IT IS
+----------
+The effect where opening a screen makes it slide in from the right with
+softly rounded leading corners, while the screen behind it slides
+slightly and dims — and the reverse on the way back. The iOS / OnePlus
+"card" navigation feel.
+
+It is built entirely from standard Android APIs. No native code, no
+external libraries. For your source-code project this is a small,
+self-contained, low-risk change — a good place to start.
+
+WHY IT TAKES FOUR PIECES
+------------------------
+A normal Android screen transition animates the window as a plain
+rectangle — the animation files can translate/scale/fade but cannot
+round a corner. So the rounding has to be done as a separate clip that
+is animated alongside the slide. And making the window see-through (so a
+clipped corner reveals the screen behind) has a side effect that has to
+be repaired. Hence four pieces:
+
+  1. The sliding screen's theme is made translucent with a transparent
+     background — so a clipped-away corner is genuinely see-through.
+  2. Four small animation XML files do the actual slide.
+  3. A small Kotlin class clips the window to a rounded rectangle and
+     animates the corner radius.
+  4. A translucent top screen makes Android stop BOTH dimming AND
+     sliding the screen below — so that same Kotlin class re-adds the
+     dim AND the parallax slide of the screen behind itself.
+
+(The side effect in piece 4 is easy to miss: with a translucent top
+screen, the two "partial" animation XMLs that are meant to slide the
+screen behind never run — Android skips them. The Kotlin class drives
+that motion instead, which is why it needs to know which screen is
+behind — see step 4 below.)
+
+WHAT'S IN THE BUNDLE FOR THIS
+-----------------------------
+In `Files to Add to Your App/`:
+  - ConvoCornerAnim.kt
+        The corner-clip + dim animator. Clean, no dependencies.
+  - res/anim/textrcs_overlay_enter.xml
+    res/anim/textrcs_overlay_exit.xml
+    res/anim/textrcs_overlay_partial_enter.xml
+    res/anim/textrcs_overlay_partial_exit.xml
+        The four slide animations (incoming screen + the screen behind,
+        for both open and close).
+  - res/values/styles-parallax-snippet.xml
+        The theme/style changes — to MERGE into your styles, not copy
+        wholesale. It has comments explaining exactly what to merge.
+
+THE STEPS, IN ORDER
+-------------------
+1. Drop the four `res/anim/textrcs_overlay_*.xml` files into your app's
+   `res/anim/` folder.
+
+2. Open `styles-parallax-snippet.xml` and follow its comments: add three
+   items to the theme of the screen that should slide, and add the
+   `ParallaxAnimation` style.
+
+3. Drop `ConvoCornerAnim.kt` into your source. Change its `package`
+   line to match your project.
+
+4. Register it once. In your `Application.onCreate()`, add:
+       ConvoCornerAnim.registerActivityTracking(this)
+   This lets it find the screen behind so it can parallax it. If your
+   project has no Application subclass, a ContentProvider's `onCreate`
+   works just as well — it only has to run once at app start.
+
+5. In that sliding screen's Activity, add two one-line calls:
+     - in `onCreate(...)`, right after `super.onCreate(...)`:
+           ConvoCornerAnim.attach(this)
+     - on the back / close path, before the screen finishes:
+           ConvoCornerAnim.attachClose(this)
+
+That's the whole thing. Build and run.
+
+HOW TO TELL IT'S WORKING
+------------------------
+Don't look at the screen once it has settled — by then the corners have
+already squared off (intended: zero ongoing cost afterwards). Watch the
+transition itself, mid-slide: the incoming screen's leading edge should
+show a clear rounded corner at top and bottom, and the screen behind
+should be visibly darker AND slid slightly to the left (the parallax).
+On modern phones the corner radius matches the phone's own screen
+corners; on older devices it falls back to 28dp.
+
+The detailed, step-by-step technical version — written so an AI
+assistant can execute it — is in Instructions for the AI.md, section 2.
