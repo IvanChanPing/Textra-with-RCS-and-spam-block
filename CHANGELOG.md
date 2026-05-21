@@ -1,5 +1,44 @@
 # TextRCS Changelog
 
+## v0.75.0 — 2026-05-21 — receive: thread by real phone, not participantID
+
+Received messages were threading into bogus conversations. Verified live
+on the redroid emulator: a reply from `+15163416499` was written into
+Textra with `sender=3343` — `3343` is the libgm-internal `participantID`,
+not a phone number — so Textra created a junk conversation keyed by that
+int. Textra's DB confirmed the damage: stale convos `^+3343^` and (after a
+half-fix) `^+5163416499^` alongside the real `^+15163416499^` thread.
+
+### Fixes — all in `IncomingMessageHandler.kt`
+
+1. **Sender is now a real E.164 phone.** Resolved, in order, from the
+   message's own `senderParticipant` (a full `Participant`), then a
+   `participantID -> phone` cache built from `ConversationEvent`s, then the
+   conversation's primary participant; the raw `participantID` is only a
+   last-resort fallback (and logs a warning). The phone is taken from
+   `Participant.id.number` (E.164, e.g. `+15163416499`) in preference to
+   `formattedNumber` (display form `(516) 341-6499`, no country code) —
+   `SmsPdu` always encodes the address as international (TOA 0x91), so a
+   number without a country code threads to the wrong international number.
+2. **messageID de-duplication.** Google replays the same push 2-3x on the
+   long-poll; a bounded `seenMessageIds` set drops the repeats so each
+   message is written once.
+3. **Timestamp microseconds -> milliseconds.** libgm timestamps are
+   microseconds; Textra's receive flow wants ms. Values above 1e14 are
+   divided by 1000, so received messages no longer get a far-future date.
+
+Delivery still goes through Textra's own SMS receive flow
+(`TextraDbBridge` -> synthesized `SMS_DELIVER` -> `c5.d.U`); Textra does
+the threading, contact match and display formatting itself.
+
+Verified end-to-end on the emulator against Textra's `messaging.db`:
+post-fix inbound replies land in convo 12 (`lookup_key ^+15163416499^`,
+shown as `(516) 341-6499`) — the same thread as the outgoing message.
+
+New hooks (inert in the clean build, kept for the every-change-gets-a-hook
+convention): `incoming_dedup_disable`, `incoming_sender_skip_resolution`,
+`incoming_ts_skip_micros_fix`.
+
 ## v0.74.0 — 2026-05-21 — parallax fix: the screen behind now moves
 
 The rounded-corner transition (v0.71.0) made `AppTheme.ConvoActivity`

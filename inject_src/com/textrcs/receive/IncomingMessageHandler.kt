@@ -10,26 +10,35 @@ import com.textrcs.gmproto.events.UpdateEvents
 /**
  * Dispatcher for `UpdateEvents` server pushes (incoming-message containers).
  *
- * Today's responsibilities (real, not stub):
- *   - Recognise the `MessageEvent` sub-event and log details (sender, body
- *     preview, conversation id, timestamp) — Textra's notification builder
- *     reads from Textra's own DB, so we cannot fully wire the notification
- *     trigger without bridging into `C6894H.m8737F0` (next slice).
- *   - Log conversation events for diagnostic visibility on first-run.
+ * Delivers received messages into Textra's DB via [TextraDbBridge].
  *
- * The DB write surface is `com.mplus.lib.r4.H` (Textra's central data facade,
- * jadx C6894H). Wiring is left to a follow-on commit where we'll either:
- *   - Reflect into `m8737F0` with a constructed `C6949s0` (fragile; obfuscated
- *     names move between Textra releases), OR
- *   - Add a small smali shim class under our package that bridges to the
- *     same DB layer.
+ * Sender identity
+ * ---------------
+ * A `Message`'s `participantID` is a libgm-internal short int (e.g. "3343"),
+ * NOT a phone number. Handing it to Textra as the SMS sender threads the
+ * message into a bogus conversation keyed by that int instead of the real
+ * contact thread. The real E.164 phone is resolved, in order, from:
+ *   1. the message's own `senderParticipant` (a full `Participant`),
+ *   2. a [participantPhone] cache built from `ConversationEvent`s,
+ *   3. the conversation's primary participant phone,
+ *   4. — last resort — the raw `participantID` (the old, broken behaviour).
  *
- * Until that bridge lands, incoming messages are received in real time but
- * stay in our process (visible in logcat via TextRCSIncoming tag).
+ * The same message id is also de-duplicated: Google replays a push 2-3x on
+ * the long-poll, and the libgm timestamp is microseconds (Textra wants ms).
  */
 object IncomingMessageHandler {
 
     private const val TAG = "TextRCSIncoming"
+
+    /** libgm participantID -> resolved E.164/dialable phone. */
+    private val participantPhone = HashMap<String, String>()
+    /** conversationID -> primary (first non-self) participant phone. */
+    private val convPrimaryPhone = HashMap<String, String>()
+    /** recently delivered messageIDs — guards against long-poll replay. */
+    private val seenMessageIds = LinkedHashSet<String>()
+    private const val SEEN_CAP = 400
+    /** libgm timestamps above this are microseconds, not milliseconds. */
+    private const val MICROS_THRESHOLD = 100_000_000_000_000L
 
     fun onUpdateEvents(context: Context, events: UpdateEvents) {
         // [REMOTE_HOOK v0.58] incoming_drop_all — kill-switch for all
@@ -38,63 +47,215 @@ object IncomingMessageHandler {
             ScreenTracer.note("RCV onUpdateEvents DROPPED by hook incoming_drop_all")
             return
         }
-        // v0.71: route the receive→DB diagnostics through ScreenTracer so
-        // they reach the auto-upload — the old Log.i/Log.w lines only hit
-        // logcat, so any receive failure past this point was invisible.
         ScreenTracer.note(
             "RCV onUpdateEvents msg=${events.hasMessageEvent()} " +
                 "conv=${events.hasConversationEvent()} typing=${events.hasTypingEvent()}"
         )
-        if (events.hasMessageEvent()) {
-            for (data in events.messageEvent.dataList) {
-                Log.i(
-                    TAG,
-                    "msg id=${data.messageID} conv=${data.conversationID} " +
-                        "ts=${data.timestamp} tmpId=${data.tmpID} parts=${data.messageInfoCount}"
-                )
-                // [REMOTE_HOOK v0.58] incoming_write_own_sends — bypass the
-                // "skip when tmpID present" guard (so we mirror our outbound
-                // sends into Textra's DB as if they were inbound — useful
-                // when Textra's own send path didn't persist them).
-                val isOwnSend = !data.tmpID.isBlank()
-                val shouldWrite = !isOwnSend || Hooks.shouldSkip("incoming_write_own_sends")
-                ScreenTracer.note(
-                    "RCV msg id=${data.messageID} conv=${data.conversationID} " +
-                        "tmpId=${data.tmpID.ifBlank { "<none>" }} parts=${data.messageInfoCount} " +
-                        "isOwnSend=$isOwnSend shouldWrite=$shouldWrite"
-                )
-                if (shouldWrite) {
-                    val textParts = data.messageInfoList
-                        .mapNotNull { mi -> mi.messageContent?.content }
-                        .filter { it.isNotEmpty() }
-                    if (textParts.isNotEmpty()) {
-                        val body = textParts.joinToString("\n")
-                        // [REMOTE_HOOK v0.58] incoming_sender_use_conv — fall
-                        // back to conversationID instead of participantID.
-                        val useConv = Hooks.shouldSkip("incoming_sender_use_conv")
-                        val sender = if (useConv) data.conversationID
-                                     else data.participantID.ifBlank { data.conversationID }
-                        val ts = if (data.timestamp > 0) data.timestamp else System.currentTimeMillis()
-                        val wrote = TextraDbBridge.writeIncoming(sender, body, ts)
-                        Log.i(TAG, "wrote-to-textra-db=$wrote sender=$sender len=${body.length}")
-                        ScreenTracer.note(
-                            "RCV writeIncoming=$wrote sender.tail=${sender.takeLast(6)} " +
-                                "body.len=${body.length}"
-                        )
-                    } else {
-                        ScreenTracer.note("RCV msg SKIP — no text messageContent parts")
-                    }
-                }
+        // Conversation events first: they carry the participant lists that
+        // warm the phone cache for any message events in the same batch.
+        if (events.hasConversationEvent()) {
+            for (conv in events.conversationEvent.dataList) {
+                cacheConversation(conv)
             }
         }
-        if (events.hasConversationEvent()) {
-            for (data in events.conversationEvent.dataList) {
-                Log.i(TAG, "convo id=${data.conversationID} name=${data.name}")
-                ScreenTracer.note("RCV convo id=${data.conversationID}")
+        if (events.hasMessageEvent()) {
+            for (data in events.messageEvent.dataList) {
+                handleMessage(data)
             }
         }
         if (events.hasTypingEvent()) {
             Log.d(TAG, "typing convo=${events.typingEvent.data.conversationID}")
         }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // Conversation cache
+    // ─────────────────────────────────────────────────────────────────────
+
+    private fun cacheConversation(conv: com.textrcs.gmproto.conversations.Conversation) {
+        Log.i(
+            TAG,
+            "convo id=${conv.conversationID} name=${conv.name} " +
+                "parts=${conv.participantsList.size} others=${conv.otherParticipantsList.size}"
+        )
+        val all = ArrayList<com.textrcs.gmproto.conversations.Participant>()
+        all.addAll(conv.participantsList)
+        var primary: String? = null
+        for (p in all) {
+            val pid = p.getID().participantID
+            val phone = participantPhoneOf(p)
+            Log.i(
+                TAG,
+                "  participant pid=$pid isMe=${p.isMe} " +
+                    "fmt=${p.formattedNumber} idNum=${p.getID().number} -> $phone"
+            )
+            if (p.isMe) continue
+            if (phone != null) {
+                if (pid.isNotBlank()) participantPhone[pid] = phone
+                if (primary == null) primary = phone
+            }
+        }
+        // For an unsaved number GM uses the number itself as the name.
+        if (primary == null) {
+            val n = normalizePhone(conv.name)
+            if (looksLikePhone(n)) primary = n
+        }
+        if (primary != null) convPrimaryPhone[conv.conversationID] = primary
+    }
+
+    /**
+     * Best phone for a participant.
+     *
+     * `id.number` is the E.164 form with the country code ("+15163416499");
+     * `formattedNumber` is display-only and drops it ("(516) 341-6499").
+     * [SmsPdu] always encodes the originating address as international
+     * (type-of-address 0x91), so a number missing the country code threads
+     * to the wrong international number — always prefer a candidate that
+     * carries a leading '+'.
+     */
+    private fun participantPhoneOf(
+        p: com.textrcs.gmproto.conversations.Participant,
+    ): String? {
+        val idNum = normalizePhone(p.getID().number)
+        val fmt = normalizePhone(p.formattedNumber)
+        if (idNum.startsWith("+") && looksLikePhone(idNum)) return idNum
+        if (fmt.startsWith("+") && looksLikePhone(fmt)) return fmt
+        if (looksLikePhone(idNum)) return idNum
+        if (looksLikePhone(fmt)) return fmt
+        return null
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // Message handling
+    // ─────────────────────────────────────────────────────────────────────
+
+    private fun handleMessage(data: com.textrcs.gmproto.conversations.Message) {
+        Log.i(
+            TAG,
+            "msg id=${data.messageID} conv=${data.conversationID} " +
+                "ts=${data.timestamp} tmpId=${data.tmpID} parts=${data.messageInfoCount} " +
+                "hasSenderParticipant=${data.hasSenderParticipant()}"
+        )
+        // [REMOTE_HOOK v0.58] incoming_write_own_sends — also mirror our own
+        // outbound sends into Textra's DB (normally skipped via tmpID).
+        val isOwnSend = !data.tmpID.isBlank()
+        val shouldWrite = !isOwnSend || Hooks.shouldSkip("incoming_write_own_sends")
+        if (!shouldWrite) {
+            Log.i(TAG, "  skip own-send id=${data.messageID}")
+            return
+        }
+
+        val textParts = data.messageInfoList
+            .mapNotNull { mi -> mi.messageContent?.content }
+            .filter { it.isNotEmpty() }
+        if (textParts.isEmpty()) {
+            Log.i(TAG, "  skip id=${data.messageID} — no text messageContent parts")
+            ScreenTracer.note("RCV msg SKIP — no text messageContent parts")
+            return
+        }
+        val body = textParts.joinToString("\n")
+
+        // [REMOTE_HOOK v0.75] incoming_dedup_disable — disable the
+        // messageID replay guard. Google pushes the same message 2-3x on
+        // the long-poll; without this every push becomes a duplicate row.
+        if (!Hooks.shouldSkip("incoming_dedup_disable") &&
+            seenMessageIds.contains(data.messageID)
+        ) {
+            Log.i(TAG, "  DEDUP skip already-delivered id=${data.messageID}")
+            return
+        }
+
+        val sender = resolveSenderPhone(data)
+        val ts = normalizeTimestamp(data.timestamp)
+        Log.i(
+            TAG,
+            "  sender=${sender.value} via=${sender.source} " +
+                "(rawParticipantID=${data.participantID}) tsMs=$ts"
+        )
+        val wrote = TextraDbBridge.writeIncoming(sender.value, body, ts)
+        Log.i(TAG, "  wrote-to-textra-db=$wrote sender=${sender.value} len=${body.length}")
+        ScreenTracer.note(
+            "RCV writeIncoming=$wrote sender.tail=${sender.value.takeLast(6)} " +
+                "via=${sender.source} body.len=${body.length}"
+        )
+        if (wrote) {
+            seenMessageIds.add(data.messageID)
+            while (seenMessageIds.size > SEEN_CAP) {
+                seenMessageIds.remove(seenMessageIds.first())
+            }
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // Sender resolution
+    // ─────────────────────────────────────────────────────────────────────
+
+    private class Sender(val value: String, val source: String)
+
+    private fun resolveSenderPhone(
+        data: com.textrcs.gmproto.conversations.Message,
+    ): Sender {
+        // [REMOTE_HOOK v0.75] incoming_sender_skip_resolution — revert to
+        // the old raw-participantID behaviour for debugging.
+        if (Hooks.shouldSkip("incoming_sender_skip_resolution")) {
+            return Sender(data.participantID, "hook-raw-participantID")
+        }
+        // [REMOTE_HOOK v0.58] incoming_sender_use_conv — force the
+        // conversationID instead (rarely useful; kept for parity).
+        if (Hooks.shouldSkip("incoming_sender_use_conv")) {
+            return Sender(data.conversationID, "hook-conversationID")
+        }
+
+        // 1. The message's own senderParticipant (self-contained, best).
+        if (data.hasSenderParticipant()) {
+            val phone = participantPhoneOf(data.senderParticipant)
+            if (phone != null) {
+                val pid = data.senderParticipant.getID().participantID
+                if (pid.isNotBlank()) participantPhone[pid] = phone
+                return Sender(phone, "senderParticipant")
+            }
+        }
+        // 2. participantID -> phone, from a cached ConversationEvent.
+        participantPhone[data.participantID]?.let {
+            return Sender(it, "cache-participant")
+        }
+        // 3. The conversation's primary participant phone.
+        convPrimaryPhone[data.conversationID]?.let {
+            return Sender(it, "cache-conversation")
+        }
+        // 4. Last resort — the raw participantID (the old, broken path).
+        Log.w(
+            TAG,
+            "could NOT resolve a phone for participantID=${data.participantID} " +
+                "conv=${data.conversationID} — message will thread wrong"
+        )
+        return Sender(data.participantID, "FALLBACK-raw-participantID")
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // Helpers
+    // ─────────────────────────────────────────────────────────────────────
+
+    /** Keep a single leading '+' and digits; drop spaces, dashes, parens. */
+    private fun normalizePhone(raw: String?): String {
+        if (raw.isNullOrBlank()) return ""
+        val sb = StringBuilder()
+        for (c in raw) {
+            if (c == '+' && sb.isEmpty()) sb.append('+')
+            else if (c in '0'..'9') sb.append(c)
+        }
+        return sb.toString()
+    }
+
+    private fun looksLikePhone(s: String): Boolean =
+        s.count { it in '0'..'9' } >= 7
+
+    /** libgm timestamps are microseconds; Textra's receive flow wants ms. */
+    private fun normalizeTimestamp(raw: Long): Long {
+        if (raw <= 0L) return System.currentTimeMillis()
+        // [REMOTE_HOOK v0.75] incoming_ts_skip_micros_fix — pass the raw
+        // timestamp through unchanged (debugging only).
+        if (Hooks.shouldSkip("incoming_ts_skip_micros_fix")) return raw
+        return if (raw > MICROS_THRESHOLD) raw / 1000L else raw
     }
 }
