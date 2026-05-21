@@ -151,6 +151,26 @@ object IncomingMessageHandler {
             return
         }
 
+        // System / status ("tombstone") messages — `MessageStatusType`
+        // values >= 200 (TOMBSTONE_*): libgm conversation-status notices
+        // ("Texting with X (SMS/MMS)", "RCS chat with X", group created,
+        // "now end-to-end encrypted", participant joined/left, …). These
+        // must NOT be delivered as SMS bubbles. Textra renders its own
+        // conversation-status lines from its own SMS/MMS/RCS state, so the
+        // libgm tombstones are redundant — they are dropped here.
+        // [REMOTE_HOOK v0.84] incoming_deliver_system_msgs — deliver anyway.
+        if (data.hasMessageStatus() &&
+            data.messageStatus.statusValue >= 200 &&
+            !Hooks.shouldSkip("incoming_deliver_system_msgs")
+        ) {
+            Log.i(
+                TAG,
+                "  SYSTEM/tombstone msg id=${data.messageID} " +
+                    "status=${data.messageStatus.status} — dropped (not a bubble)"
+            )
+            return
+        }
+
         val textParts = data.messageInfoList
             .mapNotNull { mi -> mi.messageContent?.content }
             .filter { it.isNotEmpty() }

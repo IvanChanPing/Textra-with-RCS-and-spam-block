@@ -1,5 +1,19 @@
 # TextRCS Changelog
 
+## v0.84.0 — 2026-05-21 — drop libgm system/tombstone messages
+
+libgm conversation-status notices ("Texting with X (SMS/MMS)", "RCS chat
+with X", group created, "now end-to-end encrypted", participant
+joined/left) were being delivered as normal SMS bubbles. They are
+detected by `MessageStatusType >= 200` (the `TOMBSTONE_*` range) and
+dropped — Textra renders its own conversation-status lines from its own
+state, so the libgm tombstones are redundant. Hook
+`incoming_deliver_system_msgs` reverts. (Rendering them as Textra inline
+status rows instead of dropping is a noted follow-up.)
+
+Added `docs/RECEIVE_PIPELINE.md` — a source-code guide to the whole
+receive path (sender resolution, system messages, MMS).
+
 ## v0.83.0 — 2026-05-21 — guard against stub conversations
 
 A message whose sender does not resolve to a real phone (resolution
