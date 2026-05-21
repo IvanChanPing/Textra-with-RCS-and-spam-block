@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/PairingSession$UniffiCleanAction\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4211:1\n315#2:4212\n275#2,4:4213\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/PairingSession$UniffiCleanAction\n*L\n2410#1:4212\n2410#1:4213,4\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/PairingSession$UniffiCleanAction\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4220:1\n315#2:4221\n275#2,4:4222\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/PairingSession$UniffiCleanAction\n*L\n2410#1:4221\n2410#1:4222,4\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -77,7 +77,7 @@
     .local v1, "$i$a$-let-PairingSession$UniffiCleanAction$run$1":I
     const/4 v2, 0x0
 
-    .line 4212
+    .line 4221
     .local v2, "$i$f$uniffiRustCall":I
     sget-object v3, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -86,13 +86,13 @@
     .local v3, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v4, 0x0
 
-    .line 4213
+    .line 4222
     .local v4, "$i$f$uniffiRustCallWithError":I
     new-instance v5, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v5}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 4214
+    .line 4223
     .local v5, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v6, v5
 
@@ -116,18 +116,18 @@
     .end local v7    # "$i$a$-uniffiRustCall-PairingSession$UniffiCleanAction$run$1$1":I
     sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 4214
+    .line 4223
     nop
 
-    .line 4215
+    .line 4224
     .local v6, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v3, v5}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 4216
+    .line 4225
     nop
 
-    .line 4212
+    .line 4221
     .end local v3    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v4    # "$i$f$uniffiRustCallWithError":I
     .end local v5    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;

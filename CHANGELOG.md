@@ -1,5 +1,28 @@
 # TextRCS Changelog
 
+## v0.70.0 — 2026-05-21 — Rust libgm crate bumped to v0.13.0 (full re-audit fixes)
+
+Picks up `textrcs_libgm` v0.13.0 — a full line-by-line re-audit of the
+Rust crate against mautrix-gmessages Go v0.2604.0 that found and fixed 8
+send/receive divergences (C4/C5 + D3-D10). See the crate's CHANGELOG for
+the per-fix detail; the send-affecting one is D3 (`GetOrCreateConversation`
+`ContactNumber.mysteriousInt` corrected 7 → 2 to match mautrix).
+
+### Changes on the textrcs side
+
+- New `.so` (all 4 ABIs) + regenerated UniFFI Kotlin bindings dropped in.
+- `RustEventSink.onDataEvent` gained an `unencryptedData` parameter (Rust
+  crate fix D6) — the FFI now carries the frame's plaintext
+  `unencrypted_data` so Kotlin can see the `{0x72,0x00}` "Gaia logged
+  out" sentinel that Go's `handleUpdatesEvent` checks.
+- `RustBridge.Sink.onDataEvent` updated for the new signature and now
+  detects that sentinel: a GET_UPDATES frame with no decrypted payload
+  and `unencrypted_data == {0x72,0x00}` is logged as "Gaia logged out —
+  re-pair required" (gated by the `gaia_loggedout_detect` remote hook).
+
+No textra2 behaviour change beyond the logged-out detection — this is a
+crate-correctness bump.
+
 ## v0.69.0 — 2026-05-20 — send + receive switched to the Rust libgm crate
 
 After ~27 versions chasing the same send bug in the hand-written Kotlin

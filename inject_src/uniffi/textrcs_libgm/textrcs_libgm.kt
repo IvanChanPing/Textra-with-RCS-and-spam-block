@@ -662,7 +662,7 @@ internal interface UniffiForeignFutureCompleteVoid : com.sun.jna.Callback {
     fun callback(`callbackData`: Long,`result`: UniffiForeignFutureStructVoid.UniffiByValue,)
 }
 internal interface UniffiCallbackInterfaceRustEventSinkMethod0 : com.sun.jna.Callback {
-    fun callback(`uniffiHandle`: Long,`action`: Int,`decryptedData`: RustBuffer.ByValue,`isOld`: Byte,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
+    fun callback(`uniffiHandle`: Long,`action`: Int,`decryptedData`: RustBuffer.ByValue,`unencryptedData`: RustBuffer.ByValue,`isOld`: Byte,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
 }
 internal interface UniffiCallbackInterfaceRustEventSinkMethod1 : com.sun.jna.Callback {
     fun callback(`uniffiHandle`: Long,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,)
@@ -919,7 +919,7 @@ internal interface UniffiLib : Library {
     ): Unit
     fun uniffi_textrcs_libgm_fn_init_callback_vtable_rusteventsink(`vtable`: UniffiVTableCallbackInterfaceRustEventSink,
     ): Unit
-    fun uniffi_textrcs_libgm_fn_method_rusteventsink_on_data_event(`ptr`: Pointer,`action`: Int,`decryptedData`: RustBuffer.ByValue,`isOld`: Byte,uniffi_out_err: UniffiRustCallStatus, 
+    fun uniffi_textrcs_libgm_fn_method_rusteventsink_on_data_event(`ptr`: Pointer,`action`: Int,`decryptedData`: RustBuffer.ByValue,`unencryptedData`: RustBuffer.ByValue,`isOld`: Byte,uniffi_out_err: UniffiRustCallStatus, 
     ): Unit
     fun uniffi_textrcs_libgm_fn_method_rusteventsink_on_phone_not_responding(`ptr`: Pointer,uniffi_out_err: UniffiRustCallStatus, 
     ): Unit
@@ -1205,7 +1205,7 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_send_text() != 30300.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
-    if (lib.uniffi_textrcs_libgm_checksum_method_rusteventsink_on_data_event() != 56229.toShort()) {
+    if (lib.uniffi_textrcs_libgm_checksum_method_rusteventsink_on_data_event() != 30388.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rusteventsink_on_phone_not_responding() != 26354.toShort()) {
@@ -3083,8 +3083,12 @@ public interface RustEventSink {
     /**
      * An unsolicited DataEvent arrived. `decrypted_data` is the
      * AES-CTR-decrypted inner payload (None if the frame had none).
+     * `unencrypted_data` is the frame's plaintext `unencrypted_data`
+     * field (None if empty) — Kotlin needs it to detect the
+     * `{0x72,0x00}` "Gaia logged out" sentinel that Go's
+     * `handleUpdatesEvent` checks (event_handler.go:221).
      */
-    fun `onDataEvent`(`action`: kotlin.Int, `decryptedData`: kotlin.ByteArray?, `isOld`: kotlin.Boolean)
+    fun `onDataEvent`(`action`: kotlin.Int, `decryptedData`: kotlin.ByteArray?, `unencryptedData`: kotlin.ByteArray?, `isOld`: kotlin.Boolean)
     
     /**
      * The ditto pinger decided the phone is offline.
@@ -3204,12 +3208,16 @@ open class RustEventSinkImpl: Disposable, AutoCloseable, RustEventSink {
     /**
      * An unsolicited DataEvent arrived. `decrypted_data` is the
      * AES-CTR-decrypted inner payload (None if the frame had none).
-     */override fun `onDataEvent`(`action`: kotlin.Int, `decryptedData`: kotlin.ByteArray?, `isOld`: kotlin.Boolean)
+     * `unencrypted_data` is the frame's plaintext `unencrypted_data`
+     * field (None if empty) — Kotlin needs it to detect the
+     * `{0x72,0x00}` "Gaia logged out" sentinel that Go's
+     * `handleUpdatesEvent` checks (event_handler.go:221).
+     */override fun `onDataEvent`(`action`: kotlin.Int, `decryptedData`: kotlin.ByteArray?, `unencryptedData`: kotlin.ByteArray?, `isOld`: kotlin.Boolean)
         = 
     callWithPointer {
     uniffiRustCall() { _status ->
     UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rusteventsink_on_data_event(
-        it, FfiConverterInt.lower(`action`),FfiConverterOptionalByteArray.lower(`decryptedData`),FfiConverterBoolean.lower(`isOld`),_status)
+        it, FfiConverterInt.lower(`action`),FfiConverterOptionalByteArray.lower(`decryptedData`),FfiConverterOptionalByteArray.lower(`unencryptedData`),FfiConverterBoolean.lower(`isOld`),_status)
 }
     }
     
@@ -3301,12 +3309,13 @@ public abstract class FfiConverterCallbackInterface<CallbackInterface: Any>: Ffi
 // Put the implementation in an object so we don't pollute the top-level namespace
 internal object uniffiCallbackInterfaceRustEventSink {
     internal object `onDataEvent`: UniffiCallbackInterfaceRustEventSinkMethod0 {
-        override fun callback(`uniffiHandle`: Long,`action`: Int,`decryptedData`: RustBuffer.ByValue,`isOld`: Byte,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
+        override fun callback(`uniffiHandle`: Long,`action`: Int,`decryptedData`: RustBuffer.ByValue,`unencryptedData`: RustBuffer.ByValue,`isOld`: Byte,`uniffiOutReturn`: Pointer,uniffiCallStatus: UniffiRustCallStatus,) {
             val uniffiObj = FfiConverterTypeRustEventSink.handleMap.get(uniffiHandle)
             val makeCall = { ->
                 uniffiObj.`onDataEvent`(
                     FfiConverterInt.lift(`action`),
                     FfiConverterOptionalByteArray.lift(`decryptedData`),
+                    FfiConverterOptionalByteArray.lift(`unencryptedData`),
                     FfiConverterBoolean.lift(`isOld`),
                 )
             }

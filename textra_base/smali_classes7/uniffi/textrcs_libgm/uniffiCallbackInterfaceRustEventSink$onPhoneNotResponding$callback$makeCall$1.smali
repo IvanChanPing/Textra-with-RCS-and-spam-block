@@ -66,7 +66,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .registers 2
 
-    .line 3320
+    .line 3329
     invoke-virtual {p0}, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneNotResponding$callback$makeCall$1;->invoke()V
 
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -77,11 +77,11 @@
 .method public final invoke()V
     .registers 2
 
-    .line 3321
+    .line 3330
     iget-object v0, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneNotResponding$callback$makeCall$1;->$uniffiObj:Luniffi/textrcs_libgm/RustEventSink;
 
     invoke-interface {v0}, Luniffi/textrcs_libgm/RustEventSink;->onPhoneNotResponding()V
 
-    .line 3323
+    .line 3332
     return-void
 .end method

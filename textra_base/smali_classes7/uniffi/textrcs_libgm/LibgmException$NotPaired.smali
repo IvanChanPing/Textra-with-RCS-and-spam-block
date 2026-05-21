@@ -40,12 +40,12 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 3928
+    .line 3937
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Luniffi/textrcs_libgm/LibgmException;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 3927
+    .line 3936
     return-void
 .end method
 
@@ -54,7 +54,7 @@
 .method public getMessage()Ljava/lang/String;
     .registers 2
 
-    .line 3930
+    .line 3939
     const-string v0, ""
 
     return-object v0

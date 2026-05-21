@@ -28,7 +28,7 @@ object LogUploader {
     private const val TAG = "TextRCSLogUploader"
     private const val URL_STRING = "https://example.invalid/api/logs/auto-upload"
     private const val BUILD_TYPE = "textrcs"
-    private const val BUILD_NUMBER = "v0.69.0"
+    private const val BUILD_NUMBER = "v0.70.0"
 
     private val executor = Executors.newSingleThreadExecutor { r ->
         Thread(r, "TextRCS-LogUploader").apply { isDaemon = true }

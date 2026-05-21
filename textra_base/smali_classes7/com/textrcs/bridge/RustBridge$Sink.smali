@@ -18,7 +18,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0004\u0008\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\"\u0010\u0007\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\u00062\u0008\u0010\n\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\u000c\u001a\u00020\rH\u0016J\u0010\u0010\u000e\u001a\u00020\u00082\u0006\u0010\u000f\u001a\u00020\u0006H\u0016J\u0008\u0010\u0010\u001a\u00020\u0008H\u0016J\u0008\u0010\u0011\u001a\u00020\u0008H\u0016R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082D\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
+        "\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0004\u0008\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J,\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\u00062\u0008\u0010\u000c\u001a\u0004\u0018\u00010\u00082\u0008\u0010\r\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u000e\u001a\u00020\u000fH\u0016J\u0010\u0010\u0010\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u0006H\u0016J\u0008\u0010\u0012\u001a\u00020\nH\u0016J\u0008\u0010\u0013\u001a\u00020\nH\u0016R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082D\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/bridge/RustBridge$Sink;",
@@ -28,11 +28,13 @@
         "(Landroid/content/Context;)V",
         "actionGetUpdates",
         "",
+        "gaiaLoggedOut",
+        "",
         "onDataEvent",
         "",
         "action",
         "decryptedData",
-        "",
+        "unencryptedData",
         "isOld",
         "",
         "onPairEvent",
@@ -55,6 +57,8 @@
 
 .field private final appContext:Landroid/content/Context;
 
+.field private final gaiaLoggedOut:[B
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -75,19 +79,37 @@
 
     iput v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->actionGetUpdates:I
 
+    .line 79
+    const/4 v0, 0x2
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_18
+
+    iput-object v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->gaiaLoggedOut:[B
+
     .line 72
     return-void
+
+    nop
+
+    :array_18
+    .array-data 1
+        0x72t
+        0x0t
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public onDataEvent(I[BZ)V
-    .registers 9
+.method public onDataEvent(I[B[BZ)V
+    .registers 10
     .param p1, "action"    # I
     .param p2, "decryptedData"    # [B
-    .param p3, "isOld"    # Z
+    .param p3, "unencryptedData"    # [B
+    .param p4, "isOld"    # Z
 
-    .line 77
+    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,7 +130,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -138,10 +160,59 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 78
-    if-eqz p3, :cond_48
+    .line 93
+    sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    .line 81
+    const-string v1, "gaia_loggedout_detect"
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v3, v2, v3}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+
+    move-result v0
+
+    const-string v1, "TextRCSRustBridge"
+
+    if-nez v0, :cond_58
+
+    .line 94
+    iget v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->actionGetUpdates:I
+
+    if-ne p1, v0, :cond_58
+
+    if-nez p2, :cond_58
+
+    .line 95
+    if-eqz p3, :cond_58
+
+    iget-object v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->gaiaLoggedOut:[B
+
+    invoke-static {p3, v0}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_58
+
+    .line 97
+    const-string v0, "RUST onDataEvent \u2014 GAIA LOGGED OUT (re-pair required)"
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 98
+    const-string v0, "Gaia session logged out server-side \u2014 re-pairing required"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 99
+    return-void
+
+    .line 101
+    :cond_58
+    if-eqz p4, :cond_71
+
+    .line 104
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,18 +233,16 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 82
+    .line 105
     return-void
 
-    .line 84
-    :cond_48
+    .line 107
+    :cond_71
     iget v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->actionGetUpdates:I
 
-    const-string v1, "TextRCSRustBridge"
+    if-eq p1, v0, :cond_8c
 
-    if-eq p1, v0, :cond_65
-
-    .line 85
+    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -194,29 +263,29 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
+    .line 109
     return-void
 
-    .line 88
-    :cond_65
-    if-nez p2, :cond_68
+    .line 111
+    :cond_8c
+    if-nez p2, :cond_8f
 
     return-void
 
-    :cond_68
+    :cond_8f
     move-object v0, p2
 
-    .line 89
+    .line 112
     .local v0, "bytes":[B
     nop
 
-    .line 90
-    :try_start_6a
+    .line 113
+    :try_start_91
     invoke-static {v0}, Lcom/textrcs/gmproto/events/UpdateEvents;->parseFrom([B)Lcom/textrcs/gmproto/events/UpdateEvents;
 
     move-result-object v2
 
-    .line 91
+    .line 114
     .local v2, "events":Lcom/textrcs/gmproto/events/UpdateEvents;
     sget-object v3, Lcom/textrcs/receive/IncomingMessageHandler;->INSTANCE:Lcom/textrcs/receive/IncomingMessageHandler;
 
@@ -225,17 +294,17 @@
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     invoke-virtual {v3, v4, v2}, Lcom/textrcs/receive/IncomingMessageHandler;->onUpdateEvents(Landroid/content/Context;Lcom/textrcs/gmproto/events/UpdateEvents;)V
-    :try_end_78
-    .catchall {:try_start_6a .. :try_end_78} :catchall_79
+    :try_end_9f
+    .catchall {:try_start_91 .. :try_end_9f} :catchall_a0
 
     .end local v2    # "events":Lcom/textrcs/gmproto/events/UpdateEvents;
-    goto :goto_c0
+    goto :goto_e7
 
-    .line 92
-    :catchall_79
+    .line 115
+    :catchall_a0
     move-exception v2
 
-    .line 93
+    .line 116
     .local v2, "e":Ljava/lang/Throwable;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -279,7 +348,7 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 94
+    .line 117
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -304,9 +373,9 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
+    .line 119
     .end local v2    # "e":Ljava/lang/Throwable;
-    :goto_c0
+    :goto_e7
     return-void
 .end method
 
@@ -314,7 +383,7 @@
     .registers 4
     .param p1, "route"    # I
 
-    .line 110
+    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -337,44 +406,44 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
+    .line 134
     return-void
 .end method
 
 .method public onPhoneNotResponding()V
     .registers 3
 
-    .line 99
+    .line 122
     const-string v0, "RUST onPhoneNotResponding"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 100
+    .line 123
     const-string v0, "TextRCSRustBridge"
 
     const-string v1, "phone not responding"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
+    .line 124
     return-void
 .end method
 
 .method public onPhoneRespondingAgain()V
     .registers 3
 
-    .line 104
+    .line 127
     const-string v0, "RUST onPhoneRespondingAgain"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 105
+    .line 128
     const-string v0, "TextRCSRustBridge"
 
     const-string v1, "phone responding again"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
+    .line 129
     return-void
 .end method

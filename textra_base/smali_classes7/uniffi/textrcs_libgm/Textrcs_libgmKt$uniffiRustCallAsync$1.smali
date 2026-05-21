@@ -48,7 +48,7 @@
         0x0
     }
     l = {
-        0x1074
+        0x107d
     }
     m = "uniffiRustCallAsync"
     n = {

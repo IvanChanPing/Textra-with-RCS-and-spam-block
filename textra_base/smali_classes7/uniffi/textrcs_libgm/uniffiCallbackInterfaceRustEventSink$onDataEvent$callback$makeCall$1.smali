@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent;->callback(JILuniffi/textrcs_libgm/RustBuffer$ByValue;BLcom/sun/jna/Pointer;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
+    value = Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent;->callback(JILuniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/RustBuffer$ByValue;BLcom/sun/jna/Pointer;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -51,12 +51,14 @@
 
 .field final synthetic $isOld:B
 
+.field final synthetic $unencryptedData:Luniffi/textrcs_libgm/RustBuffer$ByValue;
+
 .field final synthetic $uniffiObj:Luniffi/textrcs_libgm/RustEventSink;
 
 
 # direct methods
-.method constructor <init>(Luniffi/textrcs_libgm/RustEventSink;ILuniffi/textrcs_libgm/RustBuffer$ByValue;B)V
-    .registers 6
+.method constructor <init>(Luniffi/textrcs_libgm/RustEventSink;ILuniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/RustBuffer$ByValue;B)V
+    .registers 7
 
     iput-object p1, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$uniffiObj:Luniffi/textrcs_libgm/RustEventSink;
 
@@ -64,7 +66,9 @@
 
     iput-object p3, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$decryptedData:Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    iput-byte p4, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$isOld:B
+    iput-object p4, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$unencryptedData:Luniffi/textrcs_libgm/RustBuffer$ByValue;
+
+    iput-byte p5, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$isOld:B
 
     const/4 v0, 0x0
 
@@ -78,7 +82,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .registers 2
 
-    .line 3306
+    .line 3314
     invoke-virtual {p0}, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->invoke()V
 
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -87,12 +91,12 @@
 .end method
 
 .method public final invoke()V
-    .registers 6
+    .registers 7
 
-    .line 3307
+    .line 3315
     iget-object v0, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$uniffiObj:Luniffi/textrcs_libgm/RustEventSink;
 
-    .line 3308
+    .line 3316
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterInt;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterInt;
 
     iget v2, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$action:I
@@ -105,7 +109,7 @@
 
     move-result v1
 
-    .line 3309
+    .line 3317
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;
 
     iget-object v3, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$decryptedData:Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -116,22 +120,33 @@
 
     check-cast v2, [B
 
-    .line 3310
-    sget-object v3, Luniffi/textrcs_libgm/FfiConverterBoolean;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterBoolean;
+    .line 3318
+    sget-object v3, Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;
 
-    iget-byte v4, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$isOld:B
+    iget-object v4, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$unencryptedData:Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    invoke-virtual {v3, v4}, Luniffi/textrcs_libgm/FfiConverterBoolean;->lift(B)Ljava/lang/Boolean;
+    invoke-virtual {v3, v4}, Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast v3, [B
 
-    move-result v3
+    .line 3319
+    sget-object v4, Luniffi/textrcs_libgm/FfiConverterBoolean;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterBoolean;
 
-    .line 3307
-    invoke-interface {v0, v1, v2, v3}, Luniffi/textrcs_libgm/RustEventSink;->onDataEvent(I[BZ)V
+    iget-byte v5, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$isOld:B
 
-    .line 3312
+    invoke-virtual {v4, v5}, Luniffi/textrcs_libgm/FfiConverterBoolean;->lift(B)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    .line 3315
+    invoke-interface {v0, v1, v2, v3, v4}, Luniffi/textrcs_libgm/RustEventSink;->onDataEvent(I[B[BZ)V
+
+    .line 3321
     return-void
 .end method

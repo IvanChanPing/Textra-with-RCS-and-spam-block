@@ -73,8 +73,31 @@ object RustBridge {
         // ActionType.GET_UPDATES == 16 (rpc.proto).
         private val actionGetUpdates = 16
 
-        override fun onDataEvent(action: Int, decryptedData: ByteArray?, isOld: Boolean) {
+        // Go's `hackyLoggedOutBytes` (event_handler.go:216) — the
+        // unencrypted_data sentinel of a GET_UPDATES frame that signals the
+        // Gaia session was logged out server-side.
+        private val gaiaLoggedOut = byteArrayOf(0x72, 0x00)
+
+        override fun onDataEvent(
+            action: Int,
+            decryptedData: ByteArray?,
+            unencryptedData: ByteArray?,
+            isOld: Boolean,
+        ) {
             ScreenTracer.note("RUST onDataEvent action=$action isOld=$isOld dec.len=${decryptedData?.size ?: 0}")
+            // [REMOTE_HOOK v0.70] gaia_loggedout_detect — port of Go
+            // handleUpdatesEvent's GaiaLoggedOut check (event_handler.go:221):
+            // a GET_UPDATES frame with no decrypted payload whose
+            // unencrypted_data == {0x72,0x00} means the Gaia session was
+            // logged out server-side and the user must re-pair.
+            if (!Hooks.shouldSkip("gaia_loggedout_detect") &&
+                action == actionGetUpdates && decryptedData == null &&
+                unencryptedData != null && unencryptedData.contentEquals(gaiaLoggedOut)
+            ) {
+                ScreenTracer.note("RUST onDataEvent — GAIA LOGGED OUT (re-pair required)")
+                Log.w(TAG, "Gaia session logged out server-side — re-pairing required")
+                return
+            }
             if (isOld) {
                 // Stale replayed frame — mautrix marks IsOld and suppresses
                 // re-emission. Do NOT re-insert into Textra's DB.

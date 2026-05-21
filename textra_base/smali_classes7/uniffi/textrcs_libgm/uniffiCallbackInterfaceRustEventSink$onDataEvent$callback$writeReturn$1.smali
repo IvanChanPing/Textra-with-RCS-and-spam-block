@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent;->callback(JILuniffi/textrcs_libgm/RustBuffer$ByValue;BLcom/sun/jna/Pointer;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
+    value = Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent;->callback(JILuniffi/textrcs_libgm/RustBuffer$ByValue;Luniffi/textrcs_libgm/RustBuffer$ByValue;BLcom/sun/jna/Pointer;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -80,7 +80,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 3313
+    .line 3322
     move-object v0, p1
 
     check-cast v0, Lkotlin/Unit;
@@ -99,6 +99,6 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3313
+    .line 3322
     return-void
 .end method
