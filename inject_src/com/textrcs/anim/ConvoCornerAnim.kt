@@ -4,14 +4,17 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
 import android.app.Activity
+import android.app.Application
 import android.graphics.Outline
 import android.os.Build
+import android.os.Bundle
 import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewOutlineProvider
 import android.view.WindowManager
 import android.view.animation.PathInterpolator
 import com.textrcs.control.Hooks
+import java.lang.ref.WeakReference
 
 /**
  * Rounds the ConvoActivity window's corners during the parallax slide and
@@ -70,6 +73,108 @@ object ConvoCornerAnim {
     private const val DIM_MAX = 0.35f
 
     private fun ease() = PathInterpolator(0.4f, 0f, 0.2f, 1f)  // fast_out_slow_in
+
+    // ── underneath-screen (conv-list) parallax ─────────────────────────────
+    // AppTheme.ConvoActivity is translucent (so the rounded corner reveals the
+    // conv-list). A translucent top activity makes the framework SKIP the
+    // conv-list's activityOpenExitAnimation — so textrcs_overlay_partial_exit
+    // never runs and the screen behind sits dead-still. The dim was already
+    // restored in code via FLAG_DIM_BEHIND; this restores the MOTION the same
+    // way — animating the conv-list activity's own content view, the activity
+    // found at runtime via ActivityLifecycleCallbacks.
+
+    // Conv-list slide distance as a fraction of its width — the -20%p of
+    // textrcs_overlay_partial_exit / _enter.
+    private const val PARALLAX_FRACTION = 0.20f
+
+    // Most-recently-resumed activities, newest first (weak refs).
+    private val recentResumed = ArrayList<WeakReference<Activity>>()
+
+    // True while attachClose's return-slide is animating the conv-list — stops
+    // onActivityResumed's safety-snap from cutting the slide short.
+    @Volatile private var underReturning = false
+
+    /**
+     * Register once at process boot (e.g. from a ContentProvider /
+     * Application.onCreate) so [attach] / [attachClose] can find the activity
+     * directly beneath the sliding ConvoActivity and parallax it.
+     */
+    @JvmStatic
+    fun registerActivityTracking(app: Application) {
+        app.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
+            override fun onActivityResumed(a: Activity) {
+                val it = recentResumed.iterator()
+                while (it.hasNext()) { val r = it.next().get(); if (r == null || r === a) it.remove() }
+                recentResumed.add(0, WeakReference(a))
+                // Safety net: an abnormal close (no attachClose) can leave the
+                // conv-list shifted. Snap it home when it resumes — unless a
+                // normal return-slide is mid-flight.
+                if (!underReturning) {
+                    val cv = contentView(a)
+                    if (cv != null && cv.translationX != 0f) cv.translationX = 0f
+                }
+            }
+            override fun onActivityDestroyed(a: Activity) {
+                val it = recentResumed.iterator()
+                while (it.hasNext()) { val r = it.next().get(); if (r == null || r === a) it.remove() }
+            }
+            override fun onActivityCreated(a: Activity, b: Bundle?) {}
+            override fun onActivityStarted(a: Activity) {}
+            override fun onActivityPaused(a: Activity) {}
+            override fun onActivityStopped(a: Activity) {}
+            override fun onActivitySaveInstanceState(a: Activity, b: Bundle) {}
+        })
+    }
+
+    /** The activity's content view (`android.R.id.content`) — parallax target. */
+    private fun contentView(a: Activity): View? =
+        try { a.window?.decorView?.findViewById<View>(android.R.id.content) } catch (_: Throwable) { null }
+
+    /** Nearest still-live activity beneath [top] — i.e. the conv-list. */
+    private fun activityBelow(top: Activity): Activity? {
+        for (ref in recentResumed) {
+            val a = ref.get() ?: continue
+            if (a === top || a.isFinishing) continue
+            if (Build.VERSION.SDK_INT >= 17 && a.isDestroyed) continue
+            return a
+        }
+        return null
+    }
+
+    /**
+     * Slide the conv-list to / from its parallax offset. [opening] true on
+     * open (0 → -fraction·width), false on close (current → 0).
+     */
+    private fun parallaxUnder(top: Activity, opening: Boolean) {
+        // [REMOTE_HOOK] convo_parallax_under_disable — turn off the
+        // underneath-screen parallax motion.
+        if (Hooks.shouldSkip("convo_parallax_under_disable")) return
+        val cv = activityBelow(top)?.let { contentView(it) } ?: return
+        // [REMOTE_HOOK] convo_parallax_under_fraction — slide distance as a
+        // fraction of the conv-list width (default 0.20 = -20%p).
+        val frac = Hooks.overrideDouble(
+            "convo_parallax_under_fraction", PARALLAX_FRACTION.toDouble()).toFloat()
+        // [REMOTE_HOOK] convo_parallax_under_ms — slide duration.
+        val ms = Hooks.overrideLong("convo_parallax_under_ms", DIM_MS)
+        val from: Float
+        val to: Float
+        if (opening) { from = 0f; to = -frac * cv.width } else { from = cv.translationX; to = 0f }
+        if (!opening) underReturning = true
+        ValueAnimator.ofFloat(from, to).apply {
+            duration = ms
+            interpolator = ease()
+            addUpdateListener { cv.translationX = it.animatedValue as Float }
+            addListener(object : AnimatorListenerAdapter() {
+                private fun done() {
+                    cv.translationX = to
+                    if (!opening) underReturning = false
+                }
+                override fun onAnimationEnd(animation: Animator) = done()
+                override fun onAnimationCancel(animation: Animator) = done()
+            })
+            start()
+        }
+    }
 
     /**
      * Resolves the corner radius (px) for the clip. The DEFAULT is the
@@ -154,6 +259,10 @@ object ConvoCornerAnim {
             }
         }
 
+        // Parallax the conv-list behind: the translucent window suppresses its
+        // activityOpenExitAnimation, so drive the -20%p shift here in code.
+        parallaxUnder(activity, opening = true)
+
         // Corner radius: HELD at radiusPx for CORNER_HOLD_MS (the slide), then
         // eased to 0. startDelay is what holds it — during the delay the
         // animator emits no values so state[0] stays at the full radius.
@@ -222,5 +331,8 @@ object ConvoCornerAnim {
                 start()
             }
         }
+
+        // Slide the conv-list behind back from its -20%p parallax offset to 0.
+        parallaxUnder(activity, opening = false)
     }
 }

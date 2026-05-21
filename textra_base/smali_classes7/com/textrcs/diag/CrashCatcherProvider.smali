@@ -49,7 +49,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 21
+    .line 24
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -67,7 +67,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 50
+    .line 57
     const/4 v0, 0x0
 
     return v0
@@ -81,7 +81,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 48
+    .line 55
     const/4 v0, 0x0
 
     return-object v0
@@ -96,7 +96,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 49
+    .line 56
     const/4 v0, 0x0
 
     return-object v0
@@ -105,10 +105,10 @@
 .method public onCreate()Z
     .registers 7
 
-    .line 24
+    .line 27
     nop
 
-    .line 25
+    .line 28
     const/4 v0, 0x1
 
     :try_start_2
@@ -143,9 +143,12 @@
 
     return v0
 
-    .line 26
+    .line 32
     .local v2, "app":Landroid/app/Application;
     :cond_19
+    invoke-static {v2}, Lcom/textrcs/anim/ConvoCornerAnim;->registerActivityTracking(Landroid/app/Application;)V
+
+    .line 33
     new-instance v1, Lcom/textrcs/protocol/SessionStore;
 
     move-object v3, v2
@@ -154,48 +157,48 @@
 
     invoke-direct {v1, v3}, Lcom/textrcs/protocol/SessionStore;-><init>(Landroid/content/Context;)V
 
-    .line 27
+    .line 34
     .local v1, "sessionStore":Lcom/textrcs/protocol/SessionStore;
     invoke-virtual {v1}, Lcom/textrcs/protocol/SessionStore;->load()Lcom/textrcs/protocol/GMessagesSession;
 
     move-result-object v3
 
-    if-eqz v3, :cond_37
+    if-eqz v3, :cond_3a
 
-    .line 28
+    .line 35
     new-instance v3, Landroid/content/Intent;
 
-    .line 29
+    .line 36
     move-object v4, v2
 
     check-cast v4, Landroid/content/Context;
 
     const-class v5, Lcom/textrcs/receive/ReceiveService;
 
-    .line 28
+    .line 35
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 31
+    .line 38
     .local v3, "svcIntent":Landroid/content/Intent;
     nop
 
-    .line 32
+    .line 39
     invoke-virtual {v2, v3}, Landroid/app/Application;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_35
-    .catchall {:try_start_2 .. :try_end_35} :catchall_36
+    :try_end_38
+    .catchall {:try_start_2 .. :try_end_38} :catchall_39
 
-    goto :goto_37
+    goto :goto_3a
 
-    .line 37
+    .line 44
     .end local v1    # "sessionStore":Lcom/textrcs/protocol/SessionStore;
     .end local v2    # "app":Landroid/app/Application;
     .end local v3    # "svcIntent":Landroid/content/Intent;
-    :catchall_36
+    :catchall_39
     move-exception v1
 
-    .line 40
-    :cond_37
-    :goto_37
+    .line 47
+    :cond_3a
+    :goto_3a
     return v0
 .end method
 
@@ -211,7 +214,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 47
+    .line 54
     const/4 v0, 0x0
 
     return-object v0
@@ -228,7 +231,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 53
+    .line 60
     const/4 v0, 0x0
 
     return v0

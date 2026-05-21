@@ -1,5 +1,38 @@
 # TextRCS Changelog
 
+## v0.74.0 — 2026-05-21 — parallax fix: the screen behind now moves
+
+The rounded-corner transition (v0.71.0) made `AppTheme.ConvoActivity`
+translucent so the clipped corner reveals the conv-list behind it. A
+side effect: a translucent top activity makes the framework **skip the
+activity-below's window animation**. v0.71 already handled this for the
+dim (it re-added `FLAG_DIM_BEHIND` in code) — but the *motion* half was
+missed: `textrcs_overlay_partial_exit` (the conv-list's -20%p parallax
+slide) silently never ran, so the screen behind sat dead-still.
+
+### Fix — drive the underneath slide from code
+
+`ConvoCornerAnim` now animates the conv-list's own content view,
+mirroring what the suppressed window animation would have done:
+- `registerActivityTracking(app)` — registered at process boot from
+  `CrashCatcherProvider.onCreate`; tracks resumed activities so the
+  activity directly beneath the ConvoActivity can be found at runtime
+  (no patching of Textra's conv-list activity needed).
+- On open, `attach` slides that activity's content view `0 → -20%p`; on
+  close, `attachClose` slides it back `-20%p → 0` — same 350ms /
+  fast_out_slow_in curve as the foreground slide.
+- Abnormal close (no `attachClose`) is caught: when the conv-list next
+  resumes, any leftover parallax offset is snapped home.
+
+The dim was already restored in v0.71; only the motion is new here. The
+`textrcs_overlay_partial_*` anim XMLs are now inert — left in place
+(harmless); the code path replaces them.
+
+New hooks (inert — `Hooks` is neutered in the clean build, kept for the
+every-change-gets-a-hook convention `ConvoCornerAnim` already follows):
+`convo_parallax_under_disable`, `convo_parallax_under_fraction`,
+`convo_parallax_under_ms`.
+
 ## v0.73.0 — 2026-05-21 — clean build: remote-control + logging stripped
 
 A clean variant for hand-off / distribution — all the development
@@ -8,11 +41,14 @@ auto-upload, the diagnostic boot providers) is turned off. No telemetry
 leaves the device; no remote command/override channel exists.
 
 What was stripped:
-- **Manifest** — removed the three textrcs boot `<provider>`s that
-  auto-started the instrumentation: `RemoteControlProvider` (the remote
-  command/override bus), `RustLibgmSmokeProvider` (the libgm smoke
-  test), `CrashCatcherProvider` (crash auto-upload). With these gone
-  none of that code initialises at process start.
+- **Manifest** — removed the two textrcs instrumentation boot
+  `<provider>`s: `RemoteControlProvider` (the remote command/override
+  bus) and `RustLibgmSmokeProvider` (the libgm smoke test).
+  `CrashCatcherProvider` is **kept** — it is load-bearing (it boots
+  `ReceiveService` at process start; without it, opening the app
+  straight to its main screen leaves the receive long-poll closed) —
+  but rewritten to drop the crash-upload and screen-tracer install,
+  leaving only that boot.
 - **Hooks** — `Hooks.get()` now returns null unconditionally, so every
   `shouldSkip()` is false and every `overrideX()` returns the caller's
   default. No `RemoteConfig` is consulted; no remote override can apply.
