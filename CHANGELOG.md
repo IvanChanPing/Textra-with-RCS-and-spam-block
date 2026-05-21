@@ -1,5 +1,40 @@
 # TextRCS Changelog
 
+## v0.72.0 — 2026-05-21 — receive fix: deliver through Textra's own SMS flow
+
+The v0.71.0 receive-path tracing pinpointed the bug. An inbound message
+reached `IncomingMessageHandler` correctly (the Rust crate, the `isOwnSend`
+guard — all fine), then `TextraDbBridge.writeIncoming` failed at the last
+step:
+
+```
+RCV-DB writeIncoming FAIL NoSuchMethodException: com.mplus.lib.r4.s0.<init> []
+```
+
+`writeIncoming` reflectively built Textra's `r4.s0` incoming-message POJO
+via a no-arg constructor — but R8 left `r4.s0` with **no declared
+constructor at all** (it's an empty `final` subclass of `r4.j0`). So no
+received message ever reached the DB.
+
+### Fix — route through Textra's own receive flow
+
+Instead of constructing `r4.s0` ourselves, `writeIncoming` now synthesises
+a real `android.provider.Telephony.SMS_DELIVER` intent and hands it to
+`com.mplus.lib.c5.d.U(Intent)` — Textra's own direct SMS-receive entry
+point (the fallback its `il` receiver uses when the SMS_DELIVER worker
+can't queue). Textra then runs its unmodified pipeline: `r4.F0.M` parses
+the PDU and builds the `r4.s0` itself, then the DB write + notification +
+UI refresh all fire, exactly as for a real cellular SMS.
+
+- New `SmsPdu.kt` — a minimal GSM 03.40 SMS-DELIVER PDU encoder (UCS2, so
+  any character encodes with no GSM-7 packing; long bodies split with a
+  concatenation UDH; international numeric originating address).
+- `TextraDbBridge.writeIncoming` rewritten to the intent path; the dead
+  `r4.s0`/`r4.j0`/`r4.n`/`r4.l`/`P4.p` reflection is gone.
+
+`IncomingMessageHandler` is unchanged — it still calls
+`writeIncoming(sender, body, timestamp)`.
+
 ## v0.71.0 — 2026-05-21 — rounded-corner parallax transition + receive-path tracing
 
 ### Rounded corners on the ConvoActivity parallax slide
