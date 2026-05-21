@@ -329,7 +329,11 @@ object IncomingMessageHandler {
         }
 
         // 1. The message's own senderParticipant (self-contained, best).
-        if (data.hasSenderParticipant()) {
+        //    Skip the `isMe` participant — resolving to the user's own
+        //    number would key the conversation by self (a thread titled
+        //    with the user's own phone). If senderParticipant is isMe,
+        //    fall through to the caches / hold guard.
+        if (data.hasSenderParticipant() && !data.senderParticipant.isMe) {
             val phone = participantPhoneOf(data.senderParticipant)
             if (phone != null) {
                 val pid = data.senderParticipant.getID().participantID

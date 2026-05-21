@@ -1,5 +1,19 @@
 # TextRCS Changelog
 
+## v0.85.0 — 2026-05-21 — never key a conversation by the user's own number
+
+`resolveSenderPhone` now skips the `isMe` participant in its
+`senderParticipant` branch. Resolving a message's sender to the user's
+own number was keying conversations by self — a thread titled with the
+user's own phone (the `(516) 512-3434` conv). Partial fix only — see
+the known issue below.
+
+KNOWN ISSUE (task #12): messages the user sends from *another* client
+(their phone) arrive with no `tmpID`, so they are not detected as
+own-sends and are mis-delivered as incoming. They need to be detected
+(`senderParticipant.isMe`) and delivered as OUTGOING into the correct
+thread, or skipped.
+
 ## v0.84.0 — 2026-05-21 — drop libgm system/tombstone messages
 
 libgm conversation-status notices ("Texting with X (SMS/MMS)", "RCS chat
