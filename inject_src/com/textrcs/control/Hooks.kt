@@ -39,18 +39,9 @@ object Hooks {
     )
 
     private fun get(name: String): Spec? {
-        val raw = RemoteConfig.getString("hook_${name}_json", "")
-        if (raw.isBlank()) return null
-        return try {
-            val o = JSONObject(raw)
-            Spec(
-                skip = o.optBoolean("skip", false),
-                override = if (o.has("override") && !o.isNull("override")) o.get("override") else null,
-                log = o.optBoolean("log", false),
-            )
-        } catch (_: JSONException) {
-            null
-        }
+        // [stripped build] remote hooks disabled — every call falls through
+        // to the caller's default: shouldSkip()=false, overrideX()=passthrough.
+        return null
     }
 
     fun shouldSkip(name: String, ctx: Map<String, Any?> = emptyMap()): Boolean {

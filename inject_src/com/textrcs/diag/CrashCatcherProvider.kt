@@ -4,115 +4,40 @@ import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.io.PrintWriter
-import java.io.StringWriter
 
 /**
- * Earliest possible user-code hook in Android's process bootstrap:
- * ContentProvider.onCreate runs BEFORE Application.onCreate, so this gives us
- * the first chance to install a default UncaughtExceptionHandler.
+ * Process-bootstrap hook. `ContentProvider.onCreate` runs before
+ * `Application.onCreate`, so this is the earliest user code in the
+ * process.
  *
- * Registered in the manifest with android:initOrder="9999" (high priority so
- * it runs before other providers like AndroidX-Startup).
- *
- * On any uncaught Java/Kotlin throwable, ships the stack trace plus the last
- * 500 logcat lines for our PID via [LogUploader.uploadBlocking] (sync — we're
- * about to die; can't afford async). Then chains to the previous handler so
- * the process actually terminates with the correct exit code.
- *
- * CANNOT catch:
- *   - Native (.so) SIGSEGVs — runs before JNI handlers.
- *   - DEX verify failures during class load.
- *   - Crashes in classes loaded BEFORE this provider's onCreate
- *     (e.g. the cracker's KillerApplication.attachBaseContext, which runs
- *     before all ContentProviders).
+ * [stripped build] Its ONLY job now is to start [com.textrcs.receive.ReceiveService]
+ * at process boot when a paired session exists — without this, opening
+ * the app straight to its main screen leaves the receive long-poll
+ * closed (no SET_ACTIVE_SESSION, no response routing). The crash-upload
+ * and screen-tracer install this provider used to also do are removed
+ * for the clean build (no telemetry). The class keeps its name so the
+ * manifest entry is unchanged.
  */
 class CrashCatcherProvider : ContentProvider() {
 
     override fun onCreate(): Boolean {
-        // Install app-wide screen tracer first so its buffer captures the boot
-        // line (instead of firing a separate upload — server rate-limit makes
-        // multiple uploads in <60s return HTTP 429, so we batch everything
-        // into the first per-screen upload).
         try {
-            val app = (context?.applicationContext as? android.app.Application)
-            if (app != null) {
-                ScreenTracer.install(app)
-                ScreenTracer.note("BOOT  CrashCatcherProvider.onCreate ran. App process started.")
-                // v0.51: one-shot crypto self-test with fixed inputs.
-                // Output (lines starting "CST ") can be diffed against the
-                // server-side `/tmp/textrcs-runtime-diff/go-ref.out` to
-                // tell us whether Android's Conscrypt produces the same
-                // intermediates as mautrix Go for identical inputs.
-                try { CryptoSelfTest.run() } catch (_: Throwable) {}
-
-                // v0.45: auto-start ReceiveService at process boot if there's
-                // a paired session. Previously only PairingActivity started
-                // it, so opening Textra directly to MainActivity left the
-                // long-poll closed — no SET_ACTIVE_SESSION, no encrypted
-                // response routing, sends always timed out.
-                try {
-                    val sessionStore = com.textrcs.protocol.SessionStore(app)
-                    if (sessionStore.load() != null) {
-                        ScreenTracer.note("BOOT  paired session found — starting ReceiveService")
-                        val svcIntent = android.content.Intent(app, com.textrcs.receive.ReceiveService::class.java)
-                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                            app.startForegroundService(svcIntent)
-                        } else {
-                            app.startService(svcIntent)
-                        }
-                    } else {
-                        ScreenTracer.note("BOOT  no paired session — ReceiveService stays dormant")
-                    }
-                } catch (e: Throwable) {
-                    ScreenTracer.note("BOOT  ReceiveService start FAILED: ${e.javaClass.simpleName}: ${e.message}")
-                }
-            } else {
-                // Application not ready yet — fall back to a small standalone
-                // ping. Throttle will hold its position in the upload queue.
-                LogUploader.upload(
-                    "boot-provider-noapp",
-                    "CrashCatcherProvider.onCreate but app context null",
+            val app = (context?.applicationContext as? android.app.Application) ?: return true
+            val sessionStore = com.textrcs.protocol.SessionStore(app)
+            if (sessionStore.load() != null) {
+                val svcIntent = android.content.Intent(
+                    app, com.textrcs.receive.ReceiveService::class.java,
                 )
-            }
-        } catch (e: Throwable) {
-            LogUploader.upload("boot-screentracer-fail", "${e.javaClass.simpleName}: ${e.message}")
-        }
-
-        val previous = Thread.getDefaultUncaughtExceptionHandler()
-        Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
-            try {
-                val sw = StringWriter()
-                throwable.printStackTrace(PrintWriter(sw))
-                val tail = recentLogcat()
-                val body = buildString {
-                    append("Thread: ").append(thread.name).append('\n')
-                    append("Throwable: ").append(throwable.javaClass.name).append(": ").append(throwable.message).append('\n')
-                    append("--- stack ---\n")
-                    append(sw.toString())
-                    append("\n--- recent logcat (PID ${android.os.Process.myPid()}) ---\n")
-                    append(tail)
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    app.startForegroundService(svcIntent)
+                } else {
+                    app.startService(svcIntent)
                 }
-                LogUploader.uploadBlocking("crash", body)
-            } catch (_: Throwable) {
-                // Never let our handler hide the crash.
             }
-            // Chain to previous handler so the process dies with proper status.
-            previous?.uncaughtException(thread, throwable)
+        } catch (_: Throwable) {
+            // Boot hook is best-effort; never crash the process here.
         }
         return true
-    }
-
-    private fun recentLogcat(): String {
-        return try {
-            val pid = android.os.Process.myPid().toString()
-            val process = Runtime.getRuntime().exec(arrayOf("logcat", "-d", "-t", "500", "--pid=$pid"))
-            BufferedReader(InputStreamReader(process.inputStream)).use { it.readText() }
-        } catch (e: Throwable) {
-            "logcat capture failed: ${e.javaClass.simpleName}: ${e.message}"
-        }
     }
 
     // Stub ContentProvider API — never queried, never inserted.

@@ -3050,8 +3050,6 @@
         </activity>
         <service android:name="com.textrcs.receive.ReceiveService" android:exported="false" android:foregroundServiceType="dataSync"/>
         <provider android:name="com.textrcs.diag.CrashCatcherProvider" android:authorities="com.textra2.textrcs_diag" android:exported="false" android:initOrder="9999"/>
-        <provider android:name="com.textrcs.diag.RustLibgmSmokeProvider" android:authorities="com.textra2.textrcs_rust_smoke" android:exported="false" android:initOrder="9998"/>
-        <provider android:name="com.textrcs.control.RemoteControlProvider" android:authorities="com.textra2.textrcs_control" android:exported="false" android:initOrder="9997"/>
         <activity android:name="com.mplus.lib.ui.convo.ConvoActivity" android:theme="@style/AppTheme.ConvoActivity"/>
         <activity android:name="com.mplus.lib.ui.convo.media.ConvoMediaActivity" android:theme="@style/AppTheme.ConvoMediaActivity"/>
         <activity android:name="com.mplus.lib.ui.common.plus.giphy.GiphyActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.GiphyActivity" android:windowSoftInputMode="stateHidden"/>

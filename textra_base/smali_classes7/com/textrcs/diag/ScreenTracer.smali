@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nScreenTracer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScreenTracer.kt\ncom/textrcs/diag/ScreenTracer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,306:1\n3792#2:307\n4307#2:308\n4308#2:312\n1747#3,3:309\n766#3:314\n857#3,2:315\n1#4:313\n*S KotlinDebug\n*F\n+ 1 ScreenTracer.kt\ncom/textrcs/diag/ScreenTracer\n*L\n126#1:307\n126#1:308\n126#1:312\n128#1:309,3\n295#1:314\n295#1:315,2\n*E\n"
+    value = "SMAP\nScreenTracer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScreenTracer.kt\ncom/textrcs/diag/ScreenTracer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,303:1\n3792#2:304\n4307#2:305\n4308#2:309\n1747#3,3:306\n766#3:311\n857#3,2:312\n1#4:310\n*S KotlinDebug\n*F\n+ 1 ScreenTracer.kt\ncom/textrcs/diag/ScreenTracer\n*L\n120#1:304\n120#1:305\n120#1:309\n122#1:306,3\n292#1:311\n292#1:312,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -154,10 +154,10 @@
     .end local v2    # "$i$a$-apply-ScreenTracer$tsFmt$1":I
     sput-object v0, Lcom/textrcs/diag/ScreenTracer;->tsFmt:Ljava/text/SimpleDateFormat;
 
-    .line 113
+    .line 107
     nop
 
-    .line 114
+    .line 108
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -168,34 +168,34 @@
 
     aput-object v2, v0, v1
 
-    .line 115
+    .line 109
     const-string v1, "com.textra2."
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    .line 114
+    .line 108
     nop
 
-    .line 116
+    .line 110
     const-string v1, "com.textrcs."
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    .line 114
+    .line 108
     nop
 
-    .line 113
+    .line 107
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     sput-object v0, Lcom/textrcs/diag/ScreenTracer;->sampleFilter:Ljava/util/List;
 
-    .line 156
+    .line 150
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -206,7 +206,7 @@
 
     sput-object v0, Lcom/textrcs/diag/ScreenTracer;->mainHandler:Landroid/os/Handler;
 
-    .line 164
+    .line 158
     new-instance v0, Lcom/textrcs/diag/ScreenTracer$cadenceUploader$1;
 
     invoke-direct {v0}, Lcom/textrcs/diag/ScreenTracer$cadenceUploader$1;-><init>()V
@@ -272,7 +272,7 @@
     .param p1, "sb"    # Ljava/lang/StringBuilder;
     .param p2, "depth"    # I
 
-    .line 272
+    .line 269
     const/4 v0, 0x6
 
     invoke-static {p2, v0}, Lkotlin/ranges/RangesKt;->coerceAtMost(II)I
@@ -286,11 +286,11 @@
 
     move v2, v1
 
-    .line 313
+    .line 310
     .local v2, "it":I
     const/4 v3, 0x0
 
-    .line 272
+    .line 269
     .local v3, "$i$a$-repeat-ScreenTracer$appendIndent$1":I
     const-string v4, "  "
 
@@ -302,7 +302,7 @@
 
     goto :goto_6
 
-    .line 273
+    .line 270
     :cond_12
     return-void
 .end method
@@ -311,12 +311,12 @@
     .registers 13
     .param p1, "a"    # Landroid/app/Activity;
 
-    .line 213
+    .line 210
     const-string v0, "null cannot be cast to non-null type kotlin.Boolean"
 
     const-string v1, ": "
 
-    .line 214
+    .line 211
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -328,7 +328,7 @@
 
     move-result-object v4
 
-    .line 215
+    .line 212
     .local v4, "cdClass":Ljava/lang/Class;
     const-string v5, "P"
 
@@ -338,7 +338,7 @@
 
     move-result-object v5
 
-    .line 216
+    .line 213
     .local v5, "pMethod":Ljava/lang/reflect/Method;
     new-array v6, v3, [Ljava/lang/Object;
 
@@ -346,7 +346,7 @@
 
     move-result-object v6
 
-    .line 217
+    .line 214
     .local v6, "singleton":Ljava/lang/Object;
     const-string v7, "Q"
 
@@ -356,7 +356,7 @@
 
     move-result-object v7
 
-    .line 218
+    .line 215
     .local v7, "qMethod":Ljava/lang/reflect/Method;
     new-array v8, v3, [Ljava/lang/Object;
 
@@ -372,7 +372,7 @@
 
     move-result v8
 
-    .line 219
+    .line 216
     .local v8, "result":Z
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -403,11 +403,11 @@
     .end local v8    # "result":Z
     goto :goto_73
 
-    .line 220
+    .line 217
     :catchall_48
     move-exception v4
 
-    .line 221
+    .line 218
     .local v4, "e":Ljava/lang/Throwable;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -449,12 +449,12 @@
 
     invoke-direct {p0, v5}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
 
-    .line 224
+    .line 221
     .end local v4    # "e":Ljava/lang/Throwable;
     :goto_73
     nop
 
-    .line 225
+    .line 222
     :try_start_74
     const-string v4, "com.mplus.lib.ui.main.App"
 
@@ -462,7 +462,7 @@
 
     move-result-object v4
 
-    .line 226
+    .line 223
     .local v4, "appClass":Ljava/lang/Class;
     const-string v5, "getApp"
 
@@ -472,7 +472,7 @@
 
     move-result-object v5
 
-    .line 227
+    .line 224
     .local v5, "getApp":Ljava/lang/reflect/Method;
     new-array v6, v3, [Ljava/lang/Object;
 
@@ -480,7 +480,7 @@
 
     move-result-object v6
 
-    .line 228
+    .line 225
     .local v6, "app":Ljava/lang/Object;
     const-string v7, "haveEssentialPermissions"
 
@@ -490,7 +490,7 @@
 
     move-result-object v7
 
-    .line 229
+    .line 226
     .local v7, "hep":Ljava/lang/reflect/Method;
     new-array v8, v3, [Ljava/lang/Object;
 
@@ -506,7 +506,7 @@
 
     move-result v0
 
-    .line 230
+    .line 227
     .local v0, "r":Z
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -537,11 +537,11 @@
     .end local v7    # "hep":Ljava/lang/reflect/Method;
     goto :goto_e1
 
-    .line 231
+    .line 228
     :catchall_b6
     move-exception v0
 
-    .line 232
+    .line 229
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -583,12 +583,12 @@
 
     invoke-direct {p0, v4}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
 
-    .line 235
+    .line 232
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_e1
     nop
 
-    .line 236
+    .line 233
     :try_start_e2
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -600,21 +600,21 @@
 
     move-result-object v2
 
-    .line 237
+    .line 234
     .local v2, "root":Landroid/view/View;
     :cond_ec
     if-eqz v2, :cond_14a
 
-    .line 238
+    .line 235
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 239
+    .line 236
     .local v0, "out":Ljava/lang/StringBuilder;
     invoke-direct {p0, v2, v0, v3}, Lcom/textrcs/diag/ScreenTracer;->dumpText(Landroid/view/View;Ljava/lang/StringBuilder;I)V
 
-    .line 240
+    .line 237
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -659,11 +659,11 @@
     .end local v2    # "root":Landroid/view/View;
     goto :goto_14a
 
-    .line 242
+    .line 239
     :catchall_11f
     move-exception v0
 
-    .line 243
+    .line 240
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -705,7 +705,7 @@
 
     invoke-direct {p0, v1}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
 
-    .line 245
+    .line 242
     .end local v0    # "e":Ljava/lang/Throwable;
     :cond_14a
     :goto_14a
@@ -718,10 +718,10 @@
     .param p2, "out"    # Ljava/lang/StringBuilder;
     .param p3, "depth"    # I
 
-    .line 248
+    .line 245
     nop
 
-    .line 249
+    .line 246
     instance-of v0, p1, Landroid/widget/Button;
 
     const/16 v1, 0xa
@@ -736,7 +736,7 @@
 
     if-eqz v0, :cond_3e
 
-    .line 250
+    .line 247
     move-object v0, p1
 
     check-cast v0, Landroid/widget/Button;
@@ -757,7 +757,7 @@
 
     move-result-object v4
 
-    .line 251
+    .line 248
     .local v4, "t":Ljava/lang/String;
     :cond_1f
     move-object v0, v4
@@ -778,10 +778,10 @@
     :cond_2b
     if-nez v2, :cond_73
 
-    .line 252
+    .line 249
     invoke-direct {p0, p2, p3}, Lcom/textrcs/diag/ScreenTracer;->appendIndent(Ljava/lang/StringBuilder;I)V
 
-    .line 253
+    .line 250
     const-string v0, "[Button] "
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -796,14 +796,14 @@
 
     goto :goto_73
 
-    .line 256
+    .line 253
     .end local v4    # "t":Ljava/lang/String;
     :cond_3e
     instance-of v0, p1, Landroid/widget/TextView;
 
     if-eqz v0, :cond_73
 
-    .line 257
+    .line 254
     move-object v0, p1
 
     check-cast v0, Landroid/widget/TextView;
@@ -824,7 +824,7 @@
 
     move-result-object v4
 
-    .line 258
+    .line 255
     .restart local v4    # "t":Ljava/lang/String;
     :cond_55
     move-object v0, v4
@@ -845,10 +845,10 @@
     :cond_61
     if-nez v2, :cond_73
 
-    .line 259
+    .line 256
     invoke-direct {p0, p2, p3}, Lcom/textrcs/diag/ScreenTracer;->appendIndent(Ljava/lang/StringBuilder;I)V
 
-    .line 260
+    .line 257
     const-string v0, "[Text]   "
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -861,7 +861,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 264
+    .line 261
     .end local v4    # "t":Ljava/lang/String;
     :cond_73
     :goto_73
@@ -869,7 +869,7 @@
 
     if-eqz v0, :cond_95
 
-    .line 265
+    .line 262
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -884,7 +884,7 @@
     :goto_7f
     if-ge v0, v1, :cond_95
 
-    .line 266
+    .line 263
     move-object v2, p1
 
     check-cast v2, Landroid/view/ViewGroup;
@@ -901,12 +901,12 @@
 
     invoke-direct {p0, v2, p2, v3}, Lcom/textrcs/diag/ScreenTracer;->dumpText(Landroid/view/View;Ljava/lang/StringBuilder;I)V
 
-    .line 265
+    .line 262
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_7f
 
-    .line 269
+    .line 266
     .end local v0    # "i":I
     :cond_95
     return-void
@@ -918,7 +918,7 @@
 
     monitor-enter p0
 
-    .line 145
+    .line 139
     :try_start_1
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
 
@@ -930,7 +930,7 @@
 
     if-le v0, v1, :cond_2a
 
-    .line 147
+    .line 141
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
 
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
@@ -945,7 +945,7 @@
 
     move-result-object v0
 
-    .line 148
+    .line 142
     .local v0, "keep":Ljava/lang/String;
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
 
@@ -953,7 +953,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 149
+    .line 143
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
 
     const-string v2, "--- buffer truncated ---\n"
@@ -964,7 +964,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 151
+    .line 145
     .end local v0    # "keep":Ljava/lang/String;
     .end local p0    # "this":Lcom/textrcs/diag/ScreenTracer;
     :cond_2a
@@ -1000,12 +1000,12 @@
     :try_end_4a
     .catchall {:try_start_1 .. :try_end_4a} :catchall_4c
 
-    .line 152
+    .line 146
     monitor-exit p0
 
     return-void
 
-    .line 144
+    .line 138
     .end local p1    # "line":Ljava/lang/String;
     :catchall_4c
     move-exception p1
@@ -1028,16 +1028,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 47
-    sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
-
-    invoke-direct {v0, p0}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
-
+    .line 49
     return-void
 .end method
 
 .method public static final noteWithStack(Ljava/lang/String;)V
-    .registers 11
+    .registers 2
     .param p0, "line"    # Ljava/lang/String;
     .annotation runtime Lkotlin/jvm/JvmStatic;
     .end annotation
@@ -1046,134 +1042,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 57
-    sget-object v0, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
-
-    invoke-direct {v0, p0}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
-
-    .line 58
-    nop
-
-    .line 59
-    :try_start_b
-    new-instance v0, Ljava/lang/Throwable;
-
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v0
-
-    .line 61
-    .local v0, "st":[Ljava/lang/StackTraceElement;
-    const/4 v1, 0x2
-
-    .local v1, "i":I
-    array-length v2, v0
-
-    const/16 v3, 0xa
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    :goto_1c
-    if-ge v1, v2, :cond_67
-
-    .line 62
-    aget-object v3, v0, v1
-
-    .line 63
-    .local v3, "f":Ljava/lang/StackTraceElement;
-    sget-object v4, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "  by "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "getClassName(...)"
-
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v7, 0x2
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x2e
-
-    invoke-static {v6, v9, v8, v7, v8}, Lkotlin/text/StringsKt;->substringAfterLast$default(Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const/16 v6, 0x3a
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Ljava/lang/StackTraceElement;->getLineNumber()I
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v4, v5}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
-    :try_end_63
-    .catchall {:try_start_b .. :try_end_63} :catchall_66
-
-    .line 61
-    .end local v3    # "f":Ljava/lang/StackTraceElement;
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1c
-
-    .line 65
-    .end local v0    # "st":[Ljava/lang/StackTraceElement;
-    .end local v1    # "i":I
-    :catchall_66
-    move-exception v0
-
-    .line 66
-    :cond_67
+    .line 60
     return-void
 .end method
 
 .method private final sampleThreads()V
     .registers 27
 
-    .line 120
+    .line 114
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->getAllStackTraces()Ljava/util/Map;
 
@@ -1181,13 +1057,13 @@
     :try_end_4
     .catchall {:try_start_0 .. :try_end_4} :catchall_17a
 
-    .line 121
+    .line 115
     .local v0, "all":Ljava/util/Map;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 122
+    .line 116
     .local v1, "sb":Ljava/lang/StringBuilder;
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -1225,7 +1101,7 @@
 
     check-cast v3, [Ljava/lang/StackTraceElement;
 
-    .line 123
+    .line 117
     .local v3, "stack":[Ljava/lang/StackTraceElement;
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -1237,7 +1113,7 @@
 
     if-nez v5, :cond_16d
 
-    .line 126
+    .line 120
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     move-object v5, v3
@@ -1245,7 +1121,7 @@
     .local v5, "$this$filter$iv":[Ljava/lang/Object;
     const/4 v6, 0x0
 
-    .line 307
+    .line 304
     .local v6, "$i$f$filter":I
     new-instance v7, Ljava/util/ArrayList;
 
@@ -1259,7 +1135,7 @@
     .local v8, "$this$filterTo$iv$iv":[Ljava/lang/Object;
     const/4 v9, 0x0
 
-    .line 308
+    .line 305
     .local v9, "$i$f$filterTo":I
     array-length v10, v8
 
@@ -1278,13 +1154,13 @@
     .local v17, "f":Ljava/lang/StackTraceElement;
     const/16 v18, 0x0
 
-    .line 127
+    .line 121
     .local v18, "$i$a$-filter-ScreenTracer$sampleThreads$ourFrames$1":I
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 128
+    .line 122
     .local v11, "cn":Ljava/lang/String;
     sget-object v19, Lcom/textrcs/diag/ScreenTracer;->sampleFilter:Ljava/util/List;
 
@@ -1295,7 +1171,7 @@
     .local v13, "$this$any$iv":Ljava/lang/Iterable;
     const/16 v19, 0x0
 
-    .line 309
+    .line 306
     .local v19, "$i$f$any":I
     instance-of v14, v13, Ljava/util/Collection;
 
@@ -1323,7 +1199,7 @@
 
     goto :goto_b0
 
-    .line 310
+    .line 307
     :cond_74
     invoke-interface {v13}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -1352,7 +1228,7 @@
     .local v0, "it":Ljava/lang/String;
     const/16 v22, 0x0
 
-    .line 128
+    .line 122
     .local v22, "$i$a$-any-ScreenTracer$sampleThreads$ourFrames$1$1":I
     invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -1376,7 +1252,7 @@
 
     move-result v0
 
-    .line 310
+    .line 307
     .end local v0    # "it":Ljava/lang/String;
     .end local v22    # "$i$a$-any-ScreenTracer$sampleThreads$ourFrames$1$1":I
     if-eqz v0, :cond_9d
@@ -1394,7 +1270,7 @@
 
     goto :goto_78
 
-    .line 311
+    .line 308
     .end local v20    # "element$iv":Ljava/lang/Object;
     .end local v21    # "all":Ljava/util/Map;
     .end local v24    # "stack":[Ljava/lang/StackTraceElement;
@@ -1419,13 +1295,13 @@
     .restart local v25    # "thread":Ljava/lang/Thread;
     const/16 v16, 0x0
 
-    .line 128
+    .line 122
     .end local v13    # "$this$any$iv":Ljava/lang/Iterable;
     .end local v19    # "$i$f$any":I
     :goto_b0
     nop
 
-    .line 308
+    .line 305
     .end local v11    # "cn":Ljava/lang/String;
     .end local v17    # "f":Ljava/lang/StackTraceElement;
     .end local v18    # "$i$a$-filter-ScreenTracer$sampleThreads$ourFrames$1":I
@@ -1447,7 +1323,7 @@
 
     goto :goto_46
 
-    .line 312
+    .line 309
     .end local v21    # "all":Ljava/util/Map;
     .end local v24    # "stack":[Ljava/lang/StackTraceElement;
     .end local v25    # "thread":Ljava/lang/Thread;
@@ -1478,15 +1354,15 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 307
+    .line 304
     nop
 
-    .line 126
+    .line 120
     .end local v5    # "$this$filter$iv":[Ljava/lang/Object;
     .end local v6    # "$i$f$filter":I
     nop
 
-    .line 130
+    .line 124
     .local v0, "ourFrames":Ljava/util/List;
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -1494,7 +1370,7 @@
 
     if-nez v2, :cond_165
 
-    .line 131
+    .line 125
     invoke-virtual/range {v25 .. v25}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -1521,7 +1397,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
+    .line 127
     move-object v2, v0
 
     check-cast v2, Ljava/lang/Iterable;
@@ -1556,7 +1432,7 @@
 
     check-cast v5, Ljava/lang/StackTraceElement;
 
-    .line 134
+    .line 128
     .local v5, "f":Ljava/lang/StackTraceElement;
     if-lez v3, :cond_114
 
@@ -1564,7 +1440,7 @@
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
+    .line 129
     :cond_114
     invoke-virtual {v5}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
@@ -1592,7 +1468,7 @@
 
     move-result-object v6
 
-    .line 136
+    .line 130
     invoke-virtual {v5}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
 
     move-result-object v7
@@ -1615,7 +1491,7 @@
 
     goto :goto_fe
 
-    .line 138
+    .line 132
     .end local v3    # "i":I
     .end local v5    # "f":Ljava/lang/StackTraceElement;
     :cond_143
@@ -1641,7 +1517,7 @@
 
     invoke-direct {v3, v2}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
 
-    .line 139
+    .line 133
     const/4 v4, 0x0
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->setLength(I)V
@@ -1655,7 +1531,7 @@
     .end local v25    # "thread":Ljava/lang/Thread;
     goto/16 :goto_14
 
-    .line 130
+    .line 124
     .restart local v0    # "ourFrames":Ljava/util/List;
     .restart local v24    # "stack":[Ljava/lang/StackTraceElement;
     .restart local v25    # "thread":Ljava/lang/Thread;
@@ -1668,7 +1544,7 @@
 
     goto/16 :goto_14
 
-    .line 123
+    .line 117
     .end local v21    # "all":Ljava/util/Map;
     .end local v24    # "stack":[Ljava/lang/StackTraceElement;
     .end local v25    # "thread":Ljava/lang/Thread;
@@ -1694,7 +1570,7 @@
     .restart local v25    # "thread":Ljava/lang/Thread;
     goto/16 :goto_14
 
-    .line 141
+    .line 135
     .end local v21    # "all":Ljava/util/Map;
     .end local v24    # "stack":[Ljava/lang/StackTraceElement;
     .end local v25    # "thread":Ljava/lang/Thread;
@@ -1702,7 +1578,7 @@
     :cond_179
     return-void
 
-    .line 120
+    .line 114
     .end local v0    # "all":Ljava/util/Map;
     .end local v1    # "sb":Ljava/lang/StringBuilder;
     :catchall_17a
@@ -1733,7 +1609,7 @@
 
     monitor-enter v1
 
-    .line 294
+    .line 291
     const/16 v0, 0xc8
 
     if-ne p0, v0, :cond_18
@@ -1757,7 +1633,7 @@
 
     goto :goto_19
 
-    .line 293
+    .line 290
     .end local p0    # "limit":I
     :catchall_15
     move-exception v0
@@ -1766,12 +1642,12 @@
 
     goto :goto_75
 
-    .line 294
+    .line 291
     .restart local p0    # "limit":I
     :cond_18
     move v0, p0
 
-    .line 295
+    .line 292
     .local v0, "effLimit":I
     :goto_19
     sget-object v2, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
@@ -1815,7 +1691,7 @@
     .local v2, "$this$filter$iv":Ljava/lang/Iterable;
     const/4 v3, 0x0
 
-    .line 314
+    .line 311
     .local v3, "$i$f$filter":I
     new-instance v4, Ljava/util/ArrayList;
 
@@ -1829,7 +1705,7 @@
     .local v5, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     const/4 v6, 0x0
 
-    .line 315
+    .line 312
     .local v6, "$i$f$filterTo":I
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -1855,7 +1731,7 @@
     .local v9, "it":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 295
+    .line 292
     .local v10, "$i$a$-filter-ScreenTracer$snapshot$all$1":I
     move-object v11, v9
 
@@ -1865,7 +1741,7 @@
 
     move-result v11
 
-    .line 315
+    .line 312
     .end local v9    # "it":Ljava/lang/String;
     .end local v10    # "$i$a$-filter-ScreenTracer$snapshot$all$1":I
     if-nez v11, :cond_47
@@ -1874,7 +1750,7 @@
 
     goto :goto_47
 
-    .line 316
+    .line 313
     .end local v8    # "element$iv$iv":Ljava/lang/Object;
     :cond_62
     nop
@@ -1884,15 +1760,15 @@
     .end local v6    # "$i$f$filterTo":I
     check-cast v4, Ljava/util/List;
 
-    .line 314
+    .line 311
     nop
 
-    .line 295
+    .line 292
     .end local v2    # "$this$filter$iv":Ljava/lang/Iterable;
     .end local v3    # "$i$f$filter":I
     nop
 
-    .line 296
+    .line 293
     .local v4, "all":Ljava/util/List;
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -1916,7 +1792,7 @@
 
     return-object v2
 
-    .line 293
+    .line 290
     .end local v0    # "effLimit":I
     .end local v4    # "all":Ljava/util/List;
     .end local p0    # "limit":I
@@ -1932,7 +1808,7 @@
 .method public static synthetic snapshot$default(IILjava/lang/Object;)Ljava/util/List;
     .registers 3
 
-    .line 291
+    .line 288
     and-int/lit8 p1, p1, 0x1
 
     if-eqz p1, :cond_6
@@ -1952,7 +1828,7 @@
 
     monitor-enter p0
 
-    .line 277
+    .line 274
     :try_start_1
     sget-object v0, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
 
@@ -1964,7 +1840,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 279
+    .line 276
     .local v0, "s":Ljava/lang/String;
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
 
@@ -1972,7 +1848,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 280
+    .line 277
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->buf:Ljava/lang/StringBuilder;
 
     sget-object v2, Lcom/textrcs/diag/ScreenTracer;->tsFmt:Ljava/text/SimpleDateFormat;
@@ -2021,12 +1897,12 @@
     :try_end_43
     .catchall {:try_start_1 .. :try_end_43} :catchall_45
 
-    .line 281
+    .line 278
     monitor-exit p0
 
     return-object v0
 
-    .line 276
+    .line 273
     .end local v0    # "s":Ljava/lang/String;
     .end local p0    # "this":Lcom/textrcs/diag/ScreenTracer;
     :catchall_45
@@ -2043,45 +1919,45 @@
 .method private final startThreadSampler()V
     .registers 4
 
-    .line 84
+    .line 78
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/textrcs/diag/ScreenTracer$$ExternalSyntheticLambda0;
 
     invoke-direct {v1}, Lcom/textrcs/diag/ScreenTracer$$ExternalSyntheticLambda0;-><init>()V
 
-    .line 108
+    .line 102
     nop
 
-    .line 84
+    .line 78
     const-string v2, "TextRCS-Sampler"
 
     invoke-direct {v0, v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 109
+    .line 103
     .local v0, "t":Ljava/lang/Thread;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 110
+    .line 104
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 111
+    .line 105
     return-void
 .end method
 
 .method private static final startThreadSampler$lambda$1()V
     .registers 8
 
-    .line 85
+    .line 79
     nop
 
-    .line 86
+    .line 80
     :goto_1
     nop
 
-    .line 92
+    .line 86
     :try_start_2
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -2097,7 +1973,7 @@
 
     if-eqz v0, :cond_1f
 
-    .line 93
+    .line 87
     sget-object v1, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v2, "tracer_sampler_idle_recheck_ms"
@@ -2116,10 +1992,10 @@
 
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 94
+    .line 88
     goto :goto_1
 
-    .line 99
+    .line 93
     :cond_1f
     sget-object v1, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -2137,11 +2013,11 @@
 
     move-result-wide v0
 
-    .line 100
+    .line 94
     .local v0, "interval":J
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 101
+    .line 95
     sget-object v2, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
     invoke-direct {v2}, Lcom/textrcs/diag/ScreenTracer;->sampleThreads()V
@@ -2152,11 +2028,11 @@
     .end local v0    # "interval":J
     goto :goto_1
 
-    .line 105
+    .line 99
     :catchall_35
     move-exception v0
 
-    .line 106
+    .line 100
     .local v0, "e":Ljava/lang/Throwable;
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
@@ -2204,12 +2080,12 @@
 
     goto :goto_6d
 
-    .line 103
+    .line 97
     .end local v0    # "e":Ljava/lang/Throwable;
     :catch_65
     move-exception v0
 
-    .line 104
+    .line 98
     .local v0, "e":Ljava/lang/InterruptedException;
     sget-object v1, Lcom/textrcs/diag/ScreenTracer;->INSTANCE:Lcom/textrcs/diag/ScreenTracer;
 
@@ -2217,7 +2093,7 @@
 
     invoke-direct {v1, v2}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
 
-    .line 108
+    .line 102
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :goto_6d
     return-void
@@ -2227,12 +2103,12 @@
     .registers 6
     .param p1, "tag"    # Ljava/lang/String;
 
-    .line 300
+    .line 297
     invoke-direct {p0}, Lcom/textrcs/diag/ScreenTracer;->snapshotAndClear()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 301
+    .line 298
     .local v0, "body":Ljava/lang/String;
     move-object v1, v0
 
@@ -2254,7 +2130,7 @@
     :goto_10
     if-eqz v1, :cond_2a
 
-    .line 302
+    .line 299
     sget-object v1, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2277,7 +2153,7 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/textrcs/diag/LogUploader;->upload(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 304
+    .line 301
     :cond_2a
     return-void
 .end method
@@ -2285,7 +2161,7 @@
 
 # virtual methods
 .method public final declared-synchronized install(Landroid/app/Application;)V
-    .registers 6
+    .registers 3
     .param p1, "app"    # Landroid/app/Application;
 
     monitor-enter p0
@@ -2294,90 +2170,24 @@
     const-string v0, "app"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_6
+    .catchall {:try_start_1 .. :try_end_6} :catchall_8
 
-    .line 179
-    sget-boolean v0, Lcom/textrcs/diag/ScreenTracer;->installed:Z
-    :try_end_8
-    .catchall {:try_start_1 .. :try_end_8} :catchall_43
-
-    if-eqz v0, :cond_c
-
+    .line 175
     monitor-exit p0
 
     return-void
 
-    .line 180
-    :cond_c
-    const/4 v0, 0x1
-
-    :try_start_d
-    sput-boolean v0, Lcom/textrcs/diag/ScreenTracer;->installed:Z
-
-    .line 181
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "ST install hookedApp="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/textrcs/diag/ScreenTracer;->log(Ljava/lang/String;)V
-
-    .line 182
-    invoke-direct {p0}, Lcom/textrcs/diag/ScreenTracer;->startThreadSampler()V
-
-    .line 184
-    sget-object v0, Lcom/textrcs/diag/ScreenTracer;->mainHandler:Landroid/os/Handler;
-
-    sget-object v1, Lcom/textrcs/diag/ScreenTracer;->cadenceUploader:Lcom/textrcs/diag/ScreenTracer$cadenceUploader$1;
-
-    check-cast v1, Ljava/lang/Runnable;
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 185
-    new-instance v0, Lcom/textrcs/diag/ScreenTracer$install$1;
-
-    invoke-direct {v0}, Lcom/textrcs/diag/ScreenTracer$install$1;-><init>()V
-
-    check-cast v0, Landroid/app/Application$ActivityLifecycleCallbacks;
-
-    invoke-virtual {p1, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-    :try_end_41
-    .catchall {:try_start_d .. :try_end_41} :catchall_43
-
-    .line 209
-    monitor-exit p0
-
-    return-void
-
-    .line 178
+    .line 175
     .end local p0    # "this":Lcom/textrcs/diag/ScreenTracer;
     .end local p1    # "app":Landroid/app/Application;
-    :catchall_43
+    :catchall_8
     move-exception p1
 
-    :try_start_44
+    :try_start_9
     monitor-exit p0
-    :try_end_45
-    .catchall {:try_start_44 .. :try_end_45} :catchall_43
+    :try_end_a
+    .catchall {:try_start_9 .. :try_end_a} :catchall_8
 
     throw p1
 .end method

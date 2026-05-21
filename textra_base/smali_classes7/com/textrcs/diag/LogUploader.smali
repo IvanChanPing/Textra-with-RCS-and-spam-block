@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nLogUploader.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LogUploader.kt\ncom/textrcs/diag/LogUploader\n+ 2 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,139:1\n1099#2,3:140\n1#3:143\n*S KotlinDebug\n*F\n+ 1 LogUploader.kt\ncom/textrcs/diag/LogUploader\n*L\n88#1:140,3\n*E\n"
+    value = "SMAP\nLogUploader.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LogUploader.kt\ncom/textrcs/diag/LogUploader\n+ 2 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,128:1\n1099#2,3:129\n1#3:132\n*S KotlinDebug\n*F\n+ 1 LogUploader.kt\ncom/textrcs/diag/LogUploader\n*L\n77#1:129,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -49,7 +49,7 @@
 
 
 # static fields
-.field private static final BUILD_NUMBER:Ljava/lang/String; = "v0.72.0"
+.field private static final BUILD_NUMBER:Ljava/lang/String; = "v0.73.0"
 
 .field private static final BUILD_TYPE:Ljava/lang/String; = "textrcs"
 
@@ -77,14 +77,6 @@
     return-object p0
 .end method
 
-.method public static synthetic $r8$lambda$PXsRUClh6sAA4w_-KSObVB3QPu0(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lcom/textrcs/diag/LogUploader;->upload$lambda$2(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method static constructor <clinit>()V
     .registers 1
 
@@ -95,9 +87,9 @@
     sput-object v0, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
     .line 33
-    new-instance v0, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda1;
+    new-instance v0, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;
 
-    invoke-direct {v0}, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda1;-><init>()V
+    invoke-direct {v0}, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;-><init>()V
 
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
@@ -120,7 +112,7 @@
 .method private final deviceTag()Ljava/lang/String;
     .registers 4
 
-    .line 137
+    .line 126
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,7 +194,7 @@
 
     move-object v1, v0
 
-    .line 143
+    .line 132
     .local v1, "$this$executor_u24lambda_u241_u24lambda_u240":Ljava/lang/Thread;
     const/4 v2, 0x0
 
@@ -222,12 +214,12 @@
     .param p1, "tag"    # Ljava/lang/String;
     .param p2, "body"    # Ljava/lang/String;
 
-    .line 118
+    .line 107
     invoke-direct {p0}, Lcom/textrcs/diag/LogUploader;->nowIso()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 119
+    .line 108
     .local v0, "ts":Ljava/lang/String;
     move-object v1, p2
 
@@ -253,13 +245,13 @@
 
     move-result-object v1
 
-    .line 120
+    .line 109
     .local v1, "rawLines":Ljava/util/List;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 121
+    .line 110
     .local v2, "tagged":Ljava/lang/StringBuilder;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -291,7 +283,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 122
+    .line 111
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -309,7 +301,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 123
+    .line 112
     .local v5, "line":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -349,7 +341,7 @@
 
     goto :goto_3f
 
-    .line 125
+    .line 114
     .end local v5    # "line":Ljava/lang/String;
     :cond_72
     new-instance v3, Ljava/lang/StringBuilder;
@@ -380,7 +372,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 126
+    .line 115
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -397,7 +389,7 @@
 
     move-result-object v3
 
-    const-string v4, ": build=v0.72.0\n"
+    const-string v4, ": build=v0.73.0\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -409,7 +401,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 127
+    .line 116
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -424,7 +416,7 @@
 .method private final nowIso()Ljava/lang/String;
     .registers 4
 
-    .line 131
+    .line 120
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'"
@@ -433,7 +425,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 132
+    .line 121
     .local v0, "sdf":Ljava/text/SimpleDateFormat;
     const-string v1, "UTC"
 
@@ -443,7 +435,7 @@
 
     invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 133
+    .line 122
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1}, Ljava/util/Date;-><init>()V
@@ -464,12 +456,12 @@
     .param p1, "tag"    # Ljava/lang/String;
     .param p2, "body"    # Ljava/lang/String;
 
-    .line 82
+    .line 71
     invoke-direct/range {p0 .. p2}, Lcom/textrcs/diag/LogUploader;->formatForValidator(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 83
+    .line 72
     .local v1, "padded":Ljava/lang/String;
     new-instance v0, Lorg/json/JSONObject;
 
@@ -477,25 +469,25 @@
 
     move-object v2, v0
 
-    .local v2, "$this$postBlocking_u24lambda_u244":Lorg/json/JSONObject;
+    .local v2, "$this$postBlocking_u24lambda_u243":Lorg/json/JSONObject;
     const/4 v3, 0x0
 
-    .line 84
+    .line 73
     .local v3, "$i$a$-apply-LogUploader$postBlocking$payload$1":I
     const-string v4, "buildNumber"
 
-    const-string v5, "v0.72.0"
+    const-string v5, "v0.73.0"
 
     invoke-virtual {v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 85
+    .line 74
     const-string v4, "buildType"
 
     const-string v5, "textrcs"
 
     invoke-virtual {v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 86
+    .line 75
     sget-object v4, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
     invoke-direct {v4}, Lcom/textrcs/diag/LogUploader;->deviceTag()Ljava/lang/String;
@@ -506,12 +498,12 @@
 
     invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 87
+    .line 76
     const-string v4, "logText"
 
     invoke-virtual {v2, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 88
+    .line 77
     move-object v4, v1
 
     check-cast v4, Ljava/lang/CharSequence;
@@ -519,11 +511,11 @@
     .local v4, "$this$count$iv":Ljava/lang/CharSequence;
     const/4 v5, 0x0
 
-    .line 140
+    .line 129
     .local v5, "$i$f$count":I
     const/4 v6, 0x0
 
-    .line 141
+    .line 130
     .local v6, "count$iv":I
     const/4 v7, 0x0
 
@@ -548,7 +540,7 @@
     .local v11, "it":C
     const/4 v12, 0x0
 
-    .line 88
+    .line 77
     .local v12, "$i$a$-count-LogUploader$postBlocking$payload$1$1":I
     const/16 v13, 0xa
 
@@ -559,7 +551,7 @@
     :cond_42
     move v10, v7
 
-    .line 141
+    .line 130
     .end local v11    # "it":C
     .end local v12    # "$i$a$-count-LogUploader$postBlocking$payload$1$1":I
     :goto_43
@@ -573,11 +565,11 @@
 
     goto :goto_30
 
-    .line 142
+    .line 131
     :cond_4a
     nop
 
-    .line 88
+    .line 77
     .end local v4    # "$this$count$iv":Ljava/lang/CharSequence;
     .end local v5    # "$i$f$count":I
     .end local v6    # "count$iv":I
@@ -587,7 +579,7 @@
 
     invoke-virtual {v2, v4, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 89
+    .line 78
     sget-object v4, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
     invoke-direct {v4}, Lcom/textrcs/diag/LogUploader;->nowIso()Ljava/lang/String;
@@ -598,15 +590,15 @@
 
     invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 90
+    .line 79
     nop
 
-    .line 83
-    .end local v2    # "$this$postBlocking_u24lambda_u244":Lorg/json/JSONObject;
+    .line 72
+    .end local v2    # "$this$postBlocking_u24lambda_u243":Lorg/json/JSONObject;
     .end local v3    # "$i$a$-apply-LogUploader$postBlocking$payload$1":I
     nop
 
-    .line 90
+    .line 79
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -625,10 +617,10 @@
 
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 83
+    .line 72
     move-object v2, v0
 
-    .line 94
+    .line 83
     .local v2, "payload":[B
     sget-object v3, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -646,7 +638,7 @@
 
     move-result-object v3
 
-    .line 95
+    .line 84
     .local v3, "url":Ljava/lang/String;
     new-instance v0, Ljava/net/URL;
 
@@ -664,13 +656,13 @@
 
     check-cast v4, Ljava/net/HttpURLConnection;
 
-    .line 96
+    .line 85
     .local v4, "conn":Ljava/net/HttpURLConnection;
     const-string v0, "POST"
 
     invoke-virtual {v4, v0}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 98
+    .line 87
     sget-object v11, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v15, 0x4
@@ -689,7 +681,7 @@
 
     invoke-virtual {v4, v0}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 99
+    .line 88
     sget-object v11, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v12, "log_uploader_read_timeout_ms"
@@ -702,20 +694,20 @@
 
     invoke-virtual {v4, v0}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 100
+    .line 89
     invoke-virtual {v4, v10}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    .line 101
+    .line 90
     const-string v0, "Content-Type"
 
     const-string v5, "application/json"
 
     invoke-virtual {v4, v0, v5}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 102
+    .line 91
     nop
 
-    .line 103
+    .line 92
     :try_start_bf
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
@@ -732,11 +724,11 @@
 
     check-cast v0, Ljava/io/OutputStream;
 
-    .line 143
+    .line 132
     .local v0, "os":Ljava/io/OutputStream;
     const/4 v6, 0x0
 
-    .line 103
+    .line 92
     .local v6, "$i$a$-use-LogUploader$postBlocking$1":I
     invoke-virtual {v0, v2}, Ljava/io/OutputStream;->write([B)V
 
@@ -751,12 +743,12 @@
     :try_start_d0
     invoke-static {v5, v0}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    .line 104
+    .line 93
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v0
 
-    .line 105
+    .line 94
     .local v0, "code":I
     const-string v5, "TextRCSLogUploader"
 
@@ -797,7 +789,7 @@
     :try_end_fb
     .catchall {:try_start_e6 .. :try_end_fb} :catchall_10c
 
-    .line 107
+    .line 96
     .end local v0    # "code":I
     :try_start_fb
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->disconnect()V
@@ -809,14 +801,14 @@
     :catchall_ff
     move-exception v0
 
-    .line 108
+    .line 97
     :goto_100
     nop
 
-    .line 109
+    .line 98
     return-void
 
-    .line 103
+    .line 92
     :catchall_102
     move-exception v0
 
@@ -857,7 +849,7 @@
     :try_end_10c
     .catchall {:try_start_108 .. :try_end_10c} :catchall_10c
 
-    .line 107
+    .line 96
     .restart local v1    # "padded":Ljava/lang/String;
     .restart local v2    # "payload":[B
     .restart local v3    # "url":Ljava/lang/String;
@@ -894,7 +886,7 @@
 .method private final throttle()V
     .registers 10
 
-    .line 65
+    .line 55
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v5, 0x4
@@ -911,28 +903,28 @@
 
     move-result-wide v1
 
-    .line 66
+    .line 56
     .local v1, "gap":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 67
+    .line 57
     .local v3, "now":J
     sget-wide v5, Lcom/textrcs/diag/LogUploader;->lastPostMs:J
 
     sub-long v5, v3, v5
 
-    .line 68
+    .line 58
     .local v5, "elapsed":J
     cmp-long v0, v5, v1
 
     if-gez v0, :cond_20
 
-    .line 69
+    .line 59
     sub-long v7, v1, v5
 
-    .line 70
+    .line 60
     .local v7, "wait":J
     :try_start_1b
     invoke-static {v7, v8}, Ljava/lang/Thread;->sleep(J)V
@@ -944,7 +936,7 @@
     :catch_1f
     move-exception v0
 
-    .line 72
+    .line 62
     .end local v7    # "wait":J
     :cond_20
     :goto_20
@@ -954,101 +946,14 @@
 
     sput-wide v7, Lcom/textrcs/diag/LogUploader;->lastPostMs:J
 
-    .line 73
-    return-void
-.end method
-
-.method private static final upload$lambda$2(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 5
-    .param p0, "$tag"    # Ljava/lang/String;
-    .param p1, "$body"    # Ljava/lang/String;
-
-    const-string v0, "$tag"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "$body"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 53
-    nop
-
-    .line 54
-    :try_start_b
-    sget-object v0, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
-
-    invoke-direct {v0}, Lcom/textrcs/diag/LogUploader;->throttle()V
-
-    .line 55
-    sget-object v0, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
-
-    invoke-direct {v0, p0, p1}, Lcom/textrcs/diag/LogUploader;->postBlocking(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_15
-    .catchall {:try_start_b .. :try_end_15} :catchall_16
-
-    goto :goto_45
-
-    .line 56
-    :catchall_16
-    move-exception v0
-
-    .line 57
-    .local v0, "e":Ljava/lang/Throwable;
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "upload failed: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ": "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "TextRCSLogUploader"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 59
-    .end local v0    # "e":Ljava/lang/Throwable;
-    :goto_45
+    .line 63
     return-void
 .end method
 
 
 # virtual methods
 .method public final upload(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 7
+    .registers 4
     .param p1, "tag"    # Ljava/lang/String;
     .param p2, "body"    # Ljava/lang/String;
 
@@ -1060,34 +965,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 51
-    sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    const-string v3, "log_uploader_disable"
-
-    invoke-static {v0, v3, v1, v2, v1}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_17
-
-    return-void
-
-    .line 52
-    :cond_17
-    sget-object v0, Lcom/textrcs/diag/LogUploader;->executor:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v1, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;
-
-    invoke-direct {v1, p1, p2}, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
-
-    .line 60
+    .line 50
     return-void
 .end method
 
@@ -1104,12 +982,6 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 77
-    invoke-direct {p0}, Lcom/textrcs/diag/LogUploader;->throttle()V
-
-    .line 78
-    invoke-direct {p0, p1, p2}, Lcom/textrcs/diag/LogUploader;->postBlocking(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 79
+    .line 68
     return-void
 .end method

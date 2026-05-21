@@ -3,40 +3,28 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic f$0:Ljava/lang/String;
-
-.field public final synthetic f$1:Ljava/lang/String;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 3
+.method public synthetic constructor <init>()V
+    .registers 1
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;->f$0:Ljava/lang/String;
-
-    iput-object p2, p0, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;->f$1:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .registers 3
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .registers 2
 
     .line 0
-    iget-object v0, p0, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;->f$0:Ljava/lang/String;
+    invoke-static {p1}, Lcom/textrcs/diag/LogUploader;->$r8$lambda$DdKeZXeeZeAvlMrLIaxTFZ9UMrA(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
-    iget-object v1, p0, Lcom/textrcs/diag/LogUploader$$ExternalSyntheticLambda0;->f$1:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v0, v1}, Lcom/textrcs/diag/LogUploader;->$r8$lambda$PXsRUClh6sAA4w_-KSObVB3QPu0(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

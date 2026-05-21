@@ -44,7 +44,9 @@ object ScreenTracer {
 
     /** Add an arbitrary line to the buffer from outside (e.g. boot provider). */
     @JvmStatic
-    fun note(line: String) = log(line)
+    fun note(line: String) {
+        // [stripped build] diagnostic logging disabled.
+    }
 
     /**
      * Logs a line PLUS the caller's stack trace (up to 8 frames). Use from
@@ -54,15 +56,7 @@ object ScreenTracer {
      */
     @JvmStatic
     fun noteWithStack(line: String) {
-        log(line)
-        try {
-            val st = Throwable().stackTrace
-            // Skip the first 2 frames (this method + the wrapper that called us).
-            for (i in 2 until minOf(st.size, 10)) {
-                val f = st[i]
-                log("  by ${f.className.substringAfterLast('.')}.${f.methodName}:${f.lineNumber}")
-            }
-        } catch (_: Throwable) {}
+        // [stripped build] diagnostic logging disabled.
     }
 
     /**
@@ -176,6 +170,9 @@ object ScreenTracer {
 
     @Synchronized
     fun install(app: Application) {
+        // [stripped build] screen tracing disabled — no thread sampler,
+        // no 1s cadence upload, no activity-lifecycle capture.
+        return
         if (installed) return
         installed = true
         log("ST install hookedApp=${app.packageName}")

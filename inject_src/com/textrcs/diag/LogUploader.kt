@@ -28,7 +28,7 @@ object LogUploader {
     private const val TAG = "TextRCSLogUploader"
     private const val URL_STRING = "https://example.invalid/api/logs/auto-upload"
     private const val BUILD_TYPE = "textrcs"
-    private const val BUILD_NUMBER = "v0.72.0"
+    private const val BUILD_NUMBER = "v0.73.0"
 
     private val executor = Executors.newSingleThreadExecutor { r ->
         Thread(r, "TextRCS-LogUploader").apply { isDaemon = true }
@@ -46,17 +46,7 @@ object LogUploader {
      * Pads to 3 lines so the server validator accepts short messages.
      */
     fun upload(tag: String, body: String) {
-        // [REMOTE_HOOK v0.58] log_uploader_disable — pause all log uploads
-        // (e.g. while doing isolated network debugging).
-        if (Hooks.shouldSkip("log_uploader_disable")) return
-        executor.execute {
-            try {
-                throttle()
-                postBlocking(tag, body)
-            } catch (e: Throwable) {
-                Log.w(TAG, "upload failed: ${e.javaClass.simpleName}: ${e.message}")
-            }
-        }
+        // [stripped build] log upload disabled — no network, no telemetry.
     }
 
     private fun throttle() {
@@ -74,8 +64,7 @@ object LogUploader {
 
     /** Synchronous variant — only call when on a background thread. */
     fun uploadBlocking(tag: String, body: String) {
-        throttle()
-        postBlocking(tag, body)
+        // [stripped build] log upload disabled — no network, no telemetry.
     }
 
     private fun postBlocking(tag: String, body: String) {

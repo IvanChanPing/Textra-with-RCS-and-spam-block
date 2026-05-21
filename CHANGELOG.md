@@ -1,5 +1,35 @@
 # TextRCS Changelog
 
+## v0.73.0 — 2026-05-21 — clean build: remote-control + logging stripped
+
+A clean variant for hand-off / distribution — all the development
+instrumentation (remote-control surface, screen tracing, log
+auto-upload, the diagnostic boot providers) is turned off. No telemetry
+leaves the device; no remote command/override channel exists.
+
+What was stripped:
+- **Manifest** — removed the three textrcs boot `<provider>`s that
+  auto-started the instrumentation: `RemoteControlProvider` (the remote
+  command/override bus), `RustLibgmSmokeProvider` (the libgm smoke
+  test), `CrashCatcherProvider` (crash auto-upload). With these gone
+  none of that code initialises at process start.
+- **Hooks** — `Hooks.get()` now returns null unconditionally, so every
+  `shouldSkip()` is false and every `overrideX()` returns the caller's
+  default. No `RemoteConfig` is consulted; no remote override can apply.
+- **ScreenTracer** — `note()` / `noteWithStack()` / `install()` are
+  no-ops: no per-second thread sampler, no 1s cadence upload, no
+  activity-lifecycle screen capture.
+- **LogUploader** — `upload()` / `uploadBlocking()` are no-ops: no
+  network, no telemetry.
+
+The leftover `control/` and `diag/` classes remain compiled but inert —
+nothing instantiates or invokes them. (This build intentionally does
+NOT follow the every-change-gets-a-hook dev convention — removing the
+hook surface is the point.)
+
+Messaging behaviour is unchanged from v0.72.0 (Rust libgm send/receive,
+the receive-into-Textra fix, the rounded-corner transition).
+
 ## v0.72.0 — 2026-05-21 — receive fix: deliver through Textra's own SMS flow
 
 The v0.71.0 receive-path tracing pinpointed the bug. An inbound message

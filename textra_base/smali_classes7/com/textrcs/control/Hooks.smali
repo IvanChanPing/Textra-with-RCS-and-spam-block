@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nHooks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Hooks.kt\ncom/textrcs/control/Hooks\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,137:1\n1549#2:138\n1620#2,3:139\n*S KotlinDebug\n*F\n+ 1 Hooks.kt\ncom/textrcs/control/Hooks\n*L\n129#1:138\n129#1:139,3\n*E\n"
+    value = "SMAP\nHooks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Hooks.kt\ncom/textrcs/control/Hooks\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,128:1\n1549#2:129\n1620#2,3:130\n*S KotlinDebug\n*F\n+ 1 Hooks.kt\ncom/textrcs/control/Hooks\n*L\n120#1:129\n120#1:130,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -106,141 +106,19 @@
 .end method
 
 .method private final get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
-    .registers 10
+    .registers 3
     .param p1, "name"    # Ljava/lang/String;
 
-    .line 42
-    const-string v0, "override"
-
-    sget-object v1, Lcom/textrcs/control/RemoteConfig;->INSTANCE:Lcom/textrcs/control/RemoteConfig;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "hook_"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "_json"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ""
-
-    invoke-virtual {v1, v2, v3}, Lcom/textrcs/control/RemoteConfig;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 43
-    .local v1, "raw":Ljava/lang/String;
-    move-object v2, v1
-
-    check-cast v2, Ljava/lang/CharSequence;
-
-    invoke-static {v2}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_2e
-
-    return-object v3
-
     .line 44
-    :cond_2e
-    nop
+    const/4 v0, 0x0
 
-    .line 45
-    :try_start_2f
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    .line 46
-    .local v2, "o":Lorg/json/JSONObject;
-    new-instance v4, Lcom/textrcs/control/Hooks$Spec;
-
-    .line 47
-    const-string v5, "skip"
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v2, v5, v6}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v5
-
-    .line 48
-    invoke-virtual {v2, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4e
-
-    invoke-virtual {v2, v0}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4e
-
-    invoke-virtual {v2, v0}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    goto :goto_4f
-
-    :cond_4e
-    move-object v0, v3
-
-    .line 49
-    :goto_4f
-    const-string v7, "log"
-
-    invoke-virtual {v2, v7, v6}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v6
-
-    .line 46
-    invoke-direct {v4, v5, v0, v6}, Lcom/textrcs/control/Hooks$Spec;-><init>(ZLjava/lang/Object;Z)V
-    :try_end_58
-    .catch Lorg/json/JSONException; {:try_start_2f .. :try_end_58} :catch_5a
-
-    move-object v3, v4
-
-    .end local v2    # "o":Lorg/json/JSONObject;
-    goto :goto_5c
-
-    .line 51
-    :catch_5a
-    move-exception v0
-
-    .line 52
-    .local v0, "_":Lorg/json/JSONException;
-    nop
-
-    .line 44
-    .end local v0    # "_":Lorg/json/JSONException;
-    :goto_5c
-    return-object v3
+    return-object v0
 .end method
 
 .method public static synthetic overrideBool$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;ZLjava/util/Map;ILjava/lang/Object;)Z
     .registers 6
 
-    .line 99
+    .line 90
     and-int/lit8 p4, p4, 0x4
 
     if-eqz p4, :cond_8
@@ -260,7 +138,7 @@
 .method public static synthetic overrideBytes$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;[BLjava/util/Map;ILjava/lang/Object;)[B
     .registers 6
 
-    .line 123
+    .line 114
     and-int/lit8 p4, p4, 0x4
 
     if-eqz p4, :cond_8
@@ -280,7 +158,7 @@
 .method public static synthetic overrideDouble$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;DLjava/util/Map;ILjava/lang/Object;)D
     .registers 7
 
-    .line 87
+    .line 78
     and-int/lit8 p5, p5, 0x4
 
     if-eqz p5, :cond_8
@@ -300,7 +178,7 @@
 .method public static synthetic overrideInt$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;ILjava/util/Map;ILjava/lang/Object;)I
     .registers 6
 
-    .line 63
+    .line 54
     and-int/lit8 p4, p4, 0x4
 
     if-eqz p4, :cond_8
@@ -320,7 +198,7 @@
 .method public static synthetic overrideLong$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;JLjava/util/Map;ILjava/lang/Object;)J
     .registers 7
 
-    .line 75
+    .line 66
     and-int/lit8 p5, p5, 0x4
 
     if-eqz p5, :cond_8
@@ -340,7 +218,7 @@
 .method public static synthetic overrideString$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Ljava/lang/String;
     .registers 6
 
-    .line 111
+    .line 102
     and-int/lit8 p4, p4, 0x4
 
     if-eqz p4, :cond_8
@@ -360,7 +238,7 @@
 .method public static synthetic shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
     .registers 5
 
-    .line 56
+    .line 47
     and-int/lit8 p3, p3, 0x2
 
     if-eqz p3, :cond_8
@@ -432,10 +310,10 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 100
+    .line 91
     invoke-virtual {p0, p1}, Lcom/textrcs/control/Hooks;->mark(Ljava/lang/String;)V
 
-    .line 101
+    .line 92
     invoke-direct {p0, p1}, Lcom/textrcs/control/Hooks;->get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
 
     move-result-object v0
@@ -444,14 +322,14 @@
 
     return p2
 
-    .line 102
+    .line 93
     .local v0, "spec":Lcom/textrcs/control/Hooks$Spec;
     :cond_14
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getOverride()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 103
+    .line 94
     .local v1, "v":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Boolean;
 
@@ -467,7 +345,7 @@
 
     goto :goto_38
 
-    .line 104
+    .line 95
     :cond_24
     instance-of v2, v1, Ljava/lang/String;
 
@@ -489,11 +367,11 @@
 
     goto :goto_38
 
-    .line 105
+    .line 96
     :cond_36
     nop
 
-    .line 102
+    .line 93
     .end local v1    # "v":Ljava/lang/Object;
     :cond_37
     move v2, p2
@@ -501,7 +379,7 @@
     :goto_38
     nop
 
-    .line 107
+    .line 98
     .local v2, "out":Z
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getLog()Z
 
@@ -559,7 +437,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 108
+    .line 99
     :cond_73
     return v2
 .end method
@@ -600,10 +478,10 @@
 
     invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 124
+    .line 115
     invoke-virtual/range {p0 .. p1}, Lcom/textrcs/control/Hooks;->mark(Ljava/lang/String;)V
 
-    .line 125
+    .line 116
     invoke-direct/range {p0 .. p1}, Lcom/textrcs/control/Hooks;->get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
 
     move-result-object v0
@@ -615,13 +493,13 @@
     :cond_1f
     move-object v4, v0
 
-    .line 126
+    .line 117
     .local v4, "spec":Lcom/textrcs/control/Hooks$Spec;
     invoke-virtual {v4}, Lcom/textrcs/control/Hooks$Spec;->getOverride()Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 127
+    .line 118
     .local v5, "v":Ljava/lang/Object;
     instance-of v0, v5, Ljava/lang/String;
 
@@ -637,7 +515,7 @@
     .local v0, "$this$overrideBytes_u24lambda_u241":Lcom/textrcs/control/Hooks;
     const/4 v6, 0x0
 
-    .line 128
+    .line 119
     .local v6, "$i$a$-runCatching-Hooks$overrideBytes$out$1":I
     move-object v7, v5
 
@@ -651,7 +529,7 @@
 
     move-result-object v7
 
-    .line 129
+    .line 120
     .local v7, "hex":Ljava/lang/String;
     move-object v8, v7
 
@@ -668,7 +546,7 @@
     .local v8, "$this$map$iv":Ljava/lang/Iterable;
     const/4 v9, 0x0
 
-    .line 138
+    .line 129
     .local v9, "$i$f$map":I
     new-instance v10, Ljava/util/ArrayList;
 
@@ -688,7 +566,7 @@
     .local v11, "$this$mapTo$iv$iv":Ljava/lang/Iterable;
     const/4 v12, 0x0
 
-    .line 139
+    .line 130
     .local v12, "$i$f$mapTo":I
     invoke-interface {v11}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -705,7 +583,7 @@
 
     move-result-object v14
 
-    .line 140
+    .line 131
     .local v14, "item$iv$iv":Ljava/lang/Object;
     move-object v15, v14
 
@@ -714,7 +592,7 @@
     .local v15, "it":Ljava/lang/String;
     const/16 v16, 0x0
 
-    .line 129
+    .line 120
     .local v16, "$i$a$-map-Hooks$overrideBytes$out$1$1":I
     const/16 v17, 0x10
 
@@ -738,14 +616,14 @@
 
     move-result-object v0
 
-    .line 140
+    .line 131
     invoke-interface {v10, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v0, v18
 
     goto :goto_58
 
-    .line 141
+    .line 132
     .end local v14    # "item$iv$iv":Ljava/lang/Object;
     .end local v18    # "$this$overrideBytes_u24lambda_u241":Lcom/textrcs/control/Hooks;
     .restart local v0    # "$this$overrideBytes_u24lambda_u241":Lcom/textrcs/control/Hooks;
@@ -761,19 +639,19 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 138
+    .line 129
     nop
 
     .end local v8    # "$this$map$iv":Ljava/lang/Iterable;
     .end local v9    # "$i$f$map":I
     check-cast v0, Ljava/util/Collection;
 
-    .line 129
+    .line 120
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->toByteArray(Ljava/util/Collection;)[B
 
     move-result-object v0
 
-    .line 127
+    .line 118
     .end local v6    # "$i$a$-runCatching-Hooks$overrideBytes$out$1":I
     .end local v7    # "hex":Ljava/lang/String;
     .end local v18    # "$this$overrideBytes_u24lambda_u241":Lcom/textrcs/control/Hooks;
@@ -798,7 +676,7 @@
 
     move-result-object v0
 
-    .line 130
+    .line 121
     :goto_9a
     invoke-static {v0}, Lkotlin/Result;->isFailure-impl(Ljava/lang/Object;)Z
 
@@ -811,17 +689,17 @@
     :cond_a1
     check-cast v0, [B
 
-    .line 127
+    .line 118
     if-nez v0, :cond_a8
 
-    .line 130
+    .line 121
     goto :goto_a7
 
-    .line 131
+    .line 122
     :cond_a6
     nop
 
-    .line 126
+    .line 117
     .end local v5    # "v":Ljava/lang/Object;
     :goto_a7
     move-object v0, v2
@@ -829,7 +707,7 @@
     :cond_a8
     nop
 
-    .line 133
+    .line 124
     .local v0, "out":[B
     invoke-virtual {v4}, Lcom/textrcs/control/Hooks$Spec;->getLog()Z
 
@@ -891,7 +769,7 @@
 
     invoke-static {v5}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 134
+    .line 125
     :cond_e5
     return-object v0
 .end method
@@ -922,10 +800,10 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 88
+    .line 79
     invoke-virtual {p0, p1}, Lcom/textrcs/control/Hooks;->mark(Ljava/lang/String;)V
 
-    .line 89
+    .line 80
     invoke-direct {p0, p1}, Lcom/textrcs/control/Hooks;->get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
 
     move-result-object v0
@@ -934,14 +812,14 @@
 
     return-wide p2
 
-    .line 90
+    .line 81
     .local v0, "spec":Lcom/textrcs/control/Hooks$Spec;
     :cond_14
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getOverride()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 91
+    .line 82
     .local v1, "v":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Number;
 
@@ -957,7 +835,7 @@
 
     goto :goto_38
 
-    .line 92
+    .line 83
     :cond_24
     instance-of v2, v1, Ljava/lang/String;
 
@@ -979,11 +857,11 @@
 
     goto :goto_38
 
-    .line 93
+    .line 84
     :cond_36
     nop
 
-    .line 90
+    .line 81
     .end local v1    # "v":Ljava/lang/Object;
     :cond_37
     move-wide v2, p2
@@ -991,7 +869,7 @@
     :goto_38
     nop
 
-    .line 95
+    .line 86
     .local v2, "out":D
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getLog()Z
 
@@ -1049,7 +927,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 96
+    .line 87
     :cond_73
     return-wide v2
 .end method
@@ -1080,10 +958,10 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 64
+    .line 55
     invoke-virtual {p0, p1}, Lcom/textrcs/control/Hooks;->mark(Ljava/lang/String;)V
 
-    .line 65
+    .line 56
     invoke-direct {p0, p1}, Lcom/textrcs/control/Hooks;->get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
 
     move-result-object v0
@@ -1092,14 +970,14 @@
 
     return p2
 
-    .line 66
+    .line 57
     .local v0, "spec":Lcom/textrcs/control/Hooks$Spec;
     :cond_14
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getOverride()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 67
+    .line 58
     .local v1, "v":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Number;
 
@@ -1115,7 +993,7 @@
 
     goto :goto_38
 
-    .line 68
+    .line 59
     :cond_24
     instance-of v2, v1, Ljava/lang/String;
 
@@ -1137,11 +1015,11 @@
 
     goto :goto_38
 
-    .line 69
+    .line 60
     :cond_36
     nop
 
-    .line 66
+    .line 57
     .end local v1    # "v":Ljava/lang/Object;
     :cond_37
     move v2, p2
@@ -1149,7 +1027,7 @@
     :goto_38
     nop
 
-    .line 71
+    .line 62
     .local v2, "out":I
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getLog()Z
 
@@ -1207,7 +1085,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 72
+    .line 63
     :cond_73
     return v2
 .end method
@@ -1238,10 +1116,10 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 76
+    .line 67
     invoke-virtual {p0, p1}, Lcom/textrcs/control/Hooks;->mark(Ljava/lang/String;)V
 
-    .line 77
+    .line 68
     invoke-direct {p0, p1}, Lcom/textrcs/control/Hooks;->get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
 
     move-result-object v0
@@ -1250,14 +1128,14 @@
 
     return-wide p2
 
-    .line 78
+    .line 69
     .local v0, "spec":Lcom/textrcs/control/Hooks$Spec;
     :cond_14
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getOverride()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 79
+    .line 70
     .local v1, "v":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/Number;
 
@@ -1273,7 +1151,7 @@
 
     goto :goto_38
 
-    .line 80
+    .line 71
     :cond_24
     instance-of v2, v1, Ljava/lang/String;
 
@@ -1295,11 +1173,11 @@
 
     goto :goto_38
 
-    .line 81
+    .line 72
     :cond_36
     nop
 
-    .line 78
+    .line 69
     .end local v1    # "v":Ljava/lang/Object;
     :cond_37
     move-wide v2, p2
@@ -1307,7 +1185,7 @@
     :goto_38
     nop
 
-    .line 83
+    .line 74
     .local v2, "out":J
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getLog()Z
 
@@ -1365,7 +1243,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 84
+    .line 75
     :cond_73
     return-wide v2
 .end method
@@ -1401,10 +1279,10 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 112
+    .line 103
     invoke-virtual {p0, p1}, Lcom/textrcs/control/Hooks;->mark(Ljava/lang/String;)V
 
-    .line 113
+    .line 104
     invoke-direct {p0, p1}, Lcom/textrcs/control/Hooks;->get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
 
     move-result-object v0
@@ -1413,14 +1291,14 @@
 
     return-object p2
 
-    .line 114
+    .line 105
     .local v0, "spec":Lcom/textrcs/control/Hooks$Spec;
     :cond_19
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getOverride()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 115
+    .line 106
     .local v1, "v":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/String;
 
@@ -1432,7 +1310,7 @@
 
     goto :goto_2d
 
-    .line 116
+    .line 107
     :cond_25
     if-nez v1, :cond_29
 
@@ -1440,18 +1318,18 @@
 
     goto :goto_2d
 
-    .line 117
+    .line 108
     :cond_29
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 114
+    .line 105
     .end local v1    # "v":Ljava/lang/Object;
     :goto_2d
     nop
 
-    .line 119
+    .line 110
     .local v2, "out":Ljava/lang/String;
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getLog()Z
 
@@ -1509,7 +1387,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 120
+    .line 111
     :cond_68
     return-object v2
 .end method
@@ -1562,10 +1440,10 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 57
+    .line 48
     invoke-virtual {p0, p1}, Lcom/textrcs/control/Hooks;->mark(Ljava/lang/String;)V
 
-    .line 58
+    .line 49
     invoke-direct {p0, p1}, Lcom/textrcs/control/Hooks;->get(Ljava/lang/String;)Lcom/textrcs/control/Hooks$Spec;
 
     move-result-object v0
@@ -1576,7 +1454,7 @@
 
     return v0
 
-    .line 59
+    .line 50
     .local v0, "spec":Lcom/textrcs/control/Hooks$Spec;
     :cond_15
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getLog()Z
@@ -1629,7 +1507,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 60
+    .line 51
     :cond_49
     invoke-virtual {v0}, Lcom/textrcs/control/Hooks$Spec;->getSkip()Z
 
