@@ -1,5 +1,19 @@
 # TextRCS Changelog
 
+## v0.77.0 — 2026-05-21 — app opens to the conversation list, not pairing
+
+`PairingActivity` ("Textra 2 Pair") declared its own `MAIN`/`LAUNCHER`
+intent-filter — so it was a second launcher icon and the app could open
+straight to the Google Messages connector screen. Removed that
+intent-filter (`textra_base/AndroidManifest.xml`).
+
+The launcher is now solely the stock Textra alias
+`com.mplus.lib.ui.main.Main` (→ `MainActivity`, the conversation list).
+`PairingActivity` stays reachable in-app via Settings → Pro User
+(`com.mplus.lib.d7.a` builds the explicit `Intent`). Verified on the
+emulator: `resolve-activity -c LAUNCHER` is now unique and the launcher
+intent opens the conversation list.
+
 ## v0.76.0 — 2026-05-21 — media-download FFI wired (MMS receive, part 1)
 
 Groundwork for inbound MMS. The Rust `textrcs_libgm` crate already had a

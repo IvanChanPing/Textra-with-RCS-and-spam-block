@@ -3042,12 +3042,7 @@
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
         </activity-alias>
         <activity android:name="com.mplus.lib.ui.initialsync.InitialSyncActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.InitialSyncActivity"/>
-        <activity android:name="com.textrcs.ui.pairing.PairingActivity" android:exported="true" android:icon="@drawable/icon_ffff6d00" android:label="Textra 2 Pair" android:screenOrientation="portrait" android:theme="@android:style/Theme.Material.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+        <activity android:name="com.textrcs.ui.pairing.PairingActivity" android:exported="true" android:icon="@drawable/icon_ffff6d00" android:label="Textra 2 Pair" android:screenOrientation="portrait" android:theme="@android:style/Theme.Material.Light.NoActionBar"/>
         <service android:name="com.textrcs.receive.ReceiveService" android:exported="false" android:foregroundServiceType="dataSync"/>
         <provider android:name="com.textrcs.diag.CrashCatcherProvider" android:authorities="com.textra2.textrcs_diag" android:exported="false" android:initOrder="9999"/>
         <activity android:name="com.mplus.lib.ui.convo.ConvoActivity" android:theme="@style/AppTheme.ConvoActivity"/>
