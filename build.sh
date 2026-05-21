@@ -12,7 +12,13 @@ set -euo pipefail
 PROJ="/root/agent-work/projects/textrcs"
 INJECT_SRC="$PROJ/inject_src"
 BUILD="$PROJ/build"
-SMALI_OUT="$BUILD/inject_smali"
+# Heavy build scratch (jars, dex, baksmali output — ~1G of small-file
+# churn) goes on the local disk: /tmp is on /dev/sda1, measured ~2.6x
+# faster than the /root/agent-work volume. The trap wipes it on exit so
+# nothing lingers on the space-constrained local disk.
+SCRATCH="/tmp/textrcs-build"
+trap 'rm -rf "$SCRATCH"' EXIT
+SMALI_OUT="$SCRATCH/inject_smali"
 BASE="$PROJ/textra_base"
 INJECT_DEX_SLOT="$BASE/smali_classes4"
 
@@ -39,7 +45,7 @@ KEYSTORE="$PROJ/textrcs.keystore"
 KS_PASS="textrcs-pass"
 KS_ALIAS="textrcs"
 
-mkdir -p "$BUILD" "$SMALI_OUT"
+mkdir -p "$BUILD" "$SCRATCH" "$SMALI_OUT"
 
 # ─────────────────────────────────────────────────────────────────────
 # 1. javac → proto.jar
@@ -50,13 +56,13 @@ if [ -z "$JAVA_SOURCES" ]; then
   echo "  (no .java sources)"
   PROTO_JAR=""
 else
-  rm -rf "$BUILD/proto_classes"
-  mkdir -p "$BUILD/proto_classes"
-  javac -d "$BUILD/proto_classes" -classpath "$PROTOBUF_JAVA:$ANDROID_JAR" \
+  rm -rf "$SCRATCH/proto_classes"
+  mkdir -p "$SCRATCH/proto_classes"
+  javac -d "$SCRATCH/proto_classes" -classpath "$PROTOBUF_JAVA:$ANDROID_JAR" \
     $JAVA_SOURCES 2>&1 | tail -5
-  jar cf "$BUILD/proto.jar" -C "$BUILD/proto_classes" .
-  echo "  proto.jar: $(unzip -l "$BUILD/proto.jar" | tail -1 | awk '{print $1}') bytes, $(find "$BUILD/proto_classes" -name '*.class' | wc -l) classes"
-  PROTO_JAR="$BUILD/proto.jar"
+  jar cf "$SCRATCH/proto.jar" -C "$SCRATCH/proto_classes" .
+  echo "  proto.jar: $(unzip -l "$SCRATCH/proto.jar" | tail -1 | awk '{print $1}') bytes, $(find "$SCRATCH/proto_classes" -name '*.class' | wc -l) classes"
+  PROTO_JAR="$SCRATCH/proto.jar"
 fi
 
 # ─────────────────────────────────────────────────────────────────────
@@ -73,17 +79,17 @@ else
     $KT_SOURCES \
     -classpath "$ANDROID_JAR:$KOTLIN_STDLIB:$PROTOBUF_JAVA:$JNA_JAR:$COROUTINES_CORE:$COROUTINES_ANDROID:${PROTO_JAR:-}" \
     -no-stdlib \
-    -d "$BUILD/app.jar" \
+    -d "$SCRATCH/app.jar" \
     -jvm-target 1.8 \
     2>&1
-  APP_JAR="$BUILD/app.jar"
+  APP_JAR="$SCRATCH/app.jar"
 fi
 
 # ─────────────────────────────────────────────────────────────────────
 # 3. d8 → DEX  (proto.jar + app.jar + protobuf-java + kotlin-stdlib)
 # ─────────────────────────────────────────────────────────────────────
 echo "[3/6] d8 → DEX"
-rm -f "$BUILD/classes.dex"
+rm -f "$SCRATCH/classes.dex"
 D8_INPUTS=()
 [ -n "$PROTO_JAR" ] && D8_INPUTS+=("$PROTO_JAR") && D8_INPUTS+=("$PROTOBUF_JAVA")
 [ -n "$APP_JAR" ]   && D8_INPUTS+=("$APP_JAR")   && D8_INPUTS+=("$KOTLIN_STDLIB")
@@ -95,7 +101,7 @@ D8_INPUTS+=("$COROUTINES_ANDROID")
 "$D8" "${D8_INPUTS[@]}" \
   --classpath "$ANDROID_JAR" \
   --min-api 27 \
-  --output "$BUILD/" \
+  --output "$SCRATCH/" \
   2>&1
 
 # ─────────────────────────────────────────────────────────────────────
@@ -107,7 +113,7 @@ rm -rf "$SMALI_OUT"
 # input exceeds the 64K-method limit per dex. baksmali each in turn into
 # the same output dir; later passes overlay missing classes (no overlap
 # in practice since each class lives in exactly one dex).
-for dex in "$BUILD"/classes*.dex; do
+for dex in "$SCRATCH"/classes*.dex; do
   echo "  baksmali $(basename $dex)"
   "$BAKSMALI" disassemble "$dex" -o "$SMALI_OUT" 2>&1
 done
@@ -159,10 +165,10 @@ echo "    textrcs:        $(find "$DEX_SLOT7/com/textrcs" -name '*.smali' 2>/dev
 # 6. apktool b → sign
 # ─────────────────────────────────────────────────────────────────────
 echo "[6/6] apktool b + apksigner"
-rm -f "$BUILD/textra2_unsigned.apk" "$BUILD/textra2.apk" "$BUILD/textra2.apk.idsig"
-apktool b "$BASE" -o "$BUILD/textra2_unsigned.apk" 2>&1 | tail -6
+rm -f "$SCRATCH/textra2_unsigned.apk" "$BUILD/textra2.apk" "$BUILD/textra2.apk.idsig"
+apktool b "$BASE" -o "$SCRATCH/textra2_unsigned.apk" 2>&1 | tail -6
 "$APKSIGNER" sign --ks "$KEYSTORE" --ks-pass "pass:$KS_PASS" --ks-key-alias "$KS_ALIAS" \
-  --out "$BUILD/textra2.apk" "$BUILD/textra2_unsigned.apk" 2>&1 | tail -2
+  --out "$BUILD/textra2.apk" "$SCRATCH/textra2_unsigned.apk" 2>&1 | tail -2
 
 echo
 echo "==> Built: $BUILD/textra2.apk ($(du -h "$BUILD/textra2.apk" | cut -f1))"
