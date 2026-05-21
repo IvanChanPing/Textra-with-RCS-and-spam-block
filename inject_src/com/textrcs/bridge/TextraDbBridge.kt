@@ -88,6 +88,113 @@ object TextraDbBridge {
     }
 
     /**
+     * Deliver a received MMS (an attachment, optionally with a text
+     * caption) into Textra through Textra's OWN MMS receive pipeline.
+     *
+     * Textra ingests a downloaded MMS as an `mms_queue` row — the raw PDU
+     * stored as the `mms_pdu` blob, `mms_state` = `0x55`
+     * (RECEIVED_DOWNLOADING_WAIT) — followed by an internal
+     * `mmsDownloadedNative` intent. `com.mplus.lib.N4.e.N(Intent)` routes
+     * that to the downloaded-MMS handler `X`, which does
+     * `O4/c.Y(content://queue/<id>)` to find the row, parses the blob and
+     * calls `S` to store it. We replicate that exactly: build an
+     * M-Retrieve.conf PDU ([MmsPdu]), insert the queue row, fire the intent.
+     *
+     * @param senderPhone sender's phone (E.164)
+     * @param text        optional caption
+     * @param mediaBytes  the decrypted attachment bytes
+     * @param mediaMime   the attachment MIME type
+     * @return true if the PDU was handed to Textra without throwing
+     */
+    fun writeIncomingMms(
+        context: android.content.Context,
+        senderPhone: String,
+        text: String?,
+        mediaBytes: ByteArray,
+        mediaMime: String,
+        timestampMs: Long,
+    ): Boolean {
+        // [REMOTE_HOOK v0.58] dbbridge_write_skip — short-circuit delivery.
+        if (Hooks.shouldSkip("dbbridge_write_skip")) {
+            Log.w(TAG, "writeIncomingMms SKIPPED by hook")
+            return false
+        }
+        return try {
+            val pdu = MmsPdu.buildRetrieveConf(senderPhone, timestampMs, text, mediaBytes, mediaMime)
+            // Diagnostic: run the PDU through Textra's own parser (E3/C, the
+            // same one O4/b.a() uses) so a malformed PDU is reported here
+            // instead of vanishing inside N4/e.S's broken catch-block log.
+            try {
+                val ecCls = Class.forName("com.mplus.lib.E3.C")
+                val ec = ecCls.getDeclaredConstructor(ByteArray::class.java)
+                    .apply { isAccessible = true }.newInstance(pdu)
+                val parsed = ecCls.getDeclaredMethod("m").apply { isAccessible = true }.invoke(ec)
+                Log.i(TAG, "writeIncomingMms PDU parse-check OK -> ${parsed?.javaClass?.name}")
+            } catch (e: Throwable) {
+                val c = e.cause ?: e
+                Log.w(TAG, "writeIncomingMms PDU parse-check FAILED: ${c.javaClass.name}: ${c.message}")
+            }
+            // 1. Insert the mms_queue row (state 0x55). Textra looks this up
+            //    by content://queue/<id>; the PDU itself is NOT kept here —
+            //    Textra reads it from a file store keyed by (_id, ts).
+            val dbPath = context.getDatabasePath("messaging.db").absolutePath
+            val rowId: Long = android.database.sqlite.SQLiteDatabase.openDatabase(
+                dbPath, null, android.database.sqlite.SQLiteDatabase.OPEN_READWRITE,
+            ).use { db ->
+                val cv = android.content.ContentValues()
+                cv.put("ts", timestampMs)
+                cv.put("mms_state", 0x55)            // RECEIVED_DOWNLOADING_WAIT
+                cv.put("sub_id", -1)
+                cv.put("try_count", 0)
+                cv.put("failed", 0)
+                cv.put("started_at_ts", System.currentTimeMillis())
+                db.insert("mms_queue", null, cv)
+            }
+            if (rowId < 0L) {
+                Log.w(TAG, "writeIncomingMms — mms_queue insert failed")
+                return false
+            }
+            // 2. Write the PDU into Textra's MMS file store. `g0.H()` loads
+            //    O4/b.d from `r4/i`, NOT from the mms_queue.mms_pdu column —
+            //    specifically it calls `r4/i.d(0L, _id)`. So write via
+            //    `r4/i.i(0L, pdu, _id)` (i(a,bytes,b) -> file c(a,b)); the
+            //    file path must be c(0, _id) to match the read.
+            //    r4/i = r4/H.X().d.g (verified in r4/H.B0); i() is a plain
+            //    raw file write.
+            val hClass = Class.forName("com.mplus.lib.r4.H")
+            val h = hClass.getDeclaredMethod("X").invoke(null)
+            val w = hClass.getDeclaredField("d").apply { isAccessible = true }.get(h)!!
+            val r4i = w.javaClass.getDeclaredField("g").apply { isAccessible = true }.get(w)!!
+            r4i.javaClass
+                .getDeclaredMethod("i", java.lang.Long.TYPE, ByteArray::class.java, java.lang.Long.TYPE)
+                .invoke(r4i, 0L, pdu, rowId)
+            // 3. Fire mmsDownloadedNative — N4/e.N routes it to the
+            //    downloaded-MMS handler X, which finds the row + file and
+            //    calls S to parse + store.
+            val uri = android.net.Uri.parse("content://queue/$rowId")
+            val intent = Intent("mmsDownloadedNative").apply {
+                data = uri
+                putExtra("broadcast_resultcode", 0)
+                putExtra("android.telephony.extra.MMS_HTTP_STATUS", 200)
+            }
+            val nClass = Class.forName("com.mplus.lib.N4.e")
+            val singleton = nClass.getDeclaredMethod("Q").invoke(null)
+            nClass.getDeclaredMethod("N", Intent::class.java).invoke(singleton, intent)
+            Log.i(
+                TAG,
+                "writeIncomingMms delivered queueRow=$rowId pduLen=${pdu.size} " +
+                    "sender.tail=${senderPhone.takeLast(6)} media=${mediaBytes.size}b",
+            )
+            ScreenTracer.note("RCV-MMS delivered queueRow=$rowId pduLen=${pdu.size}")
+            true
+        } catch (e: Throwable) {
+            Log.w(TAG, "writeIncomingMms failed: ${e.javaClass.simpleName}: ${e.message}")
+            ScreenTracer.note("RCV-MMS deliver FAIL ${e.javaClass.simpleName}: ${e.message}")
+            false
+        }
+    }
+
+    /**
      * Outgoing delivery-status reconciliation — not wired. The
      * `SendMessageResponse` doesn't echo Textra's `tmpId`, so a real
      * implementation would have to match on the long-poll `MessageEvent`.

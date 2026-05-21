@@ -1,5 +1,32 @@
 # TextRCS Changelog
 
+## v0.82.0 — 2026-05-21 — inbound MMS (picture) receive — WORKING
+
+Incoming MMS pictures now arrive in Textra. Device-verified: a picture
+from +15163416499 landed in the correct conversation as an `image/jpeg`
+MMS (messages row `kind=1`, `part_content_type=image/jpeg`).
+
+Pipeline (all delivered through Textra's OWN built-in MMS receiver):
+- `IncomingMessageHandler` detects `MessageInfo.mediaContent`. An inbound
+  MMS arrives in 3 long-poll pushes — empty stub, an inline 816-byte
+  thumbnail (no `mediaID`), then the full image with a real `mediaID` +
+  32-byte key; only the last is acted on.
+- `RustBridge.downloadMedia` (v0.76 FFI) downloads + AES-GCM-decrypts the
+  attachment.
+- `MmsPdu.kt` — new OMA MMS-encapsulation encoder — builds an
+  M-Retrieve.conf PDU. Verified: Textra's own parser (`E3/C`) accepts it
+  as a `RetrieveConf` (`L4/o`).
+- `TextraDbBridge.writeIncomingMms` — inserts an `mms_queue` row
+  (state `0x55`), writes the PDU into Textra's file store via
+  `r4/i.i(0L, pdu, _id)` — the path `g0.H()` reads (`r4/i.d(0, _id)`),
+  NOT the `mms_pdu` blob column — then fires `mmsDownloadedNative` so
+  `N4/e.X` → `N4/e.S` parses + stores it.
+
+v0.78–v0.81 were the iterative debug builds for this (media-detection
+staging, the `r4/i` file-store path, the PDU parse-check).
+
+Also folded in: textra2 now has a home-screen launcher icon.
+
 ## v0.77.0 — 2026-05-21 — app opens to the conversation list, not pairing
 
 `PairingActivity` ("Textra 2 Pair") declared its own `MAIN`/`LAUNCHER`

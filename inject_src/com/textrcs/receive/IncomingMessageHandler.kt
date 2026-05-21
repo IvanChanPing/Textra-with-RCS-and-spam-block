@@ -2,6 +2,7 @@ package com.textrcs.receive
 
 import android.content.Context
 import android.util.Log
+import com.textrcs.bridge.RustBridge
 import com.textrcs.bridge.TextraDbBridge
 import com.textrcs.control.Hooks
 import com.textrcs.diag.ScreenTracer
@@ -40,6 +41,11 @@ object IncomingMessageHandler {
     /** libgm timestamps above this are microseconds, not milliseconds. */
     private const val MICROS_THRESHOLD = 100_000_000_000_000L
 
+    /** Media download + MMS delivery — runs off the Rust long-poll thread. */
+    private val mediaExecutor = java.util.concurrent.Executors.newSingleThreadExecutor { r ->
+        Thread(r, "TextRCS-Mms").apply { isDaemon = true }
+    }
+
     fun onUpdateEvents(context: Context, events: UpdateEvents) {
         // [REMOTE_HOOK v0.58] incoming_drop_all — kill-switch for all
         // inbound writes (useful when DB corruption is suspected).
@@ -60,7 +66,7 @@ object IncomingMessageHandler {
         }
         if (events.hasMessageEvent()) {
             for (data in events.messageEvent.dataList) {
-                handleMessage(data)
+                handleMessage(context, data)
             }
         }
         if (events.hasTypingEvent()) {
@@ -129,7 +135,7 @@ object IncomingMessageHandler {
     // Message handling
     // ─────────────────────────────────────────────────────────────────────
 
-    private fun handleMessage(data: com.textrcs.gmproto.conversations.Message) {
+    private fun handleMessage(context: Context, data: com.textrcs.gmproto.conversations.Message) {
         Log.i(
             TAG,
             "msg id=${data.messageID} conv=${data.conversationID} " +
@@ -148,12 +154,39 @@ object IncomingMessageHandler {
         val textParts = data.messageInfoList
             .mapNotNull { mi -> mi.messageContent?.content }
             .filter { it.isNotEmpty() }
-        if (textParts.isEmpty()) {
-            Log.i(TAG, "  skip id=${data.messageID} — no text messageContent parts")
-            ScreenTracer.note("RCV msg SKIP — no text messageContent parts")
+        val body = textParts.joinToString("\n")
+        // Per-part diagnostics — exactly what each messageInfo carries.
+        for ((i, mi) in data.messageInfoList.withIndex()) {
+            if (mi.hasMediaContent()) {
+                val m = mi.mediaContent
+                Log.i(
+                    TAG,
+                    "  part[$i] MEDIA id='${m.mediaID}' mime=${m.mimeType} " +
+                        "name=${m.mediaName} keyLen=${m.decryptionKey.size()} " +
+                        "inlineLen=${m.mediaData.size()} fmt=${m.format}"
+                )
+            } else {
+                Log.i(
+                    TAG,
+                    "  part[$i] hasText=${mi.hasMessageContent()} " +
+                        "textLen=${if (mi.hasMessageContent()) mi.messageContent.content.length else -1}"
+                )
+            }
+        }
+        // A deliverable media part needs a real downloadable mediaID. An
+        // inbound MMS arrives in stages — an empty stub, then an inline
+        // thumbnail (small mediaData, no mediaID), then the full image with
+        // a mediaID; only the last one is the real attachment.
+        val mediaParts = data.messageInfoList
+            .filter { it.hasMediaContent() }
+            .map { it.mediaContent }
+            .filter { it.mediaID.isNotBlank() }
+
+        if (body.isEmpty() && mediaParts.isEmpty()) {
+            Log.i(TAG, "  skip id=${data.messageID} — no text or media parts")
+            ScreenTracer.note("RCV msg SKIP — no content parts")
             return
         }
-        val body = textParts.joinToString("\n")
 
         // [REMOTE_HOOK v0.75] incoming_dedup_disable — disable the
         // messageID replay guard. Google pushes the same message 2-3x on
@@ -170,19 +203,69 @@ object IncomingMessageHandler {
         Log.i(
             TAG,
             "  sender=${sender.value} via=${sender.source} " +
-                "(rawParticipantID=${data.participantID}) tsMs=$ts"
+                "(rawParticipantID=${data.participantID}) tsMs=$ts " +
+                "text.len=${body.length} mediaParts=${mediaParts.size}"
         )
-        val wrote = TextraDbBridge.writeIncoming(sender.value, body, ts)
-        Log.i(TAG, "  wrote-to-textra-db=$wrote sender=${sender.value} len=${body.length}")
-        ScreenTracer.note(
-            "RCV writeIncoming=$wrote sender.tail=${sender.value.takeLast(6)} " +
-                "via=${sender.source} body.len=${body.length}"
-        )
-        if (wrote) {
+
+        if (mediaParts.isNotEmpty()) {
+            // MMS path. Mark seen now so a long-poll replay during the
+            // async download does not re-dispatch; download + deliver off
+            // the Rust callback thread so the long-poll is not blocked.
             seenMessageIds.add(data.messageID)
-            while (seenMessageIds.size > SEEN_CAP) {
-                seenMessageIds.remove(seenMessageIds.first())
+            trimSeen()
+            val mc = mediaParts.first()
+            if (mediaParts.size > 1) {
+                Log.i(TAG, "  note: ${mediaParts.size} media parts — delivering the first")
             }
+            val msgId = data.messageID
+            mediaExecutor.execute {
+                try {
+                    val bytes: ByteArray = if (mc.mediaID.isNotBlank()) {
+                        val keyBytes = mc.decryptionKey.toByteArray()
+                        Log.i(
+                            TAG,
+                            "  MMS downloading id=$msgId mediaId.len=${mc.mediaID.length} " +
+                                "mime=${mc.mimeType} key.len=${keyBytes.size}"
+                        )
+                        RustBridge.downloadMedia(context, mc.mediaID, keyBytes)
+                    } else {
+                        Log.i(TAG, "  MMS inline media id=$msgId len=${mc.mediaData.size()}")
+                        mc.mediaData.toByteArray()
+                    }
+                    val mime = mc.mimeType.ifBlank { "image/jpeg" }
+                    val wrote = TextraDbBridge.writeIncomingMms(
+                        context, sender.value, body.ifEmpty { null }, bytes, mime, ts,
+                    )
+                    Log.i(
+                        TAG,
+                        "  MMS wrote-to-textra=$wrote id=$msgId media=${bytes.size}b mime=$mime",
+                    )
+                } catch (e: Throwable) {
+                    Log.w(
+                        TAG,
+                        "  MMS handling failed id=$msgId: ${e.javaClass.simpleName}: ${e.message}",
+                    )
+                    ScreenTracer.note("RCV-MMS FAIL ${e.javaClass.simpleName}: ${e.message}")
+                }
+            }
+        } else {
+            // Text-only — SMS path.
+            val wrote = TextraDbBridge.writeIncoming(sender.value, body, ts)
+            Log.i(TAG, "  wrote-to-textra-db=$wrote sender=${sender.value} len=${body.length}")
+            ScreenTracer.note(
+                "RCV writeIncoming=$wrote sender.tail=${sender.value.takeLast(6)} " +
+                    "via=${sender.source} body.len=${body.length}"
+            )
+            if (wrote) {
+                seenMessageIds.add(data.messageID)
+                trimSeen()
+            }
+        }
+    }
+
+    private fun trimSeen() {
+        while (seenMessageIds.size > SEEN_CAP) {
+            seenMessageIds.remove(seenMessageIds.first())
         }
     }
 

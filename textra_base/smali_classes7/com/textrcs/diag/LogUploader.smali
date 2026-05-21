@@ -49,7 +49,7 @@
 
 
 # static fields
-.field private static final BUILD_NUMBER:Ljava/lang/String; = "v0.77.0"
+.field private static final BUILD_NUMBER:Ljava/lang/String; = "v0.82.0"
 
 .field private static final BUILD_TYPE:Ljava/lang/String; = "textrcs"
 
@@ -389,7 +389,7 @@
 
     move-result-object v3
 
-    const-string v4, ": build=v0.77.0\n"
+    const-string v4, ": build=v0.82.0\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -476,7 +476,7 @@
     .local v3, "$i$a$-apply-LogUploader$postBlocking$payload$1":I
     const-string v4, "buildNumber"
 
-    const-string v5, "v0.77.0"
+    const-string v5, "v0.82.0"
 
     invoke-virtual {v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
