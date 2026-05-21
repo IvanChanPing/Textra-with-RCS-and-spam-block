@@ -207,6 +207,25 @@ object IncomingMessageHandler {
                 "text.len=${body.length} mediaParts=${mediaParts.size}"
         )
 
+        // [REMOTE_HOOK v0.83] incoming_allow_unresolved_sender — guard
+        // against junk "stub" conversations: a message whose sender did
+        // not resolve to a real phone (fell through to the raw
+        // participantID) is HELD, not delivered. Delivering it would key a
+        // bogus conversation by the libgm short int (e.g. "3343" -> a
+        // "+33 43" stub). Not marked seen — so it is retried on a later
+        // push once the participant cache is warm (e.g. after the
+        // ConversationEvent for an RCS-upgraded conversation arrives).
+        if (sender.source == "FALLBACK-raw-participantID" &&
+            !Hooks.shouldSkip("incoming_allow_unresolved_sender")
+        ) {
+            Log.w(
+                TAG,
+                "  HOLD id=${data.messageID} — sender unresolved " +
+                    "(participantID=${data.participantID}); not delivering"
+            )
+            return
+        }
+
         if (mediaParts.isNotEmpty()) {
             // MMS path. Mark seen now so a long-poll replay during the
             // async download does not re-dispatch; download + deliver off

@@ -1,5 +1,18 @@
 # TextRCS Changelog
 
+## v0.83.0 — 2026-05-21 — guard against stub conversations
+
+A message whose sender does not resolve to a real phone (resolution
+falls through to the raw libgm `participantID`) is now HELD, not
+delivered — `IncomingMessageHandler` returns before `writeIncoming`.
+Delivering it would create a junk "stub" conversation keyed by the
+short int (e.g. `3343` → a `+33 43` thread; this also happened once
+right when RCS was turned on, since the SMS→RCS upgrade reassigns
+participant IDs). The held message is not marked seen, so it is retried
+on a later push once the participant cache is warm. Hook
+`incoming_allow_unresolved_sender` reverts. The two pre-existing stub
+convos were soft-deleted from the DB.
+
 ## v0.82.0 — 2026-05-21 — inbound MMS (picture) receive — WORKING
 
 Incoming MMS pictures now arrive in Textra. Device-verified: a picture
