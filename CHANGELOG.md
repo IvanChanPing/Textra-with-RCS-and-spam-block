@@ -1,5 +1,38 @@
 # TextRCS Changelog
 
+## v0.94.0 — 2026-05-22 — incoming group messages: deliver via r4.H.F0, not MMS PDU
+
+The MMS-PDU route for incoming group messages kept threading 1:1 even
+after the `To` header parsed correctly (`to.n=1`). Root cause, found by
+reading Textra's smali: `O4/c.Z` (the MMS-receive path) collapses a
+PDU with <= 2 addresses to a 1:1 thread, and only treats it as a group
+when a downstream `O4/b.j` flag (sourced from a DB column) is also set —
+fragile heuristics that a synthesized PDU cannot reliably satisfy.
+
+New route — `TextraDbBridge.writeIncomingGroup`: build an incoming
+`r4.j0` directly and call Textra's own incoming-message writer
+`r4.H.F0(r4.j0)`. `r4.H.F0` → `r4.x` code 4 → `c0` → `U` resolves the
+conversation purely from `j0.h` (the `r4.n` recipient set) — a set with
+> 1 member threads into the group conversation, with no `O4/c.Z`
+heuristic involved. The message is written as kind=SMS (`j0.f=0`) so
+Textra writes a single `messages` row with the text from `j0.i` — no
+`r4.m0` MMS parts needed for a text message. Fields (verified against
+smali): `g=0` incoming, `f=0` SMS-kind, `m=true` unread, `z`=sender
+(originator), `h`=`r4.n` of all non-self members, `i`=text, `j`/`k`=ts.
+
+`IncomingMessageHandler` routes incoming group TEXT messages through it
+with the full non-self participant set (the group conversation is keyed
+by that set). Group media still uses `writeIncomingGroupMms`. Hook:
+`dbbridge_incoming_group_skip`.
+
+## v0.93.0 — 2026-05-22 — group MMS header diagnostics
+
+Diagnostic build. v0.92's general-form `To` encoding still threaded an
+incoming group message 1:1. `deliverMmsPdu` now dumps, from the PDU
+Textra's own parser produced, the stored header field-codes and what
+`From(0x89)` / `To(0x97)` / `Cc(0x82)` resolve to — to pinpoint whether
+the `To` address is dropped at parse time or filtered later in `O4/c.Z`.
+
 ## v0.92.0 — 2026-05-22 — group MMS: encode To addresses so Textra threads them
 
 v0.91 stopped incoming group messages from crashing, but they threaded

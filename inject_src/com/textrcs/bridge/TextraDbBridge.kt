@@ -173,6 +173,103 @@ object TextraDbBridge {
     }
 
     /**
+     * Deliver a received GROUP TEXT message into Textra as an incoming
+     * message in the group conversation.
+     *
+     * Built directly through Textra's own incoming-message writer
+     * `com.mplus.lib.r4.H.F0(r4.j0)` — NOT the MMS PDU pipeline. `r4.H.F0`
+     * resolves the conversation from the `r4.j0.h` recipient set; a set with
+     * >1 member threads into the group conversation. The message is written
+     * as kind=SMS (`j0.f=0`) so Textra writes one `messages` row with the
+     * text taken straight from `j0.i` — no `r4.m0` MMS parts required.
+     *
+     * `r4.j0` fields (verified against Textra's smali):
+     *   h = r4.n recipient set (all non-self group members)
+     *   z = originator (the group member who sent this message)
+     *   i = message text
+     *   j = display timestamp (ms), k = message-center timestamp (ms)
+     *   g = 0 (incoming), f = 0 (SMS kind), m = true (unread)
+     *
+     * @param senderPhone  the group member who sent the message (E.164)
+     * @param memberPhones ALL non-self group members (E.164); the group
+     *                     conversation is keyed by this exact set
+     * @param text         the message text
+     * @param timestampMs  epoch milliseconds
+     */
+    fun writeIncomingGroup(
+        senderPhone: String,
+        memberPhones: List<String>,
+        text: String,
+        timestampMs: Long,
+    ): Boolean {
+        // [REMOTE_HOOK v0.94] dbbridge_incoming_group_skip — short-circuit
+        // group-message delivery (also honours the shared dbbridge_write_skip).
+        if (Hooks.shouldSkip("dbbridge_write_skip") ||
+            Hooks.shouldSkip("dbbridge_incoming_group_skip")
+        ) {
+            Log.w(TAG, "writeIncomingGroup SKIPPED by hook")
+            return false
+        }
+        if (memberPhones.size < 2 || text.isEmpty()) {
+            Log.w(TAG, "writeIncomingGroup — need >=2 members and non-empty text")
+            return false
+        }
+        return try {
+            // r4.n recipient set, via Textra's own delimiter-aware parser.
+            val joined = memberPhones.joinToString(",")
+            val recipients = Class.forName("com.mplus.lib.z7.y")
+                .getDeclaredMethod("p", String::class.java)
+                .apply { isAccessible = true }.invoke(null, joined)
+            if (recipients == null) {
+                Log.w(TAG, "writeIncomingGroup — z7.y.p returned null for '$joined'")
+                return false
+            }
+            // r4.j0 incoming group-message POJO.
+            val j0Cls = Class.forName("com.mplus.lib.r4.j0")
+            val j0 = j0Cls.getDeclaredConstructor().newInstance()
+            fun field(name: String) =
+                j0Cls.getDeclaredField(name).apply { isAccessible = true }
+            field("i").set(j0, text)
+            field("h").set(j0, recipients)
+            field("z").set(j0, senderPhone)
+            field("j").setLong(j0, timestampMs)
+            field("k").setLong(j0, timestampMs)
+            field("g").setInt(j0, 0)
+            field("f").setInt(j0, 0)
+            field("m").setBoolean(j0, true)
+            // r4.H.X().F0(j0) — Textra's incoming-message writer.
+            val hCls = Class.forName("com.mplus.lib.r4.H")
+            val h = hCls.getDeclaredMethod("X").invoke(null)
+            if (h == null) {
+                Log.w(TAG, "writeIncomingGroup — r4.H.X() returned null")
+                return false
+            }
+            hCls.getDeclaredMethod("F0", j0Cls).invoke(h, j0)
+            Log.i(
+                TAG,
+                "writeIncomingGroup delivered members=${memberPhones.size} " +
+                    "from.tail=${senderPhone.takeLast(6)} text.len=${text.length}",
+            )
+            ScreenTracer.note(
+                "RCV-GROUP writeIncomingGroup members=${memberPhones.size} " +
+                    "text.len=${text.length}",
+            )
+            true
+        } catch (e: Throwable) {
+            var c: Throwable = e
+            while (c.cause != null &&
+                (c is java.lang.reflect.InvocationTargetException ||
+                    c is java.lang.reflect.UndeclaredThrowableException)
+            ) {
+                c = c.cause!!
+            }
+            Log.w(TAG, "writeIncomingGroup FAILED: ${c.javaClass.name}: ${c.message}", c)
+            ScreenTracer.note("RCV-GROUP writeIncomingGroup FAIL ${c.javaClass.name}: ${c.message}")
+            false
+        }
+    }
+
+    /**
      * Hand a finished M-Retrieve.conf PDU to Textra's MMS receive pipeline:
      * insert the `mms_queue` row, write the PDU into the MMS file store,
      * fire `mmsDownloadedNative`. Shared by [writeIncomingMms] and
@@ -194,6 +291,30 @@ object TextraDbBridge {
                     .apply { isAccessible = true }.newInstance(pdu)
                 val parsed = ecCls.getDeclaredMethod("m").apply { isAccessible = true }.invoke(ec)
                 Log.i(TAG, "deliverMmsPdu PDU parse-check OK -> ${parsed?.javaClass?.name}")
+                // Diagnostic: dump the header field-codes Textra's parser
+                // actually stored, and what From(0x89)/To(0x97)/Cc(0x82)
+                // resolve to — so a dropped To address is visible here.
+                if (parsed != null) {
+                    val hdrs = Class.forName("com.mplus.lib.F1.a")
+                        .getDeclaredField("b").apply { isAccessible = true }.get(parsed)
+                    val b2 = Class.forName("com.mplus.lib.B2.l")
+                    val sa = b2.getDeclaredField("b").apply { isAccessible = true }
+                        .get(hdrs) as android.util.SparseArray<*>
+                    val keys = StringBuilder()
+                    for (i in 0 until sa.size()) {
+                        keys.append(Integer.toHexString(sa.keyAt(i))).append(' ')
+                    }
+                    val zM = b2.getDeclaredMethod("z", Integer.TYPE)
+                    val aM = b2.getDeclaredMethod("A", Integer.TYPE)
+                    val from = zM.invoke(hdrs, 0x89)
+                    val to = aM.invoke(hdrs, 0x97) as Array<*>?
+                    val cc = aM.invoke(hdrs, 0x82) as Array<*>?
+                    Log.i(
+                        TAG,
+                        "deliverMmsPdu HEADERS keys=[$keys] from=${from != null} " +
+                            "to.n=${to?.size ?: -1} cc.n=${cc?.size ?: -1}",
+                    )
+                }
             } catch (e: Throwable) {
                 val c = e.cause ?: e
                 Log.w(TAG, "deliverMmsPdu PDU parse-check FAILED: ${c.javaClass.name}: ${c.message}")

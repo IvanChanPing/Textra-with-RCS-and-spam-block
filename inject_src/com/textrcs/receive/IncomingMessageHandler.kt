@@ -486,9 +486,13 @@ object IncomingMessageHandler {
                 }
             }
         } else if (deliverAsGroup) {
-            // Group text — delivered as a text-only group MMS.
-            val wrote = TextraDbBridge.writeIncomingGroupMms(
-                context, sender.value, groupMembers, body, null, null, ts,
+            // Group text — delivered into the group conversation via Textra's
+            // own incoming-message writer (writeIncomingGroup needs ALL
+            // non-self members; the group is keyed by the full member set).
+            val wrote = TextraDbBridge.writeIncomingGroup(
+                sender.value,
+                convInfo[data.conversationID]?.participantPhones ?: emptyList(),
+                body, ts,
             )
             Log.i(
                 TAG,
@@ -496,7 +500,7 @@ object IncomingMessageHandler {
                     "from.tail=${sender.value.takeLast(6)} body.len=${body.length}",
             )
             ScreenTracer.note(
-                "RCV group writeIncomingGroupMms=$wrote members=${groupMembers.size} " +
+                "RCV group writeIncomingGroup=$wrote members=${groupMembers.size} " +
                     "body.len=${body.length}"
             )
             if (wrote) {
