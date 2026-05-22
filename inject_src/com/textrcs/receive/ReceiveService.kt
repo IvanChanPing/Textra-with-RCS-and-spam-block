@@ -61,9 +61,36 @@ class ReceiveService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // Diagnostic self-test entry: `am start-foreground-service -n
+        // com.textra2/com.textrcs.receive.ReceiveService --es textrcs_selftest
+        // groupmms` exercises the incoming-group-MMS delivery path directly,
+        // so its failure is reproducible without a live incoming message.
+        if (intent?.getStringExtra("textrcs_selftest") == "groupmms") {
+            worker.execute { runGroupMmsSelfTest() }
+        }
         // Keep running until explicitly stopped. If killed by the system,
         // be restarted with the same Intent.
         return START_STICKY
+    }
+
+    /** Exercise [com.textrcs.bridge.TextraDbBridge.writeIncomingGroupMms]. */
+    private fun runGroupMmsSelfTest() {
+        Log.i(TAG, "SELFTEST groupmms — invoking writeIncomingGroupMms")
+        ScreenTracer.note("SELFTEST groupmms start")
+        try {
+            val ok = com.textrcs.bridge.TextraDbBridge.writeIncomingGroupMms(
+                applicationContext,
+                "+15167213415",                  // sender (a real group member)
+                listOf("+15163842548"),          // other group member(s)
+                "group mms self-test",           // text body
+                null, null,                      // no attachment — text-only
+                System.currentTimeMillis(),
+            )
+            Log.i(TAG, "SELFTEST groupmms result wrote=$ok")
+            ScreenTracer.note("SELFTEST groupmms result wrote=$ok")
+        } catch (e: Throwable) {
+            Log.e(TAG, "SELFTEST groupmms threw", e)
+        }
     }
 
     override fun onBind(intent: Intent?): IBinder? = null

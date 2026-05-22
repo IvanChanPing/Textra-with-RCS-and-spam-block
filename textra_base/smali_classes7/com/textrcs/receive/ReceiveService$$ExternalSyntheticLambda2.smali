@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;
+.class public final synthetic Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
 .source "D8$$SyntheticClass"
 
@@ -17,7 +17,7 @@
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;->f$0:Lcom/textrcs/receive/ReceiveService;
+    iput-object p1, p0, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda2;->f$0:Lcom/textrcs/receive/ReceiveService;
 
     return-void
 .end method
@@ -28,9 +28,9 @@
     .registers 2
 
     .line 0
-    iget-object v0, p0, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;->f$0:Lcom/textrcs/receive/ReceiveService;
+    iget-object v0, p0, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda2;->f$0:Lcom/textrcs/receive/ReceiveService;
 
-    invoke-static {v0}, Lcom/textrcs/receive/ReceiveService;->$r8$lambda$dRszEEBivZyZ3pSH-RqGQeyHmy4(Lcom/textrcs/receive/ReceiveService;)V
+    invoke-static {v0}, Lcom/textrcs/receive/ReceiveService;->$r8$lambda$x6KJ2POYSqKZK_5ds33F7CG49Qg(Lcom/textrcs/receive/ReceiveService;)V
 
     return-void
 .end method

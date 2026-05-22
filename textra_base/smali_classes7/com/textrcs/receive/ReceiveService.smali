@@ -11,12 +11,12 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nReceiveService.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReceiveService.kt\ncom/textrcs/receive/ReceiveService\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,117:1\n1#2:118\n*E\n"
+    value = "SMAP\nReceiveService.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReceiveService.kt\ncom/textrcs/receive/ReceiveService\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,144:1\n1#2:145\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\u0018\u0000 \u00152\u00020\u0001:\u0001\u0015B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u0006\u001a\u00020\u0007H\u0002J\u0008\u0010\u0008\u001a\u00020\tH\u0002J\u0014\u0010\n\u001a\u0004\u0018\u00010\u000b2\u0008\u0010\u000c\u001a\u0004\u0018\u00010\rH\u0016J\u0008\u0010\u000e\u001a\u00020\u000fH\u0016J\u0008\u0010\u0010\u001a\u00020\u000fH\u0016J\"\u0010\u0011\u001a\u00020\u00122\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r2\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u0012H\u0016R\u0016\u0010\u0003\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
+        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0004\u0018\u0000 \u00162\u00020\u0001:\u0001\u0016B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u0006\u001a\u00020\u0007H\u0002J\u0008\u0010\u0008\u001a\u00020\tH\u0002J\u0014\u0010\n\u001a\u0004\u0018\u00010\u000b2\u0008\u0010\u000c\u001a\u0004\u0018\u00010\rH\u0016J\u0008\u0010\u000e\u001a\u00020\u000fH\u0016J\u0008\u0010\u0010\u001a\u00020\u000fH\u0016J\"\u0010\u0011\u001a\u00020\u00122\u0008\u0010\u000c\u001a\u0004\u0018\u00010\r2\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u0012H\u0016J\u0008\u0010\u0015\u001a\u00020\u000fH\u0002R\u0016\u0010\u0003\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/receive/ReceiveService;",
@@ -40,6 +40,7 @@
         "",
         "flags",
         "startId",
+        "runGroupMmsSelfTest",
         "Companion"
     }
     k = 0x1
@@ -67,6 +68,14 @@
 
 
 # direct methods
+.method public static synthetic $r8$lambda$dRszEEBivZyZ3pSH-RqGQeyHmy4(Lcom/textrcs/receive/ReceiveService;)V
+    .registers 1
+
+    invoke-static {p0}, Lcom/textrcs/receive/ReceiveService;->onStartCommand$lambda$3(Lcom/textrcs/receive/ReceiveService;)V
+
+    return-void
+.end method
+
 .method public static synthetic $r8$lambda$gPjIzIVo8vJTsCheylJAvNNrKZ8(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .registers 1
 
@@ -106,9 +115,9 @@
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 36
-    new-instance v0, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;
+    new-instance v0, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda1;
 
-    invoke-direct {v0}, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;-><init>()V
+    invoke-direct {v0}, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda1;-><init>()V
 
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
@@ -123,10 +132,10 @@
 .method private final buildOngoingNotification()Landroid/app/Notification;
     .registers 10
 
-    .line 84
+    .line 111
     nop
 
-    .line 85
+    .line 112
     const-class v0, Landroid/app/NotificationManager;
 
     invoke-virtual {p0, v0}, Lcom/textrcs/receive/ReceiveService;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -135,7 +144,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    .line 86
+    .line 113
     .local v0, "mgr":Landroid/app/NotificationManager;
     const-string v1, "textrcs_receive"
 
@@ -145,40 +154,40 @@
 
     if-nez v2, :cond_29
 
-    .line 87
+    .line 114
     new-instance v2, Landroid/app/NotificationChannel;
 
-    .line 88
+    .line 115
     nop
 
-    .line 89
+    .line 116
     const-string v3, "Google Messages connection"
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    .line 90
+    .line 117
     nop
 
-    .line 87
+    .line 114
     const/4 v4, 0x2
 
     invoke-direct {v2, v1, v3, v4}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    .line 92
+    .line 119
     .local v2, "ch":Landroid/app/NotificationChannel;
     const-string v3, "Required for receiving new messages."
 
     invoke-virtual {v2, v3}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
 
-    .line 93
+    .line 120
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
 
-    .line 94
+    .line 121
     invoke-virtual {v0, v2}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
 
-    .line 100
+    .line 127
     .end local v0    # "mgr":Landroid/app/NotificationManager;
     .end local v2    # "ch":Landroid/app/NotificationChannel;
     :cond_29
@@ -190,7 +199,7 @@
 
     invoke-direct {v0, v2, v1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 101
+    .line 128
     sget-object v3, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v7, 0x4
@@ -213,7 +222,7 @@
 
     move-result-object v0
 
-    .line 102
+    .line 129
     sget-object v1, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v5, 0x4
@@ -234,14 +243,14 @@
 
     move-result-object v0
 
-    .line 103
+    .line 130
     const v1, 0x108007c
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 104
+    .line 131
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
@@ -252,10 +261,10 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 100
+    .line 127
     nop
 
-    .line 105
+    .line 132
     .local v0, "builder":Landroid/app/Notification$Builder;
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
@@ -271,7 +280,7 @@
 .method private final hasSession()Z
     .registers 3
 
-    .line 109
+    .line 136
     new-instance v0, Lcom/textrcs/protocol/SessionStore;
 
     move-object v1, p0
@@ -410,6 +419,143 @@
     return-void
 .end method
 
+.method private static final onStartCommand$lambda$3(Lcom/textrcs/receive/ReceiveService;)V
+    .registers 2
+    .param p0, "this$0"    # Lcom/textrcs/receive/ReceiveService;
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 69
+    invoke-direct {p0}, Lcom/textrcs/receive/ReceiveService;->runGroupMmsSelfTest()V
+
+    return-void
+.end method
+
+.method private final runGroupMmsSelfTest()V
+    .registers 13
+
+    .line 78
+    const-string v0, "SELFTEST groupmms result wrote="
+
+    const-string v1, "SELFTEST groupmms \u2014 invoking writeIncomingGroupMms"
+
+    const-string v2, "TextRCSReceive"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 79
+    const-string v1, "SELFTEST groupmms start"
+
+    invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 80
+    nop
+
+    .line 81
+    :try_start_f
+    sget-object v3, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
+
+    .line 82
+    invoke-virtual {p0}, Lcom/textrcs/receive/ReceiveService;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    const-string v1, "getApplicationContext(...)"
+
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 83
+    const-string v5, "+15167213415"
+
+    .line 84
+    const-string v1, "+15163842548"
+
+    invoke-static {v1}, Lkotlin/collections/CollectionsKt;->listOf(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    .line 85
+    const-string v7, "group mms self-test"
+
+    .line 86
+    nop
+
+    .line 87
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v10
+
+    .line 81
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-virtual/range {v3 .. v11}, Lcom/textrcs/bridge/TextraDbBridge;->writeIncomingGroupMms(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;[BLjava/lang/String;J)Z
+
+    move-result v1
+
+    .line 89
+    .local v1, "ok":Z
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 90
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+    :try_end_57
+    .catchall {:try_start_f .. :try_end_57} :catchall_58
+
+    .end local v1    # "ok":Z
+    goto :goto_5e
+
+    .line 91
+    :catchall_58
+    move-exception v0
+
+    .line 92
+    .local v0, "e":Ljava/lang/Throwable;
+    const-string v1, "SELFTEST groupmms threw"
+
+    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 94
+    .end local v0    # "e":Ljava/lang/Throwable;
+    :goto_5e
+    return-void
+.end method
+
 .method private static final worker$lambda$1(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .registers 5
     .param p0, "r"    # Ljava/lang/Runnable;
@@ -423,7 +569,7 @@
 
     move-object v1, v0
 
-    .line 118
+    .line 145
     .local v1, "$this$worker_u24lambda_u241_u24lambda_u240":Ljava/lang/Thread;
     const/4 v2, 0x0
 
@@ -444,7 +590,7 @@
     .registers 3
     .param p1, "intent"    # Landroid/content/Intent;
 
-    .line 69
+    .line 96
     const/4 v0, 0x0
 
     return-object v0
@@ -468,9 +614,9 @@
     .line 45
     iget-object v0, p0, Lcom/textrcs/receive/ReceiveService;->worker:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda1;
+    new-instance v1, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda2;
 
-    invoke-direct {v1, p0}, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda1;-><init>(Lcom/textrcs/receive/ReceiveService;)V
+    invoke-direct {v1, p0}, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda2;-><init>(Lcom/textrcs/receive/ReceiveService;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
@@ -481,13 +627,13 @@
 .method public onDestroy()V
     .registers 4
 
-    .line 72
+    .line 99
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 73
+    .line 100
     nop
 
-    .line 74
+    .line 101
     :try_start_4
     sget-object v0, Lcom/textrcs/bridge/RustBridge;->INSTANCE:Lcom/textrcs/bridge/RustBridge;
 
@@ -497,11 +643,11 @@
 
     goto :goto_27
 
-    .line 75
+    .line 102
     :catchall_a
     move-exception v0
 
-    .line 76
+    .line 103
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -529,24 +675,57 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
+    .line 105
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_27
     iget-object v0, p0, Lcom/textrcs/receive/ReceiveService;->worker:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
-    .line 79
+    .line 106
     return-void
 .end method
 
 .method public onStartCommand(Landroid/content/Intent;II)I
-    .registers 5
+    .registers 6
     .param p1, "intent"    # Landroid/content/Intent;
     .param p2, "flags"    # I
     .param p3, "startId"    # I
 
-    .line 66
+    .line 68
+    if-eqz p1, :cond_9
+
+    const-string v0, "textrcs_selftest"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_a
+
+    :cond_9
+    const/4 v0, 0x0
+
+    :goto_a
+    const-string v1, "groupmms"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1c
+
+    .line 69
+    iget-object v0, p0, Lcom/textrcs/receive/ReceiveService;->worker:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;
+
+    invoke-direct {v1, p0}, Lcom/textrcs/receive/ReceiveService$$ExternalSyntheticLambda0;-><init>(Lcom/textrcs/receive/ReceiveService;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+
+    .line 73
+    :cond_1c
     const/4 v0, 0x1
 
     return v0

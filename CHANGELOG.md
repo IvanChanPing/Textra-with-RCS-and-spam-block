@@ -1,5 +1,44 @@
 # TextRCS Changelog
 
+## v0.91.0 — 2026-05-22 — restore classpath resources dropped by the build
+
+Root cause of the incoming-group-MMS failure, captured by the v0.90
+self-test:
+
+```
+java.lang.ExceptionInInitializerError
+  at com.mplus.lib.r4.l0.c / com.mplus.lib.O4.c.Z / com.mplus.lib.N4.e.S
+Caused by: NullPointerException: ...Reader.read(char[]) on a null object
+  at java.util.Properties.load / biweekly.Biweekly.<clinit>
+```
+
+`biweekly.Biweekly.<clinit>` does `getResourceAsStream("biweekly.properties")`
+→ null → `Properties.load(null)` NPEs. Textra's MMS part processor
+(`O4/c.Z`) touches `biweekly` for a text MMS part, so the first incoming
+group message permanently broke that class.
+
+The real fault is the build: `apktool.yml` had **no `unknownFiles`
+section**, so `apktool b` silently dropped all 35 classpath resources in
+`textra_base/unknown/` — `biweekly.properties`, the Kotlin `.kotlin_builtins`
+metadata, OkHttp's public-suffix list, the `META-INF/services` ServiceLoader
+files, the bundled `.proto` descriptors, and more. The built APK had zero
+`.properties` entries.
+
+Fix: `apktool.yml` now lists every `unknown/` file under `unknownFiles`,
+so the build packages them. This was a latent bug affecting far more than
+group MMS (anything depending on those resources).
+
+## v0.90.0 — 2026-05-22 — group-MMS self-test entry point
+
+Diagnostic build. The incoming-group-MMS failure (`deliverMmsPdu` threw)
+only reproduces when a real incoming group message arrives, which makes
+it hard to capture. `ReceiveService` now accepts a self-test intent —
+`am start-foreground-service -n
+com.textra2/com.textrcs.receive.ReceiveService --es textrcs_selftest
+groupmms` — which calls `TextraDbBridge.writeIncomingGroupMms` directly
+with a text-only group payload, so the failure (and the unwrapped stack
+trace added in v0.88) can be captured on demand.
+
 ## v0.89.0 — 2026-05-22 — fetch the full conversation list on connect
 
 Root cause of the 1:1 own-send hold, found in the v0.88 logs: textra2
