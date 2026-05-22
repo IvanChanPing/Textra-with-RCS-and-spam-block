@@ -1,5 +1,27 @@
 # TextRCS Changelog
 
+## v0.88.0 — 2026-05-22 — persistent conversation cache + group MMS diagnostics
+
+Driven by the v0.87 test. The group own-send worked (a real group thread
++ outgoing message), but two issues remained.
+
+**Persistent conversation cache.** `convInfo` (libgm conversationID ->
+group-ness + participant phones) was in-memory only, so it was empty on
+every process start. A 1:1 own-send arriving before the server re-sent
+its `ConversationEvent` could never resolve its recipient and was HELD
+forever. `convInfo` is now persisted to SharedPreferences
+(`textrcs_convcache`), loaded on startup, and additionally warmed from
+every delivered incoming SMS (`warmConvFromIncoming`) — so once textra2
+has seen a conversation even once, an own-send to it resolves
+immediately, across restarts. Hook: `incoming_convcache_disable`.
+
+**Group MMS diagnostics.** An incoming group message failed in
+`deliverMmsPdu` with a bare `InvocationTargetException: null` — the real
+cause was swallowed. The catch now unwraps reflection wrappers and logs
+the underlying exception with its full stack trace.
+
+Also: the own-send log line now includes the libgm `participantID`.
+
 ## v0.87.0 — 2026-05-22 — group messages + own-send retry queue
 
 Two fixes driven by the v0.86 on-device test, where three own-sends

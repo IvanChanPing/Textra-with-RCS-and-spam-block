@@ -22,7 +22,7 @@
     .registers 2
 
     .line 0
-    invoke-static {p1}, Lcom/textrcs/receive/IncomingMessageHandler;->$r8$lambda$873kf_-zt72gwC7HlD1yafFz-mM(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    invoke-static {p1}, Lcom/textrcs/receive/IncomingMessageHandler;->$r8$lambda$GWERYL6zbwbQkADkv50k-Tl_Qd4(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object p1
 

@@ -57,6 +57,55 @@ object IncomingMessageHandler {
      * Flushed by [cacheConversation] once the participant list arrives.
      */
     private val pendingOutgoing = HashMap<String, LinkedHashMap<String, PendingOutgoing>>()
+
+    /** App context — captured on the first [onUpdateEvents] for persistence. */
+    private var appContext: Context? = null
+    /** True once the persisted [convInfo] has been loaded from disk. */
+    private var convCacheLoaded = false
+    private const val CONV_CACHE_PREFS = "textrcs_convcache"
+
+    /**
+     * Load the persisted [convInfo]. The in-memory cache is otherwise empty
+     * on every process start, so an own-send arriving before the server
+     * re-sends its `ConversationEvent` could never resolve its recipients —
+     * the message would be HELD forever. Persisting every conversation ever
+     * seen makes recipient resolution survive restarts.
+     */
+    private fun loadPersistedConvInfo(ctx: Context) {
+        if (convCacheLoaded) return
+        convCacheLoaded = true
+        // [REMOTE_HOOK v0.88] incoming_convcache_disable — ignore the
+        // persisted conversation cache (debug: revert to in-memory only).
+        if (Hooks.shouldSkip("incoming_convcache_disable")) return
+        try {
+            val prefs = ctx.getSharedPreferences(CONV_CACHE_PREFS, Context.MODE_PRIVATE)
+            for ((convID, raw) in prefs.all) {
+                val s = raw as? String ?: continue
+                val bar = s.indexOf('|')
+                if (bar < 0) continue
+                val isGroup = s.substring(0, bar) == "true"
+                val phones = s.substring(bar + 1).split(",").filter { it.isNotBlank() }
+                if (phones.isNotEmpty()) convInfo[convID] = ConvInfo(isGroup, phones)
+            }
+            Log.i(TAG, "loaded ${convInfo.size} persisted conversation(s)")
+        } catch (e: Throwable) {
+            Log.w(TAG, "loadPersistedConvInfo failed: ${e.javaClass.simpleName}: ${e.message}")
+        }
+    }
+
+    /** Persist one conversation's [ConvInfo] so it survives a restart. */
+    private fun persistConvEntry(convID: String, info: ConvInfo) {
+        val ctx = appContext ?: return
+        if (Hooks.shouldSkip("incoming_convcache_disable")) return
+        try {
+            ctx.getSharedPreferences(CONV_CACHE_PREFS, Context.MODE_PRIVATE)
+                .edit()
+                .putString(convID, "${info.isGroup}|${info.participantPhones.joinToString(",")}")
+                .apply()
+        } catch (e: Throwable) {
+            Log.w(TAG, "persistConvEntry failed: ${e.javaClass.simpleName}: ${e.message}")
+        }
+    }
     /** recently delivered messageIDs — guards against long-poll replay. */
     private val seenMessageIds = LinkedHashSet<String>()
     private const val SEEN_CAP = 400
@@ -69,6 +118,8 @@ object IncomingMessageHandler {
     }
 
     fun onUpdateEvents(context: Context, events: UpdateEvents) {
+        if (appContext == null) appContext = context.applicationContext
+        loadPersistedConvInfo(context.applicationContext)
         // [REMOTE_HOOK v0.58] incoming_drop_all — kill-switch for all
         // inbound writes (useful when DB corruption is suspected).
         if (Hooks.shouldSkip("incoming_drop_all")) {
@@ -138,9 +189,27 @@ object IncomingMessageHandler {
         // than one non-self participant. Record it so an outgoing/own-send
         // message can be threaded to all members, never keyed by self.
         val isGroup = conv.isGroupChat || nonMePhones.size > 1
-        convInfo[conv.conversationID] = ConvInfo(isGroup, nonMePhones)
+        val info = ConvInfo(isGroup, nonMePhones)
+        convInfo[conv.conversationID] = info
+        if (nonMePhones.isNotEmpty()) persistConvEntry(conv.conversationID, info)
         Log.i(TAG, "  convInfo[${conv.conversationID}] isGroup=$isGroup members=${nonMePhones.size}")
         flushPendingOutgoing(conv.conversationID)
+    }
+
+    /**
+     * Warm [convInfo] from a delivered INCOMING message when no
+     * `ConversationEvent` has been seen for that conversation yet. Records a
+     * provisional 1:1 entry (overwritten later by the authoritative
+     * `ConversationEvent`) so a subsequent own-send to the same thread can
+     * resolve its recipient even across a restart.
+     */
+    private fun warmConvFromIncoming(convID: String, senderPhone: String) {
+        if (convInfo.containsKey(convID)) return
+        val info = ConvInfo(false, listOf(senderPhone))
+        convInfo[convID] = info
+        persistConvEntry(convID, info)
+        Log.i(TAG, "  convInfo[$convID] warmed from incoming sender=$senderPhone")
+        flushPendingOutgoing(convID)
     }
 
     /**
@@ -295,7 +364,7 @@ object IncomingMessageHandler {
                 TAG,
                 "  OUTGOING own-send id=${data.messageID} " +
                     "status=${if (data.hasMessageStatus()) data.messageStatus.statusValue else -1} " +
-                    "isMeSender=$isMeSender",
+                    "isMeSender=$isMeSender participantID=${data.participantID}",
             )
             handleOutgoing(data, body, mediaParts.isNotEmpty(), ts)
             return
@@ -426,6 +495,9 @@ object IncomingMessageHandler {
             if (wrote) {
                 seenMessageIds.add(data.messageID)
                 trimSeen()
+                // Warm the conversation cache so a later own-send to this
+                // same thread can resolve its recipient (and persist it).
+                warmConvFromIncoming(data.conversationID, sender.value)
             }
         }
     }

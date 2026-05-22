@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTextraDbBridge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TextraDbBridge.kt\ncom/textrcs/bridge/TextraDbBridge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,365:1\n1#2:366\n*E\n"
+    value = "SMAP\nTextraDbBridge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TextraDbBridge.kt\ncom/textrcs/bridge/TextraDbBridge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,375:1\n1#2:376\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -134,7 +134,7 @@
     .line 194
     move-object v11, v10
 
-    .line 366
+    .line 376
     .local v11, "$this$deliverMmsPdu_u24lambda_u240":Ljava/lang/reflect/Constructor;
     const/4 v12, 0x0
 
@@ -167,7 +167,7 @@
 
     move-object v12, v11
 
-    .line 366
+    .line 376
     .local v12, "$this$deliverMmsPdu_u24lambda_u241":Ljava/lang/reflect/Method;
     const/4 v13, 0x0
 
@@ -473,7 +473,7 @@
 
     move-object v15, v14
 
-    .line 366
+    .line 376
     .local v15, "$this$deliverMmsPdu_u24lambda_u243":Ljava/lang/reflect/Field;
     const/16 v19, 0x0
 
@@ -507,7 +507,7 @@
 
     move-object v15, v14
 
-    .line 366
+    .line 376
     .local v15, "$this$deliverMmsPdu_u24lambda_u244":Ljava/lang/reflect/Field;
     const/16 v19, 0x0
 
@@ -816,7 +816,7 @@
     .end local v17    # "uri":Landroid/net/Uri;
     .end local v18    # "intent":Landroid/content/Intent;
     .end local v19    # "hClass":Ljava/lang/Class;
-    goto/16 :goto_2a6
+    goto/16 :goto_2de
 
     .line 253
     :catchall_231
@@ -902,96 +902,165 @@
     :goto_24e
     move/from16 v21, v9
 
-    .line 254
+    .line 256
     .local v0, "e":Ljava/lang/Throwable;
     :goto_250
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-object v3, v0
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "deliverMmsPdu failed: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 257
+    .local v3, "cause":Ljava/lang/Throwable;
+    :goto_251
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    if-eqz v4, :cond_278
+
+    .line 258
+    instance-of v4, v3, Ljava/lang/reflect/InvocationTargetException;
+
+    if-nez v4, :cond_26f
+
+    .line 259
+    instance-of v4, v3, Ljava/lang/reflect/UndeclaredThrowableException;
+
+    if-nez v4, :cond_26f
+
+    .line 260
+    instance-of v4, v3, Ljava/lang/RuntimeException;
+
+    if-eqz v4, :cond_278
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v7, Ljava/lang/RuntimeException;
 
-    move-result-object v3
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v4
 
-    move-result-object v3
+    if-eqz v4, :cond_278
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v6, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 255
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "RCV-MMS deliver FAIL "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 262
+    :cond_26f
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    move-object v3, v4
+
+    goto :goto_251
+
+    .line 264
+    :cond_278
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "deliverMmsPdu FAILED: "
+
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v3
+    move-result-object v7
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v7
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v7
 
-    invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 256
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v6, v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 265
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "RCV-MMS deliver FAIL "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " ["
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const/16 v5, 0x5d
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 266
     move/from16 v8, v21
 
     .line 187
     .end local v0    # "e":Ljava/lang/Throwable;
-    :goto_2a6
+    .end local v3    # "cause":Ljava/lang/Throwable;
+    :goto_2de
     return v8
 .end method
 
@@ -1010,18 +1079,18 @@
         }
     .end annotation
 
-    .line 320
+    .line 330
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 366
+    .line 376
     .local v1, "$this$writeOutgoing_u24field_u24lambda_u247":Ljava/lang/reflect/Field;
     const/4 v2, 0x0
 
-    .line 320
+    .line 330
     .local v2, "$i$a$-apply-TextraDbBridge$writeOutgoing$field$1":I
     const/4 v3, 0x1
 
@@ -1043,7 +1112,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 361
+    .line 371
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1082,7 +1151,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
+    .line 372
     return p2
 .end method
 
@@ -1853,7 +1922,7 @@
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 296
+    .line 306
     sget-object v3, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v4, "dbbridge_write_skip"
@@ -1872,7 +1941,7 @@
 
     if-nez v3, :cond_1d9
 
-    .line 297
+    .line 307
     sget-object v3, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v8, "dbbridge_outgoing_skip"
@@ -1889,7 +1958,7 @@
 
     goto/16 :goto_1dd
 
-    .line 302
+    .line 312
     :cond_2f
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -1925,11 +1994,11 @@
 
     goto/16 :goto_1d3
 
-    .line 306
+    .line 316
     :cond_4a
     nop
 
-    .line 308
+    .line 318
     :try_start_4b
     move-object v8, v1
 
@@ -1959,7 +2028,7 @@
 
     move-result-object v3
 
-    .line 309
+    .line 319
     .local v3, "joined":Ljava/lang/String;
     const-string v8, "com.mplus.lib.z7.y"
 
@@ -1967,7 +2036,7 @@
 
     move-result-object v8
 
-    .line 310
+    .line 320
     .local v8, "yCls":Ljava/lang/Class;
     const-string v9, "p"
 
@@ -1981,14 +2050,14 @@
 
     move-result-object v9
 
-    .line 311
+    .line 321
     move-object v10, v9
 
-    .line 366
+    .line 376
     .local v10, "$this$writeOutgoing_u24lambda_u246":Ljava/lang/reflect/Method;
     const/4 v11, 0x0
 
-    .line 311
+    .line 321
     .local v11, "$i$a$-apply-TextraDbBridge$writeOutgoing$recipients$1":I
     invoke-virtual {v10, v6}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
@@ -2002,14 +2071,14 @@
 
     move-result-object v9
 
-    .line 310
+    .line 320
     nop
 
-    .line 312
+    .line 322
     .local v9, "recipients":Ljava/lang/Object;
     if-nez v9, :cond_9f
 
-    .line 313
+    .line 323
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2036,10 +2105,10 @@
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
+    .line 324
     return v7
 
-    .line 317
+    .line 327
     :cond_9f
     const-string v10, "com.mplus.lib.r4.j0"
 
@@ -2047,7 +2116,7 @@
 
     move-result-object v10
 
-    .line 318
+    .line 328
     .local v10, "j0Cls":Ljava/lang/Class;
     new-array v11, v7, [Ljava/lang/Class;
 
@@ -2061,7 +2130,7 @@
 
     move-result-object v11
 
-    .line 321
+    .line 331
     .local v11, "j0":Ljava/lang/Object;
     const-string v12, "i"
 
@@ -2071,7 +2140,7 @@
 
     invoke-virtual {v12, v11, v2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 322
+    .line 332
     const-string v12, "h"
 
     invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -2080,7 +2149,7 @@
 
     invoke-virtual {v12, v11, v9}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 323
+    .line 333
     const-string v12, "j"
 
     invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -2094,7 +2163,7 @@
     :try_start_cb
     invoke-virtual {v12, v11, v13, v14}, Ljava/lang/reflect/Field;->setLong(Ljava/lang/Object;J)V
 
-    .line 324
+    .line 334
     const-string v12, "m"
 
     invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -2103,7 +2172,7 @@
 
     invoke-virtual {v12, v11, v7}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
 
-    .line 325
+    .line 335
     const-string v12, "g"
 
     invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -2112,7 +2181,7 @@
 
     invoke-virtual {v12, v11, v6}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
 
-    .line 326
+    .line 336
     const-string v12, "f"
 
     invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -2121,19 +2190,19 @@
 
     invoke-virtual {v12, v11, v7}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
 
-    .line 330
+    .line 340
     sget-object v12, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
 
     invoke-virtual {v12, v2}, Lcom/textrcs/send/SendManager$Companion;->markRecordOnly(Ljava/lang/String;)V
 
-    .line 332
+    .line 342
     const-string v12, "com.mplus.lib.c5.d"
 
     invoke-static {v12}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v12
 
-    .line 333
+    .line 343
     .local v12, "c5d":Ljava/lang/Class;
     const-string v15, "P"
 
@@ -2149,19 +2218,19 @@
 
     move-result-object v5
 
-    .line 334
+    .line 344
     .local v5, "singleton":Ljava/lang/Object;
     if-nez v5, :cond_10a
 
-    .line 335
+    .line 345
     const-string v0, "writeOutgoing \u2014 c5.d.P() returned null"
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 336
+    .line 346
     return v7
 
-    .line 338
+    .line 348
     :cond_10a
     const-string v6, "u"
     :try_end_10c
@@ -2186,10 +2255,10 @@
 
     invoke-virtual {v6, v5, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 340
+    .line 350
     nop
 
-    .line 341
+    .line 351
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2212,12 +2281,12 @@
 
     move-result-object v6
 
-    .line 342
+    .line 352
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v7
 
-    .line 341
+    .line 351
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -2226,10 +2295,10 @@
 
     move-result-object v6
 
-    .line 339
+    .line 349
     invoke-static {v4, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
+    .line 355
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2264,12 +2333,12 @@
 
     move-result-object v0
 
-    .line 344
+    .line 354
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_16b
     .catchall {:try_start_10f .. :try_end_16b} :catchall_16d
 
-    .line 347
+    .line 357
     move v7, v15
 
     .end local v3    # "joined":Ljava/lang/String;
@@ -2281,7 +2350,7 @@
     .end local v12    # "c5d":Ljava/lang/Class;
     goto :goto_1ce
 
-    .line 348
+    .line 358
     :catchall_16d
     move-exception v0
 
@@ -2300,7 +2369,7 @@
     :goto_174
     move/from16 v16, v7
 
-    .line 349
+    .line 359
     .local v0, "e":Ljava/lang/Throwable;
     :goto_176
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2345,7 +2414,7 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
+    .line 360
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2386,41 +2455,41 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 351
+    .line 361
     move/from16 v7, v16
 
-    .line 306
+    .line 316
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_1ce
     return v7
 
-    .line 302
+    .line 312
     :cond_1cf
     move-wide/from16 v13, p3
 
     move/from16 v16, v7
 
-    .line 303
+    .line 313
     :goto_1d3
     const-string v0, "writeOutgoing \u2014 empty recipients or body, nothing to do"
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
+    .line 314
     return v16
 
-    .line 296
+    .line 306
     :cond_1d9
     move-wide/from16 v13, p3
 
     move/from16 v16, v7
 
-    .line 299
+    .line 309
     :goto_1dd
     const-string v0, "writeOutgoing SKIPPED by hook"
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
+    .line 310
     return v16
 .end method

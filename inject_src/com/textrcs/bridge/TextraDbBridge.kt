@@ -251,8 +251,18 @@ object TextraDbBridge {
             ScreenTracer.note("RCV-MMS delivered queueRow=$rowId pduLen=${pdu.size} $desc")
             true
         } catch (e: Throwable) {
-            Log.w(TAG, "deliverMmsPdu failed: ${e.javaClass.simpleName}: ${e.message}")
-            ScreenTracer.note("RCV-MMS deliver FAIL ${e.javaClass.simpleName}: ${e.message}")
+            // Unwrap reflection wrappers so the real failure (and its stack)
+            // is logged — a bare `InvocationTargetException: null` is useless.
+            var cause: Throwable = e
+            while (cause.cause != null &&
+                (cause is java.lang.reflect.InvocationTargetException ||
+                    cause is java.lang.reflect.UndeclaredThrowableException ||
+                    cause is RuntimeException && cause.javaClass == RuntimeException::class.java)
+            ) {
+                cause = cause.cause!!
+            }
+            Log.w(TAG, "deliverMmsPdu FAILED: ${cause.javaClass.name}: ${cause.message}", cause)
+            ScreenTracer.note("RCV-MMS deliver FAIL ${cause.javaClass.name}: ${cause.message} [$desc]")
             false
         }
     }
