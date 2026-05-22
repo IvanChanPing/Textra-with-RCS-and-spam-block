@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTextraDbBridge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TextraDbBridge.kt\ncom/textrcs/bridge/TextraDbBridge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,496:1\n1#2:497\n*E\n"
+    value = "SMAP\nTextraDbBridge.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TextraDbBridge.kt\ncom/textrcs/bridge/TextraDbBridge\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,601:1\n1#2:602\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\t\n\u0002\u0008\t\n\u0002\u0010 \n\u0002\u0008\u0008\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J(\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u0004H\u0002J\u0016\u0010\u000f\u001a\u00020\u00072\u0006\u0010\u0010\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u0007J\u001e\u0010\u0012\u001a\u00020\u00072\u0006\u0010\u0013\u001a\u00020\u00042\u0006\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rJ,\u0010\u0015\u001a\u00020\u00072\u0006\u0010\u0013\u001a\u00020\u00042\u000c\u0010\u0016\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u00172\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rJJ\u0010\u0019\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\u0013\u001a\u00020\u00042\u000c\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u00172\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u00042\u0008\u0010\u001b\u001a\u0004\u0018\u00010\u000b2\u0008\u0010\u001c\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u000c\u001a\u00020\rJ8\u0010\u001d\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\u0013\u001a\u00020\u00042\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u001b\u001a\u00020\u000b2\u0006\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rJ$\u0010\u001e\u001a\u00020\u00072\u000c\u0010\u001f\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u00172\u0006\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rR\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000"
+        "\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\t\n\u0002\u0008\t\n\u0002\u0010 \n\u0002\u0008\t\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J(\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\u000c\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u0004H\u0002J\u0016\u0010\u000f\u001a\u00020\u00072\u0006\u0010\u0010\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u0007J\u001e\u0010\u0012\u001a\u00020\u00072\u0006\u0010\u0013\u001a\u00020\u00042\u0006\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rJ,\u0010\u0015\u001a\u00020\u00072\u0006\u0010\u0013\u001a\u00020\u00042\u000c\u0010\u0016\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u00172\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rJJ\u0010\u0019\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\u0013\u001a\u00020\u00042\u000c\u0010\u001a\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u00172\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u00042\u0008\u0010\u001b\u001a\u0004\u0018\u00010\u000b2\u0008\u0010\u001c\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u000c\u001a\u00020\rJ8\u0010\u001d\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u0006\u0010\u0013\u001a\u00020\u00042\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u001b\u001a\u00020\u000b2\u0006\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rJ$\u0010\u001e\u001a\u00020\u00072\u000c\u0010\u001f\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u00172\u0006\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rJ,\u0010 \u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\t2\u000c\u0010\u0016\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u00172\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u000c\u001a\u00020\rR\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/bridge/TextraDbBridge;",
@@ -44,7 +44,8 @@
         "mediaMime",
         "writeIncomingMms",
         "writeOutgoing",
-        "recipientPhones"
+        "recipientPhones",
+        "writeSystemMessage"
     }
     k = 0x1
     mv = {
@@ -93,7 +94,7 @@
     .param p3, "timestampMs"    # J
     .param p5, "desc"    # Ljava/lang/String;
 
-    .line 284
+    .line 389
     move-object/from16 v1, p2
 
     move-object/from16 v2, p5
@@ -108,10 +109,10 @@
 
     const-string v6, "TextraDbBridge"
 
-    .line 288
+    .line 393
     nop
 
-    .line 289
+    .line 394
     const/4 v10, 0x1
 
     const/4 v11, 0x0
@@ -123,7 +124,7 @@
 
     move-result-object v12
 
-    .line 290
+    .line 395
     .local v12, "ecCls":Ljava/lang/Class;
     new-array v13, v10, [Ljava/lang/Class;
 
@@ -133,18 +134,18 @@
 
     move-result-object v13
 
-    .line 291
+    .line 396
     move-object v14, v13
 
-    .line 497
-    .local v14, "$this$deliverMmsPdu_u24lambda_u242":Ljava/lang/reflect/Constructor;
+    .line 602
+    .local v14, "$this$deliverMmsPdu_u24lambda_u247":Ljava/lang/reflect/Constructor;
     const/4 v15, 0x0
 
-    .line 291
+    .line 396
     .local v15, "$i$a$-apply-TextraDbBridge$deliverMmsPdu$ec$1":I
     invoke-virtual {v14, v10}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .end local v14    # "$this$deliverMmsPdu_u24lambda_u242":Ljava/lang/reflect/Constructor;
+    .end local v14    # "$this$deliverMmsPdu_u24lambda_u247":Ljava/lang/reflect/Constructor;
     .end local v15    # "$i$a$-apply-TextraDbBridge$deliverMmsPdu$ec$1":I
     filled-new-array {v1}, [Ljava/lang/Object;
 
@@ -154,10 +155,10 @@
 
     move-result-object v13
 
-    .line 290
+    .line 395
     nop
 
-    .line 292
+    .line 397
     .local v13, "ec":Ljava/lang/Object;
     const-string v14, "m"
 
@@ -169,15 +170,15 @@
 
     move-object v15, v14
 
-    .line 497
-    .local v15, "$this$deliverMmsPdu_u24lambda_u243":Ljava/lang/reflect/Method;
+    .line 602
+    .local v15, "$this$deliverMmsPdu_u24lambda_u248":Ljava/lang/reflect/Method;
     const/16 v16, 0x0
 
-    .line 292
+    .line 397
     .local v16, "$i$a$-apply-TextraDbBridge$deliverMmsPdu$parsed$1":I
     invoke-virtual {v15, v10}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .end local v15    # "$this$deliverMmsPdu_u24lambda_u243":Ljava/lang/reflect/Method;
+    .end local v15    # "$this$deliverMmsPdu_u24lambda_u248":Ljava/lang/reflect/Method;
     .end local v16    # "$i$a$-apply-TextraDbBridge$deliverMmsPdu$parsed$1":I
     new-array v15, v11, [Ljava/lang/Object;
 
@@ -185,7 +186,7 @@
 
     move-result-object v14
 
-    .line 293
+    .line 398
     .local v14, "parsed":Ljava/lang/Object;
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -230,41 +231,41 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
+    .line 402
     if-eqz v14, :cond_163
 
-    .line 298
+    .line 403
     const-string v8, "com.mplus.lib.F1.a"
 
     invoke-static {v8}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v8
 
-    .line 299
+    .line 404
     invoke-virtual {v8, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v8
 
     move-object v15, v8
 
-    .line 497
-    .local v15, "$this$deliverMmsPdu_u24lambda_u244":Ljava/lang/reflect/Field;
+    .line 602
+    .local v15, "$this$deliverMmsPdu_u24lambda_u249":Ljava/lang/reflect/Field;
     const/16 v17, 0x0
 
-    .line 299
+    .line 404
     .local v17, "$i$a$-apply-TextraDbBridge$deliverMmsPdu$hdrs$1":I
     invoke-virtual {v15, v10}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .end local v15    # "$this$deliverMmsPdu_u24lambda_u244":Ljava/lang/reflect/Field;
+    .end local v15    # "$this$deliverMmsPdu_u24lambda_u249":Ljava/lang/reflect/Field;
     .end local v17    # "$i$a$-apply-TextraDbBridge$deliverMmsPdu$hdrs$1":I
     invoke-virtual {v8, v14}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
 
-    .line 298
+    .line 403
     nop
 
-    .line 300
+    .line 405
     .local v8, "hdrs":Ljava/lang/Object;
     const-string v15, "com.mplus.lib.B2.l"
 
@@ -272,7 +273,7 @@
 
     move-result-object v15
 
-    .line 301
+    .line 406
     .local v15, "b2":Ljava/lang/Class;
     invoke-virtual {v15, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -280,33 +281,33 @@
 
     move-object/from16 v17, v0
 
-    .line 497
-    .local v17, "$this$deliverMmsPdu_u24lambda_u245":Ljava/lang/reflect/Field;
+    .line 602
+    .local v17, "$this$deliverMmsPdu_u24lambda_u2410":Ljava/lang/reflect/Field;
     const/16 v18, 0x0
 
-    .line 301
+    .line 406
     .local v18, "$i$a$-apply-TextraDbBridge$deliverMmsPdu$sa$1":I
     move-object/from16 v9, v17
 
-    .end local v17    # "$this$deliverMmsPdu_u24lambda_u245":Ljava/lang/reflect/Field;
-    .local v9, "$this$deliverMmsPdu_u24lambda_u245":Ljava/lang/reflect/Field;
+    .end local v17    # "$this$deliverMmsPdu_u24lambda_u2410":Ljava/lang/reflect/Field;
+    .local v9, "$this$deliverMmsPdu_u24lambda_u2410":Ljava/lang/reflect/Field;
     invoke-virtual {v9, v10}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 302
-    .end local v9    # "$this$deliverMmsPdu_u24lambda_u245":Ljava/lang/reflect/Field;
+    .line 407
+    .end local v9    # "$this$deliverMmsPdu_u24lambda_u2410":Ljava/lang/reflect/Field;
     .end local v18    # "$i$a$-apply-TextraDbBridge$deliverMmsPdu$sa$1":I
     invoke-virtual {v0, v8}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 301
+    .line 406
     const-string v9, "null cannot be cast to non-null type android.util.SparseArray<*>"
 
     invoke-static {v0, v9}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/util/SparseArray;
 
-    .line 303
+    .line 408
     .local v0, "sa":Landroid/util/SparseArray;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -314,7 +315,7 @@
     :try_end_a1
     .catchall {:try_start_48 .. :try_end_a1} :catchall_168
 
-    .line 304
+    .line 409
     .local v9, "keys":Ljava/lang/StringBuilder;
     const/16 v17, 0x0
 
@@ -333,7 +334,7 @@
     :goto_ab
     if-ge v10, v11, :cond_c5
 
-    .line 305
+    .line 410
     invoke-virtual {v0, v10}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v17
@@ -355,7 +356,7 @@
     :try_start_bd
     invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 304
+    .line 409
     add-int/lit8 v10, v10, 0x1
 
     move-object/from16 v4, v17
@@ -365,7 +366,7 @@
     :cond_c5
     move-object/from16 v17, v4
 
-    .line 307
+    .line 412
     .end local v10    # "i":I
     const-string v4, "z"
 
@@ -381,7 +382,7 @@
 
     move-result-object v4
 
-    .line 308
+    .line 413
     .local v4, "zM":Ljava/lang/reflect/Method;
     const-string v7, "A"
 
@@ -397,7 +398,7 @@
 
     move-result-object v7
 
-    .line 309
+    .line 414
     .local v7, "aM":Ljava/lang/reflect/Method;
     const/16 v10, 0x89
 
@@ -413,7 +414,7 @@
 
     move-result-object v10
 
-    .line 310
+    .line 415
     .local v10, "from":Ljava/lang/Object;
     const/16 v11, 0x97
 
@@ -431,7 +432,7 @@
 
     check-cast v11, [Ljava/lang/Object;
 
-    .line 311
+    .line 416
     .local v11, "to":[Ljava/lang/Object;
     const/16 v21, 0x82
 
@@ -453,11 +454,11 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 313
+    .line 418
     .local v0, "cc":[Ljava/lang/Object;
     nop
 
-    .line 314
+    .line 419
     move-object/from16 v21, v4
 
     .end local v4    # "zM":Ljava/lang/reflect/Method;
@@ -506,7 +507,7 @@
 
     move-result-object v4
 
-    .line 315
+    .line 420
     if-eqz v11, :cond_13f
 
     array-length v7, v11
@@ -516,21 +517,21 @@
     :cond_13f
     move/from16 v7, v16
 
-    .line 314
+    .line 419
     :goto_141
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 315
+    .line 420
     const-string v7, " cc.n="
 
-    .line 314
+    .line 419
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 315
+    .line 420
     if-eqz v0, :cond_14f
 
     array-length v7, v0
@@ -540,7 +541,7 @@
     :cond_14f
     move/from16 v7, v16
 
-    .line 314
+    .line 419
     :goto_151
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -550,14 +551,14 @@
 
     move-result-object v4
 
-    .line 312
+    .line 417
     invoke-static {v6, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_15c
     .catchall {:try_start_bd .. :try_end_15c} :catchall_15d
 
     goto :goto_1a6
 
-    .line 318
+    .line 423
     .end local v0    # "cc":[Ljava/lang/Object;
     .end local v8    # "hdrs":Ljava/lang/Object;
     .end local v9    # "keys":Ljava/lang/StringBuilder;
@@ -582,7 +583,7 @@
 
     goto :goto_175
 
-    .line 297
+    .line 402
     .restart local v12    # "ecCls":Ljava/lang/Class;
     .restart local v13    # "ec":Ljava/lang/Object;
     .restart local v14    # "parsed":Ljava/lang/Object;
@@ -593,7 +594,7 @@
 
     goto :goto_1a6
 
-    .line 318
+    .line 423
     .end local v12    # "ecCls":Ljava/lang/Class;
     .end local v13    # "ec":Ljava/lang/Object;
     .end local v14    # "parsed":Ljava/lang/Object;
@@ -615,7 +616,7 @@
 
     const/16 v16, -0x1
 
-    .line 319
+    .line 424
     .local v0, "e":Ljava/lang/Throwable;
     :goto_175
     :try_start_175
@@ -627,7 +628,7 @@
 
     move-object v4, v0
 
-    .line 320
+    .line 425
     .local v4, "c":Ljava/lang/Throwable;
     :cond_17c
     new-instance v7, Ljava/lang/StringBuilder;
@@ -670,7 +671,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
+    .line 430
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v4    # "c":Ljava/lang/Throwable;
     :goto_1a6
@@ -690,11 +691,11 @@
 
     move-object v7, v0
 
-    .line 327
+    .line 432
     .local v7, "dbPath":Ljava/lang/String;
     nop
 
-    .line 326
+    .line 431
     move/from16 v9, v18
 
     const/4 v8, 0x0
@@ -713,7 +714,7 @@
     :try_end_1be
     .catchall {:try_start_1bb .. :try_end_1be} :catchall_363
 
-    .line 328
+    .line 433
     :try_start_1be
     move-object v0, v8
 
@@ -722,13 +723,13 @@
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const/4 v9, 0x0
 
-    .line 329
+    .line 434
     .local v9, "$i$a$-use-TextraDbBridge$deliverMmsPdu$rowId$1":I
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
 
-    .line 330
+    .line 435
     .local v10, "cv":Landroid/content/ContentValues;
     const-string v11, "ts"
 
@@ -738,7 +739,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 331
+    .line 436
     const-string v11, "mms_state"
 
     const/16 v12, 0x55
@@ -749,7 +750,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 332
+    .line 437
     const-string v11, "sub_id"
 
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -758,7 +759,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 333
+    .line 438
     const-string v11, "try_count"
     :try_end_1e6
     .catchall {:try_start_1be .. :try_end_1e6} :catchall_357
@@ -772,7 +773,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 334
+    .line 439
     const-string v11, "failed"
 
     invoke-static/range {v18 .. v18}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -784,7 +785,7 @@
     :try_start_1f5
     invoke-virtual {v10, v11, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 335
+    .line 440
     const-string v11, "started_at_ts"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -797,7 +798,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 336
+    .line 441
     const-string v11, "mms_queue"
 
     const/4 v12, 0x0
@@ -808,17 +809,17 @@
     :try_end_20c
     .catchall {:try_start_1f5 .. :try_end_20c} :catchall_357
 
-    .line 328
+    .line 433
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     .end local v9    # "$i$a$-use-TextraDbBridge$deliverMmsPdu$rowId$1":I
     .end local v10    # "cv":Landroid/content/ContentValues;
     :try_start_20c
     invoke-static {v8, v12}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    .line 326
+    .line 431
     nop
 
-    .line 338
+    .line 443
     .local v13, "rowId":J
     const-wide/16 v8, 0x0
 
@@ -826,17 +827,17 @@
 
     if-gez v0, :cond_21e
 
-    .line 339
+    .line 444
     const-string v0, "deliverMmsPdu \u2014 mms_queue insert failed"
 
     invoke-static {v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
+    .line 445
     const/16 v18, 0x0
 
     return v18
 
-    .line 349
+    .line 454
     :cond_21e
     const-string v0, "com.mplus.lib.r4.H"
 
@@ -844,7 +845,7 @@
 
     move-result-object v0
 
-    .line 350
+    .line 455
     .local v0, "hClass":Ljava/lang/Class;
     const-string v10, "X"
     :try_end_226
@@ -870,7 +871,7 @@
 
     move-result-object v10
 
-    .line 351
+    .line 456
     .local v10, "h":Ljava/lang/Object;
     const-string v11, "d"
 
@@ -880,11 +881,11 @@
 
     move-object v12, v11
 
-    .line 497
-    .local v12, "$this$deliverMmsPdu_u24lambda_u247":Ljava/lang/reflect/Field;
+    .line 602
+    .local v12, "$this$deliverMmsPdu_u24lambda_u2412":Ljava/lang/reflect/Field;
     const/4 v15, 0x0
 
-    .line 351
+    .line 456
     .local v15, "$i$a$-apply-TextraDbBridge$deliverMmsPdu$w$1":I
     move-wide/from16 v21, v8
 
@@ -892,7 +893,7 @@
 
     invoke-virtual {v12, v8}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .end local v12    # "$this$deliverMmsPdu_u24lambda_u247":Ljava/lang/reflect/Field;
+    .end local v12    # "$this$deliverMmsPdu_u24lambda_u2412":Ljava/lang/reflect/Field;
     .end local v15    # "$i$a$-apply-TextraDbBridge$deliverMmsPdu$w$1":I
     invoke-virtual {v11, v10}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -900,7 +901,7 @@
 
     invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 352
+    .line 457
     .local v8, "w":Ljava/lang/Object;
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -914,17 +915,17 @@
 
     move-object v11, v9
 
-    .line 497
-    .local v11, "$this$deliverMmsPdu_u24lambda_u248":Ljava/lang/reflect/Field;
+    .line 602
+    .local v11, "$this$deliverMmsPdu_u24lambda_u2413":Ljava/lang/reflect/Field;
     const/4 v12, 0x0
 
-    .line 352
+    .line 457
     .local v12, "$i$a$-apply-TextraDbBridge$deliverMmsPdu$r4i$1":I
     const/4 v15, 0x1
 
     invoke-virtual {v11, v15}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .end local v11    # "$this$deliverMmsPdu_u24lambda_u248":Ljava/lang/reflect/Field;
+    .end local v11    # "$this$deliverMmsPdu_u24lambda_u2413":Ljava/lang/reflect/Field;
     .end local v12    # "$i$a$-apply-TextraDbBridge$deliverMmsPdu$r4i$1":I
     invoke-virtual {v9, v8}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -932,13 +933,13 @@
 
     invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 353
+    .line 458
     .local v9, "r4i":Ljava/lang/Object;
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v11
 
-    .line 354
+    .line 459
     const-string v12, "i"
 
     const/4 v15, 0x3
@@ -971,7 +972,7 @@
 
     move-result-object v11
 
-    .line 355
+    .line 460
     invoke-static/range {v21 .. v22}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v12
@@ -986,7 +987,7 @@
 
     invoke-virtual {v11, v9, v12}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 359
+    .line 464
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1009,7 +1010,7 @@
 
     move-result-object v11
 
-    .line 360
+    .line 465
     .local v11, "uri":Landroid/net/Uri;
     new-instance v12, Landroid/content/Intent;
 
@@ -1019,14 +1020,14 @@
 
     move-object v15, v12
 
-    .local v15, "$this$deliverMmsPdu_u24lambda_u249":Landroid/content/Intent;
+    .local v15, "$this$deliverMmsPdu_u24lambda_u2414":Landroid/content/Intent;
     const/16 v16, 0x0
 
-    .line 361
+    .line 466
     .local v16, "$i$a$-apply-TextraDbBridge$deliverMmsPdu$intent$1":I
     invoke-virtual {v15, v11}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 362
+    .line 467
     move-object/from16 v17, v0
 
     .end local v0    # "hClass":Ljava/lang/Class;
@@ -1042,7 +1043,7 @@
     :try_end_2b8
     .catchall {:try_start_2b5 .. :try_end_2b8} :catchall_34b
 
-    .line 363
+    .line 468
     :try_start_2b8
     const-string v0, "android.telephony.extra.MMS_HTTP_STATUS"
 
@@ -1050,15 +1051,15 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 364
+    .line 469
     nop
 
-    .line 360
-    .end local v15    # "$this$deliverMmsPdu_u24lambda_u249":Landroid/content/Intent;
+    .line 465
+    .end local v15    # "$this$deliverMmsPdu_u24lambda_u2414":Landroid/content/Intent;
     .end local v16    # "$i$a$-apply-TextraDbBridge$deliverMmsPdu$intent$1":I
     nop
 
-    .line 365
+    .line 470
     .local v12, "intent":Landroid/content/Intent;
     const-string v0, "com.mplus.lib.N4.e"
 
@@ -1066,7 +1067,7 @@
 
     move-result-object v0
 
-    .line 366
+    .line 471
     .local v0, "nClass":Ljava/lang/Class;
     const-string v4, "Q"
     :try_end_2c9
@@ -1096,7 +1097,7 @@
 
     move-result-object v4
 
-    .line 367
+    .line 472
     .local v4, "singleton":Ljava/lang/Object;
     const-string v7, "N"
 
@@ -1127,10 +1128,10 @@
 
     invoke-virtual {v7, v4, v8}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 369
+    .line 474
     nop
 
-    .line 370
+    .line 475
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1169,10 +1170,10 @@
 
     move-result-object v7
 
-    .line 368
+    .line 473
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
+    .line 477
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1215,7 +1216,7 @@
     :try_end_344
     .catchall {:try_start_2e4 .. :try_end_344} :catchall_36b
 
-    .line 373
+    .line 478
     move v10, v15
 
     .end local v0    # "nClass":Ljava/lang/Class;
@@ -1230,7 +1231,7 @@
     .end local v19    # "w":Ljava/lang/Object;
     goto/16 :goto_3fa
 
-    .line 374
+    .line 479
     :catchall_347
     move-exception v0
 
@@ -1252,7 +1253,7 @@
 
     goto :goto_36c
 
-    .line 328
+    .line 433
     .restart local v7    # "dbPath":Ljava/lang/String;
     :catchall_353
     move-exception v0
@@ -1300,7 +1301,7 @@
     :try_end_363
     .catchall {:try_start_35f .. :try_end_363} :catchall_36b
 
-    .line 374
+    .line 479
     .end local v16    # "dbPath":Ljava/lang/String;
     .restart local p1    # "context":Landroid/content/Context;
     .restart local p2    # "pdu":[B
@@ -1323,12 +1324,12 @@
     :catchall_36b
     move-exception v0
 
-    .line 377
+    .line 482
     .local v0, "e":Ljava/lang/Throwable;
     :goto_36c
     move-object v3, v0
 
-    .line 378
+    .line 483
     .local v3, "cause":Ljava/lang/Throwable;
     :goto_36d
     invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
@@ -1337,17 +1338,17 @@
 
     if-eqz v4, :cond_394
 
-    .line 379
+    .line 484
     instance-of v4, v3, Ljava/lang/reflect/InvocationTargetException;
 
     if-nez v4, :cond_38b
 
-    .line 380
+    .line 485
     instance-of v4, v3, Ljava/lang/reflect/UndeclaredThrowableException;
 
     if-nez v4, :cond_38b
 
-    .line 381
+    .line 486
     instance-of v4, v3, Ljava/lang/RuntimeException;
 
     if-eqz v4, :cond_394
@@ -1364,7 +1365,7 @@
 
     if-eqz v4, :cond_394
 
-    .line 383
+    .line 488
     :cond_38b
     invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -1376,7 +1377,7 @@
 
     goto :goto_36d
 
-    .line 385
+    .line 490
     :cond_394
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1418,7 +1419,7 @@
 
     invoke-static {v6, v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 386
+    .line 491
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1475,10 +1476,10 @@
 
     invoke-static {v4}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 387
+    .line 492
     move/from16 v10, v18
 
-    .line 284
+    .line 389
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v3    # "cause":Ljava/lang/Throwable;
     :goto_3fa
@@ -1507,7 +1508,7 @@
 
     move-object v1, v0
 
-    .line 497
+    .line 602
     .local v1, "$this$writeIncomingGroup_u24field_u24lambda_u241":Ljava/lang/reflect/Field;
     const/4 v2, 0x0
 
@@ -1522,7 +1523,7 @@
     return-object v0
 .end method
 
-.method private static final writeOutgoing$field$12(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+.method private static final writeOutgoing$field$17(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
     .registers 6
     .param p0, "j0Cls"    # Ljava/lang/Class;
     .param p1, "name"    # Ljava/lang/String;
@@ -1537,24 +1538,24 @@
         }
     .end annotation
 
-    .line 451
+    .line 556
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 497
-    .local v1, "$this$writeOutgoing_u24field_u2412_u24lambda_u2411":Ljava/lang/reflect/Field;
+    .line 602
+    .local v1, "$this$writeOutgoing_u24field_u2417_u24lambda_u2416":Ljava/lang/reflect/Field;
     const/4 v2, 0x0
 
-    .line 451
+    .line 556
     .local v2, "$i$a$-apply-TextraDbBridge$writeOutgoing$field$1":I
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .end local v1    # "$this$writeOutgoing_u24field_u2412_u24lambda_u2411":Ljava/lang/reflect/Field;
+    .end local v1    # "$this$writeOutgoing_u24field_u2417_u24lambda_u2416":Ljava/lang/reflect/Field;
     .end local v2    # "$i$a$-apply-TextraDbBridge$writeOutgoing$field$1":I
     return-object v0
 .end method
@@ -1570,7 +1571,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 492
+    .line 597
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1609,7 +1610,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 493
+    .line 598
     return p2
 .end method
 
@@ -2158,7 +2159,7 @@
     .line 222
     move-object v12, v11
 
-    .line 497
+    .line 602
     .local v12, "$this$writeIncomingGroup_u24lambda_u240":Ljava/lang/reflect/Method;
     const/4 v13, 0x0
 
@@ -3042,7 +3043,7 @@
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 427
+    .line 532
     sget-object v3, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v4, "dbbridge_write_skip"
@@ -3061,7 +3062,7 @@
 
     if-nez v3, :cond_1d9
 
-    .line 428
+    .line 533
     sget-object v3, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v8, "dbbridge_outgoing_skip"
@@ -3078,7 +3079,7 @@
 
     goto/16 :goto_1dd
 
-    .line 433
+    .line 538
     :cond_2f
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -3114,11 +3115,11 @@
 
     goto/16 :goto_1d3
 
-    .line 437
+    .line 542
     :cond_4a
     nop
 
-    .line 439
+    .line 544
     :try_start_4b
     move-object v8, v1
 
@@ -3148,7 +3149,7 @@
 
     move-result-object v3
 
-    .line 440
+    .line 545
     .local v3, "joined":Ljava/lang/String;
     const-string v8, "com.mplus.lib.z7.y"
 
@@ -3156,7 +3157,7 @@
 
     move-result-object v8
 
-    .line 441
+    .line 546
     .local v8, "yCls":Ljava/lang/Class;
     const-string v9, "p"
 
@@ -3170,18 +3171,18 @@
 
     move-result-object v9
 
-    .line 442
+    .line 547
     move-object v10, v9
 
-    .line 497
-    .local v10, "$this$writeOutgoing_u24lambda_u2410":Ljava/lang/reflect/Method;
+    .line 602
+    .local v10, "$this$writeOutgoing_u24lambda_u2415":Ljava/lang/reflect/Method;
     const/4 v11, 0x0
 
-    .line 442
+    .line 547
     .local v11, "$i$a$-apply-TextraDbBridge$writeOutgoing$recipients$1":I
     invoke-virtual {v10, v6}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .end local v10    # "$this$writeOutgoing_u24lambda_u2410":Ljava/lang/reflect/Method;
+    .end local v10    # "$this$writeOutgoing_u24lambda_u2415":Ljava/lang/reflect/Method;
     .end local v11    # "$i$a$-apply-TextraDbBridge$writeOutgoing$recipients$1":I
     filled-new-array {v3}, [Ljava/lang/Object;
 
@@ -3191,14 +3192,14 @@
 
     move-result-object v9
 
-    .line 441
+    .line 546
     nop
 
-    .line 443
+    .line 548
     .local v9, "recipients":Ljava/lang/Object;
     if-nez v9, :cond_9f
 
-    .line 444
+    .line 549
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3225,10 +3226,10 @@
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 445
+    .line 550
     return v7
 
-    .line 448
+    .line 553
     :cond_9f
     const-string v10, "com.mplus.lib.r4.j0"
 
@@ -3236,7 +3237,7 @@
 
     move-result-object v10
 
-    .line 449
+    .line 554
     .local v10, "j0Cls":Ljava/lang/Class;
     new-array v11, v7, [Ljava/lang/Class;
 
@@ -3250,29 +3251,29 @@
 
     move-result-object v11
 
-    .line 452
+    .line 557
     .local v11, "j0":Ljava/lang/Object;
     const-string v12, "i"
 
-    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$12(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$17(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v12
 
     invoke-virtual {v12, v11, v2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 453
+    .line 558
     const-string v12, "h"
 
-    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$12(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$17(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v12
 
     invoke-virtual {v12, v11, v9}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 454
+    .line 559
     const-string v12, "j"
 
-    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$12(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$17(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v12
     :try_end_c9
@@ -3283,46 +3284,46 @@
     :try_start_cb
     invoke-virtual {v12, v11, v13, v14}, Ljava/lang/reflect/Field;->setLong(Ljava/lang/Object;J)V
 
-    .line 455
+    .line 560
     const-string v12, "m"
 
-    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$12(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$17(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v12
 
     invoke-virtual {v12, v11, v7}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
 
-    .line 456
+    .line 561
     const-string v12, "g"
 
-    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$12(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$17(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v12
 
     invoke-virtual {v12, v11, v6}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
 
-    .line 457
+    .line 562
     const-string v12, "f"
 
-    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$12(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {v10, v12}, Lcom/textrcs/bridge/TextraDbBridge;->writeOutgoing$field$17(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v12
 
     invoke-virtual {v12, v11, v7}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
 
-    .line 461
+    .line 566
     sget-object v12, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
 
     invoke-virtual {v12, v2}, Lcom/textrcs/send/SendManager$Companion;->markRecordOnly(Ljava/lang/String;)V
 
-    .line 463
+    .line 568
     const-string v12, "com.mplus.lib.c5.d"
 
     invoke-static {v12}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v12
 
-    .line 464
+    .line 569
     .local v12, "c5d":Ljava/lang/Class;
     const-string v15, "P"
 
@@ -3338,19 +3339,19 @@
 
     move-result-object v5
 
-    .line 465
+    .line 570
     .local v5, "singleton":Ljava/lang/Object;
     if-nez v5, :cond_10a
 
-    .line 466
+    .line 571
     const-string v0, "writeOutgoing \u2014 c5.d.P() returned null"
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
+    .line 572
     return v7
 
-    .line 469
+    .line 574
     :cond_10a
     const-string v6, "u"
     :try_end_10c
@@ -3375,10 +3376,10 @@
 
     invoke-virtual {v6, v5, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 471
+    .line 576
     nop
 
-    .line 472
+    .line 577
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3401,12 +3402,12 @@
 
     move-result-object v6
 
-    .line 473
+    .line 578
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v7
 
-    .line 472
+    .line 577
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -3415,10 +3416,10 @@
 
     move-result-object v6
 
-    .line 470
+    .line 575
     invoke-static {v4, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 476
+    .line 581
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3453,12 +3454,12 @@
 
     move-result-object v0
 
-    .line 475
+    .line 580
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_16b
     .catchall {:try_start_10f .. :try_end_16b} :catchall_16d
 
-    .line 478
+    .line 583
     move v7, v15
 
     .end local v3    # "joined":Ljava/lang/String;
@@ -3470,7 +3471,7 @@
     .end local v12    # "c5d":Ljava/lang/Class;
     goto :goto_1ce
 
-    .line 479
+    .line 584
     :catchall_16d
     move-exception v0
 
@@ -3489,7 +3490,7 @@
     :goto_174
     move/from16 v16, v7
 
-    .line 480
+    .line 585
     .local v0, "e":Ljava/lang/Throwable;
     :goto_176
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3534,7 +3535,7 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
+    .line 586
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3575,41 +3576,1107 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 482
+    .line 587
     move/from16 v7, v16
 
-    .line 437
+    .line 542
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_1ce
     return v7
 
-    .line 433
+    .line 538
     :cond_1cf
     move-wide/from16 v13, p3
 
     move/from16 v16, v7
 
-    .line 434
+    .line 539
     :goto_1d3
     const-string v0, "writeOutgoing \u2014 empty recipients or body, nothing to do"
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
+    .line 540
     return v16
 
-    .line 427
+    .line 532
     :cond_1d9
     move-wide/from16 v13, p3
 
     move/from16 v16, v7
 
-    .line 430
+    .line 535
     :goto_1dd
     const-string v0, "writeOutgoing SKIPPED by hook"
 
     invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
+    .line 536
     return v16
+.end method
+
+.method public final writeSystemMessage(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;J)Z
+    .registers 32
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "memberPhones"    # Ljava/util/List;
+    .param p3, "text"    # Ljava/lang/String;
+    .param p4, "timestampMs"    # J
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            "J)Z"
+        }
+    .end annotation
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    move-object/from16 v3, p3
+
+    const-string v0, " text.len="
+
+    const-string v4, "context"
+
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v4, "memberPhones"
+
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v4, "text"
+
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 297
+    sget-object v5, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+
+    const-string v6, "dbbridge_write_skip"
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x2
+
+    invoke-static {v5, v6, v7, v8, v7}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+
+    move-result v5
+
+    const-string v6, "TextraDbBridge"
+
+    const/4 v9, 0x0
+
+    .line 341
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    .line 297
+    if-nez v5, :cond_2be
+
+    .line 298
+    sget-object v5, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+
+    const-string v11, "dbbridge_system_msg_skip"
+
+    invoke-static {v5, v11, v7, v8, v7}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_38
+
+    move/from16 v21, v9
+
+    goto/16 :goto_2c0
+
+    .line 303
+    :cond_38
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2b6
+
+    move-object v5, v3
+
+    check-cast v5, Ljava/lang/CharSequence;
+
+    invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
+
+    move-result v5
+
+    const/4 v11, 0x1
+
+    if-nez v5, :cond_4a
+
+    move v5, v11
+
+    goto :goto_4b
+
+    :cond_4a
+    move v5, v9
+
+    :goto_4b
+    if-eqz v5, :cond_4f
+
+    goto/16 :goto_2b6
+
+    .line 307
+    :cond_4f
+    nop
+
+    .line 309
+    :try_start_50
+    const-string v5, "com.mplus.lib.r4.n"
+
+    invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v5
+
+    .line 310
+    .local v5, "nCls":Ljava/lang/Class;
+    const-string v12, "com.mplus.lib.z7.y"
+
+    invoke-static {v12}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v12
+
+    .line 311
+    const-string v13, "p"
+
+    new-array v14, v11, [Ljava/lang/Class;
+
+    const-class v15, Ljava/lang/String;
+
+    aput-object v15, v14, v9
+
+    invoke-virtual {v12, v13, v14}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v12
+
+    .line 312
+    move-object v13, v12
+
+    .line 602
+    .local v13, "$this$writeSystemMessage_u24lambda_u242":Ljava/lang/reflect/Method;
+    const/4 v14, 0x0
+
+    .line 312
+    .local v14, "$i$a$-apply-TextraDbBridge$writeSystemMessage$r4n$1":I
+    invoke-virtual {v13, v11}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    .line 313
+    .end local v13    # "$this$writeSystemMessage_u24lambda_u242":Ljava/lang/reflect/Method;
+    .end local v14    # "$i$a$-apply-TextraDbBridge$writeSystemMessage$r4n$1":I
+    move-object v15, v2
+
+    check-cast v15, Ljava/lang/Iterable;
+
+    const-string v13, ","
+
+    move-object/from16 v16, v13
+
+    check-cast v16, Ljava/lang/CharSequence;
+
+    const/16 v22, 0x3e
+
+    const/16 v23, 0x0
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    invoke-static/range {v15 .. v23}, Lkotlin/collections/CollectionsKt;->joinToString$default(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v13
+
+    filled-new-array {v13}, [Ljava/lang/Object;
+
+    move-result-object v13
+
+    invoke-virtual {v12, v7, v13}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v12
+
+    .line 310
+    nop
+
+    .line 314
+    .local v12, "r4n":Ljava/lang/Object;
+    if-nez v12, :cond_99
+
+    .line 315
+    const-string v0, "writeSystemMessage \u2014 z7.y.p returned null"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 316
+    return v9
+
+    .line 318
+    :cond_99
+    const-string v13, "d"
+
+    new-array v14, v9, [Ljava/lang/Class;
+
+    invoke-virtual {v5, v13, v14}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v13
+
+    .line 319
+    move-object v14, v13
+
+    .line 602
+    .local v14, "$this$writeSystemMessage_u24lambda_u243":Ljava/lang/reflect/Method;
+    const/4 v15, 0x0
+
+    .line 319
+    .local v15, "$i$a$-apply-TextraDbBridge$writeSystemMessage$lookupKey$1":I
+    invoke-virtual {v14, v11}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    .end local v14    # "$this$writeSystemMessage_u24lambda_u243":Ljava/lang/reflect/Method;
+    .end local v15    # "$i$a$-apply-TextraDbBridge$writeSystemMessage$lookupKey$1":I
+    new-array v14, v9, [Ljava/lang/Object;
+
+    invoke-virtual {v13, v12, v14}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v13
+
+    .line 318
+    instance-of v14, v13, Ljava/lang/String;
+
+    if-eqz v14, :cond_b3
+
+    check-cast v13, Ljava/lang/String;
+
+    goto :goto_b4
+
+    :cond_b3
+    move-object v13, v7
+
+    .line 320
+    .local v13, "lookupKey":Ljava/lang/String;
+    :goto_b4
+    move-object v14, v13
+
+    check-cast v14, Ljava/lang/CharSequence;
+
+    if-eqz v14, :cond_c2
+
+    invoke-interface {v14}, Ljava/lang/CharSequence;->length()I
+
+    move-result v14
+
+    if-nez v14, :cond_c0
+
+    goto :goto_c2
+
+    :cond_c0
+    move v14, v9
+
+    goto :goto_c3
+
+    :cond_c2
+    :goto_c2
+    move v14, v11
+
+    :goto_c3
+    if-eqz v14, :cond_cb
+
+    .line 321
+    const-string v0, "writeSystemMessage \u2014 lookup key empty"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 322
+    return v9
+
+    .line 324
+    :cond_cb
+    const-string v14, "messaging.db"
+
+    invoke-virtual {v1, v14}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v14
+
+    .line 326
+    .local v14, "dbPath":Ljava/lang/String;
+    nop
+
+    .line 325
+    invoke-static {v14, v7, v9}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v15
+
+    check-cast v15, Ljava/io/Closeable;
+    :try_end_dc
+    .catchall {:try_start_50 .. :try_end_dc} :catchall_245
+
+    .line 327
+    :try_start_dc
+    move-object/from16 v16, v15
+
+    check-cast v16, Landroid/database/sqlite/SQLiteDatabase;
+
+    move-object/from16 v17, v16
+
+    .local v17, "db":Landroid/database/sqlite/SQLiteDatabase;
+    const/16 v16, 0x0
+
+    .line 328
+    .local v16, "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    new-instance v18, Lkotlin/jvm/internal/Ref$LongRef;
+
+    invoke-direct/range {v18 .. v18}, Lkotlin/jvm/internal/Ref$LongRef;-><init>()V
+
+    move-object/from16 v19, v18
+
+    .local v19, "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    const-wide/16 v7, -0x1
+
+    move/from16 v21, v9
+
+    move-object/from16 v9, v19
+
+    .end local v19    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .local v9, "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    iput-wide v7, v9, Lkotlin/jvm/internal/Ref$LongRef;->element:J
+
+    .line 329
+    nop
+
+    .line 330
+    const-string v7, "SELECT _id FROM convos WHERE lookup_key=? AND deleted=0"
+
+    .line 331
+    new-array v8, v11, [Ljava/lang/String;
+
+    aput-object v13, v8, v21
+
+    .line 329
+    move/from16 v19, v11
+
+    move-object/from16 v11, v17
+
+    .end local v17    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .local v11, "db":Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v11, v7, v8}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/io/Closeable;
+    :try_end_104
+    .catchall {:try_start_dc .. :try_end_104} :catchall_239
+
+    .line 332
+    :try_start_104
+    move-object v8, v7
+
+    check-cast v8, Landroid/database/Cursor;
+
+    .line 602
+    .local v8, "c":Landroid/database/Cursor;
+    const/16 v17, 0x0
+
+    .line 332
+    .local v17, "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1$1":I
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v22
+    :try_end_10d
+    .catchall {:try_start_104 .. :try_end_10d} :catchall_22a
+
+    if-eqz v22, :cond_11c
+
+    move-object/from16 v22, v12
+
+    move-object/from16 v23, v13
+
+    move/from16 v1, v21
+
+    .end local v12    # "r4n":Ljava/lang/Object;
+    .end local v13    # "lookupKey":Ljava/lang/String;
+    .local v22, "r4n":Ljava/lang/Object;
+    .local v23, "lookupKey":Ljava/lang/String;
+    :try_start_115
+    invoke-interface {v8, v1}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v12
+
+    iput-wide v12, v9, Lkotlin/jvm/internal/Ref$LongRef;->element:J
+
+    goto :goto_120
+
+    .end local v22    # "r4n":Ljava/lang/Object;
+    .end local v23    # "lookupKey":Ljava/lang/String;
+    .restart local v12    # "r4n":Ljava/lang/Object;
+    .restart local v13    # "lookupKey":Ljava/lang/String;
+    :cond_11c
+    move-object/from16 v22, v12
+
+    move-object/from16 v23, v13
+
+    .end local v8    # "c":Landroid/database/Cursor;
+    .end local v12    # "r4n":Ljava/lang/Object;
+    .end local v13    # "lookupKey":Ljava/lang/String;
+    .end local v17    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1$1":I
+    .restart local v22    # "r4n":Ljava/lang/Object;
+    .restart local v23    # "lookupKey":Ljava/lang/String;
+    :goto_120
+    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    :try_end_122
+    .catchall {:try_start_115 .. :try_end_122} :catchall_227
+
+    const/4 v1, 0x0
+
+    :try_start_123
+    invoke-static {v7, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    .line 333
+    iget-wide v7, v9, Lkotlin/jvm/internal/Ref$LongRef;->element:J
+
+    const-wide/16 v12, 0x0
+
+    cmp-long v1, v7, v12
+
+    if-gez v1, :cond_13b
+
+    .line 334
+    const-string v0, "writeSystemMessage \u2014 no convo for this member set; dropped"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_133
+    .catchall {:try_start_123 .. :try_end_133} :catchall_236
+
+    .line 335
+    nop
+
+    .end local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .end local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .end local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    const/4 v1, 0x0
+
+    :try_start_135
+    invoke-static {v15, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    :try_end_138
+    .catchall {:try_start_135 .. :try_end_138} :catchall_245
+
+    const/16 v21, 0x0
+
+    return v21
+
+    .line 337
+    .restart local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .restart local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .restart local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    :cond_13b
+    :try_start_13b
+    new-instance v1, Landroid/content/ContentValues;
+
+    invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
+
+    .line 338
+    .local v1, "mv":Landroid/content/ContentValues;
+    const-string v7, "convo_id"
+
+    move-wide/from16 v24, v12
+
+    iget-wide v12, v9, Lkotlin/jvm/internal/Ref$LongRef;->element:J
+
+    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    invoke-virtual {v1, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 339
+    invoke-virtual {v1, v4, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 340
+    const-string v4, "ts"
+
+    invoke-static/range {p4 .. p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 341
+    const-string v4, "unread"
+
+    invoke-virtual {v1, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 342
+    const-string v4, "direction"
+
+    invoke-virtual {v1, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 343
+    const-string v4, "failed"
+
+    invoke-virtual {v1, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 344
+    const-string v4, "locked"
+
+    invoke-virtual {v1, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 345
+    const-string v4, "delivered"
+
+    invoke-virtual {v1, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 346
+    const-string v4, "kind"
+
+    const/16 v7, 0x9
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 347
+    const-string v4, "message_center_ts"
+
+    invoke-static/range {p4 .. p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 348
+    const-string v4, "ts_to_send"
+
+    invoke-static/range {v24 .. v25}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 349
+    const-string v4, "messages"
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v11, v4, v7, v1}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+
+    move-result-wide v12
+
+    cmp-long v4, v12, v24
+
+    if-gez v4, :cond_1a7
+
+    .line 350
+    const-string v0, "writeSystemMessage \u2014 messages insert failed"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_19f
+    .catchall {:try_start_13b .. :try_end_19f} :catchall_236
+
+    .line 351
+    nop
+
+    .end local v1    # "mv":Landroid/content/ContentValues;
+    .end local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .end local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .end local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    const/4 v1, 0x0
+
+    :try_start_1a1
+    invoke-static {v15, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    :try_end_1a4
+    .catchall {:try_start_1a1 .. :try_end_1a4} :catchall_245
+
+    const/16 v21, 0x0
+
+    return v21
+
+    .line 353
+    .restart local v1    # "mv":Landroid/content/ContentValues;
+    .restart local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .restart local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .restart local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    :cond_1a7
+    :try_start_1a7
+    iget-wide v7, v9, Lkotlin/jvm/internal/Ref$LongRef;->element:J
+    :try_end_1a9
+    .catchall {:try_start_1a7 .. :try_end_1a9} :catchall_236
+
+    .line 327
+    .end local v1    # "mv":Landroid/content/ContentValues;
+    .end local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .end local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .end local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    const/4 v1, 0x0
+
+    :try_start_1aa
+    invoke-static {v15, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    .line 325
+    nop
+
+    .line 356
+    .local v7, "convoId":J
+    const-string v1, "com.mplus.lib.r4.H"
+
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    .line 357
+    const-string v4, "k0"
+
+    const/4 v9, 0x2
+
+    new-array v9, v9, [Ljava/lang/Class;
+
+    sget-object v10, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    const/16 v21, 0x0
+
+    aput-object v10, v9, v21
+
+    sget-object v10, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    aput-object v10, v9, v19
+
+    invoke-virtual {v1, v4, v9}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    .line 358
+    move-object v4, v1
+
+    .line 602
+    .local v4, "$this$writeSystemMessage_u24lambda_u246":Ljava/lang/reflect/Method;
+    const/4 v9, 0x0
+
+    .line 358
+    .local v9, "$i$a$-apply-TextraDbBridge$writeSystemMessage$1":I
+    move/from16 v10, v19
+
+    invoke-virtual {v4, v10}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    .line 359
+    .end local v4    # "$this$writeSystemMessage_u24lambda_u246":Ljava/lang/reflect/Method;
+    .end local v9    # "$i$a$-apply-TextraDbBridge$writeSystemMessage$1":I
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    const/16 v21, 0x0
+
+    invoke-static/range {v21 .. v21}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v9
+
+    filled-new-array {v4, v9}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v1, v9, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 360
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "writeSystemMessage convo="
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v6, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 361
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "RCV writeSystemMessage convo="
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+    :try_end_224
+    .catchall {:try_start_1aa .. :try_end_224} :catchall_245
+
+    .line 362
+    move v9, v10
+
+    .end local v5    # "nCls":Ljava/lang/Class;
+    .end local v7    # "convoId":J
+    .end local v14    # "dbPath":Ljava/lang/String;
+    .end local v22    # "r4n":Ljava/lang/Object;
+    .end local v23    # "lookupKey":Ljava/lang/String;
+    goto/16 :goto_2b5
+
+    .line 332
+    .restart local v5    # "nCls":Ljava/lang/Class;
+    .local v9, "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .restart local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .restart local v14    # "dbPath":Ljava/lang/String;
+    .restart local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    .restart local v22    # "r4n":Ljava/lang/Object;
+    .restart local v23    # "lookupKey":Ljava/lang/String;
+    :catchall_227
+    move-exception v0
+
+    move-object v1, v0
+
+    goto :goto_230
+
+    .end local v22    # "r4n":Ljava/lang/Object;
+    .end local v23    # "lookupKey":Ljava/lang/String;
+    .restart local v12    # "r4n":Ljava/lang/Object;
+    .restart local v13    # "lookupKey":Ljava/lang/String;
+    :catchall_22a
+    move-exception v0
+
+    move-object/from16 v22, v12
+
+    move-object/from16 v23, v13
+
+    move-object v1, v0
+
+    .end local v5    # "nCls":Ljava/lang/Class;
+    .end local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .end local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .end local v12    # "r4n":Ljava/lang/Object;
+    .end local v13    # "lookupKey":Ljava/lang/String;
+    .end local v14    # "dbPath":Ljava/lang/String;
+    .end local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    .end local p1    # "context":Landroid/content/Context;
+    .end local p2    # "memberPhones":Ljava/util/List;
+    .end local p3    # "text":Ljava/lang/String;
+    .end local p4    # "timestampMs":J
+    :goto_230
+    :try_start_230
+    throw v1
+    :try_end_231
+    .catchall {:try_start_230 .. :try_end_231} :catchall_231
+
+    .restart local v5    # "nCls":Ljava/lang/Class;
+    .restart local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .restart local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .restart local v14    # "dbPath":Ljava/lang/String;
+    .restart local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    .restart local v22    # "r4n":Ljava/lang/Object;
+    .restart local v23    # "lookupKey":Ljava/lang/String;
+    .restart local p1    # "context":Landroid/content/Context;
+    .restart local p2    # "memberPhones":Ljava/util/List;
+    .restart local p3    # "text":Ljava/lang/String;
+    .restart local p4    # "timestampMs":J
+    :catchall_231
+    move-exception v0
+
+    :try_start_232
+    invoke-static {v7, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    .end local v5    # "nCls":Ljava/lang/Class;
+    .end local v14    # "dbPath":Ljava/lang/String;
+    .end local v22    # "r4n":Ljava/lang/Object;
+    .end local v23    # "lookupKey":Ljava/lang/String;
+    .end local p1    # "context":Landroid/content/Context;
+    .end local p2    # "memberPhones":Ljava/util/List;
+    .end local p3    # "text":Ljava/lang/String;
+    .end local p4    # "timestampMs":J
+    throw v0
+    :try_end_236
+    .catchall {:try_start_232 .. :try_end_236} :catchall_236
+
+    .line 327
+    .end local v9    # "cid":Lkotlin/jvm/internal/Ref$LongRef;
+    .end local v11    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .end local v16    # "$i$a$-use-TextraDbBridge$writeSystemMessage$convoId$1":I
+    .restart local v5    # "nCls":Ljava/lang/Class;
+    .restart local v14    # "dbPath":Ljava/lang/String;
+    .restart local v22    # "r4n":Ljava/lang/Object;
+    .restart local v23    # "lookupKey":Ljava/lang/String;
+    .restart local p1    # "context":Landroid/content/Context;
+    .restart local p2    # "memberPhones":Ljava/util/List;
+    .restart local p3    # "text":Ljava/lang/String;
+    .restart local p4    # "timestampMs":J
+    :catchall_236
+    move-exception v0
+
+    move-object v1, v0
+
+    goto :goto_23f
+
+    .end local v22    # "r4n":Ljava/lang/Object;
+    .end local v23    # "lookupKey":Ljava/lang/String;
+    .restart local v12    # "r4n":Ljava/lang/Object;
+    .restart local v13    # "lookupKey":Ljava/lang/String;
+    :catchall_239
+    move-exception v0
+
+    move-object/from16 v22, v12
+
+    move-object/from16 v23, v13
+
+    move-object v1, v0
+
+    .end local v5    # "nCls":Ljava/lang/Class;
+    .end local v12    # "r4n":Ljava/lang/Object;
+    .end local v13    # "lookupKey":Ljava/lang/String;
+    .end local v14    # "dbPath":Ljava/lang/String;
+    .end local p1    # "context":Landroid/content/Context;
+    .end local p2    # "memberPhones":Ljava/util/List;
+    .end local p3    # "text":Ljava/lang/String;
+    .end local p4    # "timestampMs":J
+    :goto_23f
+    :try_start_23f
+    throw v1
+    :try_end_240
+    .catchall {:try_start_23f .. :try_end_240} :catchall_240
+
+    .restart local v5    # "nCls":Ljava/lang/Class;
+    .restart local v14    # "dbPath":Ljava/lang/String;
+    .restart local v22    # "r4n":Ljava/lang/Object;
+    .restart local v23    # "lookupKey":Ljava/lang/String;
+    .restart local p1    # "context":Landroid/content/Context;
+    .restart local p2    # "memberPhones":Ljava/util/List;
+    .restart local p3    # "text":Ljava/lang/String;
+    .restart local p4    # "timestampMs":J
+    :catchall_240
+    move-exception v0
+
+    :try_start_241
+    invoke-static {v15, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    .end local p1    # "context":Landroid/content/Context;
+    .end local p2    # "memberPhones":Ljava/util/List;
+    .end local p3    # "text":Ljava/lang/String;
+    .end local p4    # "timestampMs":J
+    throw v0
+    :try_end_245
+    .catchall {:try_start_241 .. :try_end_245} :catchall_245
+
+    .line 363
+    .end local v5    # "nCls":Ljava/lang/Class;
+    .end local v14    # "dbPath":Ljava/lang/String;
+    .end local v22    # "r4n":Ljava/lang/Object;
+    .end local v23    # "lookupKey":Ljava/lang/String;
+    .restart local p1    # "context":Landroid/content/Context;
+    .restart local p2    # "memberPhones":Ljava/util/List;
+    .restart local p3    # "text":Ljava/lang/String;
+    .restart local p4    # "timestampMs":J
+    :catchall_245
+    move-exception v0
+
+    .line 364
+    .local v0, "e":Ljava/lang/Throwable;
+    move-object v1, v0
+
+    .line 365
+    .local v1, "c":Ljava/lang/Throwable;
+    :goto_247
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_25e
+
+    .line 366
+    instance-of v4, v1, Ljava/lang/reflect/InvocationTargetException;
+
+    if-nez v4, :cond_255
+
+    .line 367
+    instance-of v4, v1, Ljava/lang/reflect/UndeclaredThrowableException;
+
+    if-eqz v4, :cond_25e
+
+    .line 369
+    :cond_255
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    move-object v1, v4
+
+    goto :goto_247
+
+    .line 371
+    :cond_25e
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "writeSystemMessage FAILED: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ": "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v6, v4, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 372
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "RCV writeSystemMessage FAIL "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 373
+    const/4 v9, 0x0
+
+    .line 307
+    .end local v0    # "e":Ljava/lang/Throwable;
+    .end local v1    # "c":Ljava/lang/Throwable;
+    :goto_2b5
+    return v9
+
+    .line 304
+    :cond_2b6
+    :goto_2b6
+    const-string v0, "writeSystemMessage \u2014 bad args (members/text)"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 305
+    const/16 v21, 0x0
+
+    return v21
+
+    .line 297
+    :cond_2be
+    move/from16 v21, v9
+
+    .line 300
+    :goto_2c0
+    const-string v0, "writeSystemMessage SKIPPED by hook"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 301
+    return v21
 .end method

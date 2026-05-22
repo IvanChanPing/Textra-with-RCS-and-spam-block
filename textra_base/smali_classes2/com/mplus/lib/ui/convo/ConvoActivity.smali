@@ -1016,6 +1016,10 @@
 
     invoke-super {p0, p1}, Lcom/mplus/lib/x5/l;->onWindowFocusChanged(Z)V
 
+    # textrcs: notify the typing indicator that this conversation gained
+    # (p1=true) or lost (p1=false) window focus. p0/p1 are unmodified here.
+    invoke-static {p0, p1}, Lcom/textrcs/ui/TypingIndicator;->onConvoFocus(Landroid/app/Activity;Z)V
+
     const/4 v1, 0x5
 
     if-eqz p1, :cond_0

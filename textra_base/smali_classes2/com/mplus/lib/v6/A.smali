@@ -531,6 +531,21 @@
     return p1
 
     :cond_3
+    const/4 v0, 0x7
+
+    invoke-virtual {p1, v0}, Lcom/mplus/lib/r4/g;->getInt(I)I
+
+    move-result v0
+
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_status_skip
+
+    const/4 p1, 0x7
+
+    return p1
+
+    :cond_status_skip
     invoke-virtual {p1, v3}, Lcom/mplus/lib/r4/g;->getInt(I)I
 
     move-result p1
@@ -597,6 +612,19 @@
     move-result-object p1
 
     invoke-direct {v0, p1}, Lcom/mplus/lib/v6/B;-><init>(Lcom/mplus/lib/x5/y;)V
+
+    goto :goto_0
+
+    :pswitch_6
+    new-instance v0, Lcom/mplus/lib/v6/StatusRowHolder;
+
+    const v1, 0x7f0d0166
+
+    invoke-interface {p1, v1}, Lcom/mplus/lib/x5/z;->b(I)Lcom/mplus/lib/x5/y;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcom/mplus/lib/v6/StatusRowHolder;-><init>(Lcom/mplus/lib/x5/y;)V
 
     goto :goto_0
 
@@ -775,6 +803,7 @@
         :pswitch_2
         :pswitch_1
         :pswitch_0
+        :pswitch_6
     .end packed-switch
 .end method
 

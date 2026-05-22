@@ -1,5 +1,59 @@
 # TextRCS Changelog
 
+## v0.98.0 — 2026-05-22 — reset to v0.94 baseline; reapply inline status lines + typing indicator
+
+**Reverted to the v0.94 baseline.** v0.95–v0.97 tried to give each libgm
+conversation its own Textra `convos` row so a same-member RCS group and SMS
+group would display separately. Textra resolves a tapped conversation
+purely from the participant phone set, so that could not work without
+fragile workarounds and it over-split conversations into duplicates. v0.98
+resets the group-handling code to v0.94: a group is keyed by its member set
+alone — one Textra conversation per number set. Two same-member groups (an
+RCS group and an SMS group) combine into one conversation; that trade-off
+is accepted. Incoming group messages thread via `r4.H.F0`; no per-libgm
+map, no custom `lookup_key`s, no over-splitting.
+
+**Inline status lines (#9).** A libgm conversation-status notice ("created
+this group", "now end-to-end encrypted", participant joined/left, …) is
+delivered as a `messages` row with `kind = 9` and rendered as a centered
+status line (layout `convo_messagelist_row_status`, view type 7 in adapter
+`v6.A`, holder `v6.StatusRowHolder`) instead of a chat bubble. New
+`TextraDbBridge.writeSystemMessage` resolves the conversation by its
+member-set `lookup_key` and inserts the row only if that conversation
+already exists (no stub conversation is created for a tombstone).
+`IncomingMessageHandler` routes status messages (`statusValue >= 200`)
+through it. Hook: `dbbridge_system_msg_skip`.
+
+### Typing indicator
+
+When the relay receives a `TypingEvent` for the conversation the user
+currently has open, a small "typing…" Toast is shown on that screen; it
+auto-hides after ~10s of no further typing, on a `STOPPED_TYPING` event,
+when a message arrives, or when the user leaves the conversation.
+
+New `com.textrcs.ui.TypingIndicator` (singleton): tracks the foregrounded
+`ConvoActivity` and resolves its recipient phone numbers from Textra's own
+model (`s5/q.v` → `v6/P.v`, an `r4/n` ArrayList of `r4/l`; each `r4/l.e`
+is the raw address) via guarded reflection. A relay typing event is
+matched to the open conversation by PHONE (bare digits, last-10 tolerant),
+since the relay's libgm `conversationID` does not key Textra's threads. A
+`Toast` is used rather than an injected view so it cannot corrupt Textra's
+live layout. All paths are fully guarded — the indicator can never crash
+the conversation screen. Hook: `typing_indicator_disable` /
+`typing_indicator_text`.
+
+`ConvoActivity.smali` hook: a single `invoke-static` into the existing
+NON-final `onWindowFocusChanged(Z)` (verified: declared
+`public onWindowFocusChanged(Z)V` in `x5/l.smali`, not final) — passes
+`(this, hasFocus)` so the indicator learns when the conversation is
+shown/hidden. `onPause()` was deliberately NOT used: it is `final` in
+`s5/q`, and overriding it causes a `LinkageError` crash.
+
+PENDING (main session): `IncomingMessageHandler.onUpdateEvents` currently
+only logs `typingEvent`; it must also call
+`TypingIndicator.onTypingEvent(convID, userNumber, started)` — see the
+report for the exact lines.
+
 ## v0.94.0 — 2026-05-22 — incoming group messages: deliver via r4.H.F0, not MMS PDU
 
 The MMS-PDU route for incoming group messages kept threading 1:1 even

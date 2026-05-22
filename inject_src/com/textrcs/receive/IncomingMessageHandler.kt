@@ -162,7 +162,13 @@ object IncomingMessageHandler {
             }
         }
         if (events.hasTypingEvent()) {
-            Log.d(TAG, "typing convo=${events.typingEvent.data.conversationID}")
+            val td = events.typingEvent.data
+            Log.d(TAG, "typing convo=${td.conversationID} type=${td.typeValue}")
+            com.textrcs.ui.TypingIndicator.onTypingEvent(
+                td.conversationID,
+                if (td.hasUser()) td.user.number else null,
+                td.typeValue == com.textrcs.gmproto.events.TypingTypes.STARTED_TYPING_VALUE,
+            )
         }
     }
 
@@ -308,10 +314,27 @@ object IncomingMessageHandler {
             data.messageStatus.statusValue >= 200 &&
             !Hooks.shouldSkip("incoming_deliver_system_msgs")
         ) {
+            // #9 — render a libgm conversation-status notice as an INLINE
+            // centered status line (kind=9), not a chat bubble. The convo is
+            // resolved by its member set; if it does not exist yet the notice
+            // is dropped — no stub conversation is created for a tombstone.
+            val sysText = data.messageInfoList
+                .mapNotNull { mi -> mi.messageContent?.content }
+                .filter { it.isNotEmpty() }
+                .joinToString("\n")
+            val members = convInfo[data.conversationID]?.participantPhones.orEmpty()
+            val wrote =
+                if (sysText.isNotEmpty() && members.isNotEmpty()) {
+                    TextraDbBridge.writeSystemMessage(
+                        context, members, sysText, normalizeTimestamp(data.timestamp),
+                    )
+                } else {
+                    false
+                }
             Log.i(
                 TAG,
                 "  SYSTEM/tombstone msg id=${data.messageID} " +
-                    "status=${data.messageStatus.status} — dropped (not a bubble)"
+                    "status=${data.messageStatus.status} inline=$wrote",
             )
             return
         }

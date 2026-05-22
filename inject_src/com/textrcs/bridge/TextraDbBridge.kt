@@ -270,6 +270,111 @@ object TextraDbBridge {
     }
 
     /**
+     * Deliver a libgm conversation-status / "tombstone" notice (group
+     * created, "now end-to-end encrypted", participant joined/left, …) into
+     * Textra as an INLINE STATUS LINE — a `messages` row with `kind = 9`,
+     * which the conversation message list renders as a centered status line
+     * (layout `convo_messagelist_row_status`, holder `v6.StatusRowHolder`)
+     * instead of a chat bubble.
+     *
+     * The conversation is resolved purely by its member-set `lookup_key`
+     * (`r4.n.d()` — Textra's natural key). If no `convos` row matches, the
+     * notice is dropped rather than creating a stub conversation for it.
+     *
+     * @param memberPhones all non-self conversation members (E.164) — one
+     *                      entry for a 1:1 conversation, >=2 for a group
+     * @param text          the status-line text
+     * @param timestampMs   epoch milliseconds
+     */
+    fun writeSystemMessage(
+        context: android.content.Context,
+        memberPhones: List<String>,
+        text: String,
+        timestampMs: Long,
+    ): Boolean {
+        // [REMOTE_HOOK v0.95] dbbridge_system_msg_skip — drop the inline
+        // status line (also honours the shared dbbridge_write_skip).
+        if (Hooks.shouldSkip("dbbridge_write_skip") ||
+            Hooks.shouldSkip("dbbridge_system_msg_skip")
+        ) {
+            Log.w(TAG, "writeSystemMessage SKIPPED by hook")
+            return false
+        }
+        if (memberPhones.isEmpty() || text.isEmpty()) {
+            Log.w(TAG, "writeSystemMessage — bad args (members/text)")
+            return false
+        }
+        return try {
+            // r4.n recipient set + its member-set lookup_key (r4.n.d()).
+            val nCls = Class.forName("com.mplus.lib.r4.n")
+            val r4n = Class.forName("com.mplus.lib.z7.y")
+                .getDeclaredMethod("p", String::class.java)
+                .apply { isAccessible = true }
+                .invoke(null, memberPhones.joinToString(","))
+            if (r4n == null) {
+                Log.w(TAG, "writeSystemMessage — z7.y.p returned null")
+                return false
+            }
+            val lookupKey = nCls.getDeclaredMethod("d")
+                .apply { isAccessible = true }.invoke(r4n) as? String
+            if (lookupKey.isNullOrEmpty()) {
+                Log.w(TAG, "writeSystemMessage — lookup key empty")
+                return false
+            }
+            val dbPath = context.getDatabasePath("messaging.db").absolutePath
+            val convoId: Long = android.database.sqlite.SQLiteDatabase.openDatabase(
+                dbPath, null, android.database.sqlite.SQLiteDatabase.OPEN_READWRITE,
+            ).use { db ->
+                var cid = -1L
+                db.rawQuery(
+                    "SELECT _id FROM convos WHERE lookup_key=? AND deleted=0",
+                    arrayOf(lookupKey),
+                ).use { c -> if (c.moveToFirst()) cid = c.getLong(0) }
+                if (cid < 0L) {
+                    Log.i(TAG, "writeSystemMessage — no convo for this member set; dropped")
+                    return false
+                }
+                val mv = android.content.ContentValues()
+                mv.put("convo_id", cid)
+                mv.put("text", text)
+                mv.put("ts", timestampMs)
+                mv.put("unread", 0)
+                mv.put("direction", 0)
+                mv.put("failed", 0)
+                mv.put("locked", 0)
+                mv.put("delivered", 0)
+                mv.put("kind", 9)
+                mv.put("message_center_ts", timestampMs)
+                mv.put("ts_to_send", 0L)
+                if (db.insert("messages", null, mv) < 0L) {
+                    Log.w(TAG, "writeSystemMessage — messages insert failed")
+                    return false
+                }
+                cid
+            }
+            // Refresh the open conversation + the conversation list.
+            Class.forName("com.mplus.lib.r4.H")
+                .getDeclaredMethod("k0", java.lang.Long.TYPE, java.lang.Boolean.TYPE)
+                .apply { isAccessible = true }
+                .invoke(null, convoId, false)
+            Log.i(TAG, "writeSystemMessage convo=$convoId text.len=${text.length}")
+            ScreenTracer.note("RCV writeSystemMessage convo=$convoId text.len=${text.length}")
+            true
+        } catch (e: Throwable) {
+            var c: Throwable = e
+            while (c.cause != null &&
+                (c is java.lang.reflect.InvocationTargetException ||
+                    c is java.lang.reflect.UndeclaredThrowableException)
+            ) {
+                c = c.cause!!
+            }
+            Log.w(TAG, "writeSystemMessage FAILED: ${c.javaClass.name}: ${c.message}", c)
+            ScreenTracer.note("RCV writeSystemMessage FAIL ${c.javaClass.name}: ${c.message}")
+            false
+        }
+    }
+
+    /**
      * Hand a finished M-Retrieve.conf PDU to Textra's MMS receive pipeline:
      * insert the `mms_queue` row, write the PDU into the MMS file store,
      * fire `mmsDownloadedNative`. Shared by [writeIncomingMms] and
