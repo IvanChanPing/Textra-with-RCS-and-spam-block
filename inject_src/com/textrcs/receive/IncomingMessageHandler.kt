@@ -117,6 +117,25 @@ object IncomingMessageHandler {
         Thread(r, "TextRCS-Mms").apply { isDaemon = true }
     }
 
+    /**
+     * Cache an explicitly-fetched conversation list (the `ListConversations`
+     * RPC result, via [com.textrcs.bridge.RustBridge]). Populates `convInfo`
+     * for every conversation up-front so an own-send never has to wait for a
+     * server-pushed `ConversationEvent`. `@Synchronized` — serialised against
+     * [onUpdateEvents] since both mutate the shared caches.
+     */
+    @Synchronized
+    fun cacheConversations(
+        context: Context,
+        convs: List<com.textrcs.gmproto.conversations.Conversation>,
+    ) {
+        if (appContext == null) appContext = context.applicationContext
+        loadPersistedConvInfo(context.applicationContext)
+        Log.i(TAG, "cacheConversations — caching ${convs.size} conversation(s)")
+        for (c in convs) cacheConversation(c)
+    }
+
+    @Synchronized
     fun onUpdateEvents(context: Context, events: UpdateEvents) {
         if (appContext == null) appContext = context.applicationContext
         loadPersistedConvInfo(context.applicationContext)

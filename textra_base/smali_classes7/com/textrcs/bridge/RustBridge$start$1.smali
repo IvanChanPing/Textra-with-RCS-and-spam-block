@@ -53,7 +53,7 @@
     f = "RustBridge.kt"
     i = {}
     l = {
-        0xb8
+        0xb9
     }
     m = "invokeSuspend"
     n = {}
@@ -174,7 +174,7 @@
 
     move-result-object v0
 
-    .line 184
+    .line 185
     iget v1, p0, Lcom/textrcs/bridge/RustBridge$start$1;->label:I
 
     packed-switch v1, :pswitch_data_3c

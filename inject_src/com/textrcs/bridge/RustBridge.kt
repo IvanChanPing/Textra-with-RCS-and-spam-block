@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import com.textrcs.control.Hooks
 import com.textrcs.diag.ScreenTracer
+import com.textrcs.gmproto.client.ListConversationsResponse
 import com.textrcs.gmproto.events.UpdateEvents
 import com.textrcs.protocol.GMessagesSession
 import com.textrcs.protocol.SessionStore
@@ -185,12 +186,41 @@ object RustBridge {
             connected = true
             ScreenTracer.note("RUST start — connect() returned OK")
             Log.i(TAG, "RustBridge connected")
+            // Pull the full conversation list so IncomingMessageHandler's
+            // convInfo cache is populated for EVERY conversation — not just
+            // the ones the server happens to push a ConversationEvent for.
+            // Without this an own-send to a "quiet" 1:1 thread can never
+            // resolve its recipient and is held forever.
+            syncConversations(appContext)
             true
         } catch (e: Throwable) {
             ScreenTracer.note("RUST start FAIL ${e.javaClass.simpleName}: ${e.message}")
             Log.e(TAG, "RustBridge connect failed", e)
             connected = false
             false
+        }
+    }
+
+    /**
+     * Pull the full conversation list (`ListConversations` RPC) and feed it
+     * to [IncomingMessageHandler] so the `convInfo` cache knows every
+     * conversation's participants. Runs off the connect thread; the typed
+     * response correlates off the live long-poll inside Rust.
+     */
+    private fun syncConversations(context: Context) {
+        if (Hooks.shouldSkip("rust_sync_conversations_skip")) return
+        val rc = client ?: return
+        scope.launch {
+            try {
+                val bytes = rc.listConversations(200L, true)
+                val resp = ListConversationsResponse.parseFrom(bytes)
+                ScreenTracer.note("RUST listConversations → ${resp.conversationsCount} conversations")
+                Log.i(TAG, "listConversations → ${resp.conversationsCount} conversations")
+                IncomingMessageHandler.cacheConversations(context, resp.conversationsList)
+            } catch (e: Throwable) {
+                ScreenTracer.note("RUST listConversations FAIL ${e.javaClass.simpleName}: ${e.message}")
+                Log.w(TAG, "syncConversations failed: ${e.javaClass.simpleName}: ${e.message}")
+            }
         }
     }
 

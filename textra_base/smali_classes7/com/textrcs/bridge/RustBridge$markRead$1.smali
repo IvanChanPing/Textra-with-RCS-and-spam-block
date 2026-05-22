@@ -53,7 +53,7 @@
     f = "RustBridge.kt"
     i = {}
     l = {
-        0xef
+        0x10d
     }
     m = "invokeSuspend"
     n = {}
@@ -181,7 +181,7 @@
 
     move-result-object v0
 
-    .line 237
+    .line 267
     iget v1, p0, Lcom/textrcs/bridge/RustBridge$markRead$1;->label:I
 
     packed-switch v1, :pswitch_data_56
@@ -206,13 +206,13 @@
 
     goto :goto_31
 
-    .line 240
+    .line 270
     :catchall_16
     move-exception v1
 
     goto :goto_36
 
-    .line 237
+    .line 267
     .end local v0    # "this":Lcom/textrcs/bridge/RustBridge$markRead$1;
     .end local p1    # "$result":Ljava/lang/Object;
     :pswitch_18
@@ -220,12 +220,12 @@
 
     move-object v1, p0
 
-    .line 238
+    .line 268
     .local v1, "this":Lcom/textrcs/bridge/RustBridge$markRead$1;
     .restart local p1    # "$result":Ljava/lang/Object;
     nop
 
-    .line 239
+    .line 269
     :try_start_1d
     iget-object v2, v1, Lcom/textrcs/bridge/RustBridge$markRead$1;->$rc:Luniffi/textrcs_libgm/RustClient;
 
@@ -249,10 +249,10 @@
 
     if-ne v2, v0, :cond_30
 
-    .line 237
+    .line 267
     return-object v0
 
-    .line 239
+    .line 269
     :cond_30
     move-object v0, v1
 
@@ -261,7 +261,7 @@
     :goto_31
     goto :goto_52
 
-    .line 240
+    .line 270
     .end local v0    # "this":Lcom/textrcs/bridge/RustBridge$markRead$1;
     .restart local v1    # "this":Lcom/textrcs/bridge/RustBridge$markRead$1;
     :catchall_32
@@ -273,7 +273,7 @@
 
     move-object v0, v7
 
-    .line 241
+    .line 271
     .restart local v0    # "this":Lcom/textrcs/bridge/RustBridge$markRead$1;
     .local v1, "e":Ljava/lang/Throwable;
     :goto_36
@@ -303,7 +303,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
+    .line 273
     .end local v1    # "e":Ljava/lang/Throwable;
     :goto_52
     sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;

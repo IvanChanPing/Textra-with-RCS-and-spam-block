@@ -1,5 +1,23 @@
 # TextRCS Changelog
 
+## v0.89.0 — 2026-05-22 — fetch the full conversation list on connect
+
+Root cause of the 1:1 own-send hold, found in the v0.88 logs: textra2
+never *requested* the conversation list — it only learned a
+conversation's participants from a server-pushed `ConversationEvent`,
+which only arrives for conversations with recent push activity. A 1:1
+own-send to a "quiet" thread (conv 3313, 3325, 11 in testing) could
+therefore never resolve its recipient and was held indefinitely.
+
+`RustBridge` now calls the `ListConversations` RPC (already implemented
+in the Rust crate, never wired up) right after connecting, and feeds the
+full list to `IncomingMessageHandler.cacheConversations` — so `convInfo`
+is populated for every conversation up-front, and (via v0.88's persistence)
+stays populated across restarts. `onUpdateEvents` and `cacheConversations`
+are `@Synchronized` since the conversation sync runs on a separate thread.
+
+Hook: `rust_sync_conversations_skip`.
+
 ## v0.88.0 — 2026-05-22 — persistent conversation cache + group MMS diagnostics
 
 Driven by the v0.87 test. The group own-send worked (a real group thread

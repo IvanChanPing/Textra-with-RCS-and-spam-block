@@ -69,17 +69,17 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 72
+    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/textrcs/bridge/RustBridge$Sink;->appContext:Landroid/content/Context;
 
-    .line 74
+    .line 75
     const/16 v0, 0x10
 
     iput v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->actionGetUpdates:I
 
-    .line 79
+    .line 80
     const/4 v0, 0x2
 
     new-array v0, v0, [B
@@ -88,7 +88,7 @@
 
     iput-object v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->gaiaLoggedOut:[B
 
-    .line 72
+    .line 73
     return-void
 
     nop
@@ -109,7 +109,7 @@
     .param p3, "unencryptedData"    # [B
     .param p4, "isOld"    # Z
 
-    .line 87
+    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,7 +160,7 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 93
+    .line 94
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v1, "gaia_loggedout_detect"
@@ -177,14 +177,14 @@
 
     if-nez v0, :cond_58
 
-    .line 94
+    .line 95
     iget v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->actionGetUpdates:I
 
     if-ne p1, v0, :cond_58
 
     if-nez p2, :cond_58
 
-    .line 95
+    .line 96
     if-eqz p3, :cond_58
 
     iget-object v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->gaiaLoggedOut:[B
@@ -195,24 +195,24 @@
 
     if-eqz v0, :cond_58
 
-    .line 97
+    .line 98
     const-string v0, "RUST onDataEvent \u2014 GAIA LOGGED OUT (re-pair required)"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 98
+    .line 99
     const-string v0, "Gaia session logged out server-side \u2014 re-pairing required"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
+    .line 100
     return-void
 
-    .line 101
+    .line 102
     :cond_58
     if-eqz p4, :cond_71
 
-    .line 104
+    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,16 +233,16 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 105
+    .line 106
     return-void
 
-    .line 107
+    .line 108
     :cond_71
     iget v0, p0, Lcom/textrcs/bridge/RustBridge$Sink;->actionGetUpdates:I
 
     if-eq p1, v0, :cond_8c
 
-    .line 108
+    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,10 +263,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
+    .line 110
     return-void
 
-    .line 111
+    .line 112
     :cond_8c
     if-nez p2, :cond_8f
 
@@ -275,17 +275,17 @@
     :cond_8f
     move-object v0, p2
 
-    .line 112
+    .line 113
     .local v0, "bytes":[B
     nop
 
-    .line 113
+    .line 114
     :try_start_91
     invoke-static {v0}, Lcom/textrcs/gmproto/events/UpdateEvents;->parseFrom([B)Lcom/textrcs/gmproto/events/UpdateEvents;
 
     move-result-object v2
 
-    .line 114
+    .line 115
     .local v2, "events":Lcom/textrcs/gmproto/events/UpdateEvents;
     sget-object v3, Lcom/textrcs/receive/IncomingMessageHandler;->INSTANCE:Lcom/textrcs/receive/IncomingMessageHandler;
 
@@ -300,11 +300,11 @@
     .end local v2    # "events":Lcom/textrcs/gmproto/events/UpdateEvents;
     goto :goto_e7
 
-    .line 115
+    .line 116
     :catchall_a0
     move-exception v2
 
-    .line 116
+    .line 117
     .local v2, "e":Ljava/lang/Throwable;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -348,7 +348,7 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 117
+    .line 118
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -373,7 +373,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
+    .line 120
     .end local v2    # "e":Ljava/lang/Throwable;
     :goto_e7
     return-void
@@ -383,7 +383,7 @@
     .registers 4
     .param p1, "route"    # I
 
-    .line 133
+    .line 134
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -406,44 +406,44 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
+    .line 135
     return-void
 .end method
 
 .method public onPhoneNotResponding()V
     .registers 3
 
-    .line 122
+    .line 123
     const-string v0, "RUST onPhoneNotResponding"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 123
+    .line 124
     const-string v0, "TextRCSRustBridge"
 
     const-string v1, "phone not responding"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
+    .line 125
     return-void
 .end method
 
 .method public onPhoneRespondingAgain()V
     .registers 3
 
-    .line 127
+    .line 128
     const-string v0, "RUST onPhoneRespondingAgain"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 128
+    .line 129
     const-string v0, "TextRCSRustBridge"
 
     const-string v1, "phone responding again"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
+    .line 130
     return-void
 .end method
