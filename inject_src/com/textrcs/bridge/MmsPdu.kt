@@ -88,12 +88,16 @@ object MmsPdu {
         writeValueLength(o, addr.size + 1)
         o.write(TOKEN_ADDRESS_PRESENT)
         o.write(addr)
-        // To: one header occurrence per recipient (encoded-string-value).
-        // AOSP PduParser accumulates repeated To headers into an array.
+        // To: one header occurrence per recipient. Textra's MMS composer
+        // (L4/k.d -> L4/k.c) writes an address as the GENERAL
+        // encoded-string-value form — `value-length charset text` — and its
+        // parser expects that, not a bare text-string. Encoding To as a
+        // plain text-string made Textra drop it, so a group message threaded
+        // 1:1 on the From address only.
         for (to in toAddresses) {
             if (to.isBlank()) continue
             o.write(H_TO)
-            writeTextString(o, to + "/TYPE=PLMN")
+            writeEncodedStringValue(o, to + "/TYPE=PLMN")
         }
         // Content-Type — MUST be the last header; the multipart body follows.
         o.write(H_CONTENT_TYPE); o.write(CT_MULTIPART_MIXED)
@@ -161,6 +165,19 @@ object MmsPdu {
     /** Text-string: bytes + NUL; quoted with 0x7F if it starts >= 0x80. */
     private fun writeTextString(o: ByteArrayOutputStream, s: String) {
         o.write(textStringBytes(s))
+    }
+
+    /**
+     * Encoded-string-value, general form: `value-length charset text-string`.
+     * The charset is UTF-8 (106) as a short-integer (0xEA). This is the form
+     * Textra's MMS composer emits for `To`/`Cc` addresses, so its parser
+     * round-trips it; a bare text-string is silently dropped.
+     */
+    private fun writeEncodedStringValue(o: ByteArrayOutputStream, s: String) {
+        val text = textStringBytes(s)            // text bytes + NUL terminator
+        writeValueLength(o, 1 + text.size)       // charset byte + text-string
+        o.write(0xEA)                            // 0x80 | 106 — UTF-8 short-integer
+        o.write(text)
     }
 
     private fun textStringBytes(s: String): ByteArray {

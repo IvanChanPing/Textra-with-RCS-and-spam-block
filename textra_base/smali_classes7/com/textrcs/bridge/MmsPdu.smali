@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMmsPdu.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MmsPdu.kt\ncom/textrcs/bridge/MmsPdu\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,207:1\n1#2:208\n*E\n"
+    value = "SMAP\nMmsPdu.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MmsPdu.kt\ncom/textrcs/bridge/MmsPdu\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,224:1\n1#2:225\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000>\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u000e\n\u0002\u0010\u0012\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0000\n\u0002\u0010\t\n\u0002\u0008\r\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0018\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0015\u001a\u00020\u0013H\u0002JB\u0010\u0016\u001a\u00020\u00132\u0006\u0010\u0017\u001a\u00020\u00182\u000c\u0010\u0019\u001a\u0008\u0012\u0004\u0012\u00020\u00180\u001a2\u0006\u0010\u001b\u001a\u00020\u001c2\u0008\u0010\u001d\u001a\u0004\u0018\u00010\u00182\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u00132\u0008\u0010\u001f\u001a\u0004\u0018\u00010\u0018J\"\u0010 \u001a\u00020\u00132\u0006\u0010!\u001a\u00020\u00042\u0008\u0010\"\u001a\u0004\u0018\u00010\u00182\u0006\u0010#\u001a\u00020\u0018H\u0002J\u0010\u0010$\u001a\u00020\u00042\u0006\u0010%\u001a\u00020\u0018H\u0002J\u0010\u0010&\u001a\u00020\u00132\u0006\u0010%\u001a\u00020\u0018H\u0002J\u0010\u0010\'\u001a\u00020\u00132\u0006\u0010(\u001a\u00020\u0018H\u0002J\u0018\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020\u001cH\u0002J\u0018\u0010.\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010(\u001a\u00020\u0018H\u0002J\u0018\u0010/\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020\u001cH\u0002J\u0018\u00100\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u00101\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000"
+        "\u0000>\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u000e\n\u0002\u0010\u0012\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0000\n\u0002\u0010\t\n\u0002\u0008\r\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0018\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0015\u001a\u00020\u0013H\u0002JB\u0010\u0016\u001a\u00020\u00132\u0006\u0010\u0017\u001a\u00020\u00182\u000c\u0010\u0019\u001a\u0008\u0012\u0004\u0012\u00020\u00180\u001a2\u0006\u0010\u001b\u001a\u00020\u001c2\u0008\u0010\u001d\u001a\u0004\u0018\u00010\u00182\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u00132\u0008\u0010\u001f\u001a\u0004\u0018\u00010\u0018J\"\u0010 \u001a\u00020\u00132\u0006\u0010!\u001a\u00020\u00042\u0008\u0010\"\u001a\u0004\u0018\u00010\u00182\u0006\u0010#\u001a\u00020\u0018H\u0002J\u0010\u0010$\u001a\u00020\u00042\u0006\u0010%\u001a\u00020\u0018H\u0002J\u0010\u0010&\u001a\u00020\u00132\u0006\u0010%\u001a\u00020\u0018H\u0002J\u0010\u0010\'\u001a\u00020\u00132\u0006\u0010(\u001a\u00020\u0018H\u0002J\u0018\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010(\u001a\u00020\u0018H\u0002J\u0018\u0010-\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010.\u001a\u00020\u001cH\u0002J\u0018\u0010/\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010(\u001a\u00020\u0018H\u0002J\u0018\u00100\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010.\u001a\u00020\u001cH\u0002J\u0018\u00101\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u00102\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/bridge/MmsPdu;",
@@ -54,10 +54,11 @@
         "imagePartContentType",
         "textStringBytes",
         "s",
-        "writeLongInteger",
+        "writeEncodedStringValue",
         "",
         "o",
         "Ljava/io/ByteArrayOutputStream;",
+        "writeLongInteger",
         "value",
         "writeTextString",
         "writeUintvar",
@@ -133,12 +134,12 @@
     .param p1, "contentType"    # [B
     .param p2, "data"    # [B
 
-    .line 125
+    .line 129
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 126
+    .line 130
     .local v0, "o":Ljava/io/ByteArrayOutputStream;
     array-length v1, p1
 
@@ -146,20 +147,20 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/textrcs/bridge/MmsPdu;->writeUintvar(Ljava/io/ByteArrayOutputStream;J)V
 
-    .line 127
+    .line 131
     array-length v1, p2
 
     int-to-long v1, v1
 
     invoke-direct {p0, v0, v1, v2}, Lcom/textrcs/bridge/MmsPdu;->writeUintvar(Ljava/io/ByteArrayOutputStream;J)V
 
-    .line 128
+    .line 132
     invoke-virtual {v0, p1}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 129
+    .line 133
     invoke-virtual {v0, p2}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 130
+    .line 134
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
@@ -177,12 +178,12 @@
     .param p2, "extMedia"    # Ljava/lang/String;
     .param p3, "name"    # Ljava/lang/String;
 
-    .line 147
+    .line 151
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 148
+    .line 152
     .local v0, "media":Ljava/io/ByteArrayOutputStream;
     if-ltz p1, :cond_b
 
@@ -203,22 +204,22 @@
     :goto_11
     invoke-direct {p0, v0, v1}, Lcom/textrcs/bridge/MmsPdu;->writeTextString(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;)V
 
-    .line 149
+    .line 153
     :goto_14
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 150
+    .line 154
     .local v1, "param":Ljava/io/ByteArrayOutputStream;
     const/16 v2, 0x85
 
     invoke-virtual {v1, v2}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 151
+    .line 155
     invoke-direct {p0, v1, p3}, Lcom/textrcs/bridge/MmsPdu;->writeTextString(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;)V
 
-    .line 152
+    .line 156
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v2
@@ -237,22 +238,22 @@
 
     move-result-object v2
 
-    .line 153
+    .line 157
     .local v2, "body":[B
     new-instance v4, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v4}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 154
+    .line 158
     .local v4, "o":Ljava/io/ByteArrayOutputStream;
     array-length v5, v2
 
     invoke-direct {p0, v4, v5}, Lcom/textrcs/bridge/MmsPdu;->writeValueLength(Ljava/io/ByteArrayOutputStream;I)V
 
-    .line 155
+    .line 159
     invoke-virtual {v4, v2}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 156
+    .line 160
     invoke-virtual {v4}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v5
@@ -406,12 +407,12 @@
     .registers 7
     .param p1, "mime"    # Ljava/lang/String;
 
-    .line 135
+    .line 139
     invoke-direct {p0, p1}, Lcom/textrcs/bridge/MmsPdu;->imageContentTypeByte(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 136
+    .line 140
     .local v0, "wk":I
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -441,10 +442,10 @@
 
     if-eqz v3, :cond_23
 
-    .line 208
+    .line 225
     const/4 v2, 0x0
 
-    .line 136
+    .line 140
     .local v2, "$i$a$-ifBlank-MmsPdu$imagePartContentType$name$1":I
     nop
 
@@ -462,7 +463,7 @@
 
     move-result-object v1
 
-    .line 137
+    .line 141
     .local v1, "name":Ljava/lang/String;
     if-gez v0, :cond_30
 
@@ -480,7 +481,7 @@
     .registers 6
     .param p1, "s"    # Ljava/lang/String;
 
-    .line 167
+    .line 184
     sget-object v0, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -491,13 +492,13 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 168
+    .line 185
     .local v0, "raw":[B
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 169
+    .line 186
     .local v1, "o":Ljava/io/ByteArrayOutputStream;
     array-length v2, v0
 
@@ -525,14 +526,14 @@
 
     invoke-virtual {v1, v2}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 170
+    .line 187
     :cond_24
     invoke-virtual {v1, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 171
+    .line 188
     invoke-virtual {v1, v3}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 172
+    .line 189
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v2
@@ -544,21 +545,51 @@
     return-object v2
 .end method
 
+.method private final writeEncodedStringValue(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;)V
+    .registers 5
+    .param p1, "o"    # Ljava/io/ByteArrayOutputStream;
+    .param p2, "s"    # Ljava/lang/String;
+
+    .line 177
+    invoke-direct {p0, p2}, Lcom/textrcs/bridge/MmsPdu;->textStringBytes(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    .line 178
+    .local v0, "text":[B
+    array-length v1, v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-direct {p0, p1, v1}, Lcom/textrcs/bridge/MmsPdu;->writeValueLength(Ljava/io/ByteArrayOutputStream;I)V
+
+    .line 179
+    const/16 v1, 0xea
+
+    invoke-virtual {p1, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
+
+    .line 180
+    invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
+
+    .line 181
+    return-void
+.end method
+
 .method private final writeLongInteger(Ljava/io/ByteArrayOutputStream;J)V
     .registers 13
     .param p1, "o"    # Ljava/io/ByteArrayOutputStream;
     .param p2, "value"    # J
 
-    .line 187
+    .line 204
     move-wide v0, p2
 
-    .line 188
+    .line 205
     .local v0, "v":J
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 189
+    .line 206
     .local v2, "bytes":Ljava/util/ArrayList;
     const-wide/16 v3, 0x0
 
@@ -574,7 +605,7 @@
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 190
+    .line 207
     :cond_14
     :goto_14
     cmp-long v5, v0, v3
@@ -599,7 +630,7 @@
 
     goto :goto_14
 
-    .line 191
+    .line 208
     :cond_27
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -607,7 +638,7 @@
 
     invoke-virtual {p1, v3}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 192
+    .line 209
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -637,7 +668,7 @@
     .end local v4    # "b":Ljava/lang/Integer;
     goto :goto_32
 
-    .line 193
+    .line 210
     :cond_49
     return-void
 .end method
@@ -647,14 +678,14 @@
     .param p1, "o"    # Ljava/io/ByteArrayOutputStream;
     .param p2, "s"    # Ljava/lang/String;
 
-    .line 163
+    .line 167
     invoke-direct {p0, p2}, Lcom/textrcs/bridge/MmsPdu;->textStringBytes(Ljava/lang/String;)[B
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 164
+    .line 168
     return-void
 .end method
 
@@ -663,10 +694,10 @@
     .param p1, "o"    # Ljava/io/ByteArrayOutputStream;
     .param p2, "value"    # J
 
-    .line 197
+    .line 214
     move-wide v0, p2
 
-    .line 198
+    .line 215
     .local v0, "v":J
     const-wide/16 v2, 0x0
 
@@ -680,13 +711,13 @@
 
     return-void
 
-    .line 199
+    .line 216
     :cond_c
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 200
+    .line 217
     .local v4, "groups":Ljava/util/ArrayList;
     :goto_11
     cmp-long v6, v0, v2
@@ -711,7 +742,7 @@
 
     goto :goto_11
 
-    .line 201
+    .line 218
     :cond_23
     const/4 v2, 0x0
 
@@ -723,7 +754,7 @@
     :goto_28
     if-ge v2, v3, :cond_58
 
-    .line 202
+    .line 219
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v6
@@ -739,7 +770,7 @@
     :cond_33
     move v7, v5
 
-    .line 203
+    .line 220
     .local v7, "last":Z
     :goto_34
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -776,13 +807,13 @@
 
     invoke-virtual {p1, v6}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 201
+    .line 218
     .end local v7    # "last":Z
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_28
 
-    .line 205
+    .line 222
     .end local v2    # "i":I
     :cond_58
     return-void
@@ -793,26 +824,26 @@
     .param p1, "o"    # Ljava/io/ByteArrayOutputStream;
     .param p2, "len"    # I
 
-    .line 177
+    .line 194
     const/16 v0, 0x1f
 
     if-ge p2, v0, :cond_8
 
-    .line 178
+    .line 195
     invoke-virtual {p1, p2}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     goto :goto_f
 
-    .line 180
+    .line 197
     :cond_8
     invoke-virtual {p1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 181
+    .line 198
     int-to-long v0, p2
 
     invoke-direct {p0, p1, v0, v1}, Lcom/textrcs/bridge/MmsPdu;->writeUintvar(Ljava/io/ByteArrayOutputStream;J)V
 
-    .line 183
+    .line 200
     :goto_f
     return-void
 .end method
@@ -996,7 +1027,7 @@
     .line 90
     invoke-virtual {v6, v9}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 93
+    .line 97
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -1015,7 +1046,7 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 94
+    .line 98
     .local v13, "to":Ljava/lang/String;
     move-object v14, v13
 
@@ -1027,12 +1058,12 @@
 
     if-nez v14, :cond_a3
 
-    .line 95
+    .line 99
     const/16 v14, 0x97
 
     invoke-virtual {v6, v14}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 96
+    .line 100
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1049,12 +1080,12 @@
 
     move-result-object v14
 
-    invoke-direct {v0, v6, v14}, Lcom/textrcs/bridge/MmsPdu;->writeTextString(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;)V
+    invoke-direct {v0, v6, v14}, Lcom/textrcs/bridge/MmsPdu;->writeEncodedStringValue(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;)V
 
     .end local v13    # "to":Ljava/lang/String;
     goto :goto_a3
 
-    .line 99
+    .line 103
     :cond_d2
     invoke-virtual {v6, v8}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
@@ -1062,12 +1093,12 @@
 
     invoke-virtual {v6, v8}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 102
+    .line 106
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 103
+    .line 107
     .local v8, "parts":Ljava/util/ArrayList;
     move-object v10, v4
 
@@ -1096,12 +1127,12 @@
 
     if-nez v12, :cond_109
 
-    .line 104
+    .line 108
     invoke-direct {v0, v14, v13, v10}, Lcom/textrcs/bridge/MmsPdu;->contentTypeWithName(ILjava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v12
 
-    .line 105
+    .line 109
     sget-object v15, Lkotlin/text/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v4, v15}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -1112,18 +1143,18 @@
 
     invoke-static {v15, v11}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 104
+    .line 108
     invoke-direct {v0, v12, v15}, Lcom/textrcs/bridge/MmsPdu;->buildPart([B[B)[B
 
     move-result-object v11
 
     invoke-virtual {v8, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 107
+    .line 111
     :cond_109
     if-eqz v5, :cond_11d
 
-    .line 108
+    .line 112
     if-nez p7, :cond_110
 
     const-string v11, "image/jpeg"
@@ -1144,7 +1175,7 @@
 
     invoke-virtual {v8, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 111
+    .line 115
     :cond_11d
     invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1152,24 +1183,24 @@
 
     if-eqz v11, :cond_131
 
-    .line 112
+    .line 116
     invoke-direct {v0, v14, v13, v10}, Lcom/textrcs/bridge/MmsPdu;->contentTypeWithName(ILjava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v10
 
-    .line 113
+    .line 117
     const/4 v11, 0x0
 
     new-array v11, v11, [B
 
-    .line 112
+    .line 116
     invoke-direct {v0, v10, v11}, Lcom/textrcs/bridge/MmsPdu;->buildPart([B[B)[B
 
     move-result-object v10
 
     invoke-virtual {v8, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 116
+    .line 120
     :cond_131
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
@@ -1179,7 +1210,7 @@
 
     invoke-direct {v0, v6, v10, v11}, Lcom/textrcs/bridge/MmsPdu;->writeUintvar(Ljava/io/ByteArrayOutputStream;J)V
 
-    .line 117
+    .line 121
     invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
@@ -1203,7 +1234,7 @@
     .end local v11    # "p":[B
     goto :goto_13d
 
-    .line 118
+    .line 122
     :cond_14d
     invoke-virtual {v6}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 

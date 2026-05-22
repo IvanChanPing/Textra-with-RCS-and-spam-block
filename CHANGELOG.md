@@ -1,5 +1,20 @@
 # TextRCS Changelog
 
+## v0.92.0 — 2026-05-22 — group MMS: encode To addresses so Textra threads them
+
+v0.91 stopped incoming group messages from crashing, but they threaded
+into the *individual* sender's 1:1 conversation, not the group. Cause:
+`O4/c.Z` builds the conversation from `From + To + Cc`, but Textra's
+parser never saw the `To` addresses — `MmsPdu` wrote them as a bare
+text-string, while Textra's own MMS composer (`L4/k.d` → `L4/k.c`)
+writes an address in the GENERAL encoded-string-value form
+(`value-length charset text`). The parser expects that form.
+
+`MmsPdu.writeEncodedStringValue` now emits `value-length`, charset 106
+(UTF-8, short-integer `0xEA`), then the text-string — matching Textra's
+composer. `To` headers use it, so an incoming group message now carries
+a recognisable recipient list and threads into the group conversation.
+
 ## v0.91.0 — 2026-05-22 — restore classpath resources dropped by the build
 
 Root cause of the incoming-group-MMS failure, captured by the v0.90
