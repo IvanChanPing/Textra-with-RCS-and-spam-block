@@ -119,8 +119,72 @@ object TextraDbBridge {
             Log.w(TAG, "writeIncomingMms SKIPPED by hook")
             return false
         }
+        val pdu = MmsPdu.buildRetrieveConf(
+            senderPhone, emptyList(), timestampMs, text, mediaBytes, mediaMime,
+        )
+        return deliverMmsPdu(
+            context, pdu, timestampMs,
+            "sender.tail=${senderPhone.takeLast(6)} media=${mediaBytes.size}b",
+        )
+    }
+
+    /**
+     * Deliver a received GROUP message (text and/or an attachment) into
+     * Textra as a **group MMS** through Textra's own MMS receive pipeline.
+     *
+     * A group conversation has no 1:1 SMS representation — a `SMS_DELIVER`
+     * carries a single sender and would thread into a 1:1 conversation. A
+     * group MMS `M-Retrieve.conf` instead carries the `From` sender plus a
+     * `To` address per group member; Textra threads the message on the
+     * union of those addresses — i.e. into the group MMS conversation.
+     *
+     * @param senderPhone  the group member who sent the message (E.164)
+     * @param toAddresses  the other group members (E.164); >= 1 required
+     * @param text         optional message text
+     * @param mediaBytes   attachment bytes, or null for a text-only message
+     * @param mediaMime    attachment MIME type, or null with no attachment
+     * @return true if the PDU was handed to Textra without throwing
+     */
+    fun writeIncomingGroupMms(
+        context: android.content.Context,
+        senderPhone: String,
+        toAddresses: List<String>,
+        text: String?,
+        mediaBytes: ByteArray?,
+        mediaMime: String?,
+        timestampMs: Long,
+    ): Boolean {
+        // [REMOTE_HOOK v0.87] dbbridge_group_mms_skip — short-circuit group
+        // MMS delivery (also honours the shared dbbridge_write_skip).
+        if (Hooks.shouldSkip("dbbridge_write_skip") ||
+            Hooks.shouldSkip("dbbridge_group_mms_skip")
+        ) {
+            Log.w(TAG, "writeIncomingGroupMms SKIPPED by hook")
+            return false
+        }
+        val pdu = MmsPdu.buildRetrieveConf(
+            senderPhone, toAddresses, timestampMs, text, mediaBytes, mediaMime,
+        )
+        return deliverMmsPdu(
+            context, pdu, timestampMs,
+            "GROUP from.tail=${senderPhone.takeLast(6)} to.n=${toAddresses.size} " +
+                "text=${text?.length ?: -1} media=${mediaBytes?.size ?: -1}",
+        )
+    }
+
+    /**
+     * Hand a finished M-Retrieve.conf PDU to Textra's MMS receive pipeline:
+     * insert the `mms_queue` row, write the PDU into the MMS file store,
+     * fire `mmsDownloadedNative`. Shared by [writeIncomingMms] and
+     * [writeIncomingGroupMms] — the PDU is the only thing that differs.
+     */
+    private fun deliverMmsPdu(
+        context: android.content.Context,
+        pdu: ByteArray,
+        timestampMs: Long,
+        desc: String,
+    ): Boolean {
         return try {
-            val pdu = MmsPdu.buildRetrieveConf(senderPhone, timestampMs, text, mediaBytes, mediaMime)
             // Diagnostic: run the PDU through Textra's own parser (E3/C, the
             // same one O4/b.a() uses) so a malformed PDU is reported here
             // instead of vanishing inside N4/e.S's broken catch-block log.
@@ -129,10 +193,10 @@ object TextraDbBridge {
                 val ec = ecCls.getDeclaredConstructor(ByteArray::class.java)
                     .apply { isAccessible = true }.newInstance(pdu)
                 val parsed = ecCls.getDeclaredMethod("m").apply { isAccessible = true }.invoke(ec)
-                Log.i(TAG, "writeIncomingMms PDU parse-check OK -> ${parsed?.javaClass?.name}")
+                Log.i(TAG, "deliverMmsPdu PDU parse-check OK -> ${parsed?.javaClass?.name}")
             } catch (e: Throwable) {
                 val c = e.cause ?: e
-                Log.w(TAG, "writeIncomingMms PDU parse-check FAILED: ${c.javaClass.name}: ${c.message}")
+                Log.w(TAG, "deliverMmsPdu PDU parse-check FAILED: ${c.javaClass.name}: ${c.message}")
             }
             // 1. Insert the mms_queue row (state 0x55). Textra looks this up
             //    by content://queue/<id>; the PDU itself is NOT kept here —
@@ -151,7 +215,7 @@ object TextraDbBridge {
                 db.insert("mms_queue", null, cv)
             }
             if (rowId < 0L) {
-                Log.w(TAG, "writeIncomingMms — mms_queue insert failed")
+                Log.w(TAG, "deliverMmsPdu — mms_queue insert failed")
                 return false
             }
             // 2. Write the PDU into Textra's MMS file store. `g0.H()` loads
@@ -182,13 +246,12 @@ object TextraDbBridge {
             nClass.getDeclaredMethod("N", Intent::class.java).invoke(singleton, intent)
             Log.i(
                 TAG,
-                "writeIncomingMms delivered queueRow=$rowId pduLen=${pdu.size} " +
-                    "sender.tail=${senderPhone.takeLast(6)} media=${mediaBytes.size}b",
+                "deliverMmsPdu delivered queueRow=$rowId pduLen=${pdu.size} $desc",
             )
-            ScreenTracer.note("RCV-MMS delivered queueRow=$rowId pduLen=${pdu.size}")
+            ScreenTracer.note("RCV-MMS delivered queueRow=$rowId pduLen=${pdu.size} $desc")
             true
         } catch (e: Throwable) {
-            Log.w(TAG, "writeIncomingMms failed: ${e.javaClass.simpleName}: ${e.message}")
+            Log.w(TAG, "deliverMmsPdu failed: ${e.javaClass.simpleName}: ${e.message}")
             ScreenTracer.note("RCV-MMS deliver FAIL ${e.javaClass.simpleName}: ${e.message}")
             false
         }

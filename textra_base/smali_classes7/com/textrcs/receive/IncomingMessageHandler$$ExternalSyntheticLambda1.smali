@@ -13,16 +13,20 @@
 
 .field public final synthetic f$2:Landroid/content/Context;
 
-.field public final synthetic f$3:Lcom/textrcs/receive/IncomingMessageHandler$Sender;
+.field public final synthetic f$3:Z
 
-.field public final synthetic f$4:Ljava/lang/String;
+.field public final synthetic f$4:Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
-.field public final synthetic f$5:J
+.field public final synthetic f$5:Ljava/util/List;
+
+.field public final synthetic f$6:Ljava/lang/String;
+
+.field public final synthetic f$7:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;Lcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/lang/String;J)V
-    .registers 8
+.method public synthetic constructor <init>(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;ZLcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/util/List;Ljava/lang/String;J)V
+    .registers 10
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,11 +37,15 @@
 
     iput-object p3, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$2:Landroid/content/Context;
 
-    iput-object p4, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$3:Lcom/textrcs/receive/IncomingMessageHandler$Sender;
+    iput-boolean p4, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$3:Z
 
-    iput-object p5, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$4:Ljava/lang/String;
+    iput-object p5, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$4:Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
-    iput-wide p6, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$5:J
+    iput-object p6, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$5:Ljava/util/List;
+
+    iput-object p7, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$6:Ljava/lang/String;
+
+    iput-wide p8, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$7:J
 
     return-void
 .end method
@@ -45,7 +53,7 @@
 
 # virtual methods
 .method public final run()V
-    .registers 8
+    .registers 10
 
     .line 0
     iget-object v0, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$0:Lcom/textrcs/gmproto/conversations/MediaContent;
@@ -54,13 +62,17 @@
 
     iget-object v2, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$2:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$3:Lcom/textrcs/receive/IncomingMessageHandler$Sender;
+    iget-boolean v3, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$3:Z
 
-    iget-object v4, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$4:Ljava/lang/String;
+    iget-object v4, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$4:Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
-    iget-wide v5, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$5:J
+    iget-object v5, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$5:Ljava/util/List;
 
-    invoke-static/range {v0 .. v6}, Lcom/textrcs/receive/IncomingMessageHandler;->$r8$lambda$9kiEkT4MeqAMxLBTLybOZP4_4uA(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;Lcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/lang/String;J)V
+    iget-object v6, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$6:Ljava/lang/String;
+
+    iget-wide v7, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$7:J
+
+    invoke-static/range {v0 .. v8}, Lcom/textrcs/receive/IncomingMessageHandler;->$r8$lambda$iRa4teDlaHQvHdEVyXFPmUIUs9k(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;ZLcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/util/List;Ljava/lang/String;J)V
 
     return-void
 .end method

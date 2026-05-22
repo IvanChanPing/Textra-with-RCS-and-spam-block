@@ -25,6 +25,7 @@ object MmsPdu {
     private const val H_MESSAGE_ID = 0x8B
     private const val H_DATE = 0x85
     private const val H_FROM = 0x89
+    private const val H_TO = 0x97
     private const val H_CONTENT_TYPE = 0x84
 
     private const val MSGTYPE_RETRIEVE_CONF = 0x84
@@ -51,18 +52,27 @@ object MmsPdu {
     /**
      * Build an M-Retrieve.conf PDU.
      *
+     * Threading: Textra's MMS pipeline keys the conversation on the union of
+     * the `From` address and every `To` address (minus self). For a 1:1
+     * message [toAddresses] is empty; for a **group** message it carries the
+     * other group members so Textra threads the message into the group MMS
+     * conversation instead of a 1:1 thread.
+     *
      * @param sender      sender phone (E.164, e.g. "+15163416499")
+     * @param toAddresses other recipients — empty for 1:1, the group members
+     *                    for a group message
      * @param timestampMs message time (epoch ms)
-     * @param text        optional caption — emitted as a text/plain part
-     * @param imageBytes  the decrypted attachment bytes
-     * @param imageMime   the attachment MIME type (e.g. "image/jpeg")
+     * @param text        optional text body — emitted as a text/plain part
+     * @param imageBytes  attachment bytes, or null for a text-only message
+     * @param imageMime   attachment MIME type, or null when [imageBytes] is null
      */
     fun buildRetrieveConf(
         sender: String,
+        toAddresses: List<String>,
         timestampMs: Long,
         text: String?,
-        imageBytes: ByteArray,
-        imageMime: String,
+        imageBytes: ByteArray?,
+        imageMime: String?,
     ): ByteArray {
         val o = ByteArrayOutputStream()
 
@@ -78,6 +88,13 @@ object MmsPdu {
         writeValueLength(o, addr.size + 1)
         o.write(TOKEN_ADDRESS_PRESENT)
         o.write(addr)
+        // To: one header occurrence per recipient (encoded-string-value).
+        // AOSP PduParser accumulates repeated To headers into an array.
+        for (to in toAddresses) {
+            if (to.isBlank()) continue
+            o.write(H_TO)
+            writeTextString(o, to + "/TYPE=PLMN")
+        }
         // Content-Type — MUST be the last header; the multipart body follows.
         o.write(H_CONTENT_TYPE); o.write(CT_MULTIPART_MIXED)
 
@@ -87,7 +104,14 @@ object MmsPdu {
             parts.add(buildPart(contentTypeWithName(CT_TEXT_PLAIN, null, "text.txt"),
                 text.toByteArray(Charsets.UTF_8)))
         }
-        parts.add(buildPart(imagePartContentType(imageMime), imageBytes))
+        if (imageBytes != null) {
+            parts.add(buildPart(imagePartContentType(imageMime ?: "image/jpeg"), imageBytes))
+        }
+        // A PDU with no body part is malformed — guarantee at least one.
+        if (parts.isEmpty()) {
+            parts.add(buildPart(contentTypeWithName(CT_TEXT_PLAIN, null, "text.txt"),
+                ByteArray(0)))
+        }
 
         writeUintvar(o, parts.size.toLong())
         for (p in parts) o.write(p)

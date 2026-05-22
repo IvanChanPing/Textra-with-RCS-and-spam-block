@@ -1,5 +1,32 @@
 # TextRCS Changelog
 
+## v0.87.0 — 2026-05-22 — group messages + own-send retry queue
+
+Two fixes driven by the v0.86 on-device test, where three own-sends
+(two 1:1, one group) all failed to appear.
+
+**Own-send retry queue.** v0.86 detected all three correctly but HELD the
+two 1:1 messages because their `ConversationEvent` arrived ~2 minutes
+*after* the `MessageEvent` — the recipient was unresolvable and the held
+message was never retried. `IncomingMessageHandler` now QUEUES an
+unresolved own-send in `pendingOutgoing` (keyed by conversationID +
+messageID); `cacheConversation` flushes the queue via
+`flushPendingOutgoing` as soon as the participant list arrives.
+
+**Group messages — incoming and own-sent.** A group conversation has no
+1:1 SMS representation. `MmsPdu.buildRetrieveConf` now emits a `To`
+header per group member (and the attachment is optional, so a group
+*text* message is delivered as a text-only MMS). `TextraDbBridge` gains
+`writeIncomingGroupMms`; `IncomingMessageHandler` routes any message in a
+group conversation through it (`From` = sender, `To` = the other members)
+so Textra threads it into the group MMS conversation. Group own-sends are
+no longer deferred — `writeOutgoing` already builds a multi-recipient
+`r4.n`, so a group own-send is persisted into the group thread.
+
+`cacheConversation` records group-ness via `Conversation.isGroupChat` or
+a >1 non-self participant count. New hooks: `incoming_skip_group_routing`,
+`dbbridge_group_mms_skip`.
+
 ## v0.86.0 — 2026-05-22 — own sends from other clients delivered as OUTGOING (1:1)
 
 Task #12, step A. A message the user sent from *another* client (their

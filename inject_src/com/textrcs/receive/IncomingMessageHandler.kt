@@ -40,6 +40,23 @@ object IncomingMessageHandler {
     private class ConvInfo(val isGroup: Boolean, val participantPhones: List<String>)
     /** conversationID -> [ConvInfo], warmed by [cacheConversation]. */
     private val convInfo = HashMap<String, ConvInfo>()
+
+    /**
+     * An own-send held because its conversation's participant set was not
+     * yet known (the `MessageEvent` raced ahead of the `ConversationEvent`).
+     */
+    private class PendingOutgoing(
+        val messageID: String,
+        val body: String,
+        val hasMedia: Boolean,
+        val ts: Long,
+    )
+    /**
+     * conversationID -> own-sends awaiting recipient resolution, keyed by
+     * messageID (so a long-poll replay overwrites rather than duplicates).
+     * Flushed by [cacheConversation] once the participant list arrives.
+     */
+    private val pendingOutgoing = HashMap<String, LinkedHashMap<String, PendingOutgoing>>()
     /** recently delivered messageIDs — guards against long-poll replay. */
     private val seenMessageIds = LinkedHashSet<String>()
     private const val SEEN_CAP = 400
@@ -123,6 +140,30 @@ object IncomingMessageHandler {
         val isGroup = conv.isGroupChat || nonMePhones.size > 1
         convInfo[conv.conversationID] = ConvInfo(isGroup, nonMePhones)
         Log.i(TAG, "  convInfo[${conv.conversationID}] isGroup=$isGroup members=${nonMePhones.size}")
+        flushPendingOutgoing(conv.conversationID)
+    }
+
+    /**
+     * Deliver any own-sends that were held for [convID] now that its
+     * participant set is known. A `MessageEvent` for an own-send often
+     * races ahead of the `ConversationEvent` that names the recipients;
+     * without this the held message would be lost (the long-poll does not
+     * replay it).
+     */
+    private fun flushPendingOutgoing(convID: String) {
+        val pend = pendingOutgoing.remove(convID) ?: return
+        if (pend.isEmpty()) return
+        val recipients = resolveOutgoingRecipients(convID)
+        if (recipients == null) {
+            // Still unresolved — keep them queued for the next event.
+            pendingOutgoing[convID] = pend
+            return
+        }
+        Log.i(TAG, "  flushing ${pend.size} pending own-send(s) for conv=$convID")
+        for (po in pend.values) {
+            if (seenMessageIds.contains(po.messageID)) continue
+            deliverOutgoing(convID, po.messageID, recipients, po.body, po.hasMedia, po.ts)
+        }
     }
 
     /**
@@ -287,6 +328,26 @@ object IncomingMessageHandler {
             return
         }
 
+        // Group vs 1:1. A group conversation has no 1:1 SMS representation:
+        // a `SMS_DELIVER` carries one sender and threads 1:1. A group message
+        // is delivered as a group MMS instead — `From` = sender, `To` = the
+        // other group members — so Textra threads it into the group MMS
+        // conversation.
+        // [REMOTE_HOOK v0.87] incoming_skip_group_routing — force the 1:1
+        // SMS/MMS paths even for a group (the pre-v0.87 behaviour).
+        val convIsGroup = convInfo[data.conversationID]?.isGroup == true &&
+            !Hooks.shouldSkip("incoming_skip_group_routing")
+        val groupMembers: List<String> = convInfo[data.conversationID]
+            ?.participantPhones?.filter { it != sender.value } ?: emptyList()
+        val deliverAsGroup = convIsGroup && groupMembers.isNotEmpty()
+        if (convIsGroup && groupMembers.isEmpty()) {
+            Log.w(
+                TAG,
+                "  group conv ${data.conversationID} has no other members " +
+                    "— falling back to 1:1 delivery",
+            )
+        }
+
         if (mediaParts.isNotEmpty()) {
             // MMS path. Mark seen now so a long-poll replay during the
             // async download does not re-dispatch; download + deliver off
@@ -313,12 +374,20 @@ object IncomingMessageHandler {
                         mc.mediaData.toByteArray()
                     }
                     val mime = mc.mimeType.ifBlank { "image/jpeg" }
-                    val wrote = TextraDbBridge.writeIncomingMms(
-                        context, sender.value, body.ifEmpty { null }, bytes, mime, ts,
-                    )
+                    val wrote = if (deliverAsGroup) {
+                        TextraDbBridge.writeIncomingGroupMms(
+                            context, sender.value, groupMembers,
+                            body.ifEmpty { null }, bytes, mime, ts,
+                        )
+                    } else {
+                        TextraDbBridge.writeIncomingMms(
+                            context, sender.value, body.ifEmpty { null }, bytes, mime, ts,
+                        )
+                    }
                     Log.i(
                         TAG,
-                        "  MMS wrote-to-textra=$wrote id=$msgId media=${bytes.size}b mime=$mime",
+                        "  MMS wrote-to-textra=$wrote id=$msgId group=$deliverAsGroup " +
+                            "media=${bytes.size}b mime=$mime",
                     )
                 } catch (e: Throwable) {
                     Log.w(
@@ -328,8 +397,26 @@ object IncomingMessageHandler {
                     ScreenTracer.note("RCV-MMS FAIL ${e.javaClass.simpleName}: ${e.message}")
                 }
             }
+        } else if (deliverAsGroup) {
+            // Group text — delivered as a text-only group MMS.
+            val wrote = TextraDbBridge.writeIncomingGroupMms(
+                context, sender.value, groupMembers, body, null, null, ts,
+            )
+            Log.i(
+                TAG,
+                "  GROUP text wrote=$wrote members=${groupMembers.size} " +
+                    "from.tail=${sender.value.takeLast(6)} body.len=${body.length}",
+            )
+            ScreenTracer.note(
+                "RCV group writeIncomingGroupMms=$wrote members=${groupMembers.size} " +
+                    "body.len=${body.length}"
+            )
+            if (wrote) {
+                seenMessageIds.add(data.messageID)
+                trimSeen()
+            }
         } else {
-            // Text-only — SMS path.
+            // 1:1 text — SMS path.
             val wrote = TextraDbBridge.writeIncoming(sender.value, body, ts)
             Log.i(TAG, "  wrote-to-textra-db=$wrote sender=${sender.value} len=${body.length}")
             ScreenTracer.note(
@@ -343,12 +430,20 @@ object IncomingMessageHandler {
         }
     }
 
+    /** The non-self recipient phones for an outgoing message, or null. */
+    private fun resolveOutgoingRecipients(convID: String): List<String>? {
+        val r = convInfo[convID]?.participantPhones?.takeIf { it.isNotEmpty() }
+            ?: convPrimaryPhone[convID]?.let { listOf(it) }
+        return r?.takeIf { it.isNotEmpty() }
+    }
+
     /**
-     * Deliver a message the user sent from another client as an OUTGOING
-     * Textra row. The recipients come from the cached conversation — never
-     * from the message's `senderParticipant` (which is the user). If they
-     * are not yet known the message is HELD (not marked seen) so a later
-     * push retries once the `ConversationEvent` has warmed [convInfo].
+     * Handle a message the user sent from another client. The recipients
+     * come from the cached conversation — never from `senderParticipant`
+     * (which is the user). If the conversation is not yet cached the message
+     * is QUEUED in [pendingOutgoing] and delivered by [flushPendingOutgoing]
+     * once the `ConversationEvent` arrives — the `MessageEvent` for an
+     * own-send routinely races ahead of it.
      */
     private fun handleOutgoing(
         data: com.textrcs.gmproto.conversations.Message,
@@ -356,46 +451,49 @@ object IncomingMessageHandler {
         hasMedia: Boolean,
         ts: Long,
     ) {
-        val info = convInfo[data.conversationID]
-        val recipients: List<String> = info?.participantPhones?.takeIf { it.isNotEmpty() }
-            ?: convPrimaryPhone[data.conversationID]?.let { listOf(it) }
-            ?: emptyList()
-        if (recipients.isEmpty()) {
+        val recipients = resolveOutgoingRecipients(data.conversationID)
+        if (recipients == null) {
+            val q = pendingOutgoing.getOrPut(data.conversationID) { LinkedHashMap() }
+            q[data.messageID] = PendingOutgoing(data.messageID, body, hasMedia, ts)
             Log.w(
                 TAG,
-                "  OUTGOING HOLD id=${data.messageID} — recipients unresolved " +
-                    "for conv=${data.conversationID}; not delivering",
+                "  OUTGOING HOLD+QUEUED id=${data.messageID} conv=${data.conversationID} " +
+                    "— recipients not yet known (pending=${q.size})",
             )
             return
         }
-        val isGroup = info?.isGroup == true || recipients.size > 1
+        deliverOutgoing(data.conversationID, data.messageID, recipients, body, hasMedia, ts)
+    }
+
+    /**
+     * Persist a resolved own-send as an OUTGOING message. For >1 recipient
+     * [TextraDbBridge.writeOutgoing] threads it into the group conversation.
+     */
+    private fun deliverOutgoing(
+        convID: String,
+        messageID: String,
+        recipients: List<String>,
+        body: String,
+        hasMedia: Boolean,
+        ts: Long,
+    ) {
         if (hasMedia) {
             // Own-sent attachment (e.g. a picture sent from the phone). The
-            // outgoing-MMS record path is not wired yet — skip without a
-            // wrong 1:1 bubble. Marked seen so it does not replay-spam.
-            Log.i(TAG, "  OUTGOING media own-send id=${data.messageID} — not yet supported")
-            seenMessageIds.add(data.messageID)
+            // outgoing-MMS record path is not wired yet — skip rather than
+            // mis-deliver. Marked seen so it does not replay-spam.
+            Log.i(TAG, "  OUTGOING media own-send id=$messageID — not yet supported")
+            seenMessageIds.add(messageID)
             trimSeen()
-            return
-        }
-        if (isGroup) {
-            // Group own-sends need the group-MMS outgoing path — handled with
-            // the group-message work. Held (not seen) until that ships.
-            Log.i(
-                TAG,
-                "  OUTGOING group own-send id=${data.messageID} members=${recipients.size} " +
-                    "— deferred to group-message handling",
-            )
             return
         }
         val wrote = TextraDbBridge.writeOutgoing(recipients, body, ts)
         Log.i(
             TAG,
-            "  OUTGOING wrote=$wrote id=${data.messageID} " +
-                "recipient.tail=${recipients[0].takeLast(6)} body.len=${body.length}",
+            "  OUTGOING wrote=$wrote id=$messageID conv=$convID recipients=${recipients.size} " +
+                "group=${recipients.size > 1} body.len=${body.length}",
         )
         if (wrote) {
-            seenMessageIds.add(data.messageID)
+            seenMessageIds.add(messageID)
             trimSeen()
         }
     }
