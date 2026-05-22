@@ -195,6 +195,101 @@ object TextraDbBridge {
     }
 
     /**
+     * Persist a message the user sent from ANOTHER client (their phone /
+     * messages.google.com) into Textra as an OUTGOING message.
+     *
+     * Such a message arrives on the long-poll with no `tmpID` (that is set
+     * only for sends originating in textra2 itself) and an OUTGOING
+     * `MessageStatusType` / an `isMe` sender. The incoming SMS/MMS receive
+     * paths cannot represent it — `SMS_DELIVER` is incoming-only.
+     *
+     * Textra's own outgoing-send entry point is `com.mplus.lib.c5.d.u(r4.j0)`
+     * (`initiateSending`) — exactly what the `RESPOND_VIA_MESSAGE` service
+     * `com.mplus.lib.eg` calls. It (1) resolves/creates the conversation from
+     * the message's recipient set `r4.n`, (2) persists the outgoing `r4.j0`
+     * row via `r4.H.Z`, (3) refreshes the UI, then (4) dispatches a real
+     * send. Step 4 would re-transmit a message Google already sent, so the
+     * body is registered with [SendManager.markRecordOnly] first — SendManager
+     * then skips the GM POST and fires the success sentIntent, flipping the
+     * row to "sent".
+     *
+     * The `r4.j0` is built field-for-field as `eg.onHandleWork` builds it:
+     * `i` = body, `h` = recipients, `j` = timestamp, `m` = false, `g` = 1,
+     * `f` = 0. The recipient set is built by Textra's own parser
+     * `com.mplus.lib.z7.y.p(String)` (comma/semicolon delimited).
+     *
+     * @param recipientPhones the other party (1 entry) or group members
+     * @param body            the message text
+     * @param timestampMs     epoch milliseconds
+     * @return true if `c5.d.u` was invoked without throwing
+     */
+    fun writeOutgoing(
+        recipientPhones: List<String>,
+        body: String,
+        timestampMs: Long,
+    ): Boolean {
+        // [REMOTE_HOOK v0.86] dbbridge_outgoing_skip — short-circuit the
+        // outgoing-message persist (also honours the shared dbbridge_write_skip).
+        if (Hooks.shouldSkip("dbbridge_write_skip") ||
+            Hooks.shouldSkip("dbbridge_outgoing_skip")
+        ) {
+            Log.w(TAG, "writeOutgoing SKIPPED by hook")
+            return false
+        }
+        if (recipientPhones.isEmpty() || body.isEmpty()) {
+            Log.w(TAG, "writeOutgoing — empty recipients or body, nothing to do")
+            return false
+        }
+        return try {
+            // r4.n recipient set, via Textra's own delimiter-aware parser.
+            val joined = recipientPhones.joinToString(",")
+            val yCls = Class.forName("com.mplus.lib.z7.y")
+            val recipients = yCls.getDeclaredMethod("p", String::class.java)
+                .apply { isAccessible = true }.invoke(null, joined)
+            if (recipients == null) {
+                Log.w(TAG, "writeOutgoing — z7.y.p returned null for '$joined'")
+                return false
+            }
+            // r4.j0 outgoing message POJO — fields per eg.onHandleWork.
+            val j0Cls = Class.forName("com.mplus.lib.r4.j0")
+            val j0 = j0Cls.getDeclaredConstructor().newInstance()
+            fun field(name: String) =
+                j0Cls.getDeclaredField(name).apply { isAccessible = true }
+            field("i").set(j0, body)
+            field("h").set(j0, recipients)
+            field("j").setLong(j0, timestampMs)
+            field("m").setBoolean(j0, false)
+            field("g").setInt(j0, 1)
+            field("f").setInt(j0, 0)
+            // Register the body so SendManager skips the GM re-transmit that
+            // c5.d.u → a0() would otherwise trigger. MUST precede the c5.d.u
+            // call (the send dispatch runs on a worker thread afterwards).
+            com.textrcs.send.SendManager.markRecordOnly(body)
+            // c5.d.P().u(j0) — Textra's native outgoing send/persist.
+            val c5d = Class.forName(C5D_CLASS)
+            val singleton = c5d.getDeclaredMethod("P").invoke(null)
+            if (singleton == null) {
+                Log.w(TAG, "writeOutgoing — c5.d.P() returned null")
+                return false
+            }
+            c5d.getDeclaredMethod("u", j0Cls).invoke(singleton, j0)
+            Log.i(
+                TAG,
+                "writeOutgoing delivered via c5.d.u recipients=${recipientPhones.size} " +
+                    "body.len=${body.length}",
+            )
+            ScreenTracer.note(
+                "RCV-OUT writeOutgoing recipients=${recipientPhones.size} body.len=${body.length}",
+            )
+            true
+        } catch (e: Throwable) {
+            Log.w(TAG, "writeOutgoing failed: ${e.javaClass.simpleName}: ${e.message}")
+            ScreenTracer.note("RCV-OUT writeOutgoing FAIL ${e.javaClass.simpleName}: ${e.message}")
+            false
+        }
+    }
+
+    /**
      * Outgoing delivery-status reconciliation — not wired. The
      * `SendMessageResponse` doesn't echo Textra's `tmpId`, so a real
      * implementation would have to match on the long-poll `MessageEvent`.

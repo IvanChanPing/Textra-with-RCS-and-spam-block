@@ -48,7 +48,7 @@
 
     iget-object v3, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda3;->f$3:Ljava/util/List;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/textrcs/send/SendManager;->$r8$lambda$Nz_3BPSpBOBor_87nQrl5daiCvc(Lcom/textrcs/send/SendManager;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/textrcs/send/SendManager;->$r8$lambda$y-tPdhw53THXEG3uCSvMA6nngq8(Lcom/textrcs/send/SendManager;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method

@@ -30,7 +30,7 @@
     .line 0
     iget-object v0, p0, Lcom/textrcs/send/SendManager$$ExternalSyntheticLambda0;->f$0:Lcom/textrcs/send/SendManager;
 
-    invoke-static {v0}, Lcom/textrcs/send/SendManager;->$r8$lambda$R884jUOlyAWBqinoZpq3pX4pPOs(Lcom/textrcs/send/SendManager;)V
+    invoke-static {v0}, Lcom/textrcs/send/SendManager;->$r8$lambda$10B3lvSgyX84dVMpF8eR31bMNak(Lcom/textrcs/send/SendManager;)V
 
     return-void
 .end method

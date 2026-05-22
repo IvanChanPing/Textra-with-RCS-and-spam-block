@@ -58,7 +58,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 276
+    .line 413
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->value:Ljava/lang/String;
@@ -73,7 +73,7 @@
 .method public final getSource()Ljava/lang/String;
     .registers 2
 
-    .line 276
+    .line 413
     iget-object v0, p0, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->source:Ljava/lang/String;
 
     return-object v0
@@ -82,7 +82,7 @@
 .method public final getValue()Ljava/lang/String;
     .registers 2
 
-    .line 276
+    .line 413
     iget-object v0, p0, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->value:Ljava/lang/String;
 
     return-object v0

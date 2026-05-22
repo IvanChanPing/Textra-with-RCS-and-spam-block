@@ -1,5 +1,34 @@
 # TextRCS Changelog
 
+## v0.86.0 — 2026-05-22 — own sends from other clients delivered as OUTGOING (1:1)
+
+Task #12, step A. A message the user sent from *another* client (their
+phone / messages.google.com) arrives on the long-poll with no `tmpID`
+(that is set only for sends originating in textra2 itself) and either an
+OUTGOING `MessageStatusType` (the 1..22 enum range) or an `isMe` sender
+participant. Until now such a message was mis-delivered as an incoming
+SMS bubble.
+
+`IncomingMessageHandler` now detects it (`incoming_skip_outgoing_detection`
+reverts) and routes it through the new `TextraDbBridge.writeOutgoing`,
+which persists it through Textra's OWN outgoing-send entry point
+`com.mplus.lib.c5.d.u(r4.j0)` — exactly what the `RESPOND_VIA_MESSAGE`
+service `com.mplus.lib.eg` calls. The `r4.j0` is built field-for-field
+as `eg.onHandleWork` builds it; the recipient set `r4.n` is built by
+Textra's own parser `z7.y.p`. `c5.d.u` also dispatches a real send, so
+the body is registered with `SendManager.markRecordOnly` first —
+`SendManager.sendText` then skips the GM POST (Google already sent the
+message) but fires the success sentIntent, flipping the row to "sent".
+
+`cacheConversation` now records per-conversation group-ness + the full
+non-self participant set (`ConvInfo`), used to resolve an own-send's
+recipients (never from `senderParticipant`, which is the user).
+
+Scope: 1:1 own-sends only. Group own-sends and own-sent attachments are
+HELD pending the group-message work (task #10). Hooks:
+`incoming_skip_outgoing_detection`, `dbbridge_outgoing_skip`,
+`sendmgr_record_only_disable`.
+
 ## v0.85.0 — 2026-05-21 — never key a conversation by the user's own number
 
 `resolveSenderPhone` now skips the `isMe` participant in its

@@ -116,6 +116,22 @@ class SendManager private constructor(private val appContext: Context) {
             sentIntents?.let { fireSentIntents(it, false) }
             return
         }
+        // Record-only own-send: the message was sent from another client and
+        // Google Messages already transmitted it — TextraDbBridge.writeOutgoing
+        // routed it through Textra's native send path purely to persist the
+        // row. Skip the GM POST; fire the success sentIntent so Textra marks
+        // the row "sent". See SendManager.markRecordOnly.
+        // [REMOTE_HOOK v0.86] sendmgr_record_only_disable — ignore the
+        // record-only marker (debug: WILL re-transmit own-sends to GM).
+        if (isRecordOnly(body) && !Hooks.shouldSkip("sendmgr_record_only_disable")) {
+            ScreenTracer.note(
+                "SEND sendText RECORD-ONLY own-send sync — skipping GM transmit " +
+                    "phone=${redact(recipientPhone)} body.len=${body.length}",
+            )
+            Log.i(TAG, "record-only own-send — not re-transmitting to ${redact(recipientPhone)}")
+            sentIntents?.let { fireSentIntents(it, true) }
+            return
+        }
         // v0.56: definitive Rust-load probe. SendManager is on the proven-firing
         // path (cadence shows it active). Tells us in EVERY send-attempt upload
         // whether the Rust .so + classes are actually reachable from runtime.
@@ -559,6 +575,43 @@ class SendManager private constructor(private val appContext: Context) {
         private const val TAG = "TextRCSSend"
 
         @Volatile private var instance: SendManager? = null
+
+        /**
+         * Record-only sends — own messages the user sent from ANOTHER client
+         * (their phone / messages.google.com). [TextraDbBridge.writeOutgoing]
+         * persists such a message through Textra's native outgoing path
+         * `c5/d.u`, which ALSO dispatches a real send. Google Messages has
+         * already transmitted the message, so re-sending it here would
+         * deliver a DUPLICATE to the recipient. Before invoking `c5/d.u`,
+         * [TextraDbBridge.writeOutgoing] registers the body here; [sendText]
+         * then short-circuits — it skips the GM POST but still fires the
+         * success sentIntent so Textra flips the row to "sent".
+         *
+         * Keyed by body only: a group send fans out to one `e5/d.m` call per
+         * recipient/segment, all carrying the same body, so the marker must
+         * survive repeated lookups (non-consuming, 60 s expiry).
+         */
+        private val recordOnlySends =
+            java.util.Collections.synchronizedList(ArrayList<Pair<String, Long>>())
+        private const val RECORD_ONLY_TTL_MS = 60_000L
+
+        /** Mark [body] as an already-sent own message — skip the GM transmit. */
+        @JvmStatic
+        fun markRecordOnly(body: String) {
+            val now = System.currentTimeMillis()
+            synchronized(recordOnlySends) {
+                recordOnlySends.removeAll { now - it.second > RECORD_ONLY_TTL_MS }
+                recordOnlySends.add(Pair(body, now))
+            }
+        }
+
+        private fun isRecordOnly(body: String): Boolean {
+            val now = System.currentTimeMillis()
+            synchronized(recordOnlySends) {
+                recordOnlySends.removeAll { now - it.second > RECORD_ONLY_TTL_MS }
+                return recordOnlySends.any { it.first == body }
+            }
+        }
 
         @JvmStatic
         fun get(context: Context): SendManager {

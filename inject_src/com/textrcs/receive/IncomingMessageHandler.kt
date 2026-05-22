@@ -35,6 +35,11 @@ object IncomingMessageHandler {
     private val participantPhone = HashMap<String, String>()
     /** conversationID -> primary (first non-self) participant phone. */
     private val convPrimaryPhone = HashMap<String, String>()
+
+    /** Group-ness + the full non-self participant phone set per conversation. */
+    private class ConvInfo(val isGroup: Boolean, val participantPhones: List<String>)
+    /** conversationID -> [ConvInfo], warmed by [cacheConversation]. */
+    private val convInfo = HashMap<String, ConvInfo>()
     /** recently delivered messageIDs — guards against long-poll replay. */
     private val seenMessageIds = LinkedHashSet<String>()
     private const val SEEN_CAP = 400
@@ -87,6 +92,7 @@ object IncomingMessageHandler {
         val all = ArrayList<com.textrcs.gmproto.conversations.Participant>()
         all.addAll(conv.participantsList)
         var primary: String? = null
+        val nonMePhones = ArrayList<String>()
         for (p in all) {
             val pid = p.getID().participantID
             val phone = participantPhoneOf(p)
@@ -99,14 +105,24 @@ object IncomingMessageHandler {
             if (phone != null) {
                 if (pid.isNotBlank()) participantPhone[pid] = phone
                 if (primary == null) primary = phone
+                if (!nonMePhones.contains(phone)) nonMePhones.add(phone)
             }
         }
         // For an unsaved number GM uses the number itself as the name.
         if (primary == null) {
             val n = normalizePhone(conv.name)
-            if (looksLikePhone(n)) primary = n
+            if (looksLikePhone(n)) {
+                primary = n
+                if (!nonMePhones.contains(n)) nonMePhones.add(n)
+            }
         }
         if (primary != null) convPrimaryPhone[conv.conversationID] = primary
+        // A conversation is a group when libgm flags it as one OR it has more
+        // than one non-self participant. Record it so an outgoing/own-send
+        // message can be threaded to all members, never keyed by self.
+        val isGroup = conv.isGroupChat || nonMePhones.size > 1
+        convInfo[conv.conversationID] = ConvInfo(isGroup, nonMePhones)
+        Log.i(TAG, "  convInfo[${conv.conversationID}] isGroup=$isGroup members=${nonMePhones.size}")
     }
 
     /**
@@ -218,8 +234,33 @@ object IncomingMessageHandler {
             return
         }
 
-        val sender = resolveSenderPhone(data)
         val ts = normalizeTimestamp(data.timestamp)
+
+        // Outgoing — a message the user sent from ANOTHER client (their
+        // phone / messages.google.com). It arrives with no tmpID (that is
+        // set only for textra2's own sends, which are skipped above) and
+        // either an OUTGOING `MessageStatusType` (the 1..22 enum range) or
+        // an `isMe` sender participant. Such a message must be delivered as
+        // an OUTGOING Textra row, never as an incoming SMS bubble.
+        // [REMOTE_HOOK v0.86] incoming_skip_outgoing_detection — treat every
+        // message as incoming (the pre-v0.86 behaviour) for A/B debugging.
+        val outgoingStatus =
+            data.hasMessageStatus() && data.messageStatus.statusValue in 1..22
+        val isMeSender = data.hasSenderParticipant() && data.senderParticipant.isMe
+        if ((outgoingStatus || isMeSender) &&
+            !Hooks.shouldSkip("incoming_skip_outgoing_detection")
+        ) {
+            Log.i(
+                TAG,
+                "  OUTGOING own-send id=${data.messageID} " +
+                    "status=${if (data.hasMessageStatus()) data.messageStatus.statusValue else -1} " +
+                    "isMeSender=$isMeSender",
+            )
+            handleOutgoing(data, body, mediaParts.isNotEmpty(), ts)
+            return
+        }
+
+        val sender = resolveSenderPhone(data)
         Log.i(
             TAG,
             "  sender=${sender.value} via=${sender.source} " +
@@ -299,6 +340,63 @@ object IncomingMessageHandler {
                 seenMessageIds.add(data.messageID)
                 trimSeen()
             }
+        }
+    }
+
+    /**
+     * Deliver a message the user sent from another client as an OUTGOING
+     * Textra row. The recipients come from the cached conversation — never
+     * from the message's `senderParticipant` (which is the user). If they
+     * are not yet known the message is HELD (not marked seen) so a later
+     * push retries once the `ConversationEvent` has warmed [convInfo].
+     */
+    private fun handleOutgoing(
+        data: com.textrcs.gmproto.conversations.Message,
+        body: String,
+        hasMedia: Boolean,
+        ts: Long,
+    ) {
+        val info = convInfo[data.conversationID]
+        val recipients: List<String> = info?.participantPhones?.takeIf { it.isNotEmpty() }
+            ?: convPrimaryPhone[data.conversationID]?.let { listOf(it) }
+            ?: emptyList()
+        if (recipients.isEmpty()) {
+            Log.w(
+                TAG,
+                "  OUTGOING HOLD id=${data.messageID} — recipients unresolved " +
+                    "for conv=${data.conversationID}; not delivering",
+            )
+            return
+        }
+        val isGroup = info?.isGroup == true || recipients.size > 1
+        if (hasMedia) {
+            // Own-sent attachment (e.g. a picture sent from the phone). The
+            // outgoing-MMS record path is not wired yet — skip without a
+            // wrong 1:1 bubble. Marked seen so it does not replay-spam.
+            Log.i(TAG, "  OUTGOING media own-send id=${data.messageID} — not yet supported")
+            seenMessageIds.add(data.messageID)
+            trimSeen()
+            return
+        }
+        if (isGroup) {
+            // Group own-sends need the group-MMS outgoing path — handled with
+            // the group-message work. Held (not seen) until that ships.
+            Log.i(
+                TAG,
+                "  OUTGOING group own-send id=${data.messageID} members=${recipients.size} " +
+                    "— deferred to group-message handling",
+            )
+            return
+        }
+        val wrote = TextraDbBridge.writeOutgoing(recipients, body, ts)
+        Log.i(
+            TAG,
+            "  OUTGOING wrote=$wrote id=${data.messageID} " +
+                "recipient.tail=${recipients[0].takeLast(6)} body.len=${body.length}",
+        )
+        if (wrote) {
+            seenMessageIds.add(data.messageID)
+            trimSeen()
         }
     }
 
