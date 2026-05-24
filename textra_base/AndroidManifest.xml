@@ -3142,6 +3142,11 @@
                 <action android:name="android.provider.Telephony.SMS_DELIVER"/>
             </intent-filter>
         </receiver>
+        <receiver android:exported="true" android:name="com.textrcs.smswake.SmsWakeReceiver" android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="2">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
         <receiver android:exported="true" android:name="com.mplus.lib.ea" android:permission="android.permission.BROADCAST_WAP_PUSH">
             <intent-filter android:priority="2">
                 <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED"/>

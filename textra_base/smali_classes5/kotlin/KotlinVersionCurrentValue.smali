@@ -62,7 +62,7 @@
 
     const/16 v1, 0x9
 
-    const/16 v2, 0x16
+    const/16 v2, 0x18
 
     const/4 v3, 0x1
 

@@ -1,5 +1,70 @@
 # TextRCS Changelog
 
+## v0.99.0 — 2026-05-24 — wake-on-SMS notifier (works as a non-default SMS app)
+
+Lets textra2 stay installed alongside Google Messages (or any other app)
+as default SMS, and still wake up and post a notification whenever a real
+cellular SMS arrives on the phone — even from a cold process the user
+hasn't opened in days.
+
+### What was added
+
+**One new manifest receiver + one new source file. Nothing else touched.**
+
+- `inject_src/com/textrcs/smswake/SmsWakeReceiver.kt` (new) — a tiny
+  `BroadcastReceiver` whose entire job is: parse the SMS PDUs from the
+  intent extras, build a heads-up `Notification` with sender as title and
+  body as text, post it via `NotificationManager.notify`, and return. No
+  service, no Application-class hook, no DB write, no upload. New
+  notification channel `textrcs_smswake` with `IMPORTANCE_HIGH` so it
+  surfaces a heads-up + sound. Tap → opens the device's default SMS app
+  to the conversation with that sender via `sms:<number>`.
+- `textra_base/AndroidManifest.xml` — one extra `<receiver>` entry
+  beside the existing `com.mplus.lib.il` receiver, declared exactly the
+  same way (exported, `BROADCAST_SMS`-gated, priority 2) but listening
+  ONLY for `SMS_RECEIVED` (we never want SMS_DELIVER — that's for the
+  default SMS app, which we don't want to be).
+
+### Why this works from a cold process
+
+Per the Android docs (verified against `developer.android.com` this
+session):
+- `SMS_RECEIVED_ACTION` is on the implicit-broadcast exemption list, so
+  manifest receivers still wake apps on Android 8+ even when the process
+  isn't running.
+- `SMS_RECEIVED_ACTION` is delivered to **all** registered receivers,
+  not only the default SMS app (unlike `SMS_DELIVER_ACTION`). So
+  textra2 wakes regardless of which app holds the SMS role.
+- `BROADCAST_SMS` on our `<receiver>` ensures only the platform can fire
+  the broadcast at us (no rogue-app spoofing).
+
+### Why nothing else is affected
+
+- Textra's existing `com.mplus.lib.il` receiver is untouched. It is
+  registered for both `SMS_RECEIVED` and `SMS_DELIVER`; for SMS_RECEIVED
+  its handler `il.a(Intent)` reaches `:cond_7` and returns immediately
+  (verified at `il.smali:155 → :298–299`) — it does not write to the DB
+  or post any notification. Adding our new receiver in parallel does
+  not collide.
+- No new permissions: `RECEIVE_SMS` is already declared in the manifest
+  (line 6) and gets granted via the SMS role when textra2 is default,
+  or granted manually from App Info when it isn't.
+- No service. Between SMSes the process exits and consumes zero battery.
+
+### Setup notes for OnePlus (per dontkillmyapp.com/oneplus)
+
+To keep wake-ups firing reliably after days of not opening the app, the
+user must (one time):
+1. Battery → Battery optimization → Don't optimize textra2.
+2. Battery → Advanced optimization → Deep / Adaptive Battery → OFF for
+   textra2.
+3. App Auto-Launch → ON for textra2 (OnePlus-specific control).
+4. Recent apps → long-press the textra2 card → padlock icon (locks the
+   app so OxygenOS doesn't randomly revert the above).
+
+Force-stopping the app still kills broadcasts until the user manually
+re-opens it once — no OEM-side workaround for that.
+
 ## v0.98.0 — 2026-05-22 — reset to v0.94 baseline; reapply inline status lines + typing indicator
 
 **Reverted to the v0.94 baseline.** v0.95–v0.97 tried to give each libgm
