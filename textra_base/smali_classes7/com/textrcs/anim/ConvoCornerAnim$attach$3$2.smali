@@ -53,7 +53,7 @@
 
     iput-object p2, p0, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;->$window:Landroid/view/Window;
 
-    .line 293
+    .line 280
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
@@ -62,21 +62,21 @@
 .method private final cleanup()V
     .registers 4
 
-    .line 297
+    .line 284
     iget-object v0, p0, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;->$decor:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 298
+    .line 285
     iget-object v0, p0, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;->$decor:Landroid/view/View;
 
     sget-object v2, Landroid/view/ViewOutlineProvider;->BACKGROUND:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 299
+    .line 286
     :try_start_d
     iget-object v0, p0, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;->$window:Landroid/view/Window;
 
@@ -89,7 +89,7 @@
     :catchall_13
     move-exception v0
 
-    .line 300
+    .line 287
     :goto_14
     return-void
 .end method
@@ -104,7 +104,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 302
+    .line 289
     invoke-direct {p0}, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;->cleanup()V
 
     return-void
@@ -118,7 +118,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 301
+    .line 288
     invoke-direct {p0}, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;->cleanup()V
 
     return-void

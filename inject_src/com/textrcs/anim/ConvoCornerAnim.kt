@@ -238,20 +238,7 @@ object ConvoCornerAnim {
         val state = floatArrayOf(radiusPx)
         decor.outlineProvider = object : ViewOutlineProvider() {
             override fun getOutline(view: View, outline: Outline) {
-                val r = state[0]
-                // iOS-style squircle on Android 13+ — Outline.canClip()
-                // accepts arbitrary paths only on API 33+; below that
-                // clipToOutline silently no-ops on a non-rect path, so
-                // fall back to the plain quarter-circle round-rect.
-                if (r > 0f && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
-                    && view.width > 0 && view.height > 0) {
-                    @Suppress("DEPRECATION") // setConvexPath available API 21+; behaves identically to setPath on 30+
-                    outline.setConvexPath(
-                        Squircle.buildPath(view.width.toFloat(), view.height.toFloat(), r)
-                    )
-                } else {
-                    outline.setRoundRect(0, 0, view.width, view.height, r)
-                }
+                outline.setRoundRect(0, 0, view.width, view.height, state[0])
             }
         }
         decor.clipToOutline = true
@@ -325,20 +312,7 @@ object ConvoCornerAnim {
         val state = floatArrayOf(radiusPx)
         decor.outlineProvider = object : ViewOutlineProvider() {
             override fun getOutline(view: View, outline: Outline) {
-                val r = state[0]
-                // iOS-style squircle on Android 13+ — Outline.canClip()
-                // accepts arbitrary paths only on API 33+; below that
-                // clipToOutline silently no-ops on a non-rect path, so
-                // fall back to the plain quarter-circle round-rect.
-                if (r > 0f && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
-                    && view.width > 0 && view.height > 0) {
-                    @Suppress("DEPRECATION") // setConvexPath available API 21+; behaves identically to setPath on 30+
-                    outline.setConvexPath(
-                        Squircle.buildPath(view.width.toFloat(), view.height.toFloat(), r)
-                    )
-                } else {
-                    outline.setRoundRect(0, 0, view.width, view.height, r)
-                }
+                outline.setRoundRect(0, 0, view.width, view.height, state[0])
             }
         }
         decor.clipToOutline = true

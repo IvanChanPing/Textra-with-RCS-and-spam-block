@@ -57,7 +57,7 @@
 
 # virtual methods
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .registers 12
+    .registers 10
     .param p1, "view"    # Landroid/view/View;
     .param p2, "outline"    # Landroid/graphics/Outline;
 
@@ -70,103 +70,30 @@
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 241
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result v4
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
     iget-object v0, p0, Lcom/textrcs/anim/ConvoCornerAnim$attach$1;->$state:[F
 
     const/4 v1, 0x0
 
-    aget v5, v0, v1
+    aget v6, v0, v1
 
-    .line 246
-    .local v5, "r":F
-    const/4 v0, 0x0
-
-    cmpl-float v0, v5, v0
-
-    if-lez v0, :cond_40
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x21
-
-    if-lt v0, v1, :cond_40
-
-    .line 247
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    if-lez v0, :cond_40
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    if-lez v0, :cond_40
-
-    .line 249
-    nop
-
-    .line 250
-    sget-object v2, Lcom/textrcs/anim/Squircle;->INSTANCE:Lcom/textrcs/anim/Squircle;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    int-to-float v3, v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    int-to-float v4, v0
-
-    const/16 v7, 0x8
-
-    const/4 v8, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-static/range {v2 .. v8}, Lcom/textrcs/anim/Squircle;->buildPath$default(Lcom/textrcs/anim/Squircle;FFFFILjava/lang/Object;)Landroid/graphics/Path;
-
-    move-result-object v0
-
-    .line 249
-    invoke-virtual {p2, v0}, Landroid/graphics/Outline;->setConvexPath(Landroid/graphics/Path;)V
-
-    move-object v2, p2
-
-    goto :goto_50
-
-    .line 253
-    :cond_40
-    move v7, v5
-
-    .end local v5    # "r":F
-    .local v7, "r":F
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v5
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v6
+    const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
-
-    move-object v2, p2
+    move-object v1, p2
 
     .end local p2    # "outline":Landroid/graphics/Outline;
-    .local v2, "outline":Landroid/graphics/Outline;
-    invoke-virtual/range {v2 .. v7}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    .local v1, "outline":Landroid/graphics/Outline;
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
-    move v5, v7
-
-    .line 255
-    .end local v7    # "r":F
-    .restart local v5    # "r":F
-    :goto_50
+    .line 242
     return-void
 .end method
