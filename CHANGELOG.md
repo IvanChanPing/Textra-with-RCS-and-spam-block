@@ -1,5 +1,67 @@
 # TextRCS Changelog
 
+## v1.00.0 — 2026-05-27 — iOS-squircle corners on the ConvoActivity slide
+
+ConvoActivity's slide-in / slide-out transition now clips its window to
+an **iOS-style continuous-curvature corner** ("squircle") instead of a
+plain quarter-circle round-rect. All four corners use the same uniform
+radius (already true before this change); only the *curve* changes from
+a circular arc to the Figma / iOS smooth-corners profile, giving a
+visibly softer corner without changing the radius.
+
+### What was added
+
+- **`inject_src/com/textrcs/anim/Squircle.kt`** (new) — builds the
+  iOS-squircle Path. Implements the canonical formula from Figma's
+  published article "Desperately seeking squircles" (Daniel Furse,
+  2018), as ported by `phamfoo/figma-squircle` (`src/draw.ts` +
+  `src/distribute.ts`). Each corner is two transition cubic Béziers
+  around a small circular arc — the transitions give G2 (curvature)
+  continuity at the join with the straight edges, which is what
+  makes the corner read as iOS-smooth. Default smoothing factor 0.6
+  matches iOS app-icon / window corners. The SVG path data is parsed
+  via `androidx.core.graphics.PathParser.createPathFromPathData`
+  (verified present in `textra_base/smali/androidx/core/graphics/
+  PathParser.smali`).
+
+### What was changed
+
+- **`inject_src/com/textrcs/anim/ConvoCornerAnim.kt`** — `attach()` and
+  `attachClose()`'s `ViewOutlineProvider.getOutline` now switches on
+  API level:
+  - **Android 13+ (API 33+, the user's OnePlus)** — calls
+    `outline.setConvexPath(Squircle.buildPath(w, h, r))`. Verified
+    from `developer.android.com/reference/android/graphics/Outline`
+    that `canClip()` returns true for arbitrary Outline shapes only
+    on API 33+, so this is the threshold where `clipToOutline = true`
+    will actually clip to the squircle path (rather than silently
+    no-opping).
+  - **Android 8.1 – 12 (API 27 – 32)** — falls back to the existing
+    `outline.setRoundRect(0, 0, w, h, r)`. Below API 33 the squircle
+    path would be accepted by `setConvexPath` (a squircle is convex)
+    but `canClip()` would return false and the visible corners would
+    render as a hard rectangle — so we keep the prior round-rect for
+    those devices. The radius value, hold timings, square-off ramp,
+    parallax under, dim-behind — all unchanged.
+
+### What was NOT touched
+
+- No new Activity, no new manifest entry, no new permissions.
+- No service, no background work, no doze opt-out.
+- Textra's existing UI activities (ConvoActivity, QuickConvoActivity,
+  Class0Activity, BubbleActivity) are untouched.
+- The radius value still comes from
+  `display.getRoundedCorner()` on API 31+ (matches the device's own
+  physical screen corner radius), fallback 28dp.
+
+### Revert path
+
+If the new corner shape looks worse, revert by:
+- `git revert HEAD` (this commit) — undoes the manifest version bump
+  and Squircle file.
+- Or: delete `inject_src/com/textrcs/anim/Squircle.kt` and revert
+  `ConvoCornerAnim.kt` to the prior single-line `setRoundRect` call.
+
 ## v0.99.0 — 2026-05-24 — wake-on-SMS notifier (works as a non-default SMS app)
 
 Lets textra2 stay installed alongside Google Messages (or any other app)

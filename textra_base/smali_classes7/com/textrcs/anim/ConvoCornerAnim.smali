@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nConvoCornerAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConvoCornerAnim.kt\ncom/textrcs/anim/ConvoCornerAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,339:1\n1#2:340\n*E\n"
+    value = "SMAP\nConvoCornerAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConvoCornerAnim.kt\ncom/textrcs/anim/ConvoCornerAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,365:1\n1#2:366\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -348,10 +348,10 @@
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 244
+    .line 257
     invoke-virtual {v5, v7}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 245
+    .line 258
     :try_start_41
     invoke-virtual {v2, v7}, Landroid/view/Window;->setClipToOutline(Z)V
     :try_end_44
@@ -362,7 +362,7 @@
     :catchall_45
     move-exception v0
 
-    .line 249
+    .line 262
     :goto_46
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -380,7 +380,7 @@
 
     goto :goto_65
 
-    .line 250
+    .line 263
     :cond_53
     sget-object v10, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -400,23 +400,23 @@
 
     double-to-float v0, v10
 
-    .line 249
+    .line 262
     :goto_65
     nop
 
-    .line 251
+    .line 264
     .local v0, "dimMax":F
     cmpl-float v10, v0, v3
 
     if-lez v10, :cond_97
 
-    .line 252
+    .line 265
     invoke-virtual {v2, v4}, Landroid/view/Window;->addFlags(I)V
 
-    .line 253
+    .line 266
     invoke-virtual {v2, v3}, Landroid/view/Window;->setDimAmount(F)V
 
-    .line 254
+    .line 267
     new-array v10, v4, [F
 
     fill-array-data v10, :array_f0
@@ -428,13 +428,13 @@
     .local v10, "$this$attach_u24lambda_u244":Landroid/animation/ValueAnimator;
     const/4 v11, 0x0
 
-    .line 255
+    .line 268
     .local v11, "$i$a$-apply-ConvoCornerAnim$attach$2":I
     const-wide/16 v12, 0x15e
 
     invoke-virtual {v10, v12, v13}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 256
+    .line 269
     sget-object v12, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v12}, Lcom/textrcs/anim/ConvoCornerAnim;->ease()Landroid/view/animation/PathInterpolator;
@@ -445,31 +445,31 @@
 
     invoke-virtual {v10, v12}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 257
+    .line 270
     new-instance v12, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda1;
 
     invoke-direct {v12, v2, v0}, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda1;-><init>(Landroid/view/Window;F)V
 
     invoke-virtual {v10, v12}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 258
+    .line 271
     invoke-virtual {v10}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 259
+    .line 272
     nop
 
-    .line 254
+    .line 267
     .end local v10    # "$this$attach_u24lambda_u244":Landroid/animation/ValueAnimator;
     .end local v11    # "$i$a$-apply-ConvoCornerAnim$attach$2":I
     nop
 
-    .line 264
+    .line 277
     :cond_97
     sget-object v10, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v10, v1, v7}, Lcom/textrcs/anim/ConvoCornerAnim;->parallaxUnder(Landroid/app/Activity;Z)V
 
-    .line 270
+    .line 283
     sget-object v11, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/16 v16, 0x4
@@ -486,7 +486,7 @@
 
     move-result-wide v10
 
-    .line 271
+    .line 284
     .local v10, "hold":J
     sget-object v12, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -504,7 +504,7 @@
 
     move-result-wide v12
 
-    .line 272
+    .line 285
     .local v12, "square":J
     new-array v4, v4, [F
 
@@ -519,14 +519,14 @@
     .local v3, "$this$attach_u24lambda_u246":Landroid/animation/ValueAnimator;
     const/4 v4, 0x0
 
-    .line 273
+    .line 286
     .local v4, "$i$a$-apply-ConvoCornerAnim$attach$3":I
     invoke-virtual {v3, v12, v13}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 274
+    .line 287
     invoke-virtual {v3, v10, v11}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 275
+    .line 288
     sget-object v7, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v7}, Lcom/textrcs/anim/ConvoCornerAnim;->ease()Landroid/view/animation/PathInterpolator;
@@ -537,14 +537,14 @@
 
     invoke-virtual {v3, v7}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 276
+    .line 289
     new-instance v7, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda2;
 
     invoke-direct {v7, v9, v5}, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda2;-><init>([FLandroid/view/View;)V
 
     invoke-virtual {v3, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 280
+    .line 293
     new-instance v7, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;
 
     invoke-direct {v7, v5, v2}, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;-><init>(Landroid/view/View;Landroid/view/Window;)V
@@ -553,18 +553,18 @@
 
     invoke-virtual {v3, v7}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 291
+    .line 304
     invoke-virtual {v3}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 292
+    .line 305
     nop
 
-    .line 272
+    .line 285
     .end local v3    # "$this$attach_u24lambda_u246":Landroid/animation/ValueAnimator;
     .end local v4    # "$i$a$-apply-ConvoCornerAnim$attach$3":I
     nop
 
-    .line 293
+    .line 306
     return-void
 
     nop
@@ -590,7 +590,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 257
+    .line 270
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -630,7 +630,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 277
+    .line 290
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -649,10 +649,10 @@
 
     aput v0, p0, v1
 
-    .line 278
+    .line 291
     invoke-virtual {p1}, Landroid/view/View;->invalidateOutline()V
 
-    .line 279
+    .line 292
     return-void
 .end method
 
@@ -666,10 +666,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 305
+    .line 318
     nop
 
-    .line 306
+    .line 319
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v1, "convo_corner_anim_disable"
@@ -686,7 +686,7 @@
 
     return-void
 
-    .line 307
+    .line 320
     :cond_13
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -699,7 +699,7 @@
     :cond_1a
     move-object v1, v0
 
-    .line 308
+    .line 321
     .local v1, "window":Landroid/view/Window;
     invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -711,7 +711,7 @@
 
     move-object v4, v0
 
-    .line 309
+    .line 322
     .local v4, "decor":Landroid/view/View;
     sget-object v0, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
@@ -719,7 +719,7 @@
 
     move-result v5
 
-    .line 312
+    .line 325
     .local v5, "radiusPx":F
     const/4 v0, 0x1
 
@@ -729,7 +729,7 @@
 
     aput v5, v6, v7
 
-    .line 313
+    .line 326
     .local v6, "state":[F
     new-instance v8, Lcom/textrcs/anim/ConvoCornerAnim$attachClose$1;
 
@@ -739,10 +739,10 @@
 
     invoke-virtual {v4, v8}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 318
+    .line 344
     invoke-virtual {v4, v0}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 319
+    .line 345
     :try_start_3e
     invoke-virtual {v1, v0}, Landroid/view/Window;->setClipToOutline(Z)V
     :try_end_41
@@ -753,11 +753,11 @@
     :catchall_42
     move-exception v0
 
-    .line 320
+    .line 346
     :goto_43
     invoke-virtual {v4}, Landroid/view/View;->invalidateOutline()V
 
-    .line 322
+    .line 348
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v8, "convo_dim_behind_disable"
@@ -774,7 +774,7 @@
 
     goto :goto_64
 
-    .line 323
+    .line 349
     :cond_53
     sget-object v8, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -794,23 +794,23 @@
 
     double-to-float v0, v8
 
-    .line 322
+    .line 348
     :goto_64
     nop
 
-    .line 324
+    .line 350
     .local v0, "dimMax":F
     cmpl-float v2, v0, v2
 
     if-lez v2, :cond_96
 
-    .line 325
+    .line 351
     invoke-virtual {v1, v3}, Landroid/view/Window;->addFlags(I)V
 
-    .line 326
+    .line 352
     invoke-virtual {v1, v0}, Landroid/view/Window;->setDimAmount(F)V
 
-    .line 327
+    .line 353
     new-array v2, v3, [F
 
     fill-array-data v2, :array_9c
@@ -822,13 +822,13 @@
     .local v2, "$this$attachClose_u24lambda_u248":Landroid/animation/ValueAnimator;
     const/4 v3, 0x0
 
-    .line 328
+    .line 354
     .local v3, "$i$a$-apply-ConvoCornerAnim$attachClose$2":I
     const-wide/16 v8, 0x15e
 
     invoke-virtual {v2, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 329
+    .line 355
     sget-object v8, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v8}, Lcom/textrcs/anim/ConvoCornerAnim;->ease()Landroid/view/animation/PathInterpolator;
@@ -839,31 +839,31 @@
 
     invoke-virtual {v2, v8}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 330
+    .line 356
     new-instance v8, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda3;
 
     invoke-direct {v8, v1, v0}, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda3;-><init>(Landroid/view/Window;F)V
 
     invoke-virtual {v2, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 331
+    .line 357
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 332
+    .line 358
     nop
 
-    .line 327
+    .line 353
     .end local v2    # "$this$attachClose_u24lambda_u248":Landroid/animation/ValueAnimator;
     .end local v3    # "$i$a$-apply-ConvoCornerAnim$attachClose$2":I
     nop
 
-    .line 336
+    .line 362
     :cond_96
     sget-object v2, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v2, p0, v7}, Lcom/textrcs/anim/ConvoCornerAnim;->parallaxUnder(Landroid/app/Activity;Z)V
 
-    .line 337
+    .line 363
     return-void
 
     :array_9c
@@ -887,7 +887,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 330
+    .line 356
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -996,7 +996,7 @@
 
     if-eqz v0, :cond_83
 
-    .line 340
+    .line 366
     .local v0, "it":Landroid/app/Activity;
     const/4 v1, 0x0
 

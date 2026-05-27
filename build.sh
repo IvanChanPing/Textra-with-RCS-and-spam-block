@@ -40,6 +40,12 @@ JNA_JAR="$PROJ/build-deps/jna-5.13.0.jar"
 # kotlinx-coroutines — UniFFI Kotlin uses suspend fns for async Rust exports.
 COROUTINES_CORE="$PROJ/build-deps/kotlinx-coroutines-core-jvm-1.7.3.jar"
 COROUTINES_ANDROID="$PROJ/build-deps/kotlinx-coroutines-android-1.7.3.jar"
+# androidx.core — compile-only; classes are already present in textra_base's
+# smali (verified at smali/androidx/core/graphics/PathParser.smali). We need
+# this for the kotlinc classpath so Squircle.kt can resolve
+# androidx.core.graphics.PathParser. NOT dexed into our slot — the host APK
+# already provides it at runtime.
+ANDROIDX_CORE="$PROJ/build-deps/androidx-core-1.13.1.jar"
 
 KEYSTORE="$PROJ/textrcs.keystore"
 KS_PASS="textrcs-pass"
@@ -77,7 +83,7 @@ else
   java -cp "$KOTLIN_COMPILER:$KOTLIN_STDLIB:$TROVE4J:$JB_ANNOTATIONS" \
     org.jetbrains.kotlin.cli.jvm.K2JVMCompiler \
     $KT_SOURCES \
-    -classpath "$ANDROID_JAR:$KOTLIN_STDLIB:$PROTOBUF_JAVA:$JNA_JAR:$COROUTINES_CORE:$COROUTINES_ANDROID:${PROTO_JAR:-}" \
+    -classpath "$ANDROID_JAR:$KOTLIN_STDLIB:$PROTOBUF_JAVA:$JNA_JAR:$COROUTINES_CORE:$COROUTINES_ANDROID:$ANDROIDX_CORE:${PROTO_JAR:-}" \
     -no-stdlib \
     -d "$SCRATCH/app.jar" \
     -jvm-target 1.8 \
