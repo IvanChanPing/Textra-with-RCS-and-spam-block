@@ -41,6 +41,8 @@
 
 .field public O:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
 
+.field public c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
 .field public P:Ljava/util/concurrent/ConcurrentHashMap;
 
 .field public Q:Z
@@ -1092,6 +1094,43 @@
 
     invoke-virtual {v1, v7}, Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
+    iget-object v1, v0, Lcom/mplus/lib/W6/a;->i:Lcom/mplus/lib/r4/n;
+
+    invoke-virtual {v1}, Lcom/mplus/lib/r4/n;->u()Z
+
+    move-result v1
+
+    if-nez v1, :cond_meet_setup
+
+    iget-object v1, v0, Lcom/mplus/lib/v6/g;->r:Lcom/mplus/lib/x5/z;
+
+    const v7, 0x7f0a0525
+
+    invoke-interface {v1, v7}, Lcom/mplus/lib/x5/y;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
+    iput-object v1, v0, Lcom/mplus/lib/v6/g;->c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
+    invoke-virtual {v1, v4}, Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;->setViewVisible(Z)V
+
+    iget-object v1, v0, Lcom/mplus/lib/v6/g;->c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v1, v0, Lcom/mplus/lib/v6/g;->c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
+    const v7, 0x7f080154
+
+    invoke-static {v3, v7}, Lcom/mplus/lib/z7/h;->n(Landroid/content/Context;I)Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v7}, Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;->setIcon(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_meet_setup
     :cond_4
     new-instance v1, Lcom/mplus/lib/x7/f;
 
@@ -1705,6 +1744,29 @@
 
     return-void
 
+    iget-object v5, v0, Lcom/mplus/lib/v6/g;->c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
+    if-ne v1, v5, :cond_meet_dispatch
+
+    iget-object v2, v0, Lcom/mplus/lib/W6/a;->i:Lcom/mplus/lib/r4/n;
+
+    invoke-virtual {v2, v9}, Lcom/mplus/lib/r4/n;->r(I)Lcom/mplus/lib/r4/l;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/mplus/lib/z7/A;->f(Lcom/mplus/lib/r4/l;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v1, v0, Lcom/mplus/lib/G5/a;->c:Lcom/mplus/lib/x5/l;
+
+    invoke-static {v1, v2}, Lcom/textrcs/meet/MeetCall;->startVideo(Landroid/app/Activity;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lcom/mplus/lib/v6/g;->p0()V
+
+    return-void
+
+    :cond_meet_dispatch
     :cond_1a
     iget-object v5, v0, Lcom/mplus/lib/v6/g;->O:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
 
@@ -2595,6 +2657,13 @@
 
     invoke-interface {v1, v8}, Lcom/mplus/lib/x5/y;->setTranslationY(F)V
 
+    iget-object v15, v0, Lcom/mplus/lib/v6/g;->c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
+    if-eqz v15, :cond_meet_anim1
+
+    invoke-interface {v15, v8}, Lcom/mplus/lib/x5/y;->setTranslationY(F)V
+
+    :cond_meet_anim1
     const-wide/16 v8, 0x0
 
     const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
@@ -2611,6 +2680,13 @@
 
     invoke-static {v1, v8, v9}, Lcom/mplus/lib/z7/N;->C(Lcom/mplus/lib/x5/y;FI)V
 
+    iget-object v15, v0, Lcom/mplus/lib/v6/g;->c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
+
+    if-eqz v15, :cond_meet_anim2
+
+    invoke-static {v15, v8, v9}, Lcom/mplus/lib/z7/N;->C(Lcom/mplus/lib/x5/y;FI)V
+
+    :cond_meet_anim2
     :goto_5
     iget-object v1, v0, Lcom/mplus/lib/v6/g;->M:Lcom/mplus/lib/x7/f;
 

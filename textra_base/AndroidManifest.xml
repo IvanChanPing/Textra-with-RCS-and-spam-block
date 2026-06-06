@@ -71,6 +71,7 @@
         <package android:name="com.pushbullet.android"/>
         <package android:name="com.getpebble.android.basalt"/>
         <package android:name="com.getpebble.android"/>
+        <package android:name="com.google.android.apps.tachyon"/>
         <intent>
             <action android:name="androidx.browser.customtabs.CustomTabsService"/>
         </intent>

@@ -1,5 +1,139 @@
 # TextRCS Changelog
 
+## v1.01.0 — 2026-06-06 — Google Meet video-call button on the conversation-info screen
+
+Adds a second round green FAB next to the existing phone-call FAB on the
+conversation-info overlay (the dropdown opened by the chevron in a
+conversation). Tapping it starts a **Google Meet video call** to the
+conversation's number — the same hand-off Google Messages / Google Phone use.
+
+**How it works (verified from decompiled Messages + Phone + Meet, build
+20260601):** fires `com.google.android.apps.tachyon.action.CALL` with
+`setPackage("com.google.android.apps.tachyon")`, data `tel:<number>`, extra
+`IS_AUDIO_ONLY=false` (video) + `DUOKIT_VERSION="0.0.1"`, launched via
+`startActivityForResult` (NOT `startActivity`/NEW_TASK — Meet's
+`ServiceAuthorizer` rejects the call if `getCallingPackage()` is null; our
+app already holds `CALL_PHONE`, which satisfies it). Falls back to the Play
+Store if Meet isn't installed.
+
+### Files
+- `inject_src/com/textrcs/meet/MeetCall.kt` — builds + launches the intent.
+- `textra_base/res/layout/convo_info.xml` — new `@id/meetVideoButton` FAB
+  (green, video icon, 72dp, marginRight 88dp = left of the phone FAB at 8dp).
+- `textra_base/res/values/public.xml` — id `meetVideoButton = 0x7f0a0525`.
+- `textra_base/smali_classes2/com/mplus/lib/v6/g.smali` — new field `c0`;
+  setup wires the FAB (icon `ic_videocam_black_24dp`, shown only for a
+  non-group callable contact); `onClick` routes it to `MeetCall.startVideo`;
+  `onSpringUpdate` mirrors the phone FAB's slide-in + fade entrance onto it
+  (free reg v15) so both animate identically.
+- `textra_base/AndroidManifest.xml` — added `com.google.android.apps.tachyon`
+  to `<queries>` (Android 11+ package visibility). `CALL_PHONE` already present.
+
+### Known runtime unknown (to confirm on a signed-in phone)
+Meet's post-March-2026 build has a server flag (`legacy_vs_meetcall`) that may
+route a `tel:` CALL to a "start a meeting" sheet instead of ringing 1:1. The
+manifest still accepts the intent; the actual routing must be observed on a
+real signed-in device.
+
+## v1.00.0 — 2026-05-28 — Quick Reply popup: iOS-style 22dp rounded corners
+
+### Take 2 (afternoon) — the working approach
+
+First attempt (`setClipToOutline(true)` + `<shape><corners>` bg) produced
+essentially square corners regardless of radius. Root cause: the popup
+card view (`R.id.contentControlledHeight`) is a `BaseFrameLayout` which
+overrides `dispatchDraw(Canvas)` to bypass Android's standard outline
+mechanism. The bg drawing goes through a custom `setBackgroundDrawingDelegate`
+path, and children are clipped via the class's own `setClipPath(Path)`
+method, NOT via `View.setClipToOutline`. Standard outline-clip silently
+no-ops on this view.
+
+Fixed by adding `inject_src/com/textrcs/ui/QuickReplyCorners.kt` — a
+Kotlin helper that takes a `View?`, reflects `setClipPath(Path)` on it
+(BaseFrameLayout isn't on the kotlinc classpath for inject_src), and on
+every layout change builds a rounded-rect Path at 22dp radius and calls
+setClipPath. The smali in QuickConvoActivity.onCreate now calls
+`QuickReplyCorners.apply(view)` instead of `setClipToOutline(true)`,
+inside the same Hook guard.
+
+### Original entry (now superseded — `<shape><corners>` bg approach didn't work)
+
+The pop-up that appears when you tap a Textra notification (the floating
+"Reply to <contact>" card) now has 16dp rounded corners on all four
+outer edges — blue actionbar header included — matching iOS notification
+card styling. Disabled at runtime via the `quick_reply_round_corners`
+hook.
+
+### What changed (three files, ~15 lines)
+
+- `textra_base/res/drawable/quick_reply_card_bg.xml` (new) — `<shape>`
+  rectangle, `<solid android:color="?attr/screen_background"/>`,
+  `<corners android:radius="16dp"/>`. Theme attr keeps light/dark/black
+  theme support working without extra drawables.
+- `textra_base/res/values/styles.xml` — added new style
+  `convoContentControlledHeight.QuickReplyRounded` (parent
+  `common_floating_window`, overrides `android:background` to the new
+  drawable). `AppTheme.QuickConvo` repointed to it. **Only the popup
+  theme is touched**; the full ConvoActivity and BubbleActivity keep the
+  square `?screen_background` they had.
+- `textra_base/smali_classes2/com/mplus/lib/ui/quick/QuickConvoActivity.smali`
+  — at the end of `onCreate(Bundle)`, after the existing setup, one
+  Hook-guarded block (~12 smali instructions). Calls
+  `Hooks.shouldSkip("quick_reply_round_corners")`; if false,
+  `findViewById(R.id.contentControlledHeight).setClipToOutline(true)` so
+  the blue actionbar header (which draws its own background edge-to-
+  edge inside the card) clips to the rounded outline instead of poking
+  past the 16dp corners. `android:clipToOutline` is runtime-only on
+  pre-Q — no XML route.
+
+### Why the prior v1.00.0 (squircle-on-ConvoActivity, 39a6604f, reverted
+83509b59) doesn't apply here
+
+That attempt targeted ConvoActivity's slide-in animation and used a
+custom Path-based squircle outline. It "didn't do anything" per user
+report. This change targets a different Activity (QuickConvoActivity
+popup), uses stock `<corners radius>` + `setClipToOutline(true)` (no
+Path math, no API-version branch), and verifies in the built dex
+(`classes2.dex`) that the bytecode landed correctly:
+
+```
+sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+const-string v1, "quick_reply_round_corners"
+invoke-static {}, Lkotlin/collections/MapsKt;->emptyMap()Ljava/util/Map;
+…
+invoke-virtual {v0, v1}, Landroid/view/View;->setClipToOutline(Z)V
+```
+
+aapt2 dump confirms `style/convoContentControlledHeight.QuickReplyRounded`
+sets `android:background → @drawable/quick_reply_card_bg`, and
+`AppTheme.QuickConvo` sets `convoContentControlledHeight → @style/…
+QuickReplyRounded`.
+
+### Hook
+
+`hook_quick_reply_round_corners_json = {"skip": true}` via RemoteConfig
+disables the `setClipToOutline` call (drawable bg stays, blue header
+overflows the corners — back to mid-state). The resource changes
+themselves cannot be Hook-toggled and apply unconditionally.
+
+### Device-verified
+
+APK built and signed (`build/textra2.apk`, 97MB). Installed on
+redroid13-pairip (Android 13 x86_64, localhost:5570). Verified in BOTH
+popup modes:
+
+1. newMessage compose mode (via `am start --ez newMessageMode true`):
+   cropped corners `/tmp/crop_{tl,tr,bl,br}.png` show all 4 corners
+   rounded at 16dp, blue actionbar header clipped to rounded outline.
+
+2. **Incoming-message mode** (the actual Quick Reply popup with contact
+   header — matching the screenshot in the original request): triggered
+   via Settings → Customize Notifications → ▶ play button → tap the
+   resulting heads-up notification body. Cropped corners
+   `/tmp/i2_{tl,tr,bl,br}.png` show the Textra Bot avatar + name in the
+   rounded blue header (top corners), and the white card with "+ Reply
+   to Bot" input row + send arrow in the rounded bottom corners.
+
 ## v0.99.0 — 2026-05-24 — wake-on-SMS notifier (works as a non-default SMS app)
 
 Lets textra2 stay installed alongside Google Messages (or any other app)
