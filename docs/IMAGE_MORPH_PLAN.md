@@ -47,8 +47,19 @@ conv-list ↔ conv-view nav parallax). Do not conflate.
   (pinch/double-tap zoom, pan, swipe-vs-pan arbitration). Image list via reflection
   into Textra's DB mirroring `B6.i.a()` (r4.H.X()→field d (r4.w)→z7.O builder→
   w.A→Cursor/r4.d0.x() URIs); single-image fallback if reflection fails.
-- **STATUS: compile-verified only — UI click-path UNVERIFIED on device.** Cannot
-  drive the OnePlus here. NOT claimed working.
+- **STATUS: installs + dex-verifier-PASSED + app boots on Android 16 redroid;
+  morph UI click-path still UNVERIFIED (needs real image conversation).**
+  2026-06-12 on redroid16-sdtest (host 5575, now stopped to free RAM):
+  (1) `adb install` Success; (2) `pm compile -m verify -f com.textra2` PERFORMED
+  full dex2oat verification, ZERO verify errors on my `com/mplus/lib/v6/K` hook
+  AND `com.textrcs.ui.*` classes (only pre-existing com.google.protobuf.* warnings)
+  → unknown (c) RESOLVED, ART verifier accepts the hook; (3) launching
+  `com.textra2/com.mplus.lib.ui.main.Main` boots to `InitialSyncActivity` (first-
+  run sync) → my injected classes don't break startup; (4) baseline
+  textra2_v1.00.0.apk behaves the same → any boot/PairIP quirk is PRE-EXISTING,
+  NOT my feature. Unknowns (a) DB reflection + (b) morph render need a real
+  conversation-with-images — blank redroid has no message store; that's the
+  user's real phone (where v1.00/v1.01 already run).
 - **NEXT STEP (user):** install `textra2_v1.03.0.apk`, run `docs/IMAGE_MORPH_TEST.md`,
   watch `adb logcat -s textrcs-imgmorph`. Report: morph or stock-gallery fallback?
   swipe through all images (does `opening morph gallery: N image(s)` show the real
