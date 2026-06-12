@@ -69,6 +69,42 @@ conv-list ↔ conv-view nav parallax). Do not conflate.
 - **MOST LIKELY FIX-UP AFTER 1ST RUN:** the DB-reflection (obfuscated r4.H/z7.O/r4.w)
   — if `N image(s)` is wrong/empty, that's where to look (logcat has the stack).
 
+## 2026-06-12 — REAL UI DRIVE: core feature VERIFIED on-screen; swipe bug fixing
+Drove the real UI on redroid (fake MMS image messages via compose+attach+send,
+since send fails w/o carrier but the image-message row is created). VERIFIED ON
+SCREEN (screenshots): tap image → morph opens (ConvoActivity, not fallback) →
+FULLSCREEN image renders (loaded from content://com.textra2/media-body/<id>) →
+double-tap ZOOM works → single-tap DISMISS morphs back → with 2 image messages
+the log shows `loadConvoImageUris: 2 uri(s)` / `opening morph gallery: 2 image(s)`.
+Also verified earlier: fallback to stock GalleryActivity, dex-verify, boot.
+DB-reflection FINAL working recipe: f0 = w.A(O,false) IS an android.database.Cursor
+(via r4.g); per-row image URI = r4.a.d(getLong(0)) [col 0 = MMS part id] — NOT
+f0.x() (f0 has no x()) and NOT iterating (yields r4.j0 message models w/o x()).
+REMAINING BUG: swipe between pages did not change the displayed image (fling not
+triggering page change). FIX (build8, in progress): ZoomImageView now also detects
+a horizontal DRAG past width/4 on ACTION_UP (more reliable than fling velocity)
+→ onSwipe; added `page dir=..` log. NEXT: reinstall build8, swipe, confirm page
+change in logcat + screenshot.
+
+## 2026-06-12 — REAL UI DRIVE on redroid (fake image message) — BUG FOUND+FIXED
+Drove Textra's real UI on redroid16-sdtest: set default-SMS, composed to a fake
+number, attached a pushed image (red), sent it (fails w/o carrier but the MMS
+row + thumbnail render in the thread). Tapped the image:
+- VERIFIED: my smali hook FIRES on a real tap → `tryOpen` runs (logcat
+  `textrcs-imgmorph`). The fallback also works END-TO-END: it declined and the
+  STOCK `gallery.GalleryActivity` opened (no crash, image tap still works).
+- BUG (real, UI-only-catchable): `tryOpen` logged "no thumbnail ImageView with a
+  drawable — fallback to gallery". Old code required the bubble's ImageView to
+  have a non-null `drawable`; Textra's sent-MMS bubble doesn't reliably expose
+  one → morph never fired.
+- FIX (commit pending, rebuild in progress): `findThumbnail`→`findStartView` (no
+  drawable requirement; returns thumbnail ImageView, else first ImageView, else
+  the bubble itself); dropped the `source.drawable ?: return false` gate and
+  `buildSingleOverlay`; gallery is ALWAYS seeded with the tapped URI so it has ≥1
+  image even if the convo-wide DB query is empty. `source` is now a `View`.
+  Added log of uris count + startView class. NEXT: reinstall, re-tap, confirm
+  morph renders + DB reflection count, then stage 2nd/3rd image for swipe.
+
 ## PRE-BUILD RISK PASS (B2 trial v1) — 2026-06-12
 
 1. ASSUMPTIONS:

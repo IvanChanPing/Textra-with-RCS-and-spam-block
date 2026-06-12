@@ -116,9 +116,27 @@ class ZoomImageView(
         if (isZoomed()) imageMatrix = mtx
     }
 
+    private var downX = 0f
+    private var downY = 0f
+
     override fun onTouchEvent(event: MotionEvent): Boolean {
         scaleDetector.onTouchEvent(event)
         gestures.onTouchEvent(event)
+
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -> { downX = event.x; downY = event.y }
+            MotionEvent.ACTION_UP ->
+                // Not zoomed + a mostly-horizontal drag past the threshold = page.
+                // (Drag-distance is more reliable than fling velocity for both
+                // slow user swipes and scripted `input swipe`.)
+                if (!isZoomed() && !scaleDetector.isInProgress) {
+                    val dx = event.x - downX
+                    val dy = event.y - downY
+                    if (abs(dx) > width / 4f && abs(dx) > abs(dy)) {
+                        onSwipe(if (dx < 0) 1 else -1)   // swipe left = next
+                    }
+                }
+        }
 
         // Pan while zoomed and not mid-pinch.
         if (isZoomed() && !scaleDetector.isInProgress) {

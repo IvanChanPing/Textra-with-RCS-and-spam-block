@@ -67,6 +67,7 @@ class SwipeImageGallery(
     private fun page(dir: Int) {
         if (animating) return
         val next = index + dir
+        Log.i(logTag, "page dir=$dir index=$index->$next of ${uris.size}")
         if (next < 0 || next >= uris.size) return
         animating = true
         val w = width.takeIf { it > 0 }?.toFloat() ?: 1080f
@@ -89,6 +90,7 @@ class SwipeImageGallery(
             val bmp = try { decodeSampled(uri) } catch (t: Throwable) {
                 Log.e(logTag, "decode failed for $uri", t); null
             }
+            Log.i(logTag, "load[$i] uri=$uri bmp=${bmp != null} ${bmp?.width}x${bmp?.height}")
             main.post { if (i == index) photoPage.setImageBitmap(bmp) }
         }
     }

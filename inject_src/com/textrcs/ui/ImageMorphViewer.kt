@@ -99,28 +99,35 @@ object ImageMorphViewer {
             val activity = findActivity(context) ?: run {
                 Log.i(TAG, "no host Activity — fallback to gallery"); return false
             }
-            val source = findThumbnail(activity, anchor) ?: run {
-                Log.i(TAG, "no thumbnail ImageView with a drawable — fallback to gallery"); return false
-            }
-            val drawable = source.drawable ?: return false
+            // Morph start view = the thumbnail if we can find it, else the bubble
+            // itself. We do NOT require a non-null drawable — Textra's sent-MMS
+            // bubble doesn't reliably expose one, and the fullscreen image is
+            // loaded from the URI anyway, so the morph runs off the view's bounds.
+            val source: View = findStartView(activity, anchor)
 
             val content = activity.findViewById<ViewGroup>(android.R.id.content) ?: return false
             if (content.findViewWithTag<View?>(OVERLAY_TAG) != null) return true  // already open
 
-            val uris = loadConvoImageUris(argConvoId)
             val tappedUri = reflectRowUri(tappedRow)
+            val convoUris = loadConvoImageUris(argConvoId)
+            // Always include the tapped image so the gallery has at least it,
+            // even if the convo-wide DB query yields nothing.
+            val uris = when {
+                convoUris.isNotEmpty() -> convoUris
+                tappedUri != null -> listOf(tappedUri)
+                else -> emptyList()
+            }
+            if (uris.isEmpty()) {
+                Log.i(TAG, "no image URIs (convo list empty + no tapped URI) — fallback to gallery")
+                return false
+            }
             val startIndex = (if (tappedUri != null) uris.indexOf(tappedUri) else -1)
                 .let { if (it >= 0) it else 0 }
-            Log.i(TAG, "opening morph gallery: ${uris.size} image(s), start=$startIndex, tapped=$tappedUri")
+            Log.i(TAG, "opening morph gallery: ${uris.size} image(s), start=$startIndex, tapped=$tappedUri, startView=${source.javaClass.simpleName}")
 
             lateinit var overlay: FrameLayout
             val onDismiss = { dismiss(content, overlay, source) }
-            overlay = if (uris.isNotEmpty()) {
-                SwipeImageGallery(activity, uris, startIndex, onDismiss)
-            } else {
-                Log.i(TAG, "image list empty/unavailable — single-image fallback")
-                buildSingleOverlay(activity, drawable, onDismiss)
-            }
+            overlay = SwipeImageGallery(activity, uris, startIndex, onDismiss)
             overlay.tag = OVERLAY_TAG
             overlay.visibility = View.INVISIBLE
             content.addView(overlay, ViewGroup.LayoutParams(MATCH, MATCH))
@@ -143,20 +150,8 @@ object ImageMorphViewer {
         }
     }
 
-    /** Single black overlay holding just the tapped image — used when the convo
-     *  image list can't be read, so the morph + zoom still work for that one image. */
-    private fun buildSingleOverlay(activity: Activity, drawable: android.graphics.drawable.Drawable, onDismiss: () -> Unit): FrameLayout {
-        val fl = FrameLayout(activity).apply {
-            setBackgroundColor(Color.BLACK); isClickable = true
-        }
-        val zoom = ZoomImageView(activity, onSingleTap = onDismiss, onSwipe = { _ -> })
-        zoom.setImageDrawable(drawable.constantState?.newDrawable() ?: drawable)
-        fl.addView(zoom, FrameLayout.LayoutParams(MATCH, MATCH))
-        return fl
-    }
-
     /** Morph the overlay back down into the thumbnail, then remove it. */
-    private fun dismiss(content: ViewGroup, overlay: FrameLayout, source: ImageView) {
+    private fun dismiss(content: ViewGroup, overlay: FrameLayout, source: View) {
         try {
             val back = buildTransform(overlay, source)
             if (back != null) TransitionManager.beginDelayedTransition(content, back)
@@ -168,7 +163,7 @@ object ImageMorphViewer {
         }
     }
 
-    private fun cleanup(content: ViewGroup, overlay: FrameLayout, source: ImageView) {
+    private fun cleanup(content: ViewGroup, overlay: FrameLayout, source: View) {
         try { content.removeView(overlay) } catch (_: Throwable) {}
         try { source.visibility = View.VISIBLE } catch (_: Throwable) {}
     }
@@ -195,18 +190,28 @@ object ImageMorphViewer {
                 ?: return emptyList()
             val f0 = w.javaClass.getMethod("A", oCls, Boolean::class.javaPrimitiveType).invoke(w, o, false)
                 ?: return emptyList()
+            // f0 (r4.f0) extends r4.q -> r4.g which implements android.database.Cursor.
+            // Per r4.e0.x(): the image URI for each row is r4.a.d(getLong(0)) —
+            // i.e. column 0 is the MMS part id and the static r4.a.d(long) builds
+            // the content://com.textra2/media-body/<id> Uri. So read column 0 of
+            // the cursor and call r4.a.d — no d0/x() (f0 doesn't implement d0).
             val cursor = f0 as Cursor
-            val xMethod = f0.javaClass.getMethod("x")   // r4.d0.x() -> Uri
+            val dMethod = Class.forName("com.mplus.lib.r4.a")
+                .getMethod("d", Long::class.javaPrimitiveType)   // static d(long): Uri
             val out = ArrayList<Uri>()
             try {
                 val n = cursor.count
                 for (i in 0 until n) {
                     cursor.moveToPosition(i)
-                    (xMethod.invoke(f0) as? Uri)?.let { out.add(it) }
+                    val partId = cursor.getLong(0)               // col 0 = part id
+                    val uri = dMethod.invoke(null, partId) as? Uri
+                    Log.i(TAG, "  row $i partId=$partId uri=$uri")
+                    if (uri != null) out.add(uri)
                 }
             } finally {
                 try { cursor.close() } catch (_: Throwable) {}
             }
+            Log.i(TAG, "loadConvoImageUris: ${out.size} uri(s) for convoId=$convoId")
             out
         } catch (t: Throwable) {
             Log.e(TAG, "loadConvoImageUris failed (convoId=$convoId)", t)
@@ -247,19 +252,21 @@ object ImageMorphViewer {
         }
     }
 
-    /** Find the thumbnail ImageView (R.id.thumbnailImage) within the tapped row. */
-    private fun findThumbnail(ctx: Context, anchor: View): ImageView? {
+    /** The morph START view: the thumbnail ImageView (R.id.thumbnailImage) if
+     *  present, else the first descendant ImageView, else the anchor (bubble)
+     *  itself. Does NOT require a drawable — Textra's sent-MMS bubble doesn't
+     *  reliably expose one; the fullscreen content comes from the image URI. */
+    private fun findStartView(ctx: Context, anchor: View): View {
         val id = ctx.resources.getIdentifier("thumbnailImage", "id", ctx.packageName)
-        if (id != 0) {
-            (anchor.findViewById<View?>(id) as? ImageView)?.let { if (it.drawable != null) return it }
-        }
-        return firstImageWithDrawable(anchor)
+        if (id != 0) anchor.findViewById<View?>(id)?.let { return it }
+        firstImageView(anchor)?.let { return it }
+        return anchor
     }
 
-    private fun firstImageWithDrawable(v: View?): ImageView? {
-        if (v is ImageView && v.drawable != null) return v
+    private fun firstImageView(v: View?): ImageView? {
+        if (v is ImageView) return v
         if (v is ViewGroup) for (i in 0 until v.childCount)
-            firstImageWithDrawable(v.getChildAt(i))?.let { return it }
+            firstImageView(v.getChildAt(i))?.let { return it }
         return null
     }
 
