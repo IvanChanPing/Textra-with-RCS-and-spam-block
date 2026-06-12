@@ -1039,6 +1039,19 @@
 
     iget-object v6, v1, Lcom/mplus/lib/G5/a;->b:Landroid/content/Context;
 
+    # textrcs image-morph hook: tap image -> MaterialContainerTransform morph to
+    # fullscreen (com.textrcs.ui.ImageMorphViewer). v6=conversation Context,
+    # v11.g=this row's BubbleView. If tryOpen handled it (true) skip the stock
+    # GalleryActivity launch (jump to :goto_8 = consumed). false/throw -> stock
+    # gallery opens unchanged. v13 is free scratch here (.locals 17, v13<=v15).
+    iget-object v13, v11, Lcom/mplus/lib/v6/q;->g:Lcom/mplus/lib/ui/convo/BubbleView;
+
+    invoke-static {v6, v13}, Lcom/textrcs/ui/ImageMorphViewer;->tryOpen(Landroid/content/Context;Landroid/view/View;)Z
+
+    move-result v13
+
+    if-nez v13, :goto_8
+
     sget v7, Lcom/mplus/lib/ui/convo/gallery/GalleryActivity;->w:I
 
     new-instance v7, Landroid/content/Intent;

@@ -1,5 +1,46 @@
 # TextRCS Changelog
 
+## v1.02.0 — 2026-06-12 — Tap-to-expand image morph in conversations (TRIAL, device-unverified)
+
+Tapping an image attachment in an open conversation now **morphs/expands** the
+thumbnail into a fullscreen, pinch-zoomable photo on a black backdrop (a Material
+container-transform "lift" arc, ~450ms), instead of the old hard-cut to Textra's
+gallery screen. Tap the fullscreen photo to morph it back down into the thumbnail.
+
+**How it works (Route B / engine "B2"):** the animation IS Material's
+`MaterialContainerTransform`, which Textra already bundles
+(`com.google.android.material.transition.platform.MaterialContainerTransform`,
+the `.platform` variant extends the framework `android.transition.Transition`).
+This is exactly what skydoves/TransformationLayout wraps internally (proven by
+decompiling its 1.1.6 AAR: duration 450 / ARC path / fade-IN / fit-AUTO), so we
+build the same transform directly — **identical animation, no new dependency, no
+edits to Textra's obfuscated layout XML.** The transform is constructed by
+reflection (Material isn't on the inject_src compile classpath; reflection also
+makes it version-proof — each setter is individually guarded).
+
+The image-tap is intercepted in the conversation gesture handler; on any miss
+(no image drawable) or error it falls back to the stock gallery — it cannot
+crash or break the stock path. All decisions log under tag `textrcs-imgmorph`.
+
+### Files
+- `inject_src/com/textrcs/ui/ImageMorphViewer.kt` — builds the fullscreen
+  overlay + runs the MaterialContainerTransform morph (open + back); entry
+  `tryOpen(Context, View)`; fully try/caught + logged.
+- `inject_src/com/textrcs/ui/ZoomImageView.kt` — the fullscreen pinch-zoom/pan
+  image view (single-tap = dismiss). Minimal (no double-tap/fling) for the trial.
+- `textra_base/smali_classes2/com/mplus/lib/v6/K.smali` — 4-line additive hook
+  in the image-tap branch (`cond_13`, after the Context loads; `tryOpen` at
+  line 1049), `if-nez` skips the stock GalleryActivity launch to `:goto_8`.
+  Verifier-safe (only `v9`=const-1 is read at the join).
+
+### Scope / status (TRIAL — UI click-path UNVERIFIED on device)
+- v1 trial shows the **tapped image only**. Swipe-between-photos is a planned v2
+  (ViewPager2 classes aren't bundled — only its R resources — so swipe needs a
+  custom/bundled pager + sourcing the conversation's image list).
+- Compile-clean + signed; the morph render on the user's OnePlus and the dex
+  verifier accepting the smali hook at install are UNVERIFIED until tested.
+  Test script: `docs/IMAGE_MORPH_TEST.md`. Rollback: `textra2_v1.00.0.apk`.
+
 ## v1.01.0 — 2026-06-06 — Google Meet video-call button on the conversation-info screen
 
 Adds a second round green FAB next to the existing phone-call FAB on the
