@@ -69,6 +69,39 @@ conv-list ↔ conv-view nav parallax). Do not conflate.
 - **MOST LIKELY FIX-UP AFTER 1ST RUN:** the DB-reflection (obfuscated r4.H/z7.O/r4.w)
   — if `N image(s)` is wrong/empty, that's where to look (logcat has the stack).
 
+## 2026-06-12 — SCOPE CORRECTION: switching Route B → Route A (Route B PRESERVED)
+USER scope correction: the ask was ONLY the transition animation when opening an
+image from a message — NOT a reimplemented photo gallery. Route B (my 3 custom
+classes: ImageMorphViewer/SwipeImageGallery/ZoomImageView = 563 lines = a whole
+overlay gallery w/ swipe+zoom+DB-reflection) is OVER-SCOPE. Textra already has a
+fullscreen viewer (GalleryActivity w/ swipe + pinch-zoom). User: "do version A,
+there is no pairIP" (base is PairIP-cracked → editing GalleryActivity is SAFE;
+that removes the fragility that pushed me to Route B).
+
+ROUTE B PRESERVED before switching (user asked to save it):
+- Source + hook: master commit 235e1842 (3 Kotlin classes in inject_src/ + the
+  v6/K.smali tap-hook, already committed) — branch `route-b-custom-gallery`, tag
+  `route-b-v1.03-emulator-verified`.
+- Exact built artifacts: branch commit 4912294f adds the 14 emulator-verified
+  injected smali files (smali_classes7/com/textrcs/ui/ImageMorphViewer*,
+  SwipeImageGallery*, ZoomImageView*) that were previously UNTRACKED — tag
+  `route-b-v1.03-emulator-verified-full`. (These smali are committed ONLY on the
+  branch, not master, to keep master clean; master keeps them as untracked WT
+  files so it still builds Route B until Route A deliberately removes them.)
+- Verified binary: `textra2_routeB_custom-gallery.apk` (101 MB, the emulator-
+  verified build) in repo root — won't be overwritten by future builds.
+- To restore Route B (source+artifacts+hook, no rebuild needed):
+  `git checkout route-b-v1.03-emulator-verified-full` (or branch
+  `route-b-custom-gallery`). Nothing of Route B is lost.
+
+NEXT = implement Route A on master: tap image → shared-element Material container-
+transform morph → into the STOCK GalleryActivity (reuses its swipe + pinch-zoom).
+Delete the 3 Route B classes; revert v6/K.smali hook; add ActivityOptions.make
+SceneTransitionAnimation at the launch site + shared-element enter transition on
+GalleryActivity (Textra bundles MaterialContainerTransformSharedElementCallback).
+Was mid-mapping the Route A wiring (j4/a.c launcher, GalleryActivity onCreate,
+pager current-page view, theme windowActivityTransitions) when user said save first.
+
 ## 2026-06-12 — REAL UI DRIVE: core feature VERIFIED on-screen; swipe bug fixing
 Drove the real UI on redroid (fake MMS image messages via compose+attach+send,
 since send fails w/o carrier but the image-message row is created). VERIFIED ON
