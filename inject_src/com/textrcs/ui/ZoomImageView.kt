@@ -6,77 +6,94 @@ import android.graphics.drawable.Drawable
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
-import android.view.View
 import android.widget.ImageView
+import kotlin.math.abs
 
 /**
- * ZoomImageView — the fullscreen, pinch-zoomable / pannable photo view shown
- * INSIDE the image-morph overlay (see [ImageMorphViewer]).
+ * ZoomImageView — one fullscreen, pinch-zoom / pan / double-tap photo page used
+ * inside [SwipeImageGallery] (which is the end-view of the image morph; see
+ * [ImageMorphViewer]).
  *
- * WHAT IT LOOKS LIKE: a single full-screen image centred on a black backdrop
- * (the overlay supplies the black). At rest it is FIT_CENTER (whole image
- * visible). Pinch out to zoom in (up to MAX_SCALE), drag to pan while zoomed,
- * pinch in to zoom back to fit. A single tap with no zoom/drag dismisses the
- * viewer (morph back) via [onSingleTap].
+ * WHAT IT LOOKS LIKE: a single full-screen image centred on the gallery's black
+ * backdrop. At rest it is FIT_CENTER (whole image visible). Pinch out / double-
+ * tap to zoom in (up to MAX_SCALE), drag to pan while zoomed, pinch in / double-
+ * tap to return to fit. A single tap (not zoomed) dismisses the gallery
+ * ([onSingleTap]). A horizontal fling while NOT zoomed pages to the next/prev
+ * photo ([onSwipe]: +1 = next/left-swipe, -1 = previous/right-swipe). While
+ * zoomed, horizontal drags pan the image instead of paging — the standard
+ * gallery gesture arbitration.
  *
- * WHY: Textra's stock fullscreen viewer is a separate Activity (GalleryActivity)
- * we deliberately do NOT launch in the morph path (Route B, single-Activity).
- * So we provide our own lightweight zoom view rather than reuse Textra's
- * obfuscated PhotoView (`com.mplus.lib.l2.*`), to avoid reflection into
- * unstable internals. It is intentionally minimal (pinch + pan + tap-to-close)
- * for the v1 trial; double-tap-zoom / fling are deliberately omitted.
+ * WHY: ViewPager2 is not bundled and no androidx-viewpager compile jar is
+ * available, so the gallery is built from plain android.jar views; this view
+ * owns the per-page gestures and hands paging/dismiss up via callbacks.
  *
- * HOW IT IS USED: [ImageMorphViewer.tryOpen] creates one, sets the tapped
- * thumbnail's drawable on it, and adds it to the overlay as the morph END view.
- *
- * STATUS: compile-only. The Matrix pinch/pan math is a standard pattern but has
- * NOT been exercised on a device this session — UNVERIFIED on-device.
- *
- * @param onSingleTap invoked when the user taps without zooming/panning — the
- *        signal to dismiss the viewer (morph back to the thumbnail).
+ * STATUS: compile-only. Matrix zoom/pan + fling arbitration are standard
+ * patterns but UNVERIFIED on a device this session.
  */
 class ZoomImageView(
     context: Context,
-    private val onSingleTap: () -> Unit
+    private val onSingleTap: () -> Unit,
+    private val onSwipe: (Int) -> Unit
 ) : ImageView(context) {
 
-    private val matrix0 = Matrix()      // working matrix applied to the image
-    private val savedMatrix = Matrix()  // matrix snapshot at gesture start
-    private var scale = 1f              // current user scale (1f == fit)
+    private val mtx = Matrix()
+    private val saved = Matrix()
+    private var scale = 1f
 
     private companion object {
         const val MIN_SCALE = 1f
         const val MAX_SCALE = 4f
+        const val DOUBLE_TAP_SCALE = 2.5f
+        const val FLING_MIN_VX = 1200f   // px/s horizontal fling threshold to page
     }
 
-    // Pinch-zoom detector — scales about the pinch focal point.
+    fun isZoomed(): Boolean = scale > MIN_SCALE + 0.01f
+
     private val scaleDetector = ScaleGestureDetector(
         context,
         object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
             override fun onScale(d: ScaleGestureDetector): Boolean {
-                val factor = d.scaleFactor
-                val next = (scale * factor).coerceIn(MIN_SCALE, MAX_SCALE)
-                val applied = next / scale
+                val next = (scale * d.scaleFactor).coerceIn(MIN_SCALE, MAX_SCALE)
+                val f = next / scale
                 scale = next
-                matrix0.postScale(applied, applied, d.focusX, d.focusY)
-                imageMatrix = matrix0
+                mtx.postScale(f, f, d.focusX, d.focusY)
+                applyMatrix()
                 return true
             }
         }
     )
 
-    // Single-tap detector — only used to fire the dismiss callback.
-    private val tapDetector = GestureDetector(
+    private val gestures = GestureDetector(
         context,
         object : GestureDetector.SimpleOnGestureListener() {
             override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
-                onSingleTap()
+                if (!isZoomed()) onSingleTap()
                 return true
+            }
+            override fun onDoubleTap(e: MotionEvent): Boolean {
+                if (isZoomed()) {            // zoom back to fit
+                    scale = MIN_SCALE; mtx.reset()
+                } else {                      // zoom in about the tap point
+                    scale = DOUBLE_TAP_SCALE
+                    mtx.reset()
+                    mtx.postScale(DOUBLE_TAP_SCALE, DOUBLE_TAP_SCALE, e.x, e.y)
+                }
+                applyMatrix()
+                return true
+            }
+            override fun onFling(
+                e1: MotionEvent?, e2: MotionEvent, vx: Float, vy: Float
+            ): Boolean {
+                // Page only when not zoomed and the fling is mostly horizontal.
+                if (!isZoomed() && abs(vx) > abs(vy) && abs(vx) > FLING_MIN_VX) {
+                    onSwipe(if (vx < 0) 1 else -1)
+                    return true
+                }
+                return false
             }
         }
     )
 
-    // One-finger pan bookkeeping (only meaningful while zoomed in).
     private var lastX = 0f
     private var lastY = 0f
     private var dragging = false
@@ -89,36 +106,34 @@ class ZoomImageView(
 
     override fun setImageDrawable(drawable: Drawable?) {
         super.setImageDrawable(drawable)
-        // Reset zoom/pan whenever a new image is set.
-        scale = 1f
-        matrix0.reset()
+        scale = MIN_SCALE
+        mtx.reset()
+        scaleType = ImageView.ScaleType.FIT_CENTER
+    }
+
+    private fun applyMatrix() {
+        scaleType = if (isZoomed()) ImageView.ScaleType.MATRIX else ImageView.ScaleType.FIT_CENTER
+        if (isZoomed()) imageMatrix = mtx
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         scaleDetector.onTouchEvent(event)
-        tapDetector.onTouchEvent(event)
+        gestures.onTouchEvent(event)
 
-        // Pan only when zoomed past fit and not mid-pinch.
-        if (scale > MIN_SCALE && !scaleDetector.isInProgress) {
+        // Pan while zoomed and not mid-pinch.
+        if (isZoomed() && !scaleDetector.isInProgress) {
             when (event.actionMasked) {
                 MotionEvent.ACTION_DOWN -> {
-                    savedMatrix.set(matrix0)
-                    lastX = event.x
-                    lastY = event.y
-                    dragging = true
+                    saved.set(mtx); lastX = event.x; lastY = event.y; dragging = true
                 }
                 MotionEvent.ACTION_MOVE -> if (dragging) {
-                    matrix0.set(savedMatrix)
-                    matrix0.postTranslate(event.x - lastX, event.y - lastY)
-                    imageMatrix = matrix0
+                    mtx.set(saved)
+                    mtx.postTranslate(event.x - lastX, event.y - lastY)
+                    imageMatrix = mtx
                 }
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> dragging = false
             }
         }
-
-        // Apply FIT_CENTER (no user matrix) vs MATRIX (zoomed) scale type.
-        scaleType = if (scale > MIN_SCALE) ImageView.ScaleType.MATRIX
-                    else ImageView.ScaleType.FIT_CENTER
         return true
     }
 }

@@ -36,10 +36,27 @@ conv-list ↔ conv-view nav parallax). Do not conflate.
   SWIPE-between-photos = deferred v2 (ViewPager2 classes are NOT bundled — only
   its R resources — so swipe needs a custom/bundled pager + sourcing the convo
   image list; single-image first to prove the mechanism on-device).
-- **NEXT STEP (in progress this turn):** implement
-  `inject_src/com/textrcs/ui/ImageMorphViewer.kt` + `ZoomImageView.kt`, patch
-  `v6/K.smali` (4-line hook after ln 1040), build, copy APK to project folder,
-  update CHANGELOG, hand user the device test script.
+- **BUILT v1.03.0 — FULL feature (morph + swipe gallery + zoom).** APK
+  `textra2_v1.03.0.apk` (signed, 101 MB) in project root; rollbacks
+  `textra2_v1.00.0.apk` + `_v1.02.0.apk` intact. Compile-clean (kotlinc+d8+apktool
+  all 0); all 3 classes + 3-arg hook confirmed INSIDE the APK dex (baksmali check).
+  User rejected the single-image v1.02.0 trial ("all or nothing") → built the
+  complete swipe gallery.
+- **What's in it:** tap image → MaterialContainerTransform morph → `SwipeImageGallery`
+  (fling through ALL convo images, off-thread downsampled decode) + `ZoomImageView`
+  (pinch/double-tap zoom, pan, swipe-vs-pan arbitration). Image list via reflection
+  into Textra's DB mirroring `B6.i.a()` (r4.H.X()→field d (r4.w)→z7.O builder→
+  w.A→Cursor/r4.d0.x() URIs); single-image fallback if reflection fails.
+- **STATUS: compile-verified only — UI click-path UNVERIFIED on device.** Cannot
+  drive the OnePlus here. NOT claimed working.
+- **NEXT STEP (user):** install `textra2_v1.03.0.apk`, run `docs/IMAGE_MORPH_TEST.md`,
+  watch `adb logcat -s textrcs-imgmorph`. Report: morph or stock-gallery fallback?
+  swipe through all images (does `opening morph gallery: N image(s)` show the real
+  count)? zoom? + the logcat. THREE make-or-break unknowns: (a) DB reflection
+  enumerates the convo images on the user's build; (b) MaterialContainerTransform
+  renders the morph on the OnePlus; (c) dex verifier accepts the v6/K hook at install.
+- **MOST LIKELY FIX-UP AFTER 1ST RUN:** the DB-reflection (obfuscated r4.H/z7.O/r4.w)
+  — if `N image(s)` is wrong/empty, that's where to look (logcat has the stack).
 
 ## PRE-BUILD RISK PASS (B2 trial v1) — 2026-06-12
 

@@ -1,5 +1,48 @@
 # TextRCS Changelog
 
+## v1.03.0 — 2026-06-12 — Image morph → full swipeable pinch-zoom gallery (device-unverified)
+
+Completes the image-tap feature: tapping an image in a conversation morphs it to
+fullscreen (Material container transform, as v1.02.0) AND you can now **fling
+left/right through every image in the conversation**, pinch / double-tap to zoom,
+drag to pan, single-tap to morph back. Supersedes the v1.02.0 single-image trial.
+
+**Image list (the hard part):** the conversation's images live only in Textra's
+internal SQLite (`convoId` is Textra-internal, NOT the system `thread_id`, so the
+system MMS provider is unusable). We reproduce Textra's own gallery query by
+reflection, mirroring `com.mplus.lib.B6.i.a()`: `r4.H.X()` → field `d` (`r4.w`) →
+a `z7.O` builder with the same WHERE fragments (convo match, `is_tapback=0`,
+`part_content_type like 'image/%'`) → `w.A(builder,false)` returns a cursor that
+is both `android.database.Cursor` and `r4.d0` (its `x()` yields each
+`content://com.textra2/media-body/<id>` URI). All reflection is guarded; on ANY
+failure it falls back to showing just the tapped image (still morph + zoom).
+
+**Gallery UI:** custom (ViewPager2 isn't bundled and no androidx-viewpager compile
+jar) — `SwipeImageGallery` (FrameLayout) slides between pages; `ZoomImageView`
+does pinch/double-tap zoom + pan and arbitrates swipe-vs-pan (swipe pages only
+when not zoomed). Bitmaps decoded OFF the main thread with screen-size downsampling
+to avoid jank/OOM on full-res photos.
+
+### Files
+- `inject_src/com/textrcs/ui/ImageMorphViewer.kt` — entry `tryOpen(Context,View,
+  Object)`; loads the convo image list (reflection) + builds the gallery overlay +
+  runs the morph; single-image fallback; logs tag `textrcs-imgmorph`.
+- `inject_src/com/textrcs/ui/SwipeImageGallery.kt` — the swipeable fullscreen
+  gallery + off-thread downsampled image loading.
+- `inject_src/com/textrcs/ui/ZoomImageView.kt` — per-page pinch/double-tap zoom,
+  pan, fling-to-page, tap-to-dismiss.
+- `textra_base/smali_classes2/com/mplus/lib/v6/K.smali` — hook now `sput`s convoId
+  into `ImageMorphViewer.argConvoId` and passes the tapped row (`v12`) so the
+  viewer can read the tapped image URI + load the list. Verifier-safe; additive;
+  falls back to the stock gallery if `tryOpen` returns false/throws.
+
+### Status (UI click-path UNVERIFIED on device)
+Compile-clean + signed (`textra2_v1.03.0.apk`). Make-or-break unknowns needing a
+device: (a) the reflection into Textra's obfuscated DB returning the image cursor
+on the user's build; (b) the morph rendering on the OnePlus; (c) the dex verifier
+accepting the smali hook at install. Test: `docs/IMAGE_MORPH_TEST.md`. Rollback:
+`textra2_v1.00.0.apk`.
+
 ## v1.02.0 — 2026-06-12 — Tap-to-expand image morph in conversations (TRIAL, device-unverified)
 
 Tapping an image attachment in an open conversation now **morphs/expands** the

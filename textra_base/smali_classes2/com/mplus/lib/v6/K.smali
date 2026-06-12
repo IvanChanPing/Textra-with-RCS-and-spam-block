@@ -1039,14 +1039,20 @@
 
     iget-object v6, v1, Lcom/mplus/lib/G5/a;->b:Landroid/content/Context;
 
-    # textrcs image-morph hook: tap image -> MaterialContainerTransform morph to
-    # fullscreen (com.textrcs.ui.ImageMorphViewer). v6=conversation Context,
-    # v11.g=this row's BubbleView. If tryOpen handled it (true) skip the stock
-    # GalleryActivity launch (jump to :goto_8 = consumed). false/throw -> stock
-    # gallery opens unchanged. v13 is free scratch here (.locals 17, v13<=v15).
+    # textrcs image-morph hook (v1.03.0): tap image -> MaterialContainerTransform
+    # morph into a fullscreen SWIPEABLE pinch-zoom gallery of the whole convo
+    # (com.textrcs.ui.ImageMorphViewer). v2:v3=convoId (stashed in a static so the
+    # viewer can query the convo's image list), v6=conversation Context,
+    # v11.g=this row's BubbleView, v12=tapped message row (r4.d0; its x()=tapped
+    # image uri, read reflectively inside tryOpen). If tryOpen handled it (true)
+    # skip the stock GalleryActivity (jump :goto_8 = consumed); false/throw ->
+    # stock gallery opens unchanged. sput-wide + invoke read v2/v3/v6/v12 (all
+    # preserved for the fallback path); v13 is free scratch (.locals 17, v13<=v15).
+    sput-wide v2, Lcom/textrcs/ui/ImageMorphViewer;->argConvoId:J
+
     iget-object v13, v11, Lcom/mplus/lib/v6/q;->g:Lcom/mplus/lib/ui/convo/BubbleView;
 
-    invoke-static {v6, v13}, Lcom/textrcs/ui/ImageMorphViewer;->tryOpen(Landroid/content/Context;Landroid/view/View;)Z
+    invoke-static {v6, v13, v12}, Lcom/textrcs/ui/ImageMorphViewer;->tryOpen(Landroid/content/Context;Landroid/view/View;Ljava/lang/Object;)Z
 
     move-result v13
 
