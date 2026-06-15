@@ -81,8 +81,10 @@ class PairingActivity : Activity() {
                 append("Phone: ${existing.mobileDevice.sourceID}\n")
                 append("AES key length: ${existing.aesKey.size}\n")
                 append("HMAC key length: ${existing.hmacKey.size}\n\n")
-                append("Tap back to re-pair (this will overwrite the saved session).\n")
+                append(setupStatusLine())
+                append("\n\nTap back to re-pair (this will overwrite the saved session).\n")
             })
+            wireSetupPrompt()
         }
 
         connectButton.setOnClickListener {
@@ -297,8 +299,10 @@ class PairingActivity : Activity() {
                 append("AES session key: ${session.aesKey.size} bytes\n")
                 append("HMAC session key: ${session.hmacKey.size} bytes\n")
                 append("Phone: sourceID=${session.mobileDevice.sourceID}\n\n")
-                append("Session saved. Outgoing SMS will route to Google Messages.\n")
+                append("Session saved. Outgoing SMS will route to Google Messages.\n\n")
+                append(setupStatusLine())
             })
+            wireSetupPrompt()
         }
     }
 
@@ -317,12 +321,90 @@ class PairingActivity : Activity() {
     private fun resId(type: String, name: String): Int =
         resources.getIdentifier(name, type, packageName)
 
+    /**
+     * Wake-on-notification model: there is NO always-on foreground service to
+     * start. Instead, now that a session exists, ask [ConnectionManager] to
+     * connect once and pull any backlog, then let it idle-disconnect. (While
+     * this screen is open the foreground hold keeps it up anyway.)
+     * Kept the method name so existing call sites are unchanged.
+     */
     private fun startReceiveServiceCompat() {
-        val intent = Intent(this, ReceiveService::class.java)
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            startForegroundService(intent)
-        } else {
-            startService(intent)
+        com.textrcs.wake.ConnectionManager.triggerWake(applicationContext)
+    }
+
+    /**
+     * One-time setup surfacing for the two grants the zero-battery wake needs:
+     *   (1) Notification access — the wake SOURCE (lets us see Google Messages'
+     *       notifications). Without it, incoming messages never wake Textra 2.
+     *   (2) Battery-optimization exemption ("Unrestricted" / "Don't optimize")
+     *       — so the brief on-demand connect isn't deferred by Doze when the
+     *       phone is idle. This is the standard fix for a sideloaded, no-FCM
+     *       app that wakes on another app's notification.
+     * BOTH are ONE-TIME grants that persist across reboots (no per-boot step).
+     * Returns the status block shown in the result panel; the panel is made
+     * tappable by [wireSetupPrompt] to open whichever grant is still missing.
+     */
+    private fun setupStatusLine(): String {
+        val notifOk = com.textrcs.wake.GmNotificationListener.isEnabled(this)
+        val batteryOk = isBatteryOptIgnored()
+        return when {
+            !notifOk -> "⚠️ TAP HERE to enable message wake-up (grant Notification " +
+                "access).\nWithout it, incoming messages won't wake Textra 2.\n" +
+                "Keep Google Messages notifications ENABLED (silent is fine)."
+            !batteryOk -> "✅ Notification access granted.\n" +
+                "⚠️ TAP HERE for reliable delivery while the phone is idle " +
+                "(allow unrestricted battery / disable optimization)."
+            else -> "✅ Message wake-up: ON (Notification access + unrestricted " +
+                "battery granted)."
+        }
+    }
+
+    /** Make the result panel open whichever setup grant is still missing on tap
+     *  (Notification access first, then battery-optimization exemption);
+     *  clears the handler once both are granted. */
+    private fun wireSetupPrompt() {
+        val notifOk = com.textrcs.wake.GmNotificationListener.isEnabled(this)
+        val batteryOk = isBatteryOptIgnored()
+        if (notifOk && batteryOk) {
+            resultText.setOnClickListener(null)
+            return
+        }
+        resultText.setOnClickListener {
+            try {
+                if (!notifOk) {
+                    startActivity(com.textrcs.wake.GmNotificationListener.settingsIntent())
+                } else {
+                    openBatteryOptExemption()
+                }
+            } catch (e: Throwable) {
+                android.util.Log.w("TextRCSPair", "open setup settings failed: ${e.message}")
+            }
+        }
+    }
+
+    /** True if Textra 2 is exempt from battery optimization (Doze whitelist). */
+    private fun isBatteryOptIgnored(): Boolean {
+        return try {
+            val pm = getSystemService(android.content.Context.POWER_SERVICE) as android.os.PowerManager
+            pm.isIgnoringBatteryOptimizations(packageName)
+        } catch (e: Throwable) {
+            android.util.Log.w("TextRCSPair", "isIgnoringBatteryOptimizations failed: ${e.message}")
+            false
+        }
+    }
+
+    /** Show the system "allow unrestricted battery" dialog (direct), falling
+     *  back to the battery-optimization settings list if the direct intent is
+     *  unavailable. One-time; the exemption persists across reboots. */
+    private fun openBatteryOptExemption() {
+        try {
+            startActivity(
+                Intent(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                    .setData(android.net.Uri.parse("package:$packageName"))
+            )
+        } catch (e: Throwable) {
+            android.util.Log.w("TextRCSPair", "direct battery-opt request failed, opening list: ${e.message}")
+            startActivity(Intent(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))
         }
     }
 }

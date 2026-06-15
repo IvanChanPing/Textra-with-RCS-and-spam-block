@@ -13,10 +13,16 @@ import android.net.Uri
  * [stripped build] Two jobs now:
  *  1. Register [com.textrcs.anim.ConvoCornerAnim]'s activity tracking so the
  *     conv-list can be parallaxed behind the translucent ConvoActivity.
- *  2. Start [com.textrcs.receive.ReceiveService] at process boot when a
- *     paired session exists — without this, opening the app straight to its
- *     main screen leaves the receive long-poll closed (no SET_ACTIVE_SESSION,
- *     no response routing).
+ *  2. Install [com.textrcs.wake.ConnectionManager]'s foreground tracking, so
+ *     the Google Messages Web long-poll comes up while the app is in the
+ *     foreground and is torn down when idle.
+ *
+ * v(wake-on-notif): the old job #2 — auto-starting [ReceiveService] (a
+ * 24/7 foreground long-poll) at boot — is REMOVED. The app now consumes zero
+ * background battery and instead connects on demand: woken by a Google
+ * Messages notification ([com.textrcs.wake.GmNotificationListener]), by an
+ * outgoing send, or by coming to the foreground. So we deliberately do NOT
+ * start any service at process boot here.
  * The crash-upload and screen-tracer install this provider used to also do
  * are removed for the clean build (no telemetry). The class keeps its name
  * so the manifest entry is unchanged.
@@ -30,17 +36,10 @@ class CrashCatcherProvider : ContentProvider() {
             // registered before any Activity is created; onCreate here is the
             // earliest user code in the process, so this is the right place.
             com.textrcs.anim.ConvoCornerAnim.registerActivityTracking(app)
-            val sessionStore = com.textrcs.protocol.SessionStore(app)
-            if (sessionStore.load() != null) {
-                val svcIntent = android.content.Intent(
-                    app, com.textrcs.receive.ReceiveService::class.java,
-                )
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    app.startForegroundService(svcIntent)
-                } else {
-                    app.startService(svcIntent)
-                }
-            }
+            // Drive the on-demand connection from app foreground/background.
+            // No service is started at boot — zero background battery until a
+            // GM notification wake, a send, or the app coming to foreground.
+            com.textrcs.wake.ConnectionManager.installForegroundTracking(app)
         } catch (_: Throwable) {
             // Boot hook is best-effort; never crash the process here.
         }

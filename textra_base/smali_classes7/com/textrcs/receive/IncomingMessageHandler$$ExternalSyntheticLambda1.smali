@@ -23,10 +23,12 @@
 
 .field public final synthetic f$7:J
 
+.field public final synthetic f$8:Ljava/lang/String;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;ZLcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/util/List;Ljava/lang/String;J)V
-    .registers 10
+.method public synthetic constructor <init>(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;ZLcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/util/List;Ljava/lang/String;JLjava/lang/String;)V
+    .registers 11
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,13 +49,15 @@
 
     iput-wide p8, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$7:J
 
+    iput-object p10, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$8:Ljava/lang/String;
+
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .registers 10
+    .registers 11
 
     .line 0
     iget-object v0, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$0:Lcom/textrcs/gmproto/conversations/MediaContent;
@@ -72,7 +76,9 @@
 
     iget-wide v7, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$7:J
 
-    invoke-static/range {v0 .. v8}, Lcom/textrcs/receive/IncomingMessageHandler;->$r8$lambda$V8FW-oVOc6fdg1ohxTMN4hB1HvA(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;ZLcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/util/List;Ljava/lang/String;J)V
+    iget-object v9, p0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda1;->f$8:Ljava/lang/String;
+
+    invoke-static/range {v0 .. v9}, Lcom/textrcs/receive/IncomingMessageHandler;->$r8$lambda$ChBW5f6n_mq7Fh0AQ_wQxFe7lLY(Lcom/textrcs/gmproto/conversations/MediaContent;Ljava/lang/String;Landroid/content/Context;ZLcom/textrcs/receive/IncomingMessageHandler$Sender;Ljava/util/List;Ljava/lang/String;JLjava/lang/String;)V
 
     return-void
 .end method

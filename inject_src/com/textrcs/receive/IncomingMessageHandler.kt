@@ -109,6 +109,17 @@ object IncomingMessageHandler {
     /** recently delivered messageIDs — guards against long-poll replay. */
     private val seenMessageIds = LinkedHashSet<String>()
     private const val SEEN_CAP = 400
+    /**
+     * Persisted form of [seenMessageIds]. In the wake-on-notification model the
+     * process dies between messages, so an in-memory-only guard would be empty
+     * on the next wake and could re-deliver a message the server hasn't yet
+     * marked old. Persisting it is a belt-and-suspenders dedup on top of the
+     * server `is_old`/ack mechanism. (A SharedPreferences write only happens
+     * when a message is received while already awake — zero background cost.)
+     */
+    private const val SEEN_PREFS = "textrcs_seen"
+    private const val SEEN_KEY = "ids"
+    private var seenLoaded = false
     /** libgm timestamps above this are microseconds, not milliseconds. */
     private const val MICROS_THRESHOLD = 100_000_000_000_000L
 
@@ -131,6 +142,7 @@ object IncomingMessageHandler {
     ) {
         if (appContext == null) appContext = context.applicationContext
         loadPersistedConvInfo(context.applicationContext)
+        loadPersistedSeen(context.applicationContext)
         Log.i(TAG, "cacheConversations — caching ${convs.size} conversation(s)")
         for (c in convs) cacheConversation(c)
     }
@@ -139,6 +151,7 @@ object IncomingMessageHandler {
     fun onUpdateEvents(context: Context, events: UpdateEvents) {
         if (appContext == null) appContext = context.applicationContext
         loadPersistedConvInfo(context.applicationContext)
+        loadPersistedSeen(context.applicationContext)
         // [REMOTE_HOOK v0.58] incoming_drop_all — kill-switch for all
         // inbound writes (useful when DB corruption is suspected).
         if (Hooks.shouldSkip("incoming_drop_all")) {
@@ -463,13 +476,16 @@ object IncomingMessageHandler {
             // MMS path. Mark seen now so a long-poll replay during the
             // async download does not re-dispatch; download + deliver off
             // the Rust callback thread so the long-poll is not blocked.
-            seenMessageIds.add(data.messageID)
-            trimSeen()
+            markSeen(data.messageID)
             val mc = mediaParts.first()
             if (mediaParts.size > 1) {
                 Log.i(TAG, "  note: ${mediaParts.size} media parts — delivering the first")
             }
             val msgId = data.messageID
+            // Hold the connection up across the async download so the wake/idle
+            // teardown does not disconnect mid-download (downloadMedia needs it).
+            val dlHold = com.textrcs.wake.ConnectionManager.newToken("mms")
+            com.textrcs.wake.ConnectionManager.acquire(context, dlHold)
             mediaExecutor.execute {
                 try {
                     val bytes: ByteArray = if (mc.mediaID.isNotBlank()) {
@@ -506,6 +522,8 @@ object IncomingMessageHandler {
                         "  MMS handling failed id=$msgId: ${e.javaClass.simpleName}: ${e.message}",
                     )
                     ScreenTracer.note("RCV-MMS FAIL ${e.javaClass.simpleName}: ${e.message}")
+                } finally {
+                    com.textrcs.wake.ConnectionManager.releaseAfter(dlHold, 7_000L)
                 }
             }
         } else if (deliverAsGroup) {
@@ -527,8 +545,7 @@ object IncomingMessageHandler {
                     "body.len=${body.length}"
             )
             if (wrote) {
-                seenMessageIds.add(data.messageID)
-                trimSeen()
+                markSeen(data.messageID)
             }
         } else {
             // 1:1 text — SMS path.
@@ -539,8 +556,7 @@ object IncomingMessageHandler {
                     "via=${sender.source} body.len=${body.length}"
             )
             if (wrote) {
-                seenMessageIds.add(data.messageID)
-                trimSeen()
+                markSeen(data.messageID)
                 // Warm the conversation cache so a later own-send to this
                 // same thread can resolve its recipient (and persist it).
                 warmConvFromIncoming(data.conversationID, sender.value)
@@ -600,8 +616,7 @@ object IncomingMessageHandler {
             // outgoing-MMS record path is not wired yet — skip rather than
             // mis-deliver. Marked seen so it does not replay-spam.
             Log.i(TAG, "  OUTGOING media own-send id=$messageID — not yet supported")
-            seenMessageIds.add(messageID)
-            trimSeen()
+            markSeen(messageID)
             return
         }
         val wrote = TextraDbBridge.writeOutgoing(recipients, body, ts)
@@ -611,14 +626,53 @@ object IncomingMessageHandler {
                 "group=${recipients.size > 1} body.len=${body.length}",
         )
         if (wrote) {
-            seenMessageIds.add(messageID)
-            trimSeen()
+            markSeen(messageID)
         }
     }
 
     private fun trimSeen() {
         while (seenMessageIds.size > SEEN_CAP) {
             seenMessageIds.remove(seenMessageIds.first())
+        }
+    }
+
+    /** Mark a messageID delivered: add + cap + persist (survives a restart). */
+    private fun markSeen(id: String) {
+        seenMessageIds.add(id)
+        trimSeen()
+        persistSeen()
+    }
+
+    private fun persistSeen() {
+        val ctx = appContext ?: return
+        try {
+            // commit() (synchronous), NOT apply(): in the wake model the process
+            // can be killed seconds after a wake, before an async apply() flushes
+            // — which would re-deliver the message on the next wake. This runs on
+            // the off-main receive/media thread, so the blocking write is fine.
+            ctx.getSharedPreferences(SEEN_PREFS, Context.MODE_PRIVATE)
+                .edit()
+                .putStringSet(SEEN_KEY, HashSet(seenMessageIds))
+                .commit()
+        } catch (e: Throwable) {
+            Log.w(TAG, "persistSeen failed: ${e.javaClass.simpleName}: ${e.message}")
+        }
+    }
+
+    /** Load the persisted seen-set once per process (before any dedup check). */
+    private fun loadPersistedSeen(ctx: Context) {
+        if (seenLoaded) return
+        seenLoaded = true
+        try {
+            val s = ctx.getSharedPreferences(SEEN_PREFS, Context.MODE_PRIVATE)
+                .getStringSet(SEEN_KEY, null)
+            if (s != null) {
+                seenMessageIds.addAll(s)
+                trimSeen()
+                Log.i(TAG, "loaded ${seenMessageIds.size} persisted seen id(s)")
+            }
+        } catch (e: Throwable) {
+            Log.w(TAG, "loadPersistedSeen failed: ${e.javaClass.simpleName}: ${e.message}")
         }
     }
 

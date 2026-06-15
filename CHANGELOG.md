@@ -1,5 +1,123 @@
 # TextRCS Changelog
 
+## v1.05.0 — 2026-06-15 — Wake-on-Google-Messages-notification receive (zero background battery) — device-UNVERIFIED
+
+Replaces the always-on foreground long-poll (`ReceiveService` + persistent
+`RustBridge.connect`, which drained battery 24/7) with an **on-demand connection**:
+the app stays disconnected (zero background battery) and connects only when there is
+a reason to — woken by a **Google Messages notification**, by an outgoing send/reply,
+or by coming to the foreground — pulls the new message(s) into Textra, then
+disconnects once idle.
+
+**Flow:** Google Messages posts a notification → `GmNotificationListener`
+(`NotificationListenerService`, the zero-battery wake source) → `ConnectionManager`
+connects → the Rust long-poll pushes the backlog (same as reopening a
+`messages.google.com` tab — textra2 reconnects as the same persistent browser
+session, so the server replays everything since its last ack) → `IncomingMessageHandler`
+writes into Textra's DB → Textra posts its own new-message notification → after the
+receive settles and the **ack flushes**, it disconnects.
+
+**Connection lifecycle (`ConnectionManager`, refcount "holds"):**
+- `wake` — GM notification; released after a ~3.5s quiet window + ~7s ack window.
+- `send-*` — outgoing send/reply (incl. inline notification reply, which funnels
+  through the same `e5/d::m` send seam); released ~7s after the send returns.
+- `fg` — a foreground Activity is started (stay live while the user is in the app).
+- `mms-*` — an inbound MMS attachment is downloading.
+Disconnect only when all holds clear AND the ack has flushed. A partial `WAKE_LOCK`
+(30s safety timeout) covers background wake/send windows.
+
+**Why "don't disconnect before the ack":** every received message queues a server
+ack (`events.rs:318`) flushed by a 5s ack ticker; a message is only marked delivered
+once that POSTs. Disconnecting sooner would re-deliver it on the next wake. The
+release delays cover that window; additionally `seenMessageIds` is now **persisted**
+(`textrcs_seen` prefs) so the dedup guard survives the per-wake process death.
+
+**Files added:** `inject_src/com/textrcs/wake/ConnectionManager.kt` (lifecycle owner),
+`inject_src/com/textrcs/wake/GmNotificationListener.kt` (wake source + one-time
+Notification-access grant detection/prompt).
+**Files changed:** `CrashCatcherProvider.kt` (removed the boot auto-start of
+`ReceiveService`; installs foreground tracking instead), `PairingActivity.kt`
+(connect via `ConnectionManager` instead of starting the FGS; result screen now shows
+a tappable "enable message wake-up" prompt opening Notification-access settings),
+`SendManager.kt` (wraps send in a connection hold + ack window),
+`IncomingMessageHandler.kt` (persistent `seenMessageIds`; MMS download holds the
+connection), `RustBridge.kt` (`hasSession`; signals `ConnectionManager.onActivity`
+per live event), `AndroidManifest.xml` (+`WAKE_LOCK`, +the `GmNotificationListener`
+service with `BIND_NOTIFICATION_LISTENER_SERVICE` + the listener intent-filter).
+
+**Post-review hardening (same version):** independent diff review + a 3rd assembled-
+logic pass produced fixes — Rust `ack_ticker`/runtime now torn down on disconnect
+(`client.destroy()`); listener catch-up on rebind + `isWakeWorthy` filter (skip only
+CATEGORY_SERVICE/group-summary, not merely-ongoing); `hasSession` off the listener
+main thread; wakelock-refresh gated to held-state; bounded connect retry (3×/3s);
+seen-set `commit()`. Plus: connect/disconnect now run on a dedicated I/O executor
+(`io`), NOT the timer thread (`sched`) — so a slow connect (bounded by the Rust
+client's 30s RPC timeout) can't stall the release/disconnect/retry timers.
+
+**One-time setup (persists across reboots, self-rebinds on boot — NO per-boot step):**
+(1) grant Textra 2 **Notification access** (the Pair screen links to it); (2) allow
+**unrestricted battery / disable optimization** (Doze exemption, the standard fix so
+the on-demand connect isn't deferred while idle — Pair screen prompts for it after
+notification access; manifest perm `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS`).
+**Precondition (R8):** keep Google Messages notifications ENABLED — they may be set
+SILENT (the listener still fires, avoiding a double buzz), but if GM's notification
+channel is fully BLOCKED, GM posts nothing and there is nothing to wake on.
+
+**STATUS: compile-only / DEVICE-UNVERIFIED** in this build env (no cellular/RCS radio,
+no notification-access grant). The two device-only unknowns are: (R1) whether a fresh
+connect reliably replays the just-arrived message (the reopen-the-Chrome-tab behavior
+strongly implies yes; `fetch_messages` is a cheap fallback if not), and (R4) the
+listener firing on a real GM notification. Heavily logged (`TextRCSConn`,
+`TextRCSGmWake`, `ScreenTracer`). See `docs/WAKE_ON_NOTIFICATION_PLAN.md` for the full
+plan + on-device test script.
+
+## v1.04.0 — 2026-06-12 — Image morph: Route A (morph INTO the stock gallery) — device-UNVERIFIED
+
+Reworks the tap-an-image animation per user scope correction: instead of a custom
+overlay gallery (Route B, v1.03.0 — preserved on branch `route-b-custom-gallery`,
+tag `route-b-v1.03-emulator-verified-full`, APK `textra2_routeB_custom-gallery.apk`),
+the tapped photo now does a shared-element **MaterialContainerTransform morph INTO
+Textra's OWN fullscreen `GalleryActivity`** — reusing its real ViewPager swipe,
+PhotoView pinch-zoom, toolbar (tap → info/share/back) and Back behaviour. The
+conversation/bubble stays in place underneath; only the photo expands out of it.
+
+**Why this fixes the user's Route B complaints:**
+- #1 wrong image → the stock gallery opens the exact tapped `msgId` (no DB-reflection
+  guessing).
+- #3 "whole bubble moved" → the shared-element `transitionName` is on the IMAGE view
+  only, so the photo morphs, not the bubble container.
+- #2 black bars mid-morph → `MaterialContainerTransform` configured with
+  `scrimColor=TRANSPARENT`, `fitMode=HEIGHT`, `fadeMode=THROUGH` (Route B used the
+  defaults, which caused the flash). Black is now only the settled letterbox.
+- #5 Back exited the conversation → the gallery is a separate Activity, so Back
+  returns to the conversation (and there's an on-screen back button).
+
+**Files:** `inject_src/com/textrcs/ui/MorphGalleryLauncher.kt` (sender: tags the
+bubble image, `makeSceneTransitionAnimation`, launches the gallery),
+`GalleryMorph.kt` (receiver: postpone + MCT-by-reflection enter/return + a
+view-tree poller that tags the on-screen PhotoView and starts the morph);
+`res/values/styles.xml` (`windowActivityTransitions=true` on `AppTheme.ConvoActivity`
++ `AppTheme.GalleryActivity`); smali hooks in `v6/K.smali` (tap →
+`MorphGalleryLauncher.launch`) and `ui/convo/gallery/GalleryActivity.smali`
+(`onCreate` → `GalleryMorph.onCreate`). All Material calls are reflective + guarded;
+any failure degrades to a plain (no-morph) gallery open, never a crash.
+
+**Drag-down-to-dismiss (#4)** and **return-after-swipe handling (R2)** are included:
+`DragDismissTouchListener.kt` (delegating touch listener on the PhotoView — vertical
+drag while at rest slides off + dismisses; zoom/pan/tap forwarded to PhotoView's
+attacher; horizontal still pages) attached per-page; `GalleryMorph` adds a ViewPager
+page listener (reflection Proxy) that moves the shared-element tag to the visible page
+and, once swiped away, clears the original bubble's tag so Back FADES instead of
+morphing into the wrong bubble. Deferred (device-iterative): the "deluxe" R2 that
+morphs back into the swiped-to bubble by scrolling the thread (needs a ConvoActivity
+onActivityReenter hook + an unverified internal field).
+
+**STATUS: compile-built only (kotlinc + smali + apktool all clean). UI click-path
+UNVERIFIED — needs the on-device test in `docs/IMAGE_MORPH_TEST.md`.** Risks to
+confirm on device: R5 the `ConvoActivity` parallax slide must still work (shares the
+theme); the morph must not snap (animations confirmed ON); the drag-vs-zoom/page
+arbitration. APK: `textra2_routeA_morph.apk`.
+
 ## v1.03.0 — 2026-06-12 — Image morph → full swipeable pinch-zoom gallery (device-unverified)
 
 Completes the image-tap feature: tapping an image in a conversation morphs it to

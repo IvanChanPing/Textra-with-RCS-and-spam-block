@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,653:1\n1747#2,3:654\n1#3:657\n*S KotlinDebug\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n*L\n612#1:654,3\n*E\n"
+    value = "SMAP\nSendManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,662:1\n1747#2,3:663\n1#3:666\n*S KotlinDebug\n*F\n+ 1 SendManager.kt\ncom/textrcs/send/SendManager$Companion\n*L\n621#1:663,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -66,7 +66,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 574
+    .line 583
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,7 +85,7 @@
     .param p0, "$this"    # Lcom/textrcs/send/SendManager$Companion;
     .param p1, "body"    # Ljava/lang/String;
 
-    .line 574
+    .line 583
     invoke-direct {p0, p1}, Lcom/textrcs/send/SendManager$Companion;->isRecordOnly(Ljava/lang/String;)Z
 
     move-result v0
@@ -97,12 +97,12 @@
     .registers 14
     .param p1, "body"    # Ljava/lang/String;
 
-    .line 609
+    .line 618
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 610
+    .line 619
     .local v0, "now":J
     # getter for: Lcom/textrcs/send/SendManager;->recordOnlySends:Ljava/util/List;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getRecordOnlySends$cp()Ljava/util/List;
@@ -117,7 +117,7 @@
 
     const/4 v3, 0x0
 
-    .line 611
+    .line 620
     .local v3, "$i$a$-synchronized-SendManager$Companion$isRecordOnly$1":I
     :try_start_f
     # getter for: Lcom/textrcs/send/SendManager;->recordOnlySends:Ljava/util/List;
@@ -137,7 +137,7 @@
 
     invoke-static {v4, v5}, Lkotlin/collections/CollectionsKt;->removeAll(Ljava/util/List;Lkotlin/jvm/functions/Function1;)Z
 
-    .line 612
+    .line 621
     # getter for: Lcom/textrcs/send/SendManager;->recordOnlySends:Ljava/util/List;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getRecordOnlySends$cp()Ljava/util/List;
 
@@ -152,7 +152,7 @@
     .local v4, "$this$any$iv":Ljava/lang/Iterable;
     const/4 v5, 0x0
 
-    .line 654
+    .line 663
     .local v5, "$i$f$any":I
     instance-of v6, v4, Ljava/util/Collection;
 
@@ -172,7 +172,7 @@
 
     goto :goto_5c
 
-    .line 655
+    .line 664
     :cond_3d
     invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -197,7 +197,7 @@
     .local v9, "it":Lkotlin/Pair;
     const/4 v10, 0x0
 
-    .line 612
+    .line 621
     .local v10, "$i$a$-any-SendManager$Companion$isRecordOnly$1$2":I
     invoke-virtual {v9}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
 
@@ -209,7 +209,7 @@
     :try_end_57
     .catchall {:try_start_f .. :try_end_57} :catchall_5e
 
-    .line 655
+    .line 664
     .end local v9    # "it":Lkotlin/Pair;
     .end local v10    # "$i$a$-any-SendManager$Companion$isRecordOnly$1$2":I
     if-eqz v11, :cond_41
@@ -218,12 +218,12 @@
 
     goto :goto_5c
 
-    .line 656
+    .line 665
     .end local v8    # "element$iv":Ljava/lang/Object;
     :cond_5b
     nop
 
-    .line 612
+    .line 621
     .end local v3    # "$i$a$-synchronized-SendManager$Companion$isRecordOnly$1":I
     .end local v4    # "$this$any$iv":Ljava/lang/Iterable;
     .end local v5    # "$i$f$any":I
@@ -252,7 +252,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 618
+    .line 627
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getInstance$cp()Lcom/textrcs/send/SendManager;
 
@@ -264,7 +264,7 @@
 
     const/4 v0, 0x0
 
-    .line 619
+    .line 628
     .local v0, "$i$a$-synchronized-SendManager$Companion$get$1":I
     :try_start_d
     # getter for: Lcom/textrcs/send/SendManager;->instance:Lcom/textrcs/send/SendManager;
@@ -290,11 +290,11 @@
 
     move-object v2, v1
 
-    .line 657
+    .line 666
     .local v2, "it":Lcom/textrcs/send/SendManager;
     const/4 v3, 0x0
 
-    .line 619
+    .line 628
     .local v3, "$i$a$-also-SendManager$Companion$get$1$1":I
     sget-object v4, Lcom/textrcs/send/SendManager;->Companion:Lcom/textrcs/send/SendManager$Companion;
 
@@ -302,7 +302,7 @@
     :try_end_29
     .catchall {:try_start_d .. :try_end_29} :catchall_2c
 
-    .line 618
+    .line 627
     .end local v0    # "$i$a$-synchronized-SendManager$Companion$get$1":I
     .end local v2    # "it":Lcom/textrcs/send/SendManager;
     .end local v3    # "$i$a$-also-SendManager$Companion$get$1$1":I
@@ -335,12 +335,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 601
+    .line 610
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 602
+    .line 611
     .local v0, "now":J
     # getter for: Lcom/textrcs/send/SendManager;->recordOnlySends:Ljava/util/List;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getRecordOnlySends$cp()Ljava/util/List;
@@ -355,7 +355,7 @@
 
     const/4 v3, 0x0
 
-    .line 603
+    .line 612
     .local v3, "$i$a$-synchronized-SendManager$Companion$markRecordOnly$1":I
     :try_start_14
     # getter for: Lcom/textrcs/send/SendManager;->recordOnlySends:Ljava/util/List;
@@ -375,7 +375,7 @@
 
     invoke-static {v4, v5}, Lkotlin/collections/CollectionsKt;->removeAll(Ljava/util/List;Lkotlin/jvm/functions/Function1;)Z
 
-    .line 604
+    .line 613
     # getter for: Lcom/textrcs/send/SendManager;->recordOnlySends:Ljava/util/List;
     invoke-static {}, Lcom/textrcs/send/SendManager;->access$getRecordOnlySends$cp()Ljava/util/List;
 
@@ -393,14 +393,14 @@
     :try_end_37
     .catchall {:try_start_14 .. :try_end_37} :catchall_39
 
-    .line 602
+    .line 611
     .end local v3    # "$i$a$-synchronized-SendManager$Companion$markRecordOnly$1":I
     monitor-exit v2
 
-    .line 606
+    .line 615
     return-void
 
-    .line 602
+    .line 611
     :catchall_39
     move-exception v3
 
@@ -443,7 +443,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 645
+    .line 654
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -506,7 +506,7 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 646
+    .line 655
     move-object v1, p3
 
     check-cast v1, Ljava/lang/Iterable;
@@ -539,7 +539,7 @@
 
     move-result-object v0
 
-    .line 647
+    .line 656
     .local v0, "body":Ljava/lang/String;
     if-eqz p4, :cond_6d
 
@@ -558,7 +558,7 @@
 
     move-result-object v1
 
-    .line 648
+    .line 657
     .local v1, "intents":Ljava/util/List;
     :cond_71
     new-instance v2, Ljava/lang/StringBuilder;
@@ -605,13 +605,13 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 649
+    .line 658
     invoke-virtual {p0, p1}, Lcom/textrcs/send/SendManager$Companion;->get(Landroid/content/Context;)Lcom/textrcs/send/SendManager;
 
     move-result-object v2
 
     invoke-virtual {v2, p2, v0, v1}, Lcom/textrcs/send/SendManager;->sendText(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 650
+    .line 659
     return-void
 .end method

@@ -351,9 +351,18 @@ class SendManager private constructor(private val appContext: Context) {
             return
         }
         ScreenTracer.note("SEND sendTextBlocking → RustBridge.sendText")
-        com.textrcs.bridge.RustBridge.sendText(appContext, recipientPhone, body)
-        ScreenTracer.note("SEND sendTextBlocking RustBridge.sendText RETURNED")
-        Log.i(TAG, "sent (rust) to ${redact(recipientPhone)} (len=${body.length})")
+        // Hold the connection up across the send and long enough afterwards for
+        // the server-side ack to flush, then let ConnectionManager idle-tear-
+        // down (so a send does not leave the long-poll alive = battery).
+        val hold = com.textrcs.wake.ConnectionManager.newToken("send")
+        com.textrcs.wake.ConnectionManager.acquire(appContext, hold)
+        try {
+            com.textrcs.bridge.RustBridge.sendText(appContext, recipientPhone, body)
+            ScreenTracer.note("SEND sendTextBlocking RustBridge.sendText RETURNED")
+            Log.i(TAG, "sent (rust) to ${redact(recipientPhone)} (len=${body.length})")
+        } finally {
+            com.textrcs.wake.ConnectionManager.releaseAfter(hold, 7_000L)
+        }
     }
 
     /**

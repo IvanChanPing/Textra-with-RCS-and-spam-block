@@ -48,7 +48,7 @@
 
     iput-object p1, p0, Lcom/textrcs/ui/pairing/PairingActivity$startGoogleLogin$1;->this$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
-    .line 126
+    .line 128
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
     return-void
@@ -61,10 +61,10 @@
     .param p1, "view"    # Landroid/webkit/WebView;
     .param p2, "url"    # Ljava/lang/String;
 
-    .line 128
+    .line 130
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 129
+    .line 131
     sget-object v0, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     const/4 v1, 0x2
@@ -117,12 +117,12 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 130
+    .line 132
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity$startGoogleLogin$1;->this$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
     # invokes: Lcom/textrcs/ui/pairing/PairingActivity;->tryHarvestSapisid(Ljava/lang/String;)V
     invoke-static {v0, p2}, Lcom/textrcs/ui/pairing/PairingActivity;->access$tryHarvestSapisid(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/String;)V
 
-    .line 131
+    .line 133
     return-void
 .end method

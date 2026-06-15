@@ -110,6 +110,9 @@ object RustBridge {
                 return
             }
             val bytes = decryptedData ?: return
+            // Live (non-old) received event — extend the wake quiet-timer so a
+            // multi-part / burst receive is not cut off before it settles.
+            try { com.textrcs.wake.ConnectionManager.onActivity(appContext) } catch (_: Throwable) {}
             try {
                 val events = UpdateEvents.parseFrom(bytes)
                 IncomingMessageHandler.onUpdateEvents(appContext, events)
@@ -233,11 +236,32 @@ object RustBridge {
         } catch (e: Throwable) {
             Log.w(TAG, "disconnect failed: ${e.message}")
         }
+        // CRITICAL for zero-background-battery: disconnect() only bumps
+        // listen_id, which stops the long-poll loop + ditto pinger — but the
+        // Rust ack_ticker (spawned once in connect(), NOT bound to listen_id)
+        // would otherwise keep waking every 5s forever and the tokio runtime
+        // would stay resident. Destroying the RustClient frees the engine +
+        // its runtime, aborting ALL spawned tasks. start() builds a fresh
+        // client (from the persisted session) on the next wake.
+        try {
+            rc.destroy()
+        } catch (e: Throwable) {
+            Log.w(TAG, "client.destroy failed: ${e.message}")
+        }
+        client = null
         connected = false
-        ScreenTracer.note("RUST stop — disconnected")
+        ScreenTracer.note("RUST stop — disconnected + client destroyed")
     }
 
     fun isConnected(): Boolean = connected
+
+    /**
+     * True if a paired Google Messages session is persisted. Lets callers
+     * (e.g. [com.textrcs.wake.ConnectionManager]) avoid waking/connecting when
+     * the app was never paired. Cheap — just a SessionStore load.
+     */
+    fun hasSession(context: Context): Boolean =
+        SessionStore(context.applicationContext).load() != null
 
     /**
      * Two-step outgoing send, driven entirely in Rust (GetOrCreate +

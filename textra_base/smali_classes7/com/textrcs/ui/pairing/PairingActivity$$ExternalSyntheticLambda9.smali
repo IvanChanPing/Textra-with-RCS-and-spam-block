@@ -3,34 +3,40 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic f$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
+.field public final synthetic f$1:Lcom/textrcs/protocol/GMessagesSession;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/textrcs/ui/pairing/PairingActivity;)V
-    .registers 2
+.method public synthetic constructor <init>(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
+    .registers 3
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda9;->f$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
+    iput-object p2, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda9;->f$1:Lcom/textrcs/protocol/GMessagesSession;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final run()V
     .registers 3
 
     .line 0
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda9;->f$0:Lcom/textrcs/ui/pairing/PairingActivity;
 
-    invoke-static {v0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$M1H67bzZJ6RZcCU6DyBMSfZJ4cQ(Lcom/textrcs/ui/pairing/PairingActivity;Landroid/view/View;)V
+    iget-object v1, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda9;->f$1:Lcom/textrcs/protocol/GMessagesSession;
+
+    invoke-static {v0, v1}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$OvasuEa1MPU6VHd8uePg-JyvmD4(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
 
     return-void
 .end method
