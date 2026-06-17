@@ -1,6 +1,6 @@
 # TextRCS Changelog
 
-## [Unreleased] — 2026-06-17 — Scam & Spam Protection engine, Phase A (offline core) — host-tested, device-UNVERIFIED
+## [Unreleased] — 2026-06-17 — Scam & Spam Protection engine, Phase A (offline) + Phase B (online lookups) — host-tested, device-UNVERIFIED
 
 New on-device scam/spam protection in the Rust engine (`textrcs_libgm` 0.14.0 → 0.15.0).
 Built per the user's decision: **use external threat intelligence (not a home-grown
@@ -29,8 +29,23 @@ shipped `.so` small):
   `SpamConfig`, `SpamFeedSource`, `SpamVerdict`, `SpamRefreshResult`, `SpamFeedResult`, `SpamStatus`;
   enums `SpamLevel`, `SpamFeedKind`.
 
-**Observability:** every `SpamVerdict` carries `reasons[]` naming the matched indicator + source;
-`SpamRefreshResult` reports per-feed counts + errors + last-refresh time.
+**Phase B — optional online layer (`src/spam/online.rs`, behind `online_enabled`):**
+- **Google Safe Browsing v4 Lookup API** (`threatMatches:find`) on the message's URLs — spec verified
+  2026-06-17 (POST with `MALWARE`/`SOCIAL_ENGINEERING` + `ANY_PLATFORM`; `{}` response = clean). Free,
+  non-commercial (user is non-commercial); v4 deprecated ~2027 (revisit v5/Web Risk later).
+- **Generic, configurable number-reputation check** — user supplies a `{number}` URL template + a
+  "flagged" marker substring; flags only on HTTP 2xx AND marker present (conservative, off by default).
+  NOT hardcoded to a specific provider: research found no free US-covering number-reputation API
+  (PhoneBlock is EU-centric and its API was not verifiable), so we don't implement an unverified spec.
+- New `SpamConfig` fields: `number_reputation_url_template`, `number_reputation_flag_substring`.
+- Flow: `spam_classify` runs OFFLINE first (no network on a hit); only if Clean **and** `online_enabled`
+  **and** a provider is configured does it do live lookups. The RwLock guard is dropped before any
+  network `.await`; a network error degrades to Clean (never throws across FFI). Online URLs leave the
+  device only on the user's opt-in (privacy).
+
+**Observability:** every `SpamVerdict` carries `reasons[]` naming the matched indicator + source
+(incl. online error notes when an online check failed); `SpamRefreshResult` reports per-feed counts +
+errors + last-refresh time; `checked_online` flags whether a live lookup ran.
 
 **Status:** host unit tests pass (18/18, `cargo test spam::`). NOT yet verified: live feed download,
 Android `.so` cross-build, and on-device classification of a real incoming SMS (no device in build env).

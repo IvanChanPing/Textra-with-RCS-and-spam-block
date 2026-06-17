@@ -32,6 +32,7 @@
 pub mod engine;
 pub mod extract;
 pub mod feeds;
+pub mod online;
 pub mod store;
 
 use std::sync::RwLock;
@@ -52,8 +53,10 @@ struct SpamState {
     enabled: bool,
     online_enabled: bool,
     cache_path: String,
-    #[allow(dead_code)] // consumed by the Phase B online layer (online.rs)
+    // --- online layer (Phase B); used only when online_enabled is true ---
     safebrowsing_api_key: String,
+    number_reputation_url_template: String,
+    number_reputation_flag_substring: String,
     feeds: Vec<InnerFeedSource>,
     store: IndicatorStore,
 }
@@ -66,6 +69,8 @@ impl Default for SpamState {
             online_enabled: false,
             cache_path: String::new(),
             safebrowsing_api_key: String::new(),
+            number_reputation_url_template: String::new(),
+            number_reputation_flag_substring: String::new(),
             feeds: Vec::new(),
             store: IndicatorStore::default(),
         }
@@ -116,6 +121,12 @@ pub struct SpamConfig {
     pub feeds: Vec<SpamFeedSource>,
     /// Google Safe Browsing API key (one-time). Empty disables online URL lookups.
     pub safebrowsing_api_key: String,
+    /// Optional number-reputation lookup URL with a `{number}` placeholder.
+    /// Empty disables the online number check. (Generic provider — see online.rs.)
+    pub number_reputation_url_template: String,
+    /// Substring that, if present in the number-reputation response body, marks the
+    /// sender as spam. Required (with the template) for the number check to run.
+    pub number_reputation_flag_substring: String,
 }
 
 /// Severity level of a verdict. Mirrors `engine::SpamLevel`.
@@ -207,6 +218,8 @@ pub fn spam_configure(config: SpamConfig) {
     st.online_enabled = config.online_enabled;
     st.cache_path = config.cache_path;
     st.safebrowsing_api_key = config.safebrowsing_api_key;
+    st.number_reputation_url_template = config.number_reputation_url_template;
+    st.number_reputation_flag_substring = config.number_reputation_flag_substring;
     st.feeds = feeds;
     st.configured = true;
 
@@ -302,24 +315,7 @@ pub async fn spam_refresh_feeds() -> SpamRefreshResult {
     }
 }
 
-/// Classify one incoming message. Fast + offline (set lookups only); returns
-/// Clean immediately if the master toggle is off. Async signature reserved for
-/// the Phase B online layer; the offline path performs no network I/O.
-#[uniffi::export(async_runtime = "tokio")]
-pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
-    // No .await is held across the lock guard below.
-    let st = STATE.read().unwrap_or_else(|e| e.into_inner());
-    if !st.enabled {
-        return SpamVerdict {
-            level: SpamLevel::Clean,
-            score: 0,
-            reasons: Vec::new(),
-            matched_indicator: None,
-            matched_source: None,
-            checked_online: false,
-        };
-    }
-    let v = engine::classify_offline(&st.store, &text, &sender);
+fn verdict_to_ffi(v: engine::Verdict) -> SpamVerdict {
     SpamVerdict {
         level: v.level.into(),
         score: v.score,
@@ -328,6 +324,103 @@ pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
         matched_source: v.matched_source,
         checked_online: v.checked_online,
     }
+}
+
+const CLEAN_FFI: fn() -> SpamVerdict = || SpamVerdict {
+    level: SpamLevel::Clean,
+    score: 0,
+    reasons: Vec::new(),
+    matched_indicator: None,
+    matched_source: None,
+    checked_online: false,
+};
+
+/// Classify one incoming message.
+///
+/// Order (minimizes network use + leakage):
+///   1. Master toggle off → Clean immediately.
+///   2. OFFLINE feed match (fast, no I/O). A hit returns immediately — no network.
+///   3. If offline is Clean AND `online_enabled` AND an online provider is
+///      configured → live lookups (Safe Browsing on the URLs, optional number
+///      reputation on the sender). A network error degrades to Clean (never throws).
+///
+/// Async because of step 3; the std RwLock guard is dropped before any `.await`.
+#[uniffi::export(async_runtime = "tokio")]
+pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
+    // Snapshot everything we need, then release the lock before any await.
+    let (online_enabled, offline_verdict, online_cfg) = {
+        let st = STATE.read().unwrap_or_else(|e| e.into_inner());
+        if !st.enabled {
+            return CLEAN_FFI();
+        }
+        let v = engine::classify_offline(&st.store, &text, &sender);
+        let cfg = online::OnlineConfig {
+            safebrowsing_api_key: st.safebrowsing_api_key.clone(),
+            number_reputation_url_template: st.number_reputation_url_template.clone(),
+            number_reputation_flag_substring: st.number_reputation_flag_substring.clone(),
+        };
+        (st.online_enabled, v, cfg)
+    };
+
+    // Offline already flagged it → done, no network.
+    if offline_verdict.level != InnerLevel::Clean {
+        return verdict_to_ffi(offline_verdict);
+    }
+
+    // Offline clean → optional online layer (user opted in + provider configured).
+    if online_enabled && online_cfg.any_enabled() {
+        // Safe Browsing wants URLs; feed it the scheme URLs plus a synthesized
+        // `http://host/` for each bare-domain candidate so bare links are covered.
+        let mut candidates = extract::extract_urls(&text);
+        for h in extract::host_candidates(&text) {
+            let synth = format!("http://{h}/");
+            if !candidates.contains(&synth) {
+                candidates.push(synth);
+            }
+        }
+        let sender_norm = extract::normalize_number(&sender);
+
+        let (hit, errors) = online::check(&online_cfg, &candidates, &sender_norm).await;
+        if let Some(h) = hit {
+            let (level, score, why) = match h.kind {
+                store::MatchKind::Url | store::MatchKind::Host => (
+                    SpamLevel::Scam,
+                    90,
+                    format!("link '{}' flagged by {} ({})", h.indicator, h.source, h.detail),
+                ),
+                store::MatchKind::Number => (
+                    SpamLevel::Spam,
+                    75,
+                    format!("sender '{}' flagged by {}", h.indicator, h.source),
+                ),
+            };
+            return SpamVerdict {
+                level,
+                score,
+                reasons: vec![why],
+                matched_indicator: Some(h.indicator),
+                matched_source: Some(h.source),
+                checked_online: true,
+            };
+        }
+        // Online ran, found nothing: Clean, but mark it checked + surface any
+        // non-fatal errors as diagnostic reasons (no silent failure).
+        let reasons = errors
+            .into_iter()
+            .map(|e| format!("online check note: {e}"))
+            .collect();
+        return SpamVerdict {
+            level: SpamLevel::Clean,
+            score: 0,
+            reasons,
+            matched_indicator: None,
+            matched_source: None,
+            checked_online: true,
+        };
+    }
+
+    // Offline clean, online not used.
+    verdict_to_ffi(offline_verdict)
 }
 
 /// Snapshot of engine status for the settings/diagnostics screen.

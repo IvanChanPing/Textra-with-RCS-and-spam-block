@@ -15,8 +15,20 @@ external service that classifies arbitrary SMS *text* — outside services exist
 **ARCHITECTURE DECISION (2026-06-17):** HYBRID — offline feed-matching (default) + optional online
 lookups (sub-toggle). Non-commercial. Rust returns VERDICT only (pull-style), Kotlin wires UI later.
 
-**NEXT STEP (exact):** Read host-test result (bg task bq5vks5jb). If green → commit Phase A; then
-Phase B (online.rs: Safe Browsing + number reputation) or Phase C Kotlin wiring per user. If red → fix.
+**PHASE A DONE + COMMITTED (2026-06-17, commit 97326728):** 18/18 host tests pass, no warnings,
+crate 0.14.0→0.15.0, CHANGELOG updated. Offline scam/spam engine in `src/spam/` (extract/store/
+feeds/engine/mod). HOST-TESTED ONLY — live download, .so cross-build, on-device = UNVERIFIED.
+
+**PHASE B DONE (2026-06-17) — committing now:** `src/spam/online.rs` (Safe Browsing v4 URL lookup +
+generic configurable number-reputation check) wired into `spam_classify` (offline-first; online only when
+offline Clean + online_enabled + provider configured; guard dropped before .await; net error → Clean).
+SpamConfig +2 fields (number_reputation_url_template, number_reputation_flag_substring). 23/23 host tests
+pass. Live Safe Browsing call NOT tested (needs user key) — only request-builder/response-parser host-tested.
+
+**NEXT STEP (exact):** Await user choice — Phase C (Kotlin wiring: settings toggle + WorkManager feed
+refresh + call spam_classify on each parsed incoming msg off-thread + surface verdict; user device-tests),
+OR try the Android .so cross-build (set ANDROID_NDK_HOME=/opt/android-sdk/ndk/<ver>; cargo ndk) to de-risk.
+TODO at Kotlin-wire time: resolve sender-number proto field (Message.senderParticipant→SmallInfo→number).
 
 **ENV CORRECTION (2026-06-17):** R3 was WRONG — Rust IS installed (cargo not on PATH:
 `export PATH="$HOME/.cargo/bin:$PATH"`; rustc/cargo 1.95; all 4 Android targets + cargo-ndk 4.1.2;
@@ -46,6 +58,30 @@ deps (hand-rolled extraction to keep .so small). Files:
 DESIGN NOTES: pull-style FFI (Kotlin calls spam_classify on each parsed incoming msg off-thread) →
 NO change to RustEventSink. online_enabled + safebrowsing_api_key wired into config but online layer
 is Phase B (not yet implemented). Refresh never wipes a good cache on empty/failed download.
+
+## PHASE B PRE-BUILD RISK PASS (2026-06-17) — online lookups
+USER CHOSE Phase B. Build `spam/online.rs` behind `online_enabled`.
+VERIFIED (WebFetch this session): Google Safe Browsing v4 Lookup API —
+  POST `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=KEY`; body
+  client{clientId,clientVersion}+threatInfo{threatTypes:["MALWARE","SOCIAL_ENGINEERING"],
+  platformTypes:["ANY_PLATFORM"](valid enum),threatEntryTypes:["URL"],threatEntries:[{url}]};
+  response `{}` = no match, else `{matches:[{threatType,threat:{url},...}]}`. Free, NON-commercial
+  (user OK), v4 deprecated ~2027.
+UNVERIFIED → NOT hardcoding: PhoneBlock exact API (page JS-rendered, WebFetch empty; GPL-3.0; EU-centric).
+FEASIBILITY R-B1: no free US-covering number-reputation API; the good ones (Call Control, RoboKiller,
+  Bandwidth, Neutrino) are commercial. → number reputation = GENERIC configurable HTTP provider
+  (off by default; user gives url_template with {number} + a flag-substring; flags only on HTTP 2xx
+  AND body contains the substring — conservative to avoid FPs). PhoneBlock/commercial can be plugged later.
+R-B2 privacy: online sends URLs (→Google) / number (→configured endpoint) off device. Gated by
+  online_enabled opt-in. Document.
+R-B3 latency/failure: online MUST NOT block the offline verdict. Order: run offline first; if offline
+  hit → return it (no network). If offline Clean AND online_enabled → await online; on any network error
+  degrade to Clean with a reason note; NEVER throw. checked_online=true when online ran.
+R-B4 locks: snapshot config + drop RwLock guard BEFORE any .await.
+OBSERVABILITY: verdict.reasons name the online source; SpamConfig gains safebrowsing_api_key (exists),
+  number_reputation_url_template, number_reputation_flag_substring.
+VERIFY REACHABILITY: pure request-builder + response-parser host-unit-tested with sample JSON; live SB
+  call needs the user's key (device/key test script). Status will be HOST-TESTED (helpers) only.
 
 ## DESIGN (grounded in code read this session)
 **FFI style (VERIFIED):** UniFFI proc-macro (`setup_scaffolding!`, `#[uniffi::export]`,
