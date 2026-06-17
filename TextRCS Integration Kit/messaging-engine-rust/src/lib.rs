@@ -81,6 +81,10 @@ pub mod client;
 pub mod ffi;
 pub mod util;
 pub mod crypto;
+// On-device scam/spam protection ("Scam & Spam Protection" toggle). Classifies
+// incoming messages by matching links/sender against external threat feeds.
+// Pull-style FFI: spam_configure / spam_refresh_feeds / spam_classify / spam_status.
+pub mod spam;
 
 // --- Re-exports for UniFFI's generated bindings ---
 pub use crate::client::Client;

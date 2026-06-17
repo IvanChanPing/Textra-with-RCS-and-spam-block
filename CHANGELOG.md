@@ -1,5 +1,42 @@
 # TextRCS Changelog
 
+## [Unreleased] — 2026-06-17 — Scam & Spam Protection engine, Phase A (offline core) — host-tested, device-UNVERIFIED
+
+New on-device scam/spam protection in the Rust engine (`textrcs_libgm` 0.14.0 → 0.15.0).
+Built per the user's decision: **use external threat intelligence (not a home-grown
+classifier), as a toggle**, hybrid = offline downloadable feeds by default + an optional
+online sub-toggle (online layer is Phase B, not yet built).
+
+**What it does:** classifies an incoming message by matching the links/sender it contains
+against external threat feeds, fully offline at classify time. No message content leaves the
+device; feeds are *downloaded* and matched locally.
+
+**New module `src/spam/`** (no new crate dependencies — extraction is hand-rolled to keep the
+shipped `.so` small):
+- `extract.rs` — pull URLs / hostnames / phone numbers from message text; normalize; subdomain
+  matching via `parent_domains` (a blocked `bad.com` also flags `login.bad.com`).
+- `store.rs` — `IndicatorStore` (host / URL / number sets) + `match_candidates` (URL > Host >
+  Number priority) + atomic JSON disk cache (`load`/`save`; a missing cache is not an error).
+- `feeds.rs` — parse + download feeds. Selected feeds (verified 2026-06-17):
+  **OpenPhish Community** (`raw.githubusercontent.com/openphish/public_feed/.../feed.txt`, no key,
+  12h refresh) and **URLhaus** (abuse.ch; Auth-Key mandatory since 2025-06-30, so the feed URL+key
+  is user-configurable). A failed/empty download never wipes a good cached index.
+- `engine.rs` — `classify_offline → Verdict`: malicious URL → Scam (95), malicious host → Scam (90),
+  spam sender number → Spam (80), else Clean (0). No keyword guessing — absence of a feed hit is Clean.
+- `mod.rs` — UniFFI surface (**pull-style**, so the existing `RustEventSink` is unchanged):
+  `spam_configure` (sync; warms the index from cache), `spam_refresh_feeds` (async; WorkManager-driven),
+  `spam_classify` (async; master-toggle gated; offline now), `spam_status` (diagnostics). Records:
+  `SpamConfig`, `SpamFeedSource`, `SpamVerdict`, `SpamRefreshResult`, `SpamFeedResult`, `SpamStatus`;
+  enums `SpamLevel`, `SpamFeedKind`.
+
+**Observability:** every `SpamVerdict` carries `reasons[]` naming the matched indicator + source;
+`SpamRefreshResult` reports per-feed counts + errors + last-refresh time.
+
+**Status:** host unit tests pass (18/18, `cargo test spam::`). NOT yet verified: live feed download,
+Android `.so` cross-build, and on-device classification of a real incoming SMS (no device in build env).
+Kotlin wiring (settings toggle, WorkManager refresh, call `spam_classify` on incoming, surface verdict)
+is **Phase C** — not started. Journal: `docs/SCAM_SPAM_PROTECTION_PLAN.md`.
+
 ## v1.05.0 — 2026-06-15 — Wake-on-Google-Messages-notification receive (zero background battery) — device-UNVERIFIED
 
 Replaces the always-on foreground long-poll (`ReceiveService` + persistent

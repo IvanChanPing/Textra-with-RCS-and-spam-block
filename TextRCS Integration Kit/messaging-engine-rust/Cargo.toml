@@ -1,6 +1,6 @@
 [package]
 name = "textrcs_libgm"
-version = "0.14.0"
+version = "0.15.0"
 edition = "2021"
 rust-version = "1.95"
 description = "Rust port of mautrix-gmessages/pkg/libgm. JNI-bridged for the textrcs-standalone Android app."
@@ -96,7 +96,7 @@ uniffi              = { version = "0.28", features = ["build"] }
 default = []
 # Enable to skip the JNI/UniFFI export layer when building the crate for
 # host-side cargo test (faster turnaround for unit-testing the protocol
-# layer without an emulator).
+# layer without an Android build).
 no-ffi = []
 
 # --- Profile tuning for shipped Android .so size ---
