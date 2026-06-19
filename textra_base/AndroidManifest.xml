@@ -3046,6 +3046,12 @@
         </activity-alias>
         <activity android:name="com.mplus.lib.ui.initialsync.InitialSyncActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.InitialSyncActivity"/>
         <activity android:name="com.textrcs.ui.pairing.PairingActivity" android:exported="true" android:icon="@drawable/icon_ffff6d00" android:label="Textra 2 Pair" android:screenOrientation="portrait" android:theme="@android:style/Theme.Material.Light.NoActionBar"/>
+        <activity android:name="com.textrcs.spam.SpamSettingsActivity" android:exported="true" android:icon="@drawable/icon_ffff6d00" android:label="Textra Spam Filter" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <service android:name="com.textrcs.receive.ReceiveService" android:exported="false" android:foregroundServiceType="dataSync"/>
         <service android:name="com.textrcs.wake.GmNotificationListener" android:exported="true" android:label="Textra 2 message wake-up" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>

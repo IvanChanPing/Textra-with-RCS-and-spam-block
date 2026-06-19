@@ -221,26 +221,49 @@ object SpamGuard {
         }
     }
 
-    // ── Settings setters (used by a future settings UI; all re-configure Rust) ──
+    /**
+     * Re-push config to Rust OFF the main thread. `configure()` reloads the
+     * on-disk indicator cache (file I/O, possibly multi-MB), so a settings toggle
+     * must never call it on the UI thread — that would risk an ANR.
+     */
+    private fun reconfigureAsync(context: Context) {
+        scope.launch { configure(context) }
+    }
+
+    /** Trigger a feed refresh now (e.g. a "Refresh feeds" button). Async. */
+    fun refreshNow(context: Context) {
+        ensureConfigured(context)
+        scope.launch {
+            try {
+                val r = spamRefreshFeeds()
+                Log.i(TAG, "manual refresh: ok=${r.ok} indicators=${r.totalIndicators}")
+                ScreenTracer.note("SPAM manual refresh ok=${r.ok} indicators=${r.totalIndicators}")
+            } catch (e: Throwable) {
+                Log.w(TAG, "refreshNow failed: ${e.message}")
+            }
+        }
+    }
+
+    // ── Settings setters (used by SpamSettingsActivity; all re-configure Rust) ──
 
     fun setEnabled(context: Context, on: Boolean) {
         prefs(context).edit().putBoolean(K_ENABLED, on).apply()
-        configure(context)
+        reconfigureAsync(context)
     }
 
     fun setOnlineEnabled(context: Context, on: Boolean) {
         prefs(context).edit().putBoolean(K_ONLINE, on).apply()
-        configure(context)
+        reconfigureAsync(context)
     }
 
     fun setSafeBrowsingKey(context: Context, key: String) {
         prefs(context).edit().putString(K_SB_KEY, key).apply()
-        configure(context)
+        reconfigureAsync(context)
     }
 
     fun setUrlhausFeedUrl(context: Context, url: String) {
         prefs(context).edit().putString(K_URLHAUS, url).apply()
-        configure(context)
+        reconfigureAsync(context)
     }
 
     fun setNumberReputation(context: Context, urlTemplate: String, flagSubstring: String) {
@@ -248,8 +271,16 @@ object SpamGuard {
             .putString(K_NUM_TMPL, urlTemplate)
             .putString(K_NUM_FLAG, flagSubstring)
             .apply()
-        configure(context)
+        reconfigureAsync(context)
     }
+
+    // ── Current setting reads (used by SpamSettingsActivity to populate controls) ──
+    fun isEnabled(context: Context) = prefs(context).getBoolean(K_ENABLED, true)
+    fun isOnlineEnabled(context: Context) = prefs(context).getBoolean(K_ONLINE, false)
+    fun getSafeBrowsingKey(context: Context) = prefs(context).getString(K_SB_KEY, "") ?: ""
+    fun getUrlhausFeedUrl(context: Context) = prefs(context).getString(K_URLHAUS, "") ?: ""
+    fun getNumberTemplate(context: Context) = prefs(context).getString(K_NUM_TMPL, "") ?: ""
+    fun getNumberFlag(context: Context) = prefs(context).getString(K_NUM_FLAG, "") ?: ""
 
     /** Current status (for a settings/diagnostics screen). */
     fun status() = try {

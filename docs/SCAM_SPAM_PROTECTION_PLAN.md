@@ -19,7 +19,24 @@ lookups (sub-toggle). Non-commercial. Rust returns VERDICT only (pull-style), Ko
 crate 0.14.0→0.15.0, CHANGELOG updated. Offline scam/spam engine in `src/spam/` (extract/store/
 feeds/engine/mod). HOST-TESTED ONLY — live download, .so cross-build, on-device = UNVERIFIED.
 
-**PHASE C BUILT (2026-06-19) — committing now. APK = textra2_v1.06.0.apk (98M, gitignored, on disk).**
+**SETTINGS UI BUILT (2026-06-19) — committing now. APK = textra2_v1.07.0.apk.** build.sh GREEN: kotlinc
+clean, SpamSettingsActivity.smali merged, MAIN/LAUNCHER intent-filter for com.textrcs.spam.SpamSettingsActivity
+confirmed in the packaged APK manifest (aapt2). UI click-path UNVERIFIED (no device) → user taps the
+"Textra Spam Filter" drawer icon to test. NEXT: commit; feature COMPLETE pending user device test.
+
+**SETTINGS UI ADDED (2026-06-19):** NEW `inject_src/com/textrcs/spam/
+SpamSettingsActivity.kt` = standalone programmatic settings screen (own LAUNCHER icon "Textra Spam
+Filter", manifest activity added reusing @drawable/icon_ffff6d00). Controls: master switch (enabled),
+online switch (onlineEnabled) + red privacy caption, Safe Browsing key field, URLhaus URL field,
+number-rep template+flag fields, Save button, "Refresh feeds now" button, status line (indicators/
+last-refresh/on-off). SpamGuard gained reconfigureAsync (setters now reconfigure OFF main thread →
+no ANR from cache reload), refreshNow, and read-getters (isEnabled/isOnlineEnabled/get*). Switches
+apply instantly; text fields on Save. NEXT: confirm build.sh green → copy APK to textra2_v1.07.0.apk →
+commit → user device-tests (open the new icon, toggle, refresh). UI click-path UNVERIFIED (no device).
+
+**PHASE C COMMITTED (2026-06-19, commit 73999322). APK = textra2_v1.06.0.apk (98M, gitignored, on disk).**
+ALL THREE PHASES DONE + COMMITTED (A=97326728 offline, B=ab4287ac online, C=73999322 wiring). Remaining =
+USER ON-DEVICE TEST (script in this doc) — that is the only thing between "built" and "verified working".
 build.sh GREEN: kotlinc compiled SpamGuard.kt (warnings only), SpamGuard.smali + regenerated bindings
 merged into smali_classes7, signed APK at build/textra2.apk → copied to textra2_v1.06.0.apk. Verified:
 the packaged APK's arm64 .so contains `uniffi_textrcs_libgm_fn_func_spam_classify`. No manifest/perm

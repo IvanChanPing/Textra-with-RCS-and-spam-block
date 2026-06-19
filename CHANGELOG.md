@@ -1,5 +1,26 @@
 # TextRCS Changelog
 
+## v1.07.0 — 2026-06-19 — Scam & Spam Protection: settings UI (toggles) — BUILT, UI-click-path UNVERIFIED
+
+Adds a visible settings screen for the scam/spam feature (the toggles deferred from v1.06.0).
+- `inject_src/com/textrcs/spam/SpamSettingsActivity.kt` (NEW) — a standalone, programmatically-built
+  settings screen (no layout XML / host R class, same style as the injected `PairingActivity`) with its
+  own launcher icon **"Textra Spam Filter"** (manifest activity + MAIN/LAUNCHER intent-filter, reusing
+  `@drawable/icon_ffff6d00`). Controls: master "Scam & spam protection" switch; "Online lookups (Safe
+  Browsing)" switch with a red privacy caption; Safe Browsing API key field; optional URLhaus feed URL
+  field; advanced number-reputation template + flag fields; "Save settings" button; "Refresh threat
+  feeds now" button; and a live status line (indicators loaded / last refresh / on-off). Switches apply
+  instantly; text fields apply on Save.
+- `SpamGuard.kt` — setters now reconfigure the engine OFF the main thread (`reconfigureAsync`) so a
+  toggle never reloads the on-disk cache on the UI thread (ANR-safe); added `refreshNow` and read-getters
+  (`isEnabled`/`isOnlineEnabled`/`get*`) for the screen to populate its controls.
+- `textra_base/AndroidManifest.xml` — declares the new launcher activity. No new permissions.
+
+Reachable with zero adb / zero per-boot steps (its own drawer icon). build.sh GREEN (kotlinc clean;
+`SpamSettingsActivity` smali merged; launcher intent-filter confirmed in the packaged APK manifest via
+aapt2). **UI click-path UNVERIFIED** — no device in the build env; tap-test the screen on a phone.
+APK: `textra2_v1.07.0.apk`.
+
 ## v1.06.0 — 2026-06-19 — Scam & Spam Protection (Phase A offline + B online + C Kotlin wiring) — BUILT, device-UNVERIFIED
 
 **Phase C (this version) — Kotlin wiring + APK build.** The engine from Phase A/B is now wired into

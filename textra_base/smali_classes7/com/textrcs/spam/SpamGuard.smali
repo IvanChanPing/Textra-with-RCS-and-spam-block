@@ -6,7 +6,7 @@
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\t\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u0010\u0010\u001b\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J&\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u0004J\u000e\u0010\"\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0010\u0010#\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aH\u0002J\u000e\u0010$\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0018\u0010%\u001a\n \'*\u0004\u0018\u00010&0&2\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u0016\u0010(\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010)\u001a\u00020\u0014J\u001e\u0010*\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010+\u001a\u00020\u00042\u0006\u0010,\u001a\u00020\u0004J\u0016\u0010-\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010)\u001a\u00020\u0014J\u0016\u0010.\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010/\u001a\u00020\u0004J\u0016\u00100\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00101\u001a\u00020\u0004J\u0008\u00102\u001a\u0004\u0018\u000103J \u00104\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020\u00042\u0006\u00105\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
+        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\t\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u0010\u0010\u001b\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J&\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u0004J\u000e\u0010\"\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0010\u0010#\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aH\u0002J\u000e\u0010$\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010%\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010&\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010\'\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010(\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010)\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010*\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0018\u0010+\u001a\n -*\u0004\u0018\u00010,0,2\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u0010\u0010.\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aH\u0002J\u000e\u0010/\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0016\u00100\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00101\u001a\u00020\u0014J\u001e\u00102\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00103\u001a\u00020\u00042\u0006\u00104\u001a\u00020\u0004J\u0016\u00105\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00101\u001a\u00020\u0014J\u0016\u00106\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00107\u001a\u00020\u0004J\u0016\u00108\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00109\u001a\u00020\u0004J\u0008\u0010:\u001a\u0004\u0018\u00010;J \u0010<\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020\u00042\u0006\u0010=\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/spam/SpamGuard;",
@@ -45,10 +45,18 @@
         "body",
         "configure",
         "ensureConfigured",
+        "getNumberFlag",
+        "getNumberTemplate",
+        "getSafeBrowsingKey",
+        "getUrlhausFeedUrl",
+        "isEnabled",
+        "isOnlineEnabled",
         "maybeRefresh",
         "prefs",
         "Landroid/content/SharedPreferences;",
         "kotlin.jvm.PlatformType",
+        "reconfigureAsync",
+        "refreshNow",
         "setEnabled",
         "on",
         "setNumberReputation",
@@ -387,6 +395,35 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method private final reconfigureAsync(Landroid/content/Context;)V
+    .registers 8
+    .param p1, "context"    # Landroid/content/Context;
+
+    .line 230
+    sget-object v0, Lcom/textrcs/spam/SpamGuard;->scope:Lkotlinx/coroutines/CoroutineScope;
+
+    new-instance v1, Lcom/textrcs/spam/SpamGuard$reconfigureAsync$1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lcom/textrcs/spam/SpamGuard$reconfigureAsync$1;-><init>(Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
+
+    move-object v3, v1
+
+    check-cast v3, Lkotlin/jvm/functions/Function2;
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    invoke-static/range {v0 .. v5}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+
+    .line 231
+    return-void
 .end method
 
 .method private final storeVerdict(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
@@ -815,6 +852,182 @@
     throw p1
 .end method
 
+.method public final getNumberFlag(Landroid/content/Context;)Ljava/lang/String;
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 283
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "number_rep_flag_substr"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_14
+
+    goto :goto_15
+
+    :cond_14
+    move-object v2, v0
+
+    :goto_15
+    return-object v2
+.end method
+
+.method public final getNumberTemplate(Landroid/content/Context;)Ljava/lang/String;
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 282
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "number_rep_url_template"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_14
+
+    goto :goto_15
+
+    :cond_14
+    move-object v2, v0
+
+    :goto_15
+    return-object v2
+.end method
+
+.method public final getSafeBrowsingKey(Landroid/content/Context;)Ljava/lang/String;
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 280
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "safebrowsing_key"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_14
+
+    goto :goto_15
+
+    :cond_14
+    move-object v2, v0
+
+    :goto_15
+    return-object v2
+.end method
+
+.method public final getUrlhausFeedUrl(Landroid/content/Context;)Ljava/lang/String;
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 281
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "urlhaus_feed_url"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_14
+
+    goto :goto_15
+
+    :cond_14
+    move-object v2, v0
+
+    :goto_15
+    return-object v2
+.end method
+
+.method public final isEnabled(Landroid/content/Context;)Z
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 278
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "enabled"
+
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isOnlineEnabled(Landroid/content/Context;)Z
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 279
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "online_enabled"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final maybeRefresh(Landroid/content/Context;)V
     .registers 12
     .param p1, "context"    # Landroid/content/Context;
@@ -869,6 +1082,42 @@
     return-void
 .end method
 
+.method public final refreshNow(Landroid/content/Context;)V
+    .registers 9
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 235
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->ensureConfigured(Landroid/content/Context;)V
+
+    .line 236
+    sget-object v1, Lcom/textrcs/spam/SpamGuard;->scope:Lkotlinx/coroutines/CoroutineScope;
+
+    new-instance v0, Lcom/textrcs/spam/SpamGuard$refreshNow$1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2}, Lcom/textrcs/spam/SpamGuard$refreshNow$1;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    move-object v4, v0
+
+    check-cast v4, Lkotlin/jvm/functions/Function2;
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+
+    .line 245
+    return-void
+.end method
+
 .method public final setEnabled(Landroid/content/Context;Z)V
     .registers 5
     .param p1, "context"    # Landroid/content/Context;
@@ -878,7 +1127,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 227
+    .line 250
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -895,10 +1144,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 228
-    invoke-virtual {p0, p1}, Lcom/textrcs/spam/SpamGuard;->configure(Landroid/content/Context;)V
+    .line 251
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 229
+    .line 252
     return-void
 .end method
 
@@ -920,7 +1169,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 247
+    .line 270
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -929,27 +1178,27 @@
 
     move-result-object v0
 
-    .line 248
+    .line 271
     const-string v1, "number_rep_url_template"
 
     invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 249
+    .line 272
     const-string v1, "number_rep_flag_substr"
 
     invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 250
+    .line 273
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 251
-    invoke-virtual {p0, p1}, Lcom/textrcs/spam/SpamGuard;->configure(Landroid/content/Context;)V
+    .line 274
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 252
+    .line 275
     return-void
 .end method
 
@@ -962,7 +1211,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 232
+    .line 255
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -979,10 +1228,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 233
-    invoke-virtual {p0, p1}, Lcom/textrcs/spam/SpamGuard;->configure(Landroid/content/Context;)V
+    .line 256
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 234
+    .line 257
     return-void
 .end method
 
@@ -999,7 +1248,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 237
+    .line 260
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1016,10 +1265,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 238
-    invoke-virtual {p0, p1}, Lcom/textrcs/spam/SpamGuard;->configure(Landroid/content/Context;)V
+    .line 261
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 239
+    .line 262
     return-void
 .end method
 
@@ -1036,7 +1285,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 242
+    .line 265
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1053,20 +1302,20 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 243
-    invoke-virtual {p0, p1}, Lcom/textrcs/spam/SpamGuard;->configure(Landroid/content/Context;)V
+    .line 266
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 244
+    .line 267
     return-void
 .end method
 
 .method public final status()Luniffi/textrcs_libgm/SpamStatus;
     .registers 4
 
-    .line 255
+    .line 286
     nop
 
-    .line 256
+    .line 287
     :try_start_1
     invoke-static {}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->spamStatus()Luniffi/textrcs_libgm/SpamStatus;
 
@@ -1076,11 +1325,11 @@
 
     goto :goto_25
 
-    .line 257
+    .line 288
     :catchall_6
     move-exception v0
 
-    .line 258
+    .line 289
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1112,7 +1361,7 @@
 
     move-object v0, v1
 
-    .line 259
+    .line 290
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_25
     return-object v0
