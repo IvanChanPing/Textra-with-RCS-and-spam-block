@@ -1,6 +1,33 @@
 # TextRCS Changelog
 
-## [Unreleased] — 2026-06-17 — Scam & Spam Protection engine, Phase A (offline) + Phase B (online lookups) — host-tested, device-UNVERIFIED
+## v1.06.0 — 2026-06-19 — Scam & Spam Protection (Phase A offline + B online + C Kotlin wiring) — BUILT, device-UNVERIFIED
+
+**Phase C (this version) — Kotlin wiring + APK build.** The engine from Phase A/B is now wired into
+the app and packaged (`textra2_v1.06.0.apk`). Files:
+- `inject_src/com/textrcs/spam/SpamGuard.kt` (NEW) — the single integration object. Builds a
+  `SpamConfig` from the `textrcs_spam` prefs + filesDir cache and calls `spamConfigure`; opportunistically
+  calls `spamRefreshFeeds` when the cached index is ≥12h old (only while the app is already awake — no
+  always-on job, no per-boot setup; config + cache survive reboot); classifies each incoming message via
+  `spamClassify` **off-thread, fire-and-forget** (never blocks or gates delivery — verdict-only). Flagged
+  verdicts are logged (`TextRCSSpamGuard`) + stored (capped) for a future UI. Defaults: protection ON,
+  online OFF, OpenPhish feed built-in, URLhaus optional; programmatic setters for a later settings screen.
+- `inject_src/com/textrcs/receive/IncomingMessageHandler.kt` — calls `SpamGuard.classifyAsync` for each
+  INCOMING, sender-resolved message (after the outgoing/tombstone/HOLD guards), before delivery.
+- `inject_src/com/textrcs/bridge/RustBridge.kt` — `SpamGuard.configure` + `maybeRefresh` on connect.
+- `inject_src/uniffi/textrcs_libgm/textrcs_libgm.kt` — regenerated UniFFI bindings (adds `spamConfigure`/
+  `spamClassify`/`spamRefreshFeeds`/`spamStatus` + Spam* records/enums).
+- `textra_base/lib/<abi>/libtextrcs_libgm.so` — rebuilt for all 4 ABIs (cargo-ndk, NDK 27.1, release);
+  spam symbols verified present in the packaged APK.
+- No manifest/permission changes (no new components; INTERNET already held).
+
+**Build status:** `build.sh` compiles the injected Kotlin clean (warnings only) and produces a signed
+98M APK; `SpamGuard.smali` + regenerated bindings merged into `smali_classes7`. **NOT device-verified** —
+on-device classification of a real incoming SMS, live feed download, and the live Safe Browsing call are
+UNVERIFIED in this build env. Run the on-device test script in `docs/SCAM_SPAM_PROTECTION_PLAN.md`.
+
+**Engine (Phase A + B), `textrcs_libgm` 0.14.0 → 0.15.0** — built per the user's decision: use external
+threat intelligence (not a home-grown classifier), as a toggle; hybrid = offline downloadable feeds by
+default + an optional online sub-toggle.
 
 New on-device scam/spam protection in the Rust engine (`textrcs_libgm` 0.14.0 → 0.15.0).
 Built per the user's decision: **use external threat intelligence (not a home-grown

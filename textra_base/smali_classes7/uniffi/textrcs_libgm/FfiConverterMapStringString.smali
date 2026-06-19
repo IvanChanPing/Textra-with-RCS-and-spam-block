@@ -20,7 +20,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterMapStringString\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,4268:1\n125#2:4269\n152#2,3:4270\n215#2,2:4273\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterMapStringString\n*L\n4199#1:4269\n4199#1:4270,3\n4211#1:4273,2\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterMapStringString\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,4987:1\n125#2:4988\n152#2,3:4989\n215#2,2:4992\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterMapStringString\n*L\n4849#1:4988\n4849#1:4989,3\n4861#1:4992,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -74,7 +74,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 4185
+    .line 4835
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,7 +86,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4185
+    .line 4835
     move-object v0, p1
 
     check-cast v0, Ljava/util/Map;
@@ -117,17 +117,17 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4198
+    .line 4848
     const-wide/16 v2, 0x4
 
-    .line 4199
+    .line 4849
     .local v2, "spaceForMapSize":J
     move-object/from16 v0, p1
 
     .local v0, "$this$map$iv":Ljava/util/Map;
     const/4 v4, 0x0
 
-    .line 4269
+    .line 4988
     .local v4, "$i$f$map":I
     new-instance v5, Ljava/util/ArrayList;
 
@@ -145,7 +145,7 @@
     .local v6, "$this$mapTo$iv$iv":Ljava/util/Map;
     const/4 v7, 0x0
 
-    .line 4270
+    .line 4989
     .local v7, "$i$f$mapTo":I
     invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -168,11 +168,11 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 4271
+    .line 4990
     .local v9, "item$iv$iv":Ljava/util/Map$Entry;
     const/4 v10, 0x0
 
-    .line 4199
+    .line 4849
     .local v10, "$i$a$-map-FfiConverterMapStringString$allocationSize$spaceForChildren$1":I
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -187,7 +187,7 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 4200
+    .line 4850
     .local v12, "v":Ljava/lang/String;
     sget-object v13, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
@@ -195,7 +195,7 @@
 
     move-result-wide v13
 
-    .line 4201
+    .line 4851
     sget-object v15, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v15, v12}, Luniffi/textrcs_libgm/FfiConverterString;->allocationSize-I7RO_PI(Ljava/lang/String;)J
@@ -208,7 +208,7 @@
 
     move-result-wide v13
 
-    .line 4200
+    .line 4850
     nop
 
     .end local v10    # "$i$a$-map-FfiConverterMapStringString$allocationSize$spaceForChildren$1":I
@@ -218,12 +218,12 @@
 
     move-result-object v10
 
-    .line 4271
+    .line 4990
     invoke-interface {v5, v10}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_21
 
-    .line 4272
+    .line 4991
     .end local v9    # "item$iv$iv":Ljava/util/Map$Entry;
     :cond_54
     nop
@@ -233,22 +233,22 @@
     .end local v7    # "$i$f$mapTo":I
     check-cast v5, Ljava/util/List;
 
-    .line 4269
+    .line 4988
     nop
 
     .end local v0    # "$this$map$iv":Ljava/util/Map;
     .end local v4    # "$i$f$map":I
     check-cast v5, Ljava/lang/Iterable;
 
-    .line 4202
+    .line 4852
     invoke-static {v5}, Lkotlin/collections/UCollectionsKt;->sumOfULong(Ljava/lang/Iterable;)J
 
     move-result-wide v4
 
-    .line 4199
+    .line 4849
     nop
 
-    .line 4203
+    .line 4853
     .local v4, "spaceForChildren":J
     add-long v6, v2, v4
 
@@ -263,7 +263,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4185
+    .line 4835
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -279,7 +279,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4185
+    .line 4835
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterMapStringString;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/util/Map;
 
     move-result-object v0
@@ -302,7 +302,7 @@
         }
     .end annotation
 
-    .line 4185
+    .line 4835
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lift(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -316,7 +316,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4185
+    .line 4835
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterMapStringString;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/util/Map;
 
     move-result-object v0
@@ -339,7 +339,7 @@
         }
     .end annotation
 
-    .line 4185
+    .line 4835
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -353,7 +353,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4185
+    .line 4835
     move-object v0, p1
 
     check-cast v0, Ljava/util/Map;
@@ -369,7 +369,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4185
+    .line 4835
     move-object v0, p1
 
     check-cast v0, Ljava/util/Map;
@@ -395,7 +395,7 @@
         }
     .end annotation
 
-    .line 4185
+    .line 4835
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lower(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -407,7 +407,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4185
+    .line 4835
     move-object v0, p1
 
     check-cast v0, Ljava/util/Map;
@@ -433,7 +433,7 @@
         }
     .end annotation
 
-    .line 4185
+    .line 4835
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -445,7 +445,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4185
+    .line 4835
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterMapStringString;->read(Ljava/nio/ByteBuffer;)Ljava/util/Map;
 
     move-result-object v0
@@ -472,12 +472,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4187
+    .line 4837
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 4188
+    .line 4838
     .local v0, "len":I
     invoke-static {v0}, Lkotlin/collections/MapsKt;->createMapBuilder(I)Ljava/util/Map;
 
@@ -488,7 +488,7 @@
     .local v2, "$this$read_u24lambda_u241":Ljava/util/Map;
     const/4 v3, 0x0
 
-    .line 4189
+    .line 4839
     .local v3, "$i$a$-buildMap-FfiConverterMapStringString$read$1":I
     const/4 v4, 0x0
 
@@ -500,7 +500,7 @@
     .local v5, "it":I
     const/4 v6, 0x0
 
-    .line 4190
+    .line 4840
     .local v6, "$i$a$-repeat-FfiConverterMapStringString$read$1$1":I
     sget-object v7, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
@@ -508,7 +508,7 @@
 
     move-result-object v7
 
-    .line 4191
+    .line 4841
     .local v7, "k":Ljava/lang/String;
     sget-object v8, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
@@ -516,14 +516,14 @@
 
     move-result-object v8
 
-    .line 4192
+    .line 4842
     .local v8, "v":Ljava/lang/String;
     invoke-interface {v2, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4193
+    .line 4843
     nop
 
-    .line 4189
+    .line 4839
     .end local v5    # "it":I
     .end local v6    # "$i$a$-repeat-FfiConverterMapStringString$read$1$1":I
     .end local v7    # "k":Ljava/lang/String;
@@ -532,11 +532,11 @@
 
     goto :goto_10
 
-    .line 4194
+    .line 4844
     :cond_27
     nop
 
-    .line 4188
+    .line 4838
     .end local v2    # "$this$read_u24lambda_u241":Ljava/util/Map;
     .end local v3    # "$i$a$-buildMap-FfiConverterMapStringString$read$1":I
     invoke-static {v1}, Lkotlin/collections/MapsKt;->build(Ljava/util/Map;)Ljava/util/Map;
@@ -551,7 +551,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4185
+    .line 4835
     move-object v0, p1
 
     check-cast v0, Ljava/util/Map;
@@ -585,20 +585,20 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4207
+    .line 4857
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4211
+    .line 4861
     move-object v0, p1
 
     .local v0, "$this$forEach$iv":Ljava/util/Map;
     const/4 v1, 0x0
 
-    .line 4273
+    .line 4992
     .local v1, "$i$f$forEach":I
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -624,7 +624,7 @@
     .local v3, "element$iv":Ljava/util/Map$Entry;
     const/4 v4, 0x0
 
-    .line 4211
+    .line 4861
     .local v4, "$i$a$-forEach-FfiConverterMapStringString$write$1":I
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -639,21 +639,21 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 4212
+    .line 4862
     .local v6, "v":Ljava/lang/String;
     sget-object v7, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v7, v5, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 4213
+    .line 4863
     sget-object v7, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v7, v6, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 4214
+    .line 4864
     nop
 
-    .line 4273
+    .line 4992
     .end local v4    # "$i$a$-forEach-FfiConverterMapStringString$write$1":I
     .end local v5    # "k":Ljava/lang/String;
     .end local v6    # "v":Ljava/lang/String;
@@ -662,11 +662,11 @@
     .end local v3    # "element$iv":Ljava/util/Map$Entry;
     goto :goto_1b
 
-    .line 4274
+    .line 4993
     :cond_41
     nop
 
-    .line 4215
+    .line 4865
     .end local v0    # "$this$forEach$iv":Ljava/util/Map;
     .end local v1    # "$i$f$forEach":I
     return-void

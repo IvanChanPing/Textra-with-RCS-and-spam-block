@@ -123,7 +123,7 @@
     .registers 12
     .param p1, "context"    # Landroid/content/Context;
 
-    .line 214
+    .line 224
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v1, 0x2
@@ -140,7 +140,7 @@
 
     return-void
 
-    .line 215
+    .line 225
     :cond_d
     sget-object v0, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
 
@@ -148,7 +148,7 @@
 
     return-void
 
-    .line 216
+    .line 226
     .local v0, "rc":Luniffi/textrcs_libgm/RustClient;
     :cond_12
     sget-object v4, Lcom/textrcs/bridge/RustBridge;->scope:Lkotlinx/coroutines/CoroutineScope;
@@ -171,7 +171,7 @@
 
     invoke-static/range {v4 .. v9}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 228
+    .line 238
     return-void
 .end method
 
@@ -291,12 +291,12 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 306
+    .line 316
     sget-boolean v0, Lcom/textrcs/bridge/RustBridge;->connected:Z
 
     if-nez v0, :cond_22
 
-    .line 307
+    .line 317
     invoke-virtual {p0, p1}, Lcom/textrcs/bridge/RustBridge;->start(Landroid/content/Context;)Z
 
     move-result v0
@@ -305,7 +305,7 @@
 
     goto :goto_22
 
-    .line 308
+    .line 318
     :cond_1a
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -315,14 +315,14 @@
 
     throw v0
 
-    .line 311
+    .line 321
     :cond_22
     :goto_22
     sget-object v0, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
 
     if-eqz v0, :cond_72
 
-    .line 312
+    .line 322
     .local v0, "rc":Luniffi/textrcs_libgm/RustClient;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -360,7 +360,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 313
+    .line 323
     new-instance v1, Lcom/textrcs/bridge/RustBridge$downloadMedia$bytes$1;
 
     const/4 v2, 0x0
@@ -377,7 +377,7 @@
 
     check-cast v1, [B
 
-    .line 314
+    .line 324
     .local v1, "bytes":[B
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -401,10 +401,10 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 315
+    .line 325
     return-object v1
 
-    .line 311
+    .line 321
     .end local v0    # "rc":Luniffi/textrcs_libgm/RustClient;
     .end local v1    # "bytes":[B
     :cond_72
@@ -425,7 +425,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 264
+    .line 274
     new-instance v0, Lcom/textrcs/protocol/SessionStore;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -458,7 +458,7 @@
 .method public final isConnected()Z
     .registers 2
 
-    .line 256
+    .line 266
     sget-boolean v0, Lcom/textrcs/bridge/RustBridge;->connected:Z
 
     return v0
@@ -477,14 +477,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 290
+    .line 300
     sget-object v0, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
 
     if-nez v0, :cond_f
 
     return-void
 
-    .line 291
+    .line 301
     .local v0, "rc":Luniffi/textrcs_libgm/RustClient;
     :cond_f
     sget-object v1, Lcom/textrcs/bridge/RustBridge;->scope:Lkotlinx/coroutines/CoroutineScope;
@@ -507,7 +507,7 @@
 
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 298
+    .line 308
     return-void
 .end method
 
@@ -529,17 +529,17 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 276
+    .line 286
     sget-boolean v0, Lcom/textrcs/bridge/RustBridge;->connected:Z
 
     if-nez v0, :cond_27
 
-    .line 277
+    .line 287
     const-string v0, "RUST sendText \u2014 bridge not connected, starting now"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 278
+    .line 288
     invoke-virtual {p0, p1}, Lcom/textrcs/bridge/RustBridge;->start(Landroid/content/Context;)Z
 
     move-result v0
@@ -548,7 +548,7 @@
 
     goto :goto_27
 
-    .line 279
+    .line 289
     :cond_1f
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -558,14 +558,14 @@
 
     throw v0
 
-    .line 282
+    .line 292
     :cond_27
     :goto_27
     sget-object v0, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
 
     if-eqz v0, :cond_7b
 
-    .line 283
+    .line 293
     .local v0, "rc":Luniffi/textrcs_libgm/RustClient;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -607,7 +607,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 284
+    .line 294
     new-instance v1, Lcom/textrcs/bridge/RustBridge$sendText$1;
 
     const/4 v3, 0x0
@@ -620,7 +620,7 @@
 
     invoke-static {v3, v1, v4, v3}, Lkotlinx/coroutines/BuildersKt;->runBlocking$default(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 285
+    .line 295
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -645,10 +645,10 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 286
+    .line 296
     return-void
 
-    .line 282
+    .line 292
     .end local v0    # "rc":Luniffi/textrcs_libgm/RustClient;
     :cond_7b
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -661,7 +661,7 @@
 .end method
 
 .method public final declared-synchronized start(Landroid/content/Context;)Z
-    .registers 9
+    .registers 11
     .param p1, "context"    # Landroid/content/Context;
 
     monitor-enter p0
@@ -693,7 +693,7 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_18
-    .catchall {:try_start_1 .. :try_end_18} :catchall_ae
+    .catchall {:try_start_1 .. :try_end_18} :catchall_d7
 
     .line 168
     monitor-exit p0
@@ -715,7 +715,7 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_24
-    .catchall {:try_start_1a .. :try_end_24} :catchall_ae
+    .catchall {:try_start_1a .. :try_end_24} :catchall_d7
 
     .line 172
     monitor-exit p0
@@ -757,7 +757,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_44
-    .catchall {:try_start_26 .. :try_end_44} :catchall_ae
+    .catchall {:try_start_26 .. :try_end_44} :catchall_d7
 
     .line 179
     monitor-exit p0
@@ -814,23 +814,78 @@
     .line 197
     invoke-direct {p0, v0}, Lcom/textrcs/bridge/RustBridge;->syncConversations(Landroid/content/Context;)V
     :try_end_72
-    .catchall {:try_start_47 .. :try_end_72} :catchall_75
+    .catchall {:try_start_47 .. :try_end_72} :catchall_9e
 
-    .line 198
+    .line 202
+    nop
+
+    .line 203
+    :try_start_73
+    sget-object v3, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
+
+    invoke-virtual {v3, v0}, Lcom/textrcs/spam/SpamGuard;->configure(Landroid/content/Context;)V
+
+    .line 204
+    sget-object v3, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
+
+    invoke-virtual {v3, v0}, Lcom/textrcs/spam/SpamGuard;->maybeRefresh(Landroid/content/Context;)V
+    :try_end_7d
+    .catchall {:try_start_73 .. :try_end_7d} :catchall_7e
+
+    goto :goto_9b
+
+    .line 205
+    :catchall_7e
+    move-exception v3
+
+    .line 206
+    .local v3, "e":Ljava/lang/Throwable;
+    :try_start_7f
+    const-string v6, "TextRCSRustBridge"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "SpamGuard init failed: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_9b
+    .catchall {:try_start_7f .. :try_end_9b} :catchall_9e
+
+    .line 208
+    .end local v3    # "e":Ljava/lang/Throwable;
+    :goto_9b
     nop
 
     .end local v5    # "rc":Luniffi/textrcs_libgm/RustClient;
     move v1, v2
 
-    goto :goto_ac
+    goto :goto_d5
 
-    .line 199
-    :catchall_75
+    .line 209
+    :catchall_9e
     move-exception v2
 
-    .line 200
+    .line 210
     .local v2, "e":Ljava/lang/Throwable;
-    :try_start_76
+    :try_start_9f
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -873,24 +928,24 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 201
+    .line 211
     const-string v3, "TextRCSRustBridge"
 
     const-string v5, "RustBridge connect failed"
 
     invoke-static {v3, v5, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 202
+    .line 212
     sput-boolean v1, Lcom/textrcs/bridge/RustBridge;->connected:Z
-    :try_end_ab
-    .catchall {:try_start_76 .. :try_end_ab} :catchall_ae
+    :try_end_d4
+    .catchall {:try_start_9f .. :try_end_d4} :catchall_d7
 
-    .line 203
+    .line 213
     nop
 
     .line 181
     .end local v2    # "e":Ljava/lang/Throwable;
-    :goto_ac
+    :goto_d5
     monitor-exit p0
 
     return v1
@@ -899,13 +954,13 @@
     .end local v0    # "appContext":Landroid/content/Context;
     .end local v4    # "session":Lcom/textrcs/protocol/GMessagesSession;
     .end local p1    # "context":Landroid/content/Context;
-    :catchall_ae
+    :catchall_d7
     move-exception p1
 
-    :try_start_af
+    :try_start_d8
     monitor-exit p0
-    :try_end_b0
-    .catchall {:try_start_af .. :try_end_b0} :catchall_ae
+    :try_end_d9
+    .catchall {:try_start_d8 .. :try_end_d9} :catchall_d7
 
     throw p1
 .end method
@@ -915,7 +970,7 @@
 
     monitor-enter p0
 
-    .line 233
+    .line 243
     :try_start_1
     sget-object v0, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
     :try_end_3
@@ -927,12 +982,12 @@
 
     return-void
 
-    .line 234
+    .line 244
     .local v0, "rc":Luniffi/textrcs_libgm/RustClient;
     :cond_7
     nop
 
-    .line 235
+    .line 245
     const/4 v1, 0x0
 
     :try_start_9
@@ -950,11 +1005,11 @@
 
     goto :goto_32
 
-    .line 236
+    .line 246
     :catchall_15
     move-exception v2
 
-    .line 237
+    .line 247
     .local v2, "e":Ljava/lang/Throwable;
     :try_start_16
     const-string v3, "TextRCSRustBridge"
@@ -985,12 +1040,12 @@
     :try_end_32
     .catchall {:try_start_16 .. :try_end_32} :catchall_60
 
-    .line 246
+    .line 256
     .end local v2    # "e":Ljava/lang/Throwable;
     :goto_32
     nop
 
-    .line 247
+    .line 257
     :try_start_33
     invoke-virtual {v0}, Luniffi/textrcs_libgm/RustClient;->destroy()V
     :try_end_36
@@ -998,11 +1053,11 @@
 
     goto :goto_54
 
-    .line 248
+    .line 258
     :catchall_37
     move-exception v2
 
-    .line 249
+    .line 259
     .restart local v2    # "e":Ljava/lang/Throwable;
     :try_start_38
     const-string v3, "TextRCSRustBridge"
@@ -1031,29 +1086,29 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
+    .line 261
     .end local v2    # "e":Ljava/lang/Throwable;
     :goto_54
     sput-object v1, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
 
-    .line 252
+    .line 262
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/textrcs/bridge/RustBridge;->connected:Z
 
-    .line 253
+    .line 263
     const-string v1, "RUST stop \u2014 disconnected + client destroyed"
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_5e
     .catchall {:try_start_38 .. :try_end_5e} :catchall_60
 
-    .line 254
+    .line 264
     monitor-exit p0
 
     return-void
 
-    .line 232
+    .line 242
     .end local v0    # "rc":Luniffi/textrcs_libgm/RustClient;
     .end local p0    # "this":Lcom/textrcs/bridge/RustBridge;
     :catchall_60

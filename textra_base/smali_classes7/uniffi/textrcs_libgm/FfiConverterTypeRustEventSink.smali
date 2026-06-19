@@ -78,7 +78,7 @@
 
     sput-object v0, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;
 
-    .line 3434
+    .line 3579
     new-instance v0, Luniffi/textrcs_libgm/UniffiHandleMap;
 
     invoke-direct {v0}, Luniffi/textrcs_libgm/UniffiHandleMap;-><init>()V
@@ -91,7 +91,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 3433
+    .line 3578
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -103,7 +103,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3433
+    .line 3578
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustEventSink;
@@ -123,7 +123,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3450
+    .line 3595
     const-wide/16 v0, 0x8
 
     return-wide v0
@@ -140,7 +140,7 @@
         }
     .end annotation
 
-    .line 3434
+    .line 3579
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->handleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
 
     return-object v0
@@ -150,7 +150,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3433
+    .line 3578
     move-object v0, p1
 
     check-cast v0, Lcom/sun/jna/Pointer;
@@ -170,7 +170,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3441
+    .line 3586
     new-instance v0, Luniffi/textrcs_libgm/RustEventSinkImpl;
 
     invoke-direct {v0, p1}, Luniffi/textrcs_libgm/RustEventSinkImpl;-><init>(Lcom/sun/jna/Pointer;)V
@@ -184,7 +184,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 3433
+    .line 3578
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/RustEventSink;
 
     move-result-object v0
@@ -196,7 +196,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 3433
+    .line 3578
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -214,7 +214,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3437
+    .line 3582
     new-instance v0, Lcom/sun/jna/Pointer;
 
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->handleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
@@ -232,7 +232,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3433
+    .line 3578
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustEventSink;
@@ -248,7 +248,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3433
+    .line 3578
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustEventSink;
@@ -264,7 +264,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustEventSink;
 
-    .line 3433
+    .line 3578
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -276,7 +276,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 3433
+    .line 3578
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->read(Ljava/nio/ByteBuffer;)Luniffi/textrcs_libgm/RustEventSink;
 
     move-result-object v0
@@ -292,7 +292,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3447
+    .line 3592
     new-instance v0, Lcom/sun/jna/Pointer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
@@ -313,7 +313,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 3433
+    .line 3578
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustEventSink;
@@ -336,7 +336,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3455
+    .line 3600
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->lower(Luniffi/textrcs_libgm/RustEventSink;)Lcom/sun/jna/Pointer;
 
     move-result-object v0
@@ -347,6 +347,6 @@
 
     invoke-virtual {p2, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 3456
+    .line 3601
     return-void
 .end method

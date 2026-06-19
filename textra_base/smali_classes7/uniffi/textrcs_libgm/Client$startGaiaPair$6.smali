@@ -80,7 +80,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 2174
+    .line 2265
     move-object v0, p1
 
     check-cast v0, Lcom/sun/jna/Pointer;
@@ -100,7 +100,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2185
+    .line 2276
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterTypePairingSession;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypePairingSession;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterTypePairingSession;->lift(Lcom/sun/jna/Pointer;)Luniffi/textrcs_libgm/PairingSession;

@@ -19,7 +19,36 @@ lookups (sub-toggle). Non-commercial. Rust returns VERDICT only (pull-style), Ko
 crate 0.14.0→0.15.0, CHANGELOG updated. Offline scam/spam engine in `src/spam/` (extract/store/
 feeds/engine/mod). HOST-TESTED ONLY — live download, .so cross-build, on-device = UNVERIFIED.
 
-**PHASE B DONE (2026-06-17) — committing now:** `src/spam/online.rs` (Safe Browsing v4 URL lookup +
+**PHASE C BUILT (2026-06-19) — committing now. APK = textra2_v1.06.0.apk (98M, gitignored, on disk).**
+build.sh GREEN: kotlinc compiled SpamGuard.kt (warnings only), SpamGuard.smali + regenerated bindings
+merged into smali_classes7, signed APK at build/textra2.apk → copied to textra2_v1.06.0.apk. Verified:
+the packaged APK's arm64 .so contains `uniffi_textrcs_libgm_fn_func_spam_classify`. No manifest/perm
+changes (no new components; INTERNET already held). STATUS: BUILT, on-device classify/feed-download/
+Safe-Browsing-call all UNVERIFIED (no device here) → user runs the ON-DEVICE TEST SCRIPT (in this doc).
+**NEXT STEP (exact):** Commit Phase C (inject_src .kt + bindings + textra_base/lib .so + regenerated
+textrcs/uniffi smali + CHANGELOG + journal). Then DONE pending user device test. Optional follow-ups:
+visible settings UI (toggles); bump AndroidManifest versionName; .so de-risk already done (release builds).
+
+**PHASE C DETAIL (2026-06-19) — Kotlin wiring into the decompiled-Textra+inject build:**
+PROJECT SHAPE (VERIFIED): TextRCS = decompiled Textra APK (`textra_base/` smali) + injected Kotlin
+(`inject_src/com/textrcs/`), built by `build.sh` (kotlinc→d8→smali merge into smali_classes7). NOT
+Gradle. UniFFI Kotlin bindings are CHECKED-IN at `inject_src/uniffi/textrcs_libgm/textrcs_libgm.kt`;
+the `.so` live in `textra_base/lib/<abi>/libtextrcs_libgm.so` (4 ABIs). NDKs at /opt/android-sdk/ndk
+(21.4, 27.0, 27.1). UniFFI Kotlin API CONFIRMED from regen: pkg `uniffi.textrcs_libgm` — `spamConfigure(SpamConfig)`,
+`suspend spamClassify(text,sender):SpamVerdict`, `suspend spamRefreshFeeds():SpamRefreshResult`,
+`spamStatus():SpamStatus`; enums SpamLevel.{CLEAN,SUSPICIOUS,SPAM,SCAM}, SpamFeedKind.{URLS,HOSTS}.
+DONE this turn: (1) regenerated bindings (cargo run --bin uniffi-bindgen --library) → copied to
+inject_src (4986 lines, superset incl RustClient/RustEventSink). (2) `inject_src/com/textrcs/spam/SpamGuard.kt`
+NEW (configure from prefs `textrcs_spam`, opportunistic maybeRefresh ≥12h, classifyAsync fire-and-forget,
+verdict store, settings setters; defaults enabled=ON, online=OFF, OpenPhish feed built-in, URLhaus optional).
+(3) Hooked `IncomingMessageHandler.handleMessage` → SpamGuard.classifyAsync after sender-resolve HOLD guard
+(all incoming deliverable msgs; never blocks delivery). (4) `RustBridge.start` → SpamGuard.configure+maybeRefresh
+after connect. IN FLIGHT: cargo-ndk cross-build of 4 .so (bg bo0jk79wh) → staging /tmp/spam_so_out.
+NEXT: copy new .so to textra_base/lib/<abi>/; run build.sh (compiles Kotlin = real compile check + packages APK);
+commit; user device-tests. Settings UI (visible toggles) = deferred (prefs defaults + setters exist; verdict-only per user).
+RISK C: build.sh produces ~100MB APK; on-device classify UNVERIFIED here; if kotlinc errors → fix against bindings.
+
+**PHASE B DONE (2026-06-17) — committed ab4287ac:** `src/spam/online.rs` (Safe Browsing v4 URL lookup +
 generic configurable number-reputation check) wired into `spam_classify` (offline-first; online only when
 offline Clean + online_enabled + provider configured; guard dropped before .await; net error → Clean).
 SpamConfig +2 fields (number_reputation_url_template, number_reputation_flag_substring). 23/23 host tests
@@ -58,6 +87,26 @@ deps (hand-rolled extraction to keep .so small). Files:
 DESIGN NOTES: pull-style FFI (Kotlin calls spam_classify on each parsed incoming msg off-thread) →
 NO change to RustEventSink. online_enabled + safebrowsing_api_key wired into config but online layer
 is Phase B (not yet implemented). Refresh never wipes a good cache on empty/failed download.
+
+## ON-DEVICE TEST SCRIPT (Phase C — user runs on a real phone; classify path is UNVERIFIED until then)
+Prereq: install the freshly built APK; app already PAIRED with Google Messages (scam/spam rides the
+existing receive path). Protection defaults ON; online OFF.
+1. RICH LOG: `adb logcat -s TextRCSSpamGuard TextRCSIncoming TextRCSRustBridge` (+ ScreenTracer overlay
+   if enabled). Lines tagged `SPAM …`.
+2. FEED REFRESH: open the app / trigger a receive so RustBridge.start runs → expect
+   `SPAM configured enabled=true …`, then `SPAM refreshing feeds…`, then `SPAM refresh ok=true indicators=NNNN`
+   (thousands from OpenPhish). indicators=0 → feed download failed (check network / logged errors).
+3. OFFLINE SCAM HIT: from another phone, text yourself a message containing a host currently on the
+   OpenPhish feed (pick a live entry from the feed URL). Expect `SPAM FLAG SCAM …` naming the matched
+   domain + OpenPhish. The message STILL delivers to Textra (verdict-only).
+4. CLEAN: a normal message → no SPAM FLAG line.
+5. DELIVERY NOT BLOCKED: every test message lands in Textra at normal speed (classify is off-thread).
+6. ONLINE (optional): setOnlineEnabled(true)+setSafeBrowsingKey(<key>) (no UI yet — debug/prefs), text a
+   Safe-Browsing-known-bad test URL → `SPAM FLAG SCAM … flagged by Google Safe Browsing`. online ON+key
+   empty → degrades to Clean.
+7. REBOOT: reboot, receive a message → config reloads from prefs + cached index from disk (no manual
+   step); classification still works before the next refresh.
+PASS = steps 2–5 behave as above, no ANR/crash, delivery unaffected.
 
 ## PHASE B PRE-BUILD RISK PASS (2026-06-17) — online lookups
 USER CHOSE Phase B. Build `spam/online.rs` behind `online_enabled`.

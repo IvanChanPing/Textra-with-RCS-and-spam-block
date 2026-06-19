@@ -195,6 +195,16 @@ object RustBridge {
             // Without this an own-send to a "quiet" 1:1 thread can never
             // resolve its recipient and is held forever.
             syncConversations(appContext)
+            // [SPAM v0.15] Phase C — configure the scam/spam engine from prefs and
+            // opportunistically refresh its threat feeds if the cached index is
+            // stale. Battery-aligned with the wake-on-notification model (only runs
+            // while the app is already awake); self-starting, no per-boot setup.
+            try {
+                com.textrcs.spam.SpamGuard.configure(appContext)
+                com.textrcs.spam.SpamGuard.maybeRefresh(appContext)
+            } catch (e: Throwable) {
+                Log.w(TAG, "SpamGuard init failed: ${e.message}")
+            }
             true
         } catch (e: Throwable) {
             ScreenTracer.note("RUST start FAIL ${e.javaClass.simpleName}: ${e.message}")

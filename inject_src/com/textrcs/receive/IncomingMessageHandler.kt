@@ -452,6 +452,17 @@ object IncomingMessageHandler {
             return
         }
 
+        // [SPAM v0.15] Phase C — classify this INCOMING message against the
+        // on-device scam/spam engine (Rust `textrcs_libgm::spam`). Fire-and-forget
+        // and off-thread: it NEVER blocks or gates delivery (verdict-only — the
+        // message is still delivered below; the verdict is logged + stored for a
+        // future UI). Only reached for genuinely incoming, sender-resolved messages
+        // (own-sends / outgoing / tombstones returned earlier).
+        try {
+            com.textrcs.spam.SpamGuard.classifyAsync(context, data.messageID, sender.value, body)
+        } catch (_: Throwable) {
+        }
+
         // Group vs 1:1. A group conversation has no 1:1 SMS representation:
         // a `SMS_DELIVER` carries one sender and threads 1:1. A group message
         // is delivered as a group MMS instead — `From` = sender, `To` = the

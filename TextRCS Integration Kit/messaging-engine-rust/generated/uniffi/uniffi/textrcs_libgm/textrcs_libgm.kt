@@ -837,6 +837,18 @@ internal open class UniffiVTableCallbackInterfaceRustEventSink(
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // A JNA Library to expose the extern-C FFI definitions.
 // This is an implementation detail which will be called internally by the public API.
 
@@ -903,6 +915,8 @@ internal interface UniffiLib : Library {
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_disconnect(`ptr`: Pointer,
     ): Long
+    fun uniffi_textrcs_libgm_fn_method_rustclient_download_media(`ptr`: Pointer,`mediaId`: RustBuffer.ByValue,`decryptionKey`: RustBuffer.ByValue,
+    ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_fetch_messages(`ptr`: Pointer,`conversationId`: RustBuffer.ByValue,`count`: Long,
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_is_connected(`ptr`: Pointer,
@@ -910,6 +924,8 @@ internal interface UniffiLib : Library {
     fun uniffi_textrcs_libgm_fn_method_rustclient_list_conversations(`ptr`: Pointer,`count`: Long,`firstCall`: Byte,
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_mark_read(`ptr`: Pointer,`conversationId`: RustBuffer.ByValue,`messageId`: RustBuffer.ByValue,
+    ): Long
+    fun uniffi_textrcs_libgm_fn_method_rustclient_request_full_size_image(`ptr`: Pointer,`messageId`: RustBuffer.ByValue,`actionMessageId`: RustBuffer.ByValue,
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_send_text(`ptr`: Pointer,`recipientPhone`: RustBuffer.ByValue,`body`: RustBuffer.ByValue,
     ): Long
@@ -948,6 +964,14 @@ internal interface UniffiLib : Library {
     fun uniffi_textrcs_libgm_fn_func_derive_session_keys(`nextKey`: RustBuffer.ByValue,`confirmedKeyDerivationVersion`: Int,uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
     fun uniffi_textrcs_libgm_fn_func_rust_hkdf_sha256(`ikm`: RustBuffer.ByValue,`salt`: RustBuffer.ByValue,`info`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
+    fun uniffi_textrcs_libgm_fn_func_spam_classify(`text`: RustBuffer.ByValue,`sender`: RustBuffer.ByValue,
+    ): Long
+    fun uniffi_textrcs_libgm_fn_func_spam_configure(`config`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+    ): Unit
+    fun uniffi_textrcs_libgm_fn_func_spam_refresh_feeds(
+    ): Long
+    fun uniffi_textrcs_libgm_fn_func_spam_status(uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
     fun uniffi_textrcs_libgm_fn_func_version(uniffi_out_err: UniffiRustCallStatus, 
     ): RustBuffer.ByValue
@@ -1067,6 +1091,14 @@ internal interface UniffiLib : Library {
     ): Short
     fun uniffi_textrcs_libgm_checksum_func_rust_hkdf_sha256(
     ): Short
+    fun uniffi_textrcs_libgm_checksum_func_spam_classify(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_func_spam_configure(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_func_spam_refresh_feeds(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_func_spam_status(
+    ): Short
     fun uniffi_textrcs_libgm_checksum_func_version(
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_aesctrbox_decrypt(
@@ -1091,6 +1123,8 @@ internal interface UniffiLib : Library {
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_disconnect(
     ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustclient_download_media(
+    ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_fetch_messages(
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_is_connected(
@@ -1098,6 +1132,8 @@ internal interface UniffiLib : Library {
     fun uniffi_textrcs_libgm_checksum_method_rustclient_list_conversations(
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_mark_read(
+    ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustclient_request_full_size_image(
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_send_text(
     ): Short
@@ -1154,6 +1190,18 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
     if (lib.uniffi_textrcs_libgm_checksum_func_rust_hkdf_sha256() != 38940.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
+    if (lib.uniffi_textrcs_libgm_checksum_func_spam_classify() != 38730.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_func_spam_configure() != 55606.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_func_spam_refresh_feeds() != 46274.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_func_spam_status() != 43811.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
     if (lib.uniffi_textrcs_libgm_checksum_func_version() != 28784.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
@@ -1190,6 +1238,9 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_disconnect() != 39546.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_download_media() != 53142.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_fetch_messages() != 43387.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
@@ -1200,6 +1251,9 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_mark_read() != 17287.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_request_full_size_image() != 1061.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_send_text() != 30300.toShort()) {
@@ -1214,7 +1268,7 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
     if (lib.uniffi_textrcs_libgm_checksum_method_rusteventsink_on_phone_responding_again() != 45201.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
-    if (lib.uniffi_textrcs_libgm_checksum_method_rusteventsink_on_pair_event() != 33760.toShort()) {
+    if (lib.uniffi_textrcs_libgm_checksum_method_rusteventsink_on_pair_event() != 6171.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustpairingsession_derive_request_crypto_keys() != 52711.toShort()) {
@@ -1340,6 +1394,29 @@ object NoPointer
 /**
  * @suppress
  */
+public object FfiConverterUByte: FfiConverter<UByte, Byte> {
+    override fun lift(value: Byte): UByte {
+        return value.toUByte()
+    }
+
+    override fun read(buf: ByteBuffer): UByte {
+        return lift(buf.get())
+    }
+
+    override fun lower(value: UByte): Byte {
+        return value.toByte()
+    }
+
+    override fun allocationSize(value: UByte) = 1UL
+
+    override fun write(value: UByte, buf: ByteBuffer) {
+        buf.put(value.toByte())
+    }
+}
+
+/**
+ * @suppress
+ */
 public object FfiConverterInt: FfiConverter<Int, Int> {
     override fun lift(value: Int): Int {
         return value
@@ -1357,6 +1434,29 @@ public object FfiConverterInt: FfiConverter<Int, Int> {
 
     override fun write(value: Int, buf: ByteBuffer) {
         buf.putInt(value)
+    }
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterULong: FfiConverter<ULong, Long> {
+    override fun lift(value: Long): ULong {
+        return value.toULong()
+    }
+
+    override fun read(buf: ByteBuffer): ULong {
+        return lift(buf.getLong())
+    }
+
+    override fun lower(value: ULong): Long {
+        return value.toLong()
+    }
+
+    override fun allocationSize(value: ULong) = 8UL
+
+    override fun write(value: ULong, buf: ByteBuffer) {
+        buf.putLong(value.toLong())
     }
 }
 
@@ -2592,6 +2692,16 @@ public interface RustClientInterface {
     suspend fun `disconnect`()
     
     /**
+     * Download + AES-GCM-decrypt an incoming attachment (MMS media).
+     *
+     * `media_id` and `decryption_key` come straight from the inbound
+     * `MediaContent` proto (`mediaID` + `decryptionKey`). Returns the raw
+     * decrypted file bytes (e.g. the JPEG/PNG). Port of
+     * `ClientEngine::download_media` (media.go:265).
+     */
+    suspend fun `downloadMedia`(`mediaId`: kotlin.String, `decryptionKey`: kotlin.ByteArray): kotlin.ByteArray
+    
+    /**
      * Fetch recent messages for a conversation (port of methods.go:73).
      * Returns the binary-proto bytes of `ListMessagesResponse` for Kotlin
      * to parse with its generated protos.
@@ -2615,6 +2725,23 @@ public interface RustClientInterface {
      * Mark a conversation/message read (port of methods.go:113 MarkRead).
      */
     suspend fun `markRead`(`conversationId`: kotlin.String, `messageId`: kotlin.String)
+    
+    /**
+     * Request the full-resolution image for a group-MMS message.
+     *
+     * A group MMS image is delivered inline only as a tiny thumbnail; the
+     * client must explicitly ask the phone to upload the original. This
+     * fires the `GET_FULL_SIZE_IMAGE` RPC (port of `methods.go:159`).
+     * `GetFullSizeImageResponse` is an empty proto, so there is nothing to
+     * return — the full-size `MediaContent` (mediaID + decryptionKey)
+     * arrives later as an unsolicited `UpdateEvents` frame through the
+     * `RustEventSink.on_data_event` callback, after which Kotlin calls
+     * `download_media` to fetch + decrypt the bytes.
+     *
+     * `message_id` is the inbound message's ID; `action_message_id` is the
+     * `MessageInfo.actionMessageID` of the image part to fetch.
+     */
+    suspend fun `requestFullSizeImage`(`messageId`: kotlin.String, `actionMessageId`: kotlin.String)
     
     /**
      * Two-step outgoing send — the faithful port of mautrix
@@ -2792,6 +2919,35 @@ open class RustClient: Disposable, AutoCloseable, RustClientInterface {
 
     
     /**
+     * Download + AES-GCM-decrypt an incoming attachment (MMS media).
+     *
+     * `media_id` and `decryption_key` come straight from the inbound
+     * `MediaContent` proto (`mediaID` + `decryptionKey`). Returns the raw
+     * decrypted file bytes (e.g. the JPEG/PNG). Port of
+     * `ClientEngine::download_media` (media.go:265).
+     */
+    @Throws(LibgmException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `downloadMedia`(`mediaId`: kotlin.String, `decryptionKey`: kotlin.ByteArray) : kotlin.ByteArray {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustclient_download_media(
+                thisPtr,
+                FfiConverterString.lower(`mediaId`),FfiConverterByteArray.lower(`decryptionKey`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterByteArray.lift(it) },
+        // Error FFI converter
+        LibgmException.ErrorHandler,
+    )
+    }
+
+    
+    /**
      * Fetch recent messages for a conversation (port of methods.go:73).
      * Returns the binary-proto bytes of `ListMessagesResponse` for Kotlin
      * to parse with its generated protos.
@@ -2878,6 +3034,43 @@ open class RustClient: Disposable, AutoCloseable, RustClientInterface {
             UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustclient_mark_read(
                 thisPtr,
                 FfiConverterString.lower(`conversationId`),FfiConverterString.lower(`messageId`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        LibgmException.ErrorHandler,
+    )
+    }
+
+    
+    /**
+     * Request the full-resolution image for a group-MMS message.
+     *
+     * A group MMS image is delivered inline only as a tiny thumbnail; the
+     * client must explicitly ask the phone to upload the original. This
+     * fires the `GET_FULL_SIZE_IMAGE` RPC (port of `methods.go:159`).
+     * `GetFullSizeImageResponse` is an empty proto, so there is nothing to
+     * return — the full-size `MediaContent` (mediaID + decryptionKey)
+     * arrives later as an unsolicited `UpdateEvents` frame through the
+     * `RustEventSink.on_data_event` callback, after which Kotlin calls
+     * `download_media` to fetch + decrypt the bytes.
+     *
+     * `message_id` is the inbound message's ID; `action_message_id` is the
+     * `MessageInfo.actionMessageID` of the image part to fetch.
+     */
+    @Throws(LibgmException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `requestFullSizeImage`(`messageId`: kotlin.String, `actionMessageId`: kotlin.String) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustclient_request_full_size_image(
+                thisPtr,
+                FfiConverterString.lower(`messageId`),FfiConverterString.lower(`actionMessageId`),
             )
         },
         { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_void(future, callback, continuation) },
@@ -3101,7 +3294,7 @@ public interface RustEventSink {
     fun `onPhoneRespondingAgain`()
     
     /**
-     * A pair/gaia event arrived (textra2 drives pairing in Kotlin, so
+     * A pair/gaia event arrived (the host app drives pairing in Kotlin, so
      * this is informational only). `route` is the numeric BugleRoute.
      */
     fun `onPairEvent`(`route`: kotlin.Int)
@@ -3253,7 +3446,7 @@ open class RustEventSinkImpl: Disposable, AutoCloseable, RustEventSink {
 
     
     /**
-     * A pair/gaia event arrived (textra2 drives pairing in Kotlin, so
+     * A pair/gaia event arrived (the host app drives pairing in Kotlin, so
      * this is informational only). `route` is the numeric BugleRoute.
      */override fun `onPairEvent`(`route`: kotlin.Int)
         = 
@@ -3891,6 +4084,321 @@ public object FfiConverterTypeRustSession: FfiConverterRustBuffer<RustSession> {
 
 
 
+/**
+ * Full engine configuration. Set via `spam_configure`.
+ */
+data class SpamConfig (
+    /**
+     * Master toggle. When false, `spam_classify` always returns Clean.
+     */
+    var `enabled`: kotlin.Boolean, 
+    /**
+     * Online sub-toggle (Safe Browsing / number reputation). Phase B.
+     */
+    var `onlineEnabled`: kotlin.Boolean, 
+    /**
+     * Absolute path to the JSON indicator cache (app filesDir). Survives restart.
+     */
+    var `cachePath`: kotlin.String, 
+    /**
+     * Feeds to download on refresh.
+     */
+    var `feeds`: List<SpamFeedSource>, 
+    /**
+     * Google Safe Browsing API key (one-time). Empty disables online URL lookups.
+     */
+    var `safebrowsingApiKey`: kotlin.String, 
+    /**
+     * Optional number-reputation lookup URL with a `{number}` placeholder.
+     * Empty disables the online number check. (Generic provider — see online.rs.)
+     */
+    var `numberReputationUrlTemplate`: kotlin.String, 
+    /**
+     * Substring that, if present in the number-reputation response body, marks the
+     * sender as spam. Required (with the template) for the number check to run.
+     */
+    var `numberReputationFlagSubstring`: kotlin.String
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamConfig: FfiConverterRustBuffer<SpamConfig> {
+    override fun read(buf: ByteBuffer): SpamConfig {
+        return SpamConfig(
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterSequenceTypeSpamFeedSource.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: SpamConfig) = (
+            FfiConverterBoolean.allocationSize(value.`enabled`) +
+            FfiConverterBoolean.allocationSize(value.`onlineEnabled`) +
+            FfiConverterString.allocationSize(value.`cachePath`) +
+            FfiConverterSequenceTypeSpamFeedSource.allocationSize(value.`feeds`) +
+            FfiConverterString.allocationSize(value.`safebrowsingApiKey`) +
+            FfiConverterString.allocationSize(value.`numberReputationUrlTemplate`) +
+            FfiConverterString.allocationSize(value.`numberReputationFlagSubstring`)
+    )
+
+    override fun write(value: SpamConfig, buf: ByteBuffer) {
+            FfiConverterBoolean.write(value.`enabled`, buf)
+            FfiConverterBoolean.write(value.`onlineEnabled`, buf)
+            FfiConverterString.write(value.`cachePath`, buf)
+            FfiConverterSequenceTypeSpamFeedSource.write(value.`feeds`, buf)
+            FfiConverterString.write(value.`safebrowsingApiKey`, buf)
+            FfiConverterString.write(value.`numberReputationUrlTemplate`, buf)
+            FfiConverterString.write(value.`numberReputationFlagSubstring`, buf)
+    }
+}
+
+
+
+/**
+ * Per-feed result of a refresh.
+ */
+data class SpamFeedResult (
+    var `name`: kotlin.String, 
+    var `count`: kotlin.ULong, 
+    var `error`: kotlin.String?
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamFeedResult: FfiConverterRustBuffer<SpamFeedResult> {
+    override fun read(buf: ByteBuffer): SpamFeedResult {
+        return SpamFeedResult(
+            FfiConverterString.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterOptionalString.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: SpamFeedResult) = (
+            FfiConverterString.allocationSize(value.`name`) +
+            FfiConverterULong.allocationSize(value.`count`) +
+            FfiConverterOptionalString.allocationSize(value.`error`)
+    )
+
+    override fun write(value: SpamFeedResult, buf: ByteBuffer) {
+            FfiConverterString.write(value.`name`, buf)
+            FfiConverterULong.write(value.`count`, buf)
+            FfiConverterOptionalString.write(value.`error`, buf)
+    }
+}
+
+
+
+/**
+ * One configured threat feed. Supplied by Kotlin from the app's settings.
+ * For keyed feeds (URLhaus) the auth key is already embedded in `url`.
+ */
+data class SpamFeedSource (
+    var `name`: kotlin.String, 
+    var `url`: kotlin.String, 
+    var `kind`: SpamFeedKind
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamFeedSource: FfiConverterRustBuffer<SpamFeedSource> {
+    override fun read(buf: ByteBuffer): SpamFeedSource {
+        return SpamFeedSource(
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterTypeSpamFeedKind.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: SpamFeedSource) = (
+            FfiConverterString.allocationSize(value.`name`) +
+            FfiConverterString.allocationSize(value.`url`) +
+            FfiConverterTypeSpamFeedKind.allocationSize(value.`kind`)
+    )
+
+    override fun write(value: SpamFeedSource, buf: ByteBuffer) {
+            FfiConverterString.write(value.`name`, buf)
+            FfiConverterString.write(value.`url`, buf)
+            FfiConverterTypeSpamFeedKind.write(value.`kind`, buf)
+    }
+}
+
+
+
+/**
+ * Outcome of `spam_refresh_feeds`.
+ */
+data class SpamRefreshResult (
+    /**
+     * True if a fresh index was downloaded and installed.
+     */
+    var `ok`: kotlin.Boolean, 
+    var `totalIndicators`: kotlin.ULong, 
+    var `feeds`: List<SpamFeedResult>, 
+    var `errors`: List<kotlin.String>, 
+    var `lastRefreshUnix`: kotlin.Long
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamRefreshResult: FfiConverterRustBuffer<SpamRefreshResult> {
+    override fun read(buf: ByteBuffer): SpamRefreshResult {
+        return SpamRefreshResult(
+            FfiConverterBoolean.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterSequenceTypeSpamFeedResult.read(buf),
+            FfiConverterSequenceString.read(buf),
+            FfiConverterLong.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: SpamRefreshResult) = (
+            FfiConverterBoolean.allocationSize(value.`ok`) +
+            FfiConverterULong.allocationSize(value.`totalIndicators`) +
+            FfiConverterSequenceTypeSpamFeedResult.allocationSize(value.`feeds`) +
+            FfiConverterSequenceString.allocationSize(value.`errors`) +
+            FfiConverterLong.allocationSize(value.`lastRefreshUnix`)
+    )
+
+    override fun write(value: SpamRefreshResult, buf: ByteBuffer) {
+            FfiConverterBoolean.write(value.`ok`, buf)
+            FfiConverterULong.write(value.`totalIndicators`, buf)
+            FfiConverterSequenceTypeSpamFeedResult.write(value.`feeds`, buf)
+            FfiConverterSequenceString.write(value.`errors`, buf)
+            FfiConverterLong.write(value.`lastRefreshUnix`, buf)
+    }
+}
+
+
+
+/**
+ * Current engine status — for the settings/diagnostics screen.
+ */
+data class SpamStatus (
+    var `configured`: kotlin.Boolean, 
+    var `enabled`: kotlin.Boolean, 
+    var `onlineEnabled`: kotlin.Boolean, 
+    var `totalIndicators`: kotlin.ULong, 
+    var `lastRefreshUnix`: kotlin.Long, 
+    var `cachePath`: kotlin.String
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamStatus: FfiConverterRustBuffer<SpamStatus> {
+    override fun read(buf: ByteBuffer): SpamStatus {
+        return SpamStatus(
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterBoolean.read(buf),
+            FfiConverterULong.read(buf),
+            FfiConverterLong.read(buf),
+            FfiConverterString.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: SpamStatus) = (
+            FfiConverterBoolean.allocationSize(value.`configured`) +
+            FfiConverterBoolean.allocationSize(value.`enabled`) +
+            FfiConverterBoolean.allocationSize(value.`onlineEnabled`) +
+            FfiConverterULong.allocationSize(value.`totalIndicators`) +
+            FfiConverterLong.allocationSize(value.`lastRefreshUnix`) +
+            FfiConverterString.allocationSize(value.`cachePath`)
+    )
+
+    override fun write(value: SpamStatus, buf: ByteBuffer) {
+            FfiConverterBoolean.write(value.`configured`, buf)
+            FfiConverterBoolean.write(value.`enabled`, buf)
+            FfiConverterBoolean.write(value.`onlineEnabled`, buf)
+            FfiConverterULong.write(value.`totalIndicators`, buf)
+            FfiConverterLong.write(value.`lastRefreshUnix`, buf)
+            FfiConverterString.write(value.`cachePath`, buf)
+    }
+}
+
+
+
+/**
+ * The classification result returned to Kotlin.
+ */
+data class SpamVerdict (
+    var `level`: SpamLevel, 
+    var `score`: kotlin.UByte, 
+    /**
+     * Human-readable reasons (why this verdict) — safe to show in diagnostics.
+     */
+    var `reasons`: List<kotlin.String>, 
+    var `matchedIndicator`: kotlin.String?, 
+    var `matchedSource`: kotlin.String?, 
+    /**
+     * Whether an online lookup contributed (false for the offline core).
+     */
+    var `checkedOnline`: kotlin.Boolean
+) {
+    
+    companion object
+}
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamVerdict: FfiConverterRustBuffer<SpamVerdict> {
+    override fun read(buf: ByteBuffer): SpamVerdict {
+        return SpamVerdict(
+            FfiConverterTypeSpamLevel.read(buf),
+            FfiConverterUByte.read(buf),
+            FfiConverterSequenceString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterOptionalString.read(buf),
+            FfiConverterBoolean.read(buf),
+        )
+    }
+
+    override fun allocationSize(value: SpamVerdict) = (
+            FfiConverterTypeSpamLevel.allocationSize(value.`level`) +
+            FfiConverterUByte.allocationSize(value.`score`) +
+            FfiConverterSequenceString.allocationSize(value.`reasons`) +
+            FfiConverterOptionalString.allocationSize(value.`matchedIndicator`) +
+            FfiConverterOptionalString.allocationSize(value.`matchedSource`) +
+            FfiConverterBoolean.allocationSize(value.`checkedOnline`)
+    )
+
+    override fun write(value: SpamVerdict, buf: ByteBuffer) {
+            FfiConverterTypeSpamLevel.write(value.`level`, buf)
+            FfiConverterUByte.write(value.`score`, buf)
+            FfiConverterSequenceString.write(value.`reasons`, buf)
+            FfiConverterOptionalString.write(value.`matchedIndicator`, buf)
+            FfiConverterOptionalString.write(value.`matchedSource`, buf)
+            FfiConverterBoolean.write(value.`checkedOnline`, buf)
+    }
+}
+
+
+
 
 
 /**
@@ -4070,6 +4578,112 @@ public object FfiConverterTypeLibgmError : FfiConverterRustBuffer<LibgmException
 
 
 
+/**
+ * What a feed's lines represent. Mirrors `feeds::FeedKind`.
+ */
+
+enum class SpamFeedKind {
+    
+    /**
+     * Each line is a full URL (e.g. OpenPhish Community feed).
+     */
+    URLS,
+    /**
+     * Each line is a hostname / `ip host` hostfile line (e.g. URLhaus hostfile).
+     */
+    HOSTS;
+    companion object
+}
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamFeedKind: FfiConverterRustBuffer<SpamFeedKind> {
+    override fun read(buf: ByteBuffer) = try {
+        SpamFeedKind.values()[buf.getInt() - 1]
+    } catch (e: IndexOutOfBoundsException) {
+        throw RuntimeException("invalid enum value, something is very wrong!!", e)
+    }
+
+    override fun allocationSize(value: SpamFeedKind) = 4UL
+
+    override fun write(value: SpamFeedKind, buf: ByteBuffer) {
+        buf.putInt(value.ordinal + 1)
+    }
+}
+
+
+
+
+
+/**
+ * Severity level of a verdict. Mirrors `engine::SpamLevel`.
+ */
+
+enum class SpamLevel {
+    
+    CLEAN,
+    SUSPICIOUS,
+    SPAM,
+    SCAM;
+    companion object
+}
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterTypeSpamLevel: FfiConverterRustBuffer<SpamLevel> {
+    override fun read(buf: ByteBuffer) = try {
+        SpamLevel.values()[buf.getInt() - 1]
+    } catch (e: IndexOutOfBoundsException) {
+        throw RuntimeException("invalid enum value, something is very wrong!!", e)
+    }
+
+    override fun allocationSize(value: SpamLevel) = 4UL
+
+    override fun write(value: SpamLevel, buf: ByteBuffer) {
+        buf.putInt(value.ordinal + 1)
+    }
+}
+
+
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterOptionalString: FfiConverterRustBuffer<kotlin.String?> {
+    override fun read(buf: ByteBuffer): kotlin.String? {
+        if (buf.get().toInt() == 0) {
+            return null
+        }
+        return FfiConverterString.read(buf)
+    }
+
+    override fun allocationSize(value: kotlin.String?): ULong {
+        if (value == null) {
+            return 1UL
+        } else {
+            return 1UL + FfiConverterString.allocationSize(value)
+        }
+    }
+
+    override fun write(value: kotlin.String?, buf: ByteBuffer) {
+        if (value == null) {
+            buf.put(0)
+        } else {
+            buf.put(1)
+            FfiConverterString.write(value, buf)
+        }
+    }
+}
+
+
+
 
 /**
  * @suppress
@@ -4106,6 +4720,34 @@ public object FfiConverterOptionalByteArray: FfiConverterRustBuffer<kotlin.ByteA
 /**
  * @suppress
  */
+public object FfiConverterSequenceString: FfiConverterRustBuffer<List<kotlin.String>> {
+    override fun read(buf: ByteBuffer): List<kotlin.String> {
+        val len = buf.getInt()
+        return List<kotlin.String>(len) {
+            FfiConverterString.read(buf)
+        }
+    }
+
+    override fun allocationSize(value: List<kotlin.String>): ULong {
+        val sizeForLength = 4UL
+        val sizeForItems = value.map { FfiConverterString.allocationSize(it) }.sum()
+        return sizeForLength + sizeForItems
+    }
+
+    override fun write(value: List<kotlin.String>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        value.iterator().forEach {
+            FfiConverterString.write(it, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
 public object FfiConverterSequenceByteArray: FfiConverterRustBuffer<List<kotlin.ByteArray>> {
     override fun read(buf: ByteBuffer): List<kotlin.ByteArray> {
         val len = buf.getInt()
@@ -4124,6 +4766,62 @@ public object FfiConverterSequenceByteArray: FfiConverterRustBuffer<List<kotlin.
         buf.putInt(value.size)
         value.iterator().forEach {
             FfiConverterByteArray.write(it, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterSequenceTypeSpamFeedResult: FfiConverterRustBuffer<List<SpamFeedResult>> {
+    override fun read(buf: ByteBuffer): List<SpamFeedResult> {
+        val len = buf.getInt()
+        return List<SpamFeedResult>(len) {
+            FfiConverterTypeSpamFeedResult.read(buf)
+        }
+    }
+
+    override fun allocationSize(value: List<SpamFeedResult>): ULong {
+        val sizeForLength = 4UL
+        val sizeForItems = value.map { FfiConverterTypeSpamFeedResult.allocationSize(it) }.sum()
+        return sizeForLength + sizeForItems
+    }
+
+    override fun write(value: List<SpamFeedResult>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        value.iterator().forEach {
+            FfiConverterTypeSpamFeedResult.write(it, buf)
+        }
+    }
+}
+
+
+
+
+/**
+ * @suppress
+ */
+public object FfiConverterSequenceTypeSpamFeedSource: FfiConverterRustBuffer<List<SpamFeedSource>> {
+    override fun read(buf: ByteBuffer): List<SpamFeedSource> {
+        val len = buf.getInt()
+        return List<SpamFeedSource>(len) {
+            FfiConverterTypeSpamFeedSource.read(buf)
+        }
+    }
+
+    override fun allocationSize(value: List<SpamFeedSource>): ULong {
+        val sizeForLength = 4UL
+        val sizeForItems = value.map { FfiConverterTypeSpamFeedSource.allocationSize(it) }.sum()
+        return sizeForLength + sizeForItems
+    }
+
+    override fun write(value: List<SpamFeedSource>, buf: ByteBuffer) {
+        buf.putInt(value.size)
+        value.iterator().forEach {
+            FfiConverterTypeSpamFeedSource.write(it, buf)
         }
     }
 }
@@ -4202,6 +4900,75 @@ public object FfiConverterMapStringString: FfiConverterRustBuffer<Map<kotlin.Str
     uniffiRustCallWithError(LibgmException) { _status ->
     UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_rust_hkdf_sha256(
         FfiConverterByteArray.lower(`ikm`),FfiConverterByteArray.lower(`salt`),FfiConverterByteArray.lower(`info`),_status)
+}
+    )
+    }
+    
+
+        /**
+         * Classify one incoming message.
+         *
+         * Order (minimizes network use + leakage):
+         * 1. Master toggle off → Clean immediately.
+         * 2. OFFLINE feed match (fast, no I/O). A hit returns immediately — no network.
+         * 3. If offline is Clean AND `online_enabled` AND an online provider is
+         * configured → live lookups (Safe Browsing on the URLs, optional number
+         * reputation on the sender). A network error degrades to Clean (never throws).
+         *
+         * Async because of step 3; the std RwLock guard is dropped before any `.await`.
+         */
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+     suspend fun `spamClassify`(`text`: kotlin.String, `sender`: kotlin.String) : SpamVerdict {
+        return uniffiRustCallAsync(
+        UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_spam_classify(FfiConverterString.lower(`text`),FfiConverterString.lower(`sender`),),
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterTypeSpamVerdict.lift(it) },
+        // Error FFI converter
+        UniffiNullRustCallStatusErrorHandler,
+    )
+    }
+
+        /**
+         * Configure the engine and load any cached index from disk. Idempotent; call
+         * whenever the toggle or feed settings change. Sync + cheap (one file read).
+         */ fun `spamConfigure`(`config`: SpamConfig)
+        = 
+    uniffiRustCall() { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_spam_configure(
+        FfiConverterTypeSpamConfig.lower(`config`),_status)
+}
+    
+    
+
+        /**
+         * Download + parse all configured feeds and (on success) install + persist a
+         * fresh index. On failure the previously cached index is kept untouched. Async
+         * (network I/O) — Kotlin calls it from a WorkManager job.
+         */
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+     suspend fun `spamRefreshFeeds`() : SpamRefreshResult {
+        return uniffiRustCallAsync(
+        UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_spam_refresh_feeds(),
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_rust_buffer(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_complete_rust_buffer(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_free_rust_buffer(future) },
+        // lift function
+        { FfiConverterTypeSpamRefreshResult.lift(it) },
+        // Error FFI converter
+        UniffiNullRustCallStatusErrorHandler,
+    )
+    }
+
+        /**
+         * Snapshot of engine status for the settings/diagnostics screen.
+         */ fun `spamStatus`(): SpamStatus {
+            return FfiConverterTypeSpamStatus.lift(
+    uniffiRustCall() { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_spam_status(
+        _status)
 }
     )
     }

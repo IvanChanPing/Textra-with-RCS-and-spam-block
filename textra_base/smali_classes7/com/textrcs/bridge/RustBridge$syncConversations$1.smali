@@ -53,7 +53,7 @@
     f = "RustBridge.kt"
     i = {}
     l = {
-        0xda
+        0xe4
     }
     m = "invokeSuspend"
     n = {}
@@ -176,7 +176,7 @@
 
     move-result-object v1
 
-    .line 216
+    .line 226
     iget v2, p0, Lcom/textrcs/bridge/RustBridge$syncConversations$1;->label:I
 
     const-string v3, "TextRCSRustBridge"
@@ -207,13 +207,13 @@
 
     goto :goto_37
 
-    .line 223
+    .line 233
     :catchall_1c
     move-exception v0
 
     goto/16 :goto_90
 
-    .line 216
+    .line 226
     .end local v1    # "this":Lcom/textrcs/bridge/RustBridge$syncConversations$1;
     .end local p1    # "$result":Ljava/lang/Object;
     :pswitch_1f
@@ -221,12 +221,12 @@
 
     move-object v2, p0
 
-    .line 217
+    .line 227
     .local v2, "this":Lcom/textrcs/bridge/RustBridge$syncConversations$1;
     .restart local p1    # "$result":Ljava/lang/Object;
     nop
 
-    .line 218
+    .line 228
     :try_start_24
     iget-object v4, v2, Lcom/textrcs/bridge/RustBridge$syncConversations$1;->$rc:Luniffi/textrcs_libgm/RustClient;
 
@@ -248,29 +248,29 @@
 
     if-ne v4, v1, :cond_35
 
-    .line 216
+    .line 226
     return-object v1
 
-    .line 218
+    .line 228
     :cond_35
     move-object v1, p1
 
     move-object p1, v4
 
-    .line 216
+    .line 226
     .end local p1    # "$result":Ljava/lang/Object;
     .local v1, "$result":Ljava/lang/Object;
     :goto_37
     :try_start_37
     check-cast p1, [B
 
-    .line 219
+    .line 229
     .local p1, "bytes":[B
     invoke-static {p1}, Lcom/textrcs/gmproto/client/ListConversationsResponse;->parseFrom([B)Lcom/textrcs/gmproto/client/ListConversationsResponse;
 
     move-result-object v4
 
-    .line 220
+    .line 230
     .local v4, "resp":Lcom/textrcs/gmproto/client/ListConversationsResponse;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -300,7 +300,7 @@
 
     invoke-static {v5}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 221
+    .line 231
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -329,7 +329,7 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
+    .line 232
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->INSTANCE:Lcom/textrcs/receive/IncomingMessageHandler;
 
     iget-object v5, v2, Lcom/textrcs/bridge/RustBridge$syncConversations$1;->$context:Landroid/content/Context;
@@ -350,7 +350,7 @@
     .end local p1    # "bytes":[B
     goto :goto_e8
 
-    .line 223
+    .line 233
     :catchall_8a
     move-exception v0
 
@@ -367,7 +367,7 @@
 
     move-object v1, v2
 
-    .line 224
+    .line 234
     .end local v2    # "this":Lcom/textrcs/bridge/RustBridge$syncConversations$1;
     .local v0, "e":Ljava/lang/Throwable;
     .local v1, "this":Lcom/textrcs/bridge/RustBridge$syncConversations$1;
@@ -414,7 +414,7 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 225
+    .line 235
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,7 +459,7 @@
 
     move-object v1, p1
 
-    .line 227
+    .line 237
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local p1    # "$result":Ljava/lang/Object;
     .local v1, "$result":Ljava/lang/Object;

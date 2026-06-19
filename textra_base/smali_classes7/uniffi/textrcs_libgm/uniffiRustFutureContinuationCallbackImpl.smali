@@ -52,7 +52,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 1273
+    .line 1318
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    .line 1275
+    .line 1320
     invoke-static {}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->getUniffiContinuationHandleMap()Luniffi/textrcs_libgm/UniffiHandleMap;
 
     move-result-object v1
@@ -88,6 +88,6 @@
 
     invoke-interface {v1, v0}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
-    .line 1276
+    .line 1321
     return-void
 .end method
