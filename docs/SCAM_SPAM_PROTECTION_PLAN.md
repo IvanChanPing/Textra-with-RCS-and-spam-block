@@ -4,6 +4,43 @@
 **Goal:** Research all viable scam-text / spam-SMS protection techniques, then implement the
 best-fit ones ON-DEVICE inside the Rust messaging engine (`textrcs_libgm`).
 
+**2026-06-23 — USER WANTS to test that KNOWN SPAM NUMBERS (political fundraising texts:
+360-218-2008, 646-491-9454, 347-292-7972) get flagged "by some database", injected so they
+show a notification; kill emulator when done. Also asked: (a) what 3rd-party method flagged
+numbers pre-receive; (b) non-free number-rep services; (c) why TextRCS doesn't show INLINE
+LINKS in messages vs original Textra (separate investigation).**
+VERIFIED THIS SESSION (blockers to the literal ask):
+1. Engine has NO offline number feed — `SpamFeedKind`={Urls,Hosts}; `store.numbers` never
+   filled by feeds. Numbers only flaggable via the ONLINE generic HTTP provider (off by default).
+2. Verdict-ONLY: logs `FLAGGED`+prefs verdict, never blocks/deletes; msg always delivered.
+3. classify only fires from `IncomingMessageHandler.handleMessage` (GM-WEB path, line 462) —
+   NOT native SMS / `content://sms`. Injection that shows a notification AND runs the filter
+   needs a synthetic msg through that handler (debug hook); plain adb SMS notifies but bypasses.
+4. FTC DNC API (free US gov: api.ftc.gov/v0/dnc-complaints, DEMO_KEY works) HAS originating
+   numbers but CANNOT be queried by spammer number (only consumer area_code/date), is
+   call-complaint dominated → these political-TEXT numbers almost certainly NOT in it.
+USER CONSTRAINTS (2026-06-23): (a) FORBIDDEN to hand-add these numbers to a blocklist to pass
+the test — must catch them ORGANICALLY via real general detection (rule saved
+/root/.claude/rules/no-manual-spam-blocklist.md). (b) Inject via debug hook through the real
+receive path.
+PROBE RESULTS (2026-06-23, VERIFIED live) — NO reachable database flags these numbers/domains:
+- Nomorobo 360-218-2008 = "Unknown Caller" (not flagged).
+- 800notes (via decodo, Cloudflare-bypass): ZERO reports on all 3 numbers.
+- SURBL multi: domains not listed. Spamhaus DBL: 127.255.255.254 = public-resolver-refused (inconclusive, NOT a listing).
+- URLhaus host API: now requires auth key (Unauthorized) — can't check free.
+- demscc.com / k-g4ny.com: no A record from this box; these are legit political-committee
+  shortlink domains (DSCC etc.), NOT phishing → will NEVER be on OpenPhish/URLhaus phishing feeds.
+CONCLUSION (grounds a pushback): the premise "these numbers should've been flagged by a database"
+does NOT hold — political P2P-texting numbers + committee shortlink domains rotate too fast and
+aren't robocalls/phishing, so they're in no accessible reputation DB. A pure number/domain-DB
+blocker CANNOT catch these specific ones. The only reliable catcher for THIS CLASS = a multi-signal
+POLITICAL-SPAM HEURISTIC (sender=10-digit non-contact P2P + bare shortlink domain.com/NNNNN/xxxxx +
+fundraising/opt-out language "donate/flip the Senate/triple-match/$X/deadline/stop2end/Text STOP")
++ a curated political-texting-platform/committee domain list. Content-aware by necessity.
+NEXT: presented this to user + asked to confirm approach (heuristic classifier ± DB augmentation)
+before the heavy build (engine layer + debug-inject hook + ~100MB APK rebuild + redroid boot).
+Side task queued: inline-links-not-rendering diff vs stock Textra.
+
 **USER DECISIONS (2026-06-17):** (1) build scope = "use an OUTSIDE service to classify, NOT build
 one from scratch; make it a TOGGLE"; (2) network = "offline + downloadable feed refresh"; (3) NON-
 commercial; (4) Rust returns VERDICT only, UI wired later.
@@ -19,7 +56,9 @@ lookups (sub-toggle). Non-commercial. Rust returns VERDICT only (pull-style), Ko
 crate 0.14.0→0.15.0, CHANGELOG updated. Offline scam/spam engine in `src/spam/` (extract/store/
 feeds/engine/mod). HOST-TESTED ONLY — live download, .so cross-build, on-device = UNVERIFIED.
 
-**SETTINGS UI BUILT (2026-06-19) — committing now. APK = textra2_v1.07.0.apk.** build.sh GREEN: kotlinc
+**SETTINGS UI COMMITTED (2026-06-19, commit 3452a52d). APK = textra2_v1.07.0.apk. FEATURE COMPLETE
+pending user device test (build env has no device).** Commits: A=97326728, B=ab4287ac, C=73999322,
+UI=3452a52d.** build.sh GREEN: kotlinc
 clean, SpamSettingsActivity.smali merged, MAIN/LAUNCHER intent-filter for com.textrcs.spam.SpamSettingsActivity
 confirmed in the packaged APK manifest (aapt2). UI click-path UNVERIFIED (no device) → user taps the
 "Textra Spam Filter" drawer icon to test. NEXT: commit; feature COMPLETE pending user device test.

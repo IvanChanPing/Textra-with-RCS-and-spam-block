@@ -54,6 +54,13 @@
 
     invoke-super {p0, p1}, Lcom/mplus/lib/x5/l;->onCreate(Landroid/os/Bundle;)V
 
+    # textrcs image-morph (Route A) RECEIVER hook: wire the shared-element
+    # MaterialContainerTransform enter/return morph + postpone, then poll for the
+    # photo view to start it. Self-contained (com.textrcs.ui.GalleryMorph), guarded,
+    # degrades to a plain gallery open on any failure. Must run before the first
+    # layout, hence right after super.onCreate. p0 = this GalleryActivity (Activity).
+    invoke-static {p0}, Lcom/textrcs/ui/GalleryMorph;->onCreate(Landroid/app/Activity;)V
+
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1

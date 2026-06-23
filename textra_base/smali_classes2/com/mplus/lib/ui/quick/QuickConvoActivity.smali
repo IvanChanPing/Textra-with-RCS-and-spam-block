@@ -1743,6 +1743,34 @@
 
     const/4 v5, 0x3
 
+    # === [textrcs] quick_reply_round_corners — rounded popup card via
+    # BaseFrameLayout.setClipPath. (setClipToOutline is bypassed by
+    # BaseFrameLayout.dispatchDraw; only setClipPath actually clips.)
+    sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+
+    const-string v1, "quick_reply_round_corners"
+
+    invoke-static {}, Lkotlin/collections/MapsKt;->emptyMap()Ljava/util/Map;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/textrcs/control/Hooks;->shouldSkip(Ljava/lang/String;Ljava/util/Map;)Z
+
+    move-result v0
+
+    if-nez v0, :textrcs_skip_round
+
+    const v0, 0x7f0a0101    # R.id.contentControlledHeight
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/textrcs/ui/QuickReplyCorners;->apply(Landroid/view/View;)V
+
+    :textrcs_skip_round
+    # === end textrcs quick_reply_round_corners ===
+
     return-void
 .end method
 

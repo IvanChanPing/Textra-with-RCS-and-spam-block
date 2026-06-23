@@ -39,6 +39,18 @@
     <style name="AppTheme.ConvoActivity" parent="@style/AppTheme.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowActionModeOverlay">true</item>
+        <!-- textrcs image-morph (Route A): enables the shared-element ACTIVITY
+             transition framework so this conversation screen can be the SENDER of
+             the bubble-image -> stock GalleryActivity MaterialContainerTransform
+             morph (ActivityOptions.makeSceneTransitionAnimation in
+             com.textrcs.ui.MorphGalleryLauncher). REGRESSION RISK (R5, journal
+             IMAGE_MORPH_PLAN.md): this activity ALSO uses the custom
+             windowAnimationStyle below (TextrcsParallaxAnimation) for the
+             conv-list<->convo parallax slide; enabling transitions SHOULD leave
+             that intact (no explicit enter/exit Transition is set, so the framework
+             falls back to windowAnimationStyle), but the device test MUST confirm
+             the parallax still slides. If it regresses, delete just this one line. -->
+        <item name="android:windowActivityTransitions">true</item>
         <item name="convoContent">@null</item>
         <item name="convoContentControlledHeight">@null</item>
         <item name="android:windowAnimationStyle">@style/TextrcsParallaxAnimation</item>
@@ -66,6 +78,17 @@
     </style>
     <style name="AppTheme.GalleryActivity" parent="@style/AppTheme.NoActionBar">
         <item name="android:windowBackground">@android:color/black</item>
+        <!-- textrcs image-morph (Route A): the RECEIVER side. Enables the shared-
+             element ACTIVITY transition framework so the stock fullscreen gallery
+             can accept the bubble-image MaterialContainerTransform morph (enter)
+             and play it in reverse on dismiss (return). The MCT itself is built +
+             attached in com.textrcs.ui.GalleryMorph.onCreate (scrim TRANSPARENT,
+             fade THROUGH, fit HEIGHT, target = the image) called from
+             GalleryActivity.onCreate. Low risk here (this theme has no competing
+             windowAnimationStyle). Also affects the gallery opened from the image
+             picker (2nd entry point) — its open anim shifts to the transition
+             framework default; acceptable. -->
+        <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightNavigationBar">false</item>
@@ -99,7 +122,10 @@
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowActionModeOverlay">true</item>
         <item name="convoContent">@style/convoContent</item>
-        <item name="convoContentControlledHeight">@style/convoContentControlledHeight</item>
+        <item name="convoContentControlledHeight">@style/convoContentControlledHeight.QuickReplyRounded</item>
+    </style>
+    <style name="convoContentControlledHeight.QuickReplyRounded" parent="@style/common_floating_window">
+        <item name="android:background">@drawable/quick_reply_card_bg</item>
     </style>
     <style name="AppTheme.Settings" parent="@style/AppTheme.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>

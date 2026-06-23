@@ -1,4 +1,4 @@
-//! ffi.rs — UniFFI send + receive surface for the textra2 Android app.
+//! ffi.rs — UniFFI send + receive surface for the host Android app.
 //!
 //! This is the wiring layer that lets the Kotlin `SendManager` /
 //! `ReceiveService` drive the protocol through the Rust `ClientEngine`
@@ -169,7 +169,7 @@ pub trait RustEventSink: Send + Sync {
     fn on_phone_not_responding(&self);
     /// The ditto pinger saw the phone come back online.
     fn on_phone_responding_again(&self);
-    /// A pair/gaia event arrived (textra2 drives pairing in Kotlin, so
+    /// A pair/gaia event arrived (the host app drives pairing in Kotlin, so
     /// this is informational only). `route` is the numeric BugleRoute.
     fn on_pair_event(&self, route: i32);
 }
@@ -385,6 +385,48 @@ impl RustClient {
             .list_conversations(count, Folder::Inbox, first_call)
             .await?;
         Ok(resp.encode_to_vec())
+    }
+
+    /// Download + AES-GCM-decrypt an incoming attachment (MMS media).
+    ///
+    /// `media_id` and `decryption_key` come straight from the inbound
+    /// `MediaContent` proto (`mediaID` + `decryptionKey`). Returns the raw
+    /// decrypted file bytes (e.g. the JPEG/PNG). Port of
+    /// `ClientEngine::download_media` (media.go:265).
+    pub async fn download_media(
+        &self,
+        media_id: String,
+        decryption_key: Vec<u8>,
+    ) -> Result<Vec<u8>> {
+        self.engine_arc()
+            .await?
+            .download_media(media_id, decryption_key)
+            .await
+    }
+
+    /// Request the full-resolution image for a group-MMS message.
+    ///
+    /// A group MMS image is delivered inline only as a tiny thumbnail; the
+    /// client must explicitly ask the phone to upload the original. This
+    /// fires the `GET_FULL_SIZE_IMAGE` RPC (port of `methods.go:159`).
+    /// `GetFullSizeImageResponse` is an empty proto, so there is nothing to
+    /// return — the full-size `MediaContent` (mediaID + decryptionKey)
+    /// arrives later as an unsolicited `UpdateEvents` frame through the
+    /// `RustEventSink.on_data_event` callback, after which Kotlin calls
+    /// `download_media` to fetch + decrypt the bytes.
+    ///
+    /// `message_id` is the inbound message's ID; `action_message_id` is the
+    /// `MessageInfo.actionMessageID` of the image part to fetch.
+    pub async fn request_full_size_image(
+        &self,
+        message_id: String,
+        action_message_id: String,
+    ) -> Result<()> {
+        self.engine_arc()
+            .await?
+            .get_full_size_image(message_id, action_message_id)
+            .await?;
+        Ok(())
     }
 }
 

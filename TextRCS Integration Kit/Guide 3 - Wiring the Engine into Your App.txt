@@ -1,0 +1,614 @@
+================================================================
+  WIRING THE MESSAGING ENGINE INTO YOUR APP
+  (plain-language guide — for a human developer)
+================================================================
+
+WHAT THIS GUIDE IS
+------------------
+Guide 1 got the Rust engine into your project — the `.so`, the Kotlin
+bindings, the `RustClient` class. That is the TRANSPORT: it can pair,
+send, and receive over Google Messages' "Messages for web" protocol.
+
+But a transport on its own does not make a messaging app. Something has
+to DRIVE it (decide when to send), CONSUME it (react to what comes back),
+and WRITE the results somewhere the user can see them. That glue is the
+subject of this guide.
+
+TextRCS is a modified build of the Textra SMS app. It cannot touch
+Textra's source — Textra ships only as a compiled APK — so every place
+TextRCS connects the engine to the app is done by editing decompiled
+"smali" bytecode. That is a workaround forced by not having the source.
+
+YOU have your source. So you do NOT smali-patch anything. Wherever this
+guide says "TextRCS patches X in smali", the instruction for you is the
+plain-Kotlin equivalent: call a method from your own code. This guide
+walks each of those, names the real TextRCS class that does the work,
+and tells you what its source-code counterpart is.
+
+Read this AFTER Guide 1. The engine must already build and the
+`uniffi.textrcs_libgm.RustClient` class must be importable.
+
+
+THE ARCHITECTURE — FOUR LAYERS
+------------------------------
+Picture the finished system as four layers, top to bottom:
+
+  1. YOUR APP'S UI + MESSAGE STORE
+        Your conversation list, your chat screen, your database.
+        This is yours; the engine never touches it directly.
+
+  2. THE GLUE LAYER  ← this guide builds this
+        A handful of small classes that translate between your app
+        and the engine: a send driver, a receive handler, a thin
+        "write it into my store" adapter, a pairing screen.
+
+  3. THE RUST CLIENT  (`uniffi.textrcs_libgm.RustClient`)
+        The transport. You constructed this in Guide 1. It owns the
+        long-poll, the keep-alive pinger, encryption, and the
+        send RPCs. You call into it; it calls back out to you.
+
+  4. GOOGLE'S SERVERS / the user's paired phone.
+
+The glue layer (layer 2) is what TextRCS keeps in
+`inject_src/com/textrcs/` — included in this kit under
+`App Integration Source/com/textrcs/`. The most important classes, and
+what each is FOR, are:
+
+  bridge/RustBridge.kt
+        The single point where the app meets the engine. Holds the
+        one `RustClient`, starts/stops it, exposes `sendText(...)`,
+        and — crucially — implements `RustEventSink`, the callback
+        the engine fires for every incoming frame.
+
+  send/SendManager.kt
+        The send driver. Your "send" button ends up here. It hands
+        off to `RustBridge.sendText`.
+
+  receive/ReceiveService.kt
+        An Android foreground Service whose only job is to keep the
+        process alive (and the long-poll open) while the app is in
+        the background, and to start/stop `RustBridge`.
+
+  receive/IncomingMessageHandler.kt
+        The receive brain. Parses each incoming engine frame, works
+        out who sent it, whether it is a group, whether it is one of
+        the user's own messages from another device, and routes it.
+
+  bridge/TextraDbBridge.kt
+        The "write it into the store" adapter. THIS ONE IS
+        TEXTRA-SPECIFIC — it reflects into Textra's private SQLite
+        database and UI. In your app you replace it wholesale with
+        the equivalent against YOUR store. Treat it as a reference
+        for WHAT to write, not as a drop-in.
+
+  ui/pairing/PairingActivity.kt
+        The Google sign-in screen (a WebView) plus the handshake
+        that produces a paired session.
+
+  ui/TypingIndicator.kt
+        Shows a "typing…" affordance when the other party is typing.
+
+  control/Hooks.kt
+        A debug switch registry. In the shipping build it is inert
+        (every `shouldSkip` returns false). You can ignore it — the
+        `Hooks.shouldSkip(...)` calls peppered through the code are
+        no-ops. Do not let them distract you.
+
+  gmproto/
+        Generated Java protobuf classes for the Google Messages wire
+        format (conversations, events, rpc, …). Generated code — you
+        do not edit it; you just parse engine bytes with it (e.g.
+        `UpdateEvents.parseFrom(...)`).
+
+
+HOW SEND AND RECEIVE ACTUALLY FLOW
+----------------------------------
+SEND (user taps "send" in your app):
+
+   your send code
+     → SendManager.sendText(phone, body, sentIntents?)
+       → (off a background thread)
+       → RustBridge.sendText(context, phone, body)
+         → RustClient.sendText(phone, body)   [the engine]
+   Then SendManager fires your "sent / failed" callback.
+
+RECEIVE (a message arrives, or the engine has news):
+
+   RustClient long-poll  [the engine]
+     → RustBridge.Sink.onDataEvent(action, decrypted, ...)   [your RustEventSink]
+       → UpdateEvents.parseFrom(decrypted)
+       → IncomingMessageHandler.onUpdateEvents(context, events)
+         → resolves sender / group / own-send
+         → TextraDbBridge.writeIncoming(...) etc.
+           → (in YOUR app: writes a row into YOUR message store)
+
+Everything below is just filling in those two chains.
+
+
+================================================================
+  EACH SMALI HOOK, AND ITS SOURCE-CODE REPLACEMENT
+================================================================
+TextRCS has exactly seven places where injected code meets the host
+Textra app. Six are smali edits; one is a manifest entry. For each, here
+is what TextRCS does and what you do instead.
+
+
+--- HOOK 1 — OUTGOING SEND INTERCEPTION ---
+
+WHAT TEXTRCS DOES
+TextRCS patches Textra's last-mile SMS sender. In smali that is the
+method `e5/d.smali::m(...)` — the line right before Textra would call
+`SmsManager.sendMultipartTextMessage(...)`. The patch diverts to
+`SendManager.sendSmsBridge(context, destination, parts, sentIntents)`,
+which joins the multipart segments back into one body and calls
+`SendManager.sendText(...)`. The real `SmsManager` call never runs, so
+no cellular SMS goes out.
+
+`SendManager.sendSmsBridge` exists ONLY as a smali entry point — it
+adapts Textra's argument shapes. You do not need it.
+
+WHAT YOU DO
+You own your send code path, so there is nothing to "intercept" — you
+just call the engine from it directly. In your app's send routine
+(wherever the user's tapped "send" lands), instead of sending an SMS,
+call:
+
+    SendManager.get(context).sendText(recipientPhone, body, sentIntents)
+
+`sentIntents` is optional. It exists because Textra reconciles a sent
+message via a `PendingIntent` callback (the same contract
+`SmsManager.sendMultipartTextMessage` uses). If your app marks a message
+"sent" by some other means — a coroutine result, a callback, a DB
+status flip — you can skip `sentIntents` entirely and instead make
+`SendManager.sendText` return a result you act on. The shape of
+`SendManager` is simple enough that adapting it to your callback style
+is a few lines; the load-bearing call inside it is just
+`RustBridge.sendText(appContext, recipientPhone, body)`.
+
+NOTE on what `SendManager` does for you that is worth keeping:
+  - It runs the send off the main thread (a single-thread executor).
+  - It catches failures and reports success/failure back.
+  - It has a "record-only" concept — see HOOK 6 below — so you do not
+    re-transmit a message that another device already sent. Keep that.
+You can also call `RustBridge.sendText(...)` straight from your own
+code and drop `SendManager` if you prefer; `SendManager` is mostly a
+threading + reconciliation wrapper.
+
+
+--- HOOK 2 — RECEIVING + WRITING INCOMING MESSAGES ---
+
+WHAT TEXTRCS DOES
+There is no smali patch here — receiving is driven entirely by the
+engine's callback. `RustBridge` implements `RustEventSink`; the engine
+calls `onDataEvent(action, decryptedData, unencryptedData, isOld)` for
+every long-poll frame. `RustBridge.Sink` parses `decryptedData` as the
+`UpdateEvents` protobuf and hands it to
+`IncomingMessageHandler.onUpdateEvents(context, events)`.
+
+`IncomingMessageHandler` then, per message:
+  - skips stale replays (`isOld`, and a `seenMessageIds` de-dup set —
+    Google pushes the same message 2-3 times);
+  - converts the timestamp (libgm sends microseconds; most stores
+    want milliseconds);
+  - resolves the real sender phone — a message carries only a libgm
+    "participantID" (a short int like "3343"), NOT a phone number;
+  - decides 1:1 vs group vs own-send vs status line;
+  - calls the matching `TextraDbBridge.write*` method.
+
+WHAT YOU DO
+The `RustEventSink` implementation and `IncomingMessageHandler` are
+NOT Textra-specific — they are honest protocol code. Reuse them almost
+as-is. The ONLY thing you change is the final step: where
+`IncomingMessageHandler` calls `TextraDbBridge.writeIncoming(...)`,
+you call YOUR store's "insert an incoming message" function instead.
+
+So your plan for receive:
+  1. Keep `RustBridge` and its `Sink` class — it is your `RustEventSink`.
+  2. Keep `IncomingMessageHandler` — the sender-resolution, de-dup,
+     group detection, and own-send detection logic is all worth having
+     and is hard to get right; do not rewrite it.
+  3. Replace `TextraDbBridge` with your own adapter exposing the same
+     handful of methods (see "THE STORE ADAPTER" section below).
+
+Sender resolution detail worth understanding: `IncomingMessageHandler`
+resolves a phone in priority order — the message's own
+`senderParticipant`, then a `participantID → phone` cache it builds
+from `ConversationEvent`s, then the conversation's primary participant,
+and only as a last resort the raw participant int. If it cannot resolve
+a real phone it HOLDS the message rather than threading it into a
+junk conversation. Keep that behaviour; it prevents garbage threads.
+
+
+--- HOOK 3 — GROUP CONVERSATIONS ---
+
+WHAT TEXTRCS DOES
+A group message has no 1:1 SMS form. TextRCS detects "group" when libgm
+flags the conversation as a group OR it has more than one non-self
+participant (`IncomingMessageHandler.cacheConversation`). For a group
+TEXT it calls `TextraDbBridge.writeIncomingGroup(sender, allMembers,
+text, ts)`; for group MEDIA, `writeIncomingGroupMms(...)`. Inside
+`TextraDbBridge` these reach into Textra's own group-message writer —
+heavy reflection — because that is the only way to make Textra thread a
+message to a set of numbers when you cannot edit Textra.
+
+WHAT YOU DO
+The DECISION ("this is a group, here are the members") stays in
+`IncomingMessageHandler` — keep it. The ACTION is just: write a message
+into a conversation keyed by a SET of phone numbers instead of one. In a
+source app that is trivial — your store already (or easily) supports a
+multi-recipient conversation. So your store adapter exposes, say,
+`writeIncomingGroup(senderPhone, memberPhones, body, ts)`, and it does
+the obvious thing: find-or-create the conversation whose participant set
+is `memberPhones`, insert a message from `senderPhone`. No reflection,
+no PDUs.
+
+(One product decision worth copying: key a group conversation purely by
+its member set — one conversation per unique set of numbers. Trying to
+give each libgm group its own separate thread leads to duplicate
+conversations, because the conversation can only be re-found by its
+member set.)
+
+
+--- HOOK 4 — INLINE CONVERSATION-STATUS LINES (the "kind = 9" idea) ---
+
+WHAT TEXTRCS DOES
+Google Messages sends "status" / "tombstone" notices — "you created this
+group", "now end-to-end encrypted", "Alex joined", etc. These must NOT
+appear as chat bubbles. TextRCS detects them in
+`IncomingMessageHandler.handleMessage` (a libgm `MessageStatusType`
+value of 200 or higher) and calls `TextraDbBridge.writeSystemMessage`.
+
+Because TextRCS cannot add a new view type to Textra's UI, it abuses an
+EXISTING one: Textra's message-list adapter (`v6/A` in smali) already has
+a centered "status line" row type — it uses the database column `kind`
+with value `9`. So `writeSystemMessage` inserts a `messages` row with
+`kind = 9`; Textra's adapter then renders it as a centered grey status
+line for free.
+
+WHAT YOU DO
+The clean source-code version of "abuse an existing row type" is
+"add a real row type". In your message-list adapter (`RecyclerView`
+adapter or equivalent):
+  - add a new view type, e.g. `VIEW_TYPE_STATUS`;
+  - give it a simple centered-text layout;
+  - return it from `getItemViewType(...)` for messages your store has
+    flagged as status notices.
+Then your store adapter exposes `writeSystemMessage(memberPhones, text,
+ts)` which inserts a message row carrying that "this is a status notice"
+flag. The `kind = 9` integer is a Textra implementation detail; in your
+app it is just a boolean/enum on your own message model.
+
+Detail to copy: TextRCS only inserts a status line if the conversation
+ALREADY exists — it never creates a brand-new conversation just to hold
+a tombstone. Do the same.
+
+
+--- HOOK 5 — THE TYPING INDICATOR ---
+
+WHAT TEXTRCS DOES
+Two parts.
+
+(a) Receiving the typing signal — no smali. `IncomingMessageHandler`
+already parses `UpdateEvents`; when an event has a `typingEvent` it
+calls `TypingIndicator.onTypingEvent(convID, userNumber, started)`.
+
+(b) Knowing which conversation is on screen — ONE smali hook. TextRCS
+adds a single `invoke-static` into Textra's `ConvoActivity` smali, in
+the `onWindowFocusChanged(boolean)` method, calling
+`TypingIndicator.onConvoFocus(this, hasFocus)`. That tells the indicator
+which conversation screen is currently foregrounded so it shows the
+"typing…" affordance on the right screen. (TextRCS uses
+`onWindowFocusChanged` specifically because it is a non-final method
+safe to extend; `onPause` is final in Textra and overriding it crashes.)
+
+`TypingIndicator` also has to figure out the open conversation's phone
+numbers, and in TextRCS it does that with guarded reflection into
+Textra's private view model. It shows the affordance as a `Toast`
+because injecting a view into Textra's live layout risks crashes.
+
+WHAT YOU DO
+(a) Receiving: keep `IncomingMessageHandler`'s typing branch — it is
+fine as-is.
+
+(b) On-screen tracking: no smali. In YOUR conversation Activity/Fragment
+just call your typing logic from normal lifecycle methods —
+`onResume()` / `onPause()`, or a `LifecycleObserver`. You already know
+which conversation the screen is showing (you opened it), so you do not
+need reflection to discover the phone numbers — pass them in directly.
+
+And because it is your UI, you do not need the `Toast` workaround:
+add a proper "typing…" row or header view to your chat screen. So in
+your app `TypingIndicator` becomes much simpler — keep the event
+plumbing (`onTypingEvent`, the auto-hide timeout, the
+hide-on-message-arrived behaviour) and drop the reflection + Toast.
+
+
+--- HOOK 6 — THE USER'S OWN SENDS FROM OTHER CLIENTS ---
+
+WHAT TEXTRCS DOES
+The user might send a message from their phone or from
+messages.google.com. That message comes back down YOUR long-poll too.
+It must be shown as an OUTGOING message in your app, not as an incoming
+one — and it must NOT be re-transmitted (Google already sent it).
+
+`IncomingMessageHandler.handleMessage` detects an own-send: it has no
+`tmpID` (a tmpID is set only on messages this app itself sent) and
+carries an outgoing status or an `isMe` sender. It routes those to
+`handleOutgoing` → `TextraDbBridge.writeOutgoing(recipients, body, ts)`.
+
+There is a subtle re-transmit trap. In Textra, `writeOutgoing` has to
+go through Textra's own outgoing-send method to get a proper outgoing
+row — but that method ALSO fires a real send. So before calling it,
+`TextraDbBridge.writeOutgoing` calls
+`SendManager.markRecordOnly(body)`; `SendManager.sendText` then sees the
+"record-only" marker and skips the actual GM transmit (it just fires the
+success callback). This is the "record-only" mechanism mentioned in
+HOOK 1.
+
+WHAT YOU DO
+In a source app this is much simpler, because YOU control how a message
+row is created — writing an outgoing row does not have to trigger a
+send. So your store adapter's `writeOutgoing(recipients, body, ts)`
+just inserts an outgoing message row and refreshes the UI. Done. No
+re-transmit, so no "record-only" dance is needed at all.
+
+KEEP, though, the DETECTION logic in `IncomingMessageHandler`
+(no-tmpID + outgoing-status / isMe). That is real protocol knowledge and
+is the same in any app. Also keep its handling of the race where an
+own-send `MessageEvent` arrives before the `ConversationEvent` that
+names the recipients — `IncomingMessageHandler` queues such a message
+(`pendingOutgoing`) and flushes it once the participants are known.
+That race is real and the queue is the fix.
+
+
+--- HOOK 7 — PAIRING (Google sign-in) ---
+
+WHAT TEXTRCS DOES
+Pairing is a normal Android `Activity` — `PairingActivity` — so there is
+no smali patch in the activity itself. The only host edit is how it is
+LAUNCHED: TextRCS removed `PairingActivity`'s `LAUNCHER` intent-filter
+(so the app opens to the conversation list, not the pairing screen) and
+instead the Settings screen builds an explicit `Intent` to it (in
+Textra's smali, "Settings → Pro User").
+
+`PairingActivity` itself: shows a `WebView` pointed at Google's login
+URL, watches the cookie jar for the `SAPISID` cookie to appear, then
+hands off to the handshake code (`SignInGaiaClient` →
+`GaiaPairingOrchestrator`), shows the confirmation emoji, and on success
+saves the result through `SessionStore`. Once a session is saved it also
+starts `ReceiveService`.
+
+WHAT YOU DO
+`PairingActivity` is ordinary Android code — drop it into your source
+and adjust the package line. The launch is just your own navigation:
+put a "Connect Google Messages" item in YOUR settings screen and
+`startActivity(Intent(this, PairingActivity::class.java))`. Do NOT give
+it a `LAUNCHER` filter — your app should open to its conversation list.
+
+`PairingActivity` finds its layout and view IDs via
+`resources.getIdentifier(...)` (a TextRCS trick to avoid depending on
+the host's generated `R` class). In your own project you have a real
+`R` class — you can switch those `resId(...)` lookups to ordinary
+`R.layout.* / R.id.*` references, or leave them; both work.
+
+The pairing flow produces a `GMessagesSession` which `SessionStore`
+persists. That persisted session is exactly the input the engine needs
+(Guide 1, step 5) — `RustBridge.start()` reads it back via
+`SessionStore`, converts it to a `RustSession`, and connects the
+`RustClient`. So pairing and the engine are already joined through
+`SessionStore`; you do not wire them together yourself.
+
+TELL YOUR USER HOW TO LOG IN — it is TWO taps, not one. When you hand
+this integration over, output these steps to whoever will use the app,
+and stress the second tap:
+  1. Open the pairing screen and tap "Connect to Google Messages".
+  2. Sign into the Google account in the WebView that opens.
+  3. After the Google sign-in finishes, tap the Connect button a SECOND
+     time. THIS tap starts the actual pairing handshake with the phone —
+     the first tap only did the Google login. It is easy to miss.
+  4. A confirmation emoji appears; on the phone running Google Messages,
+     tap the matching emoji to finish pairing.
+
+
+================================================================
+  THE STORE ADAPTER — replacing TextraDbBridge
+================================================================
+`TextraDbBridge` is the one file you do NOT reuse. Every method in it is
+reflection into Textra's private SQLite database (`messaging.db`) and
+internal classes — synthesising fake SMS PDUs, inserting `mms_queue`
+rows, calling obfuscated methods like `c5.d.U` and `r4.H.F0`. That is an
+elaborate workaround for not having Textra's source. None of it applies
+to you.
+
+But `TextraDbBridge` is still a precise SPEC of what your own adapter
+must do. Write a class — call it whatever your store suggests — exposing
+these methods, each of which simply writes into YOUR database and
+refreshes YOUR UI:
+
+  writeIncoming(senderPhone, body, ts)
+        Insert a 1:1 incoming text message.
+
+  writeIncomingMms(context, senderPhone, text?, mediaBytes, mime, ts)
+        Insert a 1:1 incoming message with an attachment.
+
+  writeIncomingGroup(senderPhone, memberPhones, body, ts)
+        Insert an incoming text into the group conversation keyed by
+        `memberPhones`.
+
+  writeIncomingGroupMms(context, senderPhone, toAddresses, text?,
+                        mediaBytes?, mime?, ts)
+        Group message with an attachment.
+
+  writeOutgoing(recipientPhones, body, ts)
+        Insert an OUTGOING message (the user's own send from another
+        device — see HOOK 6).
+
+  writeSystemMessage(context, memberPhones, text, ts)
+        Insert a status-notice row (see HOOK 4) — only if that
+        conversation already exists.
+
+Keep the SIGNATURES the same, so `IncomingMessageHandler` (which you ARE
+reusing) calls your adapter unchanged — just point its
+`TextraDbBridge.*` calls at your class. The BODIES are all yours and, in
+a real app with its own store, each is short: find-or-create a
+conversation, insert a row, notify your UI.
+
+Media note: incoming MMS attachment bytes are produced by
+`RustBridge.downloadMedia(context, mediaId, key)` — the engine downloads
+and AES-GCM-decrypts the file and hands you the raw bytes (e.g. a JPEG).
+`IncomingMessageHandler` already calls this off-thread for you; your
+`writeIncomingMms` just receives the finished `ByteArray` and saves it
+wherever your app keeps attachments.
+
+
+================================================================
+  THE STEPS, IN ORDER
+================================================================
+Do these AFTER Guide 1 (the engine builds and `RustClient` imports).
+
+1. COPY THE GLUE CLASSES INTO YOUR SOURCE TREE.
+   The full app-side source is in this kit under
+   `App Integration Source/com/textrcs/`.
+   From it, copy: `bridge/RustBridge.kt`,
+   `send/SendManager.kt`, `receive/ReceiveService.kt`,
+   `receive/IncomingMessageHandler.kt`, `ui/TypingIndicator.kt`,
+   `ui/pairing/PairingActivity.kt`, the whole `protocol/` package and
+   the whole `gmproto/` package, and `control/Hooks.kt` (it is inert
+   but the others import it). Adjust `package` lines to your project.
+   You will delete/replace some of these later — copy them first so it
+   compiles, then refine.
+
+2. WRITE YOUR STORE ADAPTER.
+   Create your replacement for `TextraDbBridge` with the six method
+   signatures listed above, each writing into YOUR message store. Do
+   NOT copy `TextraDbBridge.kt` itself — it is all Textra reflection.
+
+3. REPOINT IncomingMessageHandler AT YOUR ADAPTER.
+   In `IncomingMessageHandler.kt` (and in `ReceiveService`'s self-test,
+   if you keep it), change every `TextraDbBridge.write*` call to your
+   adapter's method. Nothing else in that file needs to change — the
+   sender resolution, de-dup, group and own-send logic all stay.
+
+4. REGISTER ReceiveService IN YOUR MANIFEST.
+   Add `ReceiveService` as a `<service>` with a foreground-service type
+   appropriate to your app. It keeps the process (and the long-poll)
+   alive while backgrounded. Start it once a session exists — the
+   natural place is right after pairing succeeds (PairingActivity
+   already does this) and at app start if already paired (see step 5).
+   CAVEAT — Google Messages must be the phone's default SMS app: this
+   app is a companion to Google Messages on the user's phone. For the
+   relay to stay fed in the background and deliver notifications
+   reliably, Google Messages must be set as the default SMS app on that
+   phone — if it is not, RCS is not fully active there. The reference
+   build does not handle this. Add first-run onboarding that tells the
+   user to set Google Messages as their phone's default SMS app and
+   walks them through it.
+
+5. START THE ENGINE AT APP LAUNCH IF ALREADY PAIRED.
+   In your `Application.onCreate()` (or a `ContentProvider.onCreate`,
+   which runs even earlier — that is what TextRCS's
+   `CrashCatcherProvider` does), check `SessionStore(app).load()`; if a
+   session exists, start `ReceiveService`. Without this, an
+   already-paired user who opens the app to the conversation list would
+   have a closed long-poll and receive nothing.
+
+6. ADD A "CONNECT GOOGLE MESSAGES" ENTRY POINT.
+   In your settings screen, add an item that does
+   `startActivity(Intent(this, PairingActivity::class.java))`. Do not
+   give `PairingActivity` a `LAUNCHER` intent-filter.
+
+7. WIRE YOUR SEND BUTTON.
+   In your app's send code path, call
+   `SendManager.get(context).sendText(recipientPhone, body, sentIntents?)`
+   (or `RustBridge.sendText(...)` directly). Drop the `sentIntents`
+   argument if your app reconciles "sent" some other way; adapt
+   `SendManager` to return a result instead.
+
+8. WIRE THE TYPING INDICATOR (optional, do last).
+   Simplify `TypingIndicator`: keep `onTypingEvent` and the auto-hide
+   logic; drop the reflection and the `Toast`. From your conversation
+   screen's `onResume`/`onPause`, tell it which conversation is open
+   (pass the phone numbers directly — no reflection needed). Render the
+   affordance as a real view in your chat screen.
+
+9. ADD A STATUS-LINE ROW TYPE (optional).
+   In your message-list adapter, add a centered "status notice" view
+   type and have your store adapter's `writeSystemMessage` insert rows
+   your adapter renders with it. This is the clean version of TextRCS's
+   `kind = 9` trick.
+
+10. BUILD AND TEST AFTER EACH STEP.
+    Pairing first (step 6) — confirm a session is saved. Then receive
+    (steps 3-5) — confirm an incoming message lands in your store. Then
+    send (step 7). Typing and status lines last.
+
+
+================================================================
+  KEEPING THE RELAY ALIVE IN THE BACKGROUND
+================================================================
+The relay only delivers messages while its long-poll connection is
+open. Android actively works against a background process holding a
+live connection, so this needs deliberate handling — it is the single
+hardest part of shipping a relay like this reliably, and it is easy to
+under-estimate.
+
+WHAT THE REFERENCE BUILD DOES (reuse all of this)
+- `ReceiveService` is a FOREGROUND service. A plain background service
+  or a bare worker thread is killed within minutes once the app leaves
+  the screen, and the long-poll dies with it — messages simply stop
+  arriving. The foreground service, with its ongoing notification, is
+  what keeps the process and the connection alive. It is not optional.
+- It returns `START_STICKY` from `onStartCommand`, so if Android kills
+  the process under memory pressure the service is recreated — at which
+  point it re-opens the connection.
+- It is started early and from more than one place: immediately after
+  pairing succeeds, AND at app launch if a session already exists. The
+  reference build does the launch-time start from a `ContentProvider`,
+  which runs before `Application.onCreate`. Without that launch start,
+  an already-paired user who just opens the app to the conversation
+  list has no open long-poll and receives nothing until they send.
+
+WHAT YOU STILL HAVE TO HANDLE (Android / OEM realities)
+- Doze and App Standby: when the device is idle the OS suspends network
+  and defers background work. A foreground service is the supported way
+  to hold a live connection through this — there is no way around
+  needing one.
+- Foreground-service types: Android 14+ requires the service to declare
+  a `foregroundServiceType` and hold the matching permission. Choose a
+  type honest to what the service does.
+- OEM battery managers: Samsung, Xiaomi / MIUI, Huawei, OnePlus and
+  others ship aggressive task-killers that go beyond the standard rules
+  and will kill even a foreground service. No API defeats this. The
+  only mitigation is onboarding: ask the user to exempt the app from
+  battery optimization (the system "ignore battery optimizations"
+  request) and, on the worst OEMs, to allow it in the vendor's own
+  battery / auto-start settings. Be honest with the user that without
+  this, background delivery can be delayed or dropped.
+- Non-default-SMS limits: a non-default-SMS app is given less
+  background latitude — see step 4's caveat about Google Messages.
+- Process death is normal — assume the process WILL be killed
+  sometimes. `START_STICKY` plus re-opening the engine on recreate is
+  the recovery path; there is no way to never be killed.
+
+Treat reliable background delivery as its own milestone, not a free
+side effect of starting a foreground service.
+
+
+HOW TO TELL IT'S WORKING
+------------------------
+  - Pairing: after the WebView Google login and the emoji confirmation,
+    `SessionStore` has a saved session and `ReceiveService`'s ongoing
+    notification appears.
+  - Receive: send yourself a text from another phone — it should appear
+    in the right conversation in your store within a second or two, with
+    the correct sender and timestamp (not a microsecond-scale timestamp,
+    and not threaded under a numeric "participantID").
+  - Send: a message sent from your app reaches the recipient and your
+    UI flips it to "sent".
+  - Own-sends: a message you send from your phone shows up in your app
+    as an OUTGOING message — and the recipient does NOT receive a
+    duplicate.
+
+The detailed, step-by-step technical version of all this — written so
+an AI assistant can execute it — would live alongside the other two in
+Instructions for the AI.md.

@@ -1,83 +1,49 @@
 # messaging-engine-rust (`textrcs_libgm`)
 
-A Rust port of `mautrix-gmessages`'s `libgm` — the client side of the
-Google Messages "Messages for web" protocol: pairing, long-poll receive,
-and send. Compiles to a native `.so` and is called from Kotlin/Java via
-UniFFI-generated bindings (package `uniffi.textrcs_libgm`).
-
-The protocol layer only — pairing, send, receive, crypto, media. The
-host app keeps its own UI, storage, and notification handling.
-
-## Status
-
-Version 0.14.0. The full protocol core is implemented and unit-tested
-(104 tests). The one area still needing plumbing is the end-to-end Gaia
-pairing flow — see `PHASE_9_WIRING.md`.
+A Rust port of the Google Messages "Messages for web" protocol client —
+the client half of the open-source `mautrix-gmessages` bridge. It handles
+pairing, the long-poll receive stream, and sending. The crate compiles to
+a native `.so` and is exposed to Kotlin / Java through UniFFI bindings
+(package `uniffi.textrcs_libgm`).
 
 ## Layout
 
 ```
-messaging-engine-rust/
-├── Cargo.toml          # crate deps + release-profile size options
-├── build.rs            # prost-build + uniffi-build
-├── build.sh            # cross-compile to .so for all 4 Android ABIs
-├── proto/              # protobuf schemas (mautrix-gmessages gmproto)
-├── generated/          # committed UniFFI Kotlin bindings
-└── src/
-    ├── lib.rs          # module roots + uniffi scaffolding
-    ├── client.rs       # RustClient / Client — the high-level objects
-    ├── ffi.rs          # UniFFI-exported surface
-    ├── uniffi_pair.rs  # UniFFI pairing types
-    ├── error.rs        # LibgmError
-    ├── http.rs         # request signing + transport
-    ├── longpoll.rs     # HTTP long-poll stream + ditto pinger
-    ├── session.rs      # session handler
-    ├── events.rs       # incoming-event dispatch
-    ├── methods.rs      # the public RPC methods (send, list, etc.)
-    ├── media.rs        # media upload/download
-    ├── pair.rs / pair_google.rs / auth.rs   # pairing + UKEY2/Gaia
-    ├── pblite.rs       # pblite (de)serialisation
-    ├── util.rs
-    └── crypto/         # aesgcm, aesctr, ecdsa, hkdf, key generation
+src/         crate source — protocol, crypto, the FFI surface (ffi.rs)
+proto/       the Google Messages .proto definitions
+generated/   the generated UniFFI Kotlin bindings (textrcs_libgm.kt)
+build.rs     prost + uniffi build orchestration
+build.sh     cargo-ndk cross-compile helper
+Cargo.toml   crate manifest + release size profile
 ```
 
-## Toolchain
+## Building
 
-- Rust stable, with the 4 Android targets:
-  `rustup target add aarch64-linux-android armv7-linux-androideabi \
-   x86_64-linux-android i686-linux-android`
-- Android NDK (developed against r27.x)
-- `cargo-ndk` (`cargo install cargo-ndk`)
+Full step-by-step integration is in `Guide 1 - Adding the Messaging
+Engine.txt` and section 1 of `Instructions for the AI.md`. In short:
+install a Rust toolchain, the Android NDK, and `cargo-ndk`, then from
+this directory run:
 
-## Build
-
-Host-side check (fast, no Android):
-
-```bash
-cargo check
-cargo test
 ```
-
-Android `.so` for all 4 ABIs:
-
-```bash
 ANDROID_NDK_HOME=/path/to/ndk ./build.sh
-# outputs jniLibs-out/<abi>/libtextrcs_libgm.so
 ```
 
-Regenerate the Kotlin bindings (only needed after a crate change — a
-generated copy is already committed under `generated/`):
+Most modern phones are 64-bit ARM. If `arm64-v8a` is your only target,
+build just that one ABI and skip the rest:
 
-```bash
-cargo build --release
-cargo run --release --bin uniffi-bindgen -- generate \
-  --library target/release/libtextrcs_libgm.so \
-  --language kotlin --out-dir generated/
 ```
+ANDROID_NDK_HOME=/path/to/ndk \
+  cargo ndk -t arm64-v8a -o jniLibs-out build --release
+```
+
+## Public API
+
+The host app uses `uniffi.textrcs_libgm.RustClient` (construct it from a
+paired `RustSession`, then `connect` / `sendText` / `fetchMessages` /
+`downloadMedia` / …). The full method surface is in section 1.5 of
+`Instructions for the AI.md`.
 
 ## Source of truth
 
-Every protocol decision is a faithful port of `go.mau.fi/mautrix-gmessages`
-`pkg/libgm`. The `.proto` files in `proto/` are copies of that project's
-`gmproto/`; re-copy them when syncing to a newer upstream version.
-`CHANGELOG.md` records the port's audit history.
+Every protocol decision in this crate is a faithful port of
+`mautrix-gmessages`'s `pkg/libgm` (Go); that Go source is the reference.

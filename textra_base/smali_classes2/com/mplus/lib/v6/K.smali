@@ -1039,20 +1039,24 @@
 
     iget-object v6, v1, Lcom/mplus/lib/G5/a;->b:Landroid/content/Context;
 
-    # textrcs image-morph hook (v1.03.0): tap image -> MaterialContainerTransform
-    # morph into a fullscreen SWIPEABLE pinch-zoom gallery of the whole convo
-    # (com.textrcs.ui.ImageMorphViewer). v2:v3=convoId (stashed in a static so the
-    # viewer can query the convo's image list), v6=conversation Context,
-    # v11.g=this row's BubbleView, v12=tapped message row (r4.d0; its x()=tapped
-    # image uri, read reflectively inside tryOpen). If tryOpen handled it (true)
-    # skip the stock GalleryActivity (jump :goto_8 = consumed); false/throw ->
-    # stock gallery opens unchanged. sput-wide + invoke read v2/v3/v6/v12 (all
-    # preserved for the fallback path); v13 is free scratch (.locals 17, v13<=v15).
-    sput-wide v2, Lcom/textrcs/ui/ImageMorphViewer;->argConvoId:J
-
+    # textrcs image-morph hook (Route A, v1.04): tap image -> shared-element
+    # MaterialContainerTransform morph INTO the stock GalleryActivity (reuses its
+    # real ViewPager swipe + PhotoView pinch-zoom + toolbar/back). The receiver side
+    # is com.textrcs.ui.GalleryMorph (hooked in GalleryActivity.onCreate).
+    # MorphGalleryLauncher.launch finds the bubble's IMAGE view, tags it with the
+    # shared-element name, and starts the gallery with a makeSceneTransitionAnimation
+    # bundle so the photo expands OUT of the bubble (bubble stays put). Args (5 regs,
+    # the non-range invoke-static max): v13=v11.g this row's BubbleView (its context
+    # is unwrapped to the host Activity x5/l inside launch), v2:v3=convoId,
+    # v4:v5=msgId (selects the tapped image).
+    # Returns true=handled -> skip the stock launch (jump :goto_8); false -> fall
+    # through to the original stock GalleryActivity launch below (no morph), so this
+    # can never break opening an image. v13 = free scratch (.locals 17). Route B
+    # (custom overlay gallery, ImageMorphViewer) is preserved on branch
+    # route-b-custom-gallery; this hook supersedes it.
     iget-object v13, v11, Lcom/mplus/lib/v6/q;->g:Lcom/mplus/lib/ui/convo/BubbleView;
 
-    invoke-static {v6, v13, v12}, Lcom/textrcs/ui/ImageMorphViewer;->tryOpen(Landroid/content/Context;Landroid/view/View;Ljava/lang/Object;)Z
+    invoke-static {v13, v2, v3, v4, v5}, Lcom/textrcs/ui/MorphGalleryLauncher;->launch(Landroid/view/View;JJ)Z
 
     move-result v13
 

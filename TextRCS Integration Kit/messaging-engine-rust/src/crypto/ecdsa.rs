@@ -94,7 +94,7 @@ impl Jwk {
 
     /// Reconstruct a JWK from a PKCS#8-DER-encoded EC P-256 private key.
     ///
-    /// The textra2 Kotlin layer stores the RefreshKey as PKCS#8 bytes
+    /// The host app's Kotlin layer stores the RefreshKey as PKCS#8 bytes
     /// (`GMessagesSession.refreshKeyPkcs8`); this rebuilds the JWK so the
     /// Rust `refresh_auth_token` can sign RegisterRefresh requests with
     /// the same key the pairing flow generated.

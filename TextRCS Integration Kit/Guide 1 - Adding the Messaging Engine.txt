@@ -27,6 +27,8 @@ THE STEPS, IN ORDER
    Inside `messaging-engine-rust/` there is a `build.sh`. Point it at your
    NDK and run it. It produces `libtextrcs_libgm.so` for all four
    Android CPU types (arm64-v8a, armeabi-v7a, x86, x86_64).
+   Most modern phones are 64-bit ARM — if that is your only target you
+   can build just `arm64-v8a` and skip the other three.
 
 2. ADD THE LIBRARY TO YOUR APP.
    Copy each `libtextrcs_libgm.so` into your app module under

@@ -41,18 +41,29 @@ the above into their app. Do the following IN ORDER:
     Guide 2 - Rounded-Corner Slide Animation.txt
         Plain-language guide to the parallax + rounded corners —
         the human-facing version of Instructions for the AI.md section 2.
+    Guide 3 - Wiring the Engine into Your App.txt
+        Plain-language guide to the app-side glue — connecting the
+        messaging engine to your app's send code, message store and
+        UI in real source code (not the smali patching TextRCS uses).
+        Read it after Guide 1.
     messaging-engine-rust/
-        The Rust crate source. Read its README.md, CHANGELOG.md,
-        and PHASE_9_WIRING.md.
+        The Rust crate source. Read its README.md.
     Files to Add to Your App/
         Ready-to-use source files:
           ConvoCornerAnim.kt              — corner/dim/parallax animator
           res/anim/textrcs_overlay_*.xml  — the 4 slide animations
           res/values/styles-parallax-snippet.xml — styles to merge
+    App Integration Source/
+        The complete app-side Kotlin (com/textrcs/...) — the engine
+        bridge, send + receive handlers, pairing, typing indicator,
+        and the protobuf classes. Reference source for Guide 3.
     TextRCS-reference-build.apk
-        A reference build of the finished app — install it on a
-        device to see both integrations working. For comparison
-        only; you do not modify or rebuild this APK.
+        A reference build of the finished app (build v0.98.0,
+        2026-05-22) — install it on a device to see both integrations
+        working: the messaging engine (pair / send / receive,
+        group conversations, inline conversation-status lines, and a
+        typing indicator) and the parallax rounded-corner slide. For
+        comparison only; you do not modify or rebuild this APK.
 
   STEP 2 — Do NOT edit any of the human's code yet.
 

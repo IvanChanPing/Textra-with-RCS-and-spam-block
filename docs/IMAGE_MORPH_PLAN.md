@@ -11,6 +11,270 @@ conv-list ↔ conv-view nav parallax). Do not conflate.
 
 ---
 
+## 2026-06-12 — USER BUG REPORT (Route B on real device) → ROUTE A ACCEPTANCE CRITERIA
+
+User drove Route B (textra2_routeB_custom-gallery.apk) on their real phone and
+reported 5 issues. These are now the acceptance criteria Route A must meet:
+
+1. **Wrong image opened** — tapped a thumbnail, a DIFFERENT image opened than the
+   thumbnail. (Route B DB-reflection mis-indexed the page.)
+2. **Black bars (letterbox) top/bottom appeared at the wrong time** — didn't sync
+   with the image growth the way OnePlus Photos / iOS gallery do.
+3. **The whole bubble moved with the photo** instead of the photo expanding OUT of
+   the bubble. (Route B morph targeted the bubble/start-view, not just the image.)
+4. **Tap-to-close was wrong + not draggable** — tapping the open photo closed it
+   (should NOT); wants: tap does NOT dismiss, DRAG-DOWN dismisses, back button +
+   nav-bar back also dismiss. Like OnePlus Photos / iOS.
+5. **System back exited the whole conversation** instead of just closing the viewer.
+
+ROUTE A MAPPING (VERIFIED from smali this session via Explore agent + spot-checks):
+- #1 FIXED BY CONSTRUCTION. Stock GalleryActivity launch contract = Intent extras
+  `convoId:J` + `msgId:J` (GalleryActivity.smali onCreate ~L69-91, both mandatory,
+  finish() if missing). The stock image-bubble tap (`com/mplus/lib/v6/K.smali`
+  method e(I,View,F,F), gallery-launch at L1063-1077) passes msgId = the TAPPED
+  row's id (`Lcom/mplus/lib/E6/f;->b:J` @ L1036) + convoId (`v6/P;->t:J` @ L1034).
+  So opening the stock gallery shows the exact tapped image — no DB reflection.
+- #5 FIXED BY CONSTRUCTION. GalleryActivity is a SEPARATE activity; system back →
+  finish() → returns to ConvoActivity (the conversation). Also has an on-screen
+  back button (view id 0x7f0a04f5 handled in B6/k.onClick L291-415 →
+  OnBackPressedDispatcher). Route B's back-exits-convo was because it was an
+  overlay INSIDE ConvoActivity that didn't intercept back.
+- #2 + #3 = the morph itself. Fix = shared-element MaterialContainerTransform with
+  transitionName on the IMAGE view (not the bubble) + postponeEnterTransition in
+  GalleryActivity.onCreate, startPostponedEnterTransition after the first page's
+  BasePhotoView loads. This is the FRAGILE part (shared element into a ViewPager).
+- #4 LARGELY ALREADY CORRECT IN STOCK (my earlier "tap dismisses" claim was
+  WRONG — it came from an unverified Explore-agent guess, NOT from reading the
+  code; I relayed it without checking = rule violation, corrected here).
+  USER-VERIFIED ON REAL DEVICE (authoritative): stock gallery TAP on the photo →
+  reveals the TOP TOOLBAR (info, share, BACK button) — i.e. tap TOGGLES CHROME,
+  it does NOT dismiss. That is exactly the desired iOS/OnePlus tap behavior.
+  Combined with #5 (separate activity, back→convo) the stock gallery already
+  satisfies: tap≠close, toolbar back button closes, system/nav back closes,
+  correct image, zoom, swipe. The photo OnClickListener is B6/u->e = a merged
+  synthetic lambda B6/m (multiplexed on key field a; do NOT hand-decode — user
+  observation supersedes). The ONLY #4 delta vs the user's wish is an ADDITIONAL
+  DRAG-DOWN-to-dismiss gesture (user: "have a back button BUT ALSO drag it down").
+  Drag-down is ADDITIVE (new gesture), NOT a modification of the working tap, and
+  is the fragile bit (must arbitrate with PhotoView pinch/pan). Decision pending:
+  add drag-down in first Route A build vs ship morph first, add drag-down after.
+
+GALLERY INTERNALS (verified): ViewPager (BaseViewPager, adapter B6/h, offscreen
+limit 2, page transformer B6/a); pinch-zoom = PhotoView (BasePhotoView extends
+l2/j, attacher l2/o). Theme @style/AppTheme.GalleryActivity (styles.xml L67-72):
+black windowBackground, NO windowActivityTransitions/sharedElement attrs set yet.
+MaterialContainerTransform bundled (smali_classes2/com/google/android/material/
+transition/). Base is PairIP-cracked → editing GalleryActivity/B6.* smali is SAFE.
+
+USER DECISIONS (2026-06-12): build "both together" = morph (#2/#3) + drag-down-to-
+dismiss (#4 additive). Confirmed Route A (not B) is the approach that morphs INTO
+the stock gallery (cross-activity shared-element transition); Route B's same-
+activity overlay morph structurally could NOT hand off to the stock gallery.
+
+## ROUTE A — COMPLETE VERIFIED WIRING SPEC (map-first, before code) 2026-06-12
+
+FEASIBILITY = CONFIRMED from smali this session:
+- Activity reachable from the tap hook: `x5/l` extends androidx FragmentActivity
+  (x5/l.smali:2); `G5/a->c:Lcom/mplus/lib/x5/l;` holds it (G5/a.smali ctor sets c
+  when context instanceof x5/l). So in v6/K.smali hook I have the host Activity.
+- Launch must BYPASS `j4/a->c(Intent)` — it wraps the start in an f9/c Runnable and
+  takes NO ActivityOptions (j4/a.smali). Shared elements need
+  startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(activity,
+  imageView, NAME).toBundle()). So the hook calls a NEW Kotlin helper
+  (com.textrcs.ui.MorphGalleryLauncher) with (activity, sourceImageView, convoId,
+  msgId); helper sets transitionName on sourceImageView + does the options launch.
+- Themes: ConvoActivity=@style/AppTheme.ConvoActivity, Gallery=@style/AppTheme.
+  GalleryActivity (manifest). NEITHER sets windowActivityTransitions (styles.xml).
+  Add `<item name="android:windowActivityTransitions">true</item>` to BOTH (not
+  app-wide AppThemeBase, to avoid changing every activity's default anim).
+- Source image view = reuse Route B's findStartView logic (thumbnail ImageView in
+  the tapped BubbleView v11.g) to pick the view that gets transitionName.
+- Gallery internals: ViewPager (BaseViewPager, adapter B6/h, page holder B6/u, its
+  photo view field i = BasePhotoView). First page's BasePhotoView is where the
+  matching transitionName + startPostponedEnterTransition go.
+
+ORDERED IMPLEMENTATION STEPS:
+1. styles.xml: windowActivityTransitions=true on AppTheme.ConvoActivity +
+   AppTheme.GalleryActivity.
+2. New Kotlin com.textrcs.ui.MorphGalleryLauncher.launch(activity, srcImg, convoId,
+   msgId): set srcImg.transitionName="textrcs_img_morph"; build Intent(GalleryActivity)
+   +extras; startActivity with makeSceneTransitionAnimation bundle. Log animator
+   scale (Settings.Global.animator_duration_scale) for Risk-1 observability.
+3. v6/K.smali hook: replace tryOpen+stock-fallback block (L1042-1079) with: get
+   Activity (G5/a->c), get srcImg, call MorphGalleryLauncher.launch(...). Keep a
+   plain-start fallback if Activity null.
+4. GalleryActivity.smali onCreate: enable transitions; postponeEnterTransition();
+   set window.sharedElementEnterTransition + ReturnTransition = MaterialContainer
+   Transform (platform variant, bundled); setEnterSharedElementCallback(
+   MaterialContainerTransformSharedElementCallback). After first page BasePhotoView
+   is laid out + image loaded → set its transitionName="textrcs_img_morph" +
+   startPostponedEnterTransition(). (Likely a Kotlin helper called from onCreate +
+   the adapter's page-ready callback to keep smali edits minimal.)
+5. Return morph: on finish, the shared element returns to the bubble (best-effort
+   remap if swiped — Risk 2). 
+6. Drag-down-to-dismiss (#4): OnTouch on the page/BasePhotoView — when NOT zoomed,
+   a downward drag translates+scales the photo + dims bg; release past threshold →
+   finishAfterTransition() (triggers return morph), else springs back. Arbitrate
+   with PhotoView pan (only intercept vertical drag from un-zoomed state).
+
+RISKS (surfaced to user BEFORE build):
+- R1 RESOLVED 2026-06-12: user CONFIRMED animations are ENABLED on the test phone
+  (animator scales 1×, no Battery Saver / Remove animations). So animator_scale=0
+  will NOT cause a snap on this device. Still log scale on-screen for observability
+  (and re-confirm if a future test snaps). Saved to memory
+  project_textrcs_morph_test_device.md.
+- R2: return-morph after swiping to a different photo = shared element to a
+  possibly off-screen/different bubble; clean only for originally-tapped image,
+  else fade fallback. Not fully solved in v1.
+- R3: postpone/start timing — enter morph must wait for async image decode; if
+  startPostponed never fires → blank/stuck. Add a timeout safety to force-start.
+- R4: drag-vs-pinch gesture arbitration (the bit that was fiddly in Route B).
+- R5 NEW (make-or-break, discovered reading styles.xml): `AppTheme.ConvoActivity`
+  (styles.xml L39-52) is NOT a clean theme — it ALREADY sets
+  `windowAnimationStyle=@style/TextrcsParallaxAnimation` (the SEPARATE conv-list↔
+  convo parallax slide feature, docs/ANIMATION_TODO.md) + `windowIsTranslucent=true`
+  + transparent windowBackground (ConvoCornerAnim rounded-corner reveal). Enabling
+  `windowActivityTransitions=true` here (required so ConvoActivity can be the
+  shared-element SENDER) risks regressing that parallax. Theory (NEEDS DEVICE
+  VERIFY, not assumed): windowActivityTransitions=true enables the Transition
+  framework but activities with NO explicit enter/exit Transition fall back to
+  windowAnimationStyle → parallax SHOULD survive; the makeSceneTransitionAnimation
+  bundle only overrides the per-launch anim for the gallery open. Translucency ×
+  shared-element interaction = uncertain. CONSEQUENCE: device test must check BOTH
+  (a) the morph AND (b) conv-list↔convo parallax still slides. Conflict fallback:
+  keep ConvoActivity untouched + morph via a view-overlay bridge, or disable the
+  parallax windowAnimationStyle only on the gallery launch.
+- VERIFIED: no windowActivityTransitions/ContentTransitions anywhere in res/ (grep
+  clean); AppThemeBase parent=PlatformTheme; transitions OFF for all activities now.
+
+## CANONICAL-PATTERN RESEARCH (sourced, 2026-06-12) — refines the build
+
+Researched the Google-canonical way (sources: android/animation-samples GridToPager;
+material-components-android docs/theming/Motion.md; MaterialContainerTransform API
+ref; StfalconImageViewer + Baseflow/PhotoView source). KEY FINDINGS:
+
+- ROOT CAUSE of user #2 (letterbox at wrong time) + #3 (bubble moves) = the MCT
+  CONFIG. Route B used skydoves DEFAULTS (FADE_MODE_IN, FIT_MODE_AUTO, default 32%
+  black scrim #52000000) = exactly what makes black bars flash + the bubble linger/
+  move. FIXES (documented knobs):
+  * transitionName on the IMAGE view, NOT the bubble/container (MCT morphs the
+    bounding container of the start view → naming the bubble moves the whole bubble).
+    GridToPager puts it on the inner ImageView + excludeTarget()s the card.
+  * setScrimColor(TRANSPARENT) — Material's own View-to-View example removes the
+    scrim ("not transforming into full screens"). Kills the black-bar flash.
+  * CORRECTION (user caught this 2026-06-12): the #3 "bubble moves" fix is SOLELY
+    transitionName-on-image. The conversation/bubble CORRECTLY stays in place
+    underneath while only the photo grows out of it (then gets occluded as the
+    gallery bg fills) — that IS the desired iOS/OnePlus look ("bubble still there
+    as the photo expands" = right). fadeMode does NOT govern the bubble: it only
+    crossfades the thumbnail-image vs full-image INSIDE the morphing box, and since
+    they're the SAME picture it's barely visible. Earlier "fade THROUGH stops the
+    bubble lingering" was WRONG/over-sold. Keep fadeMode default or THROUGH as a
+    minor image-crossfade aesthetic only; it is not the #3 lever.
+  * setFitMode(FIT_MODE_HEIGHT or WIDTH) (default AUTO) — predictable fill, no
+    mid-anim letterbox against the scrim. + match end ImageView scaleType.
+  * MCT documented defaults: duration 300in/250out, fast_out_slow_in, pathMotion
+    null(linear)/MaterialArcMotion for curve, drawingViewId android.R.id.content.
+- RETURN-AFTER-PAGING (R2) canonical solution = GridToPager double SharedElement
+  Callback + postpone-and-scroll: a shared "currentPosition" updated on grid-click
+  AND pager onPageSelected; on return, ENTER callback (pager) onMapSharedElements
+  remaps to the swiped-to page's image, EXIT callback (grid) remaps to that adapter
+  position's cell, grid postpones + scrollToPosition so the off-screen cell exists,
+  then startPostponedEnterTransition. For us (activity-to-activity): GalleryActivity
+  tracks current page msgId → on finish returns it via result/onActivityReenter →
+  ConvoActivity exit callback remaps shared element to that msgId's bubble (scroll
+  convo list to it). INVOLVED → v1 may do enter-morph + return-to-original only;
+  add paging-remap as refinement.
+- ARCHITECTURE CAVEAT: modern canonical = SINGLE-activity FRAGMENT→FRAGMENT with
+  AndroidX material.transition.MaterialContainerTransform (backported fixes,
+  consistent across API levels). OUR target = separate GalleryActivity =
+  activity-to-activity = forces the PLATFORM package
+  (material.transition.platform.*, NO backported fixes, more API-level variance at
+  minSdk 24) + cross-activity exit/reenter callback wiring. Still officially
+  documented + works. We accept it because reusing the STOCK gallery (user's
+  explicit ask) beats reimplementing it as a fragment (= Route B, rejected).
+- DRAG-DOWN-DISMISS (#4) canonical de-facto = StfalconImageViewer/PhotoView model
+  (NO official Material component for photo drag-down). Arbitration: multi-touch/
+  scale→ZOOM; if currently zoomed-in→PAN only (dismiss DISABLED); if not zoomed→
+  SwipeDirectionDetector splits vertical=DISMISS / horizontal=PAGE; dismiss only
+  past threshold = viewHeight/4 and only when pager idle; bg/scrim alpha tracks
+  drag distance (1 - |dy|/(limit*4)); on release past threshold animate off-screen
+  + onDismiss (reverse shared-element morph back to source IF source visible, else
+  slide off bottom). Textra's gallery ALREADY uses PhotoView (BasePhotoView→l2/j)
+  + ViewPager → same substrate as Stfalcon, so this model ports directly.
+
+Saved reusable summary to memory reference_android_container_transform_morph_canonical.
+
+## IMPLEMENTATION PROGRESS (Route A morph) — 2026-06-12
+
+DONE (code written, compiles — UI UNVERIFIED):
+- [x] Step 1 THEMES: windowActivityTransitions=true on AppTheme.ConvoActivity
+  (SENDER, with R5 regression-risk comment) + AppTheme.GalleryActivity (RECEIVER),
+  styles.xml.
+- [x] Step 2 SENDER Kotlin: inject_src/com/textrcs/ui/MorphGalleryLauncher.kt
+  (launch(Context,View,convoId,msgId):Boolean — finds bubble IMAGE view, sets
+  transitionName, makeSceneTransitionAnimation, Intent via setClassName, logs
+  animator scale). Pure framework API, no reflection. COMPILES.
+- [x] Step 3 RECEIVER Kotlin: inject_src/com/textrcs/ui/GalleryMorph.kt
+  (onCreate(Activity): postpone + MCT-by-reflection enter/return with
+  scrim=TRANSPARENT, fitMode=HEIGHT, fadeMode=THROUGH, dur 300 +
+  MaterialContainerTransformSharedElementCallback; SELF-CONTAINED poller
+  scheduleFindAndStart finds the on-screen PhotoView in the view tree, tags it,
+  startPostponedEnterTransition; 600ms safety timeout → start w/o morph). Fixed 2
+  compile errors (buildTransform must return android.transition.Transition, cast).
+  COMPILES. DESIGN: poller means only ONE smali hook needed (no 2nd hook into
+  Textra's obfuscated image-load path).
+- [x] Step 4 SMALI: v6/K.smali tap hook (~L1051) now calls
+  MorphGalleryLauncher.launch(v6,v11.g,v2:v3,v4:v5) instead of ImageMorphViewer.
+  tryOpen; false→falls through to original stock launch. GalleryActivity.onCreate
+  (L55) calls GalleryMorph.onCreate(p0) right after super.onCreate. Hand-edited
+  smali_classes2 (base app smali, not regenerated by build.sh).
+- [x] Step 6 BUILD: SUCCEEDED (build4). kotlinc + smali + apktool all clean, APK
+  signed. Bugs caught+fixed during build: (a) 2 Kotlin type errors (buildTransform
+  return type); (b) smali register limit — non-range invoke-static max 5 regs, so
+  MorphGalleryLauncher.launch dropped the Context arg (derives Activity from
+  bubble.context) → 5 regs (View+2 longs). Also improved findPhotoView to pick the
+  largest ON-SCREEN PhotoView (offscreen-limit-2 means adjacent pages exist).
+  APK copied to repo root: textra2_routeA_morph.apk. STATUS = compile-built, UI
+  UNVERIFIED. CHANGELOG v1.04.0 added.
+
+DONE 2026-06-12 (user asked to "do #4 and R2"; build5 SUCCEEDED — kotlinc+smali+
+apktool clean, APK textra2_routeA_morph.apk refreshed in repo root; UI UNVERIFIED).
+MINOR ISSUE noted in self-review (fix next cycle, low severity): GalleryMorph is a
+singleton `object` so its `currentTagged` strong-refs one photo view until the next
+gallery open (bounded 1-view leak; reset each onCreate). Clear it on dismiss next time.
+- [x] Step 5 DRAG-DOWN-DISMISS (#4): new DragDismissTouchListener.kt — delegating
+  View.OnTouchListener on the BasePhotoView. At rest (getScale≈getMinimumScale via
+  reflection) + vertical drag past slop → translate photo, release past height/4 →
+  slide off + dismiss; else FORWARD to PhotoView's attacher (getAttacher() cast to
+  framework View.OnTouchListener) so zoom/pan/tap intact; horizontal = ViewPager
+  pages. Attached per-page.
+- [x] R2: GalleryMorph now finds the androidx ViewPager (Class.forName, not on
+  compile classpath) and adds an OnPageChangeListener via a reflection Proxy
+  (InvocationHandler). onPageChanged: moves the shared-element transitionName to the
+  now-visible page (gallery-side R2 = return morph uses the right photo) + re-attaches
+  drag-dismiss; once position != startPosition, calls
+  MorphGalleryLauncher.clearTaggedBubble() so Back FADES instead of morphing into the
+  WRONG bubble. MorphGalleryLauncher stores a WeakReference to the tagged bubble for
+  this clear. All reflection guarded → degrades to no-dismiss/first-page-only, no crash.
+- DEFERRED (device-iterative, NOT built): "deluxe" R2 = actually morph back into the
+  swiped-to bubble (scroll the conversation thread to it). Needs ConvoActivity
+  onActivityReenter smali + a verified BubbleView.m=msgId field (agent flagged it
+  "likely", UNVERIFIED) + RecyclerView msgId→view O(n) scan. Not written blind; revisit
+  with device feedback. Current behaviour: swiped-away → clean fade on Back (acceptable).
+- [ ] Route B source cleanup (delete ImageMorphViewer/SwipeImageGallery/
+  ZoomImageView .kt from inject_src) — harmless dead code now; preserved on branch
+  route-b-custom-gallery. Defer until morph confirmed.
+- [ ] DEVICE TEST: morph look (#2 no black-bar flash / #3 photo-not-bubble),
+  correct image (#1), back→convo (#5), parallax regression (R5), animator scale
+  (R1 resolved=on). Write docs DEVICE_TEST checklist + copy APK to repo root.
+
+NEXT STEP: confirm build2 assembles (smali + apk) → copy APK to repo root as
+textra2_routeA_morph.apk → hand user a device-test checklist for the morph →
+on result, add drag-down-dismiss + return-after-paging remap (R2).
+
+---
+
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
 
 - **Goal:** tap image in open conversation → morph into fullscreen swipe+zoom
