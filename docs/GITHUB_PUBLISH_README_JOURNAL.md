@@ -1,7 +1,16 @@
 # Task Journal — Publish textrcs to GitHub + README with Google Messages connect screenshots
 
 ## CURRENT STATE / NEXT STEP
-- **Goal:** DONE. Repo published + README with Google Messages connect screenshots + silent-notification note, pushed & verified live.
+- **Goal:** DONE (v2). Repo re-published clean at master @ **0dfbc691**. README now follows the REAL in-app nav (⋮ dropdown → Settings → Pro User → Connect), + server-host references scrubbed from code AND git history.
+- **VERIFIED (this session, v2):**
+  - In-app path to pairing = ⋮ overflow → **Settings** (top item, `settings_menu_item`) → **Pro User** (`UpgradedToProActivity` entry rewired in `com/mplus/lib/d7/a.smali` to launch `PairingActivity`). Drove it live on emulator: tapping Pro User opened PairingActivity. Screenshots 01-04 in `docs/connect_screenshots/` (01 dropdown w/ Settings callout — emulator draws Settings under the toolbar; 02 settings w/ Pro User circled; 03 connect; 04 Google sign-in).
+  - Server scrub: host `example.invalid` → `https://example.invalid` in LogUploader.kt/.smali, ControlApiClient.kt/.smali, Integration-Kit copies, CHANGELOG, IMESSAGE_PORT_PLAN. 0 blobs in all 111 commits contain it (git-filter-repo).
+  - **GitHub force-push left old SHAs (98f41689/957129e2) reachable by URL → host still retrievable.** Fix: DELETED + RECREATED the repo, pushed clean history. Old SHAs now HTTP 422 (gone). Current raw files show only example.invalid. README + 4 screenshots serve 200; README renders with new ordered steps.
+  - Swept-in pre-existing files now also public: `the test injector` (TEST-ONLY exported broadcast injector, token=removed) + manifest receiver. NOT a server ref; flagged to user.
+- **NEXT STEP:** none unless user wants the test injector removed from the public repo.
+
+## (superseded) earlier state
+- Repo published + README with Google Messages connect screenshots + silent-notification note, pushed & verified live.
 - **VERIFIED (this session):**
   - Repo `IvanChanPing/Textra-with-RCS-and-spam-block` public; master @ **957129e2** (remote == local).
   - README.md (200, served) + `docs/connect_screenshots/01_intro.png` + `02_google_login.png` (both 200, served) on GitHub raw.
