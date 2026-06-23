@@ -5,15 +5,11 @@
 Proved the on-device scam/spam filter flags known political-spam **phone numbers** organically via
 an external reputation database (no hand-listing), and added a test-only injection harness.
 
-- **`inject_src/com/textrcs/debug/the test injector.kt` (NEW, test-only)** — a manifest
-  BroadcastReceiver (action `removed`, token `removed`) that
-  fabricates a synthetic incoming `conversations.Message` and feeds it through the REAL receive
-  entry point `IncomingMessageHandler.onUpdateEvents` — so an injected message both fires a Textra
-  notification AND runs `SpamGuard.classifyAsync` (native SMS / content inserts don't reach the
-  classifier). Fire via:
-  `adb shell am broadcast -n removed -a removed --es token removed --es sender +13602182008 --es body "..."`.
-  Strip from production builds.
-- **`AndroidManifest.xml`** — registered the receiver (exported, intent-filter on the action).
+- A local **test-only injection harness** was used to push a synthetic incoming message through the
+  real receive path (`IncomingMessageHandler.onUpdateEvents` → `SpamGuard.classifyAsync`) so the
+  classifier could be exercised on an emulator with no paired account. **It is NOT included in the
+  published repo** (removed from source and manifest — a debug message-injection receiver should not
+  ship publicly).
 - **RoboKiller number reputation (Path A, config-only, no engine change)** — the engine's existing
   opt-in online number-reputation provider, pointed at RoboKiller's public lookup via the Spam
   Settings UI: Online lookups = ON, number-reputation template

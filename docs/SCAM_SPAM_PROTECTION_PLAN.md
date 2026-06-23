@@ -23,8 +23,8 @@ GOTCHAS HIT (cost hours): (1) the soft KEYBOARD covers SAVE/REFRESH buttons → 
   (3) emulator OOM-crashed once (Exited 137) mid-test → SharedPreferences apply() flush lost → reconfigure.
   (4) async UniFFI works on-device (proved via REFRESH ok=true indicators=535) — earlier "async broken"
   was a false negative from (1)+(2). (5) classify returns SILENT on offline-Clean + online-not-run.
-FILES: inject_src/com/textrcs/debug/the test injector.kt (NEW, test-only, manifest receiver
-  action removed, token `removed`); AndroidManifest.xml (+receiver).
+FILES: a local test-only message-injection receiver was used during testing (now REMOVED from the
+  repo — a debug injection receiver should not ship publicly).
 NEXT: (a) Path B scaffolding = official RoboKiller SMS Reputation API (free 7-day trial 2,500 req,
   no payment) — needs enterprise signup to get the verified endpoint/auth, then extend online.rs's
   GET-only provider to send an API key header (small Rust change + .so rebuild). DON'T fabricate the

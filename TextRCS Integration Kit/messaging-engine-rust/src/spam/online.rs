@@ -50,6 +50,16 @@ pub struct OnlineConfig {
     /// Substring whose presence in the response body means "this number is spam".
     /// Empty = number check disabled (we never flag on status alone).
     pub number_reputation_flag_substring: String,
+    /// Optional request header NAME for the number-reputation call (e.g. an
+    /// API-key header like `Authorization` or `X-API-Key`). Empty = no header.
+    /// This is the Path-B scaffolding for header-authenticated reputation APIs
+    /// (e.g. the official RoboKiller SMS Reputation API): set name+value and the
+    /// GET carries the key. Query-param-keyed APIs need no header — put the key
+    /// straight in `number_reputation_url_template`.
+    pub number_reputation_header_name: String,
+    /// Value paired with [number_reputation_header_name] (the API key/token).
+    /// Empty (or empty name) = no header is sent.
+    pub number_reputation_header_value: String,
 }
 
 impl OnlineConfig {
@@ -196,8 +206,19 @@ async fn number_lookup(
     number: &str,
 ) -> Result<Option<OnlineHit>, String> {
     let url = fill_number_template(&cfg.number_reputation_url_template, number);
-    let resp = client
-        .get(&url)
+    let mut req = client.get(&url);
+    // Path-B scaffolding: attach an API-key header when configured (header-auth
+    // reputation APIs like the official RoboKiller SMS Reputation API). No-op when
+    // either field is empty, so the Path-A public-lookup demo is unaffected.
+    if !cfg.number_reputation_header_name.is_empty()
+        && !cfg.number_reputation_header_value.is_empty()
+    {
+        req = req.header(
+            cfg.number_reputation_header_name.as_str(),
+            cfg.number_reputation_header_value.as_str(),
+        );
+    }
+    let resp = req
         .send()
         .await
         .map_err(|e| format!("request error: {e}"))?;

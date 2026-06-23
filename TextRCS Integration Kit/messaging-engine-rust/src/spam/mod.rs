@@ -57,6 +57,8 @@ struct SpamState {
     safebrowsing_api_key: String,
     number_reputation_url_template: String,
     number_reputation_flag_substring: String,
+    number_reputation_header_name: String,
+    number_reputation_header_value: String,
     feeds: Vec<InnerFeedSource>,
     store: IndicatorStore,
 }
@@ -71,6 +73,8 @@ impl Default for SpamState {
             safebrowsing_api_key: String::new(),
             number_reputation_url_template: String::new(),
             number_reputation_flag_substring: String::new(),
+            number_reputation_header_name: String::new(),
+            number_reputation_header_value: String::new(),
             feeds: Vec::new(),
             store: IndicatorStore::default(),
         }
@@ -127,6 +131,12 @@ pub struct SpamConfig {
     /// Substring that, if present in the number-reputation response body, marks the
     /// sender as spam. Required (with the template) for the number check to run.
     pub number_reputation_flag_substring: String,
+    /// Optional request-header NAME for the number-reputation call (API-key header,
+    /// e.g. `Authorization` / `X-API-Key`). Empty = no header. Path-B scaffolding
+    /// for header-authenticated reputation APIs (e.g. official RoboKiller API).
+    pub number_reputation_header_name: String,
+    /// Value for [number_reputation_header_name] (the API key/token). Empty = none.
+    pub number_reputation_header_value: String,
 }
 
 /// Severity level of a verdict. Mirrors `engine::SpamLevel`.
@@ -220,6 +230,8 @@ pub fn spam_configure(config: SpamConfig) {
     st.safebrowsing_api_key = config.safebrowsing_api_key;
     st.number_reputation_url_template = config.number_reputation_url_template;
     st.number_reputation_flag_substring = config.number_reputation_flag_substring;
+    st.number_reputation_header_name = config.number_reputation_header_name;
+    st.number_reputation_header_value = config.number_reputation_header_value;
     st.feeds = feeds;
     st.configured = true;
 
