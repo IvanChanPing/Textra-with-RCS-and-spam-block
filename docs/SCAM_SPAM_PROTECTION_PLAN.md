@@ -14,7 +14,7 @@ VERIFIED (logcat + dumpsys, this session):
 - Config (Spam Settings UI, screenshot docs/robokiller_spam_flag_proof.png): online=ON, OpenPhish 535
   indicators, number_reputation_url_template=`https://lookup.robokiller.com/p/{number}`,
   flag=`reported receiving spam`. NO Rust change needed (Path A = existing online generic GET provider).
-HOW IT WORKS: inject (the test injector) → onUpdateEvents → handleMessage → SpamGuard.classifyAsync →
+HOW IT WORKS: inject (local test harness) → onUpdateEvents → handleMessage → SpamGuard.classifyAsync →
   offline=Clean (demscc.com not on OpenPhish) → online number check → GET RoboKiller lookup → substring
   `reported receiving spam` present → Spam(75). Delivery (writeIncoming → c5.d.U reflection) → notification.
 GOTCHAS HIT (cost hours): (1) the soft KEYBOARD covers SAVE/REFRESH buttons → adb taps on them silently
@@ -29,7 +29,7 @@ NEXT: (a) Path B scaffolding = official RoboKiller SMS Reputation API (free 7-da
   no payment) — needs enterprise signup to get the verified endpoint/auth, then extend online.rs's
   GET-only provider to send an API key header (small Rust change + .so rebuild). DON'T fabricate the
   spec (no-piecemeal-mimicry). (b) FP validation vs more clean real numbers. (c) inline-links task #3.
-  (d) Productionize: strip the test injector; the public-lookup scrape is fragile/ToS-gray (demo only).
+  (d) Productionize: the test injection harness is removed; the public-lookup scrape is fragile/ToS-gray (demo only).
 
 **2026-06-23 — USER WANTS to test that KNOWN SPAM NUMBERS (political fundraising texts:
 360-218-2008, 646-491-9454, 347-292-7972) get flagged "by some database", injected so they

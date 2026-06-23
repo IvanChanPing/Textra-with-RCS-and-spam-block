@@ -259,6 +259,15 @@
 
     invoke-direct {p0, p1, p2}, Lcom/mplus/lib/ui/common/base/BaseTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    # [TEXTRCS-LINKIFY] Force URL/email/phone/map autolink on the message bubble so
+    # links are clickable even when the Google ML Kit entity-extraction model never
+    # downloads (this de-GMS'd base never gets it -> J4.d.M returns empty -> no
+    # ClickableSpans -> plain text). 0xf = WEB_URLS|EMAIL|PHONE|MAP. setText() (in f)
+    # then linkifies on every bind; the existing movement method handles the taps.
+    const/16 v0, 0xf
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setAutoLinkMask(I)V
+
     invoke-static {}, Lcom/mplus/lib/J4/a;->S()Lcom/mplus/lib/J4/a;
 
     move-result-object p2

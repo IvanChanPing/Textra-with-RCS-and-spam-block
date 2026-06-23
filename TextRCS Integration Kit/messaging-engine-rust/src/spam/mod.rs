@@ -370,6 +370,8 @@ pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
             safebrowsing_api_key: st.safebrowsing_api_key.clone(),
             number_reputation_url_template: st.number_reputation_url_template.clone(),
             number_reputation_flag_substring: st.number_reputation_flag_substring.clone(),
+            number_reputation_header_name: st.number_reputation_header_name.clone(),
+            number_reputation_header_value: st.number_reputation_header_value.clone(),
         };
         (st.online_enabled, v, cfg)
     };

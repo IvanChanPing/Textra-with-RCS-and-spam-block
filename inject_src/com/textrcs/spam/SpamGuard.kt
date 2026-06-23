@@ -66,6 +66,8 @@ object SpamGuard {
     private const val K_URLHAUS = "urlhaus_feed_url"       // full URL incl. auth key; empty = off
     private const val K_NUM_TMPL = "number_rep_url_template" // {number} placeholder; empty = off
     private const val K_NUM_FLAG = "number_rep_flag_substr"  // marker; empty = off
+    private const val K_NUM_HDR_NAME = "number_rep_header_name"  // API-key header name; empty = no header
+    private const val K_NUM_HDR_VALUE = "number_rep_header_value" // API-key header value (token)
 
     /** OpenPhish Community feed — keyless, 12h refresh (verified 2026-06-17). */
     private const val OPENPHISH_URL =
@@ -111,6 +113,8 @@ object SpamGuard {
             `safebrowsingApiKey` = p.getString(K_SB_KEY, "") ?: "",
             `numberReputationUrlTemplate` = p.getString(K_NUM_TMPL, "") ?: "",
             `numberReputationFlagSubstring` = p.getString(K_NUM_FLAG, "") ?: "",
+            `numberReputationHeaderName` = p.getString(K_NUM_HDR_NAME, "") ?: "",
+            `numberReputationHeaderValue` = p.getString(K_NUM_HDR_VALUE, "") ?: "",
         )
     }
 
@@ -274,6 +278,19 @@ object SpamGuard {
         reconfigureAsync(context)
     }
 
+    /**
+     * Set the optional API-key header for the number-reputation call (Path-B
+     * scaffolding for header-authenticated reputation APIs, e.g. the official
+     * RoboKiller SMS Reputation API). Both empty = no header sent.
+     */
+    fun setNumberReputationHeader(context: Context, headerName: String, headerValue: String) {
+        prefs(context).edit()
+            .putString(K_NUM_HDR_NAME, headerName)
+            .putString(K_NUM_HDR_VALUE, headerValue)
+            .apply()
+        reconfigureAsync(context)
+    }
+
     // ── Current setting reads (used by SpamSettingsActivity to populate controls) ──
     fun isEnabled(context: Context) = prefs(context).getBoolean(K_ENABLED, true)
     fun isOnlineEnabled(context: Context) = prefs(context).getBoolean(K_ONLINE, false)
@@ -281,6 +298,8 @@ object SpamGuard {
     fun getUrlhausFeedUrl(context: Context) = prefs(context).getString(K_URLHAUS, "") ?: ""
     fun getNumberTemplate(context: Context) = prefs(context).getString(K_NUM_TMPL, "") ?: ""
     fun getNumberFlag(context: Context) = prefs(context).getString(K_NUM_FLAG, "") ?: ""
+    fun getNumberHeaderName(context: Context) = prefs(context).getString(K_NUM_HDR_NAME, "") ?: ""
+    fun getNumberHeaderValue(context: Context) = prefs(context).getString(K_NUM_HDR_VALUE, "") ?: ""
 
     /** Current status (for a settings/diagnostics screen). */
     fun status() = try {

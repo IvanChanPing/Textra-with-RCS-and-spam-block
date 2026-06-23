@@ -71,6 +71,8 @@ class SpamSettingsActivity : Activity() {
     private lateinit var urlhausField: EditText
     private lateinit var numberTemplateField: EditText
     private lateinit var numberFlagField: EditText
+    private lateinit var numberHeaderNameField: EditText
+    private lateinit var numberHeaderValueField: EditText
 
     private fun dp(v: Int): Int =
         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, v.toFloat(), resources.displayMetrics)
@@ -147,6 +149,20 @@ class SpamSettingsActivity : Activity() {
             InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS,
         )
         root.addView(numberFlagField)
+        // Optional API-key header for the number-reputation call (Path-B scaffolding
+        // for header-authenticated reputation APIs, e.g. the official RoboKiller API).
+        // numberHeaderNameField — text field, hint shows an example header name.
+        numberHeaderNameField = makeField(
+            "API-key header name (e.g. Authorization) — optional",
+            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS,
+        )
+        root.addView(numberHeaderNameField)
+        // numberHeaderValueField — text field for the API key/token value.
+        numberHeaderValueField = makeField(
+            "API-key header value (token) — optional",
+            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS,
+        )
+        root.addView(numberHeaderValueField)
 
         // saveButton — blue full-width button; persists the text fields above.
         val saveButton = Button(this).apply {
@@ -180,6 +196,8 @@ class SpamSettingsActivity : Activity() {
         urlhausField.setText(SpamGuard.getUrlhausFeedUrl(this))
         numberTemplateField.setText(SpamGuard.getNumberTemplate(this))
         numberFlagField.setText(SpamGuard.getNumberFlag(this))
+        numberHeaderNameField.setText(SpamGuard.getNumberHeaderName(this))
+        numberHeaderValueField.setText(SpamGuard.getNumberHeaderValue(this))
         updateStatus()
     }
 
@@ -190,6 +208,11 @@ class SpamSettingsActivity : Activity() {
             this,
             numberTemplateField.text.toString().trim(),
             numberFlagField.text.toString().trim(),
+        )
+        SpamGuard.setNumberReputationHeader(
+            this,
+            numberHeaderNameField.text.toString().trim(),
+            numberHeaderValueField.text.toString().trim(),
         )
         Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
     }
