@@ -4,6 +4,33 @@
 **Goal:** Research all viable scam-text / spam-SMS protection techniques, then implement the
 best-fit ones ON-DEVICE inside the Rust messaging engine (`textrcs_libgm`).
 
+**2026-06-23 — ✅ POLITICAL-SPAM-NUMBER TEST PASSED ON THE REAL EMULATOR (redroid16-sdtest x86_64).**
+RoboKiller's database flags all 3 numbers; the on-device filter caught them ORGANICALLY (no hand-listing).
+VERIFIED (logcat + dumpsys, this session):
+- `FLAGGED ... SPAM score=75 src=Number reputation ind=+13602182008 ... flagged by Number reputation`
+  — same for +16464919454 and +13472927972. Control +12125550100 → `CLEAN (checked online)` (no FP).
+- Notifications fired (dumpsys notification: com.textra2 importance=4 msg notifications w/ each sender+body)
+  → messages "came through + showed a notification" via the real receive path.
+- Config (Spam Settings UI, screenshot docs/robokiller_spam_flag_proof.png): online=ON, OpenPhish 535
+  indicators, number_reputation_url_template=`https://lookup.robokiller.com/p/{number}`,
+  flag=`reported receiving spam`. NO Rust change needed (Path A = existing online generic GET provider).
+HOW IT WORKS: inject (the test injector) → onUpdateEvents → handleMessage → SpamGuard.classifyAsync →
+  offline=Clean (demscc.com not on OpenPhish) → online number check → GET RoboKiller lookup → substring
+  `reported receiving spam` present → Spam(75). Delivery (writeIncoming → c5.d.U reflection) → notification.
+GOTCHAS HIT (cost hours): (1) the soft KEYBOARD covers SAVE/REFRESH buttons → adb taps on them silently
+  missed; dismiss IME by tapping the non-editable title (BACK closes the activity). (2) `timeout N adb
+  logcat | grep` gives FALSE NEGATIVES (grep block-buffers, SIGTERM drops buffer) → use `logcat -d | grep`.
+  (3) emulator OOM-crashed once (Exited 137) mid-test → SharedPreferences apply() flush lost → reconfigure.
+  (4) async UniFFI works on-device (proved via REFRESH ok=true indicators=535) — earlier "async broken"
+  was a false negative from (1)+(2). (5) classify returns SILENT on offline-Clean + online-not-run.
+FILES: inject_src/com/textrcs/debug/the test injector.kt (NEW, test-only, manifest receiver
+  action removed, token `removed`); AndroidManifest.xml (+receiver).
+NEXT: (a) Path B scaffolding = official RoboKiller SMS Reputation API (free 7-day trial 2,500 req,
+  no payment) — needs enterprise signup to get the verified endpoint/auth, then extend online.rs's
+  GET-only provider to send an API key header (small Rust change + .so rebuild). DON'T fabricate the
+  spec (no-piecemeal-mimicry). (b) FP validation vs more clean real numbers. (c) inline-links task #3.
+  (d) Productionize: strip the test injector; the public-lookup scrape is fragile/ToS-gray (demo only).
+
 **2026-06-23 — USER WANTS to test that KNOWN SPAM NUMBERS (political fundraising texts:
 360-218-2008, 646-491-9454, 347-292-7972) get flagged "by some database", injected so they
 show a notification; kill emulator when done. Also asked: (a) what 3rd-party method flagged

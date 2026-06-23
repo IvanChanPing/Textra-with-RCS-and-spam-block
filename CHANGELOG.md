@@ -1,5 +1,31 @@
 # TextRCS Changelog
 
+## 2026-06-23 — Spam-NUMBER test harness + RoboKiller number-reputation demo (VERIFIED on emulator)
+
+Proved the on-device scam/spam filter flags known political-spam **phone numbers** organically via
+an external reputation database (no hand-listing), and added a test-only injection harness.
+
+- **`inject_src/com/textrcs/debug/the test injector.kt` (NEW, test-only)** — a manifest
+  BroadcastReceiver (action `removed`, token `removed`) that
+  fabricates a synthetic incoming `conversations.Message` and feeds it through the REAL receive
+  entry point `IncomingMessageHandler.onUpdateEvents` — so an injected message both fires a Textra
+  notification AND runs `SpamGuard.classifyAsync` (native SMS / content inserts don't reach the
+  classifier). Fire via:
+  `adb shell am broadcast -n removed -a removed --es token removed --es sender +13602182008 --es body "..."`.
+  Strip from production builds.
+- **`AndroidManifest.xml`** — registered the receiver (exported, intent-filter on the action).
+- **RoboKiller number reputation (Path A, config-only, no engine change)** — the engine's existing
+  opt-in online number-reputation provider, pointed at RoboKiller's public lookup via the Spam
+  Settings UI: Online lookups = ON, number-reputation template
+  `https://lookup.robokiller.com/p/{number}`, flag substring `reported receiving spam`.
+- **VERIFIED on redroid16-sdtest (x86_64)**: 360-218-2008 / 646-491-9454 / 347-292-7972 all →
+  `FLAGGED SPAM score=75 (Number reputation)`; control 212-555-0100 → `CLEAN (checked online)` (no
+  false positive); real notifications posted for each. Screenshot:
+  `docs/robokiller_spam_flag_proof.png`. APK: `textra2_robokiller-demo.apk` (debug/test build).
+- Status: demo VERIFIED. Path B (official RoboKiller SMS Reputation API, free trial) = scaffolding
+  pending (needs enterprise signup for the verified endpoint/auth + a small auth-header extension to
+  the GET-only online provider). See `docs/SCAM_SPAM_PROTECTION_PLAN.md`.
+
 ## 2026-06-23 — GitHub publish: README (connect guide + screenshots) + server-reference scrub
 
 Published to GitHub `IvanChanPing/Textra-with-RCS-and-spam-block` (public). Two doc/cleanup changes:
