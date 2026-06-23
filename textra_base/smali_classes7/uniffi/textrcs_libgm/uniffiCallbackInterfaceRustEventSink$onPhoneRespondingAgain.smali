@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4987:1\n323#2,7:4988\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n*L\n3538#1:4988,7\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5003:1\n323#2,7:5004\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n*L\n3538#1:5004,7\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -120,11 +120,11 @@
     .local v2, "writeReturn":Lkotlin/jvm/functions/Function1;
     const/4 v3, 0x0
 
-    .line 4988
+    .line 5004
     .local v3, "$i$f$uniffiTraitInterfaceCall":I
     nop
 
-    .line 4989
+    .line 5005
     :try_start_23
     invoke-interface {v1}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
@@ -136,17 +136,17 @@
 
     goto :goto_3b
 
-    .line 4990
+    .line 5006
     :catch_2b
     move-exception v4
 
-    .line 4991
+    .line 5007
     .local v4, "e$iv":Ljava/lang/Exception;
     const/4 v5, 0x2
 
     iput-byte v5, p4, Luniffi/textrcs_libgm/UniffiRustCallStatus;->code:B
 
-    .line 4992
+    .line 5008
     sget-object v5, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v4}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -159,7 +159,7 @@
 
     iput-object v5, p4, Luniffi/textrcs_libgm/UniffiRustCallStatus;->error_buf:Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4994
+    .line 5010
     .end local v4    # "e$iv":Ljava/lang/Exception;
     :goto_3b
     nop

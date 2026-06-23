@@ -53,7 +53,7 @@
     f = "SpamGuard.kt"
     i = {}
     l = {
-        0xbb
+        0xbf
     }
     m = "invokeSuspend"
     n = {}
@@ -192,7 +192,7 @@
 
     move-result-object v1
 
-    .line 185
+    .line 189
     move-object/from16 v2, p0
 
     iget v3, v2, Lcom/textrcs/spam/SpamGuard$classifyAsync$1;->label:I
@@ -225,13 +225,13 @@
 
     goto :goto_3e
 
-    .line 201
+    .line 205
     :catchall_20
     move-exception v0
 
     goto/16 :goto_181
 
-    .line 185
+    .line 189
     .end local v1    # "this":Lcom/textrcs/spam/SpamGuard$classifyAsync$1;
     .end local v3    # "$result":Ljava/lang/Object;
     :pswitch_23
@@ -242,11 +242,11 @@
     .local v3, "this":Lcom/textrcs/spam/SpamGuard$classifyAsync$1;
     move-object/from16 v5, p1
 
-    .line 186
+    .line 190
     .local v5, "$result":Ljava/lang/Object;
     nop
 
-    .line 187
+    .line 191
     :try_start_2b
     iget-object v6, v3, Lcom/textrcs/spam/SpamGuard$classifyAsync$1;->$body:Ljava/lang/String;
 
@@ -268,23 +268,23 @@
 
     if-ne v6, v1, :cond_3c
 
-    .line 185
+    .line 189
     return-object v1
 
-    .line 187
+    .line 191
     :cond_3c
     move-object v1, v3
 
     move-object v3, v6
 
-    .line 185
+    .line 189
     .end local v3    # "this":Lcom/textrcs/spam/SpamGuard$classifyAsync$1;
     .restart local v1    # "this":Lcom/textrcs/spam/SpamGuard$classifyAsync$1;
     :goto_3e
     :try_start_3e
     check-cast v3, Luniffi/textrcs_libgm/SpamVerdict;
 
-    .line 188
+    .line 192
     .local v3, "v":Luniffi/textrcs_libgm/SpamVerdict;
     invoke-virtual {v3}, Luniffi/textrcs_libgm/SpamVerdict;->getLevel()Luniffi/textrcs_libgm/SpamLevel;
 
@@ -294,14 +294,14 @@
 
     if-ne v6, v7, :cond_6f
 
-    .line 189
+    .line 193
     invoke-virtual {v3}, Luniffi/textrcs_libgm/SpamVerdict;->getCheckedOnline()Z
 
     move-result v0
 
     if-eqz v0, :cond_6c
 
-    .line 190
+    .line 194
     .end local v3    # "v":Luniffi/textrcs_libgm/SpamVerdict;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -331,13 +331,13 @@
 
     invoke-static {v4, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
+    .line 196
     :cond_6c
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 
-    .line 195
+    .line 199
     .restart local v3    # "v":Luniffi/textrcs_libgm/SpamVerdict;
     :cond_6f
     new-instance v6, Ljava/lang/StringBuilder;
@@ -374,7 +374,7 @@
 
     move-result-object v6
 
-    .line 196
+    .line 200
     invoke-virtual {v3}, Luniffi/textrcs_libgm/SpamVerdict;->getMatchedSource()Ljava/lang/String;
 
     move-result-object v7
@@ -387,22 +387,22 @@
 
     move-object v7, v8
 
-    .line 195
+    .line 199
     :cond_9b
     :try_start_9b
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 196
+    .line 200
     const-string v7, " ind="
 
-    .line 195
+    .line 199
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 196
+    .line 200
     invoke-virtual {v3}, Luniffi/textrcs_libgm/SpamVerdict;->getMatchedIndicator()Ljava/lang/String;
 
     move-result-object v7
@@ -414,39 +414,39 @@
     :cond_ac
     move-object v8, v7
 
-    .line 195
+    .line 199
     :goto_ad
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 196
+    .line 200
     const-string v7, " online="
 
-    .line 195
+    .line 199
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 197
+    .line 201
     invoke-virtual {v3}, Luniffi/textrcs_libgm/SpamVerdict;->getCheckedOnline()Z
 
     move-result v7
 
-    .line 195
+    .line 199
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 197
+    .line 201
     const-string v7, " :: "
 
-    .line 195
+    .line 199
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 197
+    .line 201
     invoke-virtual {v3}, Luniffi/textrcs_libgm/SpamVerdict;->getReasons()Ljava/util/List;
 
     move-result-object v7
@@ -479,7 +479,7 @@
 
     move-result-object v7
 
-    .line 195
+    .line 199
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -488,10 +488,10 @@
 
     move-result-object v6
 
-    .line 194
+    .line 198
     nop
 
-    .line 198
+    .line 202
     .local v6, "summary":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -541,7 +541,7 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
+    .line 203
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -603,7 +603,7 @@
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 200
+    .line 204
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
     iget-object v7, v1, Lcom/textrcs/spam/SpamGuard$classifyAsync$1;->$context:Landroid/content/Context;
@@ -645,7 +645,7 @@
     .end local v6    # "summary":Ljava/lang/String;
     goto :goto_1b8
 
-    .line 201
+    .line 205
     :catchall_17b
     move-exception v0
 
@@ -662,7 +662,7 @@
 
     move-object v3, v5
 
-    .line 202
+    .line 206
     .end local v5    # "$result":Ljava/lang/Object;
     .local v0, "e":Ljava/lang/Throwable;
     .restart local v1    # "this":Lcom/textrcs/spam/SpamGuard$classifyAsync$1;
@@ -722,7 +722,7 @@
 
     move-object v5, v3
 
-    .line 204
+    .line 208
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v3    # "$result":Ljava/lang/Object;
     .restart local v5    # "$result":Ljava/lang/Object;

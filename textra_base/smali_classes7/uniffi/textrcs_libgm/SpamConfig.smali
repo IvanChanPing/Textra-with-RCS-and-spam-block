@@ -12,7 +12,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008#\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0008\u0086\u0008\u0018\u0000 /2\u00020\u0001:\u0001/BC\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u000c\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u0008\u0012\u0006\u0010\n\u001a\u00020\u0006\u0012\u0006\u0010\u000b\u001a\u00020\u0006\u0012\u0006\u0010\u000c\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\rJ\t\u0010\"\u001a\u00020\u0003H\u00c6\u0003J\t\u0010#\u001a\u00020\u0003H\u00c6\u0003J\t\u0010$\u001a\u00020\u0006H\u00c6\u0003J\u000f\u0010%\u001a\u0008\u0012\u0004\u0012\u00020\t0\u0008H\u00c6\u0003J\t\u0010&\u001a\u00020\u0006H\u00c6\u0003J\t\u0010\'\u001a\u00020\u0006H\u00c6\u0003J\t\u0010(\u001a\u00020\u0006H\u00c6\u0003JU\u0010)\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u00062\u000e\u0008\u0002\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u00082\u0008\u0008\u0002\u0010\n\u001a\u00020\u00062\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u00062\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0006H\u00c6\u0001J\u0013\u0010*\u001a\u00020\u00032\u0008\u0010+\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010,\u001a\u00020-H\u00d6\u0001J\t\u0010.\u001a\u00020\u0006H\u00d6\u0001R\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000e\u0010\u000f\"\u0004\u0008\u0010\u0010\u0011R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0012\u0010\u0013\"\u0004\u0008\u0014\u0010\u0015R \u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0016\u0010\u0017\"\u0004\u0008\u0018\u0010\u0019R\u001a\u0010\u000c\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001a\u0010\u000f\"\u0004\u0008\u001b\u0010\u0011R\u001a\u0010\u000b\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001c\u0010\u000f\"\u0004\u0008\u001d\u0010\u0011R\u001a\u0010\u0004\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001e\u0010\u0013\"\u0004\u0008\u001f\u0010\u0015R\u001a\u0010\n\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008 \u0010\u000f\"\u0004\u0008!\u0010\u0011"
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008+\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0008\u0086\u0008\u0018\u0000 72\u00020\u0001:\u00017BS\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u000c\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u0008\u0012\u0006\u0010\n\u001a\u00020\u0006\u0012\u0006\u0010\u000b\u001a\u00020\u0006\u0012\u0006\u0010\u000c\u001a\u00020\u0006\u0012\u0006\u0010\r\u001a\u00020\u0006\u0012\u0006\u0010\u000e\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\u000fJ\t\u0010(\u001a\u00020\u0003H\u00c6\u0003J\t\u0010)\u001a\u00020\u0003H\u00c6\u0003J\t\u0010*\u001a\u00020\u0006H\u00c6\u0003J\u000f\u0010+\u001a\u0008\u0012\u0004\u0012\u00020\t0\u0008H\u00c6\u0003J\t\u0010,\u001a\u00020\u0006H\u00c6\u0003J\t\u0010-\u001a\u00020\u0006H\u00c6\u0003J\t\u0010.\u001a\u00020\u0006H\u00c6\u0003J\t\u0010/\u001a\u00020\u0006H\u00c6\u0003J\t\u00100\u001a\u00020\u0006H\u00c6\u0003Ji\u00101\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u00062\u000e\u0008\u0002\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u00082\u0008\u0008\u0002\u0010\n\u001a\u00020\u00062\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u00062\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u00062\u0008\u0008\u0002\u0010\r\u001a\u00020\u00062\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u0006H\u00c6\u0001J\u0013\u00102\u001a\u00020\u00032\u0008\u00103\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u00104\u001a\u000205H\u00d6\u0001J\t\u00106\u001a\u00020\u0006H\u00d6\u0001R\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0010\u0010\u0011\"\u0004\u0008\u0012\u0010\u0013R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0014\u0010\u0015\"\u0004\u0008\u0016\u0010\u0017R \u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0018\u0010\u0019\"\u0004\u0008\u001a\u0010\u001bR\u001a\u0010\u000c\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001c\u0010\u0011\"\u0004\u0008\u001d\u0010\u0013R\u001a\u0010\r\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001e\u0010\u0011\"\u0004\u0008\u001f\u0010\u0013R\u001a\u0010\u000e\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008 \u0010\u0011\"\u0004\u0008!\u0010\u0013R\u001a\u0010\u000b\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\"\u0010\u0011\"\u0004\u0008#\u0010\u0013R\u001a\u0010\u0004\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008$\u0010\u0015\"\u0004\u0008%\u0010\u0017R\u001a\u0010\n\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008&\u0010\u0011\"\u0004\u0008\'\u0010\u0013"
     }
     d2 = {
         "Luniffi/textrcs_libgm/SpamConfig;",
@@ -28,7 +28,9 @@
         "safebrowsingApiKey",
         "numberReputationUrlTemplate",
         "numberReputationFlagSubstring",
-        "(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+        "numberReputationHeaderName",
+        "numberReputationHeaderValue",
+        "(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
         "getCachePath",
         "()Ljava/lang/String;",
         "setCachePath",
@@ -43,6 +45,10 @@
         "(Ljava/util/List;)V",
         "getNumberReputationFlagSubstring",
         "setNumberReputationFlagSubstring",
+        "getNumberReputationHeaderName",
+        "setNumberReputationHeaderName",
+        "getNumberReputationHeaderValue",
+        "setNumberReputationHeaderValue",
         "getNumberReputationUrlTemplate",
         "setNumberReputationUrlTemplate",
         "getOnlineEnabled",
@@ -56,6 +62,8 @@
         "component5",
         "component6",
         "component7",
+        "component8",
+        "component9",
         "copy",
         "equals",
         "other",
@@ -95,6 +103,10 @@
 
 .field private numberReputationFlagSubstring:Ljava/lang/String;
 
+.field private numberReputationHeaderName:Ljava/lang/String;
+
+.field private numberReputationHeaderValue:Ljava/lang/String;
+
 .field private numberReputationUrlTemplate:Ljava/lang/String;
 
 .field private onlineEnabled:Z
@@ -117,8 +129,8 @@
     return-void
 .end method
 
-.method public constructor <init>(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .registers 9
+.method public constructor <init>(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .registers 11
     .param p1, "enabled"    # Z
     .param p2, "onlineEnabled"    # Z
     .param p3, "cachePath"    # Ljava/lang/String;
@@ -126,6 +138,8 @@
     .param p5, "safebrowsingApiKey"    # Ljava/lang/String;
     .param p6, "numberReputationUrlTemplate"    # Ljava/lang/String;
     .param p7, "numberReputationFlagSubstring"    # Ljava/lang/String;
+    .param p8, "numberReputationHeaderName"    # Ljava/lang/String;
+    .param p9, "numberReputationHeaderValue"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
@@ -133,6 +147,8 @@
             "Ljava/util/List<",
             "Luniffi/textrcs_libgm/SpamFeedSource;",
             ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -160,6 +176,14 @@
 
     invoke-static {p7, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
+    const-string v0, "numberReputationHeaderName"
+
+    invoke-static {p8, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "numberReputationHeaderValue"
+
+    invoke-static {p9, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 4090
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -184,62 +208,86 @@
     .line 4120
     iput-object p7, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
 
+    .line 4126
+    iput-object p8, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    .line 4130
+    iput-object p9, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
+
     .line 4090
     return-void
 .end method
 
-.method public static synthetic copy$default(Luniffi/textrcs_libgm/SpamConfig;ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Luniffi/textrcs_libgm/SpamConfig;
-    .registers 10
+.method public static synthetic copy$default(Luniffi/textrcs_libgm/SpamConfig;ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Luniffi/textrcs_libgm/SpamConfig;
+    .registers 12
 
-    and-int/lit8 p9, p8, 0x1
+    and-int/lit8 p11, p10, 0x1
 
-    if-eqz p9, :cond_6
+    if-eqz p11, :cond_6
 
     iget-boolean p1, p0, Luniffi/textrcs_libgm/SpamConfig;->enabled:Z
 
     :cond_6
-    and-int/lit8 p9, p8, 0x2
+    and-int/lit8 p11, p10, 0x2
 
-    if-eqz p9, :cond_c
+    if-eqz p11, :cond_c
 
     iget-boolean p2, p0, Luniffi/textrcs_libgm/SpamConfig;->onlineEnabled:Z
 
     :cond_c
-    and-int/lit8 p9, p8, 0x4
+    and-int/lit8 p11, p10, 0x4
 
-    if-eqz p9, :cond_12
+    if-eqz p11, :cond_12
 
     iget-object p3, p0, Luniffi/textrcs_libgm/SpamConfig;->cachePath:Ljava/lang/String;
 
     :cond_12
-    and-int/lit8 p9, p8, 0x8
+    and-int/lit8 p11, p10, 0x8
 
-    if-eqz p9, :cond_18
+    if-eqz p11, :cond_18
 
     iget-object p4, p0, Luniffi/textrcs_libgm/SpamConfig;->feeds:Ljava/util/List;
 
     :cond_18
-    and-int/lit8 p9, p8, 0x10
+    and-int/lit8 p11, p10, 0x10
 
-    if-eqz p9, :cond_1e
+    if-eqz p11, :cond_1e
 
     iget-object p5, p0, Luniffi/textrcs_libgm/SpamConfig;->safebrowsingApiKey:Ljava/lang/String;
 
     :cond_1e
-    and-int/lit8 p9, p8, 0x20
+    and-int/lit8 p11, p10, 0x20
 
-    if-eqz p9, :cond_24
+    if-eqz p11, :cond_24
 
     iget-object p6, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationUrlTemplate:Ljava/lang/String;
 
     :cond_24
-    and-int/lit8 p8, p8, 0x40
+    and-int/lit8 p11, p10, 0x40
 
-    if-eqz p8, :cond_2a
+    if-eqz p11, :cond_2a
 
     iget-object p7, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
 
     :cond_2a
+    and-int/lit16 p11, p10, 0x80
+
+    if-eqz p11, :cond_30
+
+    iget-object p8, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    :cond_30
+    and-int/lit16 p10, p10, 0x100
+
+    if-eqz p10, :cond_36
+
+    iget-object p9, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
+
+    :cond_36
+    move-object p10, p8
+
+    move-object p11, p9
+
     move-object p8, p6
 
     move-object p9, p7
@@ -256,7 +304,7 @@
 
     move p3, p1
 
-    invoke-virtual/range {p2 .. p9}, Luniffi/textrcs_libgm/SpamConfig;->copy(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Luniffi/textrcs_libgm/SpamConfig;
+    invoke-virtual/range {p2 .. p11}, Luniffi/textrcs_libgm/SpamConfig;->copy(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Luniffi/textrcs_libgm/SpamConfig;
 
     move-result-object p0
 
@@ -329,8 +377,24 @@
     return-object v0
 .end method
 
-.method public final copy(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Luniffi/textrcs_libgm/SpamConfig;
-    .registers 17
+.method public final component8()Ljava/lang/String;
+    .registers 2
+
+    iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final component9()Ljava/lang/String;
+    .registers 2
+
+    iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final copy(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Luniffi/textrcs_libgm/SpamConfig;
+    .registers 21
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
@@ -338,6 +402,8 @@
             "Ljava/util/List<",
             "Luniffi/textrcs_libgm/SpamFeedSource;",
             ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -356,17 +422,33 @@
 
     const-string v0, "safebrowsingApiKey"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object/from16 v6, p5
+
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "numberReputationUrlTemplate"
 
-    invoke-static {p6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object/from16 v7, p6
+
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "numberReputationFlagSubstring"
 
     move-object/from16 v8, p7
 
     invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "numberReputationHeaderName"
+
+    move-object/from16 v9, p8
+
+    invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "numberReputationHeaderValue"
+
+    move-object/from16 v10, p9
+
+    invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Luniffi/textrcs_libgm/SpamConfig;
 
@@ -378,11 +460,7 @@
 
     move-object v5, p4
 
-    move-object v6, p5
-
-    move-object v7, p6
-
-    invoke-direct/range {v1 .. v8}, Luniffi/textrcs_libgm/SpamConfig;-><init>(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v10}, Luniffi/textrcs_libgm/SpamConfig;-><init>(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 .end method
@@ -482,17 +560,43 @@
     :cond_47
     iget-object v3, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
 
-    iget-object v1, v1, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
+    iget-object v4, v1, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_52
+
+    return v2
+
+    :cond_52
+    iget-object v3, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    iget-object v4, v1, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_5d
+
+    return v2
+
+    :cond_5d
+    iget-object v3, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
+
+    iget-object v1, v1, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
 
     invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_52
+    if-nez v1, :cond_68
 
     return v2
 
-    :cond_52
+    :cond_68
     return v0
 .end method
 
@@ -536,6 +640,24 @@
 
     .line 4120
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getNumberReputationHeaderName()Ljava/lang/String;
+    .registers 2
+
+    .line 4126
+    iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getNumberReputationHeaderValue()Ljava/lang/String;
+    .registers 2
+
+    .line 4130
+    iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -636,6 +758,26 @@
 
     add-int/2addr v0, v2
 
+    mul-int/lit8 v1, v0, 0x1f
+
+    iget-object v2, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v0, v1, 0x1f
+
+    iget-object v2, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
     return v0
 .end method
 
@@ -695,6 +837,34 @@
 
     .line 4120
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final setNumberReputationHeaderName(Ljava/lang/String;)V
+    .registers 3
+    .param p1, "<set-?>"    # Ljava/lang/String;
+
+    const-string v0, "<set-?>"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4126
+    iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final setNumberReputationHeaderValue(Ljava/lang/String;)V
+    .registers 3
+    .param p1, "<set-?>"    # Ljava/lang/String;
+
+    const-string v0, "<set-?>"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4130
+    iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
 
     return-void
 .end method
@@ -823,6 +993,30 @@
     move-result-object v0
 
     iget-object v1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", numberReputationHeaderName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", numberReputationHeaderValue="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

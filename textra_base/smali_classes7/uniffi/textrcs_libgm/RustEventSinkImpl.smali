@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustEventSinkImpl\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4987:1\n3363#1,11:4993\n3376#1,2:5009\n3363#1,11:5011\n3376#1,2:5027\n3363#1,11:5029\n3376#1,2:5045\n3363#1,11:5047\n3376#1,2:5063\n315#2:4988\n275#2,4:4989\n315#2:5004\n275#2,4:5005\n315#2:5022\n275#2,4:5023\n315#2:5040\n275#2,4:5041\n315#2:5058\n275#2,4:5059\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustEventSinkImpl\n*L\n3410#1:4993,11\n3410#1:5009,2\n3424#1:5011,11\n3424#1:5027,2\n3438#1:5029,11\n3438#1:5045,2\n3453#1:5047,11\n3453#1:5063,2\n3395#1:4988\n3395#1:4989,4\n3411#1:5004\n3411#1:5005,4\n3425#1:5022\n3425#1:5023,4\n3439#1:5040\n3439#1:5041,4\n3454#1:5058\n3454#1:5059,4\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustEventSinkImpl\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5003:1\n3363#1,11:5009\n3376#1,2:5025\n3363#1,11:5027\n3376#1,2:5043\n3363#1,11:5045\n3376#1,2:5061\n3363#1,11:5063\n3376#1,2:5079\n315#2:5004\n275#2,4:5005\n315#2:5020\n275#2,4:5021\n315#2:5038\n275#2,4:5039\n315#2:5056\n275#2,4:5057\n315#2:5074\n275#2,4:5075\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustEventSinkImpl\n*L\n3410#1:5009,11\n3410#1:5025,2\n3424#1:5027,11\n3424#1:5043,2\n3438#1:5045,11\n3438#1:5061,2\n3453#1:5063,11\n3453#1:5079,2\n3395#1:5004\n3395#1:5005,4\n3411#1:5020\n3411#1:5021,4\n3425#1:5038\n3425#1:5039,4\n3439#1:5056\n3439#1:5057,4\n3454#1:5074\n3454#1:5075,4\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -553,7 +553,7 @@
     .local v1, "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     const/4 v2, 0x0
 
-    .line 4993
+    .line 5009
     .local v2, "$i$f$callWithPointer$main":I
     :goto_3
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
@@ -565,7 +565,7 @@
 
     move-result-wide v3
 
-    .line 4994
+    .line 5010
     .local v3, "c$iv":J
     const-wide/16 v5, 0x0
 
@@ -573,14 +573,14 @@
 
     if-eqz v0, :cond_ed
 
-    .line 4997
+    .line 5013
     const-wide v7, 0x7fffffffffffffffL
 
     cmp-long v0, v3, v7
 
     if-eqz v0, :cond_ca
 
-    .line 5000
+    .line 5016
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v1}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -596,11 +596,11 @@
 
     if-eqz v0, :cond_c0
 
-    .line 5002
+    .line 5018
     .end local v3    # "c$iv":J
     nop
 
-    .line 5003
+    .line 5019
     :try_start_28
     invoke-virtual {v1}, Luniffi/textrcs_libgm/RustEventSinkImpl;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
@@ -615,7 +615,7 @@
     .local v0, "$i$a$-callWithPointer$main-RustEventSinkImpl$onDataEvent$1":I
     const/4 v3, 0x0
 
-    .line 5004
+    .line 5020
     .local v3, "$i$f$uniffiRustCall":I
     sget-object v4, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -624,7 +624,7 @@
     .local v4, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v14, 0x0
 
-    .line 5005
+    .line 5021
     .local v14, "$i$f$uniffiRustCallWithError":I
     new-instance v7, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
@@ -632,7 +632,7 @@
 
     move-object v15, v7
 
-    .line 5006
+    .line 5022
     .local v15, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v13, v15
 
@@ -723,18 +723,18 @@
     .end local v16    # "$i$a$-uniffiRustCall-RustEventSinkImpl$onDataEvent$1$1":I
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 5006
+    .line 5022
     nop
 
-    .line 5007
+    .line 5023
     .local v0, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v4, v15}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 5008
+    .line 5024
     nop
 
-    .line 5004
+    .line 5020
     .end local v0    # "return_value$iv$iv":Ljava/lang/Object;
     .end local v4    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v14    # "$i$f$uniffiRustCallWithError":I
@@ -751,10 +751,10 @@
     :try_end_83
     .catchall {:try_start_69 .. :try_end_83} :catchall_99
 
-    .line 5003
+    .line 5019
     nop
 
-    .line 5009
+    .line 5025
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static/range {v20 .. v20}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -768,7 +768,7 @@
 
     if-nez v0, :cond_97
 
-    .line 5010
+    .line 5026
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static/range {v20 .. v20}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -776,7 +776,7 @@
 
     invoke-interface {v0}, Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;->clean()V
 
-    .line 5003
+    .line 5019
     :cond_97
     nop
 
@@ -785,7 +785,7 @@
     .end local v20    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     return-void
 
-    .line 5009
+    .line 5025
     .restart local v2    # "$i$f$callWithPointer$main":I
     .restart local v20    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     :catchall_99
@@ -838,7 +838,7 @@
 
     if-nez v3, :cond_bf
 
-    .line 5010
+    .line 5026
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static/range {v20 .. v20}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -849,7 +849,7 @@
     :cond_bf
     throw v0
 
-    .line 5000
+    .line 5016
     .end local v20    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     .restart local v1    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     .local v3, "c$iv":J
@@ -866,7 +866,7 @@
 
     goto/16 :goto_3
 
-    .line 4998
+    .line 5014
     .end local v20    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     .restart local v1    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     :cond_ca
@@ -906,7 +906,7 @@
 
     throw v0
 
-    .line 4995
+    .line 5011
     .end local v20    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     .restart local v1    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     :cond_ed
@@ -957,7 +957,7 @@
     .local v0, "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     const/4 v1, 0x0
 
-    .line 5047
+    .line 5063
     .local v1, "$i$f$callWithPointer$main":I
     :cond_2
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
@@ -969,7 +969,7 @@
 
     move-result-wide v2
 
-    .line 5048
+    .line 5064
     .local v2, "c$iv":J
     const-wide/16 v4, 0x0
 
@@ -977,14 +977,14 @@
 
     if-eqz v6, :cond_a4
 
-    .line 5051
+    .line 5067
     const-wide v6, 0x7fffffffffffffffL
 
     cmp-long v6, v2, v6
 
     if-eqz v6, :cond_83
 
-    .line 5054
+    .line 5070
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -1000,11 +1000,11 @@
 
     if-eqz v6, :cond_2
 
-    .line 5056
+    .line 5072
     .end local v2    # "c$iv":J
     nop
 
-    .line 5057
+    .line 5073
     :try_start_27
     invoke-virtual {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
@@ -1017,7 +1017,7 @@
     .local v3, "$i$a$-callWithPointer$main-RustEventSinkImpl$onPairEvent$1":I
     const/4 v6, 0x0
 
-    .line 5058
+    .line 5074
     .local v6, "$i$f$uniffiRustCall":I
     sget-object v7, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -1026,13 +1026,13 @@
     .local v7, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v8, 0x0
 
-    .line 5059
+    .line 5075
     .local v8, "$i$f$uniffiRustCallWithError":I
     new-instance v9, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v9}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 5060
+    .line 5076
     .local v9, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v10, v9
 
@@ -1068,18 +1068,18 @@
     .end local v11    # "$i$a$-uniffiRustCall-RustEventSinkImpl$onPairEvent$1$1":I
     sget-object v10, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 5060
+    .line 5076
     nop
 
-    .line 5061
+    .line 5077
     .local v10, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v7, v9}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 5062
+    .line 5078
     nop
 
-    .line 5058
+    .line 5074
     .end local v7    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v8    # "$i$f$uniffiRustCallWithError":I
     .end local v9    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
@@ -1096,10 +1096,10 @@
     :try_end_58
     .catchall {:try_start_27 .. :try_end_58} :catchall_6e
 
-    .line 5057
+    .line 5073
     nop
 
-    .line 5063
+    .line 5079
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -1113,7 +1113,7 @@
 
     if-nez v2, :cond_6c
 
-    .line 5064
+    .line 5080
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1121,7 +1121,7 @@
 
     invoke-interface {v2}, Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;->clean()V
 
-    .line 5057
+    .line 5073
     :cond_6c
     nop
 
@@ -1130,7 +1130,7 @@
     .end local v1    # "$i$f$callWithPointer$main":I
     return-void
 
-    .line 5063
+    .line 5079
     .restart local v0    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     .restart local v1    # "$i$f$callWithPointer$main":I
     :catchall_6e
@@ -1149,7 +1149,7 @@
 
     if-nez v3, :cond_82
 
-    .line 5064
+    .line 5080
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1160,7 +1160,7 @@
     :cond_82
     throw v2
 
-    .line 5052
+    .line 5068
     .local v2, "c$iv":J
     :cond_83
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -1195,7 +1195,7 @@
 
     throw v4
 
-    .line 5049
+    .line 5065
     :cond_a4
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -1239,7 +1239,7 @@
     .local v0, "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     const/4 v1, 0x0
 
-    .line 5011
+    .line 5027
     .local v1, "$i$f$callWithPointer$main":I
     :cond_2
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
@@ -1251,7 +1251,7 @@
 
     move-result-wide v2
 
-    .line 5012
+    .line 5028
     .local v2, "c$iv":J
     const-wide/16 v4, 0x0
 
@@ -1259,14 +1259,14 @@
 
     if-eqz v6, :cond_9b
 
-    .line 5015
+    .line 5031
     const-wide v6, 0x7fffffffffffffffL
 
     cmp-long v6, v2, v6
 
     if-eqz v6, :cond_7a
 
-    .line 5018
+    .line 5034
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -1282,11 +1282,11 @@
 
     if-eqz v6, :cond_2
 
-    .line 5020
+    .line 5036
     .end local v2    # "c$iv":J
     nop
 
-    .line 5021
+    .line 5037
     :try_start_27
     invoke-virtual {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
@@ -1299,7 +1299,7 @@
     .local v3, "$i$a$-callWithPointer$main-RustEventSinkImpl$onPhoneNotResponding$1":I
     const/4 v6, 0x0
 
-    .line 5022
+    .line 5038
     .local v6, "$i$f$uniffiRustCall":I
     sget-object v7, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -1308,13 +1308,13 @@
     .local v7, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v8, 0x0
 
-    .line 5023
+    .line 5039
     .local v8, "$i$f$uniffiRustCallWithError":I
     new-instance v9, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v9}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 5024
+    .line 5040
     .local v9, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v10, v9
 
@@ -1342,18 +1342,18 @@
     .end local v11    # "$i$a$-uniffiRustCall-RustEventSinkImpl$onPhoneNotResponding$1$1":I
     sget-object v10, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 5024
+    .line 5040
     nop
 
-    .line 5025
+    .line 5041
     .local v10, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v7, v9}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 5026
+    .line 5042
     nop
 
-    .line 5022
+    .line 5038
     .end local v7    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v8    # "$i$f$uniffiRustCallWithError":I
     .end local v9    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
@@ -1370,10 +1370,10 @@
     :try_end_4f
     .catchall {:try_start_27 .. :try_end_4f} :catchall_65
 
-    .line 5021
+    .line 5037
     nop
 
-    .line 5027
+    .line 5043
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -1387,7 +1387,7 @@
 
     if-nez v2, :cond_63
 
-    .line 5028
+    .line 5044
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1395,7 +1395,7 @@
 
     invoke-interface {v2}, Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;->clean()V
 
-    .line 5021
+    .line 5037
     :cond_63
     nop
 
@@ -1404,7 +1404,7 @@
     .end local v1    # "$i$f$callWithPointer$main":I
     return-void
 
-    .line 5027
+    .line 5043
     .restart local v0    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     .restart local v1    # "$i$f$callWithPointer$main":I
     :catchall_65
@@ -1423,7 +1423,7 @@
 
     if-nez v3, :cond_79
 
-    .line 5028
+    .line 5044
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1434,7 +1434,7 @@
     :cond_79
     throw v2
 
-    .line 5016
+    .line 5032
     .local v2, "c$iv":J
     :cond_7a
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -1469,7 +1469,7 @@
 
     throw v4
 
-    .line 5013
+    .line 5029
     :cond_9b
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -1513,7 +1513,7 @@
     .local v0, "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     const/4 v1, 0x0
 
-    .line 5029
+    .line 5045
     .local v1, "$i$f$callWithPointer$main":I
     :cond_2
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
@@ -1525,7 +1525,7 @@
 
     move-result-wide v2
 
-    .line 5030
+    .line 5046
     .local v2, "c$iv":J
     const-wide/16 v4, 0x0
 
@@ -1533,14 +1533,14 @@
 
     if-eqz v6, :cond_9b
 
-    .line 5033
+    .line 5049
     const-wide v6, 0x7fffffffffffffffL
 
     cmp-long v6, v2, v6
 
     if-eqz v6, :cond_7a
 
-    .line 5036
+    .line 5052
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -1556,11 +1556,11 @@
 
     if-eqz v6, :cond_2
 
-    .line 5038
+    .line 5054
     .end local v2    # "c$iv":J
     nop
 
-    .line 5039
+    .line 5055
     :try_start_27
     invoke-virtual {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->uniffiClonePointer()Lcom/sun/jna/Pointer;
 
@@ -1573,7 +1573,7 @@
     .local v3, "$i$a$-callWithPointer$main-RustEventSinkImpl$onPhoneRespondingAgain$1":I
     const/4 v6, 0x0
 
-    .line 5040
+    .line 5056
     .local v6, "$i$f$uniffiRustCall":I
     sget-object v7, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -1582,13 +1582,13 @@
     .local v7, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v8, 0x0
 
-    .line 5041
+    .line 5057
     .local v8, "$i$f$uniffiRustCallWithError":I
     new-instance v9, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v9}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 5042
+    .line 5058
     .local v9, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v10, v9
 
@@ -1616,18 +1616,18 @@
     .end local v11    # "$i$a$-uniffiRustCall-RustEventSinkImpl$onPhoneRespondingAgain$1$1":I
     sget-object v10, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 5042
+    .line 5058
     nop
 
-    .line 5043
+    .line 5059
     .local v10, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v7, v9}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 5044
+    .line 5060
     nop
 
-    .line 5040
+    .line 5056
     .end local v7    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v8    # "$i$f$uniffiRustCallWithError":I
     .end local v9    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
@@ -1644,10 +1644,10 @@
     :try_end_4f
     .catchall {:try_start_27 .. :try_end_4f} :catchall_65
 
-    .line 5039
+    .line 5055
     nop
 
-    .line 5045
+    .line 5061
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->callCounter:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCallCounter$p(Luniffi/textrcs_libgm/RustEventSinkImpl;)Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -1661,7 +1661,7 @@
 
     if-nez v2, :cond_63
 
-    .line 5046
+    .line 5062
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1669,7 +1669,7 @@
 
     invoke-interface {v2}, Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;->clean()V
 
-    .line 5039
+    .line 5055
     :cond_63
     nop
 
@@ -1678,7 +1678,7 @@
     .end local v1    # "$i$f$callWithPointer$main":I
     return-void
 
-    .line 5045
+    .line 5061
     .restart local v0    # "this_$iv":Luniffi/textrcs_libgm/RustEventSinkImpl;
     .restart local v1    # "$i$f$callWithPointer$main":I
     :catchall_65
@@ -1697,7 +1697,7 @@
 
     if-nez v3, :cond_79
 
-    .line 5046
+    .line 5062
     # getter for: Luniffi/textrcs_libgm/RustEventSinkImpl;->cleanable:Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
     invoke-static {v0}, Luniffi/textrcs_libgm/RustEventSinkImpl;->access$getCleanable(Luniffi/textrcs_libgm/RustEventSinkImpl;)Luniffi/textrcs_libgm/UniffiCleaner$Cleanable;
 
@@ -1708,7 +1708,7 @@
     :cond_79
     throw v2
 
-    .line 5034
+    .line 5050
     .local v2, "c$iv":J
     :cond_7a
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -1743,7 +1743,7 @@
 
     throw v4
 
-    .line 5031
+    .line 5047
     :cond_9b
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -1784,7 +1784,7 @@
     .line 3395
     const/4 v0, 0x0
 
-    .line 4988
+    .line 5004
     .local v0, "$i$f$uniffiRustCall":I
     sget-object v1, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -1793,13 +1793,13 @@
     .local v1, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v2, 0x0
 
-    .line 4989
+    .line 5005
     .local v2, "$i$f$uniffiRustCallWithError":I
     new-instance v3, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v3}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 4990
+    .line 5006
     .local v3, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v4, v3
 
@@ -1822,20 +1822,20 @@
 
     move-result-object v4
 
-    .line 4990
+    .line 5006
     .end local v4    # "status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v5    # "$i$a$-uniffiRustCall-RustEventSinkImpl$uniffiClonePointer$1":I
     nop
 
-    .line 4991
+    .line 5007
     .local v4, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v1, v3}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 4992
+    .line 5008
     nop
 
-    .line 4988
+    .line 5004
     .end local v1    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v2    # "$i$f$uniffiRustCallWithError":I
     .end local v3    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;

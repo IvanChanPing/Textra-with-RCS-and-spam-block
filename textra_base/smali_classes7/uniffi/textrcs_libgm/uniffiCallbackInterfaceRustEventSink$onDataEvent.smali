@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4987:1\n323#2,7:4988\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent\n*L\n3516#1:4988,7\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5003:1\n323#2,7:5004\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent\n*L\n3516#1:5004,7\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -159,11 +159,11 @@
     .local p4, "writeReturn":Lkotlin/jvm/functions/Function1;
     const/4 p5, 0x0
 
-    .line 4988
+    .line 5004
     .local p5, "$i$f$uniffiTraitInterfaceCall":I
     nop
 
-    .line 4989
+    .line 5005
     :try_start_33
     invoke-interface {p3}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
@@ -175,19 +175,19 @@
 
     goto :goto_4c
 
-    .line 4990
+    .line 5006
     :catch_3b
     move-exception v0
 
     move-object p6, v0
 
-    .line 4991
+    .line 5007
     .local p6, "e$iv":Ljava/lang/Exception;
     const/4 v0, 0x2
 
     iput-byte v0, p8, Luniffi/textrcs_libgm/UniffiRustCallStatus;->code:B
 
-    .line 4992
+    .line 5008
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {p6}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -200,7 +200,7 @@
 
     iput-object v0, p8, Luniffi/textrcs_libgm/UniffiRustCallStatus;->error_buf:Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4994
+    .line 5010
     .end local p6    # "e$iv":Ljava/lang/Exception;
     :goto_4c
     nop

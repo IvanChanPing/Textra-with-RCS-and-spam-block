@@ -26,7 +26,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,4987:1\n391#2:4988\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n*L\n858#1:4988\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5003:1\n391#2:5004\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/UniffiLib$Companion$INSTANCE$2\n*L\n858#1:5004\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -97,7 +97,7 @@
     .local v0, "componentName$iv":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 4988
+    .line 5004
     .local v1, "$i$f$loadIndirect":I
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->findLibraryName(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v0}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$findLibraryName(Ljava/lang/String;)Ljava/lang/String;

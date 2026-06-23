@@ -19,7 +19,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceTypeSpamFeedSource\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Iterators.kt\nkotlin/collections/CollectionsKt__IteratorsKt\n*L\n1#1,4987:1\n1549#2:4988\n1620#2,3:4989\n32#3,2:4992\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceTypeSpamFeedSource\n*L\n4817#1:4988\n4817#1:4989,3\n4823#1:4992,2\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceTypeSpamFeedSource\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Iterators.kt\nkotlin/collections/CollectionsKt__IteratorsKt\n*L\n1#1,5003:1\n1549#2:5004\n1620#2,3:5005\n32#3,2:5008\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceTypeSpamFeedSource\n*L\n4833#1:5004\n4833#1:5005,3\n4839#1:5008,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -73,7 +73,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 4807
+    .line 4823
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,7 +85,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4807
+    .line 4823
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -113,10 +113,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4816
+    .line 4832
     const-wide/16 v0, 0x4
 
-    .line 4817
+    .line 4833
     .local v0, "sizeForLength":J
     move-object v2, p1
 
@@ -125,7 +125,7 @@
     .local v2, "$this$map$iv":Ljava/lang/Iterable;
     const/4 v3, 0x0
 
-    .line 4988
+    .line 5004
     .local v3, "$i$f$map":I
     new-instance v4, Ljava/util/ArrayList;
 
@@ -145,7 +145,7 @@
     .local v5, "$this$mapTo$iv$iv":Ljava/lang/Iterable;
     const/4 v6, 0x0
 
-    .line 4989
+    .line 5005
     .local v6, "$i$f$mapTo":I
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -162,7 +162,7 @@
 
     move-result-object v8
 
-    .line 4990
+    .line 5006
     .local v8, "item$iv$iv":Ljava/lang/Object;
     move-object v9, v8
 
@@ -171,7 +171,7 @@
     .local v9, "it":Luniffi/textrcs_libgm/SpamFeedSource;
     const/4 v10, 0x0
 
-    .line 4817
+    .line 4833
     .local v10, "$i$a$-map-FfiConverterSequenceTypeSpamFeedSource$allocationSize$sizeForItems$1":I
     sget-object v11, Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedSource;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedSource;
 
@@ -185,12 +185,12 @@
 
     move-result-object v9
 
-    .line 4990
+    .line 5006
     invoke-interface {v4, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_1e
 
-    .line 4991
+    .line 5007
     .end local v8    # "item$iv$iv":Ljava/lang/Object;
     :cond_3a
     nop
@@ -200,19 +200,19 @@
     .end local v6    # "$i$f$mapTo":I
     check-cast v4, Ljava/util/List;
 
-    .line 4988
+    .line 5004
     nop
 
     .end local v2    # "$this$map$iv":Ljava/lang/Iterable;
     .end local v3    # "$i$f$map":I
     check-cast v4, Ljava/lang/Iterable;
 
-    .line 4817
+    .line 4833
     invoke-static {v4}, Lkotlin/collections/UCollectionsKt;->sumOfULong(Ljava/lang/Iterable;)J
 
     move-result-wide v2
 
-    .line 4818
+    .line 4834
     .local v2, "sizeForItems":J
     add-long v4, v0, v2
 
@@ -227,7 +227,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4807
+    .line 4823
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -243,7 +243,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4807
+    .line 4823
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterSequenceTypeSpamFeedSource;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/util/List;
 
     move-result-object v0
@@ -265,7 +265,7 @@
         }
     .end annotation
 
-    .line 4807
+    .line 4823
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lift(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -279,7 +279,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4807
+    .line 4823
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterSequenceTypeSpamFeedSource;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/util/List;
 
     move-result-object v0
@@ -301,7 +301,7 @@
         }
     .end annotation
 
-    .line 4807
+    .line 4823
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -315,7 +315,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4807
+    .line 4823
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -331,7 +331,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4807
+    .line 4823
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -356,7 +356,7 @@
         }
     .end annotation
 
-    .line 4807
+    .line 4823
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lower(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -368,7 +368,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4807
+    .line 4823
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -393,7 +393,7 @@
         }
     .end annotation
 
-    .line 4807
+    .line 4823
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -405,7 +405,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4807
+    .line 4823
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterSequenceTypeSpamFeedSource;->read(Ljava/nio/ByteBuffer;)Ljava/util/List;
 
     move-result-object v0
@@ -431,12 +431,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4809
+    .line 4825
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 4810
+    .line 4826
     .local v0, "len":I
     new-instance v1, Ljava/util/ArrayList;
 
@@ -452,7 +452,7 @@
     .local v3, "it":I
     const/4 v4, 0x0
 
-    .line 4811
+    .line 4827
     .local v4, "$i$a$-List-FfiConverterSequenceTypeSpamFeedSource$read$1":I
     sget-object v5, Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedSource;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedSource;
 
@@ -460,7 +460,7 @@
 
     move-result-object v3
 
-    .line 4810
+    .line 4826
     .end local v3    # "it":I
     .end local v4    # "$i$a$-List-FfiConverterSequenceTypeSpamFeedSource$read$1":I
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -480,7 +480,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4807
+    .line 4823
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -513,14 +513,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4822
+    .line 4838
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4823
+    .line 4839
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -528,7 +528,7 @@
     .local v0, "$this$forEach$iv":Ljava/util/Iterator;
     const/4 v1, 0x0
 
-    .line 4992
+    .line 5008
     .local v1, "$i$f$forEach":I
     nop
 
@@ -551,16 +551,16 @@
     .local v3, "it":Luniffi/textrcs_libgm/SpamFeedSource;
     const/4 v4, 0x0
 
-    .line 4824
+    .line 4840
     .local v4, "$i$a$-forEach-FfiConverterSequenceTypeSpamFeedSource$write$1":I
     sget-object v5, Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedSource;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedSource;
 
     invoke-virtual {v5, v3, p2}, Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedSource;->write(Luniffi/textrcs_libgm/SpamFeedSource;Ljava/nio/ByteBuffer;)V
 
-    .line 4825
+    .line 4841
     nop
 
-    .line 4992
+    .line 5008
     .end local v3    # "it":Luniffi/textrcs_libgm/SpamFeedSource;
     .end local v4    # "$i$a$-forEach-FfiConverterSequenceTypeSpamFeedSource$write$1":I
     nop
@@ -568,11 +568,11 @@
     .end local v2    # "element$iv":Ljava/lang/Object;
     goto :goto_17
 
-    .line 4993
+    .line 5009
     :cond_2d
     nop
 
-    .line 4826
+    .line 4842
     .end local v0    # "$this$forEach$iv":Ljava/util/Iterator;
     .end local v1    # "$i$f$forEach":I
     return-void

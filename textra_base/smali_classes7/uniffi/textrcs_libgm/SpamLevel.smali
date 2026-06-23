@@ -80,7 +80,7 @@
 .method static constructor <clinit>()V
     .registers 3
 
-    .line 4626
+    .line 4642
     new-instance v0, Luniffi/textrcs_libgm/SpamLevel;
 
     const-string v1, "CLEAN"
@@ -91,7 +91,7 @@
 
     sput-object v0, Luniffi/textrcs_libgm/SpamLevel;->CLEAN:Luniffi/textrcs_libgm/SpamLevel;
 
-    .line 4627
+    .line 4643
     new-instance v0, Luniffi/textrcs_libgm/SpamLevel;
 
     const-string v1, "SUSPICIOUS"
@@ -102,7 +102,7 @@
 
     sput-object v0, Luniffi/textrcs_libgm/SpamLevel;->SUSPICIOUS:Luniffi/textrcs_libgm/SpamLevel;
 
-    .line 4628
+    .line 4644
     new-instance v0, Luniffi/textrcs_libgm/SpamLevel;
 
     const-string v1, "SPAM"
@@ -113,7 +113,7 @@
 
     sput-object v0, Luniffi/textrcs_libgm/SpamLevel;->SPAM:Luniffi/textrcs_libgm/SpamLevel;
 
-    .line 4629
+    .line 4645
     new-instance v0, Luniffi/textrcs_libgm/SpamLevel;
 
     const-string v1, "SCAM"
@@ -161,7 +161,7 @@
         }
     .end annotation
 
-    .line 4624
+    .line 4640
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

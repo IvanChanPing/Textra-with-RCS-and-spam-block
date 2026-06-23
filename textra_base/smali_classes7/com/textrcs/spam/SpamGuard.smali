@@ -6,7 +6,7 @@
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\t\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u0010\u0010\u001b\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J&\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u0004J\u000e\u0010\"\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0010\u0010#\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aH\u0002J\u000e\u0010$\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010%\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010&\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010\'\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010(\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010)\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001aJ\u000e\u0010*\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0018\u0010+\u001a\n -*\u0004\u0018\u00010,0,2\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u0010\u0010.\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aH\u0002J\u000e\u0010/\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001aJ\u0016\u00100\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00101\u001a\u00020\u0014J\u001e\u00102\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00103\u001a\u00020\u00042\u0006\u00104\u001a\u00020\u0004J\u0016\u00105\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00101\u001a\u00020\u0014J\u0016\u00106\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00107\u001a\u00020\u0004J\u0016\u00108\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u00109\u001a\u00020\u0004J\u0008\u0010:\u001a\u0004\u0018\u00010;J \u0010<\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020\u00042\u0006\u0010=\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
+        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u000b\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0011\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0002J\u0010\u0010\u001d\u001a\u00020\u00042\u0006\u0010\u001b\u001a\u00020\u001cH\u0002J&\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u0010!\u001a\u00020\u00042\u0006\u0010\"\u001a\u00020\u00042\u0006\u0010#\u001a\u00020\u0004J\u000e\u0010$\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001cJ\u0010\u0010%\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001cH\u0002J\u000e\u0010&\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010\'\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010(\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010)\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010*\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010+\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010,\u001a\u00020\u00162\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010-\u001a\u00020\u00162\u0006\u0010 \u001a\u00020\u001cJ\u000e\u0010.\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001cJ\u0018\u0010/\u001a\n 1*\u0004\u0018\u000100002\u0006\u0010\u001b\u001a\u00020\u001cH\u0002J\u0010\u00102\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001cH\u0002J\u000e\u00103\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001cJ\u0016\u00104\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u00105\u001a\u00020\u0016J\u001e\u00106\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u00107\u001a\u00020\u00042\u0006\u00108\u001a\u00020\u0004J\u001e\u00109\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u0010:\u001a\u00020\u00042\u0006\u0010;\u001a\u00020\u0004J\u0016\u0010<\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u00105\u001a\u00020\u0016J\u0016\u0010=\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u0010>\u001a\u00020\u0004J\u0016\u0010?\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u0010@\u001a\u00020\u0004J\u0008\u0010A\u001a\u0004\u0018\u00010BJ \u0010C\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001c2\u0006\u0010!\u001a\u00020\u00042\u0006\u0010D\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/spam/SpamGuard;",
@@ -16,6 +16,8 @@
         "",
         "K_ENABLED",
         "K_NUM_FLAG",
+        "K_NUM_HDR_NAME",
+        "K_NUM_HDR_VALUE",
         "K_NUM_TMPL",
         "K_ONLINE",
         "K_SB_KEY",
@@ -46,6 +48,8 @@
         "configure",
         "ensureConfigured",
         "getNumberFlag",
+        "getNumberHeaderName",
+        "getNumberHeaderValue",
         "getNumberTemplate",
         "getSafeBrowsingKey",
         "getUrlhausFeedUrl",
@@ -62,6 +66,9 @@
         "setNumberReputation",
         "urlTemplate",
         "flagSubstring",
+        "setNumberReputationHeader",
+        "headerName",
+        "headerValue",
         "setOnlineEnabled",
         "setSafeBrowsingKey",
         "key",
@@ -90,6 +97,10 @@
 .field private static final K_ENABLED:Ljava/lang/String; = "enabled"
 
 .field private static final K_NUM_FLAG:Ljava/lang/String; = "number_rep_flag_substr"
+
+.field private static final K_NUM_HDR_NAME:Ljava/lang/String; = "number_rep_header_name"
+
+.field private static final K_NUM_HDR_VALUE:Ljava/lang/String; = "number_rep_header_value"
 
 .field private static final K_NUM_TMPL:Ljava/lang/String; = "number_rep_url_template"
 
@@ -126,7 +137,7 @@
 
     sput-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
-    .line 84
+    .line 86
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -177,21 +188,21 @@
 .end method
 
 .method private final buildConfig(Landroid/content/Context;)Luniffi/textrcs_libgm/SpamConfig;
-    .registers 17
+    .registers 19
     .param p1, "ctx"    # Landroid/content/Context;
 
-    .line 96
+    .line 98
     invoke-direct/range {p0 .. p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 97
+    .line 99
     .local v0, "p":Landroid/content/SharedPreferences;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 99
+    .line 101
     .local v1, "feeds":Ljava/util/ArrayList;
     new-instance v2, Luniffi/textrcs_libgm/SpamFeedSource;
 
@@ -205,7 +216,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 104
     const-string v2, "urlhaus_feed_url"
 
     const-string v3, ""
@@ -218,7 +229,7 @@
 
     move-object v2, v3
 
-    .line 103
+    .line 105
     .local v2, "urlhaus":Ljava/lang/String;
     :cond_22
     move-object v4, v2
@@ -231,7 +242,7 @@
 
     if-nez v4, :cond_37
 
-    .line 104
+    .line 106
     new-instance v4, Luniffi/textrcs_libgm/SpamFeedSource;
 
     const-string v5, "URLhaus"
@@ -242,11 +253,11 @@
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 106
+    .line 108
     :cond_37
     new-instance v7, Luniffi/textrcs_libgm/SpamConfig;
 
-    .line 107
+    .line 109
     const-string v4, "enabled"
 
     const/4 v5, 0x1
@@ -255,7 +266,7 @@
 
     move-result v8
 
-    .line 108
+    .line 110
     const-string v4, "online_enabled"
 
     const/4 v5, 0x0
@@ -264,17 +275,17 @@
 
     move-result v9
 
-    .line 109
+    .line 111
     invoke-direct/range {p0 .. p1}, Lcom/textrcs/spam/SpamGuard;->cachePath(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 110
+    .line 112
     move-object v11, v1
 
     check-cast v11, Ljava/util/List;
 
-    .line 111
+    .line 113
     const-string v4, "safebrowsing_key"
 
     invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -290,7 +301,7 @@
     :cond_58
     move-object v12, v4
 
-    .line 112
+    .line 114
     :goto_59
     const-string v4, "number_rep_url_template"
 
@@ -307,7 +318,7 @@
     :cond_63
     move-object v13, v4
 
-    .line 113
+    .line 115
     :goto_64
     const-string v4, "number_rep_flag_substr"
 
@@ -324,9 +335,43 @@
     :cond_6e
     move-object v14, v4
 
-    .line 106
+    .line 116
     :goto_6f
-    invoke-direct/range {v7 .. v14}, Luniffi/textrcs_libgm/SpamConfig;-><init>(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v4, "number_rep_header_name"
+
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-nez v4, :cond_79
+
+    move-object v15, v3
+
+    goto :goto_7a
+
+    :cond_79
+    move-object v15, v4
+
+    .line 117
+    :goto_7a
+    const-string v4, "number_rep_header_value"
+
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-nez v4, :cond_85
+
+    move-object/from16 v16, v3
+
+    goto :goto_87
+
+    :cond_85
+    move-object/from16 v16, v4
+
+    .line 108
+    :goto_87
+    invoke-direct/range {v7 .. v16}, Luniffi/textrcs_libgm/SpamConfig;-><init>(ZZLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v7
 .end method
@@ -335,7 +380,7 @@
     .registers 5
     .param p1, "ctx"    # Landroid/content/Context;
 
-    .line 92
+    .line 94
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -365,14 +410,14 @@
     .registers 3
     .param p1, "context"    # Landroid/content/Context;
 
-    .line 142
+    .line 146
     sget-boolean v0, Lcom/textrcs/spam/SpamGuard;->configured:Z
 
     if-nez v0, :cond_7
 
     invoke-virtual {p0, p1}, Lcom/textrcs/spam/SpamGuard;->configure(Landroid/content/Context;)V
 
-    .line 143
+    .line 147
     :cond_7
     return-void
 .end method
@@ -381,7 +426,7 @@
     .registers 5
     .param p1, "ctx"    # Landroid/content/Context;
 
-    .line 89
+    .line 91
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -401,7 +446,7 @@
     .registers 8
     .param p1, "context"    # Landroid/content/Context;
 
-    .line 230
+    .line 234
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->scope:Lkotlinx/coroutines/CoroutineScope;
 
     new-instance v1, Lcom/textrcs/spam/SpamGuard$reconfigureAsync$1;
@@ -422,7 +467,7 @@
 
     invoke-static/range {v0 .. v5}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 231
+    .line 235
     return-void
 .end method
 
@@ -432,16 +477,16 @@
     .param p2, "messageId"    # Ljava/lang/String;
     .param p3, "summary"    # Ljava/lang/String;
 
-    .line 212
+    .line 216
     nop
 
-    .line 213
+    .line 217
     :try_start_1
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 214
+    .line 218
     const-string v1, "textrcs_spam_verdicts"
 
     const/4 v2, 0x0
@@ -450,10 +495,10 @@
 
     move-result-object v0
 
-    .line 213
+    .line 217
     nop
 
-    .line 217
+    .line 221
     .local v0, "vp":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
@@ -477,7 +522,7 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 218
+    .line 222
     :cond_24
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -494,11 +539,11 @@
     .end local v0    # "vp":Landroid/content/SharedPreferences;
     goto :goto_4d
 
-    .line 219
+    .line 223
     :catchall_30
     move-exception v0
 
-    .line 220
+    .line 224
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -526,7 +571,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
+    .line 226
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_4d
     return-void
@@ -557,7 +602,7 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 183
+    .line 187
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v1, 0x0
@@ -574,11 +619,11 @@
 
     return-void
 
-    .line 184
+    .line 188
     :cond_21
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->ensureConfigured(Landroid/content/Context;)V
 
-    .line 185
+    .line 189
     sget-object v1, Lcom/textrcs/spam/SpamGuard;->scope:Lkotlinx/coroutines/CoroutineScope;
 
     new-instance v2, Lcom/textrcs/spam/SpamGuard$classifyAsync$1;
@@ -625,7 +670,7 @@
 
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 205
+    .line 209
     return-void
 .end method
 
@@ -640,7 +685,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 123
+    .line 127
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v1, "spam_guard_disable"
@@ -655,24 +700,24 @@
 
     if-eqz v0, :cond_19
 
-    .line 124
+    .line 128
     const-string v0, "SPAM configure SKIPPED by hook spam_guard_disable"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_17
     .catchall {:try_start_1 .. :try_end_17} :catchall_ac
 
-    .line 125
+    .line 129
     monitor-exit p0
 
     return-void
 
-    .line 127
+    .line 131
     .end local p0    # "this":Lcom/textrcs/spam/SpamGuard;
     :cond_19
     nop
 
-    .line 128
+    .line 132
     :try_start_1a
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->buildConfig(Landroid/content/Context;)Luniffi/textrcs_libgm/SpamConfig;
 
@@ -680,17 +725,17 @@
 
     invoke-static {v0}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->spamConfigure(Luniffi/textrcs_libgm/SpamConfig;)V
 
-    .line 129
+    .line 133
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/textrcs/spam/SpamGuard;->configured:Z
 
-    .line 130
+    .line 134
     invoke-static {}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->spamStatus()Luniffi/textrcs_libgm/SpamStatus;
 
     move-result-object v0
 
-    .line 132
+    .line 136
     .local v0, "st":Luniffi/textrcs_libgm/SpamStatus;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -730,12 +775,12 @@
 
     move-result-object v1
 
-    .line 133
+    .line 137
     invoke-virtual {v0}, Luniffi/textrcs_libgm/SpamStatus;->getTotalIndicators-s-VKNKU()J
 
     move-result-wide v2
 
-    .line 132
+    .line 136
     invoke-static {v2, v3}, Lkotlin/ULong;->toString-impl(J)Ljava/lang/String;
 
     move-result-object v2
@@ -748,10 +793,10 @@
 
     move-result-object v1
 
-    .line 131
+    .line 135
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 135
+    .line 139
     const-string v1, "TextRCSSpamGuard"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -778,12 +823,12 @@
 
     goto :goto_aa
 
-    .line 136
+    .line 140
     .end local v0    # "st":Luniffi/textrcs_libgm/SpamStatus;
     :catchall_7b
     move-exception v0
 
-    .line 137
+    .line 141
     .local v0, "e":Ljava/lang/Throwable;
     :try_start_7c
     const-string v1, "TextRCSSpamGuard"
@@ -832,14 +877,14 @@
     :try_end_aa
     .catchall {:try_start_7c .. :try_end_aa} :catchall_ac
 
-    .line 139
+    .line 143
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_aa
     monitor-exit p0
 
     return-void
 
-    .line 122
+    .line 126
     .end local p1    # "context":Landroid/content/Context;
     :catchall_ac
     move-exception p1
@@ -860,12 +905,76 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 283
+    .line 300
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     const-string v1, "number_rep_flag_substr"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_14
+
+    goto :goto_15
+
+    :cond_14
+    move-object v2, v0
+
+    :goto_15
+    return-object v2
+.end method
+
+.method public final getNumberHeaderName(Landroid/content/Context;)Ljava/lang/String;
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 301
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "number_rep_header_name"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_14
+
+    goto :goto_15
+
+    :cond_14
+    move-object v2, v0
+
+    :goto_15
+    return-object v2
+.end method
+
+.method public final getNumberHeaderValue(Landroid/content/Context;)Ljava/lang/String;
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 302
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "number_rep_header_value"
 
     const-string v2, ""
 
@@ -892,7 +1001,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 282
+    .line 299
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -924,7 +1033,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 280
+    .line 297
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -956,7 +1065,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 281
+    .line 298
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -988,7 +1097,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 278
+    .line 295
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1012,7 +1121,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 279
+    .line 296
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1036,7 +1145,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 152
+    .line 156
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v1, 0x2
@@ -1053,11 +1162,11 @@
 
     return-void
 
-    .line 153
+    .line 157
     :cond_12
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->ensureConfigured(Landroid/content/Context;)V
 
-    .line 154
+    .line 158
     sget-object v4, Lcom/textrcs/spam/SpamGuard;->scope:Lkotlinx/coroutines/CoroutineScope;
 
     new-instance v0, Lcom/textrcs/spam/SpamGuard$maybeRefresh$1;
@@ -1078,7 +1187,7 @@
 
     invoke-static/range {v4 .. v9}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 175
+    .line 179
     return-void
 .end method
 
@@ -1090,10 +1199,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 235
+    .line 239
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->ensureConfigured(Landroid/content/Context;)V
 
-    .line 236
+    .line 240
     sget-object v1, Lcom/textrcs/spam/SpamGuard;->scope:Lkotlinx/coroutines/CoroutineScope;
 
     new-instance v0, Lcom/textrcs/spam/SpamGuard$refreshNow$1;
@@ -1114,7 +1223,7 @@
 
     invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
 
-    .line 245
+    .line 249
     return-void
 .end method
 
@@ -1127,7 +1236,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 250
+    .line 254
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1144,10 +1253,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 251
+    .line 255
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 252
+    .line 256
     return-void
 .end method
 
@@ -1169,7 +1278,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 270
+    .line 274
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1178,27 +1287,78 @@
 
     move-result-object v0
 
-    .line 271
+    .line 275
     const-string v1, "number_rep_url_template"
 
     invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 272
+    .line 276
     const-string v1, "number_rep_flag_substr"
 
     invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 273
+    .line 277
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 274
+    .line 278
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 275
+    .line 279
+    return-void
+.end method
+
+.method public final setNumberReputationHeader(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    .registers 6
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "headerName"    # Ljava/lang/String;
+    .param p3, "headerValue"    # Ljava/lang/String;
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "headerName"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "headerValue"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 287
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 288
+    const-string v1, "number_rep_header_name"
+
+    invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 289
+    const-string v1, "number_rep_header_value"
+
+    invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 290
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 291
+    invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
+
+    .line 292
     return-void
 .end method
 
@@ -1211,7 +1371,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 255
+    .line 259
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1228,10 +1388,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 256
+    .line 260
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 257
+    .line 261
     return-void
 .end method
 
@@ -1248,7 +1408,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 260
+    .line 264
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1265,10 +1425,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 261
+    .line 265
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 262
+    .line 266
     return-void
 .end method
 
@@ -1285,7 +1445,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 265
+    .line 269
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->prefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1302,20 +1462,20 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 266
+    .line 270
     invoke-direct {p0, p1}, Lcom/textrcs/spam/SpamGuard;->reconfigureAsync(Landroid/content/Context;)V
 
-    .line 267
+    .line 271
     return-void
 .end method
 
 .method public final status()Luniffi/textrcs_libgm/SpamStatus;
     .registers 4
 
-    .line 286
+    .line 305
     nop
 
-    .line 287
+    .line 306
     :try_start_1
     invoke-static {}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->spamStatus()Luniffi/textrcs_libgm/SpamStatus;
 
@@ -1325,11 +1485,11 @@
 
     goto :goto_25
 
-    .line 288
+    .line 307
     :catchall_6
     move-exception v0
 
-    .line 289
+    .line 308
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1361,7 +1521,7 @@
 
     move-object v0, v1
 
-    .line 290
+    .line 309
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_25
     return-object v0

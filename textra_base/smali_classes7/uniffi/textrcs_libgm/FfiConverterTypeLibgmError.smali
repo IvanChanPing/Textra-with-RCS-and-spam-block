@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterTypeLibgmError\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,4987:1\n1#2:4988\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterTypeLibgmError\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,5003:1\n1#2:5004\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -70,7 +70,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 4475
+    .line 4491
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,7 +82,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4475
+    .line 4491
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
@@ -102,20 +102,20 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4502
+    .line 4518
     nop
 
-    .line 4503
+    .line 4519
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Network;
 
     const-wide/16 v1, 0x4
 
     if-eqz v0, :cond_20
 
-    .line 4505
+    .line 4521
     nop
 
-    .line 4506
+    .line 4522
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v3, p1
@@ -138,16 +138,16 @@
 
     goto :goto_89
 
-    .line 4508
+    .line 4524
     :cond_20
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Protocol;
 
     if-eqz v0, :cond_38
 
-    .line 4510
+    .line 4526
     nop
 
-    .line 4511
+    .line 4527
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v3, p1
@@ -170,16 +170,16 @@
 
     goto :goto_89
 
-    .line 4513
+    .line 4529
     :cond_38
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Crypto;
 
     if-eqz v0, :cond_50
 
-    .line 4515
+    .line 4531
     nop
 
-    .line 4516
+    .line 4532
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v3, p1
@@ -202,16 +202,16 @@
 
     goto :goto_89
 
-    .line 4518
+    .line 4534
     :cond_50
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Auth;
 
     if-eqz v0, :cond_68
 
-    .line 4520
+    .line 4536
     nop
 
-    .line 4521
+    .line 4537
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v3, p1
@@ -234,34 +234,34 @@
 
     goto :goto_89
 
-    .line 4523
+    .line 4539
     :cond_68
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$NotPaired;
 
     if-eqz v0, :cond_6d
 
-    .line 4525
+    .line 4541
     goto :goto_89
 
-    .line 4527
+    .line 4543
     :cond_6d
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Cancelled;
 
     if-eqz v0, :cond_72
 
-    .line 4529
+    .line 4545
     goto :goto_89
 
-    .line 4531
+    .line 4547
     :cond_72
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Internal;
 
     if-eqz v0, :cond_8a
 
-    .line 4533
+    .line 4549
     nop
 
-    .line 4534
+    .line 4550
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v3, p1
@@ -282,11 +282,11 @@
 
     move-result-wide v1
 
-    .line 4502
+    .line 4518
     :goto_89
     return-wide v1
 
-    .line 4534
+    .line 4550
     :cond_8a
     new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
@@ -299,7 +299,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4475
+    .line 4491
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -315,7 +315,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4475
+    .line 4491
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeLibgmError;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/LibgmException;
 
     move-result-object v0
@@ -327,7 +327,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4475
+    .line 4491
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lift(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -341,7 +341,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4475
+    .line 4491
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeLibgmError;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/LibgmException;
 
     move-result-object v0
@@ -353,7 +353,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4475
+    .line 4491
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -367,7 +367,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4475
+    .line 4491
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
@@ -383,7 +383,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4475
+    .line 4491
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
@@ -399,7 +399,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/LibgmException;
 
-    .line 4475
+    .line 4491
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lower(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -411,7 +411,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4475
+    .line 4491
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
@@ -427,7 +427,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/LibgmException;
 
-    .line 4475
+    .line 4491
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -439,7 +439,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4475
+    .line 4491
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeLibgmError;->read(Ljava/nio/ByteBuffer;)Luniffi/textrcs_libgm/LibgmException;
 
     move-result-object v0
@@ -455,14 +455,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4479
+    .line 4495
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_6a
 
-    .line 4497
+    .line 4513
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "invalid error enum value, something is very wrong!!"
@@ -471,25 +471,25 @@
 
     throw v0
 
-    .line 4494
+    .line 4510
     :pswitch_14
     new-instance v0, Luniffi/textrcs_libgm/LibgmException$Internal;
 
-    .line 4495
+    .line 4511
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v1, p1}, Luniffi/textrcs_libgm/FfiConverterString;->read(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4494
+    .line 4510
     invoke-direct {v0, v1}, Luniffi/textrcs_libgm/LibgmException$Internal;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
 
     goto :goto_69
 
-    .line 4493
+    .line 4509
     :pswitch_22
     new-instance v0, Luniffi/textrcs_libgm/LibgmException$Cancelled;
 
@@ -499,7 +499,7 @@
 
     goto :goto_69
 
-    .line 4492
+    .line 4508
     :pswitch_2a
     new-instance v0, Luniffi/textrcs_libgm/LibgmException$NotPaired;
 
@@ -509,77 +509,77 @@
 
     goto :goto_69
 
-    .line 4489
+    .line 4505
     :pswitch_32
     new-instance v0, Luniffi/textrcs_libgm/LibgmException$Auth;
 
-    .line 4490
+    .line 4506
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v1, p1}, Luniffi/textrcs_libgm/FfiConverterString;->read(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4489
+    .line 4505
     invoke-direct {v0, v1}, Luniffi/textrcs_libgm/LibgmException$Auth;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
 
     goto :goto_69
 
-    .line 4486
+    .line 4502
     :pswitch_40
     new-instance v0, Luniffi/textrcs_libgm/LibgmException$Crypto;
 
-    .line 4487
+    .line 4503
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v1, p1}, Luniffi/textrcs_libgm/FfiConverterString;->read(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4486
+    .line 4502
     invoke-direct {v0, v1}, Luniffi/textrcs_libgm/LibgmException$Crypto;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
 
     goto :goto_69
 
-    .line 4483
+    .line 4499
     :pswitch_4e
     new-instance v0, Luniffi/textrcs_libgm/LibgmException$Protocol;
 
-    .line 4484
+    .line 4500
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v1, p1}, Luniffi/textrcs_libgm/FfiConverterString;->read(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4483
+    .line 4499
     invoke-direct {v0, v1}, Luniffi/textrcs_libgm/LibgmException$Protocol;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
 
     goto :goto_69
 
-    .line 4480
+    .line 4496
     :pswitch_5c
     new-instance v0, Luniffi/textrcs_libgm/LibgmException$Network;
 
-    .line 4481
+    .line 4497
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v1, p1}, Luniffi/textrcs_libgm/FfiConverterString;->read(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4480
+    .line 4496
     invoke-direct {v0, v1}, Luniffi/textrcs_libgm/LibgmException$Network;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
 
-    .line 4479
+    .line 4495
     :goto_69
     return-object v0
 
@@ -600,7 +600,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4475
+    .line 4491
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/LibgmException;
@@ -623,20 +623,20 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4540
+    .line 4556
     nop
 
-    .line 4541
+    .line 4557
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Network;
 
     if-eqz v0, :cond_20
 
-    .line 4542
+    .line 4558
     const/4 v0, 0x1
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4543
+    .line 4559
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v1, p1
@@ -649,21 +649,21 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 4544
+    .line 4560
     goto :goto_86
 
-    .line 4546
+    .line 4562
     :cond_20
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Protocol;
 
     if-eqz v0, :cond_35
 
-    .line 4547
+    .line 4563
     const/4 v0, 0x2
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4548
+    .line 4564
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v1, p1
@@ -676,21 +676,21 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 4549
+    .line 4565
     goto :goto_86
 
-    .line 4551
+    .line 4567
     :cond_35
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Crypto;
 
     if-eqz v0, :cond_4a
 
-    .line 4552
+    .line 4568
     const/4 v0, 0x3
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4553
+    .line 4569
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v1, p1
@@ -703,21 +703,21 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 4554
+    .line 4570
     goto :goto_86
 
-    .line 4556
+    .line 4572
     :cond_4a
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Auth;
 
     if-eqz v0, :cond_5f
 
-    .line 4557
+    .line 4573
     const/4 v0, 0x4
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4558
+    .line 4574
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v1, p1
@@ -730,49 +730,49 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 4559
+    .line 4575
     goto :goto_86
 
-    .line 4561
+    .line 4577
     :cond_5f
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$NotPaired;
 
     if-eqz v0, :cond_68
 
-    .line 4562
+    .line 4578
     const/4 v0, 0x5
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4563
+    .line 4579
     goto :goto_86
 
-    .line 4565
+    .line 4581
     :cond_68
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Cancelled;
 
     if-eqz v0, :cond_71
 
-    .line 4566
+    .line 4582
     const/4 v0, 0x6
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4567
+    .line 4583
     goto :goto_86
 
-    .line 4569
+    .line 4585
     :cond_71
     instance-of v0, p1, Luniffi/textrcs_libgm/LibgmException$Internal;
 
     if-eqz v0, :cond_8c
 
-    .line 4570
+    .line 4586
     const/4 v0, 0x7
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4571
+    .line 4587
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     move-object v1, p1
@@ -785,29 +785,29 @@
 
     invoke-virtual {v0, v1, p2}, Luniffi/textrcs_libgm/FfiConverterString;->write(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 4572
+    .line 4588
     nop
 
     :goto_86
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 4574
+    .line 4590
     nop
 
-    .line 4988
+    .line 5004
     .local v0, "it":Lkotlin/Unit;
     const/4 v1, 0x0
 
-    .line 4574
+    .line 4590
     .local v1, "$i$a$-let-FfiConverterTypeLibgmError$write$1":I
     nop
 
-    .line 4575
+    .line 4591
     .end local v0    # "it":Lkotlin/Unit;
     .end local v1    # "$i$a$-let-FfiConverterTypeLibgmError$write$1":I
     return-void
 
-    .line 4572
+    .line 4588
     :cond_8c
     new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 

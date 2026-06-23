@@ -4117,7 +4117,17 @@ data class SpamConfig (
      * Substring that, if present in the number-reputation response body, marks the
      * sender as spam. Required (with the template) for the number check to run.
      */
-    var `numberReputationFlagSubstring`: kotlin.String
+    var `numberReputationFlagSubstring`: kotlin.String, 
+    /**
+     * Optional request-header NAME for the number-reputation call (API-key header,
+     * e.g. `Authorization` / `X-API-Key`). Empty = no header. Path-B scaffolding
+     * for header-authenticated reputation APIs (e.g. official RoboKiller API).
+     */
+    var `numberReputationHeaderName`: kotlin.String, 
+    /**
+     * Value for [number_reputation_header_name] (the API key/token). Empty = none.
+     */
+    var `numberReputationHeaderValue`: kotlin.String
 ) {
     
     companion object
@@ -4136,6 +4146,8 @@ public object FfiConverterTypeSpamConfig: FfiConverterRustBuffer<SpamConfig> {
             FfiConverterString.read(buf),
             FfiConverterString.read(buf),
             FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
+            FfiConverterString.read(buf),
         )
     }
 
@@ -4146,7 +4158,9 @@ public object FfiConverterTypeSpamConfig: FfiConverterRustBuffer<SpamConfig> {
             FfiConverterSequenceTypeSpamFeedSource.allocationSize(value.`feeds`) +
             FfiConverterString.allocationSize(value.`safebrowsingApiKey`) +
             FfiConverterString.allocationSize(value.`numberReputationUrlTemplate`) +
-            FfiConverterString.allocationSize(value.`numberReputationFlagSubstring`)
+            FfiConverterString.allocationSize(value.`numberReputationFlagSubstring`) +
+            FfiConverterString.allocationSize(value.`numberReputationHeaderName`) +
+            FfiConverterString.allocationSize(value.`numberReputationHeaderValue`)
     )
 
     override fun write(value: SpamConfig, buf: ByteBuffer) {
@@ -4157,6 +4171,8 @@ public object FfiConverterTypeSpamConfig: FfiConverterRustBuffer<SpamConfig> {
             FfiConverterString.write(value.`safebrowsingApiKey`, buf)
             FfiConverterString.write(value.`numberReputationUrlTemplate`, buf)
             FfiConverterString.write(value.`numberReputationFlagSubstring`, buf)
+            FfiConverterString.write(value.`numberReputationHeaderName`, buf)
+            FfiConverterString.write(value.`numberReputationHeaderValue`, buf)
     }
 }
 

@@ -120,28 +120,28 @@
 
     invoke-static {p8, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4297
+    .line 4313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4298
+    .line 4314
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamStatus;->configured:Z
 
-    .line 4299
+    .line 4315
     iput-boolean p2, p0, Luniffi/textrcs_libgm/SpamStatus;->enabled:Z
 
-    .line 4300
+    .line 4316
     iput-boolean p3, p0, Luniffi/textrcs_libgm/SpamStatus;->onlineEnabled:Z
 
-    .line 4301
+    .line 4317
     iput-wide p4, p0, Luniffi/textrcs_libgm/SpamStatus;->totalIndicators:J
 
-    .line 4302
+    .line 4318
     iput-wide p6, p0, Luniffi/textrcs_libgm/SpamStatus;->lastRefreshUnix:J
 
-    .line 4303
+    .line 4319
     iput-object p8, p0, Luniffi/textrcs_libgm/SpamStatus;->cachePath:Ljava/lang/String;
 
-    .line 4297
+    .line 4313
     return-void
 .end method
 
@@ -388,7 +388,7 @@
 .method public final getCachePath()Ljava/lang/String;
     .registers 2
 
-    .line 4303
+    .line 4319
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamStatus;->cachePath:Ljava/lang/String;
 
     return-object v0
@@ -397,7 +397,7 @@
 .method public final getConfigured()Z
     .registers 2
 
-    .line 4298
+    .line 4314
     iget-boolean v0, p0, Luniffi/textrcs_libgm/SpamStatus;->configured:Z
 
     return v0
@@ -406,7 +406,7 @@
 .method public final getEnabled()Z
     .registers 2
 
-    .line 4299
+    .line 4315
     iget-boolean v0, p0, Luniffi/textrcs_libgm/SpamStatus;->enabled:Z
 
     return v0
@@ -415,7 +415,7 @@
 .method public final getLastRefreshUnix()J
     .registers 3
 
-    .line 4302
+    .line 4318
     iget-wide v0, p0, Luniffi/textrcs_libgm/SpamStatus;->lastRefreshUnix:J
 
     return-wide v0
@@ -424,7 +424,7 @@
 .method public final getOnlineEnabled()Z
     .registers 2
 
-    .line 4300
+    .line 4316
     iget-boolean v0, p0, Luniffi/textrcs_libgm/SpamStatus;->onlineEnabled:Z
 
     return v0
@@ -433,7 +433,7 @@
 .method public final getTotalIndicators-s-VKNKU()J
     .registers 3
 
-    .line 4301
+    .line 4317
     iget-wide v0, p0, Luniffi/textrcs_libgm/SpamStatus;->totalIndicators:J
 
     return-wide v0
@@ -509,7 +509,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4303
+    .line 4319
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamStatus;->cachePath:Ljava/lang/String;
 
     return-void
@@ -519,7 +519,7 @@
     .registers 2
     .param p1, "<set-?>"    # Z
 
-    .line 4298
+    .line 4314
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamStatus;->configured:Z
 
     return-void
@@ -529,7 +529,7 @@
     .registers 2
     .param p1, "<set-?>"    # Z
 
-    .line 4299
+    .line 4315
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamStatus;->enabled:Z
 
     return-void
@@ -539,7 +539,7 @@
     .registers 3
     .param p1, "<set-?>"    # J
 
-    .line 4302
+    .line 4318
     iput-wide p1, p0, Luniffi/textrcs_libgm/SpamStatus;->lastRefreshUnix:J
 
     return-void
@@ -549,7 +549,7 @@
     .registers 2
     .param p1, "<set-?>"    # Z
 
-    .line 4300
+    .line 4316
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamStatus;->onlineEnabled:Z
 
     return-void
@@ -559,7 +559,7 @@
     .registers 3
     .param p1, "<set-?>"    # J
 
-    .line 4301
+    .line 4317
     iput-wide p1, p0, Luniffi/textrcs_libgm/SpamStatus;->totalIndicators:J
 
     return-void
