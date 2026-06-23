@@ -1,5 +1,26 @@
 # TextRCS Changelog
 
+## 2026-06-23 — Inline-links fix + Path-B RoboKiller-API scaffolding (generic auth header)
+
+Two changes, built + (links) verified on the redroid x86_64 emulator.
+
+- **Inline links in message bubbles — FIXED (`BubbleView.smali`).** Root cause: Textra renders
+  bubble URLs as clickable spans via Google ML Kit Entity Extraction, whose model is downloaded at
+  runtime through Google Play Services. This de-GMS'd base never gets the model → `J4.d.M` returns
+  an empty list → no spans → URLs show as plain text (sent AND received). Fix: `setAutoLinkMask(0xf)`
+  in the `BubbleView` constructor so Android's Linkify turns URLs/emails/phones/maps into clickable
+  links on every `setText`, independent of GMS. VERIFIED: opened a real conversation on the emulator;
+  `www.demscc.com` now renders as an underlined link (screenshot `docs/inline_links_after_fix.png`).
+- **Path B — generic API-key-header support on the number-reputation provider (scaffolding).** Added
+  `number_reputation_header_name` / `number_reputation_header_value` to `SpamConfig` (Rust `mod.rs` +
+  `online.rs` attaches the header to the GET), `SpamGuard` (buildConfig/setter/getters), and two new
+  Spam Settings UI fields. Lets the official RoboKiller SMS Reputation API (or any header-auth
+  reputation API) plug in via config once a trial key exists; query-param-keyed APIs already work via
+  the template. Rebuilt the Rust `.so` for all 4 ABIs + regenerated UniFFI bindings + rebuilt APK.
+  Status: code-complete, host-compiles, APK built; the on-device header-send path is exercised by a
+  real incoming message on the paired device (the emulator-only test injector is auto-removed from
+  this repo, so on-emulator header-send was not re-exercised this round).
+
 ## 2026-06-23 — Spam-NUMBER test harness + RoboKiller number-reputation demo (VERIFIED on emulator)
 
 Proved the on-device scam/spam filter flags known political-spam **phone numbers** organically via
