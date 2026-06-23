@@ -37,8 +37,26 @@ blocker CANNOT catch these specific ones. The only reliable catcher for THIS CLA
 POLITICAL-SPAM HEURISTIC (sender=10-digit non-contact P2P + bare shortlink domain.com/NNNNN/xxxxx +
 fundraising/opt-out language "donate/flip the Senate/triple-match/$X/deadline/stop2end/Text STOP")
 + a curated political-texting-platform/committee domain list. Content-aware by necessity.
-NEXT: presented this to user + asked to confirm approach (heuristic classifier ± DB augmentation)
-before the heavy build (engine layer + debug-inject hook + ~100MB APK rebuild + redroid boot).
+DATABASE FOUND (2026-06-23, VERIFIED live) — RoboKiller flags ALL 3 numbers:
+- `https://lookup.robokiller.com/p/<number>` returns "RoboKiller users have reported receiving
+  spam texts from this number" for 360-218-2008, 646-491-9454, 347-292-7972.
+- CONTROL 212-555-0100 (fictional) does NOT get that line → real per-number verdict, not boilerplate.
+  (Residual: validate FP rate vs more clean real numbers.)
+- Plain curl GET (no decodo) = HTTP 200, NO Cloudflare challenge, substring present → fits the
+  engine's EXISTING online number-reputation provider (plain GET + flag substring), NO Rust change.
+- URL tolerates ALL number formats (dashed/10-digit/11-digit/+E.164) → sender format irrelevant.
+- Official "RoboKiller SMS Reputation API" exists (ML, 600M numbers + 500M user reports); free
+  7-day trial = 2,500 requests, no payment details. Proper integration (needs API key/header →
+  the current GET-only generic provider would need a small auth extension).
+=> Per user's conditional ("find any DB even expensive that flagged them; ELSE build our own AI DB"):
+   a DB EXISTS (RoboKiller) → building-our-own is NOT triggered (task #2 parked).
+WIRING (no engine change, demo path): online_enabled=true,
+  number_reputation_url_template=`https://lookup.robokiller.com/p/{number}`,
+  number_reputation_flag_substring=`reported receiving spam`. Flow: offline=Clean → online number
+  check → RoboKiller hit → SPAM(75) FLAG. On-device reqwest GET reaching RoboKiller = UNVERIFIED.
+NEXT: report finding + ask user: (A) quick demo via public-lookup scrape (zero engine change, ToS-gray,
+  fragile) vs (B) official SMS Reputation API (robust, small engine change, trial key) — then proceed
+  to debug-inject hook + ~100MB APK rebuild + redroid boot + inject test.
 Side task queued: inline-links-not-rendering diff vs stock Textra.
 
 **USER DECISIONS (2026-06-17):** (1) build scope = "use an OUTSIDE service to classify, NOT build

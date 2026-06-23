@@ -1,5 +1,25 @@
 # TextRCS Changelog
 
+## 2026-06-23 — GitHub publish: README (connect guide + screenshots) + server-reference scrub
+
+Published to GitHub `IvanChanPing/Textra-with-RCS-and-spam-block` (public). Two doc/cleanup changes:
+
+- **README.md (NEW)** — step-by-step "How to connect to Google Messages" guide in the real in-app
+  order: ⋮ overflow → **Settings** (top item) → **Pro User** (the rewired entry that launches the
+  pairing screen, via `com/mplus/lib/d7/a.smali` → `PairingActivity`) → **CONNECT TO GOOGLE MESSAGES**
+  → Google sign-in → emoji match → paired → one-time grants. Plus a prominent section: keep Google
+  Messages notifications **ENABLED but set to Silent** (the NotificationListener wake still fires on a
+  silent notification), and a pointer to the **Textra Spam Filter** launcher (`SpamSettingsActivity`).
+- **docs/connect_screenshots/** (NEW) — `01_dropdown_settings_circled.png`, `02_settings_prouser_circled.png`,
+  `03_connect_screen.png`, `04_google_signin.png`. Steps 1–4 captured by driving the app on the
+  `redroid16-sdtest` emulator (real UI). Steps 5–6 documented in text (need a real Google account + phone).
+- **Server-reference scrub** — replaced all references to our private infra diagnostics/control host
+  with `https://example.invalid` across `inject_src/.../LogUploader.kt` + `ControlApiClient.kt`, their
+  `textra_base/smali_classes7/.../*.smali` counterparts, the `TextRCS Integration Kit` source copies,
+  and the `CHANGELOG.md` / `IMESSAGE_PORT_PLAN.md` text. The public repo's **git history** was rewritten
+  (git-filter-repo + force-push) so the old host appears in no commit. App diagnostics/control now point
+  at a non-routable placeholder (feature logic unchanged, just no longer phones our box).
+
 ## v1.07.0 — 2026-06-19 — Scam & Spam Protection: settings UI (toggles) — BUILT, UI-click-path UNVERIFIED
 
 Adds a visible settings screen for the scam/spam feature (the toggles deferred from v1.06.0).

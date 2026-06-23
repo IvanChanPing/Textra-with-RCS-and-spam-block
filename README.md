@@ -13,47 +13,50 @@ why Google Messages notifications must stay **enabled**, and why **silent** is r
 
 ## How to connect to Google Messages
 
-> The first two steps are shown on real screenshots below (captured on an emulator).
-> Steps 3–5 happen against **your own Google account and your phone**, so they are
-> described in text rather than screenshotted.
+> Steps 1–4 are shown on real screenshots captured by driving the app on an emulator.
+> Steps 5–6 happen against **your own Google account and your phone**, so they are described
+> in text (they need real credentials + the phone's Google Messages and aren't emulator-captured).
 
-### 1. Open the app and tap **CONNECT TO GOOGLE MESSAGES**
+### 1. Open the ⋮ menu and tap **Settings**
 
-When you first open Textra 2 you'll see the connect screen with a large blue button:
+In Textra 2's conversation list, tap the **⋮ overflow menu** (top-right). **Settings** is the
+**top item** of the dropdown:
 
-![Connect screen](docs/connect_screenshots/01_intro.png)
+![Open the overflow menu and tap Settings](docs/connect_screenshots/01_dropdown_settings_circled.png)
 
-### 2. Sign in with your Google account
+### 2. Tap **Pro User**
 
-Tapping the button opens Google's real sign-in page inside the app. **Sign in with the same
-Google account that your phone's Google Messages app uses** — this is the account whose texts
-you want to send and receive.
+In Settings, under **General**, tap **Pro User** (the row with the blue ribbon). In this build
+that entry opens the Google Messages connect screen:
 
-![Google sign-in](docs/connect_screenshots/02_google_login.png)
+![Tap Pro User in Settings](docs/connect_screenshots/02_settings_prouser_circled.png)
 
-### 3. Complete sign-in
+### 3. Tap **CONNECT TO GOOGLE MESSAGES**
 
-Enter your email/phone → **Next** → password → approve any 2-step verification prompt, exactly
-as you would in a browser. Once Google returns you, the app shows
-**"Signed in. Talking to Google Messages…"**
+![Connect to Google Messages screen](docs/connect_screenshots/03_connect_screen.png)
 
-### 4. Confirm the pairing emoji on your phone
+### 4. Sign in with your Google account
 
-The app then shows a **confirmation emoji**. On your phone, Google Messages displays a
-"pair a new device" prompt with an emoji. **Check that the two emojis match, then approve it
-on the phone.** This is the standard Google Messages device-pairing confirmation.
+The button opens Google's real sign-in page inside the app. **Sign in with the same Google
+account that your phone's Google Messages app uses** — that's the account whose texts you want
+to send and receive.
 
-### 5. Paired
+![Google sign-in](docs/connect_screenshots/04_google_signin.png)
 
-The app shows **"Paired to Google Messages."** Outgoing texts now route through Google
-Messages, and incoming texts wake the app via the notification listener. The pairing is saved,
-so you won't have to repeat this unless you sign out.
+### 5. Finish sign-in and confirm the pairing emoji
 
-After pairing, the app prompts for two **one-time** grants (they persist across reboots — no
-per-boot setup):
+Enter email/phone → **Next** → password → approve any 2-step verification, exactly as in a
+browser. The app then shows a **confirmation emoji**. On your phone, Google Messages shows a
+"pair a new device" prompt with an emoji — **check the emojis match, then approve it on the
+phone.** The app shows **"Paired to Google Messages."**
 
-- **Notification access** — tap the on-screen prompt and enable **"Textra 2 message wake-up"**.
-  This is how the app knows a new message arrived. *Without it, incoming messages won't wake the app.*
+### 6. Grant the two one-time permissions
+
+After pairing, the app prompts for two grants. Both are **one-time** and persist across reboots
+(no per-boot setup):
+
+- **Notification access** — enable **"Textra 2 message wake-up"**. This is how the app knows a
+  new message arrived. *Without it, incoming messages won't wake the app.*
 - **Unrestricted battery / disable battery optimization** — so the brief on-demand connect
   isn't delayed while the phone is idle (Doze).
 
@@ -92,13 +95,14 @@ URLs/keys, and refresh feeds.
 
 ---
 
-## Status / verification
+## Notes on the screenshots
 
-- Screenshots **1–2** above were captured by driving the app on a redroid emulator this
-  session (real UI render, `PairingActivity`).
-- Steps **3–5** (Google credential entry, emoji match, paired confirmation) and the
-  silent-notification screens require a real Google account + phone with Google Messages, so
-  they are documented in text and **not** emulator-verified here.
+- Screenshots **1–4** were captured by driving the app on a redroid emulator this session
+  (real UI render). On the emulator the overflow menu draws its top **Settings** item beneath
+  the toolbar, so it's marked with a callout; on a normal phone it appears as a normal top menu row.
+- Steps **5–6** (Google credential entry, emoji match, paired confirmation, silent-notification
+  screens) require a real Google account + a phone with Google Messages, so they are documented
+  in text and **not** emulator-captured here.
 
 ## Build
 
