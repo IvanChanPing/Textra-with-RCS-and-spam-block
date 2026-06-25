@@ -5,17 +5,22 @@
   Google Maps link (`https://www.google.com/maps?q=lat,lng`) any recipient can open with
   no app/account/backend. (B) Check whether RCS messages support likes/reactions.
 - (B) DONE (investigation): reaction support is PROTO-ONLY, NOT wired. See "RCS REACTIONS" below.
-- (A) IN PROGRESS: implementing now.
+- (A) BUILT — COMPILE-VERIFIED, UI-UNVERIFIED (commit eb995d75, APK textra2_share-location.apk at repo root).
   - DECISION (verified): the "+" attach panel (`Q5/j.C0`) is a deeply-coupled multi-sub-panel
     system (emoji categories via `V5/q`/`Ka/t`, gallery/giphy/schedule) whose click dispatch
     I could not fully resolve → adding an item there risks breaking the panel (map-first
     forbids building on an incomplete model). Per user ("if it can't be added to the other
-    items when u click the plus button then forge it") → FORGE a new entry in the
+    items when u click the plus button then forge it") → FORGED a new entry in the
     fully-mapped `x7/f` conversation contact/info menu (same menu that hosts the Meet button
     + "Shared media"). Item = `Lcom/mplus/lib/x7/LocShareItem;` → calls
     `com.textrcs.location.LocationShare.shareInto(activity)`.
-- NEXT STEP: write Kotlin `LocationShare`, smali `LocShareItem`, wire into `v6/g.smali` after
-  the "Shared media" item (line ~1248), add `ACCESS_FINE_LOCATION` to manifest, build, commit.
+  - VERIFIED: build.sh exit 0; kotlinc clean (warnings only); LocShareItem in classes2.dex,
+    LocationShare in classes7.dex; v6/g references LocShareItem (2 hits). Manifest +ACCESS_FINE_LOCATION.
+- NEXT STEP (user): on-device test — grant Location to TextRCS, open a conversation, open the
+  contact/info overlay menu, tap "Share my location"; expect a maps.google link in the compose
+  box; send it; open on an app-less phone → it shows the map point. Report back if the row doesn't
+  appear or the link doesn't insert (then I add a plus-panel button or send-area button instead).
+  UNTESTED GAP: real GPS read + the overlay-tap + the compose-insert click-path (can't drive headlessly).
 
 ## RCS REACTIONS / LIKES — investigation result (2026-06-25, code-grounded)
 Bottom line: **PARTIALLY PRESENT — proto definitions exist, but ZERO wiring (send/receive/UI).**
