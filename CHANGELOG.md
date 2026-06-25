@@ -1,5 +1,31 @@
 # TextRCS Changelog
 
+## 2026-06-25 — RCS/Google-Messages pairing: fix flickering verification emoji (compile-verified, device-UNVERIFIED)
+
+Root-caused by comparing TextRCS's Gaia pairing to the working mautrix-gmessages reference (what Beeper
+bundles). The emoji kept re-deriving/flickering at the pairing step. Two fixes (full analysis in
+`docs/RCS_SETUP_ANALYSIS.md`):
+
+- **#0 (prime — rapid same-session flicker):** `PairingActivity` loaded the login URL that continues to the
+  LIVE Google Messages web app (`messages.google.com/web`), and after harvesting the SAPISID cookie only
+  HID the WebView (`visibility=GONE`) — so the web app kept running and pairing as its OWN browser in
+  parallel with our native orchestrator, making the phone cycle emojis. Fix: the instant the cookie is
+  captured, `webView.stopLoading()` + `loadUrl("about:blank")` to kill the competing pairing (cookie is
+  already ingested, so native pairing is unaffected). `inject_src/com/textrcs/ui/pairing/PairingActivity.kt`.
+- **#1 (cross-retry flicker):** TextRCS never sent `CANCEL_GAIA_PAIRING`, so abandoned/failed attempts
+  lingered server-side (the phone cycled their emojis). Added `GaiaPairingOrchestrator.cancelPairing()`
+  (sends `ActionType.CANCEL_GAIA_PAIRING`, GAIA_2, unencrypted, requestID=pairingAttemptId — mirrors
+  mautrix `cancelGaiaPairing`) and call it on begin-failure and on `PairingActivity.onDestroy` when an
+  attempt is in-flight (guarded by a `paired` flag so a completed pairing is never cancelled).
+- **DEFERRED #2:** multi-device "pick newest primary" selection (`SignInGaiaClient.pickPrimaryDevice` only
+  handles a single deviceWrapper) — lowest-confidence, needs proto device-list work.
+
+STATUS: kotlinc-clean, both fixes confirmed in `classes7.dex` (`cancelPairing` + `about:blank`).
+NOT device-verified — full Gaia pairing needs a real Google account + phone, and the emulator WebView is
+proxy-blocked, so this can't be exercised here. APK at repo root: `textra2_rcs-pairing-fix.apk`. Device
+test: re-pair, watch the emoji — it should appear once and stay stable (no flicker); abandon mid-pair then
+retry → no leftover-attempt churn.
+
 ## 2026-06-23 — Inline-links fix + Path-B RoboKiller-API scaffolding (generic auth header)
 
 Two changes, built + (links) verified on the redroid x86_64 emulator.

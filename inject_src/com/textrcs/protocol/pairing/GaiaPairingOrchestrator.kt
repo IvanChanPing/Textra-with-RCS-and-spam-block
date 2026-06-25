@@ -225,6 +225,34 @@ class GaiaPairingOrchestrator(
         try { receiverThread?.join(2_000) } catch (_: InterruptedException) {}
     }
 
+    /**
+     * [FIX rcs-emoji-flicker #1] Tell Google's server to TEAR DOWN this pairing
+     * attempt — mirrors mautrix `cancelGaiaPairing` (pair_google.go:486 ->
+     * ActionType.CANCEL_GAIA_PAIRING). Without it, an abandoned/failed/superseded
+     * attempt lingers server-side and the phone keeps cycling its emoji among the
+     * other live attempts (flicker). Best-effort + no response awaited; posts via
+     * the same http client as the handshake (does NOT need the long-poll), so it is
+     * safe to call from a background thread on any begin/finish error or when the
+     * pairing screen is abandoned. Uses pairingAttemptId as the requestID, GAIA_2,
+     * unencrypted, no payload — exactly as mautrix's cancel does.
+     */
+    fun cancelPairing() {
+        try {
+            sendOutgoing(
+                requestID = pairingAttemptId,
+                action = ActionType.CANCEL_GAIA_PAIRING,
+                unencryptedPayload = null,
+                encryptedPayload = null,
+                messageType = MessageType.GAIA_2,
+                customTtlMicros = 300L * 1_000_000L,
+            )
+            com.textrcs.diag.PairingTrace.log("ORCH", "cancel-sent", "pairAttemptId=$pairingAttemptId")
+        } catch (e: Throwable) {
+            com.textrcs.diag.PairingTrace.log("ORCH", "cancel-failed",
+                "ex=${e.javaClass.simpleName}", "msg=${e.message}")
+        }
+    }
+
     // ─────────────────────────────────────────────────────────────────────
     // Internals
     // ─────────────────────────────────────────────────────────────────────

@@ -56,6 +56,9 @@ class PairingActivity : Activity() {
     private lateinit var resultText: TextView
 
     @Volatile private var signInTriggered: Boolean = false
+    /** [FIX rcs-emoji-flicker #1] true once pairing fully succeeds; gates the
+     *  onDestroy cancel so we NEVER cancel a completed pairing. */
+    @Volatile private var paired: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,6 +94,24 @@ class PairingActivity : Activity() {
             com.textrcs.diag.PairingTrace.start()
             com.textrcs.diag.PairingTrace.log("UI", "connect-tapped")
             startGoogleLogin()
+        }
+    }
+
+    /**
+     * [FIX rcs-emoji-flicker #1] If the user leaves the pairing screen with an
+     * IN-FLIGHT (not-yet-completed) attempt — e.g. backs out at the emoji screen —
+     * cancel it server-side (mirrors mautrix cancel-on-abandon) so the abandoned
+     * attempt doesn't linger and make the phone flicker emojis on the next try.
+     * Network call → off the main thread. Skipped entirely once [paired] is true.
+     */
+    override fun onDestroy() {
+        super.onDestroy()
+        val orch = orchestrator
+        if (orch != null && !paired) {
+            Thread {
+                try { orch.cancelPairing() } catch (_: Throwable) {}
+                try { orch.stop() } catch (_: Throwable) {}
+            }.start()
         }
     }
 
@@ -186,6 +207,21 @@ class PairingActivity : Activity() {
 
         signInTriggered = true
         runOnUiThread {
+            // [FIX rcs-emoji-flicker #0] The login URL continues to the LIVE Google
+            // Messages web app (messages.google.com/web), which starts its OWN browser
+            // pairing once it has cookies. If we only hide the WebView it keeps running
+            // and pairs in PARALLEL with our native GaiaPairingOrchestrator → the phone
+            // rapidly cycles emojis. We already ingested the SAPISID cookie above, so
+            // KILL the page now to stop the competing browser pairing (Beeper harvests
+            // cookies + pairs natively only; it never runs the messages web app).
+            com.textrcs.diag.PairingTrace.log("WEBVIEW", "stop-after-cookie",
+                "halting messages-web-app to avoid competing browser pairing")
+            try {
+                webView.stopLoading()
+                webView.loadUrl("about:blank")
+            } catch (e: Throwable) {
+                android.util.Log.w("TextRCSPair", "webView stop failed: ${e.message}")
+            }
             webView.visibility = View.GONE
             introPanel.visibility = View.VISIBLE
             introStatus.visibility = View.VISIBLE
@@ -225,6 +261,10 @@ class PairingActivity : Activity() {
             com.textrcs.diag.PairingTrace.log("PAIR", "begin-FAILED",
                 "ex=${e.javaClass.simpleName}", "msg=${e.message}")
             uploadTraceOnError("begin-fail")
+            // [FIX rcs-emoji-flicker #1] cancel the just-failed attempt server-side
+            // (mirrors mautrix StartGaiaPairing cancel on init/server-init failure)
+            // BEFORE tearing down the long-poll, so it doesn't linger and flicker.
+            orch.cancelPairing()
             orch.stop()
             mainHandler.post {
                 showResult("Pairing beginPairing failed:\n${e.javaClass.simpleName}: ${e.message}\n\n${com.textrcs.diag.PairingTrace.snapshot()}")
@@ -277,6 +317,7 @@ class PairingActivity : Activity() {
         // Persist before showing the success screen — so a crash on the
         // confirmation screen doesn't lose the just-completed pairing.
         sessionStore.save(session)
+        paired = true   // [FIX rcs-emoji-flicker #1] gate onDestroy cancel — pairing is done
         com.textrcs.diag.PairingTrace.log("PAIR", "session-saved",
             "browserUUID=${session.browserUuid}",
             "aesKeyLen=${session.aesKey.size}",
