@@ -11,6 +11,31 @@ conv-list ↔ conv-view nav parallax). Do not conflate.
 
 ---
 
+## 2026-06-25 — RESUME (CURRENT STATE / NEXT STEP)
+**User re-asked for this as part of a feature batch** ("plus button → thumbnails → tap photo →
+expand fullscreen with an EXPANDING/container-transform transition, not slide-in"; AND "received
+image in a bubble → tap → expand to fill screen"). Two triggers: (a) compose attach-sheet thumbnail
+preview, (b) in-bubble image → stock GalleryActivity.
+VERIFIED 2026-06-25: Route A container-transform morph is FULLY PRESENT + COMMITTED in the current
+repo (commit 7260445c): sender hook `v6/K.smali`→MorphGalleryLauncher (×2), receiver hook
+`smali_classes2/.../ui/convo/gallery/GalleryActivity.smali:62`→GalleryMorph.onCreate, styles.xml
+windowActivityTransitions=true on AppTheme.ConvoActivity (L53) + AppTheme.GalleryActivity (L91),
+Kotlin MorphGalleryLauncher.kt/GalleryMorph.kt/DragDismissTouchListener.kt present + compiled in
+smali_classes7. So the morph is wired; its RENDER was NEVER confirmed on-screen (still UI-UNVERIFIED).
+The current test APK (textra2_TEST-inject.apk, installed on redroid16-sdtest) is built from this code
+so it CONTAINS the morph. Textra HOLDS the SMS role on the emulator (RoleManager `com.textra2`; legacy
+sms_default_application setting is null/unused on A16). Test image staged at /sdcard/Download/testimg.png.
+BLOCKER this session: redroid `adb input tap` is unreliable (same issue as the Meet FAB) — taps to
+open a conversation / hit the attach FAB often don't land, so I couldn't yet drive: open convo → attach
+sheet (#2 thumbnails) OR create an image bubble (#4) to capture the morph animation.
+NEXT STEP (exact): reliably open a conversation (use uiautomator node center for the row, retry), then
+(A) tap plus/attach → screenshot the thumbnail sheet → tap a thumbnail → capture transition (#2);
+(B) compose+attach the staged image+send (creates an MMS bubble even though send fails w/o carrier) →
+background a screencap loop → tap the image bubble → inspect frames for container-transform vs slide
+(#4). If morph falls back/doesn't render, debug GalleryMorph poller/postpone timing (R3) + scrim/fit.
+NOTE: #2 (attach-sheet thumbnail preview) may be a DIFFERENT viewer than GalleryActivity — confirm which
+fullscreen path the attach-sheet thumbnail uses before assuming Route A covers it.
+
 ## 2026-06-12 — USER BUG REPORT (Route B on real device) → ROUTE A ACCEPTANCE CRITERIA
 
 User drove Route B (textra2_routeB_custom-gallery.apk) on their real phone and

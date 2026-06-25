@@ -36,7 +36,7 @@
 
     iget-object v1, p0, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda9;->f$1:Lcom/textrcs/protocol/GMessagesSession;
 
-    invoke-static {v0, v1}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$OvasuEa1MPU6VHd8uePg-JyvmD4(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
+    invoke-static {v0, v1}, Lcom/textrcs/ui/pairing/PairingActivity;->$r8$lambda$ChSdbGvQWcQ6lmhb1NYu9yDfrrU(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
 
     return-void
 .end method

@@ -1,5 +1,36 @@
 # TextRCS Changelog
 
+## 2026-06-25 — "Share my location" (static map link) + RCS reactions check
+
+**Feature: Share my location (static Google Maps link).** New menu row **"Share my location"** in the
+conversation contact/info overlay menu (the same `x7/f` menu that hosts the Meet button + "Shared media").
+On tap it reads the current GPS fix once and inserts a UNIVERSAL link
+`https://www.google.com/maps?q=lat,lng` into the compose box for the user to review and send — the
+recipient needs no app, account, or backend (this is the "static map" option the user chose, after we
+confirmed there is no web/API route to mint a Google *live*-location link for app-less recipients).
+- New Kotlin: `inject_src/com/textrcs/location/LocationShare.kt` — permission flow, last-known fix across
+  GPS/NETWORK/PASSIVE (+`getCurrentLocation` on API31), single fresh async fix with a 12s timeout (no
+  main-thread block), builds the Locale.US link, finds the `SendText` compose box by walking the live
+  Activity decor tree and inserts at the cursor; clipboard fallback; full Logcat ("TextRcsLoc") + toasts.
+- New smali menu item: `textra_base/smali_classes2/com/mplus/lib/x7/LocShareItem.smali` (extends the
+  obfuscated menu base `x7/g`, self-registers as its own `x7/l` click listener, `e()` → `LocationShare.shareInto(activity)`).
+- Wired in `textra_base/smali_classes2/com/mplus/lib/v6/g.smali` (tag `[TEXTRCS-LOCSHARE]`, after the
+  "Shared media" item) — appends the row to the overlay menu `M:x7/f`.
+- Manifest: added `ACCESS_FINE_LOCATION` (coarse was already declared).
+- WHY a menu row and not the "+" attach panel: Textra's plus panel (`Q5/j`) is a deeply-coupled multi-
+  sub-panel system (emoji categories via `V5/q`/`Ka/t`, gallery/giphy/schedule) whose click dispatch we
+  could not fully resolve safely → per the user ("if it can't be added to the plus items then forge it")
+  we forged the entry in the fully-mapped overlay menu instead.
+- STATUS: COMPILE-ONLY / UI-UNVERIFIED — real GPS + the overlay-tap + compose-insert click-path can't be
+  driven headlessly on redroid. On-device test script in `docs/SHARE_LOCATION_JOURNAL.md` + the file KDoc.
+
+**Investigation: do RCS messages support likes/reactions?** Answer: **proto definitions exist but ZERO
+wiring** — `ReactionData`/`ReactionEntry`/`SendReactionRequest`/`EmojiType`(LIKE/LOVE/…)/`ActionType.SEND_REACTION(38)`
+and `Message.reactions` are all generated, but the receive handler never reads `getReactionsList()`, the
+Rust FFI/`SendManager` have no `sendReaction`, and there is no reaction UI (and Textra delivers via
+SMS/MMS PDU, which can't carry reactions). Enabling it is a large add (Rust FFI + receive parse + non-PDU
+store + bubble shelf + long-press picker). Details in `docs/SHARE_LOCATION_JOURNAL.md`.
+
 ## 2026-06-25 — RCS/Google-Messages pairing: fix flickering verification emoji (compile-verified, device-UNVERIFIED)
 
 Root-caused by comparing TextRCS's Gaia pairing to the working mautrix-gmessages reference (what Beeper

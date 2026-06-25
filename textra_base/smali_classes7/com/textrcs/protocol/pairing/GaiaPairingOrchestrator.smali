@@ -11,12 +11,12 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nGaiaPairingOrchestrator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GaiaPairingOrchestrator.kt\ncom/textrcs/protocol/pairing/GaiaPairingOrchestrator\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,451:1\n1#2:452\n*E\n"
+    value = "SMAP\nGaiaPairingOrchestrator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GaiaPairingOrchestrator.kt\ncom/textrcs/protocol/pairing/GaiaPairingOrchestrator\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,479:1\n1#2:480\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0080\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0003\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 12\u00020\u0001:\u00011B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0006\u0010\u0018\u001a\u00020\nJ\u0006\u0010\u0019\u001a\u00020\u001aJ\u0010\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u000eH\u0002J(\u0010\u001e\u001a\u00020\u000e2\u0006\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020$2\u0006\u0010%\u001a\u00020\u0015H\u0002J<\u0010&\u001a\u00020\'2\u0006\u0010(\u001a\u00020\n2\u0006\u0010\u001f\u001a\u00020 2\u0008\u0010)\u001a\u0004\u0018\u00010\"2\u0008\u0010*\u001a\u0004\u0018\u00010\"2\u0006\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020\u0015H\u0002J\u0008\u0010.\u001a\u00020\'H\u0002J\u0006\u0010/\u001a\u00020\'J\u000c\u00100\u001a\u00020\n*\u00020\"H\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R \u0010\u000b\u001a\u0014\u0012\u0004\u0012\u00020\n\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000e0\r0\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
+        "\u0000~\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0003\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 22\u00020\u0001:\u00012B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0006\u0010\u0018\u001a\u00020\nJ\u0006\u0010\u0019\u001a\u00020\u001aJ\u0006\u0010\u001b\u001a\u00020\u001cJ\u0010\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u000eH\u0002J(\u0010 \u001a\u00020\u000e2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020$2\u0006\u0010%\u001a\u00020&2\u0006\u0010\'\u001a\u00020\u0015H\u0002J<\u0010(\u001a\u00020\u001a2\u0006\u0010)\u001a\u00020\n2\u0006\u0010!\u001a\u00020\"2\u0008\u0010*\u001a\u0004\u0018\u00010$2\u0008\u0010+\u001a\u0004\u0018\u00010$2\u0006\u0010,\u001a\u00020-2\u0006\u0010.\u001a\u00020\u0015H\u0002J\u0008\u0010/\u001a\u00020\u001aH\u0002J\u0006\u00100\u001a\u00020\u001aJ\u000c\u00101\u001a\u00020\n*\u00020$H\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R \u0010\u000b\u001a\u0014\u0012\u0004\u0012\u00020\n\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000e0\r0\u000cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;",
@@ -44,6 +44,8 @@
         "ukey2",
         "Lcom/textrcs/protocol/pairing/Ukey2Handshake;",
         "beginPairing",
+        "cancelPairing",
+        "",
         "finishPairing",
         "Lcom/textrcs/protocol/GMessagesSession;",
         "parseRpcData",
@@ -58,7 +60,6 @@
         "",
         "timeoutMs",
         "sendOutgoing",
-        "",
         "requestID",
         "unencryptedPayload",
         "encryptedPayload",
@@ -130,43 +131,43 @@
 
     sput-object v0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->Companion:Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator$Companion;
 
-    .line 446
+    .line 474
     nop
 
-    .line 441
+    .line 469
     invoke-static {}, Lcom/textrcs/gmproto/authentication/BrowserDetails;->newBuilder()Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;
 
     move-result-object v0
 
-    .line 442
+    .line 470
     const-string v1, "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Mobile Safari/537.36"
 
     invoke-virtual {v0, v1}, Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;->setUserAgent(Ljava/lang/String;)Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;
 
     move-result-object v0
 
-    .line 443
+    .line 471
     sget-object v1, Lcom/textrcs/gmproto/authentication/BrowserType;->OTHER:Lcom/textrcs/gmproto/authentication/BrowserType;
 
     invoke-virtual {v0, v1}, Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;->setBrowserType(Lcom/textrcs/gmproto/authentication/BrowserType;)Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;
 
     move-result-object v0
 
-    .line 444
+    .line 472
     const-string v1, "libgm"
 
     invoke-virtual {v0, v1}, Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;->setOS(Ljava/lang/String;)Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;
 
     move-result-object v0
 
-    .line 445
+    .line 473
     sget-object v1, Lcom/textrcs/gmproto/authentication/DeviceType;->TABLET:Lcom/textrcs/gmproto/authentication/DeviceType;
 
     invoke-virtual {v0, v1}, Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;->setDeviceType(Lcom/textrcs/gmproto/authentication/DeviceType;)Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;
 
     move-result-object v0
 
-    .line 446
+    .line 474
     invoke-virtual {v0}, Lcom/textrcs/gmproto/authentication/BrowserDetails$Builder;->build()Lcom/textrcs/gmproto/authentication/BrowserDetails;
 
     move-result-object v0
@@ -289,7 +290,7 @@
     .registers 4
     .param p1, "msg"    # Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
 
-    .line 436
+    .line 464
     invoke-virtual {p1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getMessageData()Lcom/google/protobuf/ByteString;
 
     move-result-object v0
@@ -312,7 +313,7 @@
     .param p3, "isFinish"    # Z
     .param p4, "timeoutMs"    # J
 
-    .line 306
+    .line 334
     move-object/from16 v1, p0
 
     move-wide/from16 v9, p4
@@ -321,28 +322,28 @@
 
     move-result-object v0
 
-    .line 307
+    .line 335
     iget-object v2, v1, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->pairingAttemptId:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;->setPairingAttemptID(Ljava/lang/String;)Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;
 
     move-result-object v0
 
-    .line 308
+    .line 336
     sget-object v2, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->BROWSER_DETAILS:Lcom/textrcs/gmproto/authentication/BrowserDetails;
 
     invoke-virtual {v0, v2}, Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;->setBrowserDetails(Lcom/textrcs/gmproto/authentication/BrowserDetails;)Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;
 
     move-result-object v0
 
-    .line 309
+    .line 337
     iget-wide v2, v1, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->sessionStartMs:J
 
     invoke-virtual {v0, v2, v3}, Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;->setStartTimestamp(J)Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;
 
     move-result-object v0
 
-    .line 310
+    .line 338
     invoke-static/range {p2 .. p2}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
 
     move-result-object v2
@@ -351,17 +352,17 @@
 
     move-result-object v0
 
-    .line 311
+    .line 339
     move-object v2, v0
 
     .local v2, "$this$sendGaiaPairingMessage_u24lambda_u241":Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;
     const/4 v3, 0x0
 
-    .line 312
+    .line 340
     .local v3, "$i$a$-apply-GaiaPairingOrchestrator$sendGaiaPairingMessage$container$1":I
     if-nez p3, :cond_41
 
-    .line 316
+    .line 344
     sget-object v11, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v15, 0x4
@@ -380,7 +381,7 @@
 
     invoke-virtual {v2, v4}, Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;->setProposedVerificationCodeVersion(I)Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;
 
-    .line 317
+    .line 345
     sget-object v11, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v12, "gaia_proposed_key_derivation_version"
@@ -391,24 +392,24 @@
 
     invoke-virtual {v2, v4}, Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;->setProposedKeyDerivationVersion(I)Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;
 
-    .line 319
+    .line 347
     :cond_41
     nop
 
-    .line 311
+    .line 339
     .end local v2    # "$this$sendGaiaPairingMessage_u24lambda_u241":Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;
     .end local v3    # "$i$a$-apply-GaiaPairingOrchestrator$sendGaiaPairingMessage$container$1":I
     nop
 
-    .line 320
+    .line 348
     invoke-virtual {v0}, Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer$Builder;->build()Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer;
 
     move-result-object v0
 
-    .line 306
+    .line 334
     move-object v11, v0
 
-    .line 325
+    .line 353
     .local v11, "container":Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer;
     if-eqz p3, :cond_4d
 
@@ -422,7 +423,7 @@
     :goto_4f
     move-object v6, v0
 
-    .line 327
+    .line 355
     .local v6, "messageType":Lcom/textrcs/gmproto/rpc/MessageType;
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
@@ -436,7 +437,7 @@
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 328
+    .line 356
     .local v2, "requestID":Ljava/lang/String;
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -446,7 +447,7 @@
 
     move-object v12, v0
 
-    .line 329
+    .line 357
     .local v12, "waiter":Ljava/util/concurrent/LinkedBlockingQueue;
     iget-object v0, v1, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->pendingResponses:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -454,31 +455,31 @@
 
     invoke-interface {v0, v2, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 331
+    .line 359
     nop
 
-    .line 332
+    .line 360
     nop
 
-    .line 333
+    .line 361
     nop
 
-    .line 334
+    .line 362
     nop
 
-    .line 335
+    .line 363
     :try_start_6f
     invoke-virtual {v11}, Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer;->toByteArray()[B
 
     move-result-object v4
 
-    .line 336
+    .line 364
     nop
 
-    .line 337
+    .line 365
     nop
 
-    .line 340
+    .line 368
     sget-object v13, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v14, "gaia_send_custom_ttl_micros"
@@ -497,7 +498,7 @@
     :try_end_86
     .catchall {:try_start_6f .. :try_end_86} :catchall_ec
 
-    .line 332
+    .line 360
     const/4 v5, 0x0
 
     move-object/from16 v3, p1
@@ -507,7 +508,7 @@
     :try_end_8c
     .catchall {:try_start_89 .. :try_end_8c} :catchall_ea
 
-    .line 343
+    .line 371
     :try_start_8c
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -519,10 +520,10 @@
 
     if-nez v0, :cond_e0
 
-    .line 344
+    .line 372
     nop
 
-    .line 345
+    .line 373
     iget-object v0, v1, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->lastError:Ljava/lang/Throwable;
 
     if-eqz v0, :cond_bb
@@ -533,11 +534,11 @@
 
     if-eqz v0, :cond_bb
 
-    .line 452
+    .line 480
     .local v0, "it":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 345
+    .line 373
     .local v3, "$i$a$-let-GaiaPairingOrchestrator$sendGaiaPairingMessage$response$1":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -568,7 +569,7 @@
 
     goto :goto_da
 
-    .line 346
+    .line 374
     :cond_bb
     :goto_bb
     new-instance v0, Ljava/lang/StringBuilder;
@@ -604,7 +605,7 @@
 
     move-result-object v4
 
-    .line 344
+    .line 372
     :goto_da
     new-instance v0, Lcom/textrcs/protocol/pairing/PairingException;
 
@@ -622,7 +623,7 @@
     :try_end_e0
     .catchall {:try_start_d2 .. :try_end_e0} :catchall_ea
 
-    .line 343
+    .line 371
     .restart local v2    # "requestID":Ljava/lang/String;
     .restart local v6    # "messageType":Lcom/textrcs/gmproto/rpc/MessageType;
     .restart local v11    # "container":Lcom/textrcs/gmproto/authentication/GaiaPairingRequestContainer;
@@ -634,11 +635,11 @@
     :cond_e0
     move-object/from16 v3, p1
 
-    .line 348
+    .line 376
     .local v0, "response":Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
     nop
 
-    .line 350
+    .line 378
     .end local v0    # "response":Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
     iget-object v4, v1, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->pendingResponses:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -646,11 +647,11 @@
 
     move-object v4, v0
 
-    .line 348
+    .line 376
     .local v4, "response":Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
     return-object v0
 
-    .line 350
+    .line 378
     .end local v4    # "response":Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;
     :catchall_ea
     move-exception v0
@@ -679,80 +680,80 @@
     .param p5, "messageType"    # Lcom/textrcs/gmproto/rpc/MessageType;
     .param p6, "customTtlMicros"    # J
 
-    .line 366
+    .line 394
     invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 367
+    .line 395
     invoke-virtual {v0, p1}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 368
+    .line 396
     invoke-virtual {v0, p2}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setAction(Lcom/textrcs/gmproto/rpc/ActionType;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 369
+    .line 397
     iget-object v1, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->sessionId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setSessionID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
     move-result-object v0
 
-    .line 370
+    .line 398
     move-object v1, v0
 
     .local v1, "$this$sendOutgoing_u24lambda_u243":Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
     const/4 v2, 0x0
 
-    .line 371
+    .line 399
     .local v2, "$i$a$-apply-GaiaPairingOrchestrator$sendOutgoing$data$1":I
     if-eqz p3, :cond_1d
 
-    .line 372
+    .line 400
     invoke-static {p3}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setUnencryptedProtoData(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
-    .line 374
+    .line 402
     :cond_1d
     if-eqz p4, :cond_26
 
-    .line 375
+    .line 403
     invoke-static/range {p4 .. p4}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->setEncryptedProtoData(Lcom/google/protobuf/ByteString;)Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
 
-    .line 377
+    .line 405
     :cond_26
     nop
 
-    .line 370
+    .line 398
     .end local v1    # "$this$sendOutgoing_u24lambda_u243":Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;
     .end local v2    # "$i$a$-apply-GaiaPairingOrchestrator$sendOutgoing$data$1":I
     nop
 
-    .line 378
+    .line 406
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCData;
 
     move-result-object v0
 
-    .line 366
+    .line 394
     move-object v1, v0
 
-    .line 380
+    .line 408
     .local v1, "data":Lcom/textrcs/gmproto/rpc/OutgoingRPCData;
     invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
     move-result-object v0
 
-    .line 381
+    .line 409
     iget-object v2, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->signInResult:Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
 
     invoke-virtual {v2}, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->getDevices()Ljava/util/List;
@@ -769,29 +770,29 @@
 
     move-result-object v0
 
-    .line 383
+    .line 411
     invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
 
     move-result-object v2
 
-    .line 384
+    .line 412
     invoke-virtual {v2, p1}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
 
     move-result-object v2
 
-    .line 385
+    .line 413
     sget-object v3, Lcom/textrcs/gmproto/rpc/BugleRoute;->DataEvent:Lcom/textrcs/gmproto/rpc/BugleRoute;
 
     invoke-virtual {v2, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setBugleRoute(Lcom/textrcs/gmproto/rpc/BugleRoute;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
 
     move-result-object v2
 
-    .line 387
+    .line 415
     invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
 
     move-result-object v3
 
-    .line 388
+    .line 416
     invoke-static {}, Lcom/textrcs/gmproto/util/EmptyArr;->getDefaultInstance()Lcom/textrcs/gmproto/util/EmptyArr;
 
     move-result-object v4
@@ -800,24 +801,24 @@
 
     move-result-object v3
 
-    .line 389
+    .line 417
     move-object/from16 v4, p5
 
     invoke-virtual {v3, v4}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->setMessageType(Lcom/textrcs/gmproto/rpc/MessageType;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;
 
     move-result-object v3
 
-    .line 390
+    .line 418
     invoke-virtual {v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;
 
     move-result-object v3
 
-    .line 386
+    .line 414
     invoke-virtual {v2, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->setMessageTypeData(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Type;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;
 
     move-result-object v2
 
-    .line 392
+    .line 420
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/OutgoingRPCData;->toByteString()Lcom/google/protobuf/ByteString;
 
     move-result-object v3
@@ -826,27 +827,27 @@
 
     move-result-object v2
 
-    .line 393
+    .line 421
     invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;
 
     move-result-object v2
 
-    .line 382
+    .line 410
     invoke-virtual {v0, v2}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setData(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Data;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
     move-result-object v0
 
-    .line 396
+    .line 424
     invoke-static {}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;->newBuilder()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
 
     move-result-object v2
 
-    .line 397
+    .line 425
     invoke-virtual {v2, p1}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->setRequestID(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;
 
     move-result-object v2
 
-    .line 398
+    .line 426
     iget-object v3, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->signInResult:Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
 
     invoke-virtual {v3}, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->getTachyonAuthToken()[B
@@ -861,7 +862,7 @@
 
     move-result-object v2
 
-    .line 399
+    .line 427
     sget-object v3, Lcom/textrcs/protocol/SignInGaiaClient;->Companion:Lcom/textrcs/protocol/SignInGaiaClient$Companion;
 
     invoke-virtual {v3}, Lcom/textrcs/protocol/SignInGaiaClient$Companion;->getCONFIG_VERSION()Lcom/textrcs/gmproto/authentication/ConfigVersion;
@@ -872,27 +873,27 @@
 
     move-result-object v2
 
-    .line 400
+    .line 428
     invoke-virtual {v2}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth$Builder;->build()Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;
 
     move-result-object v2
 
-    .line 395
+    .line 423
     invoke-virtual {v0, v2}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setAuth(Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Auth;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
     move-result-object v0
 
-    .line 402
+    .line 430
     move-wide/from16 v2, p6
 
     invoke-virtual {v0, v2, v3}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->setTTL(J)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
     move-result-object v0
 
-    .line 380
+    .line 408
     move-object v5, v0
 
-    .line 411
+    .line 439
     .local v5, "outerBuilder":Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -908,7 +909,7 @@
 
     if-nez v0, :cond_c0
 
-    .line 412
+    .line 440
     iget-object v0, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->signInResult:Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
 
     invoke-virtual {v0}, Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;->getDestRegistrationId()Ljava/lang/String;
@@ -917,15 +918,15 @@
 
     if-eqz v0, :cond_c0
 
-    .line 452
+    .line 480
     .local v0, "it":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 412
+    .line 440
     .local v6, "$i$a$-let-GaiaPairingOrchestrator$sendOutgoing$1":I
     invoke-virtual {v5, v0}, Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;->addDestRegistrationIDs(Ljava/lang/String;)Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage$Builder;
 
-    .line 414
+    .line 442
     .end local v0    # "it":Ljava/lang/String;
     .end local v6    # "$i$a$-let-GaiaPairingOrchestrator$sendOutgoing$1":I
     :cond_c0
@@ -933,31 +934,31 @@
 
     move-result-object v6
 
-    .line 416
+    .line 444
     .local v6, "outer":Lcom/textrcs/gmproto/rpc/OutgoingRPCMessage;
     iget-object v0, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->http:Lcom/textrcs/protocol/http/GMessagesHttpClient;
 
-    .line 417
+    .line 445
     nop
 
-    .line 418
+    .line 446
     invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     move-object v7, v6
 
     check-cast v7, Lcom/google/protobuf/Message;
 
-    .line 419
+    .line 447
     sget-object v8, Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;->PROTO_PBLITE:Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;
 
-    .line 416
+    .line 444
     const-string v9, "https://instantmessaging-pa.clients6.google.com/$rpc/google.internal.communications.instantmessaging.v1.Messaging/SendMessage"
 
     invoke-virtual {v0, v9, v7, v8}, Lcom/textrcs/protocol/http/GMessagesHttpClient;->postProto(Ljava/lang/String;Lcom/google/protobuf/Message;Lcom/textrcs/protocol/http/GMessagesHttpClient$ContentType;)Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;
 
     move-result-object v7
 
-    .line 421
+    .line 449
     .local v7, "resp":Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;
     invoke-virtual {v7}, Lcom/textrcs/protocol/http/GMessagesHttpClient$Response;->isSuccess()Z
 
@@ -965,16 +966,16 @@
 
     if-eqz v0, :cond_f3
 
-    .line 426
+    .line 454
     nop
 
-    .line 427
+    .line 455
     :try_start_dc
     invoke-static {}, Lcom/textrcs/gmproto/client/SendMessageResponse;->newBuilder()Lcom/textrcs/gmproto/client/SendMessageResponse$Builder;
 
     move-result-object v0
 
-    .line 428
+    .line 456
     .local v0, "sb":Lcom/textrcs/gmproto/client/SendMessageResponse$Builder;
     iget-object v8, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->http:Lcom/textrcs/protocol/http/GMessagesHttpClient;
 
@@ -996,16 +997,16 @@
 
     goto :goto_f2
 
-    .line 429
+    .line 457
     .end local v0    # "sb":Lcom/textrcs/gmproto/client/SendMessageResponse$Builder;
     :catchall_f1
     move-exception v0
 
-    .line 432
+    .line 460
     :goto_f2
     return-void
 
-    .line 422
+    .line 450
     :cond_f3
     new-instance v0, Lcom/textrcs/protocol/pairing/PairingException;
 
@@ -1065,12 +1066,12 @@
 .method private final startLongPoll()V
     .registers 6
 
-    .line 233
+    .line 261
     new-instance v0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator$startLongPoll$handler$1;
 
     invoke-direct {v0, p0}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator$startLongPoll$handler$1;-><init>(Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;)V
 
-    .line 296
+    .line 324
     .local v0, "handler":Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator$startLongPoll$handler$1;
     new-instance v1, Lcom/textrcs/protocol/longpoll/LongPollReceiver;
 
@@ -1090,7 +1091,7 @@
 
     iput-object v1, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->receiver:Lcom/textrcs/protocol/longpoll/LongPollReceiver;
 
-    .line 297
+    .line 325
     new-instance v1, Ljava/lang/Thread;
 
     iget-object v2, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->receiver:Lcom/textrcs/protocol/longpoll/LongPollReceiver;
@@ -1101,13 +1102,13 @@
 
     invoke-direct {v1, v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 452
+    .line 480
     move-object v2, v1
 
     .local v2, "$this$startLongPoll_u24lambda_u240":Ljava/lang/Thread;
     const/4 v3, 0x0
 
-    .line 297
+    .line 325
     .local v3, "$i$a$-apply-GaiaPairingOrchestrator$startLongPoll$1":I
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
@@ -1115,7 +1116,7 @@
     .end local v3    # "$i$a$-apply-GaiaPairingOrchestrator$startLongPoll$1":I
     iput-object v1, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->receiverThread:Ljava/lang/Thread;
 
-    .line 298
+    .line 326
     return-void
 .end method
 
@@ -1848,6 +1849,181 @@
     invoke-direct {v0, v7}, Lcom/textrcs/protocol/pairing/PairingException;-><init>(Ljava/lang/String;)V
 
     throw v0
+.end method
+
+.method public final cancelPairing()V
+    .registers 14
+
+    .line 240
+    const-string v1, "ORCH"
+
+    .line 241
+    nop
+
+    .line 242
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    :try_start_6
+    iget-object v6, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->pairingAttemptId:Ljava/lang/String;
+
+    .line 243
+    sget-object v7, Lcom/textrcs/gmproto/rpc/ActionType;->CANCEL_GAIA_PAIRING:Lcom/textrcs/gmproto/rpc/ActionType;
+
+    .line 244
+    nop
+
+    .line 245
+    nop
+
+    .line 246
+    sget-object v10, Lcom/textrcs/gmproto/rpc/MessageType;->GAIA_2:Lcom/textrcs/gmproto/rpc/MessageType;
+    :try_end_e
+    .catchall {:try_start_6 .. :try_end_e} :catchall_3d
+
+    .line 247
+    nop
+
+    .line 241
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-wide/32 v11, 0x11e1a300
+
+    move-object v5, p0
+
+    :try_start_15
+    invoke-direct/range {v5 .. v12}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->sendOutgoing(Ljava/lang/String;Lcom/textrcs/gmproto/rpc/ActionType;[B[BLcom/textrcs/gmproto/rpc/MessageType;J)V
+
+    .line 249
+    sget-object v0, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
+
+    new-array v6, v2, [Ljava/lang/String;
+
+    const-string v7, "cancel-sent"
+
+    aput-object v7, v6, v4
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "pairAttemptId="
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    iget-object v8, v5, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->pairingAttemptId:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v6, v3
+
+    invoke-virtual {v0, v1, v6}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
+    :try_end_3a
+    .catchall {:try_start_15 .. :try_end_3a} :catchall_3b
+
+    goto :goto_82
+
+    .line 250
+    :catchall_3b
+    move-exception v0
+
+    goto :goto_3f
+
+    :catchall_3d
+    move-exception v0
+
+    move-object v5, p0
+
+    .line 251
+    .local v0, "e":Ljava/lang/Throwable;
+    :goto_3f
+    sget-object v6, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
+
+    const/4 v7, 0x3
+
+    new-array v7, v7, [Ljava/lang/String;
+
+    const-string v8, "cancel-failed"
+
+    aput-object v8, v7, v4
+
+    .line 252
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "ex="
+
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v7, v3
+
+    .line 251
+    nop
+
+    .line 252
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "msg="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v7, v2
+
+    .line 251
+    invoke-virtual {v6, v1, v7}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 254
+    .end local v0    # "e":Ljava/lang/Throwable;
+    :goto_82
+    return-void
 .end method
 
 .method public final finishPairing()Lcom/textrcs/protocol/GMessagesSession;

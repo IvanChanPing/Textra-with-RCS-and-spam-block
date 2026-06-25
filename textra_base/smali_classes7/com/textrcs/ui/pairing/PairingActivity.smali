@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nPairingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PairingActivity.kt\ncom/textrcs/ui/pairing/PairingActivity\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,411:1\n1603#2,9:412\n1855#2:421\n1856#2:423\n1612#2:424\n1603#2,9:425\n1855#2:434\n1856#2:436\n1612#2:437\n1#3:422\n1#3:435\n*S KotlinDebug\n*F\n+ 1 PairingActivity.kt\ncom/textrcs/ui/pairing/PairingActivity\n*L\n169#1:412,9\n169#1:421\n169#1:423\n169#1:424\n181#1:425,9\n181#1:434\n181#1:436\n181#1:437\n169#1:422\n181#1:435\n*E\n"
+    value = "SMAP\nPairingActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PairingActivity.kt\ncom/textrcs/ui/pairing/PairingActivity\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,452:1\n1603#2,9:453\n1855#2:462\n1856#2:464\n1612#2:465\n1603#2,9:466\n1855#2:475\n1856#2:477\n1612#2:478\n1#3:463\n1#3:476\n*S KotlinDebug\n*F\n+ 1 PairingActivity.kt\ncom/textrcs/ui/pairing/PairingActivity\n*L\n190#1:453,9\n190#1:462\n190#1:464\n190#1:465\n202#1:466,9\n202#1:475\n202#1:477\n202#1:478\n190#1:463\n202#1:476\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u000b\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u001c\u001a\u00020\u0019H\u0002J\u0012\u0010\u001d\u001a\u00020\u001e2\u0008\u0010\u001f\u001a\u0004\u0018\u00010 H\u0014J\u0008\u0010!\u001a\u00020\u001eH\u0002J\u0018\u0010\"\u001a\u00020#2\u0006\u0010$\u001a\u00020%2\u0006\u0010&\u001a\u00020%H\u0002J\u0018\u0010\'\u001a\u00020\u001e2\u0006\u0010(\u001a\u00020\u00102\u0006\u0010)\u001a\u00020*H\u0002J\u0008\u0010+\u001a\u00020\u001eH\u0002J\u0008\u0010,\u001a\u00020%H\u0002J\u0010\u0010-\u001a\u00020\u001e2\u0006\u0010.\u001a\u00020%H\u0002J\u0008\u0010/\u001a\u00020\u001eH\u0002J\u0008\u00100\u001a\u00020\u001eH\u0002J\u0012\u00101\u001a\u00020\u001e2\u0008\u00102\u001a\u0004\u0018\u00010%H\u0002J\u0010\u00103\u001a\u00020\u001e2\u0006\u00104\u001a\u00020%H\u0002J\u0008\u00105\u001a\u00020\u001eH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082.\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0006X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0008X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0008X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0019X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082.\u00a2\u0006\u0002\n\u0000"
+        "\u0000z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u000b\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u001d\u001a\u00020\u0012H\u0002J\u0012\u0010\u001e\u001a\u00020\u001f2\u0008\u0010 \u001a\u0004\u0018\u00010!H\u0014J\u0008\u0010\"\u001a\u00020\u001fH\u0014J\u0008\u0010#\u001a\u00020\u001fH\u0002J\u0018\u0010$\u001a\u00020%2\u0006\u0010&\u001a\u00020\'2\u0006\u0010(\u001a\u00020\'H\u0002J\u0018\u0010)\u001a\u00020\u001f2\u0006\u0010*\u001a\u00020\u00102\u0006\u0010+\u001a\u00020,H\u0002J\u0008\u0010-\u001a\u00020\u001fH\u0002J\u0008\u0010.\u001a\u00020\'H\u0002J\u0010\u0010/\u001a\u00020\u001f2\u0006\u00100\u001a\u00020\'H\u0002J\u0008\u00101\u001a\u00020\u001fH\u0002J\u0008\u00102\u001a\u00020\u001fH\u0002J\u0012\u00103\u001a\u00020\u001f2\u0008\u00104\u001a\u0004\u0018\u00010\'H\u0002J\u0010\u00105\u001a\u00020\u001f2\u0006\u00106\u001a\u00020\'H\u0002J\u0008\u00107\u001a\u00020\u001fH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082.\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0006X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0008X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0008X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082.\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u001cX\u0082.\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/ui/pairing/PairingActivity;",
@@ -30,6 +30,8 @@
         "Landroid/os/Handler;",
         "orchestrator",
         "Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;",
+        "paired",
+        "",
         "resultPanel",
         "Landroid/widget/ScrollView;",
         "resultText",
@@ -38,7 +40,6 @@
         "signInClient",
         "Lcom/textrcs/protocol/SignInGaiaClient;",
         "signInTriggered",
-        "",
         "webView",
         "Landroid/webkit/WebView;",
         "isBatteryOptIgnored",
@@ -46,6 +47,7 @@
         "",
         "savedInstanceState",
         "Landroid/os/Bundle;",
+        "onDestroy",
         "openBatteryOptExemption",
         "resId",
         "",
@@ -95,6 +97,8 @@
 
 .field private orchestrator:Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
 
+.field private volatile paired:Z
+
 .field private resultPanel:Landroid/widget/ScrollView;
 
 .field private resultText:Landroid/widget/TextView;
@@ -109,10 +113,34 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$2fNrpG1cH6zJi3RGGLZs4kXmkpA(ZLcom/textrcs/ui/pairing/PairingActivity;Landroid/view/View;)V
+.method public static synthetic $r8$lambda$6xtFYKMYM1Vw_w754I0iYAeqPOI(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runFinishOffMainThread$lambda$13(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$77CtuNtOoZ_PM_hFiuLg1pjhdx4(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runSignInGaiaOffMainThread$lambda$9(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$ChSdbGvQWcQ6lmhb1NYu9yDfrrU(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runFinishOffMainThread$lambda$15(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$Ggg4Vh3brOZaRlSZ4pcKeIQh7pc(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
     .registers 3
 
-    invoke-static {p0, p1, p2}, Lcom/textrcs/ui/pairing/PairingActivity;->wireSetupPrompt$lambda$15(ZLcom/textrcs/ui/pairing/PairingActivity;Landroid/view/View;)V
+    invoke-static {p0, p1, p2}, Lcom/textrcs/ui/pairing/PairingActivity;->runSignInGaiaOffMainThread$lambda$11(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
 
     return-void
 .end method
@@ -125,10 +153,10 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$KTuVvKrXoHckvs9-kA44_fXTF3c(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/PairingException;)V
+.method public static synthetic $r8$lambda$ILQj57J-1bQLXsvG8X6ttzoRRXE(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/String;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runFinishOffMainThread$lambda$11(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/PairingException;)V
+    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runSignInGaiaOffMainThread$lambda$10(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -141,18 +169,18 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$OvasuEa1MPU6VHd8uePg-JyvmD4(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
+.method public static synthetic $r8$lambda$VsgwDMm9juGx0YGYLwoUfmv_Q1o(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/PairingException;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runFinishOffMainThread$lambda$14(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
+    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runFinishOffMainThread$lambda$12(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/PairingException;)V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$Re25ReBC9nWxe1kg_aKnJDJ4638(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
-    .registers 2
+.method public static synthetic $r8$lambda$_9KZ-kY5NvP1Y0TzaUWWjLRpT1k(Lcom/textrcs/ui/pairing/PairingActivity;)V
+    .registers 1
 
-    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runFinishOffMainThread$lambda$12(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+    invoke-static {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->tryHarvestSapisid$lambda$7(Lcom/textrcs/ui/pairing/PairingActivity;)V
 
     return-void
 .end method
@@ -165,34 +193,18 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$m6tebyuMQlfXdy-QdoMi4DtCpZU(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
+.method public static synthetic $r8$lambda$twrEwjwHEL7TLsb9q4nWOsMJbTk(ZLcom/textrcs/ui/pairing/PairingActivity;Landroid/view/View;)V
     .registers 3
 
-    invoke-static {p0, p1, p2}, Lcom/textrcs/ui/pairing/PairingActivity;->runSignInGaiaOffMainThread$lambda$10(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
+    invoke-static {p0, p1, p2}, Lcom/textrcs/ui/pairing/PairingActivity;->wireSetupPrompt$lambda$16(ZLcom/textrcs/ui/pairing/PairingActivity;Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$nXQA05lBfYTtyYdNC4wzs85t7zQ(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runSignInGaiaOffMainThread$lambda$7(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$sMnl1llxWsXbsLLoHfwxxOd2u00(Lcom/textrcs/ui/pairing/PairingActivity;)V
+.method public static synthetic $r8$lambda$xw5ApWbLEJB_bIIa4AueFnArXGM(Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;)V
     .registers 1
 
-    invoke-static {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->tryHarvestSapisid$lambda$5(Lcom/textrcs/ui/pairing/PairingActivity;)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$usGVyyAQkd-wGry44HBlMj0P9tA(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/String;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lcom/textrcs/ui/pairing/PairingActivity;->runSignInGaiaOffMainThread$lambda$9(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->onDestroy$lambda$3(Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;)V
 
     return-void
 .end method
@@ -254,10 +266,10 @@
 .method private final isBatteryOptIgnored()Z
     .registers 4
 
-    .line 387
+    .line 428
     nop
 
-    .line 388
+    .line 429
     :try_start_1
     const-string v0, "power"
 
@@ -271,7 +283,7 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 389
+    .line 430
     .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->getPackageName()Ljava/lang/String;
 
@@ -286,11 +298,11 @@
     .end local v0    # "pm":Landroid/os/PowerManager;
     goto :goto_35
 
-    .line 390
+    .line 431
     :catchall_17
     move-exception v0
 
-    .line 391
+    .line 432
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -318,10 +330,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
+    .line 433
     const/4 v1, 0x0
 
-    .line 387
+    .line 428
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_35
     return v1
@@ -336,12 +348,12 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 91
+    .line 94
     sget-object v0, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     invoke-virtual {v0}, Lcom/textrcs/diag/PairingTrace;->start()V
 
-    .line 92
+    .line 95
     sget-object v0, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     const/4 v1, 0x1
@@ -358,23 +370,55 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 93
+    .line 96
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->startGoogleLogin()V
 
-    .line 94
+    .line 97
+    return-void
+.end method
+
+.method private static final onDestroy$lambda$3(Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;)V
+    .registers 2
+    .param p0, "$orch"    # Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
+
+    .line 112
+    :try_start_0
+    invoke-virtual {p0}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->cancelPairing()V
+    :try_end_3
+    .catchall {:try_start_0 .. :try_end_3} :catchall_4
+
+    goto :goto_5
+
+    :catchall_4
+    move-exception v0
+
+    .line 113
+    :goto_5
+    :try_start_5
+    invoke-virtual {p0}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->stop()V
+    :try_end_8
+    .catchall {:try_start_5 .. :try_end_8} :catchall_9
+
+    goto :goto_a
+
+    :catchall_9
+    move-exception v0
+
+    .line 114
+    :goto_a
     return-void
 .end method
 
 .method private final openBatteryOptExemption()V
     .registers 4
 
-    .line 400
+    .line 441
     nop
 
-    .line 401
+    .line 442
     nop
 
-    .line 402
+    .line 443
     :try_start_2
     new-instance v0, Landroid/content/Intent;
 
@@ -382,7 +426,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 403
+    .line 444
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -413,18 +457,18 @@
 
     move-result-object v0
 
-    .line 401
+    .line 442
     invoke-virtual {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_2b
     .catchall {:try_start_2 .. :try_end_2b} :catchall_2c
 
     goto :goto_53
 
-    .line 405
+    .line 446
     :catchall_2c
     move-exception v0
 
-    .line 406
+    .line 447
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -452,7 +496,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 407
+    .line 448
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"
@@ -461,7 +505,7 @@
 
     invoke-virtual {p0, v1}, Lcom/textrcs/ui/pairing/PairingActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 409
+    .line 450
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_53
     return-void
@@ -472,7 +516,7 @@
     .param p1, "type"    # Ljava/lang/String;
     .param p2, "name"    # Ljava/lang/String;
 
-    .line 322
+    .line 363
     invoke-virtual {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -493,7 +537,7 @@
     .param p1, "orch"    # Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
     .param p2, "signInResult"    # Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
 
-    .line 257
+    .line 297
     const-string v0, "msg="
 
     sget-object v1, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
@@ -512,10 +556,10 @@
 
     invoke-virtual {v1, v4, v3}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 258
+    .line 298
     nop
 
-    .line 259
+    .line 299
     const/4 v1, 0x3
 
     const/4 v3, 0x2
@@ -525,19 +569,19 @@
 
     move-result-object v0
     :try_end_18
-    .catch Lcom/textrcs/protocol/pairing/PairingException; {:try_start_14 .. :try_end_18} :catch_115
-    .catchall {:try_start_14 .. :try_end_18} :catchall_c0
+    .catch Lcom/textrcs/protocol/pairing/PairingException; {:try_start_14 .. :try_end_18} :catch_117
+    .catchall {:try_start_14 .. :try_end_18} :catchall_c2
 
-    .line 274
+    .line 314
     invoke-virtual {p1}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->stop()V
 
-    .line 275
+    .line 315
     nop
 
-    .line 258
+    .line 298
     nop
 
-    .line 279
+    .line 319
     .local v0, "session":Lcom/textrcs/protocol/GMessagesSession;
     iget-object v6, p0, Lcom/textrcs/ui/pairing/PairingActivity;->sessionStore:Lcom/textrcs/protocol/SessionStore;
 
@@ -552,7 +596,10 @@
     :cond_27
     invoke-virtual {v6, v0}, Lcom/textrcs/protocol/SessionStore;->save(Lcom/textrcs/protocol/GMessagesSession;)V
 
-    .line 280
+    .line 320
+    iput-boolean v2, p0, Lcom/textrcs/ui/pairing/PairingActivity;->paired:Z
+
+    .line 321
     sget-object v6, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     const/4 v7, 0x5
@@ -563,7 +610,7 @@
 
     aput-object v8, v7, v5
 
-    .line 281
+    .line 322
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -588,10 +635,10 @@
 
     aput-object v5, v7, v2
 
-    .line 280
+    .line 321
     nop
 
-    .line 282
+    .line 323
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -618,10 +665,10 @@
 
     aput-object v2, v7, v3
 
-    .line 280
+    .line 321
     nop
 
-    .line 283
+    .line 324
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -648,10 +695,10 @@
 
     aput-object v2, v7, v1
 
-    .line 280
+    .line 321
     nop
 
-    .line 284
+    .line 325
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -682,31 +729,31 @@
 
     aput-object v1, v7, v2
 
-    .line 280
+    .line 321
     invoke-virtual {v6, v4, v7}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 286
+    .line 327
     sget-object v1, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
-    .line 287
+    .line 328
     nop
 
-    .line 288
+    .line 329
     sget-object v2, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     invoke-virtual {v2}, Lcom/textrcs/diag/PairingTrace;->snapshot()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 286
+    .line 327
     const-string v3, "pairing-success"
 
     invoke-virtual {v1, v3, v2}, Lcom/textrcs/diag/LogUploader;->upload(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 291
+    .line 332
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->startReceiveServiceCompat()V
 
-    .line 293
+    .line 334
     iget-object v1, p0, Lcom/textrcs/ui/pairing/PairingActivity;->mainHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda9;
@@ -715,17 +762,17 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 307
+    .line 348
     return-void
 
-    .line 265
+    .line 305
     .end local v0    # "session":Lcom/textrcs/protocol/GMessagesSession;
-    :catchall_c0
+    :catchall_c2
     move-exception v6
 
-    .line 266
+    .line 306
     .local v6, "e":Ljava/lang/Throwable;
-    :try_start_c1
+    :try_start_c3
     sget-object v7, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     new-array v1, v1, [Ljava/lang/String;
@@ -734,7 +781,7 @@
 
     aput-object v8, v1, v5
 
-    .line 267
+    .line 307
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -763,10 +810,10 @@
 
     aput-object v5, v1, v2
 
-    .line 266
+    .line 306
     nop
 
-    .line 267
+    .line 307
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -789,15 +836,15 @@
 
     aput-object v0, v1, v3
 
-    .line 266
+    .line 306
     invoke-virtual {v7, v4, v1}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 268
+    .line 308
     const-string v0, "finish-exception"
 
     invoke-direct {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->uploadTraceOnError(Ljava/lang/String;)V
 
-    .line 269
+    .line 309
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->mainHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda8;
@@ -805,28 +852,28 @@
     invoke-direct {v1, p0, v6}, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda8;-><init>(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_110
-    .catchall {:try_start_c1 .. :try_end_110} :catchall_14c
+    :try_end_112
+    .catchall {:try_start_c3 .. :try_end_112} :catchall_14e
 
-    .line 272
+    .line 312
     nop
 
-    .line 274
+    .line 314
     .end local v6    # "e":Ljava/lang/Throwable;
     invoke-virtual {p1}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->stop()V
 
-    .line 272
+    .line 312
     .restart local v6    # "e":Ljava/lang/Throwable;
     return-void
 
-    .line 260
+    .line 300
     .end local v6    # "e":Ljava/lang/Throwable;
-    :catch_115
+    :catch_117
     move-exception v1
 
-    .line 261
+    .line 301
     .local v1, "e":Lcom/textrcs/protocol/pairing/PairingException;
-    :try_start_116
+    :try_start_118
     sget-object v6, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     new-array v3, v3, [Ljava/lang/String;
@@ -859,12 +906,12 @@
 
     invoke-virtual {v6, v4, v3}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 262
+    .line 302
     const-string v0, "finish-fail"
 
     invoke-direct {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->uploadTraceOnError(Ljava/lang/String;)V
 
-    .line 263
+    .line 303
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->mainHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda7;
@@ -872,23 +919,23 @@
     invoke-direct {v2, p0, v1}, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda7;-><init>(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/PairingException;)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_147
-    .catchall {:try_start_116 .. :try_end_147} :catchall_14c
+    :try_end_149
+    .catchall {:try_start_118 .. :try_end_149} :catchall_14e
 
-    .line 264
+    .line 304
     nop
 
-    .line 274
+    .line 314
     .end local v1    # "e":Lcom/textrcs/protocol/pairing/PairingException;
     invoke-virtual {p1}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->stop()V
 
-    .line 264
+    .line 304
     .restart local v1    # "e":Lcom/textrcs/protocol/pairing/PairingException;
     return-void
 
-    .line 274
+    .line 314
     .end local v1    # "e":Lcom/textrcs/protocol/pairing/PairingException;
-    :catchall_14c
+    :catchall_14e
     move-exception v0
 
     invoke-virtual {p1}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->stop()V
@@ -896,7 +943,7 @@
     throw v0
 .end method
 
-.method private static final runFinishOffMainThread$lambda$11(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/PairingException;)V
+.method private static final runFinishOffMainThread$lambda$12(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/PairingException;)V
     .registers 4
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
     .param p1, "$e"    # Lcom/textrcs/protocol/pairing/PairingException;
@@ -909,7 +956,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 263
+    .line 303
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -953,7 +1000,7 @@
     return-void
 .end method
 
-.method private static final runFinishOffMainThread$lambda$12(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+.method private static final runFinishOffMainThread$lambda$13(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
     .registers 4
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
     .param p1, "$e"    # Ljava/lang/Throwable;
@@ -966,7 +1013,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 270
+    .line 310
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1025,11 +1072,11 @@
 
     invoke-direct {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->showResult(Ljava/lang/String;)V
 
-    .line 271
+    .line 311
     return-void
 .end method
 
-.method private static final runFinishOffMainThread$lambda$14(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
+.method private static final runFinishOffMainThread$lambda$15(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/GMessagesSession;)V
     .registers 8
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
     .param p1, "$session"    # Lcom/textrcs/protocol/GMessagesSession;
@@ -1042,23 +1089,23 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 294
+    .line 335
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     move-object v1, v0
 
-    .local v1, "$this$runFinishOffMainThread_u24lambda_u2414_u24lambda_u2413":Ljava/lang/StringBuilder;
+    .local v1, "$this$runFinishOffMainThread_u24lambda_u2415_u24lambda_u2414":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
-    .line 295
+    .line 336
     .local v2, "$i$a$-buildString-PairingActivity$runFinishOffMainThread$1$1":I
     const-string v3, "Paired to Google Messages.\n\n"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 296
+    .line 337
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1089,7 +1136,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 297
+    .line 338
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1122,7 +1169,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 298
+    .line 339
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1153,7 +1200,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 299
+    .line 340
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1186,7 +1233,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 300
+    .line 341
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1217,7 +1264,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 301
+    .line 342
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1252,23 +1299,23 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 302
+    .line 343
     const-string v3, "Session saved. Outgoing SMS will route to Google Messages.\n\n"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 303
+    .line 344
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->setupStatusLine()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 304
+    .line 345
     nop
 
-    .line 294
-    .end local v1    # "$this$runFinishOffMainThread_u24lambda_u2414_u24lambda_u2413":Ljava/lang/StringBuilder;
+    .line 335
+    .end local v1    # "$this$runFinishOffMainThread_u24lambda_u2415_u24lambda_u2414":Ljava/lang/StringBuilder;
     .end local v2    # "$i$a$-buildString-PairingActivity$runFinishOffMainThread$1$1":I
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1280,17 +1327,17 @@
 
     invoke-direct {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->showResult(Ljava/lang/String;)V
 
-    .line 305
+    .line 346
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->wireSetupPrompt()V
 
-    .line 306
+    .line 347
     return-void
 .end method
 
 .method private final runSignInGaiaOffMainThread()V
     .registers 14
 
-    .line 202
+    .line 238
     const-string v0, "msg="
 
     const-string v1, "ex="
@@ -1311,10 +1358,10 @@
 
     invoke-virtual {v2, v5, v4}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 203
+    .line 239
     nop
 
-    .line 204
+    .line 240
     const/4 v2, 0x3
 
     const/4 v4, 0x2
@@ -1326,12 +1373,12 @@
 
     move-result-object v7
     :try_end_1c
-    .catchall {:try_start_16 .. :try_end_1c} :catchall_15b
+    .catchall {:try_start_16 .. :try_end_1c} :catchall_15e
 
-    .line 203
+    .line 239
     nop
 
-    .line 212
+    .line 248
     .local v7, "signInResult":Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
     sget-object v8, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
@@ -1343,7 +1390,7 @@
 
     aput-object v10, v9, v6
 
-    .line 213
+    .line 249
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1370,10 +1417,10 @@
 
     aput-object v10, v9, v3
 
-    .line 212
+    .line 248
     nop
 
-    .line 214
+    .line 250
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1398,10 +1445,10 @@
 
     aput-object v10, v9, v4
 
-    .line 212
+    .line 248
     nop
 
-    .line 215
+    .line 251
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1426,10 +1473,10 @@
 
     aput-object v10, v9, v2
 
-    .line 212
+    .line 248
     nop
 
-    .line 216
+    .line 252
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1460,10 +1507,10 @@
 
     aput-object v10, v9, v11
 
-    .line 212
+    .line 248
     nop
 
-    .line 217
+    .line 253
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1495,21 +1542,21 @@
 
     aput-object v10, v9, v11
 
-    .line 212
+    .line 248
     invoke-virtual {v8, v5, v9}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 219
+    .line 255
     new-instance v5, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
 
     iget-object v8, p0, Lcom/textrcs/ui/pairing/PairingActivity;->httpClient:Lcom/textrcs/protocol/http/GMessagesHttpClient;
 
     invoke-direct {v5, v8, v7}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;-><init>(Lcom/textrcs/protocol/http/GMessagesHttpClient;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
 
-    .line 220
+    .line 256
     .local v5, "orch":Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
     iput-object v5, p0, Lcom/textrcs/ui/pairing/PairingActivity;->orchestrator:Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
 
-    .line 221
+    .line 257
     sget-object v8, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     new-array v9, v3, [Ljava/lang/String;
@@ -1522,10 +1569,10 @@
 
     invoke-virtual {v8, v10, v9}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 222
+    .line 258
     nop
 
-    .line 223
+    .line 259
     :try_start_cc
     invoke-virtual {v5}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->beginPairing()Ljava/lang/String;
 
@@ -1533,10 +1580,10 @@
     :try_end_d0
     .catchall {:try_start_cc .. :try_end_d0} :catchall_109
 
-    .line 222
+    .line 258
     nop
 
-    .line 234
+    .line 274
     .local v0, "emoji":Ljava/lang/String;
     sget-object v1, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
@@ -1568,7 +1615,7 @@
 
     invoke-virtual {v1, v10, v2}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 236
+    .line 276
     iget-object v1, p0, Lcom/textrcs/ui/pairing/PairingActivity;->mainHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda2;
@@ -1577,7 +1624,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 243
+    .line 283
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda3;
@@ -1588,15 +1635,15 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 244
+    .line 284
     return-void
 
-    .line 224
+    .line 260
     .end local v0    # "emoji":Ljava/lang/String;
     :catchall_109
     move-exception v8
 
-    .line 225
+    .line 261
     .local v8, "e":Ljava/lang/Throwable;
     sget-object v9, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
@@ -1606,7 +1653,7 @@
 
     aput-object v11, v2, v6
 
-    .line 226
+    .line 262
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1633,10 +1680,10 @@
 
     aput-object v1, v2, v3
 
-    .line 225
+    .line 261
     nop
 
-    .line 226
+    .line 262
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1659,18 +1706,21 @@
 
     aput-object v0, v2, v4
 
-    .line 225
+    .line 261
     invoke-virtual {v9, v10, v2}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 227
+    .line 263
     const-string v0, "begin-fail"
 
     invoke-direct {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->uploadTraceOnError(Ljava/lang/String;)V
 
-    .line 228
+    .line 267
+    invoke-virtual {v5}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->cancelPairing()V
+
+    .line 268
     invoke-virtual {v5}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->stop()V
 
-    .line 229
+    .line 269
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->mainHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda1;
@@ -1679,17 +1729,17 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 232
+    .line 272
     return-void
 
-    .line 205
+    .line 241
     .end local v5    # "orch":Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
     .end local v7    # "signInResult":Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;
     .end local v8    # "e":Ljava/lang/Throwable;
-    :catchall_15b
+    :catchall_15e
     move-exception v7
 
-    .line 206
+    .line 242
     .local v7, "e":Ljava/lang/Throwable;
     sget-object v8, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
@@ -1699,7 +1749,7 @@
 
     aput-object v9, v2, v6
 
-    .line 207
+    .line 243
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1726,10 +1776,10 @@
 
     aput-object v1, v2, v3
 
-    .line 206
+    .line 242
     nop
 
-    .line 207
+    .line 243
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1752,15 +1802,15 @@
 
     aput-object v0, v2, v4
 
-    .line 206
+    .line 242
     invoke-virtual {v8, v5, v2}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 208
+    .line 244
     const-string v0, "signin-fail"
 
     invoke-direct {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->uploadTraceOnError(Ljava/lang/String;)V
 
-    .line 209
+    .line 245
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->mainHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda0;
@@ -1769,11 +1819,108 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 210
+    .line 246
     return-void
 .end method
 
-.method private static final runSignInGaiaOffMainThread$lambda$10(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
+.method private static final runSignInGaiaOffMainThread$lambda$10(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/String;)V
+    .registers 5
+    .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
+    .param p1, "$emoji"    # Ljava/lang/String;
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "$emoji"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 277
+    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introPanel:Landroid/widget/LinearLayout;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_15
+
+    const-string v0, "introPanel"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v0, v1
+
+    :cond_15
+    const/16 v2, 0x8
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 278
+    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
+
+    if-nez v0, :cond_24
+
+    const-string v0, "webView"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v0, v1
+
+    :cond_24
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setVisibility(I)V
+
+    .line 279
+    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultPanel:Landroid/widget/ScrollView;
+
+    if-nez v0, :cond_31
+
+    const-string v0, "resultPanel"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v0, v1
+
+    :cond_31
+    invoke-virtual {v0, v2}, Landroid/widget/ScrollView;->setVisibility(I)V
+
+    .line 280
+    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->emojiPanel:Landroid/widget/LinearLayout;
+
+    if-nez v0, :cond_3e
+
+    const-string v0, "emojiPanel"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    goto :goto_3f
+
+    :cond_3e
+    move-object v1, v0
+
+    :goto_3f
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 281
+    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->emojiView:Landroid/widget/TextView;
+
+    if-nez v0, :cond_48
+
+    goto :goto_4e
+
+    :cond_48
+    move-object v1, p1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 282
+    :goto_4e
+    return-void
+.end method
+
+.method private static final runSignInGaiaOffMainThread$lambda$11(Lcom/textrcs/ui/pairing/PairingActivity;Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
     .registers 4
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
     .param p1, "$orch"    # Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
@@ -1791,13 +1938,13 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 243
+    .line 283
     invoke-direct {p0, p1, p2}, Lcom/textrcs/ui/pairing/PairingActivity;->runFinishOffMainThread(Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Lcom/textrcs/protocol/SignInGaiaClient$SignInResult;)V
 
     return-void
 .end method
 
-.method private static final runSignInGaiaOffMainThread$lambda$7(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+.method private static final runSignInGaiaOffMainThread$lambda$8(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
     .registers 4
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
     .param p1, "$e"    # Ljava/lang/Throwable;
@@ -1810,7 +1957,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 209
+    .line 245
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1872,7 +2019,7 @@
     return-void
 .end method
 
-.method private static final runSignInGaiaOffMainThread$lambda$8(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
+.method private static final runSignInGaiaOffMainThread$lambda$9(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/Throwable;)V
     .registers 4
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
     .param p1, "$e"    # Ljava/lang/Throwable;
@@ -1885,7 +2032,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 230
+    .line 270
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1944,111 +2091,14 @@
 
     invoke-direct {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->showResult(Ljava/lang/String;)V
 
-    .line 231
-    return-void
-.end method
-
-.method private static final runSignInGaiaOffMainThread$lambda$9(Lcom/textrcs/ui/pairing/PairingActivity;Ljava/lang/String;)V
-    .registers 5
-    .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
-    .param p1, "$emoji"    # Ljava/lang/String;
-
-    const-string v0, "this$0"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "$emoji"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 237
-    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introPanel:Landroid/widget/LinearLayout;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_15
-
-    const-string v0, "introPanel"
-
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v0, v1
-
-    :cond_15
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 238
-    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
-
-    if-nez v0, :cond_24
-
-    const-string v0, "webView"
-
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v0, v1
-
-    :cond_24
-    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setVisibility(I)V
-
-    .line 239
-    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultPanel:Landroid/widget/ScrollView;
-
-    if-nez v0, :cond_31
-
-    const-string v0, "resultPanel"
-
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    move-object v0, v1
-
-    :cond_31
-    invoke-virtual {v0, v2}, Landroid/widget/ScrollView;->setVisibility(I)V
-
-    .line 240
-    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->emojiPanel:Landroid/widget/LinearLayout;
-
-    if-nez v0, :cond_3e
-
-    const-string v0, "emojiPanel"
-
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
-
-    goto :goto_3f
-
-    :cond_3e
-    move-object v1, v0
-
-    :goto_3f
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 241
-    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->emojiView:Landroid/widget/TextView;
-
-    if-nez v0, :cond_48
-
-    goto :goto_4e
-
-    :cond_48
-    move-object v1, p1
-
-    check-cast v1, Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 242
-    :goto_4e
+    .line 271
     return-void
 .end method
 
 .method private final setupStatusLine()Ljava/lang/String;
     .registers 4
 
-    .line 348
+    .line 389
     sget-object v0, Lcom/textrcs/wake/GmNotificationListener;->Companion:Lcom/textrcs/wake/GmNotificationListener$Companion;
 
     move-object v1, p0
@@ -2059,24 +2109,24 @@
 
     move-result v0
 
-    .line 349
+    .line 390
     .local v0, "notifOk":Z
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->isBatteryOptIgnored()Z
 
     move-result v1
 
-    .line 350
+    .line 391
     .local v1, "batteryOk":Z
     nop
 
-    .line 351
+    .line 392
     if-nez v0, :cond_13
 
     const-string v2, "\u26a0\ufe0f TAP HERE to enable message wake-up (grant Notification access).\nWithout it, incoming messages won\'t wake Textra 2.\nKeep Google Messages notifications ENABLED (silent is fine)."
 
     goto :goto_1a
 
-    .line 354
+    .line 395
     :cond_13
     if-nez v1, :cond_18
 
@@ -2084,11 +2134,11 @@
 
     goto :goto_1a
 
-    .line 357
+    .line 398
     :cond_18
     const-string v2, "\u2705 Message wake-up: ON (Notification access + unrestricted battery granted)."
 
-    .line 350
+    .line 391
     :goto_1a
     return-object v2
 .end method
@@ -2097,7 +2147,7 @@
     .registers 5
     .param p1, "text"    # Ljava/lang/String;
 
-    .line 314
+    .line 355
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introPanel:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
@@ -2115,7 +2165,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 315
+    .line 356
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
 
     if-nez v0, :cond_1a
@@ -2129,7 +2179,7 @@
     :cond_1a
     invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 316
+    .line 357
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->emojiPanel:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_27
@@ -2143,7 +2193,7 @@
     :cond_27
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 317
+    .line 358
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultPanel:Landroid/widget/ScrollView;
 
     if-nez v0, :cond_34
@@ -2159,7 +2209,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 318
+    .line 359
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultText:Landroid/widget/TextView;
 
     if-nez v0, :cond_42
@@ -2180,14 +2230,14 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 319
+    .line 360
     return-void
 .end method
 
 .method private final startGoogleLogin()V
     .registers 12
 
-    .line 102
+    .line 123
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introPanel:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
@@ -2205,7 +2255,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 103
+    .line 124
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
 
     const-string v2, "webView"
@@ -2221,7 +2271,7 @@
 
     invoke-virtual {v0, v3}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 109
+    .line 130
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
 
     if-nez v0, :cond_26
@@ -2239,43 +2289,43 @@
 
     invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 110
+    .line 131
     .local v0, "s":Landroid/webkit/WebSettings;
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 111
+    .line 132
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
 
-    .line 112
+    .line 133
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
-    .line 113
+    .line 134
     invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
 
-    .line 114
+    .line 135
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setAllowContentAccess(Z)V
 
-    .line 116
+    .line 137
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
 
-    .line 117
+    .line 138
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setUseWideViewPort(Z)V
 
-    .line 118
+    .line 139
     invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setLoadWithOverviewMode(Z)V
 
-    .line 121
+    .line 142
     sget-object v5, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    .line 122
+    .line 143
     nop
 
-    .line 123
+    .line 144
     nop
 
-    .line 121
+    .line 142
     const/4 v9, 0x4
 
     const/4 v10, 0x0
@@ -2292,7 +2342,7 @@
 
     invoke-virtual {v0, v5}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
 
-    .line 126
+    .line 147
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v5
@@ -2308,7 +2358,7 @@
     :cond_66
     invoke-virtual {v5, v6, v4}, Landroid/webkit/CookieManager;->setAcceptThirdPartyCookies(Landroid/webkit/WebView;Z)V
 
-    .line 128
+    .line 149
     iget-object v5, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
 
     if-nez v5, :cond_71
@@ -2326,7 +2376,7 @@
 
     invoke-virtual {v5, v6}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 135
+    .line 156
     sget-object v5, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     const/4 v6, 0x2
@@ -2369,7 +2419,7 @@
 
     invoke-virtual {v5, v3, v6}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 136
+    .line 157
     iget-object v3, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
 
     if-nez v3, :cond_ae
@@ -2384,14 +2434,14 @@
     :goto_af
     invoke-virtual {v1, v8}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 137
+    .line 158
     return-void
 .end method
 
 .method private final startReceiveServiceCompat()V
     .registers 4
 
-    .line 332
+    .line 373
     sget-object v0, Lcom/textrcs/wake/ConnectionManager;->INSTANCE:Lcom/textrcs/wake/ConnectionManager;
 
     invoke-virtual {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->getApplicationContext()Landroid/content/Context;
@@ -2404,7 +2454,7 @@
 
     invoke-virtual {v0, v1}, Lcom/textrcs/wake/ConnectionManager;->triggerWake(Landroid/content/Context;)V
 
-    .line 333
+    .line 374
     return-void
 .end method
 
@@ -2412,14 +2462,14 @@
     .registers 33
     .param p1, "url"    # Ljava/lang/String;
 
-    .line 153
+    .line 174
     move-object/from16 v0, p0
 
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v1
 
-    .line 154
+    .line 175
     sget-object v2, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/4 v6, 0x4
@@ -2436,12 +2486,12 @@
 
     move-result-object v2
 
-    .line 153
+    .line 174
     invoke-virtual {v1, v2}, Landroid/webkit/CookieManager;->getCookie(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 156
+    .line 177
     .local v1, "rawCookie":Ljava/lang/String;
     const-string v2, "COOKIE"
 
@@ -2451,7 +2501,7 @@
 
     if-nez v1, :cond_29
 
-    .line 157
+    .line 178
     sget-object v5, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     new-array v3, v3, [Ljava/lang/String;
@@ -2462,10 +2512,10 @@
 
     invoke-virtual {v5, v2, v3}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 158
+    .line 179
     return-void
 
-    .line 161
+    .line 182
     :cond_29
     iget-boolean v5, v0, Lcom/textrcs/ui/pairing/PairingActivity;->signInTriggered:Z
 
@@ -2473,7 +2523,7 @@
 
     return-void
 
-    .line 164
+    .line 185
     :cond_2e
     sget-object v6, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -2491,7 +2541,7 @@
 
     move-result-object v5
 
-    .line 165
+    .line 186
     .local v5, "required":Ljava/lang/String;
     move-object v6, v1
 
@@ -2519,17 +2569,17 @@
 
     if-nez v6, :cond_117
 
-    .line 166
+    .line 187
     sget-object v6, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
-    .line 167
+    .line 188
     new-array v13, v13, [Ljava/lang/String;
 
     const-string v14, "no-sapisid"
 
     aput-object v14, v13, v4
 
-    .line 168
+    .line 189
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -2554,10 +2604,10 @@
 
     aput-object v14, v13, v3
 
-    .line 167
+    .line 188
     nop
 
-    .line 169
+    .line 190
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -2591,7 +2641,7 @@
     .local v3, "$this$mapNotNull$iv":Ljava/lang/Iterable;
     const/4 v11, 0x0
 
-    .line 412
+    .line 453
     .local v11, "$i$f$mapNotNull":I
     new-instance v14, Ljava/util/ArrayList;
 
@@ -2605,14 +2655,14 @@
     .local v15, "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
     const/16 v16, 0x0
 
-    .line 420
+    .line 461
     .local v16, "$i$f$mapNotNullTo":I
     move-object/from16 v17, v15
 
     .local v17, "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     const/16 v18, 0x0
 
-    .line 421
+    .line 462
     .local v18, "$i$f$forEach":I
     invoke-interface/range {v17 .. v17}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -2635,7 +2685,7 @@
     .local v21, "element$iv$iv":Ljava/lang/Object;
     const/16 v22, 0x0
 
-    .line 420
+    .line 461
     .local v22, "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
     move/from16 v23, v8
 
@@ -2646,7 +2696,7 @@
     .local v8, "it":Ljava/lang/String;
     const/16 v24, 0x0
 
-    .line 170
+    .line 191
     .local v24, "$i$a$-mapNotNull-PairingActivity$tryHarvestSapisid$1":I
     move-object/from16 v25, v8
 
@@ -2666,7 +2716,7 @@
 
     move-result v9
 
-    .line 171
+    .line 192
     .local v9, "eq":I
     if-lez v9, :cond_d8
 
@@ -2691,22 +2741,22 @@
     .restart local v25    # "$this$mapNotNull$iv":Ljava/lang/Iterable;
     const/4 v3, 0x0
 
-    .line 420
+    .line 461
     .end local v8    # "it":Ljava/lang/String;
     .end local v9    # "eq":I
     .end local v24    # "$i$a$-mapNotNull-PairingActivity$tryHarvestSapisid$1":I
     :goto_db
     if-eqz v3, :cond_e1
 
-    .line 422
+    .line 463
     .local v3, "it$iv$iv":Ljava/lang/Object;
     const/4 v8, 0x0
 
-    .line 420
+    .line 461
     .local v8, "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
     invoke-interface {v14, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 421
+    .line 462
     .end local v3    # "it$iv$iv":Ljava/lang/Object;
     .end local v8    # "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
     .end local v21    # "element$iv$iv":Ljava/lang/Object;
@@ -2721,7 +2771,7 @@
     .end local v20    # "element$iv$iv$iv":Ljava/lang/Object;
     goto :goto_a4
 
-    .line 423
+    .line 464
     .end local v25    # "$this$mapNotNull$iv":Ljava/lang/Iterable;
     .local v3, "$this$mapNotNull$iv":Ljava/lang/Iterable;
     :cond_e7
@@ -2729,7 +2779,7 @@
 
     move/from16 v23, v8
 
-    .line 424
+    .line 465
     .end local v3    # "$this$mapNotNull$iv":Ljava/lang/Iterable;
     .end local v17    # "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     .end local v18    # "$i$f$forEach":I
@@ -2743,7 +2793,7 @@
 
     check-cast v3, Ljava/util/List;
 
-    .line 412
+    .line 453
     nop
 
     .end local v11    # "$i$f$mapNotNull":I
@@ -2752,7 +2802,7 @@
 
     check-cast v14, Ljava/lang/Iterable;
 
-    .line 172
+    .line 193
     move-object v15, v10
 
     check-cast v15, Ljava/lang/CharSequence;
@@ -2775,7 +2825,7 @@
 
     move-result-object v3
 
-    .line 169
+    .line 190
     invoke-virtual {v12, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -2786,16 +2836,16 @@
 
     aput-object v3, v13, v23
 
-    .line 167
+    .line 188
     nop
 
-    .line 166
+    .line 187
     invoke-virtual {v6, v2, v13}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 174
+    .line 195
     return-void
 
-    .line 177
+    .line 198
     :cond_117
     move/from16 v23, v8
 
@@ -2803,17 +2853,17 @@
 
     invoke-virtual {v6, v1}, Lcom/textrcs/protocol/http/GMessagesHttpClient;->ingestCookieHeader(Ljava/lang/String;)V
 
-    .line 178
+    .line 199
     sget-object v6, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
-    .line 179
+    .line 200
     new-array v8, v13, [Ljava/lang/String;
 
     const-string v9, "sapisid-captured"
 
     aput-object v9, v8, v4
 
-    .line 180
+    .line 201
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2838,10 +2888,10 @@
 
     aput-object v9, v8, v3
 
-    .line 179
+    .line 200
     nop
 
-    .line 181
+    .line 202
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2875,7 +2925,7 @@
     .local v11, "$this$mapNotNull$iv":Ljava/lang/Iterable;
     const/4 v12, 0x0
 
-    .line 425
+    .line 466
     .local v12, "$i$f$mapNotNull":I
     new-instance v13, Ljava/util/ArrayList;
 
@@ -2889,14 +2939,14 @@
     .local v14, "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
     const/4 v15, 0x0
 
-    .line 433
+    .line 474
     .local v15, "$i$f$mapNotNullTo":I
     move-object/from16 v16, v14
 
     .local v16, "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     const/16 v17, 0x0
 
-    .line 434
+    .line 475
     .local v17, "$i$f$forEach":I
     invoke-interface/range {v16 .. v16}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -2919,7 +2969,7 @@
     .local v20, "element$iv$iv":Ljava/lang/Object;
     const/16 v21, 0x0
 
-    .line 433
+    .line 474
     .local v21, "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
     move-object/from16 v3, v20
 
@@ -2928,7 +2978,7 @@
     .local v3, "it":Ljava/lang/String;
     const/16 v24, 0x0
 
-    .line 182
+    .line 203
     .local v24, "$i$a$-mapNotNull-PairingActivity$tryHarvestSapisid$2":I
     move-object/from16 v25, v3
 
@@ -2948,7 +2998,7 @@
 
     move-result v4
 
-    .line 183
+    .line 204
     .local v4, "eq":I
     if-lez v4, :cond_1a3
 
@@ -2987,22 +3037,22 @@
     .restart local v26    # "required":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 433
+    .line 474
     .end local v3    # "it":Ljava/lang/String;
     .end local v4    # "eq":I
     .end local v24    # "$i$a$-mapNotNull-PairingActivity$tryHarvestSapisid$2":I
     :goto_1a9
     if-eqz v5, :cond_1af
 
-    .line 435
+    .line 476
     .local v5, "it$iv$iv":Ljava/lang/Object;
     const/4 v3, 0x0
 
-    .line 433
+    .line 474
     .local v3, "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
     invoke-interface {v13, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 434
+    .line 475
     .end local v3    # "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
     .end local v5    # "it$iv$iv":Ljava/lang/Object;
     .end local v20    # "element$iv$iv":Ljava/lang/Object;
@@ -3019,7 +3069,7 @@
     .end local v19    # "element$iv$iv$iv":Ljava/lang/Object;
     goto :goto_16e
 
-    .line 436
+    .line 477
     .end local v25    # "rawCookie":Ljava/lang/String;
     .end local v26    # "required":Ljava/lang/String;
     .restart local v1    # "rawCookie":Ljava/lang/String;
@@ -3027,7 +3077,7 @@
     :cond_1b6
     move-object/from16 v25, v1
 
-    .line 437
+    .line 478
     .end local v1    # "rawCookie":Ljava/lang/String;
     .end local v16    # "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     .end local v17    # "$i$f$forEach":I
@@ -3041,7 +3091,7 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 425
+    .line 466
     nop
 
     .end local v11    # "$this$mapNotNull$iv":Ljava/lang/Iterable;
@@ -3050,7 +3100,7 @@
 
     check-cast v13, Ljava/lang/Iterable;
 
-    .line 184
+    .line 205
     move-object v14, v10
 
     check-cast v14, Ljava/lang/CharSequence;
@@ -3073,7 +3123,7 @@
 
     move-result-object v1
 
-    .line 181
+    .line 202
     invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -3084,25 +3134,25 @@
 
     aput-object v1, v8, v23
 
-    .line 179
+    .line 200
     nop
 
-    .line 178
+    .line 199
     invoke-virtual {v6, v2, v8}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 187
+    .line 208
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/textrcs/ui/pairing/PairingActivity;->signInTriggered:Z
 
-    .line 188
+    .line 209
     new-instance v1, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda5;
 
     invoke-direct {v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda5;-><init>(Lcom/textrcs/ui/pairing/PairingActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/textrcs/ui/pairing/PairingActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 194
+    .line 230
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda6;
@@ -3113,40 +3163,133 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 195
+    .line 231
     return-void
 .end method
 
-.method private static final tryHarvestSapisid$lambda$5(Lcom/textrcs/ui/pairing/PairingActivity;)V
-    .registers 5
+.method private static final tryHarvestSapisid$lambda$6(Lcom/textrcs/ui/pairing/PairingActivity;)V
+    .registers 7
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
-
-    const-string v0, "this$0"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 189
-    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_10
 
     const-string v0, "webView"
 
+    const-string v1, "this$0"
+
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 217
+    sget-object v1, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "stop-after-cookie"
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    .line 218
+    const-string v3, "halting messages-web-app to avoid competing browser pairing"
+
+    const/4 v5, 0x1
+
+    aput-object v3, v2, v5
+
+    .line 217
+    const-string v3, "WEBVIEW"
+
+    invoke-virtual {v1, v3, v2}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 219
+    nop
+
+    .line 220
+    const/4 v1, 0x0
+
+    :try_start_1d
+    iget-object v2, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
+
+    if-nez v2, :cond_25
+
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    move-object v0, v1
+    move-object v2, v1
 
-    :cond_10
-    const/16 v2, 0x8
+    :cond_25
+    invoke-virtual {v2}, Landroid/webkit/WebView;->stopLoading()V
 
-    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setVisibility(I)V
+    .line 221
+    iget-object v2, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
 
-    .line 190
+    if-nez v2, :cond_30
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v2, v1
+
+    :cond_30
+    const-string v3, "about:blank"
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    :try_end_35
+    .catchall {:try_start_1d .. :try_end_35} :catchall_36
+
+    goto :goto_53
+
+    .line 222
+    :catchall_36
+    move-exception v2
+
+    .line 223
+    .local v2, "e":Ljava/lang/Throwable;
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "webView stop failed: "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v5, "TextRCSPair"
+
+    invoke-static {v5, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 225
+    .end local v2    # "e":Ljava/lang/Throwable;
+    :goto_53
+    iget-object v2, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
+
+    if-nez v2, :cond_5b
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    move-object v2, v1
+
+    :cond_5b
+    const/16 v0, 0x8
+
+    invoke-virtual {v2, v0}, Landroid/webkit/WebView;->setVisibility(I)V
+
+    .line 226
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introPanel:Landroid/widget/LinearLayout;
 
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_6a
 
     const-string v0, "introPanel"
 
@@ -3154,49 +3297,47 @@
 
     move-object v0, v1
 
-    :cond_1f
-    const/4 v2, 0x0
+    :cond_6a
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 191
+    .line 227
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introStatus:Landroid/widget/TextView;
 
-    const-string v3, "introStatus"
+    const-string v2, "introStatus"
 
-    if-nez v0, :cond_2d
+    if-nez v0, :cond_77
 
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
     move-object v0, v1
 
-    :cond_2d
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    :cond_77
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 192
+    .line 228
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introStatus:Landroid/widget/TextView;
 
-    if-nez v0, :cond_38
+    if-nez v0, :cond_82
 
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
-    goto :goto_39
+    goto :goto_83
 
-    :cond_38
+    :cond_82
     move-object v1, v0
 
-    :goto_39
+    :goto_83
     const-string v0, "Signed in. Talking to Google Messages\u2026"
 
     check-cast v0, Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 193
+    .line 229
     return-void
 .end method
 
-.method private static final tryHarvestSapisid$lambda$6(Lcom/textrcs/ui/pairing/PairingActivity;)V
+.method private static final tryHarvestSapisid$lambda$7(Lcom/textrcs/ui/pairing/PairingActivity;)V
     .registers 2
     .param p0, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
 
@@ -3204,7 +3345,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 194
+    .line 230
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->runSignInGaiaOffMainThread()V
 
     return-void
@@ -3214,10 +3355,10 @@
     .registers 5
     .param p1, "tag"    # Ljava/lang/String;
 
-    .line 247
+    .line 287
     sget-object v0, Lcom/textrcs/diag/LogUploader;->INSTANCE:Lcom/textrcs/diag/LogUploader;
 
-    .line 248
+    .line 288
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3236,24 +3377,24 @@
 
     move-result-object v1
 
-    .line 249
+    .line 289
     sget-object v2, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     invoke-virtual {v2}, Lcom/textrcs/diag/PairingTrace;->snapshot()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 247
+    .line 287
     invoke-virtual {v0, v1, v2}, Lcom/textrcs/diag/LogUploader;->upload(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 251
+    .line 291
     return-void
 .end method
 
 .method private final wireSetupPrompt()V
     .registers 6
 
-    .line 366
+    .line 407
     sget-object v0, Lcom/textrcs/wake/GmNotificationListener;->Companion:Lcom/textrcs/wake/GmNotificationListener$Companion;
 
     move-object v1, p0
@@ -3264,13 +3405,13 @@
 
     move-result v0
 
-    .line 367
+    .line 408
     .local v0, "notifOk":Z
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->isBatteryOptIgnored()Z
 
     move-result v1
 
-    .line 368
+    .line 409
     .local v1, "batteryOk":Z
     const-string v2, "resultText"
 
@@ -3280,7 +3421,7 @@
 
     if-eqz v1, :cond_20
 
-    .line 369
+    .line 410
     iget-object v4, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultText:Landroid/widget/TextView;
 
     if-nez v4, :cond_1c
@@ -3292,10 +3433,10 @@
     :cond_1c
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 370
+    .line 411
     return-void
 
-    .line 372
+    .line 413
     :cond_20
     iget-object v4, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultText:Landroid/widget/TextView;
 
@@ -3315,11 +3456,11 @@
 
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 383
+    .line 424
     return-void
 .end method
 
-.method private static final wireSetupPrompt$lambda$15(ZLcom/textrcs/ui/pairing/PairingActivity;Landroid/view/View;)V
+.method private static final wireSetupPrompt$lambda$16(ZLcom/textrcs/ui/pairing/PairingActivity;Landroid/view/View;)V
     .registers 6
     .param p0, "$notifOk"    # Z
     .param p1, "this$0"    # Lcom/textrcs/ui/pairing/PairingActivity;
@@ -3329,13 +3470,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 373
+    .line 414
     nop
 
-    .line 374
+    .line 415
     if-nez p0, :cond_12
 
-    .line 375
+    .line 416
     :try_start_8
     sget-object v0, Lcom/textrcs/wake/GmNotificationListener;->Companion:Lcom/textrcs/wake/GmNotificationListener$Companion;
 
@@ -3347,7 +3488,7 @@
 
     goto :goto_33
 
-    .line 377
+    .line 418
     :cond_12
     invoke-direct {p1}, Lcom/textrcs/ui/pairing/PairingActivity;->openBatteryOptExemption()V
     :try_end_15
@@ -3355,11 +3496,11 @@
 
     goto :goto_33
 
-    .line 379
+    .line 420
     :catchall_16
     move-exception v0
 
-    .line 380
+    .line 421
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3387,7 +3528,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 382
+    .line 423
     .end local v0    # "e":Ljava/lang/Throwable;
     :goto_33
     return-void
@@ -3399,10 +3540,10 @@
     .registers 11
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
-    .line 61
+    .line 64
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 62
+    .line 65
     const-string v0, "layout"
 
     const-string v1, "activity_textrcs_pairing"
@@ -3413,7 +3554,7 @@
 
     invoke-virtual {p0, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->setContentView(I)V
 
-    .line 64
+    .line 67
     const-string v0, "textrcs_intro_panel"
 
     const-string v1, "id"
@@ -3434,7 +3575,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introPanel:Landroid/widget/LinearLayout;
 
-    .line 65
+    .line 68
     const-string v0, "textrcs_intro_status"
 
     invoke-direct {p0, v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->resId(Ljava/lang/String;Ljava/lang/String;)I
@@ -3451,7 +3592,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->introStatus:Landroid/widget/TextView;
 
-    .line 66
+    .line 69
     const-string v0, "textrcs_connect_button"
 
     invoke-direct {p0, v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->resId(Ljava/lang/String;Ljava/lang/String;)I
@@ -3468,7 +3609,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->connectButton:Landroid/widget/Button;
 
-    .line 67
+    .line 70
     const-string v0, "textrcs_webview"
 
     invoke-direct {p0, v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->resId(Ljava/lang/String;Ljava/lang/String;)I
@@ -3485,7 +3626,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->webView:Landroid/webkit/WebView;
 
-    .line 68
+    .line 71
     const-string v0, "textrcs_emoji_panel"
 
     invoke-direct {p0, v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->resId(Ljava/lang/String;Ljava/lang/String;)I
@@ -3502,7 +3643,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->emojiPanel:Landroid/widget/LinearLayout;
 
-    .line 69
+    .line 72
     const-string v0, "textrcs_emoji_view"
 
     invoke-direct {p0, v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->resId(Ljava/lang/String;Ljava/lang/String;)I
@@ -3517,7 +3658,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->emojiView:Landroid/widget/TextView;
 
-    .line 70
+    .line 73
     const-string v0, "textrcs_result_panel"
 
     invoke-direct {p0, v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->resId(Ljava/lang/String;Ljava/lang/String;)I
@@ -3534,7 +3675,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultPanel:Landroid/widget/ScrollView;
 
-    .line 71
+    .line 74
     const-string v0, "textrcs_result_text"
 
     invoke-direct {p0, v1, v0}, Lcom/textrcs/ui/pairing/PairingActivity;->resId(Ljava/lang/String;Ljava/lang/String;)I
@@ -3551,7 +3692,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->resultText:Landroid/widget/TextView;
 
-    .line 73
+    .line 76
     new-instance v0, Lcom/textrcs/protocol/SessionStore;
 
     move-object v1, p0
@@ -3562,7 +3703,7 @@
 
     iput-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->sessionStore:Lcom/textrcs/protocol/SessionStore;
 
-    .line 76
+    .line 79
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->sessionStore:Lcom/textrcs/protocol/SessionStore;
 
     const/4 v1, 0x0
@@ -3585,11 +3726,11 @@
     .local v0, "existing":Lcom/textrcs/protocol/GMessagesSession;
     const/4 v2, 0x0
 
-    .line 77
+    .line 80
     .local v2, "$i$a$-let-PairingActivity$onCreate$1":I
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->startReceiveServiceCompat()V
 
-    .line 78
+    .line 81
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3599,13 +3740,13 @@
     .local v4, "$this$onCreate_u24lambda_u241_u24lambda_u240":Ljava/lang/StringBuilder;
     const/4 v5, 0x0
 
-    .line 79
+    .line 82
     .local v5, "$i$a$-buildString-PairingActivity$onCreate$1$1":I
     const-string v6, "Already paired to Google Messages.\n\n"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
+    .line 83
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3636,7 +3777,7 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 81
+    .line 84
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3669,7 +3810,7 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 82
+    .line 85
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3700,7 +3841,7 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 83
+    .line 86
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3733,22 +3874,22 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 84
+    .line 87
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->setupStatusLine()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 85
+    .line 88
     const-string v6, "\n\nTap back to re-pair (this will overwrite the saved session).\n"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
+    .line 89
     nop
 
-    .line 78
+    .line 81
     .end local v4    # "$this$onCreate_u24lambda_u241_u24lambda_u240":Ljava/lang/StringBuilder;
     .end local v5    # "$i$a$-buildString-PairingActivity$onCreate$1$1":I
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -3761,18 +3902,18 @@
 
     invoke-direct {p0, v3}, Lcom/textrcs/ui/pairing/PairingActivity;->showResult(Ljava/lang/String;)V
 
-    .line 87
+    .line 90
     invoke-direct {p0}, Lcom/textrcs/ui/pairing/PairingActivity;->wireSetupPrompt()V
 
-    .line 88
+    .line 91
     nop
 
-    .line 76
+    .line 79
     .end local v0    # "existing":Lcom/textrcs/protocol/GMessagesSession;
     .end local v2    # "$i$a$-let-PairingActivity$onCreate$1":I
     nop
 
-    .line 90
+    .line 93
     :cond_162
     iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->connectButton:Landroid/widget/Button;
 
@@ -3794,6 +3935,42 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 95
+    .line 98
+    return-void
+.end method
+
+.method protected onDestroy()V
+    .registers 4
+
+    .line 108
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    .line 109
+    iget-object v0, p0, Lcom/textrcs/ui/pairing/PairingActivity;->orchestrator:Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
+
+    .line 110
+    .local v0, "orch":Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
+    if-eqz v0, :cond_18
+
+    iget-boolean v1, p0, Lcom/textrcs/ui/pairing/PairingActivity;->paired:Z
+
+    if-nez v1, :cond_18
+
+    .line 111
+    new-instance v1, Ljava/lang/Thread;
+
+    .line 114
+    new-instance v2, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda11;
+
+    invoke-direct {v2, v0}, Lcom/textrcs/ui/pairing/PairingActivity$$ExternalSyntheticLambda11;-><init>(Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;)V
+
+    .line 111
+    invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    .line 114
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+
+    .line 116
+    :cond_18
     return-void
 .end method

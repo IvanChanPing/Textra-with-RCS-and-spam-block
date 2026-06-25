@@ -40,7 +40,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 439
+    .line 467
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +59,7 @@
 .method public final getBROWSER_DETAILS()Lcom/textrcs/gmproto/authentication/BrowserDetails;
     .registers 2
 
-    .line 441
+    .line 469
     # getter for: Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->BROWSER_DETAILS:Lcom/textrcs/gmproto/authentication/BrowserDetails;
     invoke-static {}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->access$getBROWSER_DETAILS$cp()Lcom/textrcs/gmproto/authentication/BrowserDetails;
 

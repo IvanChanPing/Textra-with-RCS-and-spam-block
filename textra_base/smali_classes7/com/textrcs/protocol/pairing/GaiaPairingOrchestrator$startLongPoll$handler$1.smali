@@ -54,7 +54,7 @@
 
     iput-object p1, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator$startLongPoll$handler$1;->this$0:Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
 
-    .line 233
+    .line 261
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,7 +66,7 @@
     .registers 2
     .param p1, "ack"    # Lcom/textrcs/gmproto/rpc/StartAckMessage;
 
-    .line 233
+    .line 261
     invoke-static {p0, p1}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onAck(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;Lcom/textrcs/gmproto/rpc/StartAckMessage;)V
 
     return-void
@@ -75,7 +75,7 @@
 .method public onConnected()V
     .registers 1
 
-    .line 233
+    .line 261
     invoke-static {p0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onConnected(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;)V
 
     return-void
@@ -85,7 +85,7 @@
     .registers 2
     .param p1, "cleanClose"    # Z
 
-    .line 233
+    .line 261
     invoke-static {p0, p1}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onDisconnected(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;Z)V
 
     return-void
@@ -99,19 +99,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 293
+    .line 321
     iget-object v0, p0, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator$startLongPoll$handler$1;->this$0:Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
 
     invoke-static {v0, p1}, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;->access$setLastError$p(Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;Ljava/lang/Throwable;)V
 
-    .line 294
+    .line 322
     return-void
 .end method
 
 .method public onHeartbeat()V
     .registers 1
 
-    .line 233
+    .line 261
     invoke-static {p0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onHeartbeat(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;)V
 
     return-void
@@ -128,10 +128,10 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 241
+    .line 269
     nop
 
-    .line 242
+    .line 270
     :try_start_8
     invoke-virtual {v1}, Lcom/textrcs/gmproto/rpc/IncomingRPCMessage;->getMessageData()Lcom/google/protobuf/ByteString;
 
@@ -143,16 +143,16 @@
     :try_end_10
     .catchall {:try_start_8 .. :try_end_10} :catchall_189
 
-    .line 241
+    .line 269
     nop
 
-    .line 246
+    .line 274
     .local v0, "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getSessionID()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 247
+    .line 275
     .local v2, "correlationId":Ljava/lang/String;
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -180,7 +180,7 @@
 
     return-void
 
-    .line 262
+    .line 290
     :cond_28
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
@@ -190,7 +190,7 @@
 
     if-eq v3, v6, :cond_3b
 
-    .line 263
+    .line 291
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getAction()Lcom/textrcs/gmproto/rpc/ActionType;
 
     move-result-object v3
@@ -210,11 +210,11 @@
     :goto_3b
     move v3, v5
 
-    .line 261
+    .line 289
     :goto_3c
     nop
 
-    .line 264
+    .line 292
     .local v3, "isGaiaPairingAction":Z
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getUnencryptedData()Lcom/google/protobuf/ByteString;
 
@@ -226,7 +226,7 @@
 
     xor-int/2addr v6, v5
 
-    .line 265
+    .line 293
     .local v6, "hasUnencrypted":Z
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData()Lcom/google/protobuf/ByteString;
 
@@ -238,7 +238,7 @@
 
     xor-int/2addr v7, v5
 
-    .line 266
+    .line 294
     .local v7, "hasEncrypted":Z
     invoke-virtual {v0}, Lcom/textrcs/gmproto/rpc/RPCMessageData;->getEncryptedData2()Lcom/google/protobuf/ByteString;
 
@@ -250,7 +250,7 @@
 
     xor-int/2addr v8, v5
 
-    .line 271
+    .line 299
     .local v8, "hasEncrypted2":Z
     const/4 v9, 0x3
 
@@ -282,14 +282,14 @@
 
     if-nez v4, :cond_b8
 
-    .line 272
+    .line 300
     if-nez v6, :cond_b8
 
     if-nez v7, :cond_b8
 
     if-nez v8, :cond_b8
 
-    .line 273
+    .line 301
     sget-object v4, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     new-array v5, v9, [Ljava/lang/String;
@@ -298,7 +298,7 @@
 
     aput-object v9, v5, v16
 
-    .line 274
+    .line 302
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,10 +321,10 @@
 
     aput-object v9, v5, v17
 
-    .line 273
+    .line 301
     nop
 
-    .line 275
+    .line 303
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -347,19 +347,19 @@
 
     aput-object v9, v5, v14
 
-    .line 273
+    .line 301
     invoke-virtual {v4, v13, v5}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 276
+    .line 304
     return-void
 
-    .line 271
+    .line 299
     :cond_b4
     move/from16 v17, v5
 
     const/16 v16, 0x0
 
-    .line 279
+    .line 307
     :cond_b8
     sget-object v4, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
@@ -371,7 +371,7 @@
 
     aput-object v15, v5, v16
 
-    .line 280
+    .line 308
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -396,10 +396,10 @@
 
     aput-object v9, v5, v17
 
-    .line 279
+    .line 307
     nop
 
-    .line 281
+    .line 309
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -422,10 +422,10 @@
 
     aput-object v9, v5, v14
 
-    .line 279
+    .line 307
     nop
 
-    .line 282
+    .line 310
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -454,10 +454,10 @@
 
     aput-object v9, v5, v18
 
-    .line 279
+    .line 307
     nop
 
-    .line 283
+    .line 311
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -488,10 +488,10 @@
 
     aput-object v9, v5, v10
 
-    .line 279
+    .line 307
     nop
 
-    .line 284
+    .line 312
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -522,10 +522,10 @@
 
     aput-object v9, v5, v10
 
-    .line 279
+    .line 307
     invoke-virtual {v4, v13, v5}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 286
+    .line 314
     move-object/from16 v4, p0
 
     iget-object v5, v4, Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator$startLongPoll$handler$1;->this$0:Lcom/textrcs/protocol/pairing/GaiaPairingOrchestrator;
@@ -541,11 +541,11 @@
 
     check-cast v5, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    .line 287
+    .line 315
     .local v5, "waiter":Ljava/util/concurrent/LinkedBlockingQueue;
     if-nez v5, :cond_183
 
-    .line 288
+    .line 316
     sget-object v9, Lcom/textrcs/diag/PairingTrace;->INSTANCE:Lcom/textrcs/diag/PairingTrace;
 
     new-array v10, v14, [Ljava/lang/String;
@@ -578,17 +578,17 @@
 
     invoke-virtual {v9, v13, v10}, Lcom/textrcs/diag/PairingTrace;->log(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 290
+    .line 318
     :cond_183
     if-eqz v5, :cond_188
 
     invoke-virtual {v5, v1}, Ljava/util/concurrent/LinkedBlockingQueue;->offer(Ljava/lang/Object;)Z
 
-    .line 291
+    .line 319
     :cond_188
     return-void
 
-    .line 243
+    .line 271
     .end local v0    # "rpcData":Lcom/textrcs/gmproto/rpc/RPCMessageData;
     .end local v2    # "correlationId":Ljava/lang/String;
     .end local v3    # "isGaiaPairingAction":Z
@@ -601,7 +601,7 @@
 
     move-object/from16 v4, p0
 
-    .line 244
+    .line 272
     .local v0, "_":Ljava/lang/Throwable;
     return-void
 .end method
@@ -609,7 +609,7 @@
 .method public onStartRead()V
     .registers 1
 
-    .line 233
+    .line 261
     invoke-static {p0}, Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler$DefaultImpls;->onStartRead(Lcom/textrcs/protocol/longpoll/LongPollReceiver$Handler;)V
 
     return-void
