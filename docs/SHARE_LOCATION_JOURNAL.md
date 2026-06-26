@@ -1,6 +1,42 @@
 # Share My Location (static map link) + RCS reactions check — Task Journal
 
-## CURRENT STATE / NEXT STEP (2026-06-26, reactions SEND side wired, rebuilding .so)
+## CURRENT STATE / NEXT STEP (2026-06-26) — RECEIVE RENDER FAILS ON-DEVICE (verified), needs direct attach
+- ON-DEVICE TEST (emulator 5575, via DebugInjectReceiver reaction mode) — VERIFIED FINDING:
+  handleReactions fires correctly (logcat `REACTION+ emoji=👍 msg=t2 ... wrote=true`), BUT the synthesized
+  tapback text lands in Textra's DB as a PLAIN message: `select is_tapback` = 0, `message_tapbacks` EMPTY.
+  So it renders as a literal "👍 to Pizza tonight" bubble, NOT a native reaction badge. RECEIVE DOES NOT WORK as built.
+- ROOT CAUSE (verified by smali read): Textra's tapback parse+attach is an ASYNC task `r4/x.run()` →
+  `r4/H.f0(...)` → `h5/h.N(body)` match → `r4/w.D` finds target by (convo_id=?, is_tapback=0, direction=0,
+  text=? exact, ts<?) → `r4/H.G0(targetRowId, tapbackRowId)` sets is_tapback=1 + inserts message_tapbacks +
+  has_tapbacks. Our delivery via TextraDbBridge.writeIncoming → c5.d.U (SMS_DELIVER) stores the row but does
+  NOT schedule that parse task. (Ruled OUT as causes: direction — our row is direction=0 which the filter wants;
+  convo_id — target+tapback both convo_id=1; text — exact "Pizza tonight" present. All filters would match if f0 ran.)
+- FIX PLAN (next): after writing the tapback message, DIRECTLY trigger Textra's attach instead of relying on the
+  unscheduled parser. Best: in TextraDbBridge, write the tapback text, then look up the tapback row _id (just
+  inserted) + target row _id (messages where convo+text match, is_tapback=0, newest ts<tapback) and call
+  reflectively `r4/H.X().G0(targetRowId, tapbackRowId)` (G0(JJ): target first, tapback second — confirmed from
+  f0 call site r4/H:4696). Verify on emulator: is_tapback=1 + message_tapbacks row + open thread → badge.
+  Alternative: call r4/H.f0(convoId, ?, tapbackMsgId, flag, body) directly. Need the row ids (query Textra DB /
+  content provider as com.textra2). NOTE the dedup gap seen in test (reaction inject re-delivered the body as a
+  2nd "Pizza tonight" row — same msgId should have deduped; revisit markSeen ordering).
+- DebugInjectReceiver extended with reaction mode (--es reactEmoji / --es msgId) — committed-pending. Emulator
+  redroid input tap can't open threads; use `adb root` + sqlite3 on /data/data/com.textra2/databases/messaging.db
+  to verify is_tapback/message_tapbacks (decisive, no UI needed).
+
+## (was) CURRENT STATE / NEXT STEP (2026-06-26) — RCS REACTIONS BOTH SIDES BUILT
+- RECEIVE: committed 3f88e321. SEND: committed 43c7bd19. Full APK build exit 0; .so exports
+  send_reaction; binding has sendReaction; classes in dex. Canonical APK = textra2.apk at repo root.
+- STATUS: compile-built, on-device UI click-path UNVERIFIED (can't drive Textra's tapback UI on redroid).
+- NEXT STEP (user on-device test): (A) RECEIVE — have someone with RCS react to your message; expect a
+  native Textra tapback badge to appear on it (not a literal "👍 to …" text line). (B) SEND — long-press a
+  received RCS message in Textra, pick an emoji reaction; expect it to show on their device as a real RCS
+  reaction (and Logcat tag TextRcsLoc/SEND "reaction OK"). If a received reaction shows as literal text →
+  participantIDs id-space mismatch (flag #2). If your sent reaction goes as plain "👍 to …" text → either the
+  target wasn't in the msgIdByText index yet or Textra's tapback didn't carry the ZW markers (flag #1).
+- Remaining polish (deferred): reactions to YOUR OWN sent messages (msgIdByText currently indexes incoming
+  only); SWITCH action (replace own reaction) currently maps to ADD.
+
+## (superseded) CURRENT STATE / NEXT STEP (2026-06-26, reactions SEND side wired, rebuilding .so)
 - RECEIVE side: DONE + committed (3f88e321). RECEIVE build green.
 - SEND side: code written, Rust engine rebuilding.
   - Rust: src/ffi.rs — new `RustClient::send_reaction(message_id, emoji, action:i32)` over the existing
