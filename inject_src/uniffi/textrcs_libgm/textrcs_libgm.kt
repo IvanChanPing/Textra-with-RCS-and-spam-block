@@ -849,6 +849,8 @@ internal open class UniffiVTableCallbackInterfaceRustEventSink(
 
 
 
+
+
 // A JNA Library to expose the extern-C FFI definitions.
 // This is an implementation detail which will be called internally by the public API.
 
@@ -926,6 +928,8 @@ internal interface UniffiLib : Library {
     fun uniffi_textrcs_libgm_fn_method_rustclient_mark_read(`ptr`: Pointer,`conversationId`: RustBuffer.ByValue,`messageId`: RustBuffer.ByValue,
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_request_full_size_image(`ptr`: Pointer,`messageId`: RustBuffer.ByValue,`actionMessageId`: RustBuffer.ByValue,
+    ): Long
+    fun uniffi_textrcs_libgm_fn_method_rustclient_send_reaction(`ptr`: Pointer,`messageId`: RustBuffer.ByValue,`emoji`: RustBuffer.ByValue,`action`: Int,
     ): Long
     fun uniffi_textrcs_libgm_fn_method_rustclient_send_text(`ptr`: Pointer,`recipientPhone`: RustBuffer.ByValue,`body`: RustBuffer.ByValue,
     ): Long
@@ -1135,6 +1139,8 @@ internal interface UniffiLib : Library {
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_request_full_size_image(
     ): Short
+    fun uniffi_textrcs_libgm_checksum_method_rustclient_send_reaction(
+    ): Short
     fun uniffi_textrcs_libgm_checksum_method_rustclient_send_text(
     ): Short
     fun uniffi_textrcs_libgm_checksum_method_rusteventsink_on_data_event(
@@ -1254,6 +1260,9 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_request_full_size_image() != 1061.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_send_reaction() != 37960.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_method_rustclient_send_text() != 30300.toShort()) {
@@ -2744,6 +2753,18 @@ public interface RustClientInterface {
     suspend fun `requestFullSizeImage`(`messageId`: kotlin.String, `actionMessageId`: kotlin.String)
     
     /**
+     * Send an official Google-Messages reaction (tapback) to a message — the
+     * RCS-native equivalent of Textra's "tapback over SMS". Port of
+     * mautrix-gmessages client.SendReaction (methods.go:101). Called from
+     * Kotlin (RustBridge.sendReaction) when SendManager intercepts an outgoing
+     * Textra tapback on an RCS thread. `action` is the SendReactionRequest.Action
+     * enum value (1=ADD, 2=REMOVE, 3=SWITCH); `emoji` is the reaction glyph,
+     * whose EmojiType is derived via [unicode_to_emoji_type] (standard set ->
+     * typed; anything else -> CUSTOM with the raw unicode, like mautrix MakeReactionData).
+     */
+    suspend fun `sendReaction`(`messageId`: kotlin.String, `emoji`: kotlin.String, `action`: kotlin.Int)
+    
+    /**
      * Two-step outgoing send — the faithful port of mautrix
      * `GetOrCreateConversation` + `SendMessage` (methods.go:52 + 79,
      * connector/handlematrix.go:103-165).
@@ -3071,6 +3092,38 @@ open class RustClient: Disposable, AutoCloseable, RustClientInterface {
             UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustclient_request_full_size_image(
                 thisPtr,
                 FfiConverterString.lower(`messageId`),FfiConverterString.lower(`actionMessageId`),
+            )
+        },
+        { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_void(future, callback, continuation) },
+        { future, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_complete_void(future, continuation) },
+        { future -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_free_void(future) },
+        // lift function
+        { Unit },
+        
+        // Error FFI converter
+        LibgmException.ErrorHandler,
+    )
+    }
+
+    
+    /**
+     * Send an official Google-Messages reaction (tapback) to a message — the
+     * RCS-native equivalent of Textra's "tapback over SMS". Port of
+     * mautrix-gmessages client.SendReaction (methods.go:101). Called from
+     * Kotlin (RustBridge.sendReaction) when SendManager intercepts an outgoing
+     * Textra tapback on an RCS thread. `action` is the SendReactionRequest.Action
+     * enum value (1=ADD, 2=REMOVE, 3=SWITCH); `emoji` is the reaction glyph,
+     * whose EmojiType is derived via [unicode_to_emoji_type] (standard set ->
+     * typed; anything else -> CUSTOM with the raw unicode, like mautrix MakeReactionData).
+     */
+    @Throws(LibgmException::class)
+    @Suppress("ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE")
+    override suspend fun `sendReaction`(`messageId`: kotlin.String, `emoji`: kotlin.String, `action`: kotlin.Int) {
+        return uniffiRustCallAsync(
+        callWithPointer { thisPtr ->
+            UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_method_rustclient_send_reaction(
+                thisPtr,
+                FfiConverterString.lower(`messageId`),FfiConverterString.lower(`emoji`),FfiConverterInt.lower(`action`),
             )
         },
         { future, callback, continuation -> UniffiLib.INSTANCE.ffi_textrcs_libgm_rust_future_poll_void(future, callback, continuation) },

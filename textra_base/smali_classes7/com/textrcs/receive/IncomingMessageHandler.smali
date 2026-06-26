@@ -13,12 +13,12 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nIncomingMessageHandler.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IncomingMessageHandler.kt\ncom/textrcs/receive/IncomingMessageHandler\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 5 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n*L\n1#1,906:1\n766#2:907\n857#2,2:908\n1603#2,9:910\n1855#2:919\n1856#2:921\n1612#2:922\n766#2:923\n857#2,2:924\n1603#2,9:926\n1855#2:935\n1856#2:937\n1612#2:938\n766#2:939\n857#2,2:940\n766#2:942\n857#2,2:943\n1549#2:945\n1620#2,3:946\n766#2:949\n857#2,2:950\n766#2:952\n857#2,2:953\n2624#2,3:963\n1603#2,9:966\n1855#2:975\n1856#2:977\n1612#2:978\n766#2:979\n857#2,2:980\n766#2:982\n857#2,2:983\n1#3:920\n1#3:936\n1#3:955\n1#3:976\n1#3:988\n372#4,7:956\n1099#5,3:985\n*S KotlinDebug\n*F\n+ 1 IncomingMessageHandler.kt\ncom/textrcs/receive/IncomingMessageHandler\n*L\n87#1:907\n87#1:908,2\n354#1:910,9\n354#1:919\n354#1:921\n354#1:922\n355#1:923\n355#1:924,2\n389#1:926,9\n389#1:935\n389#1:937\n389#1:938\n390#1:939\n390#1:940,2\n415#1:942\n415#1:943,2\n416#1:945\n416#1:946,3\n417#1:949\n417#1:950,2\n509#1:952\n509#1:953,2\n752#1:963,3\n755#1:966,9\n755#1:975\n755#1:977\n755#1:978\n756#1:979\n756#1:980,2\n773#1:982\n773#1:983,2\n354#1:920\n389#1:936\n755#1:976\n634#1:956,7\n895#1:985,3\n*E\n"
+    value = "SMAP\nIncomingMessageHandler.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IncomingMessageHandler.kt\ncom/textrcs/receive/IncomingMessageHandler\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 5 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n*L\n1#1,944:1\n766#2:945\n857#2,2:946\n1603#2,9:948\n1855#2:957\n1856#2:959\n1612#2:960\n766#2:961\n857#2,2:962\n1603#2,9:964\n1855#2:973\n1856#2:975\n1612#2:976\n766#2:977\n857#2,2:978\n766#2:980\n857#2,2:981\n1549#2:983\n1620#2,3:984\n766#2:987\n857#2,2:988\n766#2:990\n857#2,2:991\n2624#2,3:1001\n1603#2,9:1004\n1855#2:1013\n1856#2:1015\n1612#2:1016\n766#2:1017\n857#2,2:1018\n766#2:1020\n857#2,2:1021\n1#3:958\n1#3:974\n1#3:993\n1#3:1014\n1#3:1026\n372#4,7:994\n1099#5,3:1023\n*S KotlinDebug\n*F\n+ 1 IncomingMessageHandler.kt\ncom/textrcs/receive/IncomingMessageHandler\n*L\n87#1:945\n87#1:946,2\n364#1:948,9\n364#1:957\n364#1:959\n364#1:960\n365#1:961\n365#1:962,2\n399#1:964,9\n399#1:973\n399#1:975\n399#1:976\n400#1:977\n400#1:978,2\n425#1:980\n425#1:981,2\n426#1:983\n426#1:984,3\n427#1:987\n427#1:988,2\n525#1:990\n525#1:991,2\n768#1:1001,3\n771#1:1004,9\n771#1:1013\n771#1:1015\n771#1:1016\n772#1:1017\n772#1:1018,2\n789#1:1020\n789#1:1021,2\n364#1:958\n399#1:974\n771#1:1014\n650#1:994,7\n933#1:1023,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0096\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010 \n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u000f\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008\u00c6\u0002\u0018\u00002\u00020\u0001:\u0003Z[\\B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020,H\u0002J\u001c\u0010-\u001a\u00020*2\u0006\u0010.\u001a\u00020\u00132\u000c\u0010/\u001a\u0008\u0012\u0004\u0012\u00020,00J>\u00101\u001a\u00020*2\u0006\u00102\u001a\u00020\u00042\u0006\u00103\u001a\u00020\u00042\u000c\u00104\u001a\u0008\u0012\u0004\u0012\u00020\u0004002\u0006\u00105\u001a\u00020\u00042\u0006\u00106\u001a\u00020\u00152\u0006\u00107\u001a\u00020\u0006H\u0002J\u0010\u00108\u001a\u00020*2\u0006\u00102\u001a\u00020\u0004H\u0002J\u0018\u00109\u001a\u00020*2\u0006\u0010.\u001a\u00020\u00132\u0006\u0010:\u001a\u00020;H\u0002J(\u0010<\u001a\u00020*2\u0006\u0010:\u001a\u00020;2\u0006\u00105\u001a\u00020\u00042\u0006\u00106\u001a\u00020\u00152\u0006\u00107\u001a\u00020\u0006H\u0002J\u0010\u0010=\u001a\u00020*2\u0006\u0010:\u001a\u00020;H\u0002J\u0010\u0010>\u001a\u00020*2\u0006\u0010?\u001a\u00020\u0013H\u0002J\u0010\u0010@\u001a\u00020*2\u0006\u0010?\u001a\u00020\u0013H\u0002J\u0010\u0010A\u001a\u00020*2\u0006\u0010?\u001a\u00020\u0013H\u0002J\u0010\u0010B\u001a\u00020\u00152\u0006\u0010C\u001a\u00020\u0004H\u0002J\u0010\u0010D\u001a\u00020*2\u0006\u0010E\u001a\u00020\u0004H\u0002J\u0012\u0010F\u001a\u00020\u00042\u0008\u0010G\u001a\u0004\u0018\u00010\u0004H\u0002J\u0010\u0010H\u001a\u00020\u00062\u0006\u0010G\u001a\u00020\u0006H\u0002J\u0016\u0010I\u001a\u00020*2\u0006\u0010.\u001a\u00020\u00132\u0006\u0010J\u001a\u00020KJ\u0012\u0010L\u001a\u0004\u0018\u00010\u00042\u0006\u0010M\u001a\u00020NH\u0002J\u0018\u0010O\u001a\u00020*2\u0006\u00102\u001a\u00020\u00042\u0006\u0010P\u001a\u00020\u0018H\u0002J\u0008\u0010Q\u001a\u00020*H\u0002J\u0008\u0010R\u001a\u00020*H\u0002J\u0018\u0010S\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u0001002\u0006\u00102\u001a\u00020\u0004H\u0002J\u0010\u0010T\u001a\u00020U2\u0006\u0010:\u001a\u00020;H\u0002J\u0008\u0010V\u001a\u00020*H\u0002J\u0008\u0010W\u001a\u00020*H\u0002J\u0018\u0010X\u001a\u00020*2\u0006\u00102\u001a\u00020\u00042\u0006\u0010Y\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0008X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010\u0016\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00180\u0017j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0018`\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u001a\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u0017j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0004`\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u001b\u001a\n \u001d*\u0004\u0018\u00010\u001c0\u001cX\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u001e\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u0017j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0004`\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000Rb\u0010\u001f\u001aV\u0012\u0004\u0012\u00020\u0004\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020!0 j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020!`\"0\u0017j*\u0012\u0004\u0012\u00020\u0004\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020!0 j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020!`\"`\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020\u0015X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010%\u001a\u0012\u0012\u0004\u0012\u00020\u00040&j\u0008\u0012\u0004\u0012\u00020\u0004`\'X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001e\u0010(\u001a\u0012\u0012\u0004\u0012\u00020\u00040&j\u0008\u0012\u0004\u0012\u00020\u0004`\'X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
+        "\u0000\u009a\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010 \n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u000f\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008\u00c6\u0002\u0018\u00002\u00020\u0001:\u0003_`aB\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020.H\u0002J\u001c\u0010/\u001a\u00020,2\u0006\u00100\u001a\u00020\u00142\u000c\u00101\u001a\u0008\u0012\u0004\u0012\u00020.02J>\u00103\u001a\u00020,2\u0006\u00104\u001a\u00020\u00042\u0006\u00105\u001a\u00020\u00042\u000c\u00106\u001a\u0008\u0012\u0004\u0012\u00020\u0004022\u0006\u00107\u001a\u00020\u00042\u0006\u00108\u001a\u00020\u00162\u0006\u00109\u001a\u00020\u0006H\u0002J\u0010\u0010:\u001a\u00020,2\u0006\u00104\u001a\u00020\u0004H\u0002J\u0018\u0010;\u001a\u00020,2\u0006\u00100\u001a\u00020\u00142\u0006\u0010<\u001a\u00020=H\u0002J(\u0010>\u001a\u00020,2\u0006\u0010<\u001a\u00020=2\u0006\u00107\u001a\u00020\u00042\u0006\u00108\u001a\u00020\u00162\u0006\u00109\u001a\u00020\u0006H\u0002J\u0010\u0010?\u001a\u00020,2\u0006\u0010<\u001a\u00020=H\u0002J\u0010\u0010@\u001a\u00020,2\u0006\u0010A\u001a\u00020\u0014H\u0002J\u0010\u0010B\u001a\u00020,2\u0006\u0010A\u001a\u00020\u0014H\u0002J\u0010\u0010C\u001a\u00020,2\u0006\u0010A\u001a\u00020\u0014H\u0002J\u0010\u0010D\u001a\u00020\u00162\u0006\u0010E\u001a\u00020\u0004H\u0002J\u0010\u0010F\u001a\u00020,2\u0006\u0010G\u001a\u00020\u0004H\u0002J\u0012\u0010H\u001a\u00020\u00042\u0008\u0010I\u001a\u0004\u0018\u00010\u0004H\u0002J\u0010\u0010J\u001a\u00020\u00062\u0006\u0010I\u001a\u00020\u0006H\u0002J\u0016\u0010K\u001a\u00020,2\u0006\u00100\u001a\u00020\u00142\u0006\u0010L\u001a\u00020MJ\u0012\u0010N\u001a\u0004\u0018\u00010\u00042\u0006\u0010O\u001a\u00020PH\u0002J\u0018\u0010Q\u001a\u00020,2\u0006\u00104\u001a\u00020\u00042\u0006\u0010R\u001a\u00020\u0019H\u0002J\u0008\u0010S\u001a\u00020,H\u0002J\u0008\u0010T\u001a\u00020,H\u0002J\u0018\u0010U\u001a\u00020,2\u0006\u0010V\u001a\u00020\u00042\u0006\u0010G\u001a\u00020\u0004H\u0002J\u0018\u0010W\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u0001022\u0006\u00104\u001a\u00020\u0004H\u0002J\u0010\u0010X\u001a\u0004\u0018\u00010\u00042\u0006\u0010V\u001a\u00020\u0004J\u0010\u0010Y\u001a\u00020Z2\u0006\u0010<\u001a\u00020=H\u0002J\u0008\u0010[\u001a\u00020,H\u0002J\u0008\u0010\\\u001a\u00020,H\u0002J\u0018\u0010]\u001a\u00020,2\u0006\u00104\u001a\u00020\u00042\u0006\u0010^\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0008X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\u0008X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R*\u0010\u0017\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00190\u0018j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0019`\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u001b\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u0018j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0004`\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0016\u0010\u001c\u001a\n \u001e*\u0004\u0018\u00010\u001d0\u001dX\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\u001f\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040 j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0004`!X\u0082\u0004\u00a2\u0006\u0002\n\u0000R*\u0010\"\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00040\u0018j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0004`\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000Rb\u0010#\u001aV\u0012\u0004\u0012\u00020\u0004\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020$0 j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020$`!0\u0018j*\u0012\u0004\u0012\u00020\u0004\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020$0 j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020$`!`\u001aX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010%\u001a\u00020\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020\u0016X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001e\u0010\'\u001a\u0012\u0012\u0004\u0012\u00020\u00040(j\u0008\u0012\u0004\u0012\u00020\u0004`)X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001e\u0010*\u001a\u0012\u0012\u0004\u0012\u00020\u00040(j\u0008\u0012\u0004\u0012\u00020\u0004`)X\u0082\u0004\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/receive/IncomingMessageHandler;",
@@ -28,8 +28,9 @@
         "",
         "MICROS_THRESHOLD",
         "",
-        "REACTION_CAP",
+        "MSGID_BY_TEXT_CAP",
         "",
+        "REACTION_CAP",
         "REACTION_KEY",
         "REACTION_PREFS",
         "SEEN_CAP",
@@ -51,11 +52,12 @@
         "mediaExecutor",
         "Ljava/util/concurrent/ExecutorService;",
         "kotlin.jvm.PlatformType",
+        "msgIdByText",
+        "Ljava/util/LinkedHashMap;",
+        "Lkotlin/collections/LinkedHashMap;",
         "participantPhone",
         "pendingOutgoing",
-        "Ljava/util/LinkedHashMap;",
         "Lcom/textrcs/receive/IncomingMessageHandler$PendingOutgoing;",
-        "Lkotlin/collections/LinkedHashMap;",
         "reactionsLoaded",
         "seenLoaded",
         "seenMessageIds",
@@ -104,7 +106,10 @@
         "info",
         "persistReactions",
         "persistSeen",
+        "rememberReactionTarget",
+        "text",
         "resolveOutgoingRecipients",
+        "resolveReactionTargetId",
         "resolveSenderPhone",
         "Lcom/textrcs/receive/IncomingMessageHandler$Sender;",
         "trimReactions",
@@ -131,6 +136,8 @@
 .field public static final INSTANCE:Lcom/textrcs/receive/IncomingMessageHandler;
 
 .field private static final MICROS_THRESHOLD:J = 0x5af3107a4000L
+
+.field private static final MSGID_BY_TEXT_CAP:I = 0x12c
 
 .field private static final REACTION_CAP:I = 0x258
 
@@ -179,6 +186,17 @@
 .end field
 
 .field private static final mediaExecutor:Ljava/util/concurrent/ExecutorService;
+
+.field private static final msgIdByText:Ljava/util/LinkedHashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedHashMap<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static final participantPhone:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -299,7 +317,14 @@
 
     sput-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->seenReactionKeys:Ljava/util/LinkedHashSet;
 
-    .line 146
+    .line 145
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    sput-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->msgIdByText:Ljava/util/LinkedHashMap;
+
+    .line 156
     new-instance v0, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/textrcs/receive/IncomingMessageHandler$$ExternalSyntheticLambda0;-><init>()V
@@ -326,10 +351,10 @@
     .registers 12
     .param p1, "conv"    # Lcom/textrcs/gmproto/conversations/Conversation;
 
-    .line 213
+    .line 223
     nop
 
-    .line 214
+    .line 224
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -368,7 +393,7 @@
 
     move-result-object v0
 
-    .line 215
+    .line 225
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Conversation;->getParticipantsList()Ljava/util/List;
 
     move-result-object v1
@@ -377,22 +402,22 @@
 
     move-result v1
 
-    .line 214
+    .line 224
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 215
+    .line 225
     nop
 
-    .line 214
+    .line 224
     const-string v1, " others="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 215
+    .line 225
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Conversation;->getOtherParticipantsList()Lcom/google/protobuf/ProtocolStringList;
 
     move-result-object v1
@@ -401,7 +426,7 @@
 
     move-result v1
 
-    .line 214
+    .line 224
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -410,17 +435,17 @@
 
     move-result-object v0
 
-    .line 212
+    .line 222
     const-string v1, "TextRCSIncoming"
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
+    .line 227
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 218
+    .line 228
     .local v0, "all":Ljava/util/ArrayList;
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Conversation;->getParticipantsList()Ljava/util/List;
 
@@ -430,16 +455,16 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 219
+    .line 229
     const/4 v2, 0x0
 
-    .line 220
+    .line 230
     .local v2, "primary":Ljava/lang/String;
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 221
+    .line 231
     .local v3, "nonMePhones":Ljava/util/ArrayList;
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -459,7 +484,7 @@
 
     check-cast v5, Lcom/textrcs/gmproto/conversations/Participant;
 
-    .line 222
+    .line 232
     .local v5, "p":Lcom/textrcs/gmproto/conversations/Participant;
     invoke-virtual {v5}, Lcom/textrcs/gmproto/conversations/Participant;->getID()Lcom/textrcs/gmproto/conversations/SmallInfo;
 
@@ -469,7 +494,7 @@
 
     move-result-object v6
 
-    .line 223
+    .line 233
     .local v6, "pid":Ljava/lang/String;
     invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -477,11 +502,11 @@
 
     move-result-object v7
 
-    .line 225
+    .line 235
     .local v7, "phone":Ljava/lang/String;
     nop
 
-    .line 226
+    .line 236
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -516,27 +541,27 @@
 
     move-result-object v8
 
-    .line 227
+    .line 237
     invoke-virtual {v5}, Lcom/textrcs/gmproto/conversations/Participant;->getFormattedNumber()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 226
+    .line 236
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 227
+    .line 237
     nop
 
-    .line 226
+    .line 236
     const-string v9, " idNum="
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 227
+    .line 237
     invoke-virtual {v5}, Lcom/textrcs/gmproto/conversations/Participant;->getID()Lcom/textrcs/gmproto/conversations/SmallInfo;
 
     move-result-object v9
@@ -545,25 +570,25 @@
 
     move-result-object v9
 
-    .line 226
+    .line 236
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 227
+    .line 237
     nop
 
-    .line 226
+    .line 236
     const-string v9, " -> "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 227
+    .line 237
     nop
 
-    .line 226
+    .line 236
     invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
@@ -572,20 +597,20 @@
 
     move-result-object v8
 
-    .line 224
+    .line 234
     invoke-static {v1, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
+    .line 239
     invoke-virtual {v5}, Lcom/textrcs/gmproto/conversations/Participant;->getIsMe()Z
 
     move-result v8
 
     if-nez v8, :cond_68
 
-    .line 230
+    .line 240
     if-eqz v7, :cond_68
 
-    .line 231
+    .line 241
     invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     move-object v8, v6
@@ -604,13 +629,13 @@
 
     invoke-interface {v8, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 232
+    .line 242
     :cond_f0
     if-nez v2, :cond_f3
 
     move-object v2, v7
 
-    .line 233
+    .line 243
     :cond_f3
     invoke-virtual {v3, v7}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -622,14 +647,14 @@
 
     goto/16 :goto_68
 
-    .line 237
+    .line 247
     .end local v5    # "p":Lcom/textrcs/gmproto/conversations/Participant;
     .end local v6    # "pid":Ljava/lang/String;
     .end local v7    # "phone":Ljava/lang/String;
     :cond_fe
     if-nez v2, :cond_118
 
-    .line 238
+    .line 248
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Conversation;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -638,7 +663,7 @@
 
     move-result-object v4
 
-    .line 239
+    .line 249
     .local v4, "n":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/textrcs/receive/IncomingMessageHandler;->looksLikePhone(Ljava/lang/String;)Z
 
@@ -646,10 +671,10 @@
 
     if-eqz v5, :cond_118
 
-    .line 240
+    .line 250
     move-object v2, v4
 
-    .line 241
+    .line 251
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v5
@@ -658,7 +683,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 244
+    .line 254
     .end local v4    # "n":Ljava/lang/String;
     :cond_118
     const-string v4, "getConversationID(...)"
@@ -677,7 +702,7 @@
 
     invoke-interface {v5, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
+    .line 258
     :cond_12a
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Conversation;->getIsGroupChat()Z
 
@@ -698,7 +723,7 @@
     :cond_138
     const/4 v6, 0x0
 
-    .line 249
+    .line 259
     .local v6, "isGroup":Z
     :cond_139
     :goto_139
@@ -710,7 +735,7 @@
 
     invoke-direct {v5, v6, v7}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;-><init>(ZLjava/util/List;)V
 
-    .line 250
+    .line 260
     .local v5, "info":Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
     sget-object v7, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
@@ -724,7 +749,7 @@
 
     invoke-interface {v7, v8, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
+    .line 261
     move-object v7, v3
 
     check-cast v7, Ljava/util/Collection;
@@ -743,7 +768,7 @@
 
     invoke-direct {p0, v7, v5}, Lcom/textrcs/receive/IncomingMessageHandler;->persistConvEntry(Ljava/lang/String;Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;)V
 
-    .line 252
+    .line 262
     :cond_162
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -793,7 +818,7 @@
 
     invoke-static {v1, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
+    .line 263
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Conversation;->getConversationID()Ljava/lang/String;
 
     move-result-object v1
@@ -802,7 +827,7 @@
 
     invoke-direct {p0, v1}, Lcom/textrcs/receive/IncomingMessageHandler;->flushPendingOutgoing(Ljava/lang/String;)V
 
-    .line 254
+    .line 264
     return-void
 .end method
 
@@ -827,12 +852,12 @@
         }
     .end annotation
 
-    .line 658
+    .line 674
     const-string v0, "TextRCSIncoming"
 
     if-eqz p5, :cond_24
 
-    .line 662
+    .line 678
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -859,13 +884,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 663
+    .line 679
     invoke-direct {p0, p2}, Lcom/textrcs/receive/IncomingMessageHandler;->markSeen(Ljava/lang/String;)V
 
-    .line 664
+    .line 680
     return-void
 
-    .line 666
+    .line 682
     :cond_24
     sget-object v1, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
 
@@ -873,11 +898,11 @@
 
     move-result v1
 
-    .line 668
+    .line 684
     .local v1, "wrote":Z
     nop
 
-    .line 669
+    .line 685
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -932,7 +957,7 @@
 
     move-result-object v2
 
-    .line 670
+    .line 686
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v3
@@ -946,28 +971,28 @@
     :cond_6a
     const/4 v4, 0x0
 
-    .line 669
+    .line 685
     :goto_6b
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 670
+    .line 686
     nop
 
-    .line 669
+    .line 685
     const-string v3, " body.len="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 670
+    .line 686
     invoke-virtual {p4}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 669
+    .line 685
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -976,16 +1001,16 @@
 
     move-result-object v2
 
-    .line 667
+    .line 683
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 672
+    .line 688
     if-eqz v1, :cond_8a
 
-    .line 673
+    .line 689
     invoke-direct {p0, p2}, Lcom/textrcs/receive/IncomingMessageHandler;->markSeen(Ljava/lang/String;)V
 
-    .line 675
+    .line 691
     :cond_8a
     return-void
 .end method
@@ -994,7 +1019,7 @@
     .registers 13
     .param p1, "convID"    # Ljava/lang/String;
 
-    .line 280
+    .line 290
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->pendingOutgoing:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1007,7 +1032,7 @@
 
     return-void
 
-    .line 281
+    .line 291
     .local v0, "pend":Ljava/util/LinkedHashMap;
     :cond_b
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->isEmpty()Z
@@ -1018,27 +1043,27 @@
 
     return-void
 
-    .line 282
+    .line 292
     :cond_12
     invoke-direct {p0, p1}, Lcom/textrcs/receive/IncomingMessageHandler;->resolveOutgoingRecipients(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v5
 
-    .line 283
+    .line 293
     .local v5, "recipients":Ljava/util/List;
     if-nez v5, :cond_20
 
-    .line 285
+    .line 295
     sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->pendingOutgoing:Ljava/util/HashMap;
 
     check-cast v1, Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 286
+    .line 296
     return-void
 
-    .line 288
+    .line 298
     :cond_20
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1076,7 +1101,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
+    .line 299
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
     move-result-object v1
@@ -1100,7 +1125,7 @@
 
     check-cast v10, Lcom/textrcs/receive/IncomingMessageHandler$PendingOutgoing;
 
-    .line 290
+    .line 300
     .local v10, "po":Lcom/textrcs/receive/IncomingMessageHandler$PendingOutgoing;
     sget-object v2, Lcom/textrcs/receive/IncomingMessageHandler;->seenMessageIds:Ljava/util/LinkedHashSet;
 
@@ -1114,7 +1139,7 @@
 
     if-nez v2, :cond_7d
 
-    .line 291
+    .line 301
     invoke-virtual {v10}, Lcom/textrcs/receive/IncomingMessageHandler$PendingOutgoing;->getMessageID()Ljava/lang/String;
 
     move-result-object v4
@@ -1142,7 +1167,7 @@
     .end local v10    # "po":Lcom/textrcs/receive/IncomingMessageHandler$PendingOutgoing;
     goto :goto_4e
 
-    .line 290
+    .line 300
     .end local v3    # "convID":Ljava/lang/String;
     .restart local v10    # "po":Lcom/textrcs/receive/IncomingMessageHandler$PendingOutgoing;
     .restart local p1    # "convID":Ljava/lang/String;
@@ -1153,7 +1178,7 @@
     .restart local v3    # "convID":Ljava/lang/String;
     goto :goto_4e
 
-    .line 293
+    .line 303
     .end local v3    # "convID":Ljava/lang/String;
     .end local v10    # "po":Lcom/textrcs/receive/IncomingMessageHandler$PendingOutgoing;
     .restart local p1    # "convID":Ljava/lang/String;
@@ -1162,123 +1187,121 @@
 .end method
 
 .method private final handleMessage(Landroid/content/Context;Lcom/textrcs/gmproto/conversations/Message;)V
-    .registers 48
+    .registers 47
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "data"    # Lcom/textrcs/gmproto/conversations/Message;
 
-    .line 323
+    .line 333
     move-object/from16 v1, p0
 
     move-object/from16 v8, p2
 
-    const-string v2, "getMessageID(...)"
-
-    .line 324
+    .line 334
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "msg id="
+    const-string v2, "msg id="
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v3, " conv="
+    const-string v2, " conv="
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v3, " ts="
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 325
+    const-string v2, " ts="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 335
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getTimestamp()J
 
-    move-result-wide v3
+    move-result-wide v2
 
-    .line 324
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    .line 334
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 325
+    .line 335
     nop
 
-    .line 324
-    const-string v3, " tmpId="
+    .line 334
+    const-string v2, " tmpId="
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 325
+    .line 335
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getTmpID()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    .line 324
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 334
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 325
+    .line 335
     nop
 
-    .line 324
-    const-string v3, " parts="
+    .line 334
+    const-string v2, " parts="
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 325
+    .line 335
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageInfoCount()I
 
-    move-result v3
+    move-result v2
 
-    .line 324
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 334
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 325
+    .line 335
     nop
 
-    .line 324
-    const-string v3, " hasSenderParticipant="
+    .line 334
+    const-string v2, " hasSenderParticipant="
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 326
+    .line 336
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->hasSenderParticipant()Z
 
-    move-result v3
+    move-result v2
 
-    .line 324
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 334
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1286,19 +1309,19 @@
 
     move-result-object v0
 
-    .line 322
+    .line 332
     const-string v9, "TextRCSIncoming"
 
     invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
+    .line 340
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getTmpID()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v3, "getTmpID(...)"
+    const-string v2, "getTmpID(...)"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/CharSequence;
 
@@ -1306,49 +1329,49 @@
 
     move-result v0
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    xor-int/2addr v0, v3
+    xor-int/2addr v0, v2
 
     move v11, v0
 
-    .line 331
+    .line 341
     .local v11, "isOwnSend":Z
-    const/4 v4, 0x2
+    const/4 v3, 0x2
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    if-eqz v11, :cond_8e
+    if-eqz v11, :cond_8c
 
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    const-string v7, "incoming_write_own_sends"
+    const-string v6, "incoming_write_own_sends"
 
-    invoke-static {v0, v7, v6, v4, v6}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+    invoke-static {v0, v6, v5, v3, v5}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_8c
+    if-eqz v0, :cond_8a
 
-    goto :goto_8e
+    goto :goto_8c
 
-    :cond_8c
+    :cond_8a
     const/4 v0, 0x0
 
-    goto :goto_8f
+    goto :goto_8d
 
-    :cond_8e
-    :goto_8e
-    move v0, v3
+    :cond_8c
+    :goto_8c
+    move v0, v2
 
-    :goto_8f
+    :goto_8d
     move v12, v0
 
-    .line 332
+    .line 342
     .local v12, "shouldWrite":Z
-    if-nez v12, :cond_ad
+    if-nez v12, :cond_ab
 
-    .line 333
+    .line 343
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1373,24 +1396,24 @@
 
     invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
+    .line 344
     return-void
 
-    .line 345
-    :cond_ad
+    .line 355
+    :cond_ab
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->hasMessageStatus()Z
 
     move-result v0
 
     const-string v10, " status="
 
-    const-string v7, "\n"
+    const-string v6, "\n"
 
-    const-string v13, "getMessageInfoList(...)"
+    const-string v7, "getMessageInfoList(...)"
 
-    if-eqz v0, :cond_1f3
+    if-eqz v0, :cond_1f4
 
-    .line 346
+    .line 356
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageStatus()Lcom/textrcs/gmproto/conversations/MessageStatus;
 
     move-result-object v0
@@ -1399,69 +1422,69 @@
 
     move-result v0
 
-    const/16 v14, 0xc8
+    const/16 v13, 0xc8
 
-    if-lt v0, v14, :cond_1f0
+    if-lt v0, v13, :cond_1f1
 
-    .line 347
+    .line 357
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    const-string v14, "incoming_deliver_system_msgs"
+    const-string v13, "incoming_deliver_system_msgs"
 
-    invoke-static {v0, v14, v6, v4, v6}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+    invoke-static {v0, v13, v5, v3, v5}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1ed
+    if-nez v0, :cond_1ee
 
-    .line 353
+    .line 363
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageInfoList()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, v13}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 354
+    .line 364
     nop
 
     .local v0, "$this$mapNotNull$iv":Ljava/lang/Iterable;
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    .line 910
-    .local v2, "$i$f$mapNotNull":I
-    new-instance v4, Ljava/util/ArrayList;
+    .line 948
+    .local v3, "$i$f$mapNotNull":I
+    new-instance v7, Ljava/util/ArrayList;
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v4, Ljava/util/Collection;
+    check-cast v7, Ljava/util/Collection;
 
-    .local v4, "destination$iv$iv":Ljava/util/Collection;
+    .local v7, "destination$iv$iv":Ljava/util/Collection;
     move-object v13, v0
 
     .local v13, "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
     const/4 v14, 0x0
 
-    .line 918
+    .line 956
     .local v14, "$i$f$mapNotNullTo":I
     move-object v15, v13
 
     .local v15, "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     const/16 v16, 0x0
 
-    .line 919
+    .line 957
     .local v16, "$i$f$forEach":I
     invoke-interface {v15}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v17
 
-    :goto_ea
+    :goto_e8
     invoke-interface/range {v17 .. v17}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v18
 
-    if-eqz v18, :cond_118
+    if-eqz v18, :cond_116
 
     invoke-interface/range {v17 .. v17}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1473,7 +1496,7 @@
     .local v19, "element$iv$iv":Ljava/lang/Object;
     const/16 v20, 0x0
 
-    .line 918
+    .line 956
     .local v20, "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
     move-object/from16 v21, v19
 
@@ -1482,108 +1505,110 @@
     .local v21, "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
     const/16 v22, 0x0
 
-    .line 354
+    .line 364
     .local v22, "$i$a$-mapNotNull-IncomingMessageHandler$handleMessage$sysText$1":I
     invoke-virtual/range {v21 .. v21}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMessageContent()Lcom/textrcs/gmproto/conversations/MessageContent;
 
     move-result-object v23
 
-    if-eqz v23, :cond_109
+    if-eqz v23, :cond_107
 
     invoke-virtual/range {v23 .. v23}, Lcom/textrcs/gmproto/conversations/MessageContent;->getContent()Ljava/lang/String;
 
     move-result-object v23
 
-    goto :goto_10b
+    goto :goto_109
 
-    :cond_109
-    move-object/from16 v23, v6
+    :cond_107
+    move-object/from16 v23, v5
 
-    .line 918
+    .line 956
     .end local v21    # "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
     .end local v22    # "$i$a$-mapNotNull-IncomingMessageHandler$handleMessage$sysText$1":I
-    :goto_10b
-    if-eqz v23, :cond_116
+    :goto_109
+    if-eqz v23, :cond_114
 
     move-object/from16 v21, v23
 
-    .line 920
+    .line 958
     .local v21, "it$iv$iv":Ljava/lang/Object;
     const/16 v22, 0x0
 
-    .line 918
+    .line 956
     .local v22, "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
-    move-object/from16 v5, v21
+    move-object/from16 v4, v21
 
     .end local v21    # "it$iv$iv":Ljava/lang/Object;
-    .local v5, "it$iv$iv":Ljava/lang/Object;
-    invoke-interface {v4, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    .local v4, "it$iv$iv":Ljava/lang/Object;
+    invoke-interface {v7, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 919
-    .end local v5    # "it$iv$iv":Ljava/lang/Object;
+    .line 957
+    .end local v4    # "it$iv$iv":Ljava/lang/Object;
     .end local v19    # "element$iv$iv":Ljava/lang/Object;
     .end local v20    # "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
     .end local v22    # "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
-    :cond_116
+    :cond_114
     nop
 
     .end local v18    # "element$iv$iv$iv":Ljava/lang/Object;
-    goto :goto_ea
+    goto :goto_e8
 
-    .line 921
-    :cond_118
+    .line 959
+    :cond_116
     nop
 
-    .line 922
+    .line 960
     .end local v15    # "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     .end local v16    # "$i$f$forEach":I
     nop
 
-    .end local v4    # "destination$iv$iv":Ljava/util/Collection;
+    .end local v7    # "destination$iv$iv":Ljava/util/Collection;
     .end local v13    # "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
     .end local v14    # "$i$f$mapNotNullTo":I
+    move-object v4, v7
+
     check-cast v4, Ljava/util/List;
 
-    .line 910
+    .line 948
     nop
 
     .end local v0    # "$this$mapNotNull$iv":Ljava/lang/Iterable;
-    .end local v2    # "$i$f$mapNotNull":I
+    .end local v3    # "$i$f$mapNotNull":I
     check-cast v4, Ljava/lang/Iterable;
 
-    .line 355
+    .line 365
     nop
 
     .local v4, "$this$filter$iv":Ljava/lang/Iterable;
     const/4 v0, 0x0
 
-    .line 923
+    .line 961
     .local v0, "$i$f$filter":I
-    new-instance v2, Ljava/util/ArrayList;
+    new-instance v3, Ljava/util/ArrayList;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v2, Ljava/util/Collection;
+    check-cast v3, Ljava/util/Collection;
 
-    .local v2, "destination$iv$iv":Ljava/util/Collection;
-    move-object v5, v4
+    .local v3, "destination$iv$iv":Ljava/util/Collection;
+    move-object v7, v4
 
-    .local v5, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    .local v7, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     const/4 v13, 0x0
 
-    .line 924
+    .line 962
     .local v13, "$i$f$filterTo":I
-    invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v14
 
-    :cond_12e
-    :goto_12e
+    :cond_12d
+    :goto_12d
     invoke-interface {v14}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v15
 
-    if-eqz v15, :cond_153
+    if-eqz v15, :cond_152
 
     invoke-interface {v14}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1597,7 +1622,7 @@
     .local v16, "it":Ljava/lang/String;
     const/16 v17, 0x0
 
-    .line 355
+    .line 365
     .local v17, "$i$a$-filter-IncomingMessageHandler$handleMessage$sysText$2":I
     move-object/from16 v18, v16
 
@@ -1607,46 +1632,46 @@
 
     move-result v18
 
-    if-lez v18, :cond_14b
+    if-lez v18, :cond_14a
 
-    move/from16 v18, v3
+    move/from16 v18, v2
 
-    goto :goto_14d
+    goto :goto_14c
 
-    :cond_14b
+    :cond_14a
     const/16 v18, 0x0
 
-    .line 924
+    .line 962
     .end local v16    # "it":Ljava/lang/String;
     .end local v17    # "$i$a$-filter-IncomingMessageHandler$handleMessage$sysText$2":I
-    :goto_14d
-    if-eqz v18, :cond_12e
+    :goto_14c
+    if-eqz v18, :cond_12d
 
-    invoke-interface {v2, v15}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {v3, v15}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    goto :goto_12e
+    goto :goto_12d
 
-    .line 925
+    .line 963
     .end local v15    # "element$iv$iv":Ljava/lang/Object;
-    :cond_153
+    :cond_152
     nop
 
-    .end local v2    # "destination$iv$iv":Ljava/util/Collection;
-    .end local v5    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    .end local v3    # "destination$iv$iv":Ljava/util/Collection;
+    .end local v7    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     .end local v13    # "$i$f$filterTo":I
-    check-cast v2, Ljava/util/List;
+    check-cast v3, Ljava/util/List;
 
-    .line 923
+    .line 961
     nop
 
     .end local v0    # "$i$f$filter":I
     .end local v4    # "$this$filter$iv":Ljava/lang/Iterable;
-    move-object v13, v2
+    move-object v13, v3
 
     check-cast v13, Ljava/lang/Iterable;
 
-    .line 356
-    move-object v14, v7
+    .line 366
+    move-object v14, v6
 
     check-cast v14, Ljava/lang/CharSequence;
 
@@ -1666,113 +1691,123 @@
 
     invoke-static/range {v13 .. v21}, Lkotlin/collections/CollectionsKt;->joinToString$default(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v0
 
-    .line 353
+    .line 363
     nop
 
-    .line 357
-    .local v5, "sysText":Ljava/lang/String;
-    sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
+    .line 367
+    .local v0, "sysText":Ljava/lang/String;
+    sget-object v3, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v3
 
-    check-cast v0, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
+    check-cast v3, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
 
-    if-eqz v0, :cond_181
+    if-eqz v3, :cond_180
 
-    invoke-virtual {v0}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;->getParticipantPhones()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;->getParticipantPhones()Ljava/util/List;
 
-    move-result-object v6
+    move-result-object v5
 
-    :cond_181
-    if-nez v6, :cond_187
+    :cond_180
+    if-nez v5, :cond_186
 
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
-    move-result-object v6
+    move-result-object v5
 
-    :cond_187
-    move-object v4, v6
+    :cond_186
+    move-object v4, v5
 
-    .line 359
+    .line 369
     .local v4, "members":Ljava/util/List;
-    move-object v0, v5
+    move-object v3, v0
 
-    check-cast v0, Ljava/lang/CharSequence;
+    check-cast v3, Ljava/lang/CharSequence;
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
 
-    move-result v0
+    move-result v3
 
-    if-lez v0, :cond_192
+    if-lez v3, :cond_191
 
-    goto :goto_193
+    goto :goto_192
 
-    :cond_192
-    const/4 v3, 0x0
+    :cond_191
+    const/4 v2, 0x0
 
-    :goto_193
-    if-eqz v3, :cond_1b0
+    :goto_192
+    if-eqz v2, :cond_1b0
 
-    move-object v0, v4
+    move-object v2, v4
 
-    check-cast v0, Ljava/util/Collection;
+    check-cast v2, Ljava/util/Collection;
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_1b0
+    if-nez v2, :cond_1b0
 
-    .line 360
+    .line 370
     sget-object v2, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
 
-    .line 361
+    .line 371
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getTimestamp()J
 
+    move-result-wide v5
+
+    invoke-direct {v1, v5, v6}, Lcom/textrcs/receive/IncomingMessageHandler;->normalizeTimestamp(J)J
+
     move-result-wide v6
 
-    invoke-direct {v1, v6, v7}, Lcom/textrcs/receive/IncomingMessageHandler;->normalizeTimestamp(J)J
-
-    move-result-wide v6
-
-    .line 360
+    .line 370
     move-object/from16 v3, p1
 
+    move-object v5, v0
+
+    .end local v0    # "sysText":Ljava/lang/String;
+    .local v5, "sysText":Ljava/lang/String;
     invoke-virtual/range {v2 .. v7}, Lcom/textrcs/bridge/TextraDbBridge;->writeSystemMessage(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;J)Z
 
     move-result v0
 
-    move-object v14, v3
+    move-object v13, v3
 
-    goto :goto_1b3
+    goto :goto_1b4
 
-    .line 359
+    .line 369
+    .end local v5    # "sysText":Ljava/lang/String;
+    .restart local v0    # "sysText":Ljava/lang/String;
     :cond_1b0
-    move-object/from16 v14, p1
+    move-object/from16 v13, p1
 
-    .line 364
+    move-object v5, v0
+
+    .line 374
+    .end local v0    # "sysText":Ljava/lang/String;
+    .restart local v5    # "sysText":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 359
-    :goto_1b3
-    nop
-
-    .line 358
-    nop
-
-    .line 367
-    .local v0, "wrote":Z
+    .line 369
+    :goto_1b4
     nop
 
     .line 368
+    nop
+
+    .line 377
+    .local v0, "wrote":Z
+    nop
+
+    .line 378
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1795,7 +1830,7 @@
 
     move-result-object v2
 
-    .line 369
+    .line 379
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageStatus()Lcom/textrcs/gmproto/conversations/MessageStatus;
 
     move-result-object v3
@@ -1804,25 +1839,25 @@
 
     move-result-object v3
 
-    .line 368
+    .line 378
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 369
+    .line 379
     nop
 
-    .line 368
+    .line 378
     const-string v3, " inline="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 369
+    .line 379
     nop
 
-    .line 368
+    .line 378
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -1831,364 +1866,366 @@
 
     move-result-object v2
 
-    .line 366
+    .line 376
     invoke-static {v9, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
+    .line 381
     return-void
 
-    .line 347
+    .line 357
     .end local v0    # "wrote":Z
     .end local v4    # "members":Ljava/util/List;
     .end local v5    # "sysText":Ljava/lang/String;
-    :cond_1ed
-    move-object/from16 v14, p1
+    :cond_1ee
+    move-object/from16 v13, p1
 
-    goto :goto_1f5
+    goto :goto_1f6
 
-    .line 346
-    :cond_1f0
-    move-object/from16 v14, p1
+    .line 356
+    :cond_1f1
+    move-object/from16 v13, p1
 
-    goto :goto_1f5
+    goto :goto_1f6
 
-    .line 345
-    :cond_1f3
-    move-object/from16 v14, p1
+    .line 355
+    :cond_1f4
+    move-object/from16 v13, p1
 
-    .line 380
-    :goto_1f5
+    .line 390
+    :goto_1f6
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    const-string v5, "incoming_reactions_disable"
+    const-string v4, "incoming_reactions_disable"
 
-    invoke-static {v0, v5, v6, v4, v6}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+    invoke-static {v0, v4, v5, v3, v5}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_231
+    if-nez v0, :cond_232
 
-    .line 381
+    .line 391
     nop
 
-    .line 382
-    :try_start_200
+    .line 392
+    :try_start_201
     invoke-direct {v1, v8}, Lcom/textrcs/receive/IncomingMessageHandler;->handleReactions(Lcom/textrcs/gmproto/conversations/Message;)V
-    :try_end_203
-    .catchall {:try_start_200 .. :try_end_203} :catchall_204
+    :try_end_204
+    .catchall {:try_start_201 .. :try_end_204} :catchall_205
 
-    goto :goto_231
+    goto :goto_232
 
-    .line 383
-    :catchall_204
+    .line 393
+    :catchall_205
     move-exception v0
 
-    .line 384
+    .line 394
     .local v0, "e":Ljava/lang/Throwable;
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "handleReactions failed: "
+    const-string v14, "handleReactions failed: "
 
-    invoke-virtual {v5, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v15
+    move-result-object v14
 
-    invoke-virtual {v15}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v14
 
-    invoke-virtual {v5, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    const-string v15, ": "
+    const-string v14, ": "
 
-    invoke-virtual {v5, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v14
 
-    invoke-virtual {v5, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-static {v9, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
+    .line 398
     .end local v0    # "e":Ljava/lang/Throwable;
-    :cond_231
-    :goto_231
+    :cond_232
+    :goto_232
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageInfoList()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, v13}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 389
+    .line 399
     nop
 
     .local v0, "$this$mapNotNull$iv":Ljava/lang/Iterable;
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
-    .line 926
-    .local v5, "$i$f$mapNotNull":I
-    new-instance v15, Ljava/util/ArrayList;
+    .line 964
+    .local v4, "$i$f$mapNotNull":I
+    new-instance v14, Ljava/util/ArrayList;
 
-    invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v15, Ljava/util/Collection;
+    check-cast v14, Ljava/util/Collection;
 
-    .local v15, "destination$iv$iv":Ljava/util/Collection;
-    move-object/from16 v16, v0
+    .local v14, "destination$iv$iv":Ljava/util/Collection;
+    move-object v15, v0
 
-    .local v16, "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
-    const/16 v17, 0x0
+    .local v15, "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
+    const/16 v16, 0x0
 
-    .line 934
-    .local v17, "$i$f$mapNotNullTo":I
-    move-object/from16 v18, v16
+    .line 972
+    .local v16, "$i$f$mapNotNullTo":I
+    move-object/from16 v17, v15
 
-    .local v18, "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
-    const/16 v19, 0x0
+    .local v17, "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
+    const/16 v18, 0x0
 
-    .line 935
-    .local v19, "$i$f$forEach":I
-    invoke-interface/range {v18 .. v18}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 973
+    .local v18, "$i$f$forEach":I
+    invoke-interface/range {v17 .. v17}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v19
+
+    :goto_24f
+    invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v20
+
+    if-eqz v20, :cond_283
+
+    invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v20
 
-    :goto_24f
-    invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->hasNext()Z
+    .local v20, "element$iv$iv$iv":Ljava/lang/Object;
+    move-object/from16 v21, v20
 
-    move-result v21
+    .local v21, "element$iv$iv":Ljava/lang/Object;
+    const/16 v22, 0x0
 
-    if-eqz v21, :cond_283
+    .line 972
+    .local v22, "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
+    move-object/from16 v24, v21
 
-    invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast v24, Lcom/textrcs/gmproto/conversations/MessageInfo;
 
-    move-result-object v21
+    .local v24, "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    const/16 v25, 0x0
 
-    .local v21, "element$iv$iv$iv":Ljava/lang/Object;
-    move-object/from16 v22, v21
+    .line 399
+    .local v25, "$i$a$-mapNotNull-IncomingMessageHandler$handleMessage$textParts$1":I
+    invoke-virtual/range {v24 .. v24}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMessageContent()Lcom/textrcs/gmproto/conversations/MessageContent;
 
-    .local v22, "element$iv$iv":Ljava/lang/Object;
-    const/16 v24, 0x0
+    move-result-object v26
 
-    .line 934
-    .local v24, "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
-    move-object/from16 v25, v22
+    if-eqz v26, :cond_26e
 
-    check-cast v25, Lcom/textrcs/gmproto/conversations/MessageInfo;
+    invoke-virtual/range {v26 .. v26}, Lcom/textrcs/gmproto/conversations/MessageContent;->getContent()Ljava/lang/String;
 
-    .local v25, "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    const/16 v26, 0x0
-
-    .line 389
-    .local v26, "$i$a$-mapNotNull-IncomingMessageHandler$handleMessage$textParts$1":I
-    invoke-virtual/range {v25 .. v25}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMessageContent()Lcom/textrcs/gmproto/conversations/MessageContent;
-
-    move-result-object v27
-
-    if-eqz v27, :cond_26e
-
-    invoke-virtual/range {v27 .. v27}, Lcom/textrcs/gmproto/conversations/MessageContent;->getContent()Ljava/lang/String;
-
-    move-result-object v27
+    move-result-object v26
 
     goto :goto_270
 
     :cond_26e
-    move-object/from16 v27, v6
+    move-object/from16 v26, v5
 
-    .line 934
-    .end local v25    # "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    .end local v26    # "$i$a$-mapNotNull-IncomingMessageHandler$handleMessage$textParts$1":I
+    .line 972
+    .end local v24    # "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    .end local v25    # "$i$a$-mapNotNull-IncomingMessageHandler$handleMessage$textParts$1":I
     :goto_270
-    if-eqz v27, :cond_27e
+    if-eqz v26, :cond_27e
 
-    move-object/from16 v25, v27
+    move-object/from16 v24, v26
 
-    .line 936
-    .local v25, "it$iv$iv":Ljava/lang/Object;
-    const/16 v26, 0x0
+    .line 974
+    .local v24, "it$iv$iv":Ljava/lang/Object;
+    const/16 v25, 0x0
 
-    .line 934
-    .local v26, "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
-    move/from16 v27, v3
+    .line 972
+    .local v25, "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
+    move/from16 v26, v2
 
-    move-object/from16 v3, v25
+    move-object/from16 v2, v24
 
-    .end local v25    # "it$iv$iv":Ljava/lang/Object;
-    .local v3, "it$iv$iv":Ljava/lang/Object;
-    invoke-interface {v15, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    .end local v24    # "it$iv$iv":Ljava/lang/Object;
+    .local v2, "it$iv$iv":Ljava/lang/Object;
+    invoke-interface {v14, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .end local v3    # "it$iv$iv":Ljava/lang/Object;
-    .end local v26    # "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
+    .end local v2    # "it$iv$iv":Ljava/lang/Object;
+    .end local v25    # "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
     goto :goto_280
 
     :cond_27e
-    move/from16 v27, v3
+    move/from16 v26, v2
 
-    .line 935
-    .end local v22    # "element$iv$iv":Ljava/lang/Object;
-    .end local v24    # "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
+    .line 973
+    .end local v21    # "element$iv$iv":Ljava/lang/Object;
+    .end local v22    # "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
     :goto_280
-    move/from16 v3, v27
+    move/from16 v2, v26
 
-    .end local v21    # "element$iv$iv$iv":Ljava/lang/Object;
+    .end local v20    # "element$iv$iv$iv":Ljava/lang/Object;
     goto :goto_24f
 
-    .line 937
+    .line 975
     :cond_283
-    move/from16 v27, v3
+    move/from16 v26, v2
 
-    .line 938
-    .end local v18    # "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
-    .end local v19    # "$i$f$forEach":I
+    .line 976
+    .end local v17    # "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
+    .end local v18    # "$i$f$forEach":I
     nop
 
-    .end local v15    # "destination$iv$iv":Ljava/util/Collection;
-    .end local v16    # "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
-    .end local v17    # "$i$f$mapNotNullTo":I
-    move-object v3, v15
+    .end local v14    # "destination$iv$iv":Ljava/util/Collection;
+    .end local v15    # "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
+    .end local v16    # "$i$f$mapNotNullTo":I
+    move-object v2, v14
 
-    check-cast v3, Ljava/util/List;
+    check-cast v2, Ljava/util/List;
 
-    .line 926
+    .line 964
     nop
 
     .end local v0    # "$this$mapNotNull$iv":Ljava/lang/Iterable;
-    .end local v5    # "$i$f$mapNotNull":I
-    check-cast v3, Ljava/lang/Iterable;
+    .end local v4    # "$i$f$mapNotNull":I
+    check-cast v2, Ljava/lang/Iterable;
 
-    .line 390
+    .line 400
     nop
 
-    .local v3, "$this$filter$iv":Ljava/lang/Iterable;
+    .local v2, "$this$filter$iv":Ljava/lang/Iterable;
     const/4 v0, 0x0
 
-    .line 939
+    .line 977
     .local v0, "$i$f$filter":I
-    new-instance v5, Ljava/util/ArrayList;
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v5, Ljava/util/Collection;
+    check-cast v4, Ljava/util/Collection;
 
-    .local v5, "destination$iv$iv":Ljava/util/Collection;
-    move-object v15, v3
+    .local v4, "destination$iv$iv":Ljava/util/Collection;
+    move-object v14, v2
 
-    .local v15, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
-    const/16 v16, 0x0
+    .local v14, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    const/4 v15, 0x0
 
-    .line 940
-    .local v16, "$i$f$filterTo":I
-    invoke-interface {v15}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 978
+    .local v15, "$i$f$filterTo":I
+    invoke-interface {v14}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v17
+    move-result-object v16
 
-    :goto_29c
-    invoke-interface/range {v17 .. v17}, Ljava/util/Iterator;->hasNext()Z
+    :goto_29b
+    invoke-interface/range {v16 .. v16}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v18
+    move-result v17
 
-    if-eqz v18, :cond_2c2
+    if-eqz v17, :cond_2c1
 
-    invoke-interface/range {v17 .. v17}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface/range {v16 .. v16}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v3
 
-    .local v4, "element$iv$iv":Ljava/lang/Object;
-    move-object/from16 v19, v4
+    .local v3, "element$iv$iv":Ljava/lang/Object;
+    move-object/from16 v18, v3
 
-    check-cast v19, Ljava/lang/String;
+    check-cast v18, Ljava/lang/String;
 
-    .local v19, "it":Ljava/lang/String;
+    .local v18, "it":Ljava/lang/String;
+    const/16 v19, 0x0
+
+    .line 400
+    .local v19, "$i$a$-filter-IncomingMessageHandler$handleMessage$textParts$2":I
+    move-object/from16 v20, v18
+
+    check-cast v20, Ljava/lang/CharSequence;
+
+    invoke-interface/range {v20 .. v20}, Ljava/lang/CharSequence;->length()I
+
+    move-result v20
+
+    if-lez v20, :cond_2b8
+
+    move/from16 v20, v26
+
+    goto :goto_2ba
+
+    :cond_2b8
     const/16 v20, 0x0
 
-    .line 390
-    .local v20, "$i$a$-filter-IncomingMessageHandler$handleMessage$textParts$2":I
-    move-object/from16 v21, v19
+    .line 978
+    .end local v18    # "it":Ljava/lang/String;
+    .end local v19    # "$i$a$-filter-IncomingMessageHandler$handleMessage$textParts$2":I
+    :goto_2ba
+    if-eqz v20, :cond_2bf
 
-    check-cast v21, Ljava/lang/CharSequence;
+    invoke-interface {v4, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    invoke-interface/range {v21 .. v21}, Ljava/lang/CharSequence;->length()I
+    :cond_2bf
+    const/4 v3, 0x2
 
-    move-result v21
+    goto :goto_29b
 
-    if-lez v21, :cond_2b9
-
-    move/from16 v21, v27
-
-    goto :goto_2bb
-
-    :cond_2b9
-    const/16 v21, 0x0
-
-    .line 940
-    .end local v19    # "it":Ljava/lang/String;
-    .end local v20    # "$i$a$-filter-IncomingMessageHandler$handleMessage$textParts$2":I
-    :goto_2bb
-    if-eqz v21, :cond_2c0
-
-    invoke-interface {v5, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    :cond_2c0
-    const/4 v4, 0x2
-
-    goto :goto_29c
-
-    .line 941
-    .end local v4    # "element$iv$iv":Ljava/lang/Object;
-    :cond_2c2
+    .line 979
+    .end local v3    # "element$iv$iv":Ljava/lang/Object;
+    :cond_2c1
     nop
 
-    .end local v5    # "destination$iv$iv":Ljava/util/Collection;
-    .end local v15    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
-    .end local v16    # "$i$f$filterTo":I
-    move-object v4, v5
+    .end local v4    # "destination$iv$iv":Ljava/util/Collection;
+    .end local v14    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    .end local v15    # "$i$f$filterTo":I
+    move-object v3, v4
 
-    check-cast v4, Ljava/util/List;
+    check-cast v3, Ljava/util/List;
 
-    .line 939
+    .line 977
     nop
 
-    .line 390
+    .line 400
     .end local v0    # "$i$f$filter":I
-    .end local v3    # "$this$filter$iv":Ljava/lang/Iterable;
+    .end local v2    # "$this$filter$iv":Ljava/lang/Iterable;
     nop
 
-    .line 388
-    move-object v15, v4
+    .line 398
+    move-object v14, v3
 
-    .line 391
-    .local v15, "textParts":Ljava/util/List;
-    move-object/from16 v28, v15
+    .line 401
+    .local v14, "textParts":Ljava/util/List;
+    move-object/from16 v27, v14
 
-    check-cast v28, Ljava/lang/Iterable;
+    check-cast v27, Ljava/lang/Iterable;
 
-    move-object/from16 v29, v7
+    move-object/from16 v28, v6
 
-    check-cast v29, Ljava/lang/CharSequence;
+    check-cast v28, Ljava/lang/CharSequence;
 
-    const/16 v35, 0x3e
+    const/16 v34, 0x3e
 
-    const/16 v36, 0x0
+    const/16 v35, 0x0
+
+    const/16 v29, 0x0
 
     const/16 v30, 0x0
 
@@ -2198,13 +2235,11 @@
 
     const/16 v33, 0x0
 
-    const/16 v34, 0x0
-
-    invoke-static/range {v28 .. v36}, Lkotlin/collections/CollectionsKt;->joinToString$default(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v27 .. v35}, Lkotlin/collections/CollectionsKt;->joinToString$default(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 393
+    .line 403
     .local v3, "body":Ljava/lang/String;
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageInfoList()Ljava/util/List;
 
@@ -2214,585 +2249,563 @@
 
     move-result-object v0
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    :goto_2ec
+    :goto_2eb
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_3c0
+    if-eqz v4, :cond_3bf
 
-    move v5, v4
+    move v4, v2
 
-    .local v5, "i":I
-    add-int/lit8 v4, v4, 0x1
+    .local v4, "i":I
+    add-int/lit8 v2, v2, 0x1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v16
+    move-result-object v15
 
-    check-cast v16, Lcom/textrcs/gmproto/conversations/MessageInfo;
-
-    .line 394
-    .local v16, "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMediaContent()Z
-
-    move-result v17
-
-    const-string v7, "  part["
-
-    if-eqz v17, :cond_37c
-
-    .line 395
-    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMediaContent()Lcom/textrcs/gmproto/conversations/MediaContent;
-
-    move-result-object v17
-
-    .line 397
-    .local v17, "m":Lcom/textrcs/gmproto/conversations/MediaContent;
-    nop
-
-    .line 398
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, "] MEDIA id=\'"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaID()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, "\' mime="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMimeType()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, " name="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 399
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaName()Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 398
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 399
-    nop
-
-    .line 398
-    const-string v7, " keyLen="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 399
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MediaContent;->getDecryptionKey()Lcom/google/protobuf/ByteString;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/google/protobuf/ByteString;->size()I
-
-    move-result v7
-
-    .line 398
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 399
-    nop
-
-    .line 398
-    const-string v7, " inlineLen="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 400
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaData()Lcom/google/protobuf/ByteString;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/google/protobuf/ByteString;->size()I
-
-    move-result v7
-
-    .line 398
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 400
-    nop
-
-    .line 398
-    const-string v7, " fmt="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 400
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MediaContent;->getFormat()Lcom/textrcs/gmproto/conversations/MediaFormats;
-
-    move-result-object v7
-
-    .line 398
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 396
-    invoke-static {v9, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_3bd
+    check-cast v15, Lcom/textrcs/gmproto/conversations/MessageInfo;
 
     .line 404
-    .end local v17    # "m":Lcom/textrcs/gmproto/conversations/MediaContent;
-    :cond_37c
+    .local v15, "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    invoke-virtual {v15}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMediaContent()Z
+
+    move-result v16
+
+    const-string v6, "  part["
+
+    if-eqz v16, :cond_37b
+
+    .line 405
+    invoke-virtual {v15}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMediaContent()Lcom/textrcs/gmproto/conversations/MediaContent;
+
+    move-result-object v16
+
+    .line 407
+    .local v16, "m":Lcom/textrcs/gmproto/conversations/MediaContent;
     nop
 
-    .line 405
-    new-instance v6, Ljava/lang/StringBuilder;
+    .line 408
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v5
 
-    const-string v7, "] hasText="
+    const-string v6, "] MEDIA id=\'"
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMessageContent()Z
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaID()Ljava/lang/String;
 
     move-result-object v6
 
-    const-string v7, " textLen="
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v5
+
+    const-string v6, "\' mime="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMimeType()Ljava/lang/String;
 
     move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, " name="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 409
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaName()Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 408
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 409
+    nop
+
+    .line 408
+    const-string v6, " keyLen="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 409
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MediaContent;->getDecryptionKey()Lcom/google/protobuf/ByteString;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/google/protobuf/ByteString;->size()I
+
+    move-result v6
+
+    .line 408
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 409
+    nop
+
+    .line 408
+    const-string v6, " inlineLen="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 410
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaData()Lcom/google/protobuf/ByteString;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/google/protobuf/ByteString;->size()I
+
+    move-result v6
+
+    .line 408
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 410
+    nop
+
+    .line 408
+    const-string v6, " fmt="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 410
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MediaContent;->getFormat()Lcom/textrcs/gmproto/conversations/MediaFormats;
+
+    move-result-object v6
+
+    .line 408
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
 
     .line 406
-    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMessageContent()Z
+    invoke-static {v9, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v7
-
-    if-eqz v7, :cond_3b1
-
-    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMessageContent()Lcom/textrcs/gmproto/conversations/MessageContent;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/textrcs/gmproto/conversations/MessageContent;->getContent()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
-
-    move-result v7
-
-    goto :goto_3b2
-
-    :cond_3b1
-    const/4 v7, -0x1
-
-    .line 405
-    :goto_3b2
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 403
-    invoke-static {v9, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 393
-    .end local v5    # "i":I
-    .end local v16    # "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    :goto_3bd
-    const/4 v6, 0x0
-
-    goto/16 :goto_2ec
+    goto :goto_3bc
 
     .line 414
-    :cond_3c0
+    .end local v16    # "m":Lcom/textrcs/gmproto/conversations/MediaContent;
+    :cond_37b
+    nop
+
+    .line 415
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, "] hasText="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v15}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMessageContent()Z
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, " textLen="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 416
+    invoke-virtual {v15}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMessageContent()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3b0
+
+    invoke-virtual {v15}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMessageContent()Lcom/textrcs/gmproto/conversations/MessageContent;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/textrcs/gmproto/conversations/MessageContent;->getContent()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    goto :goto_3b1
+
+    :cond_3b0
+    const/4 v6, -0x1
+
+    .line 415
+    :goto_3b1
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 413
+    invoke-static {v9, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 403
+    .end local v4    # "i":I
+    .end local v15    # "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    :goto_3bc
+    const/4 v5, 0x0
+
+    goto/16 :goto_2eb
+
+    .line 424
+    :cond_3bf
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageInfoList()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, v13}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 415
+    .line 425
     nop
 
     .local v0, "$this$filter$iv":Ljava/lang/Iterable;
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    .line 942
-    .local v4, "$i$f$filter":I
-    new-instance v5, Ljava/util/ArrayList;
+    .line 980
+    .local v2, "$i$f$filter":I
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v5, Ljava/util/Collection;
+    check-cast v4, Ljava/util/Collection;
 
-    .local v5, "destination$iv$iv":Ljava/util/Collection;
-    move-object v6, v0
+    .local v4, "destination$iv$iv":Ljava/util/Collection;
+    move-object v5, v0
 
-    .local v6, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
-    const/4 v7, 0x0
+    .local v5, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    const/4 v6, 0x0
 
-    .line 943
-    .local v7, "$i$f$filterTo":I
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 981
+    .local v6, "$i$f$filterTo":I
+    invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v13
+    move-result-object v7
 
-    :goto_3d8
-    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
+    :cond_3d7
+    :goto_3d7
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v15
+
+    if-eqz v15, :cond_3f1
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    .local v15, "element$iv$iv":Ljava/lang/Object;
+    move-object/from16 v16, v15
+
+    check-cast v16, Lcom/textrcs/gmproto/conversations/MessageInfo;
+
+    .local v16, "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    const/16 v20, 0x0
+
+    .line 425
+    .local v20, "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$1":I
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMediaContent()Z
 
     move-result v16
 
-    if-eqz v16, :cond_3f6
+    .line 981
+    .end local v16    # "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    .end local v20    # "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$1":I
+    if-eqz v16, :cond_3d7
 
-    move-object/from16 v16, v0
+    invoke-interface {v4, v15}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3d7
+
+    .line 982
+    .end local v15    # "element$iv$iv":Ljava/lang/Object;
+    :cond_3f1
+    nop
+
+    .end local v4    # "destination$iv$iv":Ljava/util/Collection;
+    .end local v5    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    .end local v6    # "$i$f$filterTo":I
+    check-cast v4, Ljava/util/List;
+
+    .line 980
+    nop
 
     .end local v0    # "$this$filter$iv":Ljava/lang/Iterable;
-    .local v16, "$this$filter$iv":Ljava/lang/Iterable;
-    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .end local v2    # "$i$f$filter":I
+    check-cast v4, Ljava/lang/Iterable;
+
+    .line 426
+    nop
+
+    .local v4, "$this$map$iv":Ljava/lang/Iterable;
+    const/4 v0, 0x0
+
+    .line 983
+    .local v0, "$i$f$map":I
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/16 v5, 0xa
+
+    invoke-static {v4, v5}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
+
+    move-result v5
+
+    invoke-direct {v2, v5}, Ljava/util/ArrayList;-><init>(I)V
+
+    check-cast v2, Ljava/util/Collection;
+
+    .local v2, "destination$iv$iv":Ljava/util/Collection;
+    move-object v5, v4
+
+    .local v5, "$this$mapTo$iv$iv":Ljava/lang/Iterable;
+    const/4 v6, 0x0
+
+    .line 984
+    .local v6, "$i$f$mapTo":I
+    invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_40c
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v15
+
+    if-eqz v15, :cond_428
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    .line 985
+    .local v15, "item$iv$iv":Ljava/lang/Object;
+    move-object/from16 v16, v15
+
+    check-cast v16, Lcom/textrcs/gmproto/conversations/MessageInfo;
+
+    .restart local v16    # "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    const/16 v20, 0x0
+
+    .line 426
+    .local v20, "$i$a$-map-IncomingMessageHandler$handleMessage$mediaParts$2":I
+    move/from16 v21, v0
+
+    .end local v0    # "$i$f$map":I
+    .local v21, "$i$f$map":I
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMediaContent()Lcom/textrcs/gmproto/conversations/MediaContent;
 
     move-result-object v0
 
-    .local v0, "element$iv$iv":Ljava/lang/Object;
-    move-object/from16 v17, v0
+    .line 985
+    .end local v16    # "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
+    .end local v20    # "$i$a$-map-IncomingMessageHandler$handleMessage$mediaParts$2":I
+    invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    check-cast v17, Lcom/textrcs/gmproto/conversations/MessageInfo;
+    move/from16 v0, v21
 
-    .local v17, "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    const/16 v21, 0x0
+    goto :goto_40c
 
-    .line 415
-    .local v21, "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$1":I
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MessageInfo;->hasMediaContent()Z
+    .line 986
+    .end local v15    # "item$iv$iv":Ljava/lang/Object;
+    .end local v21    # "$i$f$map":I
+    .restart local v0    # "$i$f$map":I
+    :cond_428
+    move/from16 v21, v0
 
-    move-result v17
-
-    .line 943
-    .end local v17    # "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    .end local v21    # "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$1":I
-    if-eqz v17, :cond_3f3
-
-    invoke-interface {v5, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    :cond_3f3
-    move-object/from16 v0, v16
-
-    goto :goto_3d8
-
-    .line 944
-    .end local v16    # "$this$filter$iv":Ljava/lang/Iterable;
-    .local v0, "$this$filter$iv":Ljava/lang/Iterable;
-    :cond_3f6
-    move-object/from16 v16, v0
-
-    .end local v0    # "$this$filter$iv":Ljava/lang/Iterable;
-    .end local v5    # "destination$iv$iv":Ljava/util/Collection;
-    .end local v6    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
-    .end local v7    # "$i$f$filterTo":I
-    .restart local v16    # "$this$filter$iv":Ljava/lang/Iterable;
-    move-object v0, v5
+    .end local v0    # "$i$f$map":I
+    .end local v2    # "destination$iv$iv":Ljava/util/Collection;
+    .end local v5    # "$this$mapTo$iv$iv":Ljava/lang/Iterable;
+    .end local v6    # "$i$f$mapTo":I
+    .restart local v21    # "$i$f$map":I
+    move-object v0, v2
 
     check-cast v0, Ljava/util/List;
 
-    .line 942
+    .line 983
     nop
 
-    .end local v4    # "$i$f$filter":I
-    .end local v16    # "$this$filter$iv":Ljava/lang/Iterable;
+    .end local v4    # "$this$map$iv":Ljava/lang/Iterable;
+    .end local v21    # "$i$f$map":I
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 416
-    nop
-
-    .local v0, "$this$map$iv":Ljava/lang/Iterable;
-    const/4 v4, 0x0
-
-    .line 945
-    .local v4, "$i$f$map":I
-    new-instance v5, Ljava/util/ArrayList;
-
-    const/16 v6, 0xa
-
-    invoke-static {v0, v6}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
-
-    move-result v6
-
-    invoke-direct {v5, v6}, Ljava/util/ArrayList;-><init>(I)V
-
-    check-cast v5, Ljava/util/Collection;
-
-    .restart local v5    # "destination$iv$iv":Ljava/util/Collection;
-    move-object v6, v0
-
-    .local v6, "$this$mapTo$iv$iv":Ljava/lang/Iterable;
-    const/4 v7, 0x0
-
-    .line 946
-    .local v7, "$i$f$mapTo":I
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v13
-
-    :goto_413
-    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v16
-
-    if-eqz v16, :cond_42f
-
-    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v16
-
-    .line 947
-    .local v16, "item$iv$iv":Ljava/lang/Object;
-    move-object/from16 v17, v16
-
-    check-cast v17, Lcom/textrcs/gmproto/conversations/MessageInfo;
-
-    .restart local v17    # "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    const/16 v21, 0x0
-
-    .line 416
-    .local v21, "$i$a$-map-IncomingMessageHandler$handleMessage$mediaParts$2":I
-    move-object/from16 v22, v0
-
-    .end local v0    # "$this$map$iv":Ljava/lang/Iterable;
-    .local v22, "$this$map$iv":Ljava/lang/Iterable;
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMediaContent()Lcom/textrcs/gmproto/conversations/MediaContent;
-
-    move-result-object v0
-
-    .line 947
-    .end local v17    # "it":Lcom/textrcs/gmproto/conversations/MessageInfo;
-    .end local v21    # "$i$a$-map-IncomingMessageHandler$handleMessage$mediaParts$2":I
-    invoke-interface {v5, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v0, v22
-
-    goto :goto_413
-
-    .line 948
-    .end local v16    # "item$iv$iv":Ljava/lang/Object;
-    .end local v22    # "$this$map$iv":Ljava/lang/Iterable;
-    .restart local v0    # "$this$map$iv":Ljava/lang/Iterable;
-    :cond_42f
-    move-object/from16 v22, v0
-
-    .end local v0    # "$this$map$iv":Ljava/lang/Iterable;
-    .end local v5    # "destination$iv$iv":Ljava/util/Collection;
-    .end local v6    # "$this$mapTo$iv$iv":Ljava/lang/Iterable;
-    .end local v7    # "$i$f$mapTo":I
-    .restart local v22    # "$this$map$iv":Ljava/lang/Iterable;
-    move-object v0, v5
-
-    check-cast v0, Ljava/util/List;
-
-    .line 945
-    nop
-
-    .end local v4    # "$i$f$map":I
-    .end local v22    # "$this$map$iv":Ljava/lang/Iterable;
-    check-cast v0, Ljava/lang/Iterable;
-
-    .line 417
+    .line 427
     nop
 
     .local v0, "$this$filter$iv":Ljava/lang/Iterable;
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    .line 949
-    .local v4, "$i$f$filter":I
-    new-instance v5, Ljava/util/ArrayList;
+    .line 987
+    .local v2, "$i$f$filter":I
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast v5, Ljava/util/Collection;
+    check-cast v4, Ljava/util/Collection;
 
-    .restart local v5    # "destination$iv$iv":Ljava/util/Collection;
-    move-object v6, v0
+    .local v4, "destination$iv$iv":Ljava/util/Collection;
+    move-object v5, v0
 
-    .local v6, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
-    const/4 v7, 0x0
+    .local v5, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    const/4 v6, 0x0
 
-    .line 950
-    .local v7, "$i$f$filterTo":I
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 988
+    .local v6, "$i$f$filterTo":I
+    invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v13
+    move-result-object v7
 
-    :goto_446
-    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
+    :goto_43f
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v16
+    move-result v15
 
-    if-eqz v16, :cond_477
+    if-eqz v15, :cond_46c
 
-    move-object/from16 v16, v0
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    .local v15, "element$iv$iv":Ljava/lang/Object;
+    move-object/from16 v16, v15
+
+    check-cast v16, Lcom/textrcs/gmproto/conversations/MediaContent;
+
+    .local v16, "it":Lcom/textrcs/gmproto/conversations/MediaContent;
+    const/16 v20, 0x0
+
+    .line 427
+    .local v20, "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$3":I
+    move-object/from16 v21, v0
 
     .end local v0    # "$this$filter$iv":Ljava/lang/Iterable;
-    .local v16, "$this$filter$iv":Ljava/lang/Iterable;
-    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .local v21, "$this$filter$iv":Ljava/lang/Iterable;
+    invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaID()Ljava/lang/String;
 
     move-result-object v0
 
-    .local v0, "element$iv$iv":Ljava/lang/Object;
-    move-object/from16 v17, v0
+    move/from16 v22, v2
 
-    check-cast v17, Lcom/textrcs/gmproto/conversations/MediaContent;
-
-    .local v17, "it":Lcom/textrcs/gmproto/conversations/MediaContent;
-    const/16 v21, 0x0
-
-    .line 417
-    .local v21, "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$3":I
-    move-object/from16 v40, v3
-
-    .end local v3    # "body":Ljava/lang/String;
-    .local v40, "body":Ljava/lang/String;
-    invoke-virtual/range {v17 .. v17}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaID()Ljava/lang/String;
-
-    move-result-object v3
-
-    move/from16 v22, v4
-
-    .end local v4    # "$i$f$filter":I
+    .end local v2    # "$i$f$filter":I
     .local v22, "$i$f$filter":I
-    const-string v4, "getMediaID(...)"
+    const-string v2, "getMediaID(...)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v3, Ljava/lang/CharSequence;
+    check-cast v0, Ljava/lang/CharSequence;
 
-    invoke-static {v3}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v0
 
-    .line 950
-    .end local v17    # "it":Lcom/textrcs/gmproto/conversations/MediaContent;
-    .end local v21    # "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$3":I
-    if-nez v3, :cond_470
+    .line 988
+    .end local v16    # "it":Lcom/textrcs/gmproto/conversations/MediaContent;
+    .end local v20    # "$i$a$-filter-IncomingMessageHandler$handleMessage$mediaParts$3":I
+    if-nez v0, :cond_467
 
-    invoke-interface {v5, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-interface {v4, v15}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    :cond_470
-    move-object/from16 v0, v16
+    :cond_467
+    move-object/from16 v0, v21
 
-    move/from16 v4, v22
+    move/from16 v2, v22
 
-    move-object/from16 v3, v40
+    goto :goto_43f
 
-    goto :goto_446
-
-    .line 951
-    .end local v16    # "$this$filter$iv":Ljava/lang/Iterable;
+    .line 989
+    .end local v15    # "element$iv$iv":Ljava/lang/Object;
+    .end local v21    # "$this$filter$iv":Ljava/lang/Iterable;
     .end local v22    # "$i$f$filter":I
-    .end local v40    # "body":Ljava/lang/String;
-    .local v0, "$this$filter$iv":Ljava/lang/Iterable;
-    .restart local v3    # "body":Ljava/lang/String;
-    .restart local v4    # "$i$f$filter":I
-    :cond_477
-    move-object/from16 v16, v0
+    .restart local v0    # "$this$filter$iv":Ljava/lang/Iterable;
+    .restart local v2    # "$i$f$filter":I
+    :cond_46c
+    move-object/from16 v21, v0
 
-    move-object/from16 v40, v3
-
-    move/from16 v22, v4
+    move/from16 v22, v2
 
     .end local v0    # "$this$filter$iv":Ljava/lang/Iterable;
-    .end local v3    # "body":Ljava/lang/String;
-    .end local v4    # "$i$f$filter":I
-    .end local v5    # "destination$iv$iv":Ljava/util/Collection;
-    .end local v6    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
-    .end local v7    # "$i$f$filterTo":I
-    .restart local v16    # "$this$filter$iv":Ljava/lang/Iterable;
+    .end local v2    # "$i$f$filter":I
+    .end local v4    # "destination$iv$iv":Ljava/util/Collection;
+    .end local v5    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
+    .end local v6    # "$i$f$filterTo":I
+    .restart local v21    # "$this$filter$iv":Ljava/lang/Iterable;
     .restart local v22    # "$i$f$filter":I
-    .restart local v40    # "body":Ljava/lang/String;
-    move-object v0, v5
+    move-object v0, v4
 
     check-cast v0, Ljava/util/List;
 
-    .line 949
+    .line 987
     nop
 
-    .line 417
-    .end local v16    # "$this$filter$iv":Ljava/lang/Iterable;
+    .line 427
+    .end local v21    # "$this$filter$iv":Ljava/lang/Iterable;
     .end local v22    # "$i$f$filter":I
     nop
 
-    .line 414
-    move-object v13, v0
+    .line 424
+    move-object v15, v0
 
-    .line 419
-    .local v13, "mediaParts":Ljava/util/List;
-    move-object/from16 v0, v40
+    .line 429
+    .local v15, "mediaParts":Ljava/util/List;
+    move-object v0, v3
 
     check-cast v0, Ljava/lang/CharSequence;
 
@@ -2800,25 +2813,25 @@
 
     move-result v0
 
-    if-nez v0, :cond_490
+    if-nez v0, :cond_482
 
-    move/from16 v0, v27
+    move/from16 v0, v26
 
-    goto :goto_491
+    goto :goto_483
 
-    :cond_490
+    :cond_482
     const/4 v0, 0x0
 
-    :goto_491
-    if-eqz v0, :cond_4bf
+    :goto_483
+    if-eqz v0, :cond_4b1
 
-    invoke-interface {v13}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v15}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_4bf
+    if-eqz v0, :cond_4b1
 
-    .line 420
+    .line 430
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2849,44 +2862,91 @@
 
     invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
+    .line 431
     const-string v0, "RCV msg SKIP \u2014 no content parts"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 422
+    .line 432
     return-void
 
-    .line 428
-    :cond_4bf
-    sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+    .line 437
+    :cond_4b1
+    invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
 
-    const-string v3, "incoming_dedup_disable"
+    move-result-object v0
 
-    const/4 v4, 0x2
+    const-string v2, "getMessageID(...)"
 
-    const/4 v5, 0x0
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v3, v5, v4, v5}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-static {v0}, Lkotlin/text/StringsKt;->isBlank(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4f2
+    if-nez v0, :cond_4db
 
-    .line 429
+    move-object v0, v3
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_4ce
+
+    move/from16 v0, v26
+
+    goto :goto_4cf
+
+    :cond_4ce
+    const/4 v0, 0x0
+
+    :goto_4cf
+    if-eqz v0, :cond_4db
+
+    .line 438
+    invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {v1, v3, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->rememberReactionTarget(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 444
+    :cond_4db
+    sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
+
+    const-string v4, "incoming_dedup_disable"
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    invoke-static {v0, v4, v6, v5, v6}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_50e
+
+    .line 445
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->seenMessageIds:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v0, v3}, Ljava/util/LinkedHashSet;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/util/LinkedHashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4f2
+    if-eqz v0, :cond_50e
 
-    .line 431
+    .line 447
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2911,26 +2971,26 @@
 
     invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 432
+    .line 448
     return-void
 
-    .line 435
-    :cond_4f2
+    .line 451
+    :cond_50e
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getTimestamp()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v1, v3, v4}, Lcom/textrcs/receive/IncomingMessageHandler;->normalizeTimestamp(J)J
+    invoke-direct {v1, v4, v5}, Lcom/textrcs/receive/IncomingMessageHandler;->normalizeTimestamp(J)J
 
     move-result-wide v5
 
-    .line 446
+    .line 462
     .local v5, "ts":J
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->hasMessageStatus()Z
 
     move-result v0
 
-    if-eqz v0, :cond_517
+    if-eqz v0, :cond_533
 
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageStatus()Lcom/textrcs/gmproto/conversations/MessageStatus;
 
@@ -2940,42 +3000,42 @@
 
     move-result v0
 
-    move/from16 v3, v27
+    move/from16 v4, v26
 
-    if-gt v3, v0, :cond_512
+    if-gt v4, v0, :cond_52e
 
-    const/16 v3, 0x17
+    const/16 v4, 0x17
 
-    if-ge v0, v3, :cond_512
-
-    const/4 v0, 0x1
-
-    goto :goto_513
-
-    :cond_512
-    const/4 v0, 0x0
-
-    :goto_513
-    if-eqz v0, :cond_517
+    if-ge v0, v4, :cond_52e
 
     const/4 v0, 0x1
 
-    goto :goto_518
+    goto :goto_52f
 
-    :cond_517
+    :cond_52e
     const/4 v0, 0x0
 
-    .line 445
-    :goto_518
+    :goto_52f
+    if-eqz v0, :cond_533
+
+    const/4 v0, 0x1
+
+    goto :goto_534
+
+    :cond_533
+    const/4 v0, 0x0
+
+    .line 461
+    :goto_534
     move/from16 v16, v0
 
-    .line 447
+    .line 463
     .local v16, "outgoingStatus":Z
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->hasSenderParticipant()Z
 
     move-result v0
 
-    if-eqz v0, :cond_52c
+    if-eqz v0, :cond_548
 
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getSenderParticipant()Lcom/textrcs/gmproto/conversations/Participant;
 
@@ -2985,56 +3045,60 @@
 
     move-result v0
 
-    if-eqz v0, :cond_52c
+    if-eqz v0, :cond_548
 
     const/4 v0, 0x1
 
-    goto :goto_52d
+    goto :goto_549
 
-    :cond_52c
+    :cond_548
     const/4 v0, 0x0
 
-    :goto_52d
+    :goto_549
     move v7, v0
 
-    .line 448
+    .line 464
     .local v7, "isMeSender":Z
-    if-nez v16, :cond_539
+    if-nez v16, :cond_554
 
-    if-eqz v7, :cond_533
+    if-eqz v7, :cond_54f
 
-    goto :goto_539
+    goto :goto_554
 
-    :cond_533
+    :cond_54f
     move v4, v7
+
+    move-object v7, v3
 
     move-object v3, v8
 
-    move-object/from16 v7, v40
+    goto/16 :goto_5cd
 
-    goto/16 :goto_5b0
-
-    .line 449
-    :cond_539
-    :goto_539
+    .line 465
+    :cond_554
+    :goto_554
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    const-string v3, "incoming_skip_outgoing_detection"
+    const-string v4, "incoming_skip_outgoing_detection"
 
-    const/4 v1, 0x0
+    move-object/from16 v39, v3
 
-    const/4 v4, 0x2
+    const/4 v1, 0x2
 
-    invoke-static {v0, v3, v1, v4, v1}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
+    const/4 v3, 0x0
+
+    .end local v3    # "body":Ljava/lang/String;
+    .local v39, "body":Ljava/lang/String;
+    invoke-static {v0, v4, v3, v1, v3}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_5aa
+    if-nez v0, :cond_5c7
 
-    .line 452
+    .line 468
     nop
 
-    .line 453
+    .line 469
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3057,12 +3121,12 @@
 
     move-result-object v0
 
-    .line 454
+    .line 470
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->hasMessageStatus()Z
 
     move-result v1
 
-    if-eqz v1, :cond_56c
+    if-eqz v1, :cond_589
 
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getMessageStatus()Lcom/textrcs/gmproto/conversations/MessageStatus;
 
@@ -3072,51 +3136,51 @@
 
     move-result v1
 
-    goto :goto_56d
+    goto :goto_58a
 
-    :cond_56c
+    :cond_589
     const/4 v1, -0x1
 
-    .line 453
-    :goto_56d
+    .line 469
+    :goto_58a
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 454
+    .line 470
     nop
 
-    .line 453
+    .line 469
     const-string v1, " isMeSender="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 455
+    .line 471
     nop
 
-    .line 453
+    .line 469
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 455
+    .line 471
     nop
 
-    .line 453
+    .line 469
     const-string v1, " participantID="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 455
+    .line 471
     invoke-virtual {v8}, Lcom/textrcs/gmproto/conversations/Message;->getParticipantID()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 453
+    .line 469
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -3125,11 +3189,11 @@
 
     move-result-object v0
 
-    .line 451
+    .line 467
     invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 457
-    move-object v0, v13
+    .line 473
+    move-object v0, v15
 
     check-cast v0, Ljava/util/Collection;
 
@@ -3137,7 +3201,7 @@
 
     move-result v0
 
-    const/16 v27, 0x1
+    const/16 v26, 0x1
 
     xor-int/lit8 v4, v0, 0x1
 
@@ -3145,13 +3209,13 @@
 
     move-object v2, v8
 
-    move-object/from16 v3, v40
+    move-object/from16 v3, v39
 
-    .end local v40    # "body":Ljava/lang/String;
+    .end local v39    # "body":Ljava/lang/String;
     .restart local v3    # "body":Ljava/lang/String;
     invoke-direct/range {v1 .. v6}, Lcom/textrcs/receive/IncomingMessageHandler;->handleOutgoing(Lcom/textrcs/gmproto/conversations/Message;Ljava/lang/String;ZJ)V
 
-    .line 458
+    .line 474
     move v4, v7
 
     move-object v7, v3
@@ -3163,33 +3227,33 @@
     .local v7, "body":Ljava/lang/String;
     return-void
 
-    .line 449
+    .line 465
     .end local v4    # "isMeSender":Z
     .local v7, "isMeSender":Z
-    .restart local v40    # "body":Ljava/lang/String;
-    :cond_5aa
+    .restart local v39    # "body":Ljava/lang/String;
+    :cond_5c7
     move-object/from16 v1, p0
 
     move v4, v7
 
     move-object v3, v8
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v39
 
-    .line 461
-    .end local v40    # "body":Ljava/lang/String;
+    .line 477
+    .end local v39    # "body":Ljava/lang/String;
     .restart local v4    # "isMeSender":Z
     .local v7, "body":Ljava/lang/String;
-    :goto_5b0
+    :goto_5cd
     invoke-direct {v1, v3}, Lcom/textrcs/receive/IncomingMessageHandler;->resolveSenderPhone(Lcom/textrcs/gmproto/conversations/Message;)Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
     move-result-object v8
 
-    .line 463
+    .line 479
     .local v8, "sender":Lcom/textrcs/receive/IncomingMessageHandler$Sender;
     nop
 
-    .line 464
+    .line 480
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3228,70 +3292,70 @@
 
     move-result-object v0
 
-    .line 465
+    .line 481
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getParticipantID()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 464
+    .line 480
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 465
+    .line 481
     nop
 
-    .line 464
+    .line 480
     const-string v3, ") tsMs="
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 465
+    .line 481
     nop
 
-    .line 464
+    .line 480
     invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 465
+    .line 481
     nop
 
-    .line 464
+    .line 480
     const-string v3, " text.len="
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 466
+    .line 482
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 464
+    .line 480
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 466
+    .line 482
     nop
 
-    .line 464
+    .line 480
     const-string v3, " mediaParts="
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 466
-    invoke-interface {v13}, Ljava/util/List;->size()I
+    .line 482
+    invoke-interface {v15}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 464
+    .line 480
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -3300,10 +3364,10 @@
 
     move-result-object v0
 
-    .line 462
+    .line 478
     invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
+    .line 493
     invoke-virtual {v8}, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->getSource()Ljava/lang/String;
 
     move-result-object v0
@@ -3314,16 +3378,16 @@
 
     move-result v0
 
-    if-eqz v0, :cond_662
+    if-eqz v0, :cond_67f
 
-    .line 478
+    .line 494
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v3, "incoming_allow_unresolved_sender"
 
-    move/from16 v17, v4
+    move/from16 v18, v4
 
-    move-wide/from16 v41, v5
+    move-wide/from16 v40, v5
 
     const/4 v4, 0x2
 
@@ -3331,18 +3395,18 @@
 
     .end local v4    # "isMeSender":Z
     .end local v5    # "ts":J
-    .local v17, "isMeSender":Z
-    .local v41, "ts":J
+    .local v18, "isMeSender":Z
+    .local v40, "ts":J
     invoke-static {v0, v3, v5, v4, v5}, Lcom/textrcs/control/Hooks;->shouldSkip$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_666
+    if-nez v0, :cond_683
 
-    .line 481
+    .line 497
     nop
 
-    .line 482
+    .line 498
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3367,20 +3431,20 @@
 
     move-result-object v0
 
-    .line 483
+    .line 499
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getParticipantID()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 482
+    .line 498
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 483
+    .line 499
     nop
 
-    .line 482
+    .line 498
     const-string v2, "); not delivering"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3391,32 +3455,32 @@
 
     move-result-object v0
 
-    .line 480
+    .line 496
     invoke-static {v9, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
+    .line 501
     return-void
 
-    .line 477
-    .end local v17    # "isMeSender":Z
-    .end local v41    # "ts":J
+    .line 493
+    .end local v18    # "isMeSender":Z
+    .end local v40    # "ts":J
     .restart local v4    # "isMeSender":Z
     .restart local v5    # "ts":J
-    :cond_662
-    move/from16 v17, v4
+    :cond_67f
+    move/from16 v18, v4
 
-    move-wide/from16 v41, v5
+    move-wide/from16 v40, v5
 
-    .line 494
+    .line 510
     .end local v4    # "isMeSender":Z
     .end local v5    # "ts":J
-    .restart local v17    # "isMeSender":Z
-    .restart local v41    # "ts":J
-    :cond_666
+    .restart local v18    # "isMeSender":Z
+    .restart local v40    # "ts":J
+    :cond_683
     nop
 
-    .line 495
-    :try_start_667
+    .line 511
+    :try_start_684
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
@@ -3429,18 +3493,18 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v14, v3, v4, v7}, Lcom/textrcs/spam/SpamGuard;->classifyAsync(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_677
-    .catchall {:try_start_667 .. :try_end_677} :catchall_678
+    invoke-virtual {v0, v13, v3, v4, v7}, Lcom/textrcs/spam/SpamGuard;->classifyAsync(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_694
+    .catchall {:try_start_684 .. :try_end_694} :catchall_695
 
-    goto :goto_679
+    goto :goto_696
 
-    .line 496
-    :catchall_678
+    .line 512
+    :catchall_695
     move-exception v0
 
-    .line 506
-    :goto_679
+    .line 522
+    :goto_696
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
@@ -3453,27 +3517,27 @@
 
     check-cast v0, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
 
-    if-eqz v0, :cond_690
+    if-eqz v0, :cond_6ad
 
     invoke-virtual {v0}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;->isGroup()Z
 
     move-result v0
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    if-ne v0, v3, :cond_690
+    if-ne v0, v4, :cond_6ad
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    goto :goto_691
+    goto :goto_6ae
 
-    :cond_690
-    const/4 v3, 0x0
+    :cond_6ad
+    const/4 v4, 0x0
 
-    :goto_691
-    if-eqz v3, :cond_6a1
+    :goto_6ae
+    if-eqz v4, :cond_6be
 
-    .line 507
+    .line 523
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v3, "incoming_skip_group_routing"
@@ -3486,21 +3550,21 @@
 
     move-result v0
 
-    if-nez v0, :cond_6a1
+    if-nez v0, :cond_6be
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    goto :goto_6a2
+    goto :goto_6bf
 
-    :cond_6a1
-    const/4 v3, 0x0
+    :cond_6be
+    const/4 v4, 0x0
 
-    .line 506
-    :goto_6a2
-    move/from16 v18, v3
+    .line 522
+    :goto_6bf
+    move/from16 v17, v4
 
-    .line 508
-    .local v18, "convIsGroup":Z
+    .line 524
+    .local v17, "convIsGroup":Z
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
@@ -3513,25 +3577,25 @@
 
     check-cast v0, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
 
-    .line 509
-    if-eqz v0, :cond_6ff
+    .line 525
+    if-eqz v0, :cond_71c
 
-    .line 508
+    .line 524
     nop
 
-    .line 509
+    .line 525
     invoke-virtual {v0}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;->getParticipantPhones()Ljava/util/List;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6ff
+    if-eqz v0, :cond_71c
 
     check-cast v0, Ljava/lang/Iterable;
 
     .restart local v0    # "$this$filter$iv":Ljava/lang/Iterable;
     const/4 v3, 0x0
 
-    .line 952
+    .line 990
     .local v3, "$i$f$filter":I
     new-instance v4, Ljava/util/ArrayList;
 
@@ -3545,18 +3609,18 @@
     .local v5, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     const/4 v6, 0x0
 
-    .line 953
-    .local v6, "$i$f$filterTo":I
+    .line 991
+    .restart local v6    # "$i$f$filterTo":I
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v19
 
-    :goto_6c9
+    :goto_6e6
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v20
 
-    if-eqz v20, :cond_6f2
+    if-eqz v20, :cond_70f
 
     move-object/from16 v20, v0
 
@@ -3578,7 +3642,7 @@
     .local v3, "it":Ljava/lang/String;
     const/16 v22, 0x0
 
-    .line 509
+    .line 525
     .local v22, "$i$a$-filter-IncomingMessageHandler$handleMessage$groupMembers$1":I
     move-object/from16 v24, v5
 
@@ -3592,30 +3656,30 @@
 
     move-result v5
 
-    .line 953
+    .line 991
     .end local v3    # "it":Ljava/lang/String;
     .end local v22    # "$i$a$-filter-IncomingMessageHandler$handleMessage$groupMembers$1":I
-    if-nez v5, :cond_6eb
+    if-nez v5, :cond_708
 
     invoke-interface {v4, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    :cond_6eb
+    :cond_708
     move-object/from16 v0, v20
 
     move/from16 v3, v21
 
     move-object/from16 v5, v24
 
-    goto :goto_6c9
+    goto :goto_6e6
 
-    .line 954
+    .line 992
     .end local v20    # "$this$filter$iv":Ljava/lang/Iterable;
     .end local v21    # "$i$f$filter":I
     .end local v24    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     .local v0, "$this$filter$iv":Ljava/lang/Iterable;
     .local v3, "$i$f$filter":I
     .restart local v5    # "$this$filterTo$iv$iv":Ljava/lang/Iterable;
-    :cond_6f2
+    :cond_70f
     move-object/from16 v20, v0
 
     move/from16 v21, v3
@@ -3633,34 +3697,34 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 952
+    .line 990
     nop
 
-    .line 509
+    .line 525
     .end local v20    # "$this$filter$iv":Ljava/lang/Iterable;
     .end local v21    # "$i$f$filter":I
     nop
 
-    .line 508
+    .line 524
     move-object v6, v0
 
-    goto :goto_704
+    goto :goto_721
 
-    .line 509
-    :cond_6ff
+    .line 525
+    :cond_71c
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     move-object v6, v0
 
-    .line 508
-    :goto_704
+    .line 524
+    :goto_721
     nop
 
-    .line 510
+    .line 526
     .local v6, "groupMembers":Ljava/util/List;
-    if-eqz v18, :cond_712
+    if-eqz v17, :cond_72f
 
     move-object v0, v6
 
@@ -3670,30 +3734,30 @@
 
     move-result v0
 
-    if-nez v0, :cond_712
+    if-nez v0, :cond_72f
 
     const/4 v4, 0x1
 
-    goto :goto_713
+    goto :goto_730
 
-    :cond_712
+    :cond_72f
     const/4 v4, 0x0
 
-    .line 511
+    .line 527
     .local v4, "deliverAsGroup":Z
-    :goto_713
-    if-eqz v18, :cond_73c
+    :goto_730
+    if-eqz v17, :cond_759
 
     invoke-interface {v6}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_73c
+    if-eqz v0, :cond_759
 
-    .line 513
+    .line 529
     nop
 
-    .line 514
+    .line 530
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3722,12 +3786,12 @@
 
     move-result-object v0
 
-    .line 512
+    .line 528
     invoke-static {v9, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 519
-    :cond_73c
-    move-object v0, v13
+    .line 535
+    :cond_759
+    move-object v0, v15
 
     check-cast v0, Ljava/util/Collection;
 
@@ -3735,9 +3799,9 @@
 
     move-result v0
 
-    if-nez v0, :cond_7ae
+    if-nez v0, :cond_7d1
 
-    .line 523
+    .line 539
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
 
     move-result-object v0
@@ -3746,24 +3810,24 @@
 
     invoke-direct {v1, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->markSeen(Ljava/lang/String;)V
 
-    .line 524
-    invoke-static {v13}, Lkotlin/collections/CollectionsKt;->first(Ljava/util/List;)Ljava/lang/Object;
+    .line 540
+    invoke-static {v15}, Lkotlin/collections/CollectionsKt;->first(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/textrcs/gmproto/conversations/MediaContent;
 
-    .line 525
+    .line 541
     .local v0, "mc":Lcom/textrcs/gmproto/conversations/MediaContent;
-    invoke-interface {v13}, Ljava/util/List;->size()I
+    invoke-interface {v15}, Ljava/util/List;->size()I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    if-le v2, v3, :cond_77c
+    if-le v2, v3, :cond_799
 
-    .line 526
+    .line 542
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3774,7 +3838,7 @@
 
     move-result-object v2
 
-    invoke-interface {v13}, Ljava/util/List;->size()I
+    invoke-interface {v15}, Ljava/util/List;->size()I
 
     move-result v3
 
@@ -3794,13 +3858,13 @@
 
     invoke-static {v9, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
-    :cond_77c
+    .line 544
+    :cond_799
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 531
+    .line 547
     .local v2, "msgId":Ljava/lang/String;
     sget-object v3, Lcom/textrcs/wake/ConnectionManager;->INSTANCE:Lcom/textrcs/wake/ConnectionManager;
 
@@ -3810,13 +3874,13 @@
 
     move-result-object v10
 
-    .line 532
+    .line 548
     .local v10, "dlHold":Ljava/lang/String;
     sget-object v3, Lcom/textrcs/wake/ConnectionManager;->INSTANCE:Lcom/textrcs/wake/ConnectionManager;
 
-    invoke-virtual {v3, v14, v10}, Lcom/textrcs/wake/ConnectionManager;->acquire(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v3, v13, v10}, Lcom/textrcs/wake/ConnectionManager;->acquire(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 533
+    .line 549
     sget-object v3, Lcom/textrcs/receive/IncomingMessageHandler;->mediaExecutor:Ljava/util/concurrent/ExecutorService;
 
     move-object v1, v0
@@ -3829,16 +3893,16 @@
 
     move/from16 v19, v11
 
-    move-wide/from16 v8, v41
+    move-wide/from16 v8, v40
 
     move-object v11, v3
 
-    move-object v3, v14
+    move-object v3, v13
 
-    move-object/from16 v14, p0
+    move-object/from16 v13, p0
 
     .end local v11    # "isOwnSend":Z
-    .end local v41    # "ts":J
+    .end local v40    # "ts":J
     .local v5, "sender":Lcom/textrcs/receive/IncomingMessageHandler$Sender;
     .local v8, "ts":J
     .local v19, "isOwnSend":Z
@@ -3846,163 +3910,175 @@
 
     move-object v3, v2
 
+    move-object/from16 v39, v7
+
+    move-object v7, v0
+
     move-object v2, v1
 
     move-object v1, v5
 
-    move-wide/from16 v43, v8
-
-    move-object v8, v0
-
     move-object v0, v6
 
-    move-wide/from16 v5, v43
+    move-wide v5, v8
 
     .end local v6    # "groupMembers":Ljava/util/List;
+    .end local v7    # "body":Ljava/lang/String;
     .end local v8    # "ts":J
     .local v0, "groupMembers":Ljava/util/List;
     .local v1, "sender":Lcom/textrcs/receive/IncomingMessageHandler$Sender;
     .local v2, "mc":Lcom/textrcs/gmproto/conversations/MediaContent;
     .local v3, "msgId":Ljava/lang/String;
     .local v5, "ts":J
-    invoke-interface {v11, v8}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+    .restart local v39    # "body":Ljava/lang/String;
+    invoke-interface {v11, v7}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+
+    move-wide/from16 v42, v5
+
+    move v5, v4
+
+    move-wide/from16 v3, v42
 
     move-object/from16 v21, v0
+
+    move-object/from16 v6, v39
 
     .end local v2    # "mc":Lcom/textrcs/gmproto/conversations/MediaContent;
     .end local v3    # "msgId":Ljava/lang/String;
     .end local v10    # "dlHold":Ljava/lang/String;
-    goto/16 :goto_909
+    goto/16 :goto_936
 
-    .line 573
+    .line 589
     .end local v0    # "groupMembers":Ljava/util/List;
     .end local v1    # "sender":Lcom/textrcs/receive/IncomingMessageHandler$Sender;
     .end local v5    # "ts":J
     .end local v19    # "isOwnSend":Z
+    .end local v39    # "body":Ljava/lang/String;
     .restart local v6    # "groupMembers":Ljava/util/List;
+    .restart local v7    # "body":Ljava/lang/String;
     .local v8, "sender":Lcom/textrcs/receive/IncomingMessageHandler$Sender;
     .restart local v11    # "isOwnSend":Z
-    .restart local v41    # "ts":J
-    :cond_7ae
-    move-object v14, v1
+    .restart local v40    # "ts":J
+    :cond_7d1
+    move-object v13, v1
 
     move-object v0, v6
+
+    move-object/from16 v39, v7
 
     move-object v1, v8
 
     move/from16 v19, v11
 
-    move-wide/from16 v5, v41
+    move-wide/from16 v5, v40
 
     .end local v6    # "groupMembers":Ljava/util/List;
+    .end local v7    # "body":Ljava/lang/String;
     .end local v8    # "sender":Lcom/textrcs/receive/IncomingMessageHandler$Sender;
     .end local v11    # "isOwnSend":Z
-    .end local v41    # "ts":J
+    .end local v40    # "ts":J
     .restart local v0    # "groupMembers":Ljava/util/List;
     .restart local v1    # "sender":Lcom/textrcs/receive/IncomingMessageHandler$Sender;
     .restart local v5    # "ts":J
     .restart local v19    # "isOwnSend":Z
+    .restart local v39    # "body":Ljava/lang/String;
     const/4 v3, 0x6
 
-    const-string v8, " body.len="
+    const-string v7, " body.len="
 
-    if-eqz v4, :cond_86d
+    if-eqz v4, :cond_893
 
-    .line 577
-    sget-object v37, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
+    .line 593
+    sget-object v36, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
 
-    .line 578
+    .line 594
     invoke-virtual {v1}, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->getValue()Ljava/lang/String;
 
-    move-result-object v38
+    move-result-object v37
 
-    .line 579
-    sget-object v10, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
+    .line 595
+    sget-object v8, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
 
-    move-result-object v11
-
-    invoke-virtual {v10, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
     move-result-object v10
 
-    check-cast v10, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
+    invoke-virtual {v8, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v10, :cond_7d4
+    move-result-object v8
 
-    invoke-virtual {v10}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;->getParticipantPhones()Ljava/util/List;
+    check-cast v8, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
 
-    move-result-object v10
+    if-eqz v8, :cond_7f9
 
-    if-nez v10, :cond_7d8
+    invoke-virtual {v8}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;->getParticipantPhones()Ljava/util/List;
 
-    :cond_7d4
+    move-result-object v8
+
+    if-nez v8, :cond_7fd
+
+    :cond_7f9
     invoke-static {}, Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;
 
-    move-result-object v10
+    move-result-object v8
 
-    :cond_7d8
-    move-object/from16 v39, v10
+    :cond_7fd
+    move-object/from16 v38, v8
 
-    .line 580
+    .line 596
     nop
 
-    .line 577
-    move-wide/from16 v41, v5
-
-    move-object/from16 v40, v7
+    .line 593
+    move-wide/from16 v40, v5
 
     .end local v5    # "ts":J
-    .end local v7    # "body":Ljava/lang/String;
-    .restart local v40    # "body":Ljava/lang/String;
-    .restart local v41    # "ts":J
-    invoke-virtual/range {v37 .. v42}, Lcom/textrcs/bridge/TextraDbBridge;->writeIncomingGroup(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;J)Z
+    .restart local v40    # "ts":J
+    invoke-virtual/range {v36 .. v41}, Lcom/textrcs/bridge/TextraDbBridge;->writeIncomingGroup(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;J)Z
 
     move-result v5
 
-    .line 583
-    .end local v40    # "body":Ljava/lang/String;
+    .line 599
+    move-object/from16 v6, v39
+
+    .line 600
+    .end local v39    # "body":Ljava/lang/String;
     .local v5, "wrote":Z
-    .restart local v7    # "body":Ljava/lang/String;
-    nop
+    .local v6, "body":Ljava/lang/String;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    .line 584
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v10, "  GROUP text wrote="
 
-    invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v8
 
     const-string v10, " members="
 
-    invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v8
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v11
 
-    invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v8
 
     const-string v11, " from.tail="
 
-    invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v8
 
-    .line 585
+    .line 601
     invoke-virtual {v1}, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->getValue()Ljava/lang/String;
 
     move-result-object v11
@@ -4011,26 +4087,26 @@
 
     move-result-object v3
 
-    .line 584
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 600
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 585
+    .line 601
     nop
 
-    .line 584
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 600
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 585
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    .line 601
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
 
-    move-result v6
+    move-result v8
 
-    .line 584
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 600
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -4038,17 +4114,17 @@
 
     move-result-object v3
 
-    .line 582
+    .line 598
     invoke-static {v9, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 588
+    .line 604
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "RCV group writeIncomingGroup="
+    const-string v8, "RCV group writeIncomingGroup="
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -4062,23 +4138,23 @@
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result v6
+    move-result v8
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 589
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v6
+    move-result-object v3
 
-    .line 588
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 605
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    .line 604
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -4086,53 +4162,72 @@
 
     move-result-object v3
 
-    .line 587
+    .line 603
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 591
-    if-eqz v5, :cond_867
+    .line 607
+    if-eqz v5, :cond_88c
 
-    .line 592
+    .line 608
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v14, v3}, Lcom/textrcs/receive/IncomingMessageHandler;->markSeen(Ljava/lang/String;)V
+    invoke-direct {v13, v3}, Lcom/textrcs/receive/IncomingMessageHandler;->markSeen(Ljava/lang/String;)V
 
     move-object/from16 v21, v0
 
-    move-wide/from16 v5, v41
+    move v5, v4
+
+    move-wide/from16 v3, v40
 
     .end local v5    # "wrote":Z
-    goto/16 :goto_909
+    goto/16 :goto_936
 
-    .line 591
+    .line 607
     .restart local v5    # "wrote":Z
-    :cond_867
+    :cond_88c
     move-object/from16 v21, v0
 
-    move-wide/from16 v5, v41
+    move v5, v4
 
-    goto/16 :goto_909
+    move-wide/from16 v3, v40
 
-    .line 596
-    .end local v41    # "ts":J
+    goto/16 :goto_936
+
+    .line 612
+    .end local v6    # "body":Ljava/lang/String;
+    .end local v40    # "ts":J
     .local v5, "ts":J
-    :cond_86d
+    .restart local v39    # "body":Ljava/lang/String;
+    :cond_893
+    move-wide/from16 v42, v5
+
+    move v5, v4
+
+    move-wide/from16 v3, v42
+
+    move-object/from16 v6, v39
+
+    .end local v4    # "deliverAsGroup":Z
+    .end local v39    # "body":Ljava/lang/String;
+    .local v3, "ts":J
+    .local v5, "deliverAsGroup":Z
+    .restart local v6    # "body":Ljava/lang/String;
     sget-object v11, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
 
     invoke-virtual {v1}, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->getValue()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v8
 
-    invoke-virtual {v11, v3, v7, v5, v6}, Lcom/textrcs/bridge/TextraDbBridge;->writeIncoming(Ljava/lang/String;Ljava/lang/String;J)Z
+    invoke-virtual {v11, v8, v6, v3, v4}, Lcom/textrcs/bridge/TextraDbBridge;->writeIncoming(Ljava/lang/String;Ljava/lang/String;J)Z
 
-    move-result v3
+    move-result v8
 
-    .line 597
-    .local v3, "wrote":Z
+    .line 613
+    .local v8, "wrote":Z
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -4147,7 +4242,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -4171,7 +4266,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v11
 
@@ -4185,7 +4280,7 @@
 
     invoke-static {v9, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
+    .line 615
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4196,7 +4291,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -4224,31 +4319,31 @@
 
     move-result-object v0
 
-    .line 600
+    .line 616
     invoke-virtual {v1}, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->getSource()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 599
+    .line 615
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 600
+    .line 616
     nop
 
-    .line 599
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 615
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 600
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    .line 616
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
 
-    move-result v8
+    move-result v7
 
-    .line 599
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 615
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -4256,22 +4351,22 @@
 
     move-result-object v0
 
-    .line 598
+    .line 614
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 602
-    if-eqz v3, :cond_909
+    .line 618
+    if-eqz v8, :cond_936
 
-    .line 603
+    .line 619
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getMessageID()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v14, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->markSeen(Ljava/lang/String;)V
+    invoke-direct {v13, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->markSeen(Ljava/lang/String;)V
 
-    .line 606
+    .line 622
     invoke-virtual/range {p2 .. p2}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
 
     move-result-object v0
@@ -4284,12 +4379,12 @@
 
     move-result-object v2
 
-    invoke-direct {v14, v0, v2}, Lcom/textrcs/receive/IncomingMessageHandler;->warmConvFromIncoming(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v13, v0, v2}, Lcom/textrcs/receive/IncomingMessageHandler;->warmConvFromIncoming(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
-    .end local v3    # "wrote":Z
-    :cond_909
-    :goto_909
+    .line 625
+    .end local v8    # "wrote":Z
+    :cond_936
+    :goto_936
     return-void
 .end method
 
@@ -4345,10 +4440,10 @@
 
     invoke-static {v13, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 534
+    .line 550
     nop
 
-    .line 535
+    .line 551
     const-wide/16 v6, 0x1b58
 
     :try_start_30
@@ -4366,7 +4461,7 @@
 
     if-nez v2, :cond_9a
 
-    .line 536
+    .line 552
     invoke-virtual/range {p0 .. p0}, Lcom/textrcs/gmproto/conversations/MediaContent;->getDecryptionKey()Lcom/google/protobuf/ByteString;
 
     move-result-object v2
@@ -4375,11 +4470,11 @@
 
     move-result-object v2
 
-    .line 538
+    .line 554
     .local v2, "keyBytes":[B
     nop
 
-    .line 539
+    .line 555
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -4418,28 +4513,28 @@
 
     move-result-object v8
 
-    .line 540
+    .line 556
     invoke-virtual/range {p0 .. p0}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMimeType()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 539
+    .line 555
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 540
+    .line 556
     const-string v9, " key.len="
 
-    .line 539
+    .line 555
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 540
+    .line 556
     array-length v9, v2
 
-    .line 539
+    .line 555
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v8
@@ -4448,10 +4543,10 @@
 
     move-result-object v8
 
-    .line 537
+    .line 553
     invoke-static {v15, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
+    .line 558
     sget-object v8, Lcom/textrcs/bridge/RustBridge;->INSTANCE:Lcom/textrcs/bridge/RustBridge;
 
     invoke-virtual/range {p0 .. p0}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaID()Ljava/lang/String;
@@ -4469,7 +4564,7 @@
     .end local v2    # "keyBytes":[B
     goto :goto_ce
 
-    .line 544
+    .line 560
     :cond_9a
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4509,7 +4604,7 @@
 
     invoke-static {v15, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 545
+    .line 561
     invoke-virtual/range {p0 .. p0}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMediaData()Lcom/google/protobuf/ByteString;
 
     move-result-object v0
@@ -4518,17 +4613,17 @@
 
     move-result-object v0
 
-    .line 543
+    .line 559
     nop
 
-    .line 544
+    .line 560
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 535
+    .line 551
     :goto_ce
     nop
 
-    .line 547
+    .line 563
     .local v0, "bytes":[B
     invoke-virtual/range {p0 .. p0}, Lcom/textrcs/gmproto/conversations/MediaContent;->getMimeType()Ljava/lang/String;
 
@@ -4542,10 +4637,10 @@
 
     if-eqz v8, :cond_df
 
-    .line 988
+    .line 1026
     const/4 v2, 0x0
 
-    .line 547
+    .line 563
     .local v2, "$i$a$-ifBlank-IncomingMessageHandler$handleMessage$1$mime$1":I
     const-string v8, "image/jpeg"
 
@@ -4559,7 +4654,7 @@
     :try_end_e2
     .catchall {:try_start_30 .. :try_end_e2} :catchall_184
 
-    .line 548
+    .line 564
     .local v8, "mime":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -4569,18 +4664,18 @@
 
     if-eqz v11, :cond_110
 
-    .line 549
+    .line 565
     move-object/from16 v16, v2
 
     :try_start_e9
     sget-object v2, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
 
-    .line 550
+    .line 566
     invoke-virtual/range {p4 .. p4}, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->getValue()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 551
+    .line 567
     move-object/from16 v17, v12
 
     check-cast v17, Ljava/lang/CharSequence;
@@ -4599,10 +4694,10 @@
     :goto_fb
     if-eqz v9, :cond_100
 
-    .line 988
+    .line 1026
     const/4 v9, 0x0
 
-    .line 551
+    .line 567
     .local v9, "$i$a$-ifEmpty-IncomingMessageHandler$handleMessage$1$wrote$1":I
     nop
 
@@ -4615,7 +4710,7 @@
     :goto_102
     check-cast v16, Ljava/lang/String;
 
-    .line 549
+    .line 565
     move-wide/from16 v9, p7
 
     move-object v7, v0
@@ -4637,7 +4732,7 @@
     .local v7, "mime":Ljava/lang/String;
     goto :goto_138
 
-    .line 554
+    .line 570
     .end local v6    # "bytes":[B
     .end local v7    # "mime":Ljava/lang/String;
     .restart local v0    # "bytes":[B
@@ -4655,7 +4750,7 @@
     .restart local v7    # "mime":Ljava/lang/String;
     sget-object v2, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
 
-    .line 555
+    .line 571
     invoke-virtual/range {p4 .. p4}, Lcom/textrcs/receive/IncomingMessageHandler$Sender;->getValue()Ljava/lang/String;
 
     move-result-object v4
@@ -4678,10 +4773,10 @@
     :goto_125
     if-eqz v9, :cond_12a
 
-    .line 988
+    .line 1026
     const/4 v0, 0x0
 
-    .line 555
+    .line 571
     .local v0, "$i$a$-ifEmpty-IncomingMessageHandler$handleMessage$1$wrote$2":I
     move-object/from16 v0, v16
 
@@ -4693,7 +4788,7 @@
 
     invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 554
+    .line 570
     move-object/from16 v3, p2
 
     move-wide/from16 v8, p7
@@ -4702,15 +4797,15 @@
 
     move-result v0
 
-    .line 548
+    .line 564
     :goto_138
     nop
 
-    .line 559
+    .line 575
     .local v0, "wrote":Z
     nop
 
-    .line 560
+    .line 576
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4751,26 +4846,26 @@
 
     move-result-object v2
 
-    .line 561
+    .line 577
     array-length v3, v6
 
-    .line 560
+    .line 576
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 561
+    .line 577
     const-string v3, "b mime="
 
-    .line 560
+    .line 576
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 561
+    .line 577
     nop
 
-    .line 560
+    .line 576
     invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -4779,12 +4874,12 @@
 
     move-result-object v2
 
-    .line 558
+    .line 574
     invoke-static {v15, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_17a
     .catchall {:try_start_e9 .. :try_end_17a} :catchall_180
 
-    .line 570
+    .line 586
     nop
 
     .end local v0    # "wrote":Z
@@ -4796,7 +4891,7 @@
 
     goto :goto_1e5
 
-    .line 563
+    .line 579
     :catchall_180
     move-exception v0
 
@@ -4809,12 +4904,12 @@
 
     move-wide v2, v6
 
-    .line 565
+    .line 581
     .local v0, "e":Ljava/lang/Throwable;
     :goto_186
     nop
 
-    .line 566
+    .line 582
     :try_start_187
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4862,10 +4957,10 @@
 
     move-result-object v4
 
-    .line 564
+    .line 580
     invoke-static {v15, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 568
+    .line 584
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4908,20 +5003,20 @@
     :try_end_1e3
     .catchall {:try_start_187 .. :try_end_1e3} :catchall_1ea
 
-    .line 570
+    .line 586
     .end local v0    # "e":Ljava/lang/Throwable;
     sget-object v0, Lcom/textrcs/wake/ConnectionManager;->INSTANCE:Lcom/textrcs/wake/ConnectionManager;
 
     :goto_1e5
     invoke-virtual {v0, v13, v2, v3}, Lcom/textrcs/wake/ConnectionManager;->releaseAfter(Ljava/lang/String;J)V
 
-    .line 571
+    .line 587
     nop
 
-    .line 572
+    .line 588
     return-void
 
-    .line 570
+    .line 586
     :catchall_1ea
     move-exception v0
 
@@ -4939,7 +5034,7 @@
     .param p3, "hasMedia"    # Z
     .param p4, "ts"    # J
 
-    .line 632
+    .line 648
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
 
     move-result-object v0
@@ -4952,13 +5047,13 @@
 
     move-result-object v5
 
-    .line 633
+    .line 649
     .local v5, "recipients":Ljava/util/List;
     const-string v0, "getMessageID(...)"
 
     if-nez v5, :cond_91
 
-    .line 634
+    .line 650
     sget-object v2, Lcom/textrcs/receive/IncomingMessageHandler;->pendingOutgoing:Ljava/util/HashMap;
 
     check-cast v2, Ljava/util/Map;
@@ -4973,48 +5068,48 @@
     .local v3, "key$iv":Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .line 956
+    .line 994
     .local v1, "$i$f$getOrPut":I
     invoke-interface {v2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 957
+    .line 995
     .local v4, "value$iv":Ljava/lang/Object;
     if-nez v4, :cond_2f
 
-    .line 958
+    .line 996
     const/4 v6, 0x0
 
-    .line 634
+    .line 650
     .local v6, "$i$a$-getOrPut-IncomingMessageHandler$handleOutgoing$q$1":I
     new-instance v7, Ljava/util/LinkedHashMap;
 
     invoke-direct {v7}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 958
+    .line 996
     .end local v6    # "$i$a$-getOrPut-IncomingMessageHandler$handleOutgoing$q$1":I
     nop
 
-    .line 959
+    .line 997
     .local v7, "answer$iv":Ljava/lang/Object;
     invoke-interface {v2, v3, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 960
+    .line 998
     nop
 
     .end local v7    # "answer$iv":Ljava/lang/Object;
     goto :goto_30
 
-    .line 962
+    .line 1000
     :cond_2f
     move-object v7, v4
 
-    .line 957
+    .line 995
     :goto_30
     nop
 
-    .line 634
+    .line 650
     .end local v1    # "$i$f$getOrPut":I
     .end local v2    # "$this$getOrPut$iv":Ljava/util/Map;
     .end local v3    # "key$iv":Ljava/lang/Object;
@@ -5023,7 +5118,7 @@
 
     check-cast v1, Ljava/util/LinkedHashMap;
 
-    .line 635
+    .line 651
     .local v1, "q":Ljava/util/LinkedHashMap;
     move-object v2, v1
 
@@ -5053,10 +5148,10 @@
 
     invoke-interface {v2, v3, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 637
+    .line 653
     nop
 
-    .line 638
+    .line 654
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5095,12 +5190,12 @@
 
     move-result-object v0
 
-    .line 639
+    .line 655
     invoke-virtual {v1}, Ljava/util/LinkedHashMap;->size()I
 
     move-result v2
 
-    .line 638
+    .line 654
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -5115,15 +5210,15 @@
 
     move-result-object v0
 
-    .line 636
+    .line 652
     const-string v2, "TextRCSIncoming"
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
+    .line 657
     return-void
 
-    .line 643
+    .line 659
     .end local v1    # "q":Ljava/util/LinkedHashMap;
     :cond_91
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
@@ -5148,7 +5243,7 @@
 
     invoke-direct/range {v2 .. v9}, Lcom/textrcs/receive/IncomingMessageHandler;->deliverOutgoing(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ZJ)V
 
-    .line 644
+    .line 660
     return-void
 .end method
 
@@ -5156,22 +5251,22 @@
     .registers 30
     .param p1, "data"    # Lcom/textrcs/gmproto/conversations/Message;
 
-    .line 750
+    .line 766
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->appContext:Landroid/content/Context;
 
     if-eqz v0, :cond_a
 
-    .line 955
+    .line 993
     .local v0, "it":Landroid/content/Context;
     const/4 v1, 0x0
 
-    .line 750
+    .line 766
     .local v1, "$i$a$-let-IncomingMessageHandler$handleReactions$1":I
     sget-object v2, Lcom/textrcs/receive/IncomingMessageHandler;->INSTANCE:Lcom/textrcs/receive/IncomingMessageHandler;
 
     invoke-direct {v2, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->loadPersistedReactions(Landroid/content/Context;)V
 
-    .line 751
+    .line 767
     .end local v0    # "it":Landroid/content/Context;
     .end local v1    # "$i$a$-let-IncomingMessageHandler$handleReactions$1":I
     :cond_a
@@ -5179,7 +5274,7 @@
 
     move-result-object v0
 
-    .line 752
+    .line 768
     .local v0, "msgId":Ljava/lang/String;
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -5214,7 +5309,7 @@
     .local v1, "$this$none$iv":Ljava/lang/Iterable;
     const/4 v6, 0x0
 
-    .line 963
+    .line 1001
     .local v6, "$i$f$none":I
     instance-of v7, v1, Ljava/util/Collection;
 
@@ -5234,7 +5329,7 @@
 
     goto :goto_64
 
-    .line 964
+    .line 1002
     :cond_38
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -5259,7 +5354,7 @@
     .local v9, "it":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 752
+    .line 768
     .local v10, "$i$a$-none-IncomingMessageHandler$handleReactions$2":I
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -5281,7 +5376,7 @@
 
     move-result v9
 
-    .line 964
+    .line 1002
     .end local v9    # "it":Ljava/lang/String;
     .end local v10    # "$i$a$-none-IncomingMessageHandler$handleReactions$2":I
     if-eqz v9, :cond_3c
@@ -5290,12 +5385,12 @@
 
     goto :goto_64
 
-    .line 965
+    .line 1003
     .end local v8    # "element$iv":Ljava/lang/Object;
     :cond_63
     move v1, v5
 
-    .line 752
+    .line 768
     .end local v1    # "$this$none$iv":Ljava/lang/Iterable;
     .end local v6    # "$i$f$none":I
     :goto_64
@@ -5307,7 +5402,7 @@
 
     goto/16 :goto_3d9
 
-    .line 754
+    .line 770
     :cond_6c
     invoke-virtual/range {p1 .. p1}, Lcom/textrcs/gmproto/conversations/Message;->getMessageInfoList()Ljava/util/List;
 
@@ -5319,13 +5414,13 @@
 
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 755
+    .line 771
     nop
 
     .local v1, "$this$mapNotNull$iv":Ljava/lang/Iterable;
     const/4 v6, 0x0
 
-    .line 966
+    .line 1004
     .local v6, "$i$f$mapNotNull":I
     new-instance v7, Ljava/util/ArrayList;
 
@@ -5339,14 +5434,14 @@
     .local v8, "$this$mapNotNullTo$iv$iv":Ljava/lang/Iterable;
     const/4 v9, 0x0
 
-    .line 974
+    .line 1012
     .local v9, "$i$f$mapNotNullTo":I
     move-object v10, v8
 
     .local v10, "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     const/4 v11, 0x0
 
-    .line 975
+    .line 1013
     .local v11, "$i$f$forEach":I
     invoke-interface {v10}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -5369,7 +5464,7 @@
     .local v14, "element$iv$iv":Ljava/lang/Object;
     const/4 v15, 0x0
 
-    .line 974
+    .line 1012
     .local v15, "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
     move-object/from16 v16, v14
 
@@ -5378,7 +5473,7 @@
     .local v16, "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
     const/16 v17, 0x0
 
-    .line 755
+    .line 771
     .local v17, "$i$a$-mapNotNull-IncomingMessageHandler$handleReactions$targetText$1":I
     invoke-virtual/range {v16 .. v16}, Lcom/textrcs/gmproto/conversations/MessageInfo;->getMessageContent()Lcom/textrcs/gmproto/conversations/MessageContent;
 
@@ -5395,7 +5490,7 @@
     :cond_a5
     move-object/from16 v18, v3
 
-    .line 974
+    .line 1012
     .end local v16    # "mi":Lcom/textrcs/gmproto/conversations/MessageInfo;
     .end local v17    # "$i$a$-mapNotNull-IncomingMessageHandler$handleReactions$targetText$1":I
     :goto_a7
@@ -5403,11 +5498,11 @@
 
     move-object/from16 v16, v18
 
-    .line 976
+    .line 1014
     .local v16, "it$iv$iv":Ljava/lang/Object;
     const/16 v17, 0x0
 
-    .line 974
+    .line 1012
     .local v17, "$i$a$-let-CollectionsKt___CollectionsKt$mapNotNullTo$1$1$iv$iv":I
     move-object/from16 v2, v16
 
@@ -5415,7 +5510,7 @@
     .local v2, "it$iv$iv":Ljava/lang/Object;
     invoke-interface {v7, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 975
+    .line 1013
     .end local v2    # "it$iv$iv":Ljava/lang/Object;
     .end local v14    # "element$iv$iv":Ljava/lang/Object;
     .end local v15    # "$i$a$-forEach-CollectionsKt___CollectionsKt$mapNotNullTo$1$iv$iv":I
@@ -5426,11 +5521,11 @@
     .end local v13    # "element$iv$iv$iv":Ljava/lang/Object;
     goto :goto_88
 
-    .line 977
+    .line 1015
     :cond_b4
     nop
 
-    .line 978
+    .line 1016
     .end local v10    # "$this$forEach$iv$iv$iv":Ljava/lang/Iterable;
     .end local v11    # "$i$f$forEach":I
     nop
@@ -5442,20 +5537,20 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 966
+    .line 1004
     nop
 
     .end local v1    # "$this$mapNotNull$iv":Ljava/lang/Iterable;
     .end local v6    # "$i$f$mapNotNull":I
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 756
+    .line 772
     nop
 
     .local v2, "$this$filter$iv":Ljava/lang/Iterable;
     const/4 v1, 0x0
 
-    .line 979
+    .line 1017
     .local v1, "$i$f$filter":I
     new-instance v6, Ljava/util/ArrayList;
 
@@ -5469,7 +5564,7 @@
     .local v7, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     const/4 v8, 0x0
 
-    .line 980
+    .line 1018
     .local v8, "$i$f$filterTo":I
     invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -5495,7 +5590,7 @@
     .local v11, "it":Ljava/lang/String;
     const/4 v12, 0x0
 
-    .line 756
+    .line 772
     .local v12, "$i$a$-filter-IncomingMessageHandler$handleReactions$targetText$2":I
     move-object v13, v11
 
@@ -5514,7 +5609,7 @@
     :cond_e4
     move v13, v4
 
-    .line 980
+    .line 1018
     .end local v11    # "it":Ljava/lang/String;
     .end local v12    # "$i$a$-filter-IncomingMessageHandler$handleReactions$targetText$2":I
     :goto_e5
@@ -5524,7 +5619,7 @@
 
     goto :goto_cb
 
-    .line 981
+    .line 1019
     .end local v10    # "element$iv$iv":Ljava/lang/Object;
     :cond_eb
     nop
@@ -5534,7 +5629,7 @@
     .end local v8    # "$i$f$filterTo":I
     check-cast v6, Ljava/util/List;
 
-    .line 979
+    .line 1017
     nop
 
     .end local v1    # "$i$f$filter":I
@@ -5543,7 +5638,7 @@
 
     check-cast v7, Ljava/lang/Iterable;
 
-    .line 757
+    .line 773
     const-string v1, "\n"
 
     move-object v8, v1
@@ -5568,10 +5663,10 @@
 
     move-result-object v1
 
-    .line 754
+    .line 770
     nop
 
-    .line 758
+    .line 774
     .local v1, "targetText":Ljava/lang/String;
     move-object v2, v1
 
@@ -5595,7 +5690,7 @@
 
     return-void
 
-    .line 759
+    .line 775
     :cond_113
     invoke-virtual/range {p1 .. p1}, Lcom/textrcs/gmproto/conversations/Message;->getTimestamp()J
 
@@ -5607,13 +5702,13 @@
 
     move-result-wide v6
 
-    .line 762
+    .line 778
     .local v6, "ts":J
     new-instance v8, Ljava/util/LinkedHashMap;
 
     invoke-direct {v8}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 763
+    .line 779
     .local v8, "current":Ljava/util/LinkedHashMap;
     const/4 v9, 0x0
 
@@ -5625,14 +5720,14 @@
     :goto_127
     if-ge v9, v10, :cond_1a0
 
-    .line 764
+    .line 780
     move-object/from16 v11, p1
 
     invoke-virtual {v11, v9}, Lcom/textrcs/gmproto/conversations/Message;->getReactions(I)Lcom/textrcs/gmproto/conversations/ReactionEntry;
 
     move-result-object v12
 
-    .line 765
+    .line 781
     .local v12, "entry":Lcom/textrcs/gmproto/conversations/ReactionEntry;
     invoke-virtual {v12}, Lcom/textrcs/gmproto/conversations/ReactionEntry;->hasData()Z
 
@@ -5640,7 +5735,7 @@
 
     if-eqz v13, :cond_198
 
-    .line 766
+    .line 782
     invoke-virtual {v12}, Lcom/textrcs/gmproto/conversations/ReactionEntry;->getData()Lcom/textrcs/gmproto/conversations/ReactionData;
 
     move-result-object v13
@@ -5649,7 +5744,7 @@
 
     move-result-object v13
 
-    .line 767
+    .line 783
     .local v13, "emoji":Ljava/lang/String;
     invoke-static {v13}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -5673,7 +5768,7 @@
     :goto_14c
     if-nez v14, :cond_198
 
-    .line 768
+    .line 784
     invoke-virtual {v12}, Lcom/textrcs/gmproto/conversations/ReactionEntry;->getParticipantIDsList()Lcom/google/protobuf/ProtocolStringList;
 
     move-result-object v14
@@ -5695,7 +5790,7 @@
 
     check-cast v15, Ljava/lang/String;
 
-    .line 769
+    .line 785
     .local v15, "pid":Ljava/lang/String;
     sget-object v3, Lcom/textrcs/receive/IncomingMessageHandler;->participantPhone:Ljava/util/HashMap;
 
@@ -5711,7 +5806,7 @@
 
     goto :goto_156
 
-    .line 770
+    .line 786
     .local v3, "phone":Ljava/lang/String;
     :cond_16e
     move-object v4, v8
@@ -5760,7 +5855,7 @@
 
     goto :goto_156
 
-    .line 763
+    .line 779
     .end local v3    # "phone":Ljava/lang/String;
     .end local v12    # "entry":Lcom/textrcs/gmproto/conversations/ReactionEntry;
     .end local v13    # "emoji":Ljava/lang/String;
@@ -5781,7 +5876,7 @@
     :cond_1a0
     move-object/from16 v11, p1
 
-    .line 773
+    .line 789
     .end local v9    # "i":I
     sget-object v2, Lcom/textrcs/receive/IncomingMessageHandler;->seenReactionKeys:Ljava/util/LinkedHashSet;
 
@@ -5790,7 +5885,7 @@
     .restart local v2    # "$this$filter$iv":Ljava/lang/Iterable;
     const/4 v3, 0x0
 
-    .line 982
+    .line 1020
     .local v3, "$i$f$filter":I
     new-instance v4, Ljava/util/ArrayList;
 
@@ -5804,7 +5899,7 @@
     .local v5, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     const/4 v9, 0x0
 
-    .line 983
+    .line 1021
     .local v9, "$i$f$filterTo":I
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -5829,7 +5924,7 @@
     .local v13, "it":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 773
+    .line 789
     .local v14, "$i$a$-filter-IncomingMessageHandler$handleReactions$priorForMsg$1":I
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -5871,7 +5966,7 @@
 
     move-result v2
 
-    .line 983
+    .line 1021
     .end local v13    # "it":Ljava/lang/String;
     .end local v14    # "$i$a$-filter-IncomingMessageHandler$handleReactions$priorForMsg$1":I
     if-eqz v2, :cond_1e6
@@ -5887,7 +5982,7 @@
 
     goto :goto_1b4
 
-    .line 984
+    .line 1022
     .end local v12    # "element$iv$iv":Ljava/lang/Object;
     .end local v20    # "$this$filter$iv":Ljava/lang/Iterable;
     .end local v21    # "$i$f$filter":I
@@ -5913,19 +6008,19 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 982
+    .line 1020
     nop
 
-    .line 773
+    .line 789
     .end local v20    # "$this$filter$iv":Ljava/lang/Iterable;
     .end local v21    # "$i$f$filter":I
     nop
 
-    .line 774
+    .line 790
     .local v2, "priorForMsg":Ljava/util/List;
     const/4 v3, 0x0
 
-    .line 776
+    .line 792
     .local v3, "changed":Z
     move-object v4, v8
 
@@ -5977,7 +6072,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 777
+    .line 793
     .local v5, "phone":Ljava/lang/String;
     move-object/from16 v20, v2
 
@@ -5991,7 +6086,7 @@
 
     if-nez v2, :cond_2be
 
-    .line 778
+    .line 794
     move/from16 v16, v3
 
     const/4 v2, 0x2
@@ -6004,7 +6099,7 @@
 
     move-result-object v14
 
-    .line 779
+    .line 795
     .local v14, "emoji":Ljava/lang/String;
     sget-object v2, Lcom/textrcs/bridge/TextraDbBridge;->INSTANCE:Lcom/textrcs/bridge/TextraDbBridge;
 
@@ -6042,7 +6137,7 @@
 
     move-result v2
 
-    .line 780
+    .line 796
     .local v2, "wrote":Z
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -6094,7 +6189,7 @@
 
     invoke-static {v13, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
+    .line 797
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -6123,7 +6218,7 @@
 
     invoke-static {v3}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 782
+    .line 798
     if-eqz v2, :cond_2c2
 
     sget-object v3, Lcom/textrcs/receive/IncomingMessageHandler;->seenReactionKeys:Ljava/util/LinkedHashSet;
@@ -6144,7 +6239,7 @@
     .restart local v3    # "changed":Z
     goto/16 :goto_204
 
-    .line 777
+    .line 793
     .restart local v5    # "phone":Ljava/lang/String;
     .restart local v10    # "key":Ljava/lang/String;
     :cond_2be
@@ -6152,7 +6247,7 @@
 
     move-object/from16 v23, v4
 
-    .line 776
+    .line 792
     .end local v3    # "changed":Z
     .end local v5    # "phone":Ljava/lang/String;
     .end local v10    # "key":Ljava/lang/String;
@@ -6166,7 +6261,7 @@
 
     goto/16 :goto_204
 
-    .line 785
+    .line 801
     .end local v16    # "changed":Z
     .end local v20    # "priorForMsg":Ljava/util/List;
     .local v2, "priorForMsg":Ljava/util/List;
@@ -6199,7 +6294,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 786
+    .line 802
     .local v4, "key":Ljava/lang/String;
     invoke-virtual {v8, v4}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -6207,7 +6302,7 @@
 
     if-nez v5, :cond_3b1
 
-    .line 787
+    .line 803
     move-object/from16 v22, v4
 
     check-cast v22, Ljava/lang/CharSequence;
@@ -6234,7 +6329,7 @@
 
     move-result-object v10
 
-    .line 788
+    .line 804
     .local v10, "parts":Ljava/util/List;
     invoke-static {v10, v5}, Lkotlin/collections/CollectionsKt;->getOrNull(Ljava/util/List;I)Ljava/lang/Object;
 
@@ -6259,7 +6354,7 @@
     :cond_310
     move-object/from16 v19, v16
 
-    .line 789
+    .line 805
     .local v19, "pid":Ljava/lang/String;
     const/4 v5, 0x2
 
@@ -6286,7 +6381,7 @@
     :cond_326
     move-object/from16 v22, v18
 
-    .line 790
+    .line 806
     .local v22, "emoji":Ljava/lang/String;
     sget-object v5, Lcom/textrcs/receive/IncomingMessageHandler;->participantPhone:Ljava/util/HashMap;
 
@@ -6314,7 +6409,7 @@
 
     goto/16 :goto_3bc
 
-    .line 791
+    .line 807
     .restart local v5    # "phone":Ljava/lang/String;
     :cond_33f
     move-object/from16 v19, v2
@@ -6371,7 +6466,7 @@
 
     move-result v2
 
-    .line 792
+    .line 808
     .local v2, "wrote":Z
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -6427,7 +6522,7 @@
 
     invoke-static {v13, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 793
+    .line 809
     if-eqz v2, :cond_3bc
 
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->seenReactionKeys:Ljava/util/LinkedHashSet;
@@ -6452,7 +6547,7 @@
     .restart local v3    # "changed":Z
     goto/16 :goto_2d2
 
-    .line 786
+    .line 802
     .end local v21    # "msgId":Ljava/lang/String;
     .end local v25    # "current":Ljava/util/LinkedHashMap;
     .restart local v0    # "msgId":Ljava/lang/String;
@@ -6471,7 +6566,7 @@
 
     const/16 v17, 0x0
 
-    .line 785
+    .line 801
     .end local v0    # "msgId":Ljava/lang/String;
     .end local v3    # "changed":Z
     .end local v4    # "key":Ljava/lang/String;
@@ -6491,7 +6586,7 @@
 
     goto/16 :goto_2d2
 
-    .line 795
+    .line 811
     .end local v21    # "msgId":Ljava/lang/String;
     .end local v24    # "changed":Z
     .end local v25    # "current":Ljava/util/LinkedHashMap;
@@ -6513,17 +6608,17 @@
     .restart local v25    # "current":Ljava/util/LinkedHashMap;
     if-eqz v24, :cond_3d4
 
-    .line 796
+    .line 812
     invoke-direct/range {p0 .. p0}, Lcom/textrcs/receive/IncomingMessageHandler;->trimReactions()V
 
-    .line 797
+    .line 813
     invoke-direct/range {p0 .. p0}, Lcom/textrcs/receive/IncomingMessageHandler;->persistReactions()V
 
-    .line 799
+    .line 815
     :cond_3d4
     return-void
 
-    .line 752
+    .line 768
     .end local v1    # "targetText":Ljava/lang/String;
     .end local v6    # "ts":J
     .end local v20    # "priorForMsg":Ljava/util/List;
@@ -6736,7 +6831,7 @@
     .local v13, "$this$filter$iv":Ljava/lang/Iterable;
     const/4 v14, 0x0
 
-    .line 907
+    .line 945
     .local v14, "$i$f$filter":I
     new-instance v15, Ljava/util/ArrayList;
 
@@ -6750,7 +6845,7 @@
     .local v16, "$this$filterTo$iv$iv":Ljava/lang/Iterable;
     const/16 v17, 0x0
 
-    .line 908
+    .line 946
     .local v17, "$i$f$filterTo":I
     invoke-interface/range {v16 .. v16}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -6787,7 +6882,7 @@
 
     move-result v22
 
-    .line 908
+    .line 946
     .end local v19    # "it":Ljava/lang/String;
     .end local v21    # "$i$a$-filter-IncomingMessageHandler$loadPersistedConvInfo$phones$1":I
     if-nez v22, :cond_c5
@@ -6812,7 +6907,7 @@
 
     goto :goto_a3
 
-    .line 909
+    .line 947
     .end local v2    # "element$iv$iv":Ljava/lang/Object;
     :cond_c9
     nop
@@ -6824,7 +6919,7 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 907
+    .line 945
     nop
 
     .line 87
@@ -6978,23 +7073,23 @@
     .registers 5
     .param p1, "ctx"    # Landroid/content/Context;
 
-    .line 818
+    .line 856
     sget-boolean v0, Lcom/textrcs/receive/IncomingMessageHandler;->reactionsLoaded:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 819
+    .line 857
     :cond_5
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/textrcs/receive/IncomingMessageHandler;->reactionsLoaded:Z
 
-    .line 820
+    .line 858
     nop
 
-    .line 821
+    .line 859
     :try_start_9
     const-string v0, "textrcs_reactions"
 
@@ -7004,7 +7099,7 @@
 
     move-result-object v0
 
-    .line 822
+    .line 860
     const-string v1, "keys"
 
     const/4 v2, 0x0
@@ -7013,10 +7108,10 @@
 
     move-result-object v0
 
-    .line 821
+    .line 859
     nop
 
-    .line 823
+    .line 861
     .local v0, "s":Ljava/util/Set;
     if-eqz v0, :cond_55
 
@@ -7035,11 +7130,11 @@
     .end local v0    # "s":Ljava/util/Set;
     goto :goto_55
 
-    .line 824
+    .line 862
     :catchall_26
     move-exception v0
 
-    .line 825
+    .line 863
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -7085,7 +7180,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 827
+    .line 865
     .end local v0    # "e":Ljava/lang/Throwable;
     :cond_55
     :goto_55
@@ -7096,7 +7191,7 @@
     .registers 6
     .param p1, "ctx"    # Landroid/content/Context;
 
-    .line 708
+    .line 724
     const-string v0, "TextRCSIncoming"
 
     sget-boolean v1, Lcom/textrcs/receive/IncomingMessageHandler;->seenLoaded:Z
@@ -7105,16 +7200,16 @@
 
     return-void
 
-    .line 709
+    .line 725
     :cond_7
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/textrcs/receive/IncomingMessageHandler;->seenLoaded:Z
 
-    .line 710
+    .line 726
     nop
 
-    .line 711
+    .line 727
     :try_start_b
     const-string v1, "textrcs_seen"
 
@@ -7124,7 +7219,7 @@
 
     move-result-object v1
 
-    .line 712
+    .line 728
     const-string v2, "ids"
 
     const/4 v3, 0x0
@@ -7133,14 +7228,14 @@
 
     move-result-object v1
 
-    .line 711
+    .line 727
     nop
 
-    .line 713
+    .line 729
     .local v1, "s":Ljava/util/Set;
     if-eqz v1, :cond_77
 
-    .line 714
+    .line 730
     sget-object v2, Lcom/textrcs/receive/IncomingMessageHandler;->seenMessageIds:Ljava/util/LinkedHashSet;
 
     move-object v3, v1
@@ -7149,10 +7244,10 @@
 
     invoke-virtual {v2, v3}, Ljava/util/LinkedHashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 715
+    .line 731
     invoke-direct {p0}, Lcom/textrcs/receive/IncomingMessageHandler;->trimSeen()V
 
-    .line 716
+    .line 732
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7189,12 +7284,12 @@
 
     goto :goto_77
 
-    .line 718
+    .line 734
     .end local v1    # "s":Ljava/util/Set;
     :catchall_4a
     move-exception v1
 
-    .line 719
+    .line 735
     .local v1, "e":Ljava/lang/Throwable;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -7238,7 +7333,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 721
+    .line 737
     .end local v1    # "e":Ljava/lang/Throwable;
     :cond_77
     :goto_77
@@ -7249,7 +7344,7 @@
     .registers 12
     .param p1, "s"    # Ljava/lang/String;
 
-    .line 895
+    .line 933
     move-object v0, p1
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -7257,11 +7352,11 @@
     .local v0, "$this$count$iv":Ljava/lang/CharSequence;
     const/4 v1, 0x0
 
-    .line 985
+    .line 1023
     .local v1, "$i$f$count":I
     const/4 v2, 0x0
 
-    .line 986
+    .line 1024
     .local v2, "count$iv":I
     const/4 v3, 0x0
 
@@ -7286,7 +7381,7 @@
     .local v7, "it":C
     const/4 v8, 0x0
 
-    .line 895
+    .line 933
     .local v8, "$i$a$-count-IncomingMessageHandler$looksLikePhone$1":I
     const/16 v9, 0x30
 
@@ -7301,7 +7396,7 @@
     :cond_1d
     move v6, v3
 
-    .line 986
+    .line 1024
     .end local v7    # "it":C
     .end local v8    # "$i$a$-count-IncomingMessageHandler$looksLikePhone$1":I
     :goto_1e
@@ -7315,11 +7410,11 @@
 
     goto :goto_7
 
-    .line 987
+    .line 1025
     :cond_25
     nop
 
-    .line 895
+    .line 933
     .end local v0    # "$this$count$iv":Ljava/lang/CharSequence;
     .end local v1    # "$i$f$count":I
     .end local v2    # "count$iv":I
@@ -7337,18 +7432,18 @@
     .registers 3
     .param p1, "id"    # Ljava/lang/String;
 
-    .line 685
+    .line 701
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->seenMessageIds:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
-    .line 686
+    .line 702
     invoke-direct {p0}, Lcom/textrcs/receive/IncomingMessageHandler;->trimSeen()V
 
-    .line 687
+    .line 703
     invoke-direct {p0}, Lcom/textrcs/receive/IncomingMessageHandler;->persistSeen()V
 
-    .line 688
+    .line 704
     return-void
 .end method
 
@@ -7356,7 +7451,7 @@
     .registers 5
     .param p0, "r"    # Ljava/lang/Runnable;
 
-    .line 147
+    .line 157
     new-instance v0, Ljava/lang/Thread;
 
     const-string v1, "TextRCS-Mms"
@@ -7365,11 +7460,11 @@
 
     move-object v1, v0
 
-    .line 988
+    .line 1026
     .local v1, "$this$mediaExecutor_u24lambda_u242_u24lambda_u241":Ljava/lang/Thread;
     const/4 v2, 0x0
 
-    .line 147
+    .line 157
     .local v2, "$i$a$-apply-IncomingMessageHandler$mediaExecutor$1$1":I
     const/4 v3, 0x1
 
@@ -7384,7 +7479,7 @@
     .registers 9
     .param p1, "raw"    # Ljava/lang/String;
 
-    .line 885
+    .line 923
     move-object v0, p1
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -7419,13 +7514,13 @@
 
     return-object v0
 
-    .line 886
+    .line 924
     :cond_16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 887
+    .line 925
     .local v0, "sb":Ljava/lang/StringBuilder;
     move v3, v2
 
@@ -7440,7 +7535,7 @@
 
     move-result v4
 
-    .line 888
+    .line 926
     .local v4, "c":C
     const/16 v5, 0x2b
 
@@ -7470,7 +7565,7 @@
 
     goto :goto_4c
 
-    .line 889
+    .line 927
     :cond_3c
     const/16 v5, 0x30
 
@@ -7492,7 +7587,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 887
+    .line 925
     .end local v4    # "c":C
     :cond_4c
     :goto_4c
@@ -7500,7 +7595,7 @@
 
     goto :goto_1c
 
-    .line 891
+    .line 929
     :cond_4f
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -7517,7 +7612,7 @@
     .registers 7
     .param p1, "raw"    # J
 
-    .line 899
+    .line 937
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
@@ -7530,7 +7625,7 @@
 
     return-wide v0
 
-    .line 902
+    .line 940
     :cond_b
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -7548,7 +7643,7 @@
 
     return-wide p1
 
-    .line 903
+    .line 941
     :cond_18
     const-wide v0, 0x5af3107a4000L
 
@@ -7573,7 +7668,7 @@
     .registers 9
     .param p1, "p"    # Lcom/textrcs/gmproto/conversations/Participant;
 
-    .line 308
+    .line 318
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Participant;->getID()Lcom/textrcs/gmproto/conversations/SmallInfo;
 
     move-result-object v0
@@ -7586,7 +7681,7 @@
 
     move-result-object v0
 
-    .line 309
+    .line 319
     .local v0, "idNum":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Participant;->getFormattedNumber()Ljava/lang/String;
 
@@ -7596,7 +7691,7 @@
 
     move-result-object v1
 
-    .line 310
+    .line 320
     .local v1, "fmt":Ljava/lang/String;
     const-string v2, "+"
 
@@ -7620,7 +7715,7 @@
 
     return-object v0
 
-    .line 311
+    .line 321
     :cond_26
     invoke-static {v1, v2, v3, v4, v5}, Lkotlin/text/StringsKt;->startsWith$default(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
@@ -7636,7 +7731,7 @@
 
     return-object v1
 
-    .line 312
+    .line 322
     :cond_33
     invoke-direct {p0, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->looksLikePhone(Ljava/lang/String;)Z
 
@@ -7646,7 +7741,7 @@
 
     return-object v0
 
-    .line 313
+    .line 323
     :cond_3a
     invoke-direct {p0, v1}, Lcom/textrcs/receive/IncomingMessageHandler;->looksLikePhone(Ljava/lang/String;)Z
 
@@ -7656,7 +7751,7 @@
 
     return-object v1
 
-    .line 314
+    .line 324
     :cond_41
     return-object v5
 .end method
@@ -7842,19 +7937,19 @@
 .method private final persistReactions()V
     .registers 6
 
-    .line 808
+    .line 846
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->appContext:Landroid/content/Context;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 809
+    .line 847
     .local v0, "ctx":Landroid/content/Context;
     :cond_5
     nop
 
-    .line 810
+    .line 848
     :try_start_6
     const-string v1, "textrcs_reactions"
 
@@ -7864,7 +7959,7 @@
 
     move-result-object v1
 
-    .line 811
+    .line 849
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -7891,11 +7986,11 @@
 
     goto :goto_55
 
-    .line 812
+    .line 850
     :catchall_26
     move-exception v1
 
-    .line 813
+    .line 851
     .local v1, "e":Ljava/lang/Throwable;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -7941,7 +8036,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 815
+    .line 853
     .end local v1    # "e":Ljava/lang/Throwable;
     :goto_55
     return-void
@@ -7950,19 +8045,19 @@
 .method private final persistSeen()V
     .registers 6
 
-    .line 691
+    .line 707
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->appContext:Landroid/content/Context;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 692
+    .line 708
     .local v0, "ctx":Landroid/content/Context;
     :cond_5
     nop
 
-    .line 697
+    .line 713
     :try_start_6
     const-string v1, "textrcs_seen"
 
@@ -7972,12 +8067,12 @@
 
     move-result-object v1
 
-    .line 698
+    .line 714
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 699
+    .line 715
     const-string v2, "ids"
 
     new-instance v3, Ljava/util/HashSet;
@@ -7994,18 +8089,18 @@
 
     move-result-object v1
 
-    .line 700
+    .line 716
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_25
     .catchall {:try_start_6 .. :try_end_25} :catchall_26
 
     goto :goto_55
 
-    .line 701
+    .line 717
     :catchall_26
     move-exception v1
 
-    .line 702
+    .line 718
     .local v1, "e":Ljava/lang/Throwable;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -8051,10 +8146,135 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 704
+    .line 720
     .end local v1    # "e":Ljava/lang/Throwable;
     :goto_55
     return-void
+.end method
+
+.method private final declared-synchronized rememberReactionTarget(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 6
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "id"    # Ljava/lang/String;
+
+    monitor-enter p0
+
+    .line 820
+    :try_start_1
+    move-object v0, p1
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-static {v0}, Lkotlin/text/StringsKt;->trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 821
+    .local v0, "k":Ljava/lang/String;
+    move-object v1, v0
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+    :try_end_13
+    .catchall {:try_start_1 .. :try_end_13} :catchall_4b
+
+    if-nez v1, :cond_17
+
+    const/4 v1, 0x1
+
+    goto :goto_18
+
+    :cond_17
+    const/4 v1, 0x0
+
+    :goto_18
+    if-eqz v1, :cond_1c
+
+    monitor-exit p0
+
+    return-void
+
+    .line 822
+    :cond_1c
+    :try_start_1c
+    sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->msgIdByText:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 823
+    sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->msgIdByText:Ljava/util/LinkedHashMap;
+
+    check-cast v1, Ljava/util/Map;
+
+    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 824
+    :goto_28
+    sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->msgIdByText:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->size()I
+
+    move-result v1
+
+    const/16 v2, 0x12c
+
+    if-le v1, v2, :cond_49
+
+    .line 825
+    sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->msgIdByText:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .line 826
+    .local v1, "it":Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_49
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
+    :try_end_48
+    .catchall {:try_start_1c .. :try_end_48} :catchall_4b
+
+    goto :goto_28
+
+    .line 828
+    .end local v1    # "it":Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/textrcs/receive/IncomingMessageHandler;
+    :cond_49
+    monitor-exit p0
+
+    return-void
+
+    .line 819
+    .end local v0    # "k":Ljava/lang/String;
+    .end local p1    # "text":Ljava/lang/String;
+    .end local p2    # "id":Ljava/lang/String;
+    :catchall_4b
+    move-exception p1
+
+    :try_start_4c
+    monitor-exit p0
+    :try_end_4d
+    .catchall {:try_start_4c .. :try_end_4d} :catchall_4b
+
+    throw p1
 .end method
 
 .method private final resolveOutgoingRecipients(Ljava/lang/String;)Ljava/util/List;
@@ -8071,7 +8291,7 @@
         }
     .end annotation
 
-    .line 613
+    .line 629
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -8092,11 +8312,11 @@
 
     move-object v2, v0
 
-    .line 955
+    .line 993
     .local v2, "it":Ljava/util/List;
     const/4 v3, 0x0
 
-    .line 613
+    .line 629
     .local v3, "$i$a$-takeIf-IncomingMessageHandler$resolveOutgoingRecipients$r$1":I
     move-object v4, v2
 
@@ -8118,7 +8338,7 @@
     :goto_1e
     if-nez v0, :cond_31
 
-    .line 614
+    .line 630
     :cond_20
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->convPrimaryPhone:Ljava/util/HashMap;
 
@@ -8130,11 +8350,11 @@
 
     if-eqz v0, :cond_30
 
-    .line 955
+    .line 993
     .local v0, "it":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 614
+    .line 630
     .local v2, "$i$a$-let-IncomingMessageHandler$resolveOutgoingRecipients$r$2":I
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->listOf(Ljava/lang/Object;)Ljava/util/List;
 
@@ -8147,22 +8367,22 @@
     :cond_30
     move-object v0, v1
 
-    .line 613
+    .line 629
     :cond_31
     :goto_31
     nop
 
-    .line 615
+    .line 631
     .local v0, "r":Ljava/util/List;
     if-eqz v0, :cond_40
 
     move-object v2, v0
 
-    .line 955
+    .line 993
     .local v2, "it":Ljava/util/List;
     const/4 v3, 0x0
 
-    .line 615
+    .line 631
     .local v3, "$i$a$-takeIf-IncomingMessageHandler$resolveOutgoingRecipients$1":I
     move-object v4, v2
 
@@ -8186,7 +8406,7 @@
     .registers 7
     .param p1, "data"    # Lcom/textrcs/gmproto/conversations/Message;
 
-    .line 840
+    .line 878
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v1, "incoming_sender_skip_resolution"
@@ -8203,7 +8423,7 @@
 
     if-eqz v0, :cond_1d
 
-    .line 841
+    .line 879
     new-instance v0, Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getParticipantID()Ljava/lang/String;
@@ -8218,7 +8438,7 @@
 
     return-object v0
 
-    .line 845
+    .line 883
     :cond_1d
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -8230,7 +8450,7 @@
 
     if-eqz v0, :cond_38
 
-    .line 846
+    .line 884
     new-instance v0, Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
@@ -8247,7 +8467,7 @@
 
     return-object v0
 
-    .line 854
+    .line 892
     :cond_38
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->hasSenderParticipant()Z
 
@@ -8265,7 +8485,7 @@
 
     if-nez v0, :cond_7e
 
-    .line 855
+    .line 893
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getSenderParticipant()Lcom/textrcs/gmproto/conversations/Participant;
 
     move-result-object v0
@@ -8278,11 +8498,11 @@
 
     move-result-object v0
 
-    .line 856
+    .line 894
     .local v0, "phone":Ljava/lang/String;
     if-eqz v0, :cond_7e
 
-    .line 857
+    .line 895
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getSenderParticipant()Lcom/textrcs/gmproto/conversations/Participant;
 
     move-result-object v1
@@ -8295,7 +8515,7 @@
 
     move-result-object v1
 
-    .line 858
+    .line 896
     .local v1, "pid":Ljava/lang/String;
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -8315,7 +8535,7 @@
 
     invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 859
+    .line 897
     :cond_76
     new-instance v2, Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
@@ -8325,7 +8545,7 @@
 
     return-object v2
 
-    .line 863
+    .line 901
     .end local v0    # "phone":Ljava/lang/String;
     .end local v1    # "pid":Ljava/lang/String;
     :cond_7e
@@ -8346,7 +8566,7 @@
     .local v0, "it":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 864
+    .line 902
     .local v1, "$i$a$-let-IncomingMessageHandler$resolveSenderPhone$1":I
     new-instance v2, Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
@@ -8356,7 +8576,7 @@
 
     return-object v2
 
-    .line 867
+    .line 905
     .end local v0    # "it":Ljava/lang/String;
     .end local v1    # "$i$a$-let-IncomingMessageHandler$resolveSenderPhone$1":I
     :cond_95
@@ -8377,7 +8597,7 @@
     .restart local v0    # "it":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 868
+    .line 906
     .local v1, "$i$a$-let-IncomingMessageHandler$resolveSenderPhone$2":I
     new-instance v2, Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
@@ -8387,13 +8607,13 @@
 
     return-object v2
 
-    .line 872
+    .line 910
     .end local v0    # "it":Ljava/lang/String;
     .end local v1    # "$i$a$-let-IncomingMessageHandler$resolveSenderPhone$2":I
     :cond_ac
     nop
 
-    .line 873
+    .line 911
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8418,20 +8638,20 @@
 
     move-result-object v0
 
-    .line 874
+    .line 912
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getConversationID()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 873
+    .line 911
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 874
+    .line 912
     nop
 
-    .line 873
+    .line 911
     const-string v2, " \u2014 message will thread wrong"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -8442,12 +8662,12 @@
 
     move-result-object v0
 
-    .line 871
+    .line 909
     const-string v2, "TextRCSIncoming"
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 876
+    .line 914
     new-instance v0, Lcom/textrcs/receive/IncomingMessageHandler$Sender;
 
     invoke-virtual {p1}, Lcom/textrcs/gmproto/conversations/Message;->getParticipantID()Ljava/lang/String;
@@ -8466,7 +8686,7 @@
 .method private final trimReactions()V
     .registers 3
 
-    .line 802
+    .line 840
     nop
 
     :goto_1
@@ -8480,7 +8700,7 @@
 
     if-le v0, v1, :cond_19
 
-    .line 803
+    .line 841
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->seenReactionKeys:Ljava/util/LinkedHashSet;
 
     sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->seenReactionKeys:Ljava/util/LinkedHashSet;
@@ -8495,7 +8715,7 @@
 
     goto :goto_1
 
-    .line 805
+    .line 843
     :cond_19
     return-void
 .end method
@@ -8503,7 +8723,7 @@
 .method private final trimSeen()V
     .registers 3
 
-    .line 678
+    .line 694
     nop
 
     :goto_1
@@ -8517,7 +8737,7 @@
 
     if-le v0, v1, :cond_19
 
-    .line 679
+    .line 695
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->seenMessageIds:Ljava/util/LinkedHashSet;
 
     sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->seenMessageIds:Ljava/util/LinkedHashSet;
@@ -8532,7 +8752,7 @@
 
     goto :goto_1
 
-    .line 681
+    .line 697
     :cond_19
     return-void
 .end method
@@ -8542,7 +8762,7 @@
     .param p1, "convID"    # Ljava/lang/String;
     .param p2, "senderPhone"    # Ljava/lang/String;
 
-    .line 264
+    .line 274
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -8553,7 +8773,7 @@
 
     return-void
 
-    .line 265
+    .line 275
     :cond_9
     new-instance v0, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
 
@@ -8565,7 +8785,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;-><init>(ZLjava/util/List;)V
 
-    .line 266
+    .line 276
     .local v0, "info":Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;
     sget-object v1, Lcom/textrcs/receive/IncomingMessageHandler;->convInfo:Ljava/util/HashMap;
 
@@ -8573,10 +8793,10 @@
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 267
+    .line 277
     invoke-direct {p0, p1, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->persistConvEntry(Ljava/lang/String;Lcom/textrcs/receive/IncomingMessageHandler$ConvInfo;)V
 
-    .line 268
+    .line 278
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -8609,10 +8829,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
+    .line 279
     invoke-direct {p0, p1}, Lcom/textrcs/receive/IncomingMessageHandler;->flushPendingOutgoing(Ljava/lang/String;)V
 
-    .line 270
+    .line 280
     return-void
 .end method
 
@@ -8643,7 +8863,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 162
+    .line 172
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->appContext:Landroid/content/Context;
 
     if-nez v0, :cond_15
@@ -8654,7 +8874,7 @@
 
     sput-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->appContext:Landroid/content/Context;
 
-    .line 163
+    .line 173
     .end local p0    # "this":Lcom/textrcs/receive/IncomingMessageHandler;
     :cond_15
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -8667,7 +8887,7 @@
 
     invoke-direct {p0, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->loadPersistedConvInfo(Landroid/content/Context;)V
 
-    .line 164
+    .line 174
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -8678,7 +8898,7 @@
 
     invoke-direct {p0, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->loadPersistedSeen(Landroid/content/Context;)V
 
-    .line 165
+    .line 175
     const-string v0, "TextRCSIncoming"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -8711,7 +8931,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
+    .line 176
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -8737,13 +8957,13 @@
     .end local v1    # "c":Lcom/textrcs/gmproto/conversations/Conversation;
     goto :goto_53
 
-    .line 167
+    .line 177
     :cond_63
     monitor-exit p0
 
     return-void
 
-    .line 161
+    .line 171
     .end local p1    # "context":Landroid/content/Context;
     .end local p2    # "convs":Ljava/util/List;
     :catchall_65
@@ -8773,7 +8993,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 171
+    .line 181
     sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->appContext:Landroid/content/Context;
 
     if-nez v0, :cond_15
@@ -8784,7 +9004,7 @@
 
     sput-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->appContext:Landroid/content/Context;
 
-    .line 172
+    .line 182
     .end local p0    # "this":Lcom/textrcs/receive/IncomingMessageHandler;
     :cond_15
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -8797,7 +9017,7 @@
 
     invoke-direct {p0, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->loadPersistedConvInfo(Landroid/content/Context;)V
 
-    .line 173
+    .line 183
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -8808,7 +9028,7 @@
 
     invoke-direct {p0, v0}, Lcom/textrcs/receive/IncomingMessageHandler;->loadPersistedSeen(Landroid/content/Context;)V
 
-    .line 176
+    .line 186
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v1, "incoming_drop_all"
@@ -8823,19 +9043,19 @@
 
     if-eqz v0, :cond_40
 
-    .line 177
+    .line 187
     const-string v0, "RCV onUpdateEvents DROPPED by hook incoming_drop_all"
 
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
     :try_end_3e
     .catchall {:try_start_1 .. :try_end_3e} :catchall_118
 
-    .line 178
+    .line 188
     monitor-exit p0
 
     return-void
 
-    .line 181
+    .line 191
     :cond_40
     :try_start_40
     new-instance v0, Ljava/lang/StringBuilder;
@@ -8862,30 +9082,30 @@
 
     move-result-object v0
 
-    .line 182
+    .line 192
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->hasConversationEvent()Z
 
     move-result v1
 
-    .line 181
+    .line 191
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 182
+    .line 192
     const-string v1, " typing="
 
-    .line 181
+    .line 191
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 182
+    .line 192
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->hasTypingEvent()Z
 
     move-result v1
 
-    .line 181
+    .line 191
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -8894,17 +9114,17 @@
 
     move-result-object v0
 
-    .line 180
+    .line 190
     invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 186
+    .line 196
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->hasConversationEvent()Z
 
     move-result v0
 
     if-eqz v0, :cond_9b
 
-    .line 187
+    .line 197
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->getConversationEvent()Lcom/textrcs/gmproto/events/ConversationEvent;
 
     move-result-object v0
@@ -8930,7 +9150,7 @@
 
     check-cast v1, Lcom/textrcs/gmproto/conversations/Conversation;
 
-    .line 188
+    .line 198
     .local v1, "conv":Lcom/textrcs/gmproto/conversations/Conversation;
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -8939,7 +9159,7 @@
     .end local v1    # "conv":Lcom/textrcs/gmproto/conversations/Conversation;
     goto :goto_88
 
-    .line 191
+    .line 201
     :cond_9b
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->hasMessageEvent()Z
 
@@ -8947,7 +9167,7 @@
 
     if-eqz v0, :cond_c0
 
-    .line 192
+    .line 202
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->getMessageEvent()Lcom/textrcs/gmproto/events/MessageEvent;
 
     move-result-object v0
@@ -8973,7 +9193,7 @@
 
     check-cast v1, Lcom/textrcs/gmproto/conversations/Message;
 
-    .line 193
+    .line 203
     .local v1, "data":Lcom/textrcs/gmproto/conversations/Message;
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
@@ -8982,7 +9202,7 @@
     .end local v1    # "data":Lcom/textrcs/gmproto/conversations/Message;
     goto :goto_ad
 
-    .line 196
+    .line 206
     :cond_c0
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->hasTypingEvent()Z
 
@@ -8990,7 +9210,7 @@
 
     if-eqz v0, :cond_116
 
-    .line 197
+    .line 207
     invoke-virtual {p2}, Lcom/textrcs/gmproto/events/UpdateEvents;->getTypingEvent()Lcom/textrcs/gmproto/events/TypingEvent;
 
     move-result-object v0
@@ -8999,7 +9219,7 @@
 
     move-result-object v0
 
-    .line 198
+    .line 208
     .local v0, "td":Lcom/textrcs/gmproto/events/TypingData;
     const-string v1, "TextRCSIncoming"
 
@@ -9041,12 +9261,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
+    .line 210
     invoke-virtual {v0}, Lcom/textrcs/gmproto/events/TypingData;->getConversationID()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 201
+    .line 211
     invoke-virtual {v0}, Lcom/textrcs/gmproto/events/TypingData;->hasUser()Z
 
     move-result v2
@@ -9061,7 +9281,7 @@
 
     move-result-object v3
 
-    .line 202
+    .line 212
     :cond_10a
     invoke-virtual {v0}, Lcom/textrcs/gmproto/events/TypingData;->getTypeValue()I
 
@@ -9076,20 +9296,20 @@
     :cond_112
     const/4 v4, 0x0
 
-    .line 199
+    .line 209
     :goto_113
     invoke-static {v1, v3, v4}, Lcom/textrcs/ui/TypingIndicator;->onTypingEvent(Ljava/lang/String;Ljava/lang/String;Z)V
     :try_end_116
     .catchall {:try_start_40 .. :try_end_116} :catchall_118
 
-    .line 205
+    .line 215
     .end local v0    # "td":Lcom/textrcs/gmproto/events/TypingData;
     :cond_116
     monitor-exit p0
 
     return-void
 
-    .line 170
+    .line 180
     .end local p1    # "context":Landroid/content/Context;
     .end local p2    # "events":Lcom/textrcs/gmproto/events/UpdateEvents;
     :catchall_118
@@ -9099,6 +9319,58 @@
     monitor-exit p0
     :try_end_11a
     .catchall {:try_start_119 .. :try_end_11a} :catchall_118
+
+    throw p1
+.end method
+
+.method public final declared-synchronized resolveReactionTargetId(Ljava/lang/String;)Ljava/lang/String;
+    .registers 4
+    .param p1, "text"    # Ljava/lang/String;
+
+    monitor-enter p0
+
+    :try_start_1
+    const-string v0, "text"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 837
+    sget-object v0, Lcom/textrcs/receive/IncomingMessageHandler;->msgIdByText:Ljava/util/LinkedHashMap;
+
+    move-object v1, p1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-static {v1}, Lkotlin/text/StringsKt;->trim(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+    :try_end_19
+    .catchall {:try_start_1 .. :try_end_19} :catchall_1b
+
+    monitor-exit p0
+
+    return-object v0
+
+    .line 837
+    .end local p0    # "this":Lcom/textrcs/receive/IncomingMessageHandler;
+    .end local p1    # "text":Ljava/lang/String;
+    :catchall_1b
+    move-exception p1
+
+    :try_start_1c
+    monitor-exit p0
+    :try_end_1d
+    .catchall {:try_start_1c .. :try_end_1d} :catchall_1b
 
     throw p1
 .end method

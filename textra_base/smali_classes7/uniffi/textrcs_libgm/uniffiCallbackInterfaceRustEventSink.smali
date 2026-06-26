@@ -65,45 +65,45 @@
 
     sput-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;
 
-    .line 3560
+    .line 3613
     new-instance v1, Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink$UniffiByValue;
 
-    .line 3561
+    .line 3614
     sget-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent;
 
     move-object v2, v0
 
     check-cast v2, Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod0;
 
-    .line 3562
+    .line 3615
     sget-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneNotResponding;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneNotResponding;
 
     move-object v3, v0
 
     check-cast v3, Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod1;
 
-    .line 3563
+    .line 3616
     sget-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain;
 
     move-object v4, v0
 
     check-cast v4, Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod2;
 
-    .line 3564
+    .line 3617
     sget-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPairEvent;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPairEvent;
 
     move-object v5, v0
 
     check-cast v5, Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod3;
 
-    .line 3565
+    .line 3618
     sget-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$uniffiFree;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$uniffiFree;
 
     move-object v6, v0
 
     check-cast v6, Luniffi/textrcs_libgm/UniffiCallbackInterfaceFree;
 
-    .line 3560
+    .line 3613
     invoke-direct/range {v1 .. v6}, Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink$UniffiByValue;-><init>(Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod0;Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod1;Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod2;Luniffi/textrcs_libgm/UniffiCallbackInterfaceRustEventSinkMethod3;Luniffi/textrcs_libgm/UniffiCallbackInterfaceFree;)V
 
     sput-object v1, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;->vtable:Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink$UniffiByValue;
@@ -114,7 +114,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 3503
+    .line 3556
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -125,7 +125,7 @@
 .method public final getVtable$main()Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink$UniffiByValue;
     .registers 2
 
-    .line 3560
+    .line 3613
     sget-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;->vtable:Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink$UniffiByValue;
 
     return-object v0
@@ -139,14 +139,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3571
+    .line 3624
     sget-object v0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;->vtable:Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink$UniffiByValue;
 
     check-cast v0, Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink;
 
     invoke-interface {p1, v0}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_init_callback_vtable_rusteventsink(Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink;)V
 
-    .line 3572
+    .line 3625
     return-void
 .end method
 
@@ -158,9 +158,9 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3560
+    .line 3613
     sput-object p1, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink;->vtable:Luniffi/textrcs_libgm/UniffiVTableCallbackInterfaceRustEventSink$UniffiByValue;
 
-    .line 3566
+    .line 3619
     return-void
 .end method

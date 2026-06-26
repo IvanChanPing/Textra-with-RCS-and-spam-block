@@ -1,6 +1,23 @@
 # Share My Location (static map link) + RCS reactions check — Task Journal
 
-## CURRENT STATE / NEXT STEP (2026-06-26, reactions build in progress)
+## CURRENT STATE / NEXT STEP (2026-06-26, reactions SEND side wired, rebuilding .so)
+- RECEIVE side: DONE + committed (3f88e321). RECEIVE build green.
+- SEND side: code written, Rust engine rebuilding.
+  - Rust: src/ffi.rs — new `RustClient::send_reaction(message_id, emoji, action:i32)` over the existing
+    `ClientEngine::send_reaction` (methods.rs:153) + `unicode_to_emoji_type()` table. cargo check PASSED.
+    4-ABI .so REBUILT OK (jniLibs-out/*); UniFFI binding regen (generated-kotlin/) in progress.
+  - Kotlin: RustBridge.sendReaction (blocking, throws); SendManager.maybeSendAsReaction intercepts an
+    outgoing tapback body (U+200B add / U+200C remove), parses emoji + quoted target, resolves target GM
+    messageID via IncomingMessageHandler.resolveReactionTargetId (msgIdByText index, suffix-match to skip
+    the locale connector word), calls sendReaction (ADD=1/REMOVE=2); falls back to text send if unresolved.
+- NEXT STEP: when .so build done → copy jniLibs-out/<abi>/libtextrcs_libgm.so → textra_base/lib/<abi>/ and
+  generated-kotlin/uniffi/textrcs_libgm/textrcs_libgm.kt → inject_src/uniffi/textrcs_libgm/textrcs_libgm.kt;
+  run ./build.sh; verify rc.sendReaction exists in the binding + APK builds; commit; place textra2.apk.
+- UNVERIFIED to flag: (1) Textra's outgoing tapback actually flows through SendManager.sendText with the
+  ZW markers intact on RCS threads; (2) ReactionEntry.participantIDs == participantPhone key space (receive);
+  (3) the whole click-path (react in UI → RCS reaction; receive RCS reaction → native badge) — UNVERIFIED on redroid.
+
+## (older) CURRENT STATE / NEXT STEP (2026-06-26, reactions build in progress)
 - RCS REACTIONS — RECEIVE side IMPLEMENTED (Kotlin-only, building now). In IncomingMessageHandler.kt:
   new `handleReactions(data)` called from handleMessage BEFORE the dedup/early-return; reads
   `data.reactionsList` (field 19) snapshot, diffs vs persisted `seenReactionKeys`

@@ -157,9 +157,14 @@ class SendManager private constructor(private val appContext: Context) {
         sendExecutor.execute {
             ScreenTracer.note("SEND sendText executor BEGIN phone=${redact(recipientPhone)}")
             val ok = try {
-                sendTextBlocking(recipientPhone, body)
-                ScreenTracer.note("SEND sendText BLOCKING_OK phone=${redact(recipientPhone)}")
-                true
+                if (maybeSendAsReaction(recipientPhone, body)) {
+                    ScreenTracer.note("SEND handled as RCS reaction phone=${redact(recipientPhone)}")
+                    true
+                } else {
+                    sendTextBlocking(recipientPhone, body)
+                    ScreenTracer.note("SEND sendText BLOCKING_OK phone=${redact(recipientPhone)}")
+                    true
+                }
             } catch (e: Throwable) {
                 ScreenTracer.note("SEND sendText THREW ${e.javaClass.simpleName}: ${e.message}")
                 Log.e(TAG, "send failed: phone=${redact(recipientPhone)} body.len=${body.length}", e)
@@ -344,6 +349,56 @@ class SendManager private constructor(private val appContext: Context) {
      * [REMOTE_HOOK v0.69] sendmgr_use_kotlin_path — fall back to the old
      * hand-written Kotlin send (debug only; expected to keep failing).
      */
+    /**
+     * If [body] is an outgoing Textra tapback (reaction) on this RCS thread,
+     * transmit it as an OFFICIAL Google-Messages reaction instead of sending the
+     * tapback text. Textra composes a reaction as text using the standard
+     * tapback-over-SMS markers (ADD wraps the emoji in U+200B/ZWSP, REMOVE in
+     * U+200C/ZWNJ; the original message text follows as the quote — templates in
+     * com.mplus.lib.C4.e, parsed by com.mplus.lib.h5.h). We extract the emoji +
+     * quoted target, resolve the target's GM messageID via
+     * [com.textrcs.receive.IncomingMessageHandler.resolveReactionTargetId], and
+     * call [com.textrcs.bridge.RustBridge.sendReaction] (-> Rust SendReaction RPC,
+     * ActionType.SEND_REACTION). Returns true if sent as a reaction; false to let
+     * the caller send [body] as ordinary text (no marker / target not resolvable /
+     * the RPC threw). Toggle: hook `sendmgr_reactions_disable`. Runs on
+     * sendExecutor (off main). STATUS 2026-06-26: compile-built, on-device UNVERIFIED.
+     */
+    private fun maybeSendAsReaction(recipientPhone: String, body: String): Boolean {
+        if (Hooks.shouldSkip("sendmgr_reactions_disable")) return false
+        val zwsp = '​'
+        val zwnj = '‌'
+        val isAdd = body.indexOf(zwsp) >= 0
+        val marker = when {
+            isAdd -> zwsp
+            body.indexOf(zwnj) >= 0 -> zwnj
+            else -> return false // not a tapback
+        }
+        val first = body.indexOf(marker)
+        val second = body.indexOf(marker, first + 1)
+        if (first < 0 || second <= first) return false
+        val emoji = body.substring(first + 1, second).trim()
+        if (emoji.isEmpty()) return false
+        val remainder = body.substring(second + 1)
+        val targetId = com.textrcs.receive.IncomingMessageHandler.resolveReactionTargetId(remainder)
+        if (targetId == null) {
+            ScreenTracer.note("SEND reaction: unresolved target — fallback to text send")
+            Log.i(TAG, "reaction target unresolved; sending as text")
+            return false
+        }
+        val action = if (isAdd) 1 else 2 // SendReactionRequest.Action: ADD=1, REMOVE=2
+        return try {
+            com.textrcs.bridge.RustBridge.sendReaction(appContext, targetId, emoji, action)
+            ScreenTracer.note("SEND reaction OK emoji=$emoji action=$action msg=${targetId.takeLast(6)}")
+            Log.i(TAG, "sent RCS reaction emoji=$emoji action=$action msg=${targetId.takeLast(6)}")
+            true
+        } catch (t: Throwable) {
+            ScreenTracer.note("SEND reaction FAIL ${t.javaClass.simpleName}: ${t.message} — fallback text")
+            Log.e(TAG, "sendReaction failed; falling back to text", t)
+            false
+        }
+    }
+
     private fun sendTextBlocking(recipientPhone: String, body: String) {
         if (Hooks.shouldSkip("sendmgr_use_kotlin_path")) {
             ScreenTracer.note("SEND sendTextBlocking using LEGACY Kotlin path (hook)")

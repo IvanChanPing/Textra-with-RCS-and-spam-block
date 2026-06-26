@@ -146,25 +146,25 @@
 
     invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4263
+    .line 4316
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4267
+    .line 4320
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->ok:Z
 
-    .line 4268
+    .line 4321
     iput-wide p2, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->totalIndicators:J
 
-    .line 4269
+    .line 4322
     iput-object p4, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->feeds:Ljava/util/List;
 
-    .line 4270
+    .line 4323
     iput-object p5, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->errors:Ljava/util/List;
 
-    .line 4271
+    .line 4324
     iput-wide p6, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->lastRefreshUnix:J
 
-    .line 4263
+    .line 4316
     return-void
 .end method
 
@@ -427,7 +427,7 @@
         }
     .end annotation
 
-    .line 4270
+    .line 4323
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->errors:Ljava/util/List;
 
     return-object v0
@@ -444,7 +444,7 @@
         }
     .end annotation
 
-    .line 4269
+    .line 4322
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->feeds:Ljava/util/List;
 
     return-object v0
@@ -453,7 +453,7 @@
 .method public final getLastRefreshUnix()J
     .registers 3
 
-    .line 4271
+    .line 4324
     iget-wide v0, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->lastRefreshUnix:J
 
     return-wide v0
@@ -462,7 +462,7 @@
 .method public final getOk()Z
     .registers 2
 
-    .line 4267
+    .line 4320
     iget-boolean v0, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->ok:Z
 
     return v0
@@ -471,7 +471,7 @@
 .method public final getTotalIndicators-s-VKNKU()J
     .registers 3
 
-    .line 4268
+    .line 4321
     iget-wide v0, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->totalIndicators:J
 
     return-wide v0
@@ -545,7 +545,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4270
+    .line 4323
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->errors:Ljava/util/List;
 
     return-void
@@ -567,7 +567,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4269
+    .line 4322
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->feeds:Ljava/util/List;
 
     return-void
@@ -577,7 +577,7 @@
     .registers 3
     .param p1, "<set-?>"    # J
 
-    .line 4271
+    .line 4324
     iput-wide p1, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->lastRefreshUnix:J
 
     return-void
@@ -587,7 +587,7 @@
     .registers 2
     .param p1, "<set-?>"    # Z
 
-    .line 4267
+    .line 4320
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->ok:Z
 
     return-void
@@ -597,7 +597,7 @@
     .registers 3
     .param p1, "<set-?>"    # J
 
-    .line 4268
+    .line 4321
     iput-wide p1, p0, Luniffi/textrcs_libgm/SpamRefreshResult;->totalIndicators:J
 
     return-void

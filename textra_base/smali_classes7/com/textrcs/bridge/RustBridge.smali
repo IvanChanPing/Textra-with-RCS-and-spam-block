@@ -12,7 +12,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0008\u00c6\u0002\u0018\u00002\u00020\u0001:\u0001!B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u001e\u0010\u000b\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\u000cJ\u000e\u0010\u0011\u001a\u00020\u00082\u0006\u0010\r\u001a\u00020\u000eJ\u0006\u0010\u0012\u001a\u00020\u0008J\u0016\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u0004J\u001e\u0010\u0017\u001a\u00020\u00142\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u0004J\u000e\u0010\u001a\u001a\u00020\u00082\u0006\u0010\r\u001a\u00020\u000eJ\u0006\u0010\u001b\u001a\u00020\u0014J\u0010\u0010\u001c\u001a\u00020\u00142\u0006\u0010\r\u001a\u00020\u000eH\u0002J\u0010\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020 H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000"
+        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0008\u00c6\u0002\u0018\u00002\u00020\u0001:\u0001%B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u001e\u0010\u000b\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\u000cJ\u000e\u0010\u0011\u001a\u00020\u00082\u0006\u0010\r\u001a\u00020\u000eJ\u0006\u0010\u0012\u001a\u00020\u0008J\u0016\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u0004J&\u0010\u0017\u001a\u00020\u00142\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u0016\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001aJ\u001e\u0010\u001b\u001a\u00020\u00142\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u001d\u001a\u00020\u0004J\u000e\u0010\u001e\u001a\u00020\u00082\u0006\u0010\r\u001a\u00020\u000eJ\u0006\u0010\u001f\u001a\u00020\u0014J\u0010\u0010 \u001a\u00020\u00142\u0006\u0010\r\u001a\u00020\u000eH\u0002J\u0010\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020$H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/bridge/RustBridge;",
@@ -38,6 +38,10 @@
         "",
         "conversationId",
         "messageId",
+        "sendReaction",
+        "emoji",
+        "action",
+        "",
         "sendText",
         "recipientPhone",
         "body",
@@ -291,12 +295,12 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 316
+    .line 337
     sget-boolean v0, Lcom/textrcs/bridge/RustBridge;->connected:Z
 
     if-nez v0, :cond_22
 
-    .line 317
+    .line 338
     invoke-virtual {p0, p1}, Lcom/textrcs/bridge/RustBridge;->start(Landroid/content/Context;)Z
 
     move-result v0
@@ -305,7 +309,7 @@
 
     goto :goto_22
 
-    .line 318
+    .line 339
     :cond_1a
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -315,14 +319,14 @@
 
     throw v0
 
-    .line 321
+    .line 342
     :cond_22
     :goto_22
     sget-object v0, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
 
     if-eqz v0, :cond_72
 
-    .line 322
+    .line 343
     .local v0, "rc":Luniffi/textrcs_libgm/RustClient;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -360,7 +364,7 @@
 
     invoke-static {v1}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 323
+    .line 344
     new-instance v1, Lcom/textrcs/bridge/RustBridge$downloadMedia$bytes$1;
 
     const/4 v2, 0x0
@@ -377,7 +381,7 @@
 
     check-cast v1, [B
 
-    .line 324
+    .line 345
     .local v1, "bytes":[B
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -401,10 +405,10 @@
 
     invoke-static {v2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 325
+    .line 346
     return-object v1
 
-    .line 321
+    .line 342
     .end local v0    # "rc":Luniffi/textrcs_libgm/RustClient;
     .end local v1    # "bytes":[B
     :cond_72
@@ -509,6 +513,187 @@
 
     .line 308
     return-void
+.end method
+
+.method public final sendReaction(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    .registers 13
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "messageId"    # Ljava/lang/String;
+    .param p3, "emoji"    # Ljava/lang/String;
+    .param p4, "action"    # I
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "messageId"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "emoji"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 320
+    sget-boolean v0, Lcom/textrcs/bridge/RustBridge;->connected:Z
+
+    if-nez v0, :cond_22
+
+    .line 321
+    invoke-virtual {p0, p1}, Lcom/textrcs/bridge/RustBridge;->start(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1a
+
+    goto :goto_22
+
+    .line 322
+    :cond_1a
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "RustBridge not connected (not paired?)"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 325
+    :cond_22
+    :goto_22
+    sget-object v0, Lcom/textrcs/bridge/RustBridge;->client:Luniffi/textrcs_libgm/RustClient;
+
+    if-eqz v0, :cond_81
+
+    move-object v2, v0
+
+    .line 326
+    .local v2, "rc":Luniffi/textrcs_libgm/RustClient;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "RUST sendReaction \u2192 msg="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/4 v7, 0x6
+
+    invoke-static {p2, v7}, Lkotlin/text/StringsKt;->takeLast(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " emoji="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " action="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 327
+    new-instance v1, Lcom/textrcs/bridge/RustBridge$sendReaction$1;
+
+    const/4 v6, 0x0
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    .end local p2    # "messageId":Ljava/lang/String;
+    .end local p3    # "emoji":Ljava/lang/String;
+    .end local p4    # "action":I
+    .local v3, "messageId":Ljava/lang/String;
+    .local v4, "emoji":Ljava/lang/String;
+    .local v5, "action":I
+    invoke-direct/range {v1 .. v6}, Lcom/textrcs/bridge/RustBridge$sendReaction$1;-><init>(Luniffi/textrcs_libgm/RustClient;Ljava/lang/String;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+
+    check-cast v1, Lkotlin/jvm/functions/Function2;
+
+    const/4 p2, 0x1
+
+    const/4 p3, 0x0
+
+    invoke-static {p3, v1, p2, p3}, Lkotlinx/coroutines/BuildersKt;->runBlocking$default(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Ljava/lang/Object;
+
+    .line 328
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "RUST sendReaction OK msg="
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p2
+
+    invoke-static {v3, v7}, Lkotlin/text/StringsKt;->takeLast(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
+
+    .line 329
+    return-void
+
+    .line 325
+    .end local v2    # "rc":Luniffi/textrcs_libgm/RustClient;
+    .end local v3    # "messageId":Ljava/lang/String;
+    .end local v4    # "emoji":Ljava/lang/String;
+    .end local v5    # "action":I
+    .restart local p2    # "messageId":Ljava/lang/String;
+    .restart local p3    # "emoji":Ljava/lang/String;
+    .restart local p4    # "action":I
+    :cond_81
+    move-object v3, p2
+
+    move-object v4, p3
+
+    .end local p2    # "messageId":Ljava/lang/String;
+    .end local p3    # "emoji":Ljava/lang/String;
+    .restart local v3    # "messageId":Ljava/lang/String;
+    .restart local v4    # "emoji":Ljava/lang/String;
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    const-string p3, "RustBridge has no client"
+
+    invoke-direct {p2, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method
 
 .method public final sendText(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V

@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Disposable$Companion\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,5003:1\n4098#2,11:5004\n1855#3,2:5015\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Disposable$Companion\n*L\n1366#1:5004,11\n1367#1:5015,2\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Disposable$Companion\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,5056:1\n4098#2,11:5057\n1855#3,2:5068\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/Disposable$Companion\n*L\n1375#1:5057,11\n1376#1:5068,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -61,7 +61,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 1364
+    .line 1373
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,13 +77,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1366
+    .line 1375
     move-object v0, p1
 
     .local v0, "$this$filterIsInstance$iv":[Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .line 5004
+    .line 5057
     .local v1, "$i$f$filterIsInstance":I
     new-instance v2, Ljava/util/ArrayList;
 
@@ -97,7 +97,7 @@
     .local v3, "$this$filterIsInstanceTo$iv$iv":[Ljava/lang/Object;
     const/4 v4, 0x0
 
-    .line 5013
+    .line 5066
     .local v4, "$i$f$filterIsInstanceTo":I
     array-length v5, v3
 
@@ -121,7 +121,7 @@
 
     goto :goto_12
 
-    .line 5014
+    .line 5067
     :cond_20
     nop
 
@@ -130,20 +130,20 @@
     .end local v4    # "$i$f$filterIsInstanceTo":I
     check-cast v2, Ljava/util/List;
 
-    .line 5004
+    .line 5057
     nop
 
     .end local v0    # "$this$filterIsInstance$iv":[Ljava/lang/Object;
     .end local v1    # "$i$f$filterIsInstance":I
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 1367
+    .line 1376
     nop
 
     .local v2, "$this$forEach$iv":Ljava/lang/Iterable;
     const/4 v0, 0x0
 
-    .line 5015
+    .line 5068
     .local v0, "$i$f$forEach":I
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -168,11 +168,11 @@
     .local v4, "p0":Luniffi/textrcs_libgm/Disposable;
     const/4 v5, 0x0
 
-    .line 1367
+    .line 1376
     .local v5, "$i$a$-forEach-Disposable$Companion$destroy$1":I
     invoke-interface {v4}, Luniffi/textrcs_libgm/Disposable;->destroy()V
 
-    .line 5015
+    .line 5068
     .end local v4    # "p0":Luniffi/textrcs_libgm/Disposable;
     .end local v5    # "$i$a$-forEach-Disposable$Companion$destroy$1":I
     nop
@@ -180,11 +180,11 @@
     .end local v3    # "element$iv":Ljava/lang/Object;
     goto :goto_2c
 
-    .line 5016
+    .line 5069
     :cond_3f
     nop
 
-    .line 1368
+    .line 1377
     .end local v0    # "$i$f$forEach":I
     .end local v2    # "$this$forEach$iv":Ljava/lang/Iterable;
     return-void

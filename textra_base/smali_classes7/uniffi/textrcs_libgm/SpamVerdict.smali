@@ -150,28 +150,28 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4364
+    .line 4417
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4365
+    .line 4418
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamVerdict;->level:Luniffi/textrcs_libgm/SpamLevel;
 
-    .line 4366
+    .line 4419
     iput-byte p2, p0, Luniffi/textrcs_libgm/SpamVerdict;->score:B
 
-    .line 4370
+    .line 4423
     iput-object p3, p0, Luniffi/textrcs_libgm/SpamVerdict;->reasons:Ljava/util/List;
 
-    .line 4371
+    .line 4424
     iput-object p4, p0, Luniffi/textrcs_libgm/SpamVerdict;->matchedIndicator:Ljava/lang/String;
 
-    .line 4372
+    .line 4425
     iput-object p5, p0, Luniffi/textrcs_libgm/SpamVerdict;->matchedSource:Ljava/lang/String;
 
-    .line 4376
+    .line 4429
     iput-boolean p6, p0, Luniffi/textrcs_libgm/SpamVerdict;->checkedOnline:Z
 
-    .line 4364
+    .line 4417
     return-void
 .end method
 
@@ -448,7 +448,7 @@
 .method public final getCheckedOnline()Z
     .registers 2
 
-    .line 4376
+    .line 4429
     iget-boolean v0, p0, Luniffi/textrcs_libgm/SpamVerdict;->checkedOnline:Z
 
     return v0
@@ -457,7 +457,7 @@
 .method public final getLevel()Luniffi/textrcs_libgm/SpamLevel;
     .registers 2
 
-    .line 4365
+    .line 4418
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamVerdict;->level:Luniffi/textrcs_libgm/SpamLevel;
 
     return-object v0
@@ -466,7 +466,7 @@
 .method public final getMatchedIndicator()Ljava/lang/String;
     .registers 2
 
-    .line 4371
+    .line 4424
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamVerdict;->matchedIndicator:Ljava/lang/String;
 
     return-object v0
@@ -475,7 +475,7 @@
 .method public final getMatchedSource()Ljava/lang/String;
     .registers 2
 
-    .line 4372
+    .line 4425
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamVerdict;->matchedSource:Ljava/lang/String;
 
     return-object v0
@@ -492,7 +492,7 @@
         }
     .end annotation
 
-    .line 4370
+    .line 4423
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamVerdict;->reasons:Ljava/util/List;
 
     return-object v0
@@ -501,7 +501,7 @@
 .method public final getScore-w2LRezQ()B
     .registers 2
 
-    .line 4366
+    .line 4419
     iget-byte v0, p0, Luniffi/textrcs_libgm/SpamVerdict;->score:B
 
     return v0
@@ -593,7 +593,7 @@
     .registers 2
     .param p1, "<set-?>"    # Z
 
-    .line 4376
+    .line 4429
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamVerdict;->checkedOnline:Z
 
     return-void
@@ -607,7 +607,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4365
+    .line 4418
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamVerdict;->level:Luniffi/textrcs_libgm/SpamLevel;
 
     return-void
@@ -617,7 +617,7 @@
     .registers 2
     .param p1, "<set-?>"    # Ljava/lang/String;
 
-    .line 4371
+    .line 4424
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamVerdict;->matchedIndicator:Ljava/lang/String;
 
     return-void
@@ -627,7 +627,7 @@
     .registers 2
     .param p1, "<set-?>"    # Ljava/lang/String;
 
-    .line 4372
+    .line 4425
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamVerdict;->matchedSource:Ljava/lang/String;
 
     return-void
@@ -649,7 +649,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4370
+    .line 4423
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamVerdict;->reasons:Ljava/util/List;
 
     return-void
@@ -659,7 +659,7 @@
     .registers 2
     .param p1, "<set-?>"    # B
 
-    .line 4366
+    .line 4419
     iput-byte p1, p0, Luniffi/textrcs_libgm/SpamVerdict;->score:B
 
     return-void

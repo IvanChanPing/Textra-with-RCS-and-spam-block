@@ -80,17 +80,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 3480
+    .line 3533
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3481
+    .line 3534
     new-instance v0, Luniffi/textrcs_libgm/UniffiHandleMap;
 
     invoke-direct {v0}, Luniffi/textrcs_libgm/UniffiHandleMap;-><init>()V
 
     iput-object v0, p0, Luniffi/textrcs_libgm/FfiConverterCallbackInterface;->handleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
 
-    .line 3480
+    .line 3533
     return-void
 .end method
 
@@ -109,7 +109,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3495
+    .line 3548
     const-wide/16 v0, 0x8
 
     return-wide v0
@@ -119,12 +119,12 @@
     .registers 4
     .param p1, "handle"    # J
 
-    .line 3484
+    .line 3537
     iget-object v0, p0, Luniffi/textrcs_libgm/FfiConverterCallbackInterface;->handleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
 
     invoke-virtual {v0, p1, p2}, Luniffi/textrcs_libgm/UniffiHandleMap;->remove(J)Ljava/lang/Object;
 
-    .line 3485
+    .line 3538
     return-void
 .end method
 
@@ -138,7 +138,7 @@
         }
     .end annotation
 
-    .line 3481
+    .line 3534
     iget-object v0, p0, Luniffi/textrcs_libgm/FfiConverterCallbackInterface;->handleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
 
     return-object v0
@@ -153,7 +153,7 @@
         }
     .end annotation
 
-    .line 3488
+    .line 3541
     iget-object v0, p0, Luniffi/textrcs_libgm/FfiConverterCallbackInterface;->handleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
 
     invoke-virtual {v0, p1, p2}, Luniffi/textrcs_libgm/UniffiHandleMap;->get(J)Ljava/lang/Object;
@@ -167,7 +167,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3480
+    .line 3533
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Number;
@@ -194,7 +194,7 @@
         }
     .end annotation
 
-    .line 3480
+    .line 3533
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -216,7 +216,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3493
+    .line 3546
     iget-object v0, p0, Luniffi/textrcs_libgm/FfiConverterCallbackInterface;->handleMap:Luniffi/textrcs_libgm/UniffiHandleMap;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/UniffiHandleMap;->insert(Ljava/lang/Object;)J
@@ -234,7 +234,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 3480
+    .line 3533
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterCallbackInterface;->lower(Ljava/lang/Object;)Ljava/lang/Long;
 
     move-result-object v0
@@ -252,7 +252,7 @@
         }
     .end annotation
 
-    .line 3480
+    .line 3533
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverter$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverter;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -275,7 +275,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3491
+    .line 3544
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v0
@@ -307,7 +307,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3498
+    .line 3551
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterCallbackInterface;->lower(Ljava/lang/Object;)Ljava/lang/Long;
 
     move-result-object v0
@@ -318,6 +318,6 @@
 
     invoke-virtual {p2, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 3499
+    .line 3552
     return-void
 .end method

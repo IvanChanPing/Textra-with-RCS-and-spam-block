@@ -428,6 +428,58 @@ impl RustClient {
             .await?;
         Ok(())
     }
+
+    /// Send an official Google-Messages reaction (tapback) to a message — the
+    /// RCS-native equivalent of Textra's "tapback over SMS". Port of
+    /// mautrix-gmessages client.SendReaction (methods.go:101). Called from
+    /// Kotlin (RustBridge.sendReaction) when SendManager intercepts an outgoing
+    /// Textra tapback on an RCS thread. `action` is the SendReactionRequest.Action
+    /// enum value (1=ADD, 2=REMOVE, 3=SWITCH); `emoji` is the reaction glyph,
+    /// whose EmojiType is derived via [unicode_to_emoji_type] (standard set ->
+    /// typed; anything else -> CUSTOM with the raw unicode, like mautrix MakeReactionData).
+    pub async fn send_reaction(
+        &self,
+        message_id: String,
+        emoji: String,
+        action: i32,
+    ) -> Result<()> {
+        use crate::proto::client::SendReactionRequest;
+        use crate::proto::conversations::ReactionData;
+        let req = SendReactionRequest {
+            message_id,
+            reaction_data: Some(ReactionData {
+                r#type: unicode_to_emoji_type(&emoji),
+                unicode: emoji,
+                custom_emoji: None,
+            }),
+            action,
+            sim_payload: None,
+        };
+        let _ = self.engine_arc().await?.send_reaction(req).await?;
+        Ok(())
+    }
+}
+
+/// Map a reaction emoji to its `conversations.EmojiType` value (proto numbers:
+/// LIKE=1, LOVE=2, LAUGH=3, SURPRISED=4, SAD=5, ANGRY=6, DISLIKE=7, CUSTOM=8,
+/// QUESTIONING=9, CRYING_FACE=10, POUTING_FACE=11, RED_HEART=12). Mirrors
+/// mautrix-gmessages emojitype.go UnicodeToEmojiType; anything not in the
+/// standard set is CUSTOM (8) carried with the raw unicode in ReactionData.
+fn unicode_to_emoji_type(emoji: &str) -> i32 {
+    match emoji {
+        "\u{1F44D}" => 1,                      // 👍 LIKE
+        "\u{1F60D}" => 2,                      // 😍 LOVE
+        "\u{1F602}" => 3,                      // 😂 LAUGH
+        "\u{1F62E}" => 4,                      // 😮 SURPRISED
+        "\u{1F625}" => 5,                      // 😥 SAD
+        "\u{1F620}" => 6,                      // 😠 ANGRY
+        "\u{1F44E}" => 7,                      // 👎 DISLIKE
+        "\u{1F914}" => 9,                      // 🤔 QUESTIONING
+        "\u{1F622}" => 10,                     // 😢 CRYING_FACE
+        "\u{1F621}" => 11,                     // 😡 POUTING_FACE
+        "\u{2764}" | "\u{2764}\u{FE0F}" => 12, // ❤ / ❤️ RED_HEART
+        _ => 8,                                // CUSTOM
+    }
 }
 
 impl RustClient {

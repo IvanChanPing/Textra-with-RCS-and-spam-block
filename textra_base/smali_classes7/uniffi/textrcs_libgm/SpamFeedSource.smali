@@ -100,19 +100,19 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4224
+    .line 4277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4225
+    .line 4278
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamFeedSource;->name:Ljava/lang/String;
 
-    .line 4226
+    .line 4279
     iput-object p2, p0, Luniffi/textrcs_libgm/SpamFeedSource;->url:Ljava/lang/String;
 
-    .line 4227
+    .line 4280
     iput-object p3, p0, Luniffi/textrcs_libgm/SpamFeedSource;->kind:Luniffi/textrcs_libgm/SpamFeedKind;
 
-    .line 4224
+    .line 4277
     return-void
 .end method
 
@@ -259,7 +259,7 @@
 .method public final getKind()Luniffi/textrcs_libgm/SpamFeedKind;
     .registers 2
 
-    .line 4227
+    .line 4280
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamFeedSource;->kind:Luniffi/textrcs_libgm/SpamFeedKind;
 
     return-object v0
@@ -268,7 +268,7 @@
 .method public final getName()Ljava/lang/String;
     .registers 2
 
-    .line 4225
+    .line 4278
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamFeedSource;->name:Ljava/lang/String;
 
     return-object v0
@@ -277,7 +277,7 @@
 .method public final getUrl()Ljava/lang/String;
     .registers 2
 
-    .line 4226
+    .line 4279
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamFeedSource;->url:Ljava/lang/String;
 
     return-object v0
@@ -323,7 +323,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4227
+    .line 4280
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamFeedSource;->kind:Luniffi/textrcs_libgm/SpamFeedKind;
 
     return-void
@@ -337,7 +337,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4225
+    .line 4278
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamFeedSource;->name:Ljava/lang/String;
 
     return-void
@@ -351,7 +351,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4226
+    .line 4279
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamFeedSource;->url:Ljava/lang/String;
 
     return-void

@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustPairingSession$UniffiCleanAction\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5003:1\n315#2:5004\n275#2,4:5005\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustPairingSession$UniffiCleanAction\n*L\n3832#1:5004\n3832#1:5005,4\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustPairingSession$UniffiCleanAction\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5056:1\n315#2:5057\n275#2,4:5058\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/RustPairingSession$UniffiCleanAction\n*L\n3885#1:5057\n3885#1:5058,4\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -52,7 +52,7 @@
     .registers 2
     .param p1, "pointer"    # Lcom/sun/jna/Pointer;
 
-    .line 3829
+    .line 3882
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Luniffi/textrcs_libgm/RustPairingSession$UniffiCleanAction;->pointer:Lcom/sun/jna/Pointer;
@@ -65,7 +65,7 @@
 .method public run()V
     .registers 10
 
-    .line 3831
+    .line 3884
     iget-object v0, p0, Luniffi/textrcs_libgm/RustPairingSession$UniffiCleanAction;->pointer:Lcom/sun/jna/Pointer;
 
     if-eqz v0, :cond_26
@@ -73,11 +73,11 @@
     .local v0, "ptr":Lcom/sun/jna/Pointer;
     const/4 v1, 0x0
 
-    .line 3832
+    .line 3885
     .local v1, "$i$a$-let-RustPairingSession$UniffiCleanAction$run$1":I
     const/4 v2, 0x0
 
-    .line 5004
+    .line 5057
     .local v2, "$i$f$uniffiRustCall":I
     sget-object v3, Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;->INSTANCE:Luniffi/textrcs_libgm/UniffiNullRustCallStatusErrorHandler;
 
@@ -86,20 +86,20 @@
     .local v3, "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     const/4 v4, 0x0
 
-    .line 5005
+    .line 5058
     .local v4, "$i$f$uniffiRustCallWithError":I
     new-instance v5, Luniffi/textrcs_libgm/UniffiRustCallStatus;
 
     invoke-direct {v5}, Luniffi/textrcs_libgm/UniffiRustCallStatus;-><init>()V
 
-    .line 5006
+    .line 5059
     .local v5, "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     move-object v6, v5
 
     .local v6, "status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     const/4 v7, 0x0
 
-    .line 3833
+    .line 3886
     .local v7, "$i$a$-uniffiRustCall-RustPairingSession$UniffiCleanAction$run$1$1":I
     sget-object v8, Luniffi/textrcs_libgm/UniffiLib;->Companion:Luniffi/textrcs_libgm/UniffiLib$Companion;
 
@@ -109,41 +109,41 @@
 
     invoke-interface {v8, v0, v6}, Luniffi/textrcs_libgm/UniffiLib;->uniffi_textrcs_libgm_fn_free_rustpairingsession(Lcom/sun/jna/Pointer;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 3834
+    .line 3887
     nop
 
     .end local v6    # "status":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v7    # "$i$a$-uniffiRustCall-RustPairingSession$UniffiCleanAction$run$1$1":I
     sget-object v6, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 5006
+    .line 5059
     nop
 
-    .line 5007
+    .line 5060
     .local v6, "return_value$iv$iv":Ljava/lang/Object;
     # invokes: Luniffi/textrcs_libgm/Textrcs_libgmKt;->uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
     invoke-static {v3, v5}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->access$uniffiCheckCallStatus(Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;Luniffi/textrcs_libgm/UniffiRustCallStatus;)V
 
-    .line 5008
+    .line 5061
     nop
 
-    .line 5004
+    .line 5057
     .end local v3    # "errorHandler$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatusErrorHandler;
     .end local v4    # "$i$f$uniffiRustCallWithError":I
     .end local v5    # "status$iv$iv":Luniffi/textrcs_libgm/UniffiRustCallStatus;
     .end local v6    # "return_value$iv$iv":Ljava/lang/Object;
     nop
 
-    .line 3835
+    .line 3888
     .end local v2    # "$i$f$uniffiRustCall":I
     nop
 
-    .line 3831
+    .line 3884
     .end local v0    # "ptr":Lcom/sun/jna/Pointer;
     .end local v1    # "$i$a$-let-RustPairingSession$UniffiCleanAction$run$1":I
     nop
 
-    .line 3836
+    .line 3889
     :cond_26
     return-void
 .end method

@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5003:1\n323#2,7:5004\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n*L\n3538#1:5004,7\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n+ 2 textrcs_libgm.kt\nuniffi/textrcs_libgm/Textrcs_libgmKt\n*L\n1#1,5056:1\n323#2,7:5057\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain\n*L\n3591#1:5057,7\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -67,7 +67,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 3530
+    .line 3583
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -89,7 +89,7 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3532
+    .line 3585
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;
 
     invoke-virtual {v0}, Luniffi/textrcs_libgm/FfiConverterTypeRustEventSink;->getHandleMap$main()Luniffi/textrcs_libgm/UniffiHandleMap;
@@ -102,7 +102,7 @@
 
     check-cast v0, Luniffi/textrcs_libgm/RustEventSink;
 
-    .line 3533
+    .line 3586
     .local v0, "uniffiObj":Luniffi/textrcs_libgm/RustEventSink;
     new-instance v1, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain$callback$makeCall$1;
 
@@ -110,21 +110,21 @@
 
     check-cast v1, Lkotlin/jvm/functions/Function0;
 
-    .line 3537
+    .line 3590
     .local v1, "makeCall":Lkotlin/jvm/functions/Function0;
     sget-object v2, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain$callback$writeReturn$1;->INSTANCE:Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onPhoneRespondingAgain$callback$writeReturn$1;
 
     check-cast v2, Lkotlin/jvm/functions/Function1;
 
-    .line 3538
+    .line 3591
     .local v2, "writeReturn":Lkotlin/jvm/functions/Function1;
     const/4 v3, 0x0
 
-    .line 5004
+    .line 5057
     .local v3, "$i$f$uniffiTraitInterfaceCall":I
     nop
 
-    .line 5005
+    .line 5058
     :try_start_23
     invoke-interface {v1}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
@@ -136,17 +136,17 @@
 
     goto :goto_3b
 
-    .line 5006
+    .line 5059
     :catch_2b
     move-exception v4
 
-    .line 5007
+    .line 5060
     .local v4, "e$iv":Ljava/lang/Exception;
     const/4 v5, 0x2
 
     iput-byte v5, p4, Luniffi/textrcs_libgm/UniffiRustCallStatus;->code:B
 
-    .line 5008
+    .line 5061
     sget-object v5, Luniffi/textrcs_libgm/FfiConverterString;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterString;
 
     invoke-virtual {v4}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -159,12 +159,12 @@
 
     iput-object v5, p4, Luniffi/textrcs_libgm/UniffiRustCallStatus;->error_buf:Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 5010
+    .line 5063
     .end local v4    # "e$iv":Ljava/lang/Exception;
     :goto_3b
     nop
 
-    .line 3539
+    .line 3592
     .end local v3    # "$i$f$uniffiTraitInterfaceCall":I
     return-void
 .end method

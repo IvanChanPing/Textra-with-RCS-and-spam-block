@@ -1,5 +1,31 @@
 # TextRCS Changelog
 
+## 2026-06-26 — RCS reactions: SEND side (official Google-Messages reaction over Textra's tapback UI)
+
+Completes RCS reactions (receive landed in 3f88e321). Wires Beeper-style official reactions
+into Textra's EXISTING native tapback UI — no new UI. Reactions you send via Textra's tapback
+picker now transmit as the official Google-Messages SEND_REACTION RPC on RCS threads (instead of
+the "X liked" SMS), and the receive side renders incoming official reactions as native badges.
+
+- Rust engine (TextRCS Integration Kit/messaging-engine-rust/src/ffi.rs): new exported
+  `RustClient::send_reaction(message_id, emoji, action:i32)` over the already-implemented
+  `ClientEngine::send_reaction` (methods.rs:153 → ActionType::SEND_REACTION); + `unicode_to_emoji_type`
+  table (👍LIKE…❤️RED_HEART, else CUSTOM, mirrors mautrix emojitype.go). Rebuilt the .so for all 4
+  ABIs (cargo-ndk) and regenerated the UniFFI Kotlin binding (textrcs_libgm.kt now has sendReaction).
+- Kotlin send path: RustBridge.sendReaction (blocking, throws). SendManager.maybeSendAsReaction
+  intercepts an outgoing Textra tapback body on the send executor — detects the zero-width markers
+  (U+200B add / U+200C remove), parses emoji + quoted target, resolves the target's GM messageID via
+  the new IncomingMessageHandler.resolveReactionTargetId index (text→messageID, suffix-match to skip
+  the locale connector word), and sends the official reaction (ADD=1/REMOVE=2). Falls back to a normal
+  text send if the target can't be resolved or the RPC throws. Hook: sendmgr_reactions_disable.
+- Receive path index: IncomingMessageHandler now records incoming text→messageID (capped, synchronized)
+  to feed the send-side target resolution.
+
+Build exit 0; .so exports send_reaction; sendReaction in the binding; classes present in the APK.
+STATUS: compile-built, on-device UI click-path UNVERIFIED (can't drive Textra's tapback UI on redroid).
+Flagged UNVERIFIED: (1) Textra's outgoing tapback reaches SendManager with the ZW markers intact on RCS
+threads; (2) incoming ReactionEntry.participantIDs match the participantPhone id space. Canonical APK: textra2.apk.
+
 ## 2026-06-25 — "Share my location" (static map link) + RCS reactions check
 
 **Feature: Share my location (static Google Maps link).** New menu row **"Share my location"** in the

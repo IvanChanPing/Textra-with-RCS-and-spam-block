@@ -134,6 +134,16 @@ object IncomingMessageHandler {
     private const val REACTION_PREFS = "textrcs_reactions"
     private const val REACTION_KEY = "keys"
     private var reactionsLoaded = false
+    /**
+     * Reaction-target index: trimmed message TEXT -> GM messageID, for the SEND
+     * path. When the user reacts via Textra's tapback UI, Textra composes the
+     * outgoing tapback as text quoting the target message; com.textrcs.send.SendManager
+     * parses that quote and calls [resolveReactionTargetId] to get the messageID
+     * the official SendReaction RPC needs. Populated from incoming messages
+     * (the common react-to-their-message case); capped, in-memory.
+     */
+    private val msgIdByText = LinkedHashMap<String, String>()
+    private const val MSGID_BY_TEXT_CAP = 300
     /** internal key separator (U+0001, never appears in phones/emoji/messageIDs). */
     private const val SEP = ""
     /** Textra tapback markers: ADD wraps the emoji in ZWSP, REMOVE in ZWNJ. */
@@ -420,6 +430,12 @@ object IncomingMessageHandler {
             Log.i(TAG, "  skip id=${data.messageID} — no text or media parts")
             ScreenTracer.note("RCV msg SKIP — no content parts")
             return
+        }
+
+        // Index text -> messageID so the reaction SEND path can resolve the
+        // target message the user tapped-back on (see [resolveReactionTargetId]).
+        if (data.messageID.isNotBlank() && body.isNotEmpty()) {
+            rememberReactionTarget(body, data.messageID)
         }
 
         // [REMOTE_HOOK v0.75] incoming_dedup_disable — disable the
@@ -797,6 +813,28 @@ object IncomingMessageHandler {
             persistReactions()
         }
     }
+
+    /** SEND-path index: remember a message's text -> messageID (latest wins), capped. */
+    @Synchronized
+    private fun rememberReactionTarget(text: String, id: String) {
+        val k = text.trim()
+        if (k.isEmpty()) return
+        msgIdByText.remove(k) // re-insert so it becomes most-recent
+        msgIdByText[k] = id
+        while (msgIdByText.size > MSGID_BY_TEXT_CAP) {
+            val it = msgIdByText.keys.iterator()
+            if (it.hasNext()) { it.next(); it.remove() } else break
+        }
+    }
+
+    /**
+     * Resolve the GM messageID of the message whose text matches [text] (the
+     * quote in an outgoing Textra tapback). Used by [com.textrcs.send.SendManager]
+     * to target the official SendReaction RPC. Null if not seen → caller falls
+     * back to sending the tapback as ordinary text.
+     */
+    @Synchronized
+    fun resolveReactionTargetId(text: String): String? = msgIdByText[text.trim()]
 
     private fun trimReactions() {
         while (seenReactionKeys.size > REACTION_CAP) {

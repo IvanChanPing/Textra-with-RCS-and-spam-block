@@ -308,6 +308,27 @@ object RustBridge {
     }
 
     /**
+     * Send an OFFICIAL Google-Messages reaction (tapback) to [messageId].
+     * Blocking (the caller — [com.textrcs.send.SendManager.maybeSendAsReaction] on
+     * sendExecutor — is off the main thread); THROWS on failure so the caller can
+     * fall back to a text send. [action] is SendReactionRequest.Action: 1=ADD,
+     * 2=REMOVE, 3=SWITCH. Routes to the Rust FFI `RustClient.send_reaction`
+     * (ffi.rs) over the already-implemented engine RPC (methods.rs send_reaction →
+     * ActionType.SEND_REACTION). Lazily starts the bridge if not connected.
+     */
+    fun sendReaction(context: Context, messageId: String, emoji: String, action: Int) {
+        if (!connected) {
+            if (!start(context)) {
+                throw IllegalStateException("RustBridge not connected (not paired?)")
+            }
+        }
+        val rc = client ?: throw IllegalStateException("RustBridge has no client")
+        ScreenTracer.note("RUST sendReaction → msg=${messageId.takeLast(6)} emoji=$emoji action=$action")
+        runBlocking { rc.sendReaction(messageId, emoji, action) }
+        ScreenTracer.note("RUST sendReaction OK msg=${messageId.takeLast(6)}")
+    }
+
+    /**
      * Download + AES-GCM-decrypt an incoming MMS attachment. Blocking —
      * the caller must run this off the main thread. Returns the raw
      * decrypted file bytes (e.g. the JPEG). Throws on any failure.
