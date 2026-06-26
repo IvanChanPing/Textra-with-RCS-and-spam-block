@@ -1,5 +1,92 @@
 # Share My Location (static map link) + RCS reactions check — Task Journal
 
+## CURRENT STATE / NEXT STEP (2026-06-26, reactions build in progress)
+- RCS REACTIONS — RECEIVE side IMPLEMENTED (Kotlin-only, building now). In IncomingMessageHandler.kt:
+  new `handleReactions(data)` called from handleMessage BEFORE the dedup/early-return; reads
+  `data.reactionsList` (field 19) snapshot, diffs vs persisted `seenReactionKeys`
+  (msgID␁pid␁emoji), and for non-self reactors (resolved via participantPhone, excludes isMe)
+  synthesizes Textra's native tapback-over-SMS text — ADD `‹U+200B›emoji‹U+200B› to <targetText>`,
+  REMOVE `Removed ‹U+200C›emoji‹U+200C› from <targetText>` — and feeds it via TextraDbBridge.writeIncoming
+  (→ c5.d.U → Textra's h5/h tapback parser → native reaction badge). Persisted set (textrcs_reactions
+  prefs) dedups long-poll replay + wake-restart. Hook `incoming_reactions_disable`. Byte-verified the ZW
+  markers + the two literals match C4/e English templates.
+- NEXT STEP: confirm build exit 0; then SEND side — export Rust ClientEngine::send_reaction over UniFFI in
+  "TextRCS Integration Kit/messaging-engine-rust/src/ffi.rs" + .so rebuild (cargo-ndk 4 ABIs) + regen
+  textrcs_libgm.kt + RustBridge.sendReaction + SendManager intercept of outgoing tapback bodies
+  (detect U+200B/U+200C → parse emoji+quoted target → resolve target GM messageID via msgID↔text cache).
+- UNVERIFIED risk to flag: that ReactionEntry.participantIDs use the SAME id space as participantPhone keys
+  (conversation participantID). If not, reactions resolve to null and are skipped (safe, logged). On-device
+  tapback rendering UNVERIFIED (can't drive on redroid).
+
+## (prior) CURRENT STATE / NEXT STEP (2026-06-26)
+- LOCATION FEATURE: **REMOVED** per user (commit e7f48214). Couldn't be placed next to the Schedule
+  button (a tab in the custom-laid-out `tabsContainer`/pluspanel.xml row) safely + verifiably →
+  user's explicit fallback was removal. Clean APK = `textra2.apk` at repo root, location classes
+  confirmed absent from all dexes.
+- NOW: RCS REACTIONS — user wants send wired into the existing send path, receive into existing
+  receive or new. Research DONE (see "RCS REACTIONS — VERIFIED FLOW" below). Awaiting one scope
+  decision (display approach + send trigger) before building, to avoid another placement misfire.
+
+## TEXTRA NATIVE TAPBACK (reaction) MAP + RCS WIRING PLAN (2026-06-26, VERIFIED by reading smali)
+USER CORRECTION: Textra ALREADY has a full reaction (tapback) UI on BOTH ends. Do NOT build new UI —
+wire Beeper's official RCS reaction into Textra's existing tapback send + render.
+VERIFIED Textra tapback architecture:
+- DB (i5/a:4658/4716, r4/H, r4/w): `messages.is_tapback` + `messages.has_tapbacks` columns; link table
+  `message_tapbacks(message_id, tapback_message_id)`. A tapback IS a message (is_tapback=1) linked to its
+  target via message_tapbacks. r4/H writes is_tapback / tapback_message_id / has_tapbacks (≈:1083-1187);
+  r4/H:845 reads a message's tapbacks.
+- Model J6/u {a=tapbackMsgId(J), b=type(I), c=emoji(F4/x; c.a=CharSequence), d=hasSparkled, e=isRemove,
+  f=originator(String)}. Type wrapper J6/t {a=int,b=F4/x}; BubbleView.getTapbackTypeIdByCurrentUser()→J6/t.
+- SMS WIRE FORMAT = standard Google tapback-over-SMS, built in **C4/e.smali** (localized templates).
+  ENGLISH: ADD = `​%e​ to %s` ; REMOVE = `Removed ‌%e‌ from %s`. `%e`=emoji,
+  `%s`=quoted target text. ADD wraps emoji in U+200B (ZWSP), REMOVE in U+200C (ZWNJ) — those zero-width
+  markers are how the receiver recognizes a tapback. C4 package (a..h) = the tapback engine (compose+parse).
+- Engine SEND for RCS threads already replaces SMS (SendManager.sendText) → an outgoing tapback (a normal
+  message whose body is the ​-marked text) flows INTO SendManager on RCS threads.
+- Receive infra: IncomingMessageHandler has a per-message cache keyed by `messageID: String` (convInfo),
+  usable for the GM-messageID ↔ message-text mapping the wiring needs.
+
+WIRING PLAN (the answer to "wire send into existing, receive into existing/new"):
+- RECEIVE (Kotlin-only, into EXISTING pipeline): in IncomingMessageHandler, when an incoming Message has
+  `reactionsList`, for each ReactionEntry synthesize the standard tapback text `​<unicode>​ to
+  "<target msg text>"` (ADD) / `Removed ‌<unicode>‌ from "<target text>"` (REMOVE via snapshot diff)
+  and inject it through the existing receive→Textra path as an inbound msg from the reactor. Textra's C4/e
+  parser renders it as a native tapback badge. Need target msg TEXT from the messageID→text cache. Must run
+  BEFORE the body-empty early-return (IncomingMessageHandler.kt:386).
+- SEND (existing send path + Rust): in SendManager.sendText, DETECT the tapback body (starts with U+200B/
+  U+200C), parse emoji + quoted target text, resolve target GM messageID by matching the quote to cached
+  received messages in the thread, and call RustBridge.sendReaction(messageID, emoji, ADD/REMOVE) instead of
+  sending plain text. Requires: Rust FFI export over existing ClientEngine::send_reaction (methods.rs:153) in
+  src/ffi.rs + .so rebuild (4 ABIs, cargo-ndk) + regen textrcs_libgm.kt + RustBridge.sendReaction (mirror markRead).
+- KEY NEW PIECE: a per-thread GM-messageID ↔ message-text(+ts) cache (extend the existing convInfo cache) —
+  both directions depend on it (receive: id→text to fill %s; send: text→id to target the RPC).
+STATUS: fully mapped, NOT yet built. Build is large (Rust rebuild + cache + receive synth + send intercept).
+Next session can resume from this block alone.
+
+## RCS REACTIONS — VERIFIED FLOW (2026-06-26, two agents read actual source)
+Reference = mautrix-gmessages Go (what Beeper bundles), cloned /tmp/gmessages-src. TextRCS = Kotlin+Rust port.
+SEND (mautrix): `client.SendReaction(SendReactionRequest{messageID, reactionData=MakeReactionData(emoji),
+  action ADD=1/REMOVE=2/SWITCH=3, SIMPayload})` → `sessionHandler.sendMessage(ActionType_SEND_REACTION=38,..)`
+  → AES-CTR+HMAC-SHA256 encrypted POST to .../v1.Messaging/SendMessage, awaits SendReactionResponse{success}.
+  emoji→EmojiType table (👍LIKE…❤️RED_HEART), arbitrary→CUSTOM(8) with raw unicode; qualify variation selectors.
+RECEIVE (mautrix): reactions arrive as `Message.reactions` (field 19, repeated ReactionEntry{data:ReactionData,
+  participantIDs[]}) inside GET_UPDATES MessageEvent — a FULL STATE SNAPSHOT (removal = participant absent → diff).
+TextRCS internals (VERIFIED):
+- SEND: Rust `ClientEngine::send_reaction` ALREADY EXISTS (TextRCS Integration Kit/messaging-engine-rust/
+  src/methods.rs:153 → send_message_proto(ActionType::SendReaction,&req)); BUT it is NOT exported on the
+  UniFFI `RustClient` (ffi.rs:229 export block). FFI surface (textrcs_libgm.kt:2677) has NO generic sendRpc
+  and NO sendReaction. So SEND needs: thin FFI wrapper in src/ffi.rs over the existing engine fn + .so
+  rebuild (4 ABIs, cargo-ndk — toolchain per [[reference_textrcs_rust_toolchain_2026_06_17]]) + regen
+  textrcs_libgm.kt + Kotlin RustBridge.sendReaction (mirror markRead) + a trigger UI.
+- RECEIVE: PURE KOTLIN, no Rust change. Long-poll already hands Kotlin raw conversations.Message protos with
+  the reactions field populated (RustBridge.Sink.onDataEvent→UpdateEvents.parseFrom→IncomingMessageHandler).
+  IncomingMessageHandler.handleMessage (kt:302) ignores data.reactionsList AND early-returns at kt:386 when
+  body+media empty (a pure reaction has no body) → must read reactions BEFORE that return.
+DISPLAY problem: Textra is SMS; bubbles have no reaction shelf and PDU can't carry reactions. Two options:
+  (A) Apple-style synthesized inbound text line via the EXISTING receive pipeline (e.g. 👍 Liked "<quote>") —
+  no new UI, low risk; (B) real bubble reaction shelf — big Textra-UI surgery, can't UI-verify headlessly.
+SEND TRIGGER options: (A) add "React" to Textra's message long-press context menu; (B) capability-only + debug hook.
+
 ## CURRENT STATE / NEXT STEP
 - GOAL: (A) Add a "Share my location" feature to TextRCS that sends a UNIVERSAL static
   Google Maps link (`https://www.google.com/maps?q=lat,lng`) any recipient can open with

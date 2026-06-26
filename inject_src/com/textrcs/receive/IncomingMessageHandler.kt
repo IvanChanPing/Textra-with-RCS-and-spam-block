@@ -120,6 +120,25 @@ object IncomingMessageHandler {
     private const val SEEN_PREFS = "textrcs_seen"
     private const val SEEN_KEY = "ids"
     private var seenLoaded = false
+
+    /**
+     * Official Google-Messages reactions already surfaced into Textra as native
+     * tapbacks, keyed "messageIDparticipantIDemoji". Reactions arrive as a
+     * FULL snapshot on the target Message (reactions field 19) and replay on every
+     * long-poll/reconnect, so this set dedups re-delivery AND (by diffing snapshot
+     * vs set) detects un-reactions. Persisted like [seenMessageIds] so a
+     * wake-restart doesn't re-surface every existing reaction. See [handleReactions].
+     */
+    private val seenReactionKeys = LinkedHashSet<String>()
+    private const val REACTION_CAP = 600
+    private const val REACTION_PREFS = "textrcs_reactions"
+    private const val REACTION_KEY = "keys"
+    private var reactionsLoaded = false
+    /** internal key separator (U+0001, never appears in phones/emoji/messageIDs). */
+    private const val SEP = ""
+    /** Textra tapback markers: ADD wraps the emoji in ZWSP, REMOVE in ZWNJ. */
+    private const val ZWSP = "​"
+    private const val ZWNJ = "‌"
     /** libgm timestamps above this are microseconds, not milliseconds. */
     private const val MICROS_THRESHOLD = 100_000_000_000_000L
 
@@ -350,6 +369,20 @@ object IncomingMessageHandler {
                     "status=${data.messageStatus.status} inline=$wrote",
             )
             return
+        }
+
+        // RCS reactions (tapbacks): an official Google-Messages reaction arrives
+        // as the target Message carrying its `reactions` (field 19) snapshot.
+        // Surface it through Textra's NATIVE tapback rendering. Runs BEFORE the
+        // dedup/early-return below because a reaction update reuses the
+        // (already-seen) target messageID and may carry no new body.
+        // [REMOTE_HOOK] incoming_reactions_disable — kill-switch.
+        if (!Hooks.shouldSkip("incoming_reactions_disable")) {
+            try {
+                handleReactions(data)
+            } catch (e: Throwable) {
+                Log.w(TAG, "handleReactions failed: ${e.javaClass.simpleName}: ${e.message}")
+            }
         }
 
         val textParts = data.messageInfoList
@@ -684,6 +717,112 @@ object IncomingMessageHandler {
             }
         } catch (e: Throwable) {
             Log.w(TAG, "loadPersistedSeen failed: ${e.javaClass.simpleName}: ${e.message}")
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // RCS reactions (tapbacks)
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * Surface an official Google-Messages reaction as a NATIVE Textra tapback.
+     *
+     * Google delivers reactions as a full snapshot on the target [com.textrcs.gmproto.conversations.Message]
+     * (`reactions` field 19 = repeated ReactionEntry{ data:ReactionData(unicode,type), participantIDs }).
+     * Textra already renders the standard Android "tapback over SMS" text into a
+     * reaction badge: ADD = `<ZWSP>emoji<ZWSP> to <text>`, REMOVE =
+     * `Removed <ZWNJ>emoji<ZWNJ> from <text>` (templates in com.mplus.lib.C4.e,
+     * parsed by com.mplus.lib.h5.h, attached by matching <text> to the target row).
+     * So we synthesize that exact text and feed it through [TextraDbBridge.writeIncoming]
+     * — Textra's normal inbound SMS path (com.mplus.lib.c5.d.U) — which runs the
+     * tapback parser and attaches the reaction to the original message.
+     *
+     * Snapshot semantics: diff the current snapshot against [seenReactionKeys] to
+     * emit ADD for new (participant,emoji) pairs and REMOVE for ones that vanished
+     * (un-reaction); the set is persisted so replays / wake-restarts don't dup.
+     * Only NON-SELF reactors (resolvable via [participantPhone], which excludes
+     * `isMe`) are surfaced, so our own reactions are never echoed back as incoming.
+     * Invoked from [handleMessage] (before the dedup/early-return) for every msg;
+     * a no-reaction message is a no-op. Toggle: hook `incoming_reactions_disable`.
+     * STATUS 2026-06-26: compile-built; on-device tapback rendering UNVERIFIED.
+     */
+    private fun handleReactions(data: com.textrcs.gmproto.conversations.Message) {
+        appContext?.let { loadPersistedReactions(it) }
+        val msgId = data.messageID
+        if (msgId.isBlank() || data.reactionsCount == 0 && seenReactionKeys.none { it.startsWith(msgId + SEP) }) return
+        // Textra matches the tapback to its target by the target's own text.
+        val targetText = data.messageInfoList
+            .mapNotNull { mi -> mi.messageContent?.content }
+            .filter { it.isNotEmpty() }
+            .joinToString("\n")
+        if (targetText.isEmpty()) return // media-only target: Textra can't match by text
+        val ts = normalizeTimestamp(data.timestamp)
+
+        // Current snapshot: key -> reactor phone (non-self only).
+        val current = LinkedHashMap<String, String>()
+        for (i in 0 until data.reactionsCount) {
+            val entry = data.getReactions(i)
+            if (!entry.hasData()) continue
+            val emoji = entry.data.unicode
+            if (emoji.isEmpty()) continue
+            for (pid in entry.participantIDsList) {
+                val phone = participantPhone[pid] ?: continue // null = self/unknown -> skip
+                current[msgId + SEP + pid + SEP + emoji] = phone
+            }
+        }
+        val priorForMsg = seenReactionKeys.filter { it.startsWith(msgId + SEP) }
+        var changed = false
+        // ADD — present now, not before.
+        for ((key, phone) in current) {
+            if (seenReactionKeys.contains(key)) continue
+            val emoji = key.substringAfterLast(SEP)
+            val wrote = TextraDbBridge.writeIncoming(phone, "​$emoji​ to $targetText", ts)
+            Log.i(TAG, "  REACTION+ emoji=$emoji msg=$msgId phone.tail=${phone.takeLast(4)} wrote=$wrote")
+            ScreenTracer.note("RCV reaction+ wrote=$wrote msg=$msgId")
+            if (wrote) { seenReactionKeys.add(key); changed = true }
+        }
+        // REMOVE — was present before, gone now (un-reaction).
+        for (key in priorForMsg) {
+            if (current.containsKey(key)) continue
+            val parts = key.split(SEP)
+            val pid = parts.getOrNull(1) ?: continue
+            val emoji = parts.getOrNull(2) ?: continue
+            val phone = participantPhone[pid] ?: continue
+            val wrote = TextraDbBridge.writeIncoming(phone, "Removed ‌$emoji‌ from $targetText", ts)
+            Log.i(TAG, "  REACTION- emoji=$emoji msg=$msgId phone.tail=${phone.takeLast(4)} wrote=$wrote")
+            if (wrote) { seenReactionKeys.remove(key); changed = true }
+        }
+        if (changed) {
+            trimReactions()
+            persistReactions()
+        }
+    }
+
+    private fun trimReactions() {
+        while (seenReactionKeys.size > REACTION_CAP) {
+            seenReactionKeys.remove(seenReactionKeys.first())
+        }
+    }
+
+    private fun persistReactions() {
+        val ctx = appContext ?: return
+        try {
+            ctx.getSharedPreferences(REACTION_PREFS, Context.MODE_PRIVATE)
+                .edit().putStringSet(REACTION_KEY, HashSet(seenReactionKeys)).commit()
+        } catch (e: Throwable) {
+            Log.w(TAG, "persistReactions failed: ${e.javaClass.simpleName}: ${e.message}")
+        }
+    }
+
+    private fun loadPersistedReactions(ctx: Context) {
+        if (reactionsLoaded) return
+        reactionsLoaded = true
+        try {
+            val s = ctx.getSharedPreferences(REACTION_PREFS, Context.MODE_PRIVATE)
+                .getStringSet(REACTION_KEY, null)
+            if (s != null) { seenReactionKeys.addAll(s); trimReactions() }
+        } catch (e: Throwable) {
+            Log.w(TAG, "loadPersistedReactions failed: ${e.javaClass.simpleName}: ${e.message}")
         }
     }
 
