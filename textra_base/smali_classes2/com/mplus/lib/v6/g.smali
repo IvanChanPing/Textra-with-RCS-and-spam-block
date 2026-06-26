@@ -1247,16 +1247,6 @@
 
     invoke-virtual {v1, v2, v11}, Lcom/mplus/lib/x7/f;->n0(Lcom/mplus/lib/x7/g;I)V
 
-    # [TEXTRCS-LOCSHARE] add the "Share my location" row to the contact/info overlay menu.
-    # v6 = the conversation Activity (x5/l), v11 = -1 (append). LocShareItem.e() -> LocationShare.shareInto().
-    iget-object v1, v0, Lcom/mplus/lib/v6/g;->M:Lcom/mplus/lib/x7/f;
-
-    new-instance v2, Lcom/mplus/lib/x7/LocShareItem;
-
-    invoke-direct {v2, v6}, Lcom/mplus/lib/x7/LocShareItem;-><init>(Lcom/mplus/lib/x5/l;)V
-
-    invoke-virtual {v1, v2, v11}, Lcom/mplus/lib/x7/f;->n0(Lcom/mplus/lib/x7/g;I)V
-
     iget-object v1, v0, Lcom/mplus/lib/W6/a;->i:Lcom/mplus/lib/r4/n;
 
     invoke-virtual {v1}, Lcom/mplus/lib/r4/n;->u()Z
