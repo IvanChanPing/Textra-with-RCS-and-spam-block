@@ -149,6 +149,8 @@ object IncomingMessageHandler {
     /** Textra tapback markers: ADD wraps the emoji in ZWSP, REMOVE in ZWNJ. */
     private const val ZWSP = "​"
     private const val ZWNJ = "‌"
+    /** HAIR SPACE (U+200A) — h5/h.N regex requires this on both sides of the tapback text (C4/e pswitch_7 templates pass through P() which wraps with  ). */
+    private const val HS = " "
     /** libgm timestamps above this are microseconds, not milliseconds. */
     private const val MICROS_THRESHOLD = 100_000_000_000_000L
 
@@ -792,7 +794,9 @@ object IncomingMessageHandler {
         for ((key, phone) in current) {
             if (seenReactionKeys.contains(key)) continue
             val emoji = key.substringAfterLast(SEP)
-            val wrote = TextraDbBridge.writeIncoming(phone, "​$emoji​ to $targetText", ts)
+            // Deliver via the FULL store (F0) — the ONLY path that schedules
+            // Textra's tapback parser so this text is auto-translated to a badge.
+            val wrote = TextraDbBridge.writeIncomingViaFullStore(phone, "${HS}${ZWSP}$emoji${ZWSP} to $targetText${HS}", ts)
             Log.i(TAG, "  REACTION+ emoji=$emoji msg=$msgId phone.tail=${phone.takeLast(4)} wrote=$wrote")
             ScreenTracer.note("RCV reaction+ wrote=$wrote msg=$msgId")
             if (wrote) { seenReactionKeys.add(key); changed = true }
@@ -804,7 +808,7 @@ object IncomingMessageHandler {
             val pid = parts.getOrNull(1) ?: continue
             val emoji = parts.getOrNull(2) ?: continue
             val phone = participantPhone[pid] ?: continue
-            val wrote = TextraDbBridge.writeIncoming(phone, "Removed ‌$emoji‌ from $targetText", ts)
+            val wrote = TextraDbBridge.writeIncomingViaFullStore(phone, "${HS}Removed ${ZWNJ}$emoji${ZWNJ} from $targetText${HS}", ts)
             Log.i(TAG, "  REACTION- emoji=$emoji msg=$msgId phone.tail=${phone.takeLast(4)} wrote=$wrote")
             if (wrote) { seenReactionKeys.remove(key); changed = true }
         }

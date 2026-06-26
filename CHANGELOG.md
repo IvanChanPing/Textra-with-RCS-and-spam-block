@@ -1,5 +1,26 @@
 # TextRCS Changelog
 
+## 2026-06-26 — RCS reactions: fix tapback text format so Textra's native parser matches
+
+Root cause of receive-side tapback rendering failure was identified and fixed: Textra's `h5/h.N`
+regex-based tapback parser requires HAIR SPACE (U+200A) on both sides of the tapback body text —
+this comes from the `P()` wrapper in `h5/h.smali` which every pattern template in `C4/e pswitch_7`
+passes through. Our synthesized text was missing the outer ` `, so the regex never matched and
+`is_tapback` stayed 0.
+
+Also fixed the send-side target lookup: `maybeSendAsReaction()` was passing the raw `remainder`
+string (e.g. `" to Pizza tonight? "`) directly to `resolveReactionTargetId()`, which does an
+exact key lookup against plain stored text (`"Pizza tonight?"`). Now strips the `" to "`/`" from "`
+connector and trims before the lookup.
+
+- `IncomingMessageHandler.kt`: added `HS = " "` (HAIR SPACE) constant; ADD tapback text now
+  `"${HS}${ZWSP}$emoji${ZWSP} to $targetText${HS}"`, REMOVE now `"${HS}Removed ${ZWNJ}$emoji${ZWNJ} from $targetText${HS}"`.
+  These match the exact byte format Textra's `h5/h.N` regex requires.
+- `SendManager.kt`: `maybeSendAsReaction()` now strips connector (`" to "`/`" from "`) and trims
+  the remainder before passing it to `resolveReactionTargetId()`, fixing the send-side target lookup.
+- APK rebuilt, build exit 0. STATUS: compile-built — tapback render path is UI-UNVERIFIED (can't
+  drive Textra's native tapback picker on the emulator). Canonical APK: textrcs-debug.apk.
+
 ## 2026-06-26 — RCS reactions: SEND side (official Google-Messages reaction over Textra's tapback UI)
 
 Completes RCS reactions (receive landed in 3f88e321). Wires Beeper-style official reactions

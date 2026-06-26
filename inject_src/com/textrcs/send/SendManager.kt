@@ -380,7 +380,11 @@ class SendManager private constructor(private val appContext: Context) {
         val emoji = body.substring(first + 1, second).trim()
         if (emoji.isEmpty()) return false
         val remainder = body.substring(second + 1)
-        val targetId = com.textrcs.receive.IncomingMessageHandler.resolveReactionTargetId(remainder)
+        // Strip the " to "/"  from " connector + trailing   so the lookup matches the plain
+        // target text stored in msgIdByText (which has no connector or HAIR SPACE).
+        val connector = if (isAdd) " to " else " from "
+        val targetText = remainder.substringAfter(connector).trim()
+        val targetId = com.textrcs.receive.IncomingMessageHandler.resolveReactionTargetId(targetText)
         if (targetId == null) {
             ScreenTracer.note("SEND reaction: unresolved target — fallback to text send")
             Log.i(TAG, "reaction target unresolved; sending as text")
