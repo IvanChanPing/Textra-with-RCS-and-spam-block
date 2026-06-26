@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/I;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.I
+# ROLE  : conversation list / thread list UI
+# SIG   : extends java.lang.Object; implements android.text.TextWatcher
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/text/TextWatcher;

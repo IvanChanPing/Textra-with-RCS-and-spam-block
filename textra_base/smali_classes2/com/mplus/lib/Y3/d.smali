@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y3/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y3.d
+# ROLE  : methods: getName, getOrder
+# SIG   : extends java.lang.Object; implements com.mplus.lib.Y3.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/Y3/a;

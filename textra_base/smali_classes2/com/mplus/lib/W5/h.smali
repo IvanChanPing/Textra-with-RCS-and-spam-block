@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/W5/h;
 .super Landroidx/loader/content/CursorLoader;
+# ANNOTATION
+# CLASS : com.mplus.lib.W5.h
+# ROLE  : widget helpers; hints: "media_type in (1, 3)"
+# SIG   : extends androidx.loader.content.CursorLoader
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

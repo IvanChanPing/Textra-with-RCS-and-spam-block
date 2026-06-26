@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/plus/giphy/gifs/GiphyListView;
 .super Lcom/mplus/lib/I5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.plus.giphy.gifs.GiphyListView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.I5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;
 .super Lcom/google/protobuf/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.db.marshal.protobuf.DeliveryInfoPersister$DeliveryInfoSegment
+# ROLE  : Android Service — background SMS/notification service; hints: "smscMessageId_"
+# SIG   : extends com.google.protobuf.c; implements com.mplus.lib.A4.l
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/A4/l;

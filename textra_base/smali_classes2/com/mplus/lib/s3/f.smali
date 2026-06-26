@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s3/f;
 .super Lcom/mplus/lib/y1/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.f
+# ROLE  : SMS send helpers
+# SIG   : extends com.mplus.lib.y1.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

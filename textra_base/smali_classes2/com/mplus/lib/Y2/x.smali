@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/x;
 .super Lcom/google/android/gms/location/LocationCallback;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.x
+# ROLE  : yet-unclassified utility
+# SIG   : extends com.google.android.gms.location.LocationCallback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

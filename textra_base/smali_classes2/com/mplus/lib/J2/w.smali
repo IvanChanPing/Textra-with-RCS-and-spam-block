@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/w;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.w
+# ROLE  : JSON / serialization helpers
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

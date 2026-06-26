@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/O3/X;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.O3.X
+# ROLE  : outgoing message queue / scheduler
+# SIG   : extends java.lang.Object; implements android.media.MediaPlayer$OnCompletionListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/media/MediaPlayer$OnCompletionListener;

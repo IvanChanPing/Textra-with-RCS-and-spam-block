@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/u3;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.u3
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants); hints: "No factory is available for message type: "
+# SIG   : extends java.lang.Object; implements com.google.android.gms.internal.mlkit_entity_extraction.zzawb, com.google.android.gms.internal.mlkit_entity_extraction.zzaaa, com.mplus.lib.a3.x3, com.google.android.gms.internal.mlkit_entity_extraction.zzaxc
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/mlkit_entity_extraction/zzawb;

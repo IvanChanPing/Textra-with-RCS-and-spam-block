@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y5/a;
 .super Lcom/mplus/lib/x5/d;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y5.a
+# ROLE  : methods: onCancel, onPostExecute, onPreExecute
+# SIG   : extends com.mplus.lib.x5.d; implements android.content.DialogInterface$OnCancelListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnCancelListener;

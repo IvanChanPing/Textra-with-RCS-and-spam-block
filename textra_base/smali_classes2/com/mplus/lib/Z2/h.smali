@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/Z2/h;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z2.h
+# ROLE  : utility functions — string manipulation, formatting helpers, shared static methods
+# SIG   : extends java.lang.Enum; implements java.util.concurrent.Executor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;

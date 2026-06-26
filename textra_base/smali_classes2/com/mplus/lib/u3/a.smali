@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/u3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.u3.a
+# ROLE  : UI utilities; hints: "Null interface"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

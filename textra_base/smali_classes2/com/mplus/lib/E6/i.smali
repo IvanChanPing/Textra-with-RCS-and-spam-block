@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/E6/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E6.i
+# ROLE  : methods: getAsLong
+# SIG   : extends java.lang.Object; implements java.util.function.LongSupplier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/LongSupplier;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/G;
 .super Lcom/google/android/gms/location/zzq;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.G
+# ROLE  : yet-unclassified utility
+# SIG   : extends com.google.android.gms.location.zzq
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

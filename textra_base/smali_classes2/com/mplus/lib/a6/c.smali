@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a6/c;
 .super Lcom/mplus/lib/Z5/f;
+# ANNOTATION
+# CLASS : com.mplus.lib.a6.c
+# ROLE  : hints: "category thread"
+# SIG   : extends com.mplus.lib.Z5.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

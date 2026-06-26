@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/j5/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j5.d
+# ROLE  : job scheduler helpers; hints: "Phone Number"; "Inserted into Phone?"
+# SIG   : extends java.lang.Object; implements java.util.function.IntConsumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/IntConsumer;

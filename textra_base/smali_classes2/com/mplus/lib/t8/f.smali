@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t8/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.t8.f
+# ROLE  : Callable; hints: "Null request"; "Service has been reset to null"
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.network.Call, java.util.concurrent.Callable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/network/Call;

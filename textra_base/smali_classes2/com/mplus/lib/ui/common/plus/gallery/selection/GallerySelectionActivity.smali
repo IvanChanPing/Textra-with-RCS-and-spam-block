@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/plus/gallery/selection/GallerySelectionActivity;
 .super Lcom/mplus/lib/x5/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.plus.gallery.selection.GallerySelectionActivity
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments; hints: "state-selected-uris"; "selected-uris"
+# SIG   : extends com.mplus.lib.x5.l
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

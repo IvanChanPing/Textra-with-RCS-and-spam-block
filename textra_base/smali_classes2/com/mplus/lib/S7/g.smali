@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/S7/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S7.g
+# ROLE  : hints: "Internal error: loadUrl() was not called"; "Internal error: loadUrl() was not called"
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/Consumer;

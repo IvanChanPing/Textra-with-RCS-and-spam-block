@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/n;
 .super Lcom/google/android/gms/common/api/internal/zabw;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.n
+# ROLE  : JSON / serialization helpers
+# SIG   : extends com.google.android.gms.common.api.internal.zabw
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

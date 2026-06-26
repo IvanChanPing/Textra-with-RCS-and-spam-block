@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/N;
 .super Ljava/util/Random;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.N
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends java.util.Random
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

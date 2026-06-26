@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/convo/MessageListView;
 .super Lcom/mplus/lib/ui/common/base/BaseRecyclerView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.convo.MessageListView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseRecyclerView
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

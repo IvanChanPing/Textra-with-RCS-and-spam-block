@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x5/c;
 .super Landroid/content/res/Resources;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.c
+# ROLE  : XML / resource helpers; hints: "ic_menu_selectall_holo_light"
+# SIG   : extends android.content.res.Resources
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

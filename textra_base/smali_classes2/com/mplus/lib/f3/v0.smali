@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/v0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.v0
+# ROLE  : file / media helpers; hints: "messageType"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

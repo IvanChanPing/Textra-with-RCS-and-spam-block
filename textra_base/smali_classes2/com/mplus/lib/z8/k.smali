@@ -1,5 +1,11 @@
 .class public abstract synthetic Lcom/mplus/lib/z8/k;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z8.k
+# ROLE  : yet-unclassified (z8)
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

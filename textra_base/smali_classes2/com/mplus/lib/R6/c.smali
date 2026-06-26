@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R6/c;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.R6.c
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements android.text.TextWatcher, android.view.View$OnClickListener, com.mplus.lib.b2.f, android.widget.TextView$OnEditorActionListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/text/TextWatcher;

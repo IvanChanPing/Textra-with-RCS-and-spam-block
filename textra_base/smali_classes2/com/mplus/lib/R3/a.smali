@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R3/a;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.R3.a
+# ROLE  : hints: "%s: error badging%s"; "content://com.teslacoilsw.notifier/unread_count"
+# SIG   : extends com.mplus.lib.F1.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

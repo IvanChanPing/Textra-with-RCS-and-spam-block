@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/x5/d;
 .super Landroid/os/AsyncTask;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.d
+# ROLE  : AsyncTask (bg task, deprecated)
+# SIG   : extends android.os.AsyncTask
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

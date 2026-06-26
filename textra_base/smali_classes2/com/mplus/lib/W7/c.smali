@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/W7/c;
 .super Lcom/smaato/sdk/core/dns/DnsException;
+# ANNOTATION
+# CLASS : com.mplus.lib.W7.c
+# ROLE  : obfuscated class in package W7
+# SIG   : extends com.smaato.sdk.core.dns.DnsException
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

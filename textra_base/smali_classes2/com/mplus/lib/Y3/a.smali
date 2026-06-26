@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/Y3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y3.a
+# ROLE  : methods: getName, getOrder
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

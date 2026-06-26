@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/l3/h;
 .super Lcom/mplus/lib/l3/f;
+# ANNOTATION
+# CLASS : com.mplus.lib.l3.h
+# ROLE  : obfuscated class in package l3
+# SIG   : extends com.mplus.lib.l3.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

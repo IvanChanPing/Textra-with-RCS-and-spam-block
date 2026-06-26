@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/B6/o;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.o
+# ROLE  : broadcast / event bus helpers; hints: "Txtr:mms"; "%s: error writing tmp file%s"
+# SIG   : extends java.lang.Object; implements java.util.function.Function
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Function;

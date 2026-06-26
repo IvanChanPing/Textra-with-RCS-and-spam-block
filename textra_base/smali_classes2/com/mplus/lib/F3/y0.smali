@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/y0;
 .super Ljava/util/LinkedHashMap;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.y0
+# ROLE  : large utility / model package
+# SIG   : extends java.util.LinkedHashMap
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

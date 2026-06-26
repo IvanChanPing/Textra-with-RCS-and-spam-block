@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/a;
 .super Lcom/google/android/gms/common/api/internal/LifecycleCallback;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.a
+# ROLE  : JSON / serialization helpers
+# SIG   : extends com.google.android.gms.common.api.internal.LifecycleCallback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

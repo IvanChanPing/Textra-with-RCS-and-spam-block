@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/L4/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.L4.f
+# ROLE  : list / adapter; hints: "EncodedStringValue: Text-string is null."; "Txtr:mms"
+# SIG   : extends java.lang.Object; implements java.lang.Cloneable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Cloneable;

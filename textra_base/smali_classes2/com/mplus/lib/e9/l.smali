@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/e9/l;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.e9.l
+# ROLE  : extension / plugin utilities
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.fi.NonNullConsumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/fi/NonNullConsumer;

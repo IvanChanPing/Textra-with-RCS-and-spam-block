@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/g7/v;
 .super Lcom/mplus/lib/ui/common/base/BaseView;
+# ANNOTATION
+# CLASS : com.mplus.lib.g7.v
+# ROLE  : group-messaging helpers
+# SIG   : extends com.mplus.lib.ui.common.base.BaseView; implements com.mplus.lib.y5.v
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/v;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/V5/h;
 .super Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.V5.h
+# ROLE  : custom RecyclerView
+# SIG   : extends androidx.recyclerview.widget.RecyclerView$OnScrollListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

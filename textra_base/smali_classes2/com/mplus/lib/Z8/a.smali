@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/Z8/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z8.a
+# ROLE  : obfuscated class in package Z8
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.fi.CheckedFunction
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/fi/CheckedFunction;

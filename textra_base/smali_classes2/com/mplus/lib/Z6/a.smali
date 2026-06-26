@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/Z6/a;
 .super Lcom/mplus/lib/x5/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z6.a
+# ROLE  : methods: onCreate, onDestroy, onPause, onResume
+# SIG   : extends com.mplus.lib.x5.l; implements com.mplus.lib.s5.r0, com.mplus.lib.H5.a, com.mplus.lib.t5.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s5/r0;

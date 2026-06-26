@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/g5/e;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.g5.e
+# ROLE  : Runnable; hints: "%s: error in sync mgr%s"
+# SIG   : extends com.mplus.lib.F1.a; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

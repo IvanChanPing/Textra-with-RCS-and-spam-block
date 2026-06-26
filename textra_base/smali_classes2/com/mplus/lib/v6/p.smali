@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/p;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.p
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host); hints: "content://mms-sms/canonical-addresses"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.w4.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/w4/a;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/H6/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.H6.d
+# ROLE  : methods: onSpringActivate, onSpringAtRest, onSpringEndStateChange, onSpringUpdate
+# SIG   : extends java.lang.Object; implements com.mplus.lib.b2.f, com.mplus.lib.H6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/b2/f;

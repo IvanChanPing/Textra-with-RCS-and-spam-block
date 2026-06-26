@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/z7/y;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.y
+# ROLE  : conversation list / thread list UI; hints: "InputStream is null"; "Can\'t get meta data from media: %s: %s"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J4/e;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.J4.e
+# ROLE  : Google ML Kit / entity extraction gate (J4.d.M flags when model absent)
+# SIG   : extends com.mplus.lib.F1.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

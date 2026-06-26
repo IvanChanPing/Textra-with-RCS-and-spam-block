@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/convo/ConvoActivity;
 .super Lcom/mplus/lib/s5/q;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.convo.ConvoActivity
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments; hints: "newMessageMode"
+# SIG   : extends com.mplus.lib.s5.q; implements com.mplus.lib.H5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/H5/a;

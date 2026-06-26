@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/x5/y;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.y
+# ROLE  : XML / resource helpers
+# SIG   : extends java.lang.Object; implements android.graphics.drawable.Drawable$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/graphics/drawable/Drawable$Callback;

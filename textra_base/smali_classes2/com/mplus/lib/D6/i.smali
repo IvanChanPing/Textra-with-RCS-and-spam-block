@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/D6/i;
 .super Landroid/text/style/ClickableSpan;
+# ANNOTATION
+# CLASS : com.mplus.lib.D6.i
+# ROLE  : hints: "phone"
+# SIG   : extends android.text.style.ClickableSpan
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

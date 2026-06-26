@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/m;
 .super Lcom/google/android/gms/internal/base/zau;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.m
+# ROLE  : JSON / serialization helpers; hints: "Unknown message id: "
+# SIG   : extends com.google.android.gms.internal.base.zau
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

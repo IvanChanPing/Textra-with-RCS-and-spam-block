@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/O;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.O
+# ROLE  : large utility / model package; hints: "Wrong object type used with protocol message reflection."; "Wrong object type used with protocol message reflection."
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/u;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.u
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host)
+# SIG   : extends java.lang.Object; implements android.text.style.LeadingMarginSpan
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/text/style/LeadingMarginSpan;

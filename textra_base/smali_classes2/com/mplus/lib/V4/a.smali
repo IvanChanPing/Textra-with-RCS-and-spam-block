@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/V4/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V4.a
+# ROLE  : hints: "[convoId="
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

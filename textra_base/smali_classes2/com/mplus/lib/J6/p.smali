@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J6/p;
 .super Landroid/animation/AnimatorListenerAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.J6.p
+# ROLE  : yet-unclassified (J6)
+# SIG   : extends android.animation.AnimatorListenerAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

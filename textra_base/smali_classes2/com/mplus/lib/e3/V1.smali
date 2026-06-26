@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/e3/V1;
 .super Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzmi;
+# ANNOTATION
+# CLASS : com.mplus.lib.e3.V1
+# ROLE  : UI components
+# SIG   : extends com.google.android.gms.internal.mlkit_smart_reply_common.zzmi
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

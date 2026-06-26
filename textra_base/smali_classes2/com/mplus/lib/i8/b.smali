@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/i8/b;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.i8.b
+# ROLE  : obfuscated class in package i8
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

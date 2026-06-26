@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/T2/a;
 .super Ldalvik/system/PathClassLoader;
+# ANNOTATION
+# CLASS : com.mplus.lib.T2.a
+# ROLE  : obfuscated class in package T2
+# SIG   : extends dalvik.system.PathClassLoader
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

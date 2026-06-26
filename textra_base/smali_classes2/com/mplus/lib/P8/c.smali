@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P8/c;
 .super Lcom/smaato/sdk/rewarded/RewardedInterstitialAd;
+# ANNOTATION
+# CLASS : com.mplus.lib.P8.c
+# ROLE  : methods: getAdSpaceId, getCreativeId, getSessionId, isAvailableForPresentation
+# SIG   : extends com.smaato.sdk.rewarded.RewardedInterstitialAd
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

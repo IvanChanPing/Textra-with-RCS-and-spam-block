@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/o3/s;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.s
+# ROLE  : outgoing / send pipeline; hints: "null value in entry: "; "=null"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

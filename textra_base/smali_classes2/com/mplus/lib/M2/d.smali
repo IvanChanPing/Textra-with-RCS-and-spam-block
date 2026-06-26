@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/M2/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.M2.d
+# ROLE  : obfuscated class in package M2
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

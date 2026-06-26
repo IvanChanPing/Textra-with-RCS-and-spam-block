@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R4/d;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
+# ANNOTATION
+# CLASS : com.mplus.lib.R4.d
+# ROLE  : recipient / contact resolution
+# SIG   : extends android.graphics.drawable.Drawable$ConstantState
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

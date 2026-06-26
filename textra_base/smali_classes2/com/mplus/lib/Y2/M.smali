@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/Y2/M;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.M
+# ROLE  : yet-unclassified utility
+# SIG   : extends java.lang.Enum; implements java.util.concurrent.Executor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/E;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.E
+# ROLE  : yet-unclassified utility
+# SIG   : extends java.lang.Object; implements com.google.android.gms.common.api.internal.ListenerHolder$Notifier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;

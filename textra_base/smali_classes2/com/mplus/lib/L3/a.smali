@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/L3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.L3.a
+# ROLE  : hints: "null"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

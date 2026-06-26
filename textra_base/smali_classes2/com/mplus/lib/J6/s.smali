@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J6/s;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J6.s
+# ROLE  : yet-unclassified (J6)
+# SIG   : extends java.lang.Object; implements com.mplus.lib.z7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/z7/a;

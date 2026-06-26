@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/H2/k;
 .super Lcom/mplus/lib/H2/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.H2.k
+# ROLE  : HTTP / network helpers
+# SIG   : extends com.mplus.lib.H2.l
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

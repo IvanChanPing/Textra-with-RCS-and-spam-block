@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/t7/l;
 .super Lcom/mplus/lib/t7/h;
+# ANNOTATION
+# CLASS : com.mplus.lib.t7.l
+# ROLE  : thread-management utilities
+# SIG   : extends com.mplus.lib.t7.h
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

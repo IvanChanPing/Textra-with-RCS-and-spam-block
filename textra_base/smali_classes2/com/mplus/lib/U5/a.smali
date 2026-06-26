@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/U5/a;
 .super Landroid/view/GestureDetector$SimpleOnGestureListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.U5.a
+# ROLE  : methods: onFling, onLongPress, onSingleTapUp
+# SIG   : extends android.view.GestureDetector$SimpleOnGestureListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

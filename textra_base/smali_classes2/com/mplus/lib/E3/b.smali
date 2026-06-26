@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/E3/b;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.b
+# ROLE  : event / listener subsystem; hints: "CALL_ON_PHONE_NUMBER"
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

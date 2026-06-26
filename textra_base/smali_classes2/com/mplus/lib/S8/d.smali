@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/S8/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S8.d
+# ROLE  : methods: handle
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.richmedia.mraid.bridge.MraidCommandHandler
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/richmedia/mraid/bridge/MraidCommandHandler;

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/g9/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.g9.i
+# ROLE  : GIF / media helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.g9.k
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/g9/k;

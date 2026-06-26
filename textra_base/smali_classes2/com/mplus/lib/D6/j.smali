@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/D6/j;
 .super Landroid/text/style/URLSpan;
+# ANNOTATION
+# CLASS : com.mplus.lib.D6.j
+# ROLE  : hints: "Review Error(%d): %s"
+# SIG   : extends android.text.style.URLSpan
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

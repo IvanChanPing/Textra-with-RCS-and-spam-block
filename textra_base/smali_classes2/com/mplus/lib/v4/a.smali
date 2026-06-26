@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v4/a;
 .super Lcom/mplus/lib/r4/f;
+# ANNOTATION
+# CLASS : com.mplus.lib.v4.a
+# ROLE  : view model
+# SIG   : extends com.mplus.lib.r4.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

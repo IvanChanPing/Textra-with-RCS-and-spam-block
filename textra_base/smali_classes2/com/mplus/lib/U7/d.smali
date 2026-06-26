@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/U7/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.U7.d
+# ROLE  : hints: "Parameter logger cannot be null for SystemInfoProvider::new"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

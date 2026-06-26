@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/W3;
 .super Ljava/io/IOException;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.W3
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends java.io.IOException
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

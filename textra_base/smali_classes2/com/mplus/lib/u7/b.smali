@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/u7/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.u7.b
+# ROLE  : obfuscated class in package u7
+# SIG   : extends java.lang.Object; implements java.util.Comparator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Comparator;

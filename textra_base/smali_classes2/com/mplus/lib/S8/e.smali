@@ -1,5 +1,11 @@
 .class public abstract synthetic Lcom/mplus/lib/S8/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S8.e
+# ROLE  : obfuscated class in package S8
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,6 +1,33 @@
 # Share My Location (static map link) + RCS reactions check — Task Journal
 
-## CURRENT STATE / NEXT STEP (2026-06-26) — RECEIVE RENDER FAILS ON-DEVICE (verified), needs direct attach
+## CURRENT STATE / NEXT STEP (2026-06-26) — tapback format fixed; F0 path + HS wrapping; COMPILE-BUILT, on-device UNVERIFIED
+
+**What changed (commit f6f99eef):**
+- ROOT CAUSE FOUND + FIXED: h5/h.N's compiled regex requires HAIR SPACE (U+200A) on BOTH SIDES of the tapback
+  body text. This comes from P() in h5/h.smali which every C4/e pswitch_7 template passes through. Our old
+  synthesized text lacked the outer HS, so the regex never matched → is_tapback=0 forever.
+- Fix 1 (receive): Added `HS = ' '` constant. ADD body now `" ​{emoji}​ to {target} "`,
+  REMOVE body now `" Removed ‌{emoji}‌ from {target} "`. Delivered via writeIncomingViaFullStore
+  (F0 path) which schedules h5/h.N async parse. Byte content VERIFIED (hexdump: e2808a = U+200A ✓).
+- Fix 2 (send): maybeSendAsReaction() was passing raw `remainder` (`" to Pizza tonight? "`) to
+  resolveReactionTargetId() which does exact dict lookup on `"Pizza tonight?"`. Now strips connector
+  (`" to "`/`" from "`) and trims. Kotlin .trim() covers U+200A (isWhitespace=true — confirmed via kotlinc-jvm test).
+- Build: exit 0. APK at textrcs-debug.apk (98MB).
+
+**NEXT STEP — on-device verify:**
+1. Install textrcs-debug.apk on a real device (or redroid with adb root access)
+2. RECEIVE test: inject a reaction via DebugInjectReceiver (--es reactEmoji "👍" --es msgId t1); then:
+   `adb shell "sqlite3 /data/data/com.textra2/databases/messaging.db 'SELECT is_tapback,has_tapbacks FROM messages ORDER BY _id DESC LIMIT 3'"`
+   Expected: tapback row has is_tapback=1; target row has has_tapbacks=1; message_tapbacks has a row.
+   Also verify the Textra conversation UI shows a reaction badge (not a literal bubble).
+3. SEND test: long-press a received message, pick emoji → Logcat "SEND reaction OK" expected.
+
+**Remaining known unverified items:**
+- ReactionEntry.participantIDs id-space vs participantPhone key space (receive side)  
+- Textra's outgoing tapback flows through SendManager with ZW markers intact on RCS threads
+- Full click-path on real device
+
+## (was) CURRENT STATE / NEXT STEP (2026-06-26) — RECEIVE RENDER FAILS ON-DEVICE (verified), needs direct attach
 - ON-DEVICE TEST (emulator 5575, via DebugInjectReceiver reaction mode) — VERIFIED FINDING:
   handleReactions fires correctly (logcat `REACTION+ emoji=👍 msg=t2 ... wrote=true`), BUT the synthesized
   tapback text lands in Textra's DB as a PLAIN message: `select is_tapback` = 0, `message_tapbacks` EMPTY.

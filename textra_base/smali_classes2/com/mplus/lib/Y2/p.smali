@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/p;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.p
+# ROLE  : yet-unclassified utility
+# SIG   : extends java.lang.Object; implements com.google.android.gms.common.api.internal.RemoteCall, com.google.android.gms.internal.location.zzcs
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/internal/RemoteCall;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/H2/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.H2.a
+# ROLE  : DialogInterface.OnClickListener
+# SIG   : extends java.lang.Object; implements android.content.DialogInterface$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;

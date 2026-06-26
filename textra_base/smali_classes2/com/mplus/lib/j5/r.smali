@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/j5/r;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j5.r
+# ROLE  : job scheduler helpers; hints: ",phone="
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

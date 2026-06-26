@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseConstraintLayout;
 .super Landroidx/constraintlayout/widget/ConstraintLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseConstraintLayout
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends androidx.constraintlayout.widget.ConstraintLayout; implements com.mplus.lib.x5.z, com.mplus.lib.y5.n, com.mplus.lib.y5.b, com.mplus.lib.y5.q
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/z;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/V5/a;
 .super Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
+# ANNOTATION
+# CLASS : com.mplus.lib.V5.a
+# ROLE  : custom RecyclerView
+# SIG   : extends androidx.recyclerview.widget.RecyclerView$AdapterDataObserver
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

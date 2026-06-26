@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/j5/j;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.j5.j
+# ROLE  : job scheduler helpers
+# SIG   : extends com.mplus.lib.D5.b; implements com.mplus.lib.D5.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/D5/c;

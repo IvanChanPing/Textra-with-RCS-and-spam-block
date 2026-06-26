@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/N2/b;
 .super Lcom/mplus/lib/N2/d;
+# ANNOTATION
+# CLASS : com.mplus.lib.N2.b
+# ROLE  : obfuscated class in package N2
+# SIG   : extends com.mplus.lib.N2.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

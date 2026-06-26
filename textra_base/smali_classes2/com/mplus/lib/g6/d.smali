@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/g6/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.g6.d
+# ROLE  : methods: getState
+# SIG   : extends java.lang.Object; implements com.mplus.lib.g6.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/g6/f;

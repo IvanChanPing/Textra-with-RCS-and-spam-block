@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/O2/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.O2.a
+# ROLE  : methods: notifyListener, onNotifyListenerFailed
+# SIG   : extends java.lang.Object; implements com.google.android.gms.common.api.internal.ListenerHolder$Notifier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;

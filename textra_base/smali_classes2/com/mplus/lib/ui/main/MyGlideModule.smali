@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/main/MyGlideModule;
 .super Lcom/mplus/lib/a3/t1;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.main.MyGlideModule
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.a3.t1
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

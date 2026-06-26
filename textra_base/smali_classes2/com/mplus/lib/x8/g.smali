@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x8/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.x8.g
+# ROLE  : obfuscated class in package x8
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

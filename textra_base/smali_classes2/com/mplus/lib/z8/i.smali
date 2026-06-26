@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/z8/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z8.i
+# ROLE  : yet-unclassified (z8)
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.IntConsumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/IntConsumer;

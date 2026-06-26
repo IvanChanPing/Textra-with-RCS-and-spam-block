@@ -1,5 +1,11 @@
 .class public abstract synthetic Lcom/mplus/lib/a3/Q;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.Q
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

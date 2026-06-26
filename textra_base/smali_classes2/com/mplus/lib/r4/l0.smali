@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/r4/l0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.l0
+# ROLE  : messaging engine — DB R/W (messages/conversations), tapback attach (G0), delivery scheduling (F0/f0/H0/X0), notification dispatch; hints: "yyyyMMdd_HHmmss"; "Attach"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

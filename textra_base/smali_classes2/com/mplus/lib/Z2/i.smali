@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Z2/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z2.i
+# ROLE  : utility functions — string manipulation, formatting helpers, shared static methods
+# SIG   : extends java.lang.Object; implements com.google.android.gms.internal.mlkit_common.zzbc
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/mlkit_common/zzbc;

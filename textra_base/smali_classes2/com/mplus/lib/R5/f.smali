@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R5/f;
 .super Lcom/mplus/lib/R5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.R5.f
+# ROLE  : recipient / phone-number formatting; hints: "Txtr:mms"; "%s: resizeToHeight(): exception%s"
+# SIG   : extends com.mplus.lib.R5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

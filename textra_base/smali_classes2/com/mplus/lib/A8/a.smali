@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/A8/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.A8.a
+# ROLE  : methods: onFirstActivityStarted, onLastActivityStopped
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.lifecycle.ProcessLifecycleOwner$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/lifecycle/ProcessLifecycleOwner$Listener;

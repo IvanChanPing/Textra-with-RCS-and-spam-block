@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E3/o;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.o
+# ROLE  : event / listener subsystem
+# SIG   : extends java.lang.Object; implements com.mplus.lib.I1.r, com.mplus.lib.Y1.h, com.mplus.lib.b6.h
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/I1/r;

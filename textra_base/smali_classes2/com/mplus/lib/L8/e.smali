@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/L8/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.L8.e
+# ROLE  : obfuscated class in package L8
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/Consumer;

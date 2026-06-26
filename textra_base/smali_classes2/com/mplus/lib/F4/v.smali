@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/F4/v;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F4.v
+# ROLE  : feature flags / capability detection
+# SIG   : extends java.lang.Object; implements java.util.function.IntFunction
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/IntFunction;

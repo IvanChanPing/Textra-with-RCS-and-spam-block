@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/V8/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V8.g
+# ROLE  : methods: processAudioVolumeChange, processCollapse, processCurrentAppOrientationChange, processCurrentPositionChange
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.richmedia.mraid.interactor.MraidInteractor$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/richmedia/mraid/interactor/MraidInteractor$Callback;

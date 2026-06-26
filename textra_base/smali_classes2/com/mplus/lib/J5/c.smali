@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J5/c;
 .super Landroid/graphics/drawable/shapes/OvalShape;
+# ANNOTATION
+# CLASS : com.mplus.lib.J5.c
+# ROLE  : methods: onResize
+# SIG   : extends android.graphics.drawable.shapes.OvalShape
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

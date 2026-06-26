@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/V5/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V5.e
+# ROLE  : view / UI helpers
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

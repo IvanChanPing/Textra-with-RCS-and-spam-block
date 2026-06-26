@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X2/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.X2.g
+# ROLE  : yet-unclassified (X2)
+# SIG   : extends java.lang.Object; implements java.util.Iterator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Iterator;

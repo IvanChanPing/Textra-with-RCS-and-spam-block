@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R8/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.R8.a
+# ROLE  : methods: onPreDraw
+# SIG   : extends java.lang.Object; implements android.view.ViewTreeObserver$OnPreDrawListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;

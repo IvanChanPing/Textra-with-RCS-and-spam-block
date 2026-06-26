@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a8/b;
 .super Lcom/smaato/sdk/core/gdpr/CmpV2Data;
+# ANNOTATION
+# CLASS : com.mplus.lib.a8.b
+# ROLE  : hints: " =hmeaeegsmsi,trbrnLteuistiptlI"
+# SIG   : extends com.smaato.sdk.core.gdpr.CmpV2Data
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

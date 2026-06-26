@@ -1,5 +1,11 @@
 .class public abstract synthetic Lcom/mplus/lib/O3/n;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.O3.n
+# ROLE  : outgoing message queue / scheduler
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

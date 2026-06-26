@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/r4/B;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.B
+# ROLE  : messaging engine — DB R/W (messages/conversations), tapback attach (G0), delivery scheduling (F0/f0/H0/X0), notification dispatch; hints: "drop table if exists messages"; "drop table if exists message_tapbacks"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.r4.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/r4/b;

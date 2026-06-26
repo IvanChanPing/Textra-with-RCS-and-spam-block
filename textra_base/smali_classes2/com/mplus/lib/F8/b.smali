@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F8/b;
 .super Lcom/smaato/sdk/core/violationreporter/Report$Builder;
+# ANNOTATION
+# CLASS : com.mplus.lib.F8.b
+# ROLE  : hints: " error"; "Null adMarkup"
+# SIG   : extends com.smaato.sdk.core.violationreporter.Report$Builder
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

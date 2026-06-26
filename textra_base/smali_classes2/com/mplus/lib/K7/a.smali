@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K7/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.K7.a
+# ROLE  : methods: onAdClicked, onAdFailedToLoad, onAdLoaded, onAdTTLExpired
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.banner.csm.SMABannerNetworkEventListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/banner/csm/SMABannerNetworkEventListener;

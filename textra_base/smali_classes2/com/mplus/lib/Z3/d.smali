@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Z3/d;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z3.d
+# ROLE  : methods: onSharedPreferenceChanged
+# SIG   : extends com.mplus.lib.F1.a; implements android.content.SharedPreferences$OnSharedPreferenceChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;

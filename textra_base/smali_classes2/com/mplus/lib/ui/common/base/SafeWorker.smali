@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/ui/common/base/SafeWorker;
 .super Landroidx/work/Worker;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.SafeWorker
+# ROLE  : WorkManager Worker
+# SIG   : extends androidx.work.Worker
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Q6/g;
 .super Lcom/mplus/lib/y1/k;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q6.g
+# ROLE  : obfuscated class in package Q6
+# SIG   : extends com.mplus.lib.y1.k
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

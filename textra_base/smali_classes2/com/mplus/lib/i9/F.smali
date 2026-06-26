@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/i9/F;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i9.F
+# ROLE  : internal / integration helpers
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.vast.widget.VastSurfaceHolder$OnSurfaceAvailableListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/vast/widget/VastSurfaceHolder$OnSurfaceAvailableListener;

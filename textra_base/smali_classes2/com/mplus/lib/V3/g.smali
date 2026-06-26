@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/V3/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V3.g
+# ROLE  : vibration / haptic
+# SIG   : extends java.lang.Object; implements com.mplus.lib.V3.h
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/V3/h;

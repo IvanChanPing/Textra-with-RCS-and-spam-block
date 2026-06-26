@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/o4/a;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.o4.a
+# ROLE  : hints: "%s: deleteUnusedFiles(): rootDir %s is not directory"; "%s: deleteUnusedFiles(): deleting file %s"
+# SIG   : extends com.mplus.lib.F1.a; implements com.mplus.lib.q4.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/q4/a;

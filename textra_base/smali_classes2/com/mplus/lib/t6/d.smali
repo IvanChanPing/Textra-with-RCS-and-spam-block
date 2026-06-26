@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t6/d;
 .super Lcom/mplus/lib/t6/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.t6.d
+# ROLE  : methods: getDrawable
+# SIG   : extends com.mplus.lib.t6.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

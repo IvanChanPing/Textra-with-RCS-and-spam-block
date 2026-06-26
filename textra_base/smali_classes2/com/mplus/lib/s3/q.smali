@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/s3/q;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.q
+# ROLE  : SMS send helpers
+# SIG   : extends java.lang.Enum; implements java.util.concurrent.Executor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;

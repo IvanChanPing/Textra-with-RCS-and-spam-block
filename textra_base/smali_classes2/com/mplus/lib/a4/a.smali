@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/a4/a;
 .super Landroid/provider/DocumentsProvider;
+# ANNOTATION
+# CLASS : com.mplus.lib.a4.a
+# ROLE  : hints: "aesmspa_lidy_"
+# SIG   : extends android.provider.DocumentsProvider
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

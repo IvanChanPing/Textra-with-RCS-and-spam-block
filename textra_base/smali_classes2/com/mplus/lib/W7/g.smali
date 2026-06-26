@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/W7/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.W7.g
+# ROLE  : hints: "DnsMessage"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

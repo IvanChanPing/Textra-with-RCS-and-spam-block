@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/A6/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.A6.b
+# ROLE  : hints: "header-media"; "settings"
+# SIG   : extends java.lang.Object; implements com.google.android.gms.internal.play_billing.zzej
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/play_billing/zzej;

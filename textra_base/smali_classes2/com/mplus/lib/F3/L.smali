@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/F3/L;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.L
+# ROLE  : large utility / model package; hints: "TYPE_GROUP"; "TYPE_MESSAGE"
+# SIG   : extends java.lang.Enum; implements com.mplus.lib.F3.e0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/F3/e0;

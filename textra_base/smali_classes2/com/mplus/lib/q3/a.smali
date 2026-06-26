@@ -1,5 +1,11 @@
 .class public abstract synthetic Lcom/mplus/lib/q3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.q3.a
+# ROLE  : obfuscated class in package q3
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

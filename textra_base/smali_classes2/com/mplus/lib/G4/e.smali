@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/G4/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.G4.e
+# ROLE  : obfuscated class in package G4
+# SIG   : extends java.lang.Object; implements java.io.FilenameFilter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/FilenameFilter;

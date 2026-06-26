@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X5/a;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.X5.a
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements androidx.loader.app.LoaderManager$LoaderCallbacks, android.view.View$OnClickListener, androidx.viewpager.widget.ViewPager$OnPageChangeListener, com.mplus.lib.t5.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/loader/app/LoaderManager$LoaderCallbacks;

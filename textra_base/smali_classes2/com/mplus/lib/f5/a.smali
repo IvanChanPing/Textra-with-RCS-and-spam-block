@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/f5/a;
 .super Landroid/content/BroadcastReceiver;
+# ANNOTATION
+# CLASS : com.mplus.lib.f5.a
+# ROLE  : BroadcastReceiver
+# SIG   : extends android.content.BroadcastReceiver
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

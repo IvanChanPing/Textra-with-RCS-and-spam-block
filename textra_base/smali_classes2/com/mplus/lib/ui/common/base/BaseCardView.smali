@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseCardView;
 .super Landroidx/cardview/widget/CardView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseCardView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends androidx.cardview.widget.CardView; implements com.mplus.lib.x5.z, com.mplus.lib.y5.e
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/z;

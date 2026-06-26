@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/convo/BubbleView;
 .super Lcom/mplus/lib/ui/common/base/BaseTextView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.convo.BubbleView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseTextView; implements com.mplus.lib.y5.b, com.mplus.lib.x5.B, android.graphics.drawable.Drawable$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/b;

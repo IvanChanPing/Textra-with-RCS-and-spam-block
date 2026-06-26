@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/f5/c;
 .super Landroid/content/ContentProvider;
+# ANNOTATION
+# CLASS : com.mplus.lib.f5.c
+# ROLE  : ContentProvider
+# SIG   : extends android.content.ContentProvider
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

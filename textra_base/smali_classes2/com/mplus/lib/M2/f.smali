@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M2/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.M2.f
+# ROLE  : methods: handleMessage
+# SIG   : extends java.lang.Object; implements android.os.Handler$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/Handler$Callback;

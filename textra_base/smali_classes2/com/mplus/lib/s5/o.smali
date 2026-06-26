@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/s5/o;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.o
+# ROLE  : settings / preferences subsystem
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

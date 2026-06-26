@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/L;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.L
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.graphics.drawable.Drawable$ConstantState
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/r6/e;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.r6.e
+# ROLE  : methods: onEventMainThread
+# SIG   : extends com.mplus.lib.G5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

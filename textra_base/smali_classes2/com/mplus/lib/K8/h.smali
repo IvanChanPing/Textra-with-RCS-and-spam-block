@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K8/h;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.K8.h
+# ROLE  : methods: onAdClosed, onAdImpressed, onAdOpened
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.interstitial.model.csm.InterstitialCsmDelegate$CsmInterstitialDelegateListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/interstitial/model/csm/InterstitialCsmDelegate$CsmInterstitialDelegateListener;

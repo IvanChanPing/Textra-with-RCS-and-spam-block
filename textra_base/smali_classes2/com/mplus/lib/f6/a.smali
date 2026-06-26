@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f6/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f6.a
+# ROLE  : formatting / display
+# SIG   : extends java.lang.Object; implements android.view.View$OnLayoutChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnLayoutChangeListener;

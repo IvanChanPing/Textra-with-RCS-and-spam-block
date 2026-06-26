@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
 .super Lcom/google/protobuf/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.sendtext.marshal.protobuf.SendTextPersister$AttachmentSpan
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.google.protobuf.c; implements com.mplus.lib.k6.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/k6/b;

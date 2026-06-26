@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f6/o;
 .super Landroidx/recyclerview/widget/SimpleItemAnimator;
+# ANNOTATION
+# CLASS : com.mplus.lib.f6.o
+# ROLE  : formatting / display
+# SIG   : extends androidx.recyclerview.widget.SimpleItemAnimator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

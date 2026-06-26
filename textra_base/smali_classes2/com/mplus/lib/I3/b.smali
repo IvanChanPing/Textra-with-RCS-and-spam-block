@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/I3/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.I3.b
+# ROLE  : methods: getVersion
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

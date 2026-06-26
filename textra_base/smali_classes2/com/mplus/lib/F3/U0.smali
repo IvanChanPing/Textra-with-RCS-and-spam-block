@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/U0;
 .super Ljava/util/AbstractMap;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.U0
+# ROLE  : large utility / model package
+# SIG   : extends java.util.AbstractMap
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

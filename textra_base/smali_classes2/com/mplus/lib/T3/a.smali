@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/T3/a;
 .super Lcom/mplus/lib/f5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.T3.a
+# ROLE  : hints: "backInPhoneService"; "intent"
+# SIG   : extends com.mplus.lib.f5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

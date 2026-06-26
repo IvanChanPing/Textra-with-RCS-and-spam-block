@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/G6/c;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.G6.c
+# ROLE  : hints: "EnteringConvo"
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

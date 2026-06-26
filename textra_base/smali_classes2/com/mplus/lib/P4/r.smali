@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P4/r;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.P4.r
+# ROLE  : preferences / config; hints: "phone_number"
+# SIG   : extends com.mplus.lib.F1.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

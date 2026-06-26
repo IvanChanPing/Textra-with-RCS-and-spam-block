@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x5/a;
 .super Landroid/content/ContextWrapper;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.a
+# ROLE  : XML / resource helpers
+# SIG   : extends android.content.ContextWrapper
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

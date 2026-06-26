@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/o;
 .super Lcom/mplus/lib/F3/r;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.o
+# ROLE  : large utility / model package; hints: "Protocol message end-group tag did not match expected tag."
+# SIG   : extends com.mplus.lib.F3.r
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

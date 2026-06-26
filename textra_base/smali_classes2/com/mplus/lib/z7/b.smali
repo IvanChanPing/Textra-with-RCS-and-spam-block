@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/b;
 .super Landroid/graphics/BitmapFactory$Options;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.b
+# ROLE  : conversation list / thread list UI
+# SIG   : extends android.graphics.BitmapFactory$Options
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

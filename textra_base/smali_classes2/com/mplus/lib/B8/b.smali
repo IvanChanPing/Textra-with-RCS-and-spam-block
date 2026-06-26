@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/B8/b;
 .super Lcom/mplus/lib/B8/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.B8.b
+# ROLE  : obfuscated class in package B8
+# SIG   : extends com.mplus.lib.B8.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

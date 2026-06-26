@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/F3/X0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.X0
+# ROLE  : large utility / model package; hints: "readPrimitiveField() cannot handle embedded messages."; "readPrimitiveField() cannot handle nested groups."
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

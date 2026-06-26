@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/search/SearchResultTextView;
 .super Lcom/mplus/lib/ui/common/base/BaseTextView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.search.SearchResultTextView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseTextView
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

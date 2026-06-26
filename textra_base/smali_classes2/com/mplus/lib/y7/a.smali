@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/y7/a;
 .super Lcom/mplus/lib/y7/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.y7.a
+# ROLE  : methods: onViewStateRestored
+# SIG   : extends com.mplus.lib.y7.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

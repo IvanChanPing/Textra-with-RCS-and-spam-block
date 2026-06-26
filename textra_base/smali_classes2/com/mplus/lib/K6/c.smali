@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K6/c;
 .super Lcom/mplus/lib/K6/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.K6.c
+# ROLE  : obfuscated class in package K6
+# SIG   : extends com.mplus.lib.K6.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

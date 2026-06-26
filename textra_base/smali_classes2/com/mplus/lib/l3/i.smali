@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/l3/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.l3.i
+# ROLE  : hints: "ApiSuccess should not be null"
+# SIG   : extends java.lang.Object; implements android.content.ServiceConnection
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/ServiceConnection;

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/F3/l;
 .super Lcom/mplus/lib/F3/m;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.l
+# ROLE  : large utility / model package
+# SIG   : extends com.mplus.lib.F3.m
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/H2/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.H2.j
+# ROLE  : HTTP / network helpers; hints: "error checking package certificate"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

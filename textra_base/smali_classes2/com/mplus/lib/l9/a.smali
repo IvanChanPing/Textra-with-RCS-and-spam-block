@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/l9/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.l9.a
+# ROLE  : obfuscated class in package l9
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.vast.widget.element.VastElementPresentationManager
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/vast/widget/element/VastElementPresentationManager;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F4/q;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.F4.q
+# ROLE  : feature flags / capability detection
+# SIG   : extends com.mplus.lib.F1.a; implements com.mplus.lib.F4.n
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/F4/n;

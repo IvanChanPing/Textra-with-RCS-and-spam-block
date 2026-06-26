@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/B6/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.j
+# ROLE  : broadcast / event bus helpers; hints: "phone"
+# SIG   : extends java.lang.Object; implements java.util.function.Function
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Function;

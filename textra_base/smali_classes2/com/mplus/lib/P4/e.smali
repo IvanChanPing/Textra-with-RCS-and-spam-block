@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P4/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.P4.e
+# ROLE  : preferences / config
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/j6/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j6.a
+# ROLE  : hints: "Object must not be null"; "null value in entry: "
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

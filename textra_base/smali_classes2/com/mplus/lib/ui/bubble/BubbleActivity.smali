@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/bubble/BubbleActivity;
 .super Lcom/mplus/lib/s5/q;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.bubble.BubbleActivity
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.s5.q; implements android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

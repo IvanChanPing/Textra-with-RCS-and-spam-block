@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z6/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z6.d
+# ROLE  : animation / transition helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.z6.e
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/z6/e;

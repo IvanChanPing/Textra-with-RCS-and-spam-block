@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/d;
 .super Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.d
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends android.os.ParcelFileDescriptor$AutoCloseOutputStream
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

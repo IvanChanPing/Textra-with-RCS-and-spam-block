@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/f;
 .super Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.f
+# ROLE  : custom RecyclerView
+# SIG   : extends androidx.recyclerview.widget.RecyclerView$ItemDecoration
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/D6/a;
 .super Landroid/text/style/ReplacementSpan;
+# ANNOTATION
+# CLASS : com.mplus.lib.D6.a
+# ROLE  : methods: getSize
+# SIG   : extends android.text.style.ReplacementSpan; implements com.mplus.lib.D6.k
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/D6/k;

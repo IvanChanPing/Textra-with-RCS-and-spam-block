@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/W3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.W3.a
+# ROLE  : obfuscated class in package W3
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

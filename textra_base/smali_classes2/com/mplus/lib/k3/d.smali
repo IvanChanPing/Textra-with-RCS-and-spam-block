@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/k3/d;
 .super Landroid/os/ResultReceiver;
+# ANNOTATION
+# CLASS : com.mplus.lib.k3.d
+# ROLE  : methods: onReceiveResult
+# SIG   : extends android.os.ResultReceiver
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

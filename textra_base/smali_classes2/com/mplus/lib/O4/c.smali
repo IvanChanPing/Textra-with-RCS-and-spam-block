@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/O4/c;
 .super Lcom/mplus/lib/O4/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.O4.c
+# ROLE  : hints: "mms_unique_id"; "messages"
+# SIG   : extends com.mplus.lib.O4.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/H2/b;
 .super Lcom/google/android/gms/internal/base/zau;
+# ANNOTATION
+# CLASS : com.mplus.lib.H2.b
+# ROLE  : HTTP / network helpers; hints: "Don\'t know how to handle this message: "
+# SIG   : extends com.google.android.gms.internal.base.zau
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

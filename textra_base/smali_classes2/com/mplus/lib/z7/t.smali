@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/t;
 .super Ljava/io/Reader;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.t
+# ROLE  : conversation list / thread list UI
+# SIG   : extends java.io.Reader
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

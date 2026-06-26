@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/Y2/v;
 .super Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.v
+# ROLE  : yet-unclassified utility
+# SIG   : extends com.google.android.gms.common.api.internal.BaseImplementation$ApiMethodImpl
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

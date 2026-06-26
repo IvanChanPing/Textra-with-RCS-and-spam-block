@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/o3/O;
 .super Ljava/util/AbstractCollection;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.O
+# ROLE  : Serializable
+# SIG   : extends java.util.AbstractCollection; implements java.io.Serializable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/Serializable;

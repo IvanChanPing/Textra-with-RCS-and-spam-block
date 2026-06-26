@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/U5/d;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.U5.d
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.Q5.b, android.view.View$OnTouchListener, android.view.View$OnClickListener, android.view.TextureView$SurfaceTextureListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/Q5/b;

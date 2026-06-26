@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S2/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S2.d
+# ROLE  : OnClickListener; hints: "Failed to start resolution intent"
+# SIG   : extends java.lang.Object; implements android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

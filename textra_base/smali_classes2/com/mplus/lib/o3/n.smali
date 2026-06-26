@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/o3/n;
 .super Ljava/util/AbstractCollection;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.n
+# ROLE  : outgoing / send pipeline
+# SIG   : extends java.util.AbstractCollection
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

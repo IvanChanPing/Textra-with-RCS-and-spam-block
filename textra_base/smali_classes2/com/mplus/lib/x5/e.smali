@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x5/e;
 .super Landroid/app/Dialog;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.e
+# ROLE  : Dialog
+# SIG   : extends android.app.Dialog
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

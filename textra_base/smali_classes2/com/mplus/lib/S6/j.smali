@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/S6/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S6.j
+# ROLE  : subscription / SIM helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.s6.b, com.mplus.lib.s6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s6/b;

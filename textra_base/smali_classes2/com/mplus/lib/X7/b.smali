@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X7/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.X7.b
+# ROLE  : methods: onNetworkStateChanged
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.network.NetworkStateMonitor$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/network/NetworkStateMonitor$Callback;

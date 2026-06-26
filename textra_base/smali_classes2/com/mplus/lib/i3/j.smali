@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i3/j;
 .super Lcom/google/android/gms/tasks/Task;
+# ANNOTATION
+# CLASS : com.mplus.lib.i3.j
+# ROLE  : input / compose helpers; hints: "Exception must not be null"
+# SIG   : extends com.google.android.gms.tasks.Task
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

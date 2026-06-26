@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/o3/P;
 .super Lcom/mplus/lib/o3/m;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.P
+# ROLE  : Serializable
+# SIG   : extends com.mplus.lib.o3.m; implements java.io.Serializable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/Serializable;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/G4/b;
 .super Lcom/mplus/lib/G4/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.G4.b
+# ROLE  : hints: "emoji"; "emoji"
+# SIG   : extends com.mplus.lib.G4.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

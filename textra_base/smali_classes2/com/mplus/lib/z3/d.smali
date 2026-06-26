@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z3/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z3.d
+# ROLE  : obfuscated class in package z3
+# SIG   : extends java.lang.Object; implements com.mplus.lib.w3.e
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/w3/e;

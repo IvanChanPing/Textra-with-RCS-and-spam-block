@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/s5/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.c
+# ROLE  : settings / preferences subsystem
+# SIG   : extends java.lang.Object; implements android.widget.PopupMenu$OnDismissListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/PopupMenu$OnDismissListener;

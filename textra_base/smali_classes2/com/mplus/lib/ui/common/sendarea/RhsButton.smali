@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/sendarea/RhsButton;
 .super Lcom/mplus/lib/s5/p0;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.sendarea.RhsButton
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.s5.p0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

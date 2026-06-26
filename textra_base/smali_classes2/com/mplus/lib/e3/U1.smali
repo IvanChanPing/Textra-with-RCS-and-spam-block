@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/e3/U1;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.e3.U1
+# ROLE  : UI components
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/pick/contacts/PickContactsActivity;
 .super Lcom/mplus/lib/x5/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.pick.contacts.PickContactsActivity
+# ROLE  : OnClickListener; hints: "picked_contacts"; "picked_contacts"
+# SIG   : extends com.mplus.lib.x5.l; implements com.mplus.lib.N5.a, androidx.viewpager.widget.ViewPager$OnPageChangeListener, android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/N5/a;

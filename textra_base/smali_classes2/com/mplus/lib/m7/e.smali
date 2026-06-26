@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/m7/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.m7.e
+# ROLE  : MMS helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.m7.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/m7/c;

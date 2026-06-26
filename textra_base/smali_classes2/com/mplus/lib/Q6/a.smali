@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/Q6/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q6.a
+# ROLE  : obfuscated class in package Q6
+# SIG   : extends java.lang.Object; implements java.util.function.Function
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Function;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i3/i;
 .super Lcom/google/android/gms/common/api/internal/LifecycleCallback;
+# ANNOTATION
+# CLASS : com.mplus.lib.i3.i
+# ROLE  : input / compose helpers
+# SIG   : extends com.google.android.gms.common.api.internal.LifecycleCallback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

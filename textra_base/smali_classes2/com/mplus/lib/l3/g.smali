@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/l3/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.l3.g
+# ROLE  : obfuscated class in package l3
+# SIG   : extends java.lang.Object; implements android.os.IBinder$DeathRecipient
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/IBinder$DeathRecipient;

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/widgets/coverflow/CoverFlow;
 .super Landroid/widget/AdapterView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.widgets.coverflow.CoverFlow
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments; hints: "[selectedPos="
+# SIG   : extends android.widget.AdapterView; implements android.view.GestureDetector$OnGestureListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/GestureDetector$OnGestureListener;

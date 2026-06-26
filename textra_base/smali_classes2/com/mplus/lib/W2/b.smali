@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/W2/b;
 .super Landroid/graphics/drawable/Drawable;
+# ANNOTATION
+# CLASS : com.mplus.lib.W2.b
+# ROLE  : methods: getConstantState, getOpacity, setAlpha, setColorFilter
+# SIG   : extends android.graphics.drawable.Drawable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

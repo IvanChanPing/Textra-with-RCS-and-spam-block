@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/a3/W1;
 .super Lcom/mplus/lib/a3/u2;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.W1
+# ROLE  : Runnable; hints: "exceptionType=["
+# SIG   : extends com.mplus.lib.a3.u2; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

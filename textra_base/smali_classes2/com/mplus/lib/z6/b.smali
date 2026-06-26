@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z6/b;
 .super Lcom/mplus/lib/z6/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.z6.b
+# ROLE  : animation / transition helpers
+# SIG   : extends com.mplus.lib.z6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/R0;
 .super Lcom/mplus/lib/F3/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.R0
+# ROLE  : large utility / model package
+# SIG   : extends com.mplus.lib.F3.c; implements java.util.RandomAccess
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/RandomAccess;

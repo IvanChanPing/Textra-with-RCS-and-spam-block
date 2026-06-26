@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P6/c;
 .super Ljava/util/ArrayList;
+# ANNOTATION
+# CLASS : com.mplus.lib.P6.c
+# ROLE  : obfuscated class in package P6
+# SIG   : extends java.util.ArrayList
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/e3/X1;
 .super Lcom/google/mlkit/common/sdkinternal/LazyInstanceMap;
+# ANNOTATION
+# CLASS : com.mplus.lib.e3.X1
+# ROLE  : UI components
+# SIG   : extends com.google.mlkit.common.sdkinternal.LazyInstanceMap
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

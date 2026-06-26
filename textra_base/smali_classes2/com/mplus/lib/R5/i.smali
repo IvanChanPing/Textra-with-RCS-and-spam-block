@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/R5/i;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.R5.i
+# ROLE  : recipient / phone-number formatting; hints: "Errored"
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

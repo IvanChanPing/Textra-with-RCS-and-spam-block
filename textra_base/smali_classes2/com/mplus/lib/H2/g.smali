@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/H2/g;
 .super Lcom/google/android/gms/common/internal/zzz;
+# ANNOTATION
+# CLASS : com.mplus.lib.H2.g
+# ROLE  : HTTP / network helpers
+# SIG   : extends com.google.android.gms.common.internal.zzz
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

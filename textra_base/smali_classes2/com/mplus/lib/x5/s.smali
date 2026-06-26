@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/x5/s;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.s
+# ROLE  : custom RecyclerView
+# SIG   : extends androidx.recyclerview.widget.RecyclerView$Adapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

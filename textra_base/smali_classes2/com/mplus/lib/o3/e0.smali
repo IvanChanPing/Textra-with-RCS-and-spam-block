@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/o3/e0;
 .super Lcom/mplus/lib/o3/O;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.e0
+# ROLE  : outgoing / send pipeline
+# SIG   : extends com.mplus.lib.o3.O; implements java.util.Set
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Set;

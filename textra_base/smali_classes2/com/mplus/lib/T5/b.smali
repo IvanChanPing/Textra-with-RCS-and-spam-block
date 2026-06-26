@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/T5/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.T5.b
+# ROLE  : methods: onCompleted, onError
+# SIG   : extends java.lang.Object; implements androidx.media3.transformer.Transformer$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/media3/transformer/Transformer$Listener;

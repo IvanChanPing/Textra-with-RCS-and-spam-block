@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s6/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s6.c
+# ROLE  : methods: onGlobalLayout
+# SIG   : extends java.lang.Object; implements android.view.ViewTreeObserver$OnGlobalLayoutListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;

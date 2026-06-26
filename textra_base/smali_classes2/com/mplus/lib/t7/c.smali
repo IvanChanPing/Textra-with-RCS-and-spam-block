@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t7/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.t7.c
+# ROLE  : thread-management utilities; hints: ", exception: "
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

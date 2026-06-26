@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/b9/a;
 .super Landroid/animation/AnimatorListenerAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.b9.a
+# ROLE  : methods: onAnimationEnd
+# SIG   : extends android.animation.AnimatorListenerAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

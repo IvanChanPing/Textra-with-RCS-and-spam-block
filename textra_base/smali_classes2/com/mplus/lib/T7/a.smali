@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/T7/a;
 .super Lcom/smaato/sdk/core/csm/CsmAdResponse;
+# ANNOTATION
+# CLASS : com.mplus.lib.T7.a
+# ROLE  : methods: getNetworks, getPassback, getSessionId
+# SIG   : extends com.smaato.sdk.core.csm.CsmAdResponse
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

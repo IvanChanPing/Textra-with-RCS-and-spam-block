@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/U6/b;
 .super Lcom/mplus/lib/ui/common/base/BaseFrameLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.U6.b
+# ROLE  : methods: getLastView, getLayoutSize, getMeasuredSize, getPaddingHorizontal
+# SIG   : extends com.mplus.lib.ui.common.base.BaseFrameLayout
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

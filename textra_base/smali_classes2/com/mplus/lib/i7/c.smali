@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i7/c;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.i7.c
+# ROLE  : hints: ")\r\nPhone Model: "; "\r\nPhone Brand: "
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.x5.u, com.mplus.lib.s7.b, com.mplus.lib.s7.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/u;

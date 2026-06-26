@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S6/d;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.S6.d
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements android.view.View$OnLayoutChangeListener, android.view.View$OnClickListener, com.mplus.lib.b2.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnLayoutChangeListener;

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/X2/e;
 .super Lcom/mplus/lib/X2/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.X2.e
+# ROLE  : yet-unclassified (X2)
+# SIG   : extends com.mplus.lib.X2.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

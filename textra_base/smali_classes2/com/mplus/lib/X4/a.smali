@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/X4/a;
 .super Lcom/mplus/lib/y1/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.X4.a
+# ROLE  : XML config helpers
+# SIG   : extends com.mplus.lib.y1.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

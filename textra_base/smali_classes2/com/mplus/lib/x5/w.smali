@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/x5/w;
 .super Landroid/webkit/WebView;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.w
+# ROLE  : XML / resource helpers
+# SIG   : extends android.webkit.WebView; implements com.mplus.lib.x5.y, com.mplus.lib.y5.r
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s3/D;
 .super Lcom/mplus/lib/s3/o;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.D
+# ROLE  : SMS send helpers
+# SIG   : extends com.mplus.lib.s3.o; implements java.util.concurrent.RunnableFuture, com.mplus.lib.s3.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/RunnableFuture;

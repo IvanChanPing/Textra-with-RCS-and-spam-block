@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/l8/a;
 .super Lcom/smaato/sdk/core/mvvm/model/AdRequest;
+# ANNOTATION
+# CLASS : com.mplus.lib.l8.a
+# ROLE  : hints: ", mediationNetworkName="; ", mediationNetworkSdkVersion="
+# SIG   : extends com.smaato.sdk.core.mvvm.model.AdRequest
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/r4/e;
 .super Landroid/database/ContentObserver;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.e
+# ROLE  : messaging engine — DB R/W (messages/conversations), tapback attach (G0), delivery scheduling (F0/f0/H0/X0), notification dispatch
+# SIG   : extends android.database.ContentObserver
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

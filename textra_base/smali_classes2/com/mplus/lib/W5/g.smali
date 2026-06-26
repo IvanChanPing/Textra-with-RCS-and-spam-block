@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/W5/g;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.W5.g
+# ROLE  : widget helpers
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.s5.u
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s5/u;

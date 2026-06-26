@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S4/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S4.a
+# ROLE  : methods: contains, getAll, getBoolean, getFloat
+# SIG   : extends java.lang.Object; implements android.content.SharedPreferences, android.content.SharedPreferences$Editor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/SharedPreferences;

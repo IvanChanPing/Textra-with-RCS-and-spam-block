@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E6/j;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.E6.j
+# ROLE  : hints: "convoId"
+# SIG   : extends com.mplus.lib.G5.a; implements androidx.loader.app.LoaderManager$LoaderCallbacks, com.mplus.lib.s5.h0, java.util.function.Supplier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/loader/app/LoaderManager$LoaderCallbacks;

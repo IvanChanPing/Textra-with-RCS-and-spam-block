@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K3/c;
 .super Lcom/mplus/lib/K3/n;
+# ANNOTATION
+# CLASS : com.mplus.lib.K3.c
+# ROLE  : keyboard / input helpers
+# SIG   : extends com.mplus.lib.K3.n
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

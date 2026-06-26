@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/C4/a;
 .super Lcom/mplus/lib/f5/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.C4.a
+# ROLE  : tapback/reaction locale pattern registrar — fills h5/h.M with pswitch'd locale ADD/REMOVE templates (ZWSP/ZWNJ markers) via h5/h.P(); hints: "draft/attachments/*/*"; "draft/attachments/*"
+# SIG   : extends com.mplus.lib.f5.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

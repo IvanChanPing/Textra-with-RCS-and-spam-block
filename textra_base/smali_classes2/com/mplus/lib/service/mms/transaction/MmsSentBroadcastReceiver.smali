@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/mms/transaction/MmsSentBroadcastReceiver;
 .super Lcom/mplus/lib/f5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.mms.transaction.MmsSentBroadcastReceiver
+# ROLE  : Android Service — background SMS/notification service; hints: "broadcast_resultcode"
+# SIG   : extends com.mplus.lib.f5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

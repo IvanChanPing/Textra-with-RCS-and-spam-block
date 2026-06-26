@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R4/a;
 .super Lcom/mplus/lib/x5/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.R4.a
+# ROLE  : recipient / contact resolution
+# SIG   : extends com.mplus.lib.x5.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

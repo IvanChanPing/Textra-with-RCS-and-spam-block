@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Q6/e;
 .super Lcom/mplus/lib/U1/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q6.e
+# ROLE  : methods: clone
+# SIG   : extends com.mplus.lib.U1.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

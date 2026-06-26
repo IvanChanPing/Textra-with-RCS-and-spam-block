@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/x5/z;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.z
+# ROLE  : XML / resource helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.x5.y
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

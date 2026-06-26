@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/F;
 .super Landroid/graphics/drawable/ShapeDrawable$ShaderFactory;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.F
+# ROLE  : conversation list / thread list UI
+# SIG   : extends android.graphics.drawable.ShapeDrawable$ShaderFactory
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

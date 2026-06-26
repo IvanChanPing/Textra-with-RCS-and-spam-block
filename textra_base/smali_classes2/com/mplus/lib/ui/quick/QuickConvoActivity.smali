@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/quick/QuickConvoActivity;
 .super Lcom/mplus/lib/s5/q;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.quick.QuickConvoActivity
+# ROLE  : OnClickListener; hints: "newMessageMode"; "newMessageMode"
+# SIG   : extends com.mplus.lib.s5.q; implements com.mplus.lib.W6.d, android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/W6/d;

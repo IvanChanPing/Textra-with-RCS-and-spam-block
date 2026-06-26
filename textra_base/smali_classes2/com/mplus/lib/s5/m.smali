@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/m;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.m
+# ROLE  : settings / preferences subsystem; hints: "[intent="; "send_queue_id"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.w2.b, com.mplus.lib.A6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/w2/b;

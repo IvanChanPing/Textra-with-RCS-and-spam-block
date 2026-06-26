@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/f;
 .super Lcom/mplus/lib/f3/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.f
+# ROLE  : file / media helpers
+# SIG   : extends com.mplus.lib.f3.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

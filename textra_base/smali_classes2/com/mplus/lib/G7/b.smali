@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/G7/b;
 .super Landroid/os/AsyncTask;
+# ANNOTATION
+# CLASS : com.mplus.lib.G7.b
+# ROLE  : AsyncTask (bg task, deprecated); hints: "sender"; "message"
+# SIG   : extends android.os.AsyncTask
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

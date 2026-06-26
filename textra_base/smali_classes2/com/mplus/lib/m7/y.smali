@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/m7/y;
 .super Lcom/mplus/lib/y7/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.m7.y
+# ROLE  : MMS helpers
+# SIG   : extends com.mplus.lib.y7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

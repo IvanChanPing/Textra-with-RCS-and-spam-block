@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/o3/Q;
 .super Lcom/mplus/lib/o3/N;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.Q
+# ROLE  : outgoing / send pipeline
+# SIG   : extends com.mplus.lib.o3.N
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

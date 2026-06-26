@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/z7/M;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.M
+# ROLE  : Runnable
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

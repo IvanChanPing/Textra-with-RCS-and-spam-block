@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/o0;
 .super Ljava/util/AbstractCollection;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.o0
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends java.util.AbstractCollection
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

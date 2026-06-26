@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S7/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S7.a
+# ROLE  : methods: onProgressChanged
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.webview.BaseWebChromeClient$WebChromeClientCallback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/webview/BaseWebChromeClient$WebChromeClientCallback;

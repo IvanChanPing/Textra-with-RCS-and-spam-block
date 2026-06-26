@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t8/c;
 .super Lcom/smaato/sdk/core/network/HttpClient;
+# ANNOTATION
+# CLASS : com.mplus.lib.t8.c
+# ROLE  : hints: "Null interceptors"; "Null executor"
+# SIG   : extends com.smaato.sdk.core.network.HttpClient
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

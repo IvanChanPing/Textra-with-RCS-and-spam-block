@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/f5/b;
 .super Landroid/database/ContentObserver;
+# ANNOTATION
+# CLASS : com.mplus.lib.f5.b
+# ROLE  : obfuscated class in package f5
+# SIG   : extends android.database.ContentObserver
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

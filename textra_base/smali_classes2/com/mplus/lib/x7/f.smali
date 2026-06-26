@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x7/f;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.x7.f
+# ROLE  : conversation action-menu overlay (contact info, Meet FAB, LocShare; extends x7/g, implements x7/l)
+# SIG   : extends com.mplus.lib.G5.a; implements android.content.SharedPreferences$OnSharedPreferenceChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;

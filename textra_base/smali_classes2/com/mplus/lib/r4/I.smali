@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/r4/I;
 .super Landroid/database/sqlite/SQLiteOpenHelper;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.I
+# ROLE  : SQLiteOpenHelper (DB schema)
+# SIG   : extends android.database.sqlite.SQLiteOpenHelper
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

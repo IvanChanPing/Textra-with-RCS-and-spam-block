@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/E3/x;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.x
+# ROLE  : event / listener subsystem
+# SIG   : extends java.lang.Object; implements java.io.Closeable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/Closeable;

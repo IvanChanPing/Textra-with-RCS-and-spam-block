@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/V5/q;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V5.q
+# ROLE  : view / UI helpers
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

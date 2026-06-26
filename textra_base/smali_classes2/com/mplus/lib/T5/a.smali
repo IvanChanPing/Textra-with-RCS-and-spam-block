@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/T5/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.T5.a
+# ROLE  : obfuscated class in package T5
+# SIG   : extends java.lang.Object; implements java.util.function.IntPredicate
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/IntPredicate;

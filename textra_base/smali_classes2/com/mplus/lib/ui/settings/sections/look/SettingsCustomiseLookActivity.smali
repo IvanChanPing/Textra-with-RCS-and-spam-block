@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/settings/sections/look/SettingsCustomiseLookActivity;
 .super Lcom/mplus/lib/x7/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.settings.sections.look.SettingsCustomiseLookActivity
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.x7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseSlider;
 .super Lcom/mplus/lib/ui/common/base/BaseView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseSlider
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseView; implements com.mplus.lib.b2.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/b2/f;

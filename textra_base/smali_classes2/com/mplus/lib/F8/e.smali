@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/F8/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F8.e
+# ROLE  : hints: "error"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

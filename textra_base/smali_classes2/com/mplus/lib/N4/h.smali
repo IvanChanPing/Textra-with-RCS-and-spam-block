@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/N4/h;
 .super Lcom/mplus/lib/f5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.N4.h
+# ROLE  : notification helpers; hints: "MmsDownloadReceiver"; "broadcast_resultcode"
+# SIG   : extends com.mplus.lib.f5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

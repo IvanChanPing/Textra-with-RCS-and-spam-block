@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseListView;
 .super Landroid/widget/ListView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseListView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends android.widget.ListView; implements com.mplus.lib.y5.o, com.mplus.lib.x5.z
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/o;

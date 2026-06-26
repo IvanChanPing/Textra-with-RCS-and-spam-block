@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/l3/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.l3.f
+# ROLE  : Runnable
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/V;
 .super Landroid/text/method/ArrowKeyMovementMethod;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.V
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.text.method.ArrowKeyMovementMethod
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

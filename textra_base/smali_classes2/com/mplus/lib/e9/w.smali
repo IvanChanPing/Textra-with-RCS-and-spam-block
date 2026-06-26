@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/e9/w;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.e9.w
+# ROLE  : extension / plugin utilities
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.fi.CheckedFunction, androidx.media3.common.util.ListenerSet$IterationFinishedEvent, com.smaato.sdk.core.util.fi.Function, androidx.media3.common.util.Consumer, androidx.media3.exoplayer.drm.DrmSessionManager$DrmSessionReference, androidx.media3.exoplayer.image.BitmapFactoryImageDecoder$BitmapDecoder, com.mplus.lib.T4.u, androidx.media3.exoplayer.trackselection.TrackSelector$InvalidationListener, androidx.media3.exoplayer.source.ProgressiveMediaExtractor$Factory, androidx.media3.common.Bundleable$Creator, com.mplus.lib.n3.e, androidx.media3.exoplayer.source.chunk.ChunkExtractor$Factory, androidx.media3.extractor.DefaultExtractorsFactory$ExtensionLoader$ConstructorSupplier, com.mplus.lib.z5.a, androidx.constraintlayout.core.state.Interpolator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/fi/CheckedFunction;

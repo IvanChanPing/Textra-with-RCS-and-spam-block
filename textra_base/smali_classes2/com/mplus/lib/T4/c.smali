@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/T4/c;
 .super Landroidx/lifecycle/LiveData;
+# ANNOTATION
+# CLASS : com.mplus.lib.T4.c
+# ROLE  : thread / conversation model
+# SIG   : extends androidx.lifecycle.LiveData; implements android.content.SharedPreferences$OnSharedPreferenceChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;

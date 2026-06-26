@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Q4/c;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q4.c
+# ROLE  : methods: onEventMainThread
+# SIG   : extends com.mplus.lib.F1.a; implements com.mplus.lib.J5.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/J5/f;

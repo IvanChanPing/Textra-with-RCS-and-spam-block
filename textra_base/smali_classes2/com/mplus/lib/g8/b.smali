@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/g8/b;
 .super Lcom/smaato/sdk/core/util/ActivityLifecycleCallbacksAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.g8.b
+# ROLE  : methods: onActivityCreated, onActivityPaused, onActivityResumed, onActivityStarted
+# SIG   : extends com.smaato.sdk.core.util.ActivityLifecycleCallbacksAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

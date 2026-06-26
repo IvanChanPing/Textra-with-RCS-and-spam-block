@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M2/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.M2.e
+# ROLE  : methods: onBindingDied, onServiceConnected, onServiceDisconnected
+# SIG   : extends java.lang.Object; implements android.content.ServiceConnection, com.google.android.gms.common.internal.zzt
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/ServiceConnection;

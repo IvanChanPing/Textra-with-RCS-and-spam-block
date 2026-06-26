@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/O7/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.O7.d
+# ROLE  : hints: "Parameter config cannot be null for SmaatoInstance::new"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

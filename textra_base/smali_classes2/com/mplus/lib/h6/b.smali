@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/h6/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.h6.b
+# ROLE  : header / toolbar UI; hints: "name_raw_contact_id"; "vnd.android.cursor.item/name"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.z7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/z7/a;

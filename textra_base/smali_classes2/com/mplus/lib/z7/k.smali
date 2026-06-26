@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/k;
 .super Lcom/mplus/lib/z7/G;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.k
+# ROLE  : conversation list / thread list UI; hints: "media"; "%s: error getting orientation%s"
+# SIG   : extends com.mplus.lib.z7.G
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

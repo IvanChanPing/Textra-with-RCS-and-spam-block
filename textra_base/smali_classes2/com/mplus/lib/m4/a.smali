@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/m4/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.m4.a
+# ROLE  : hints: ":%:mduesnco)sepu%hsrcstuo  ,smnad ser(cm=cu% P"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.v1.k, com.mplus.lib.v1.j
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/v1/k;

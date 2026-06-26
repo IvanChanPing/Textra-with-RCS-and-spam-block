@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/p1;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.p1
+# ROLE  : large utility / model package
+# SIG   : extends java.lang.Object; implements java.security.PrivilegedExceptionAction
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/security/PrivilegedExceptionAction;

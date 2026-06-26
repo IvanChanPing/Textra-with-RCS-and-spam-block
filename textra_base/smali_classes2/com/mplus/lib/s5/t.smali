@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/t;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.t
+# ROLE  : settings / preferences subsystem
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

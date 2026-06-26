@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/drawermenu/DrawerMenuFragment;
 .super Lcom/mplus/lib/x5/p;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.drawermenu.DrawerMenuFragment
+# ROLE  : OnItemClickListener
+# SIG   : extends com.mplus.lib.x5.p; implements android.widget.AdapterView$OnItemClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;

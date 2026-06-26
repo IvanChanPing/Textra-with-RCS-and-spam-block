@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/j9/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j9.a
+# ROLE  : methods: onPrepared
+# SIG   : extends java.lang.Object; implements android.media.MediaPlayer$OnPreparedListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/media/MediaPlayer$OnPreparedListener;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/D0;
 .super Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaom;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.D0
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends com.google.android.gms.internal.mlkit_entity_extraction.zzaom
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

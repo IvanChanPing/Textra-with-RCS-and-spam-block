@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/k;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.k
+# ROLE  : JSON / serialization helpers
+# SIG   : extends java.lang.Object; implements com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;

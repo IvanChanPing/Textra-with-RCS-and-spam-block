@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S6/k;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.S6.k
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements androidx.loader.app.LoaderManager$LoaderCallbacks, com.mplus.lib.b2.f, android.view.View$OnClickListener, com.mplus.lib.S6.g, android.content.SharedPreferences$OnSharedPreferenceChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/loader/app/LoaderManager$LoaderCallbacks;

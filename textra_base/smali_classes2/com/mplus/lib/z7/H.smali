@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/H;
 .super Ljava/io/OutputStream;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.H
+# ROLE  : conversation list / thread list UI
+# SIG   : extends java.io.OutputStream
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

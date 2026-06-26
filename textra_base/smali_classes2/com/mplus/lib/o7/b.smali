@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/o7/b;
 .super Lcom/mplus/lib/x5/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.o7.b
+# ROLE  : methods: getOpacity, setAlpha, setColorFilter
+# SIG   : extends com.mplus.lib.x5.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

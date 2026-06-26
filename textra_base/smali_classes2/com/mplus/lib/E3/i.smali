@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E3/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.i
+# ROLE  : event / listener subsystem; hints: "ClearOptions[clearNotification="
+# SIG   : extends java.lang.Object; implements com.tappx.a.q0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/tappx/a/q0;

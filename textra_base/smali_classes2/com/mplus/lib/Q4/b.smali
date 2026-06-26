@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Q4/b;
 .super Landroid/content/BroadcastReceiver;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q4.b
+# ROLE  : BroadcastReceiver
+# SIG   : extends android.content.BroadcastReceiver
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

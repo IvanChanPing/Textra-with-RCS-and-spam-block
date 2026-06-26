@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/m4/d;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.m4.d
+# ROLE  : obfuscated class in package m4
+# SIG   : extends com.mplus.lib.F1.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

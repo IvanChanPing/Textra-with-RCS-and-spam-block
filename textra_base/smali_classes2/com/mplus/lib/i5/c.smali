@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i5/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i5.c
+# ROLE  : intent / routing helpers
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

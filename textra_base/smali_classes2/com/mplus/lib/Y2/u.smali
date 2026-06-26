@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/u;
 .super Lcom/mplus/lib/Y2/v;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.u
+# ROLE  : yet-unclassified utility; hints: "locationSettingsRequest can\'t be null"
+# SIG   : extends com.mplus.lib.Y2.v
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/WorldWideWebView;
 .super Lcom/mplus/lib/x5/w;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.WorldWideWebView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.x5.w
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

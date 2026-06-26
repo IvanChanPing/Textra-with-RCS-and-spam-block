@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/S5/e;
 .super Lcom/mplus/lib/x5/f;
+# ANNOTATION
+# CLASS : com.mplus.lib.S5.e
+# ROLE  : methods: onCreateView, onStart
+# SIG   : extends com.mplus.lib.x5.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/q8/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.q8.d
+# ROLE  : Runnable
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/L4/k;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.L4.k
+# ROLE  : list / adapter; hints: "insert-address-token"; "Txtr:mms"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

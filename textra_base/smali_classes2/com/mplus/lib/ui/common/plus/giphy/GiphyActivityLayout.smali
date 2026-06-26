@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/plus/giphy/GiphyActivityLayout;
 .super Lcom/mplus/lib/ui/common/base/BaseLinearLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.plus.giphy.GiphyActivityLayout
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseLinearLayout; implements java.util.Observer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Observer;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/d4/a;
 .super Lcom/inmobi/ads/listeners/BannerAdEventListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.d4.a
+# ROLE  : methods: onAdClicked, onAdDismissed, onAdDisplayed, onAdFetchFailed
+# SIG   : extends com.inmobi.ads.listeners.BannerAdEventListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

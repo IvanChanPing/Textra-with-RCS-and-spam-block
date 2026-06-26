@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/d3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.d3.a
+# ROLE  : data model / serialization
+# SIG   : extends java.lang.Object; implements com.google.android.gms.internal.mlkit_smart_reply_bundled.zzah
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzah;

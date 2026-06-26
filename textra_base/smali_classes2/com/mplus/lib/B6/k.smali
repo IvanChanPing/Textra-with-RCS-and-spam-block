@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/B6/k;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.k
+# ROLE  : OnClickListener; hints: "T.is_tapback = 0"
+# SIG   : extends com.mplus.lib.G5.a; implements androidx.loader.app.LoaderManager$LoaderCallbacks, android.view.View$OnClickListener, androidx.viewpager.widget.ViewPager$OnPageChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/loader/app/LoaderManager$LoaderCallbacks;

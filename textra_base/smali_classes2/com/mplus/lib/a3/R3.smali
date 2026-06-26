@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/R3;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.R3
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends java.lang.Object; implements com.mplus.lib.Ka.y
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/Ka/y;

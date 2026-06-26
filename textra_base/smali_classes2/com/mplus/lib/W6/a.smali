@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/W6/a;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.W6.a
+# ROLE  : methods: setMaterialDirect
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.v6.W
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/v6/W;

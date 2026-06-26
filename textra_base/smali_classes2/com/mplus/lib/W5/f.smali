@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/W5/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.W5.f
+# ROLE  : OnClickListener
+# SIG   : extends java.lang.Object; implements android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

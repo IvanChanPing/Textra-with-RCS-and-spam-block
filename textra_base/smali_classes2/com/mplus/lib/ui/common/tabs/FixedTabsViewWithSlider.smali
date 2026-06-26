@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/tabs/FixedTabsViewWithSlider;
 .super Lcom/mplus/lib/x1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.tabs.FixedTabsViewWithSlider
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.x1.a; implements com.mplus.lib.B5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/B5/a;

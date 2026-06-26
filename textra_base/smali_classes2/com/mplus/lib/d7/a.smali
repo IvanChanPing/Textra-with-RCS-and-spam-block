@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/d7/a;
 .super Lcom/mplus/lib/x7/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.d7.a
+# ROLE  : hints: "contacts"
+# SIG   : extends com.mplus.lib.x7.g; implements com.mplus.lib.x7.l, com.mplus.lib.s5.w
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x7/l;

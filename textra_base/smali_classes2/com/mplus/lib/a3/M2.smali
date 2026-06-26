@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/M2;
 .super Lcom/mplus/lib/a3/u2;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.M2
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends com.mplus.lib.a3.u2; implements java.util.concurrent.RunnableFuture
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/RunnableFuture;

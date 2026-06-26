@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/j5/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j5.f
+# ROLE  : job scheduler helpers
+# SIG   : extends java.lang.Object; implements androidx.lifecycle.Observer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;

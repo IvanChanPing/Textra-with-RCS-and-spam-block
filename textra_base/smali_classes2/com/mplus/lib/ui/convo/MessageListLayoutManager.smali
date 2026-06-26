@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/convo/MessageListLayoutManager;
 .super Landroidx/recyclerview/widget/LinearLayoutManager;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.convo.MessageListLayoutManager
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends androidx.recyclerview.widget.LinearLayoutManager
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/z6/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z6.j
+# ROLE  : animation / transition helpers
+# SIG   : extends java.lang.Object; implements android.text.Html$ImageGetter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/text/Html$ImageGetter;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.a
+# ROLE  : Parcelable
+# SIG   : extends java.lang.Object; implements android.os.Parcelable$Creator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;

@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/z7/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.a
+# ROLE  : conversation list / thread list UI
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

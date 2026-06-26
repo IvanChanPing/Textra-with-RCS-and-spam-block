@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/q;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.q
+# ROLE  : conversation list / thread list UI
+# SIG   : extends android.graphics.drawable.Drawable$ConstantState
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

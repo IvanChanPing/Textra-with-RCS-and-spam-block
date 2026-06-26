@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/T4/z;
 .super Lcom/mplus/lib/T4/q;
+# ANNOTATION
+# CLASS : com.mplus.lib.T4.z
+# ROLE  : thread / conversation model; hints: "maxMessageSize"
+# SIG   : extends com.mplus.lib.T4.q
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

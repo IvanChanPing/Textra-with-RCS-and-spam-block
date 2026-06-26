@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/B6/u;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.u
+# ROLE  : broadcast / event bus helpers
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.x5.j
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/j;

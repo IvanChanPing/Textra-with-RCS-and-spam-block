@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/V5/g;
 .super Landroidx/recyclerview/widget/LinearSmoothScroller;
+# ANNOTATION
+# CLASS : com.mplus.lib.V5.g
+# ROLE  : view / UI helpers
+# SIG   : extends androidx.recyclerview.widget.LinearSmoothScroller
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

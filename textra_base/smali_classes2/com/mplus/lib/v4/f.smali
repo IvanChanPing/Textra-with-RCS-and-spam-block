@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v4/f;
 .super Lcom/mplus/lib/t9/d;
+# ANNOTATION
+# CLASS : com.mplus.lib.v4.f
+# ROLE  : view model; hints: "contact_id"
+# SIG   : extends com.mplus.lib.t9.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

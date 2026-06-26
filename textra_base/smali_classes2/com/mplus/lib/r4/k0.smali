@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/r4/k0;
 .super Lcom/mplus/lib/r4/c0;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.k0
+# ROLE  : messaging engine — DB R/W (messages/conversations), tapback attach (G0), delivery scheduling (F0/f0/H0/X0), notification dispatch; hints: "T.convo_id = "
+# SIG   : extends com.mplus.lib.r4.c0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M5/f;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.M5.f
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements android.view.View$OnClickListener, com.mplus.lib.b2.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

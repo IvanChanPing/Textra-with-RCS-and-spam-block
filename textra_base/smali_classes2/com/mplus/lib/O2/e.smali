@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/O2/e;
 .super Lcom/google/android/gms/common/moduleinstall/internal/zaa;
+# ANNOTATION
+# CLASS : com.mplus.lib.O2.e
+# ROLE  : obfuscated class in package O2
+# SIG   : extends com.google.android.gms.common.moduleinstall.internal.zaa
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

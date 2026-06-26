@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/n5/a;
 .super Ljava/lang/RuntimeException;
+# ANNOTATION
+# CLASS : com.mplus.lib.n5.a
+# ROLE  : custom RuntimeException
+# SIG   : extends java.lang.RuntimeException
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/z8/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z8.f
+# ROLE  : yet-unclassified (z8)
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.LongConsumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/LongConsumer;

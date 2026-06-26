@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s3/z;
 .super Lcom/mplus/lib/s3/h;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.z
+# ROLE  : Runnable
+# SIG   : extends com.mplus.lib.s3.h; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

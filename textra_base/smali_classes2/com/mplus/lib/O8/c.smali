@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/O8/c;
 .super Landroid/os/CountDownTimer;
+# ANNOTATION
+# CLASS : com.mplus.lib.O8.c
+# ROLE  : methods: onFinish, onTick
+# SIG   : extends android.os.CountDownTimer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

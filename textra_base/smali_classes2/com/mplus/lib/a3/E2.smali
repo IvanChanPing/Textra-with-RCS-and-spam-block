@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/a3/E2;
 .super Lcom/google/android/gms/internal/mlkit_entity_extraction/zzavp;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.E2
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends com.google.android.gms.internal.mlkit_entity_extraction.zzavp
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

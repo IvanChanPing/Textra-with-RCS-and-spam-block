@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X6/a;
 .super Lcom/mplus/lib/f6/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.X6.a
+# ROLE  : methods: getItemId, onBindViewHolder
+# SIG   : extends com.mplus.lib.f6.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K8/b;
 .super Ljava/util/TimerTask;
+# ANNOTATION
+# CLASS : com.mplus.lib.K8.b
+# ROLE  : obfuscated class in package K8
+# SIG   : extends java.util.TimerTask
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

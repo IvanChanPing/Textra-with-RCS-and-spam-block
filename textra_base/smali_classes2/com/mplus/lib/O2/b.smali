@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/O2/b;
 .super Lcom/google/android/gms/common/moduleinstall/internal/zag;
+# ANNOTATION
+# CLASS : com.mplus.lib.O2.b
+# ROLE  : obfuscated class in package O2
+# SIG   : extends com.google.android.gms.common.moduleinstall.internal.zag
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

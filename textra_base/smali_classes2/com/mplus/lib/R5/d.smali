@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R5/d;
 .super Lcom/mplus/lib/r4/a0;
+# ANNOTATION
+# CLASS : com.mplus.lib.R5.d
+# ROLE  : recipient / phone-number formatting; hints: "%s: error creating thumbnail%s"
+# SIG   : extends com.mplus.lib.r4.a0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

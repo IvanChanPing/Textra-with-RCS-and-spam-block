@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i5/g;
 .super Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.i5.g
+# ROLE  : intent / routing helpers
+# SIG   : extends android.telephony.SubscriptionManager$OnSubscriptionsChangedListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

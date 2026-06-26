@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseImageView;
 .super Landroid/widget/ImageView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseImageView
+# ROLE  : custom ImageView
+# SIG   : extends android.widget.ImageView; implements com.mplus.lib.x5.y, com.mplus.lib.y5.n, com.mplus.lib.y5.v, com.mplus.lib.y5.u
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

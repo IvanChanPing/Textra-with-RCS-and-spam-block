@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/O3/q;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.O3.q
+# ROLE  : outgoing message queue / scheduler
+# SIG   : extends java.lang.Object; implements android.animation.ValueAnimator$AnimatorUpdateListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;

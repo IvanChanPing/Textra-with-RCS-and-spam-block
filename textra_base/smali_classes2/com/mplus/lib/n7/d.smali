@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/n7/d;
 .super Lcom/mplus/lib/x7/m;
+# ANNOTATION
+# CLASS : com.mplus.lib.n7.d
+# ROLE  : methods: onMenuItemClick
+# SIG   : extends com.mplus.lib.x7.m; implements android.widget.PopupMenu$OnMenuItemClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/PopupMenu$OnMenuItemClickListener;

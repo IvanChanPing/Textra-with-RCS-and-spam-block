@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/C4/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.C4.c
+# ROLE  : tapback/reaction locale pattern registrar — fills h5/h.M with pswitch'd locale ADD/REMOVE templates (ZWSP/ZWNJ markers) via h5/h.P(); hints: "sasgesms"; "messages"
+# SIG   : extends java.lang.Object; implements java.util.function.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Consumer;

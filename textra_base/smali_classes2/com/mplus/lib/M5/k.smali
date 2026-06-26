@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M5/k;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.M5.k
+# ROLE  : MMS / multimedia send
+# SIG   : extends com.mplus.lib.G5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

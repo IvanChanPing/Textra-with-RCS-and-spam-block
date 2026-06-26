@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/s5/d0;
 .super Landroid/view/GestureDetector$SimpleOnGestureListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.d0
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.view.GestureDetector$SimpleOnGestureListener; implements com.mplus.lib.C5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/C5/a;

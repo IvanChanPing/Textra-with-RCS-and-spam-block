@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/J4/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J4.j
+# ROLE  : Google ML Kit / entity extraction gate (J4.d.M flags when model absent)
+# SIG   : extends java.lang.Object; implements java.util.function.Predicate
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Predicate;

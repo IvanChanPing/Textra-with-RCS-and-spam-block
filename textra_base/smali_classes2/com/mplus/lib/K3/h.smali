@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K3/h;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.K3.h
+# ROLE  : keyboard / input helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.K3.j
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/K3/j;

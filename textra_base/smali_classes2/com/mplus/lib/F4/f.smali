@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/F4/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F4.f
+# ROLE  : Runnable; hints: "%s: Exception making thumbnail: %s"; "dormant_disable_notifications"
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

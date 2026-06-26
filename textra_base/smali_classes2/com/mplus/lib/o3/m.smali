@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/o3/m;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.m
+# ROLE  : outgoing / send pipeline
+# SIG   : extends java.lang.Object; implements java.util.Map$Entry
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Map$Entry;

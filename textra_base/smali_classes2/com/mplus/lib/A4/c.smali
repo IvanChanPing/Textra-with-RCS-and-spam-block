@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/A4/c;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.A4.c
+# ROLE  : analytics / logging; hints: "GROUP"
+# SIG   : extends java.lang.Enum; implements com.mplus.lib.F3.e0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/F3/e0;

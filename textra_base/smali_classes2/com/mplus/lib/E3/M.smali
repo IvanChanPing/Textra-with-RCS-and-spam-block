@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E3/M;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.M
+# ROLE  : event / listener subsystem; hints: "aaselsExtM_scDArCSxieME.e_tTfUITrstT."
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

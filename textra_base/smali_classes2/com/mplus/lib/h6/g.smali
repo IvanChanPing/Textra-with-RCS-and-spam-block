@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/h6/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.h6.g
+# ROLE  : header / toolbar UI
+# SIG   : extends java.lang.Object; implements androidx.lifecycle.Observer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;

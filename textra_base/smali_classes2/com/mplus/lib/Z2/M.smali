@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Z2/M;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z2.M
+# ROLE  : utility functions — string manipulation, formatting helpers, shared static methods
+# SIG   : extends java.lang.Object; implements com.mplus.lib.w3.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/w3/d;

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/F3/a1;
 .super Ljava/util/AbstractSet;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.a1
+# ROLE  : large utility / model package
+# SIG   : extends java.util.AbstractSet
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

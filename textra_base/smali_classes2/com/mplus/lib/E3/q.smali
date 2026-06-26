@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E3/q;
 .super Lcom/mplus/lib/E3/m;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.q
+# ROLE  : event / listener subsystem
+# SIG   : extends com.mplus.lib.E3.m
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

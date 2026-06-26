@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/i9/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i9.j
+# ROLE  : internal / integration helpers; hints: "onVideoError"
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/Consumer;

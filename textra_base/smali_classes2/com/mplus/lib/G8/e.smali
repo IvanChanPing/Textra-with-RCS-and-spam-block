@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/G8/e;
 .super Lcom/smaato/sdk/core/webview/WebViewClientCallbackAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.G8.e
+# ROLE  : hints: "VastElementView WebViewClientHTTP General Error. code: "; "BrowserModel.onHttpError statusCode=%d"
+# SIG   : extends com.smaato.sdk.core.webview.WebViewClientCallbackAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

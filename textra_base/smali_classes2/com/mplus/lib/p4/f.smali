@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/p4/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.p4.f
+# ROLE  : obfuscated class in package p4
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

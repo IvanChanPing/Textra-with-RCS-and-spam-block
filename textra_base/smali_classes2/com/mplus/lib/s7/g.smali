@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s7/g;
 .super Lcom/mplus/lib/x5/q;
+# ANNOTATION
+# CLASS : com.mplus.lib.s7.g
+# ROLE  : SMS sender helpers
+# SIG   : extends com.mplus.lib.x5.q
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

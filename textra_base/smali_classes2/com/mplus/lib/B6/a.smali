@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/B6/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.a
+# ROLE  : broadcast / event bus helpers
+# SIG   : extends java.lang.Object; implements androidx.viewpager.widget.ViewPager$PageTransformer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/viewpager/widget/ViewPager$PageTransformer;

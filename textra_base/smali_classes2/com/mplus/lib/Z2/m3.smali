@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Z2/m3;
 .super Lcom/google/android/gms/internal/mlkit_common/zzsj;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z2.m3
+# ROLE  : utility functions — string manipulation, formatting helpers, shared static methods; hints: "RemoteModelLoggingOptions{errorCode="
+# SIG   : extends com.google.android.gms.internal.mlkit_common.zzsj
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/b6/b;
 .super Landroid/widget/BaseAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.b6.b
+# ROLE  : BaseAdapter
+# SIG   : extends android.widget.BaseAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/I2/a;
 .super Lcom/google/android/gms/common/api/internal/BasePendingResult;
+# ANNOTATION
+# CLASS : com.mplus.lib.I2.a
+# ROLE  : methods: createFailedResult
+# SIG   : extends com.google.android.gms.common.api.internal.BasePendingResult
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

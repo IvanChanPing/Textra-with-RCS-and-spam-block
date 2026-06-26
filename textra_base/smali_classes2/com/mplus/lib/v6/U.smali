@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/U;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.U
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host)
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.C5.c, com.mplus.lib.x5.r, android.text.TextWatcher
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/C5/c;

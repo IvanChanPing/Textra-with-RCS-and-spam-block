@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Q7/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q7.c
+# ROLE  : methods: onAppEnteredInBackground, onAppEnteredInForeground
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.appbackground.AppBackgroundDetector$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/appbackground/AppBackgroundDetector$Listener;

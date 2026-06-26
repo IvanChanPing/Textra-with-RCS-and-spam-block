@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/sms/transaction/SmsMgr$OnSmsReceivedWorker;
 .super Lcom/mplus/lib/ui/common/base/SafeWorker;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.sms.transaction.SmsMgr$OnSmsReceivedWorker
+# ROLE  : Android Service — background SMS/notification service
+# SIG   : extends com.mplus.lib.ui.common.base.SafeWorker
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

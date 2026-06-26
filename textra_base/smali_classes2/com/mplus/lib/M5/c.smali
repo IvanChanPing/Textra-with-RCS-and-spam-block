@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/M5/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.M5.c
+# ROLE  : MMS / multimedia send
+# SIG   : extends java.lang.Object; implements java.util.function.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Consumer;

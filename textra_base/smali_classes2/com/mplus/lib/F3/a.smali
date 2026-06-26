@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/a;
 .super Ljava/io/FilterInputStream;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.a
+# ROLE  : large utility / model package
+# SIG   : extends java.io.FilterInputStream
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

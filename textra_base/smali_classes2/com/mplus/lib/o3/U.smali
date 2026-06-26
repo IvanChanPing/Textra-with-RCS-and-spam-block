@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/o3/U;
 .super Lcom/mplus/lib/o3/O;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.U
+# ROLE  : outgoing / send pipeline
+# SIG   : extends com.mplus.lib.o3.O; implements java.util.List, java.util.RandomAccess
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/List;

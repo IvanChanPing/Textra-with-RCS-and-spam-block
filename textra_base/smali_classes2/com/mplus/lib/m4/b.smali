@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/m4/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.m4.b
+# ROLE  : obfuscated class in package m4
+# SIG   : extends java.lang.Object; implements java.util.function.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Consumer;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/a0;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.a0
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host)
+# SIG   : extends com.mplus.lib.G5.a; implements android.view.View$OnLayoutChangeListener, com.mplus.lib.n6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnLayoutChangeListener;

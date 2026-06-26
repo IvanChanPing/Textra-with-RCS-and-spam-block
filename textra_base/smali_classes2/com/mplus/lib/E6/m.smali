@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E6/m;
 .super Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+# ANNOTATION
+# CLASS : com.mplus.lib.E6.m
+# ROLE  : custom RecyclerView
+# SIG   : extends androidx.recyclerview.widget.RecyclerView$ItemDecoration
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

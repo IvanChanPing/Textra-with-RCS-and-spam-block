@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/x5/q;
 .super Landroidx/viewpager/widget/PagerAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.q
+# ROLE  : XML / resource helpers
+# SIG   : extends androidx.viewpager.widget.PagerAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

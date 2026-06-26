@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/s5/G;
 .super Landroid/animation/LayoutTransition;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.G
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.animation.LayoutTransition
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/f9/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f9.a
+# ROLE  : obfuscated class in package f9
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/Consumer;

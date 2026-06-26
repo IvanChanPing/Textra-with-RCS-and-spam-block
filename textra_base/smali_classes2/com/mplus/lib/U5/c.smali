@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/U5/c;
 .super Landroid/view/OrientationEventListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.U5.c
+# ROLE  : methods: onOrientationChanged
+# SIG   : extends android.view.OrientationEventListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

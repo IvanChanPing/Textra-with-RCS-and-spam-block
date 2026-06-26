@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M6/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.M6.i
+# ROLE  : methods: onInterceptTouchEvent, onRequestDisallowInterceptTouchEvent, onTouchEvent
+# SIG   : extends java.lang.Object; implements androidx.recyclerview.widget.RecyclerView$OnItemTouchListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/recyclerview/widget/RecyclerView$OnItemTouchListener;

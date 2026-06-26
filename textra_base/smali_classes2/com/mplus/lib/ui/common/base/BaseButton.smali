@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseButton;
 .super Landroid/widget/Button;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseButton
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends android.widget.Button; implements com.mplus.lib.x5.y, com.mplus.lib.y5.v, com.mplus.lib.y5.u
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

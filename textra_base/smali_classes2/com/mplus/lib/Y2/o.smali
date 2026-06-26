@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/Y2/o;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.o
+# ROLE  : yet-unclassified utility
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/V4/d;
 .super Lcom/mplus/lib/a3/t1;
+# ANNOTATION
+# CLASS : com.mplus.lib.V4.d
+# ROLE  : obfuscated class in package V4
+# SIG   : extends com.mplus.lib.a3.t1
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

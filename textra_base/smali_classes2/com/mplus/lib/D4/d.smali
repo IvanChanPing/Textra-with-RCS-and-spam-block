@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/D4/d;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.D4.d
+# ROLE  : database access object / cursor wrapper; hints: "maxMessageSize"; "enableMMSReadReports"
+# SIG   : extends com.mplus.lib.F1.a; implements com.mplus.lib.N4.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/N4/c;

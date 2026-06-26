@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X4/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.X4.j
+# ROLE  : XML config helpers
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

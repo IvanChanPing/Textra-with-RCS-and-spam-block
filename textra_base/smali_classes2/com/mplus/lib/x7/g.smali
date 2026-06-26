@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/x7/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.x7.g
+# ROLE  : OnClickListener
+# SIG   : extends java.lang.Object; implements android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

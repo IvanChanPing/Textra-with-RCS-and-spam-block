@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/drawermenu/DrawerMenuItemHeadingView;
 .super Lcom/mplus/lib/ui/common/base/BaseLinearLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.drawermenu.DrawerMenuItemHeadingView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseLinearLayout
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

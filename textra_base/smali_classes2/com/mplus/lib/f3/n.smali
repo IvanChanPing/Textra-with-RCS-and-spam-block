@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/f3/n;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.n
+# ROLE  : file / media helpers; hints: "DEVELOPER_ERROR"; "ERROR"
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

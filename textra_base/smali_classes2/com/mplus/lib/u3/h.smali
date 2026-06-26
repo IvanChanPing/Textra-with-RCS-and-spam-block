@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/u3/h;
 .super Lcom/mplus/lib/a3/V0;
+# ANNOTATION
+# CLASS : com.mplus.lib.u3.h
+# ROLE  : UI utilities; hints: "Null interface requested."
+# SIG   : extends com.mplus.lib.a3.V0; implements com.mplus.lib.v3.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/v3/a;

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/settings/sections/blacklist/BlacklistedActivity;
 .super Lcom/mplus/lib/x5/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.settings.sections.blacklist.BlacklistedActivity
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.x5.l; implements androidx.loader.app.LoaderManager$LoaderCallbacks, com.mplus.lib.H5.a, android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/loader/app/LoaderManager$LoaderCallbacks;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/C3/b;
 .super Ljava/lang/ThreadLocal;
+# ANNOTATION
+# CLASS : com.mplus.lib.C3.b
+# ROLE  : Thread subclass
+# SIG   : extends java.lang.ThreadLocal
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t8/e;
 .super Lcom/smaato/sdk/core/network/i;
+# ANNOTATION
+# CLASS : com.mplus.lib.t8.e
+# ROLE  : methods: connectTimeoutMillis
+# SIG   : extends com.smaato.sdk.core.network.i
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

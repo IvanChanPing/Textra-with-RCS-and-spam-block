@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/A6/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.A6.c
+# ROLE  : methods: handleTag, processingInstruction, setDocumentLocator
+# SIG   : extends java.lang.Object; implements android.text.Html$TagHandler, org.xml.sax.ContentHandler
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/text/Html$TagHandler;

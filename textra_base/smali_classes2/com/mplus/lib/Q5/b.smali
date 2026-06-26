@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/Q5/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q5.b
+# ROLE  : attach-panel ('+' button): camera/gallery/GIF/audio/schedule tabs
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

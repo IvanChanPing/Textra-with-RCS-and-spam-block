@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/w6/d;
 .super Landroid/graphics/Path;
+# ANNOTATION
+# CLASS : com.mplus.lib.w6.d
+# ROLE  : methods: offset, offset, setLastPoint
+# SIG   : extends android.graphics.Path
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

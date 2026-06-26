@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/Z5/b;
 .super Lcom/mplus/lib/a3/V0;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z5.b
+# ROLE  : obfuscated class in package Z5
+# SIG   : extends com.mplus.lib.a3.V0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

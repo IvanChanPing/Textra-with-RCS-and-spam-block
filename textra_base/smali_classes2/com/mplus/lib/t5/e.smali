@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t5/e;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.t5.e
+# ROLE  : methods: onDismiss
+# SIG   : extends com.mplus.lib.G5.a; implements android.widget.PopupWindow$OnDismissListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/PopupWindow$OnDismissListener;

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/f8/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f8.c
+# ROLE  : methods: get
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.di.ClassFactory
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/di/ClassFactory;

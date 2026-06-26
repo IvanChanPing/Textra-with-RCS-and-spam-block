@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/d3/i3;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.d3.i3
+# ROLE  : data model / serialization; hints: "osamfe.cjpe/tbmihis1mietgeooonrcsrs/tle/fe./tapgr:/cgopo"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

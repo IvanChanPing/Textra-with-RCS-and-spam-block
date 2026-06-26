@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/D6/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.D6.d
+# ROLE  : hints: "Argument must not be null"; "Argument must not be null"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.M5.e, com.mplus.lib.Q1.a, com.inmobi.cmp.ChoiceCmpCallback, com.mplus.lib.jb.n, com.tappx.sdk.android.vastgenerator.TappxVastGeneratorRequestInitializer, com.mplus.lib.pb.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/M5/e;

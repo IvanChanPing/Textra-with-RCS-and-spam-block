@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/G2/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.G2.a
+# ROLE  : obfuscated class in package G2
+# SIG   : extends java.lang.Object; implements java.util.Comparator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Comparator;

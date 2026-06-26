@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/f5/d;
 .super Lcom/mplus/lib/f5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.f5.d
+# ROLE  : methods: onReceive
+# SIG   : extends com.mplus.lib.f5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

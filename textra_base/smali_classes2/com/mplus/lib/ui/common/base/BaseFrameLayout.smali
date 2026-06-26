@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseFrameLayout;
 .super Landroid/widget/FrameLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseFrameLayout
+# ROLE  : custom FrameLayout
+# SIG   : extends android.widget.FrameLayout; implements com.mplus.lib.x5.z, com.mplus.lib.y5.b, com.mplus.lib.y5.e, com.mplus.lib.y5.q, com.mplus.lib.y5.k
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/z;

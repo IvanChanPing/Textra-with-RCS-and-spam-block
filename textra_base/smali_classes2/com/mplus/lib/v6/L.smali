@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/v6/L;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.L
+# ROLE  : Runnable
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

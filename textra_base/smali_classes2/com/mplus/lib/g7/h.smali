@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/g7/h;
 .super Lcom/mplus/lib/x7/m;
+# ANNOTATION
+# CLASS : com.mplus.lib.g7.h
+# ROLE  : group-messaging helpers
+# SIG   : extends com.mplus.lib.x7.m
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

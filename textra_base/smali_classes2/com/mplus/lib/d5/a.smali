@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/d5/a;
 .super Lcom/mplus/lib/O4/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.d5.a
+# ROLE  : hints: "Txtr:sms"; "%s: sendMultipartTextMessage()"
+# SIG   : extends com.mplus.lib.O4.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

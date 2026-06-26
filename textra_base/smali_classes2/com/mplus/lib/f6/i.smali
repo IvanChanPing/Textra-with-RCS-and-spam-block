@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f6/i;
 .super Lcom/mplus/lib/y1/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.f6.i
+# ROLE  : formatting / display
+# SIG   : extends com.mplus.lib.y1.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

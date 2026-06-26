@@ -1,5 +1,11 @@
 .class public abstract synthetic Lcom/mplus/lib/j9/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j9.c
+# ROLE  : obfuscated class in package j9
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

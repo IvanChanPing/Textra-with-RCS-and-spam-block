@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/f3/X;
 .super Ljava/util/AbstractList;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.X
+# ROLE  : file / media helpers
+# SIG   : extends java.util.AbstractList; implements com.google.android.gms.internal.play_billing.zzho
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/play_billing/zzho;

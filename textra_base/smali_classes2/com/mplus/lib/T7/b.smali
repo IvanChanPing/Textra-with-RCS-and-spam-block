@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/T7/b;
 .super Lcom/smaato/sdk/core/csm/Network;
+# ANNOTATION
+# CLASS : com.mplus.lib.T7.b
+# ROLE  : methods: getAdUnitId, getClassName, getClickUrl, getCustomData
+# SIG   : extends com.smaato.sdk.core.csm.Network
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

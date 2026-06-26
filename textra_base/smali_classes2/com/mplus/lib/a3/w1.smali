@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/w1;
 .super Lcom/google/android/gms/internal/mlkit_entity_extraction/zzarr;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.w1
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants); hints: "Internal logging error before configuration"
+# SIG   : extends com.google.android.gms.internal.mlkit_entity_extraction.zzarr
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

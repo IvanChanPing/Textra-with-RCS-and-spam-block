@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/L6/e;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.L6.e
+# ROLE  : methods: onTouch
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.z7.K, android.view.View$OnTouchListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/z7/K;

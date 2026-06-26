@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E6/k;
 .super Landroid/util/LruCache;
+# ANNOTATION
+# CLASS : com.mplus.lib.E6.k
+# ROLE  : methods: create
+# SIG   : extends android.util.LruCache
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

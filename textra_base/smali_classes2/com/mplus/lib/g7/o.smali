@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/g7/o;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.g7.o
+# ROLE  : group-messaging helpers
+# SIG   : extends java.lang.Object; implements java.util.function.Supplier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Supplier;

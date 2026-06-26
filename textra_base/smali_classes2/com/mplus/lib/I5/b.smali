@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/I5/b;
 .super Lcom/mplus/lib/ui/common/base/BaseListView;
+# ANNOTATION
+# CLASS : com.mplus.lib.I5.b
+# ROLE  : methods: getLastView, getLayoutSize, getMeasuredSize, getPaddingHorizontal
+# SIG   : extends com.mplus.lib.ui.common.base.BaseListView; implements android.widget.AbsListView$OnScrollListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/AbsListView$OnScrollListener;

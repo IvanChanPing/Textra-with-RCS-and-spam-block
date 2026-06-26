@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f8/a;
 .super Lcom/smaato/sdk/core/kpi/KpiData;
+# ANNOTATION
+# CLASS : com.mplus.lib.f8.a
+# ROLE  : methods: getRollingFillRatePerAdSpace, getSessionDepthPerAdSpace, getTotalAdRequests, getTotalFillRate
+# SIG   : extends com.smaato.sdk.core.kpi.KpiData
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

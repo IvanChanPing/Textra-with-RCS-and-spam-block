@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/backup/TextraBackupAgent;
 .super Landroid/app/backup/BackupAgent;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.backup.TextraBackupAgent
+# ROLE  : Android Service — background SMS/notification service; hints: "notification-channels.json"; "shared_prefs"
+# SIG   : extends android.app.backup.BackupAgent
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

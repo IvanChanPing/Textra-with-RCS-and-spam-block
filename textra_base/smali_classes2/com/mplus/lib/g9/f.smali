@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/g9/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.g9.f
+# ROLE  : GIF / media helpers
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.Function
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/Function;

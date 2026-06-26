@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/l;
 .super Lcom/google/android/gms/internal/mlkit_entity_extraction/zzafa;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.l
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants); hints: "Null extensionRegistryLite"
+# SIG   : extends com.google.android.gms.internal.mlkit_entity_extraction.zzafa
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

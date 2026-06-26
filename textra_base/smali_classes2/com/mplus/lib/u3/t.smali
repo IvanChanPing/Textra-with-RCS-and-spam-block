@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/u3/t;
 .super Lcom/mplus/lib/a3/V0;
+# ANNOTATION
+# CLASS : com.mplus.lib.u3.t
+# ROLE  : UI utilities
+# SIG   : extends com.mplus.lib.a3.V0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

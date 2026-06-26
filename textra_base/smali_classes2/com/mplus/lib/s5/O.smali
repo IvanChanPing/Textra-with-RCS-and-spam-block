@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/O;
 .super Landroid/graphics/drawable/DrawableWrapper;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.O
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.graphics.drawable.DrawableWrapper
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

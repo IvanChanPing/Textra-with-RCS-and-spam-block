@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/f7/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f7.d
+# ROLE  : methods: onChanged
+# SIG   : extends java.lang.Object; implements androidx.lifecycle.Observer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;

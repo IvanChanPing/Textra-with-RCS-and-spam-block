@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E3/F;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.F
+# ROLE  : event / listener subsystem; hints: ", alternateContactModelProvider="
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

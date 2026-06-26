@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Q5/g;
 .super Lcom/mplus/lib/z7/e;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q5.g
+# ROLE  : attach-panel ('+' button): camera/gallery/GIF/audio/schedule tabs
+# SIG   : extends com.mplus.lib.z7.e
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

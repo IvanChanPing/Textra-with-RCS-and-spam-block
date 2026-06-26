@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/settings/sections/notificationstyle/ChooseVibratePatternActivity;
 .super Lcom/mplus/lib/x7/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.settings.sections.notificationstyle.ChooseVibratePatternActivity
+# ROLE  : OnClickListener; hints: "contacts"; "contacts"
+# SIG   : extends com.mplus.lib.x7.a; implements com.mplus.lib.x7.l, android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x7/l;

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseTextureView;
 .super Landroid/view/TextureView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseTextureView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends android.view.TextureView; implements com.mplus.lib.x5.y
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

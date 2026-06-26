@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/y5/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.y5.c
+# ROLE  : yet-unclassified utility (y5)
+# SIG   : extends java.lang.Object; implements android.animation.ValueAnimator$AnimatorUpdateListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;

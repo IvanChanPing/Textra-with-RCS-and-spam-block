@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/w2;
 .super Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcq;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.w2
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants); hints: "GetFileGroupRequest{groupName="
+# SIG   : extends com.google.android.gms.internal.mlkit_entity_extraction.zzcq
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

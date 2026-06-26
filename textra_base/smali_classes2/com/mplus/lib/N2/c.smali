@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/N2/c;
 .super Lcom/google/android/gms/common/internal/service/zaa;
+# ANNOTATION
+# CLASS : com.mplus.lib.N2.c
+# ROLE  : obfuscated class in package N2
+# SIG   : extends com.google.android.gms.common.internal.service.zaa
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

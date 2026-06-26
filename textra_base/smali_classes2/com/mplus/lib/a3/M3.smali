@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/a3/M3;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.M3
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants); hints: "Protocol message had invalid UTF-8."
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

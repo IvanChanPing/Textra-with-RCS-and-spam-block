@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/J6/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J6.i
+# ROLE  : yet-unclassified (J6)
+# SIG   : extends java.lang.Object; implements android.animation.ValueAnimator$AnimatorUpdateListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;

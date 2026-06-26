@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseRecyclerView;
 .super Landroidx/recyclerview/widget/RecyclerView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseRecyclerView
+# ROLE  : custom RecyclerView
+# SIG   : extends androidx.recyclerview.widget.RecyclerView; implements com.mplus.lib.x5.z, com.mplus.lib.y5.o, com.mplus.lib.y5.e, com.mplus.lib.y5.k
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/z;

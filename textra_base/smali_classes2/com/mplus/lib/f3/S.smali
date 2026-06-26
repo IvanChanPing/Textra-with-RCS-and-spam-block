@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/S;
 .super Ljava/util/concurrent/TimeoutException;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.S
+# ROLE  : file / media helpers
+# SIG   : extends java.util.concurrent.TimeoutException
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/F;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.F
+# ROLE  : settings / preferences subsystem; hints: "itemSelectionState"
+# SIG   : extends com.mplus.lib.G5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

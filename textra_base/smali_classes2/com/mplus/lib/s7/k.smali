@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/s7/k;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.s7.k
+# ROLE  : SMS sender helpers; hints: "rdsmsilAaees"
+# SIG   : extends com.mplus.lib.D5.b; implements com.mplus.lib.D5.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/D5/c;

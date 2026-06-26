@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/e7/a;
 .super Lcom/mplus/lib/g7/d;
+# ANNOTATION
+# CLASS : com.mplus.lib.e7.a
+# ROLE  : methods: getView
+# SIG   : extends com.mplus.lib.g7.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

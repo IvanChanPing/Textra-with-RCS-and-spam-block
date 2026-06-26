@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/B6/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.f
+# ROLE  : broadcast / event bus helpers
+# SIG   : extends java.lang.Object; implements java.util.function.Predicate
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Predicate;

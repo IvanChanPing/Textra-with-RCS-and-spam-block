@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/N3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.N3.a
+# ROLE  : methods: onTouch
+# SIG   : extends java.lang.Object; implements android.view.View$OnTouchListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;

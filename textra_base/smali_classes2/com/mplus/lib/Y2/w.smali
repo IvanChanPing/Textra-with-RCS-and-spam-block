@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/w;
 .super Lcom/google/android/gms/internal/location/zzl;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.w
+# ROLE  : yet-unclassified utility
+# SIG   : extends com.google.android.gms.internal.location.zzl
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

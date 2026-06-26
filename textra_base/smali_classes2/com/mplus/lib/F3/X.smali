@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/X;
 .super Lcom/mplus/lib/F3/D;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.X
+# ROLE  : large utility / model package; hints: "Null messageDefaultInstance"; "Null containingTypeDefaultInstance"
+# SIG   : extends com.mplus.lib.F3.D
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

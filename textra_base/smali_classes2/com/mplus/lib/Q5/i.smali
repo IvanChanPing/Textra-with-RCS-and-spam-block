@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/Q5/i;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q5.i
+# ROLE  : attach-panel ('+' button): camera/gallery/GIF/audio/schedule tabs
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

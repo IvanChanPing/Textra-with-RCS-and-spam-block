@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/g7/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.g7.c
+# ROLE  : group-messaging helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.m7.c, com.mplus.lib.s5.h
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/m7/c;

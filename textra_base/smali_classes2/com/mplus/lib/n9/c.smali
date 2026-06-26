@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/n9/c;
 .super Lcom/smaato/sdk/video/vast/widget/element/VastElementPresenterImpl;
+# ANNOTATION
+# CLASS : com.mplus.lib.n9.c
+# ROLE  : methods: onClicked, onContentLoaded, onContentStartedToLoad
+# SIG   : extends com.smaato.sdk.video.vast.widget.element.VastElementPresenterImpl
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

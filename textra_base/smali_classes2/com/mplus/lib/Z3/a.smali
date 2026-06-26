@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/Z3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z3.a
+# ROLE  : obfuscated class in package Z3
+# SIG   : extends java.lang.Object; implements java.util.function.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Consumer;

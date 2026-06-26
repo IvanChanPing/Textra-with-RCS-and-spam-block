@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/h6/c;
 .super Landroid/os/CountDownTimer;
+# ANNOTATION
+# CLASS : com.mplus.lib.h6.c
+# ROLE  : header / toolbar UI
+# SIG   : extends android.os.CountDownTimer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

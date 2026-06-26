@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/k3/c;
 .super Lcom/mplus/lib/k3/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.k3.c
+# ROLE  : hints: "Null pendingIntent"; "ReviewInfo{pendingIntent="
+# SIG   : extends com.mplus.lib.k3.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

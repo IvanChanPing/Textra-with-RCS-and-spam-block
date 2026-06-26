@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/x7/a;
 .super Lcom/mplus/lib/x7/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.x7.a
+# ROLE  : conversation action-menu overlay (contact info, Meet FAB, LocShare; extends x7/g, implements x7/l)
+# SIG   : extends com.mplus.lib.x7.c; implements com.mplus.lib.y7.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y7/d;

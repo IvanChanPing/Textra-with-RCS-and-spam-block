@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/o;
 .super Lcom/google/android/gms/internal/play_billing/zzde;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.o
+# ROLE  : Serializable
+# SIG   : extends com.google.android.gms.internal.play_billing.zzde; implements java.io.Serializable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/Serializable;

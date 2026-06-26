@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/A6/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.A6.a
+# ROLE  : obfuscated class in package A6
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

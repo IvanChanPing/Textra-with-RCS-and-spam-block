@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/Z5/f;
 .super Ljava/lang/Thread;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z5.f
+# ROLE  : Thread subclass
+# SIG   : extends java.lang.Thread
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

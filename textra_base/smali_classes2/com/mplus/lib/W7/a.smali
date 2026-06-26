@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/W7/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.W7.a
+# ROLE  : methods: get
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.Supplier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/Supplier;

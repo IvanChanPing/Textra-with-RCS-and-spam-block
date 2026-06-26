@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/c9/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.c9.a
+# ROLE  : conversation query helpers; hints: "Parameter ad cannot be null for AdContainer::new"; "Parameter model cannot be null for AdContainer::new"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

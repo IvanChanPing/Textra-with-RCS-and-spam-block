@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i3.a
+# ROLE  : input / compose helpers
+# SIG   : extends java.lang.Object; implements com.google.android.gms.tasks.Continuation
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/Continuation;

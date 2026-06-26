@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/i9/v;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i9.v
+# ROLE  : internal / integration helpers
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.vast.vastplayer.VideoPlayer$OnVolumeChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/vast/vastplayer/VideoPlayer$OnVolumeChangeListener;

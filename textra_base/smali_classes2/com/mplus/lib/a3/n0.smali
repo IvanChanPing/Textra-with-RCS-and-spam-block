@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/n0;
 .super Lcom/mplus/lib/a3/f0;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.n0
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends com.mplus.lib.a3.f0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

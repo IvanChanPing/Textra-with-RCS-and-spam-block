@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/j;
 .super Lcom/mplus/lib/z7/p;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.j
+# ROLE  : conversation list / thread list UI
+# SIG   : extends com.mplus.lib.z7.p
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

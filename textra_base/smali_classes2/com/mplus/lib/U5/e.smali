@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/U5/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.U5.e
+# ROLE  : methods: onScale, onScaleBegin, onScaleEnd
+# SIG   : extends java.lang.Object; implements android.view.ScaleGestureDetector$OnScaleGestureListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;

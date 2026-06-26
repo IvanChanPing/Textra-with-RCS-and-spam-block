@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/N;
 .super Lcom/google/android/gms/internal/play_billing/zzdy;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.N
+# ROLE  : Runnable
+# SIG   : extends com.google.android.gms.internal.play_billing.zzdy; implements java.lang.Runnable, com.mplus.lib.f3.B
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

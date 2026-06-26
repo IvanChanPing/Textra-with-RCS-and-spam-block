@@ -8,6 +8,12 @@
         "Lcom/mplus/lib/y7/b;"
     }
 .end annotation
+# ANNOTATION
+# CLASS : com.mplus.lib.j5.s
+# ROLE  : job scheduler helpers
+# SIG   : extends com.mplus.lib.y7.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

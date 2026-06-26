@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/G5/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.G5.a
+# ROLE  : obfuscated class in package G5
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

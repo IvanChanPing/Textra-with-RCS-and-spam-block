@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M6/a;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.M6.a
+# ROLE  : obfuscated class in package M6
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.s5.u
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s5/u;

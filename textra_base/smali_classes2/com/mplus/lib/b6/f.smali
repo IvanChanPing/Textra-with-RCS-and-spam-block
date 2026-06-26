@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/b6/f;
 .super Lcom/mplus/lib/Z5/f;
+# ANNOTATION
+# CLASS : com.mplus.lib.b6.f
+# ROLE  : hints: "%s: run() encountered error%s"
+# SIG   : extends com.mplus.lib.Z5.f; implements com.mplus.lib.Z5.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/Z5/d;

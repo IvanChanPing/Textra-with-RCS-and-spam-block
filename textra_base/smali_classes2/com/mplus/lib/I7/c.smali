@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/I7/c;
 .super Lcom/mplus/lib/H7/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.I7.c
+# ROLE  : hints: "content://com.huawei.android.launcher.settings/badge/"
+# SIG   : extends com.mplus.lib.H7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

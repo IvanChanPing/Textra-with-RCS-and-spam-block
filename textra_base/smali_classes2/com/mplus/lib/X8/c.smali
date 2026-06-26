@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/X8/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.X8.c
+# ROLE  : methods: onKey
+# SIG   : extends java.lang.Object; implements android.content.DialogInterface$OnKeyListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnKeyListener;

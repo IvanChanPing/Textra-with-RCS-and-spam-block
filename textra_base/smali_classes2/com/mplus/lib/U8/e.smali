@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/U8/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.U8.e
+# ROLE  : methods: onStateChanged
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.StateMachine$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/StateMachine$Listener;

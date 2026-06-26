@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/L4/m;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.L4.m
+# ROLE  : list / adapter; hints: "attachment"; "Content-Id may not be null or empty."
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

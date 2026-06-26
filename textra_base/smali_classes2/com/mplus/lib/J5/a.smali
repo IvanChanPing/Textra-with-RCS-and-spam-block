@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/J5/a;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.J5.a
+# ROLE  : methods: onViewStateRestored
+# SIG   : extends com.mplus.lib.D5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

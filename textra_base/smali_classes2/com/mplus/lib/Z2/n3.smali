@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Z2/n3;
 .super Lcom/google/mlkit/common/sdkinternal/LazyInstanceMap;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z2.n3
+# ROLE  : utility functions — string manipulation, formatting helpers, shared static methods
+# SIG   : extends com.google.mlkit.common.sdkinternal.LazyInstanceMap
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

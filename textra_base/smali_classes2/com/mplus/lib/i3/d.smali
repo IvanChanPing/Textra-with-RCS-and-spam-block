@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i3/d;
 .super Lcom/google/android/gms/tasks/CancellationToken;
+# ANNOTATION
+# CLASS : com.mplus.lib.i3.d
+# ROLE  : input / compose helpers
+# SIG   : extends com.google.android.gms.tasks.CancellationToken
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

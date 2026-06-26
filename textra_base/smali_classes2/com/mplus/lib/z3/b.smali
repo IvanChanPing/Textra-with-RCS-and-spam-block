@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/z3/b;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.z3.b
+# ROLE  : obfuscated class in package z3
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

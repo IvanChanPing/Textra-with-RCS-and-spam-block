@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/l3/j;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.l3.j
+# ROLE  : obfuscated class in package l3
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

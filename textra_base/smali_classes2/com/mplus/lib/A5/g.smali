@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/A5/g;
 .super Lcom/mplus/lib/x5/q;
+# ANNOTATION
+# CLASS : com.mplus.lib.A5.g
+# ROLE  : methods: getCount, getItemPosition
+# SIG   : extends com.mplus.lib.x5.q
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

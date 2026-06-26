@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/S3;
 .super Ljavax/net/ssl/HttpsURLConnection;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.S3
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants); hints: "hostnameVerifier == null"; "sslSocketFactory == null"
+# SIG   : extends javax.net.ssl.HttpsURLConnection
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

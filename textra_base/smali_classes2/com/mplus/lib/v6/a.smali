@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.a
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host)
+# SIG   : extends java.lang.Object; implements com.mplus.lib.y5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/b;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X4/k;
 .super Lcom/mplus/lib/x5/d;
+# ANNOTATION
+# CLASS : com.mplus.lib.X4.k
+# ROLE  : XML config helpers; hints: "Txtr:sms"; "resE%n%o=(ssgr:rs)osd%smSp "
+# SIG   : extends com.mplus.lib.x5.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

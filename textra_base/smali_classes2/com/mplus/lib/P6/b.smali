@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P6/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.P6.b
+# ROLE  : Parcelable
+# SIG   : extends java.lang.Object; implements android.os.Parcelable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/Parcelable;

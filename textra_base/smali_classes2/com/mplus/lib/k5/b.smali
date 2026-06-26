@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/k5/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.k5.b
+# ROLE  : key / crypto / auth helpers
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

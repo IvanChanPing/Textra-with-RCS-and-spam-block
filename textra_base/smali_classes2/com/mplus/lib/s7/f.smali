@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s7/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s7.f
+# ROLE  : SMS sender helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.x1.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x1/b;

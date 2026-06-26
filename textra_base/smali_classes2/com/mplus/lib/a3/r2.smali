@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/a3/r2;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.r2
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/J4/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J4.b
+# ROLE  : Google ML Kit / entity extraction gate (J4.d.M flags when model absent)
+# SIG   : extends java.lang.Object; implements com.mplus.lib.F4.n
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/F4/n;

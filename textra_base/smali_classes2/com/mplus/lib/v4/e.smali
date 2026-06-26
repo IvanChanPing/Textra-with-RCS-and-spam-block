@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v4/e;
 .super Lcom/mplus/lib/f5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.v4.e
+# ROLE  : Runnable
+# SIG   : extends com.mplus.lib.f5.b; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

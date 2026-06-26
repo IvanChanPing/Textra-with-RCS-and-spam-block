@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i9/n;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i9.n
+# ROLE  : internal / integration helpers; hints: "onIconError"
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.vast.widget.element.VastElementPresenter$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/vast/widget/element/VastElementPresenter$Listener;

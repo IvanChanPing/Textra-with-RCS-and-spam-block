@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/sms/transaction/SmsMgr$Worker;
 .super Landroidx/work/Worker;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.sms.transaction.SmsMgr$Worker
+# ROLE  : WorkManager Worker; hints: "Txtr:sms"
+# SIG   : extends androidx.work.Worker
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

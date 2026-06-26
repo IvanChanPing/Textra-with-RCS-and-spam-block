@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/y5/x;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.y5.x
+# ROLE  : yet-unclassified utility (y5)
+# SIG   : extends java.lang.Object; implements com.mplus.lib.y5.v
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/v;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S5/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S5.b
+# ROLE  : methods: onAnimationUpdate
+# SIG   : extends java.lang.Object; implements android.animation.ValueAnimator$AnimatorUpdateListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;

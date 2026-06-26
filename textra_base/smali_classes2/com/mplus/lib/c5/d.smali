@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/c5/d;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.c5.d
+# ROLE  : SMS/message delivery — SMS_DELIVER broadcast handler, inbox write (c5/d), MMS decode, delivery-to-store pathway; hints: "maybeSendNextQueued"; "intent"
+# SIG   : extends com.mplus.lib.F1.a; implements com.mplus.lib.k5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/k5/b;

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/O3/o0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.O3.o0
+# ROLE  : DialogInterface.OnClickListener
+# SIG   : extends java.lang.Object; implements android.content.DialogInterface$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;

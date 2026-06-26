@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/k7/a;
 .super Lcom/mplus/lib/x7/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.k7.a
+# ROLE  : obfuscated class in package k7
+# SIG   : extends com.mplus.lib.x7.g; implements com.mplus.lib.x7.l
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x7/l;

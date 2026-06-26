@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/s3/x;
 .super Ljava/util/concurrent/AbstractExecutorService;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.x
+# ROLE  : SMS send helpers
+# SIG   : extends java.util.concurrent.AbstractExecutorService; implements com.mplus.lib.s3.w
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s3/w;

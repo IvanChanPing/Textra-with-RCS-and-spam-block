@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s3/A;
 .super Lcom/mplus/lib/s3/x;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.A
+# ROLE  : SMS send helpers
+# SIG   : extends com.mplus.lib.s3.x; implements java.util.concurrent.ScheduledExecutorService
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/ScheduledExecutorService;

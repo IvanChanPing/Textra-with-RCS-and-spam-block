@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v4/m;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.v4.m
+# ROLE  : view model; hints: "[contactId="
+# SIG   : extends java.lang.Object; implements com.mplus.lib.r4.S
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/r4/S;

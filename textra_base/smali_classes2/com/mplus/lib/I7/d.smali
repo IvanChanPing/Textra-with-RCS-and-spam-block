@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/I7/d;
 .super Lcom/mplus/lib/H7/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.I7.d
+# ROLE  : obfuscated class in package I7
+# SIG   : extends com.mplus.lib.H7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

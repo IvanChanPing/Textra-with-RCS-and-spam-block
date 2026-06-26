@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/X8/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.X8.a
+# ROLE  : methods: onCloseClick
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.richmedia.widget.ClosableView$OnCloseClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/richmedia/widget/ClosableView$OnCloseClickListener;

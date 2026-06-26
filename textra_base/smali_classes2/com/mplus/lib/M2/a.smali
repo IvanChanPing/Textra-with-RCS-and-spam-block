@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M2/a;
 .super Lcom/google/android/gms/common/internal/zag;
+# ANNOTATION
+# CLASS : com.mplus.lib.M2.a
+# ROLE  : obfuscated class in package M2
+# SIG   : extends com.google.android.gms.common.internal.zag
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

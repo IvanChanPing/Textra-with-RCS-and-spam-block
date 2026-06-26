@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s3/t;
 .super Ljava/util/concurrent/locks/AbstractOwnableSynchronizer;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.t
+# ROLE  : Runnable
+# SIG   : extends java.util.concurrent.locks.AbstractOwnableSynchronizer; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

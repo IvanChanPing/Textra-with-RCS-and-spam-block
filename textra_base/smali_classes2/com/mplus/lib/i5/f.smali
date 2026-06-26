@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/i5/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i5.f
+# ROLE  : intent / routing helpers; hints: "phone"
+# SIG   : extends java.lang.Object; implements java.util.function.Predicate
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Predicate;

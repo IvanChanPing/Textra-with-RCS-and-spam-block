@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/h4;
 .super Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhj;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.h4
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants); hints: "Null customDownloaderMetadata"; "Null downloadConstraints"
+# SIG   : extends com.google.android.gms.internal.mlkit_entity_extraction.zzhj
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

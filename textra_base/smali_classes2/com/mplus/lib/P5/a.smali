@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P5/a;
 .super Landroid/database/AbstractCursor;
+# ANNOTATION
+# CLASS : com.mplus.lib.P5.a
+# ROLE  : methods: getColumnNames, getCount, getDouble, getFloat
+# SIG   : extends android.database.AbstractCursor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

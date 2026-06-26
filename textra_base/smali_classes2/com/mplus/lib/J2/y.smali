@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/J2/y;
 .super Lcom/google/android/gms/common/api/internal/zac;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.y
+# ROLE  : JSON / serialization helpers
+# SIG   : extends com.google.android.gms.common.api.internal.zac
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

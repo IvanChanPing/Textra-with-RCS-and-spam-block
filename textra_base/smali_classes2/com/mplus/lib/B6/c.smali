@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/B6/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.c
+# ROLE  : broadcast / event bus helpers; hints: "newMessageMode"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.x5.A
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/A;

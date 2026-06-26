@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/m0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.m0
+# ROLE  : file / media helpers
+# SIG   : extends java.lang.Object; implements java.util.Iterator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Iterator;

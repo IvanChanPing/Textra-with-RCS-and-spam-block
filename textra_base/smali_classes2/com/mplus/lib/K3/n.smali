@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/K3/n;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.K3.n
+# ROLE  : keyboard / input helpers
+# SIG   : extends java.lang.Object; implements java.lang.Iterable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Iterable;

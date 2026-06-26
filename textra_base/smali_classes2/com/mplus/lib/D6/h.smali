@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/D6/h;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.D6.h
+# ROLE  : hints: "smsto:"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.t5.c, com.smaato.sdk.core.util.fi.Predicate, androidx.constraintlayout.core.state.Interpolator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/t5/c;

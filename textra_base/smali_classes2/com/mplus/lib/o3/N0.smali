@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/o3/N0;
 .super Lcom/mplus/lib/o3/M0;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.N0
+# ROLE  : outgoing / send pipeline
+# SIG   : extends com.mplus.lib.o3.M0; implements java.util.SortedSet
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/SortedSet;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/o3/f;
 .super Lcom/mplus/lib/o3/i;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.f
+# ROLE  : outgoing / send pipeline
+# SIG   : extends com.mplus.lib.o3.i; implements java.util.NavigableMap
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/NavigableMap;

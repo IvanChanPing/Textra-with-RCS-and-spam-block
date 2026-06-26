@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/TrampolineActivity;
 .super Landroid/app/Activity;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.TrampolineActivity
+# ROLE  : Activity (UI screen)
+# SIG   : extends android.app.Activity
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

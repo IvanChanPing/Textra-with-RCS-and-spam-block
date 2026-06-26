@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/I1;
 .super Lcom/google/android/gms/internal/mlkit_entity_extraction/zzatp;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.I1
+# ROLE  : Serializable
+# SIG   : extends com.google.android.gms.internal.mlkit_entity_extraction.zzatp; implements java.io.Serializable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/Serializable;

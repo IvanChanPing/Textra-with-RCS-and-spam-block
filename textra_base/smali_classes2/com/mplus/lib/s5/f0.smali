@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/f0;
 .super Landroid/database/DataSetObserver;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.f0
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.database.DataSetObserver; implements android.widget.SectionIndexer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/SectionIndexer;

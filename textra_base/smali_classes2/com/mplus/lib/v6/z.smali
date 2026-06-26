@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/v6/z;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.z
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host); hints: "isKeepConvo"; "isBotConvo"
+# SIG   : extends com.mplus.lib.D5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

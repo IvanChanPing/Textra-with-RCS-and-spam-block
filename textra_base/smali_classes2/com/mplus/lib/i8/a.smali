@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i8/a;
 .super Lcom/smaato/sdk/core/locationaware/TxtRecord;
+# ANNOTATION
+# CLASS : com.mplus.lib.i8.a
+# ROLE  : hints: "Null data"
+# SIG   : extends com.smaato.sdk.core.locationaware.TxtRecord
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

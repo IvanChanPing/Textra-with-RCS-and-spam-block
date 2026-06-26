@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S7/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S7.d
+# ROLE  : methods: onGeneralError, onHttpError, onPageNavigationStackChanged, onProgressChanged
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.browser.BrowserModel$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/browser/BrowserModel$Callback;

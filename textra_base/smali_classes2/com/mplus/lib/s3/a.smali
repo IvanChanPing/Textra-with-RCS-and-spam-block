@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.a
+# ROLE  : SMS send helpers
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

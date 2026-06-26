@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S6/b;
 .super Lcom/mplus/lib/f6/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.S6.b
+# ROLE  : subscription / SIM helpers
+# SIG   : extends com.mplus.lib.f6.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

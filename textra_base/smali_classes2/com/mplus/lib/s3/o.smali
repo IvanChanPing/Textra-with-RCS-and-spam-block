@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/s3/o;
 .super Lcom/mplus/lib/t3/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.o
+# ROLE  : SMS send helpers; hints: "RuntimeException while executing runnable "; "Executor was null."
+# SIG   : extends com.mplus.lib.t3.a; implements com.mplus.lib.s3.v
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s3/v;

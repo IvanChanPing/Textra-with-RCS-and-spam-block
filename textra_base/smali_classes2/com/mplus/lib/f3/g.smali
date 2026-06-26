@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/f3/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.g
+# ROLE  : Serializable
+# SIG   : extends java.lang.Object; implements java.lang.Comparable, java.io.Serializable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Comparable;

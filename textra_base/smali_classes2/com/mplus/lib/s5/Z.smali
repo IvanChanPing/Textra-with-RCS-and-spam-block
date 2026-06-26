@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/Z;
 .super Lcom/mplus/lib/x5/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.Z
+# ROLE  : settings / preferences subsystem
+# SIG   : extends com.mplus.lib.x5.g; implements android.animation.ValueAnimator$AnimatorUpdateListener, android.animation.Animator$AnimatorListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;

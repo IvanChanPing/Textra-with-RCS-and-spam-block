@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/b3/a;
 .super Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbl;
+# ANNOTATION
+# CLASS : com.mplus.lib.b3.a
+# ROLE  : obfuscated class in package b3
+# SIG   : extends com.google.android.gms.internal.mlkit_language_id_bundled.zbl
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

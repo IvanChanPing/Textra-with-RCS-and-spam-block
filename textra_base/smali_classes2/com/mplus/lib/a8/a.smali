@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a8/a;
 .super Lcom/smaato/sdk/core/gdpr/CmpV1Data;
+# ANNOTATION
+# CLASS : com.mplus.lib.a8.a
+# ROLE  : methods: getConsentString, getPurposesString, getSubjectToGdpr, getVendorsString
+# SIG   : extends com.smaato.sdk.core.gdpr.CmpV1Data
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

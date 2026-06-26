@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Z2/j3;
 .super Lcom/google/android/gms/internal/mlkit_common/zzsa;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z2.j3
+# ROLE  : utility functions — string manipulation, formatting helpers, shared static methods
+# SIG   : extends com.google.android.gms.internal.mlkit_common.zzsa
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/j5/t;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j5.t
+# ROLE  : job scheduler helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.T4.u, androidx.media3.exoplayer.scheduler.RequirementsWatcher$Listener, androidx.media3.datasource.cache.CacheWriter$ProgressListener, androidx.media3.exoplayer.source.ProgressiveMediaExtractor$Factory, com.tappx.a.i3, androidx.media3.exoplayer.trackselection.DefaultTrackSelector$TrackInfo$Factory, androidx.media3.exoplayer.trackselection.TrackSelectionUtil$AdaptiveTrackSelectionFactory, com.mplus.lib.s6.a, androidx.media3.exoplayer.video.VideoFrameReleaseHelper$DisplayHelper$Listener, com.mplus.lib.y5.g, com.smaato.sdk.core.network.ConnectionStatusWatcher$Callback, com.mplus.lib.s5.Y, com.mplus.lib.s5.l0, com.mplus.lib.s6.b, com.mplus.lib.C5.c, com.mplus.lib.t5.c, androidx.core.view.OnApplyWindowInsetsListener, androidx.media3.extractor.BinarySearchSeeker$SeekTimestampConverter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/T4/u;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R4/e;
 .super Lcom/mplus/lib/x5/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.R4.e
+# ROLE  : recipient / contact resolution
+# SIG   : extends com.mplus.lib.x5.g; implements android.graphics.drawable.Drawable$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/graphics/drawable/Drawable$Callback;

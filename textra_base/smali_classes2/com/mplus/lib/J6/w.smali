@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J6/w;
 .super Lcom/mplus/lib/x5/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.J6.w
+# ROLE  : yet-unclassified (J6)
+# SIG   : extends com.mplus.lib.x5.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

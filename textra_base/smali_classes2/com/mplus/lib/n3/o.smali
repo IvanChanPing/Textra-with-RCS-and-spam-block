@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/n3/o;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.n3.o
+# ROLE  : methods: get
+# SIG   : extends java.lang.Object; implements com.mplus.lib.n3.m
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/n3/m;

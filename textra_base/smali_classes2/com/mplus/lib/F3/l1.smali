@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/l1;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.l1
+# ROLE  : large utility / model package
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

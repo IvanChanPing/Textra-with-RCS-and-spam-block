@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X3/a;
 .super Landroid/webkit/WebChromeClient;
+# ANNOTATION
+# CLASS : com.mplus.lib.X3.a
+# ROLE  : methods: getDefaultVideoPoster, onJsAlert, onJsBeforeUnload, onJsConfirm
+# SIG   : extends android.webkit.WebChromeClient
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

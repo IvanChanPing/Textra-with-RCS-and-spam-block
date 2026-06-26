@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/u4/a;
 .super Lcom/mplus/lib/r4/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.u4.a
+# ROLE  : hints: "error"; "message_count"
+# SIG   : extends com.mplus.lib.r4.g; implements com.mplus.lib.u4.c, com.mplus.lib.u4.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/u4/c;

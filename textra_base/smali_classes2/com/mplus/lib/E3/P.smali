@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/E3/P;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.P
+# ROLE  : event / listener subsystem
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/M;
 .super Lcom/google/android/gms/internal/play_billing/zzeh;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.M
+# ROLE  : file / media helpers
+# SIG   : extends com.google.android.gms.internal.play_billing.zzeh; implements java.util.concurrent.ScheduledFuture
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/ScheduledFuture;

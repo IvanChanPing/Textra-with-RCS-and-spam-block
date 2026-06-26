@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/K;
 .super Lcom/google/android/gms/internal/location/zzdv;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.K
+# ROLE  : yet-unclassified utility
+# SIG   : extends com.google.android.gms.internal.location.zzdv
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

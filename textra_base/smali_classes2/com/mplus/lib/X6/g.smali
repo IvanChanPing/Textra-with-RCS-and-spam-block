@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X6/g;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.X6.g
+# ROLE  : OnClickListener; hints: "rcsaSh"
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.t5.f, android.view.View$OnClickListener, android.text.TextWatcher, androidx.loader.app.LoaderManager$LoaderCallbacks, com.mplus.lib.s5.h0, com.mplus.lib.q6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/t5/f;

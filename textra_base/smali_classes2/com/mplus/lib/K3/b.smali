@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K3/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.K3.b
+# ROLE  : keyboard / input helpers
+# SIG   : extends java.lang.Object; implements java.util.Iterator, java.util.PrimitiveIterator$OfInt
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Iterator;

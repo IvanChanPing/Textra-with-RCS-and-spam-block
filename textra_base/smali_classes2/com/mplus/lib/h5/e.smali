@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/h5/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.h5.e
+# ROLE  : tapback parser — regex-compiled pattern matching (N), tapback result model (a3/K1), pattern registration hook (M), locale templates
+# SIG   : extends java.lang.Object; implements java.util.function.Predicate
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Predicate;

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/s5/v;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.v
+# ROLE  : settings / preferences subsystem
+# SIG   : extends com.mplus.lib.D5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

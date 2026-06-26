@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/G4/n;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.G4.n
+# ROLE  : methods: get
+# SIG   : extends java.lang.Object; implements java.util.function.Supplier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Supplier;

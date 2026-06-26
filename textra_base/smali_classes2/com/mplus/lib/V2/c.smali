@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/V2/c;
 .super Lcom/google/android/gms/internal/appset/zze;
+# ANNOTATION
+# CLASS : com.mplus.lib.V2.c
+# ROLE  : obfuscated class in package V2
+# SIG   : extends com.google.android.gms.internal.appset.zze
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

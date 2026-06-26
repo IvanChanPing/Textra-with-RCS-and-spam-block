@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/i9/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i9.i
+# ROLE  : Runnable; hints: "simulatedMessage"; "phoneNumber"
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

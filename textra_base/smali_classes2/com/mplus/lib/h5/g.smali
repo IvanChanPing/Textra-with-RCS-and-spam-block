@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/h5/g;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.h5.g
+# ROLE  : tapback parser — regex-compiled pattern matching (N), tapback result model (a3/K1), pattern registration hook (M), locale templates
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

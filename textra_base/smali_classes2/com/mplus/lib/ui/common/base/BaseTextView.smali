@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseTextView;
 .super Landroid/widget/TextView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseTextView
+# ROLE  : custom TextView
+# SIG   : extends android.widget.TextView; implements com.mplus.lib.x5.y, com.mplus.lib.y5.v, com.mplus.lib.y5.u
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

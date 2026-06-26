@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/ui/common/gif/GifTranscoder;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.gif.GifTranscoder
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

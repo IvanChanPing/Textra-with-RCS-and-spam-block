@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/d9/a;
 .super Lcom/smaato/sdk/video/vast/model/VideoAdViewProperties;
+# ANNOTATION
+# CLASS : com.mplus.lib.d9.a
+# ROLE  : debug / diagnostics
+# SIG   : extends com.smaato.sdk.video.vast.model.VideoAdViewProperties
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

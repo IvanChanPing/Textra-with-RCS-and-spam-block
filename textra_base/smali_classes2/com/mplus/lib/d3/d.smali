@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/d3/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.d3.d
+# ROLE  : data model / serialization; hints: "value == null"
+# SIG   : extends java.lang.Object; implements java.util.Map$Entry
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Map$Entry;

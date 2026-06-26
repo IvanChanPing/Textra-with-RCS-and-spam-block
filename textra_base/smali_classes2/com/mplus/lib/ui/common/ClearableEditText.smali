@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/ClearableEditText;
 .super Lcom/mplus/lib/ui/common/base/BaseEditText;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.ClearableEditText
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseEditText; implements android.view.View$OnTouchListener, android.text.TextWatcher
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;

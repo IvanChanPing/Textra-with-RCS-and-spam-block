@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S7/h;
 .super Lcom/smaato/sdk/core/browser/DoubleClickPreventionListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.S7.h
+# ROLE  : methods: processClick
+# SIG   : extends com.smaato.sdk.core.browser.DoubleClickPreventionListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

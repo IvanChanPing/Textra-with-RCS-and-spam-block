@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/x5/h;
 .super Landroidx/fragment/app/Fragment;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.h
+# ROLE  : Fragment (UI fragment)
+# SIG   : extends androidx.fragment.app.Fragment
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

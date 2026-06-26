@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/i5/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i5.a
+# ROLE  : intent / routing helpers; hints: "null"; "content://mms-sms/complete-conversations"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.C1.d, com.google.android.gms.tasks.OnCompleteListener, com.mplus.lib.L1.o, com.google.android.gms.internal.location.zzcs, com.google.android.gms.internal.mlkit_entity_extraction.zzaxc, com.mplus.lib.g6.f, com.tappx.a.d4, com.mplus.lib.o9.d, com.mplus.lib.pb.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/C1/d;

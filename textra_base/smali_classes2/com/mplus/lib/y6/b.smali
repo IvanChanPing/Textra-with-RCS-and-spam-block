@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/y6/b;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.y6.b
+# ROLE  : methods: onDismiss, onViewStateRestored
+# SIG   : extends com.mplus.lib.D5.b; implements com.mplus.lib.D5.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/D5/c;

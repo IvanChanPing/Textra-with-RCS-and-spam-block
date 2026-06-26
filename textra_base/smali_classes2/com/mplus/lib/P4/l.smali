@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/P4/l;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.P4.l
+# ROLE  : preferences / config
+# SIG   : extends java.lang.Object; implements java.util.function.Consumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Consumer;

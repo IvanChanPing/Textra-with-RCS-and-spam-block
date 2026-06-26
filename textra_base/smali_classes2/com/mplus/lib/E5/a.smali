@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E5/a;
 .super Landroid/widget/ArrayAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.E5.a
+# ROLE  : ArrayAdapter
+# SIG   : extends android.widget.ArrayAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F4/l;
 .super Ljava/util/HashMap;
+# ANNOTATION
+# CLASS : com.mplus.lib.F4.l
+# ROLE  : feature flags / capability detection
+# SIG   : extends java.util.HashMap
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

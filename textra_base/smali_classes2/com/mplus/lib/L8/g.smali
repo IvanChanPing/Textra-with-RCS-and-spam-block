@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/L8/g;
 .super Lcom/smaato/sdk/interstitial/InterstitialAd;
+# ANNOTATION
+# CLASS : com.mplus.lib.L8.g
+# ROLE  : methods: getAdSpaceId, getCreativeId, getSessionId, isAvailableForPresentation
+# SIG   : extends com.smaato.sdk.interstitial.InterstitialAd
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

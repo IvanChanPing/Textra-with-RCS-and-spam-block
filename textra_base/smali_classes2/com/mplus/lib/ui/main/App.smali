@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/main/App;
 .super Lbin/mt/signature/KillerApplication;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.main.App
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments; hints: "MMS Config:\n"; "phone"
+# SIG   : extends bin.mt.signature.KillerApplication
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

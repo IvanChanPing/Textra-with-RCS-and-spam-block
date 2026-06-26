@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/o3/i;
 .super Lcom/mplus/lib/a3/Y;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.i
+# ROLE  : outgoing / send pipeline
+# SIG   : extends com.mplus.lib.a3.Y; implements java.util.SortedMap
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/SortedMap;

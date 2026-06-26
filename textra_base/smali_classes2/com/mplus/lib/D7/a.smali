@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/D7/a;
 .super Ljava/io/InputStream;
+# ANNOTATION
+# CLASS : com.mplus.lib.D7.a
+# ROLE  : methods: reset
+# SIG   : extends java.io.InputStream
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/r4/a;
 .super Lcom/mplus/lib/f5/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.a
+# ROLE  : messaging engine — DB R/W (messages/conversations), tapback attach (G0), delivery scheduling (F0/f0/H0/X0), notification dispatch; hints: "media-body/#"; "convo-as-email/#"
+# SIG   : extends com.mplus.lib.f5.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

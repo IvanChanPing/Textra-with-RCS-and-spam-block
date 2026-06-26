@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/s2;
 .super Ljava/util/concurrent/atomic/AtomicReference;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.s2
+# ROLE  : Runnable
+# SIG   : extends java.util.concurrent.atomic.AtomicReference; implements java.util.concurrent.Executor, java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;

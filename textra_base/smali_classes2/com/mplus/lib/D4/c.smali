@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/D4/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.D4.c
+# ROLE  : database access object / cursor wrapper
+# SIG   : extends java.lang.Object; implements java.util.function.Function
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Function;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/b6/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.b6.d
+# ROLE  : methods: onScroll, onScrollStateChanged
+# SIG   : extends java.lang.Object; implements com.mplus.lib.I5.a, android.widget.AbsListView$OnScrollListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/I5/a;

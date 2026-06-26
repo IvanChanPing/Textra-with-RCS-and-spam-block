@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/j9/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j9.b
+# ROLE  : methods: onSeekComplete
+# SIG   : extends java.lang.Object; implements android.media.MediaPlayer$OnSeekCompleteListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/media/MediaPlayer$OnSeekCompleteListener;

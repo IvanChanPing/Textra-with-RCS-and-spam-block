@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F2/a;
 .super Ljava/lang/Thread;
+# ANNOTATION
+# CLASS : com.mplus.lib.F2.a
+# ROLE  : Thread subclass
+# SIG   : extends java.lang.Thread
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

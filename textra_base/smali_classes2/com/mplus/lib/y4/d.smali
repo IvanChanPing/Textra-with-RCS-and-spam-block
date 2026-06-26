@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/y4/d;
 .super Landroid/os/HandlerThread;
+# ANNOTATION
+# CLASS : com.mplus.lib.y4.d
+# ROLE  : methods: handleMessage
+# SIG   : extends android.os.HandlerThread; implements android.os.Handler$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/Handler$Callback;

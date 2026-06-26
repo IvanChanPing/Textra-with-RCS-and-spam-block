@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/S7/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S7.e
+# ROLE  : hints: "Parameter logger cannot be null for BrowserPresenter::new"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/s0;
 .super Landroid/webkit/WebChromeClient;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.s0
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.webkit.WebChromeClient
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/Q5/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q5.f
+# ROLE  : attach-panel ('+' button): camera/gallery/GIF/audio/schedule tabs
+# SIG   : extends java.lang.Object; implements androidx.lifecycle.Observer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;

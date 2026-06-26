@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/B;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.B
+# ROLE  : conversation list / thread list UI
+# SIG   : extends java.lang.Object; implements com.mplus.lib.x5.k
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/k;

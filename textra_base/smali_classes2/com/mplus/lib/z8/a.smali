@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z8/a;
 .super Ljava/io/InputStream;
+# ANNOTATION
+# CLASS : com.mplus.lib.z8.a
+# ROLE  : yet-unclassified (z8)
+# SIG   : extends java.io.InputStream
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

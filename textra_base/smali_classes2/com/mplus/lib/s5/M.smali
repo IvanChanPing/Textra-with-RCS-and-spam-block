@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/M;
 .super Landroid/view/ViewOutlineProvider;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.M
+# ROLE  : custom View
+# SIG   : extends android.view.ViewOutlineProvider
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

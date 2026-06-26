@@ -11,6 +11,12 @@
         ">;>;"
     }
 .end annotation
+# ANNOTATION
+# CLASS : com.mplus.lib.service.backup.marshall.ChannelSerializer$2
+# ROLE  : Android Service — background SMS/notification service
+# SIG   : extends com.google.gson.reflect.TypeToken
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

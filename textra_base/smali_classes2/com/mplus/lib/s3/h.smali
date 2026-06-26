@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/s3/h;
 .super Lcom/mplus/lib/s3/o;
+# ANNOTATION
+# CLASS : com.mplus.lib.s3.h
+# ROLE  : SMS send helpers
+# SIG   : extends com.mplus.lib.s3.o; implements com.mplus.lib.s3.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s3/g;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/X;
 .super Lcom/mplus/lib/x7/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.X
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host)
+# SIG   : extends com.mplus.lib.x7.g; implements android.widget.PopupMenu$OnMenuItemClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/PopupMenu$OnMenuItemClickListener;

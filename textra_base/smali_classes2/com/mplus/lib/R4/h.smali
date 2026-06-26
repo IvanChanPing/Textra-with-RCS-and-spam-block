@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R4/h;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.R4.h
+# ROLE  : recipient / contact resolution
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/q8/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.q8.e
+# ROLE  : methods: onNetworkStateChanged
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.network.NetworkStateMonitor$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/network/NetworkStateMonitor$Callback;

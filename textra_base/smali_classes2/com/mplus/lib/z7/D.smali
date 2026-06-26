@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/D;
 .super Landroidx/lifecycle/MutableLiveData;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.D
+# ROLE  : conversation list / thread list UI
+# SIG   : extends androidx.lifecycle.MutableLiveData
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

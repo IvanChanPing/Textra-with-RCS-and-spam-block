@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i3/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i3.f
+# ROLE  : input / compose helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.i3.g, com.google.android.gms.tasks.OnSuccessListener, com.google.android.gms.tasks.OnFailureListener, com.google.android.gms.tasks.OnCanceledListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/i3/g;

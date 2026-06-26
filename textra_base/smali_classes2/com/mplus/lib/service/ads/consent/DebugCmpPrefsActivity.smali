@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/ads/consent/DebugCmpPrefsActivity;
 .super Lcom/mplus/lib/x7/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.ads.consent.DebugCmpPrefsActivity
+# ROLE  : OnClickListener; hints: "Cleared consent prefs"; "Debug CMP Prefs"
+# SIG   : extends com.mplus.lib.x7.c; implements android.view.View$OnClickListener, android.content.SharedPreferences$OnSharedPreferenceChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

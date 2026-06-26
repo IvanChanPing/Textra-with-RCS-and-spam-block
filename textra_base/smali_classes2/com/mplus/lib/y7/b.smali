@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/y7/b;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.y7.b
+# ROLE  : OnItemClickListener
+# SIG   : extends com.mplus.lib.D5.b; implements android.widget.AdapterView$OnItemClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;

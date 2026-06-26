@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t5/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.t5.b
+# ROLE  : obfuscated class in package t5
+# SIG   : extends java.lang.Object; implements com.mplus.lib.y5.y
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/y;

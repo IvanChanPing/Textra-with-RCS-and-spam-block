@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/y4/c;
 .super Landroid/database/AbstractCursor;
+# ANNOTATION
+# CLASS : com.mplus.lib.y4.c
+# ROLE  : methods: getBlob, getColumnNames, getCount, getDouble
+# SIG   : extends android.database.AbstractCursor; implements android.os.Handler$Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/Handler$Callback;

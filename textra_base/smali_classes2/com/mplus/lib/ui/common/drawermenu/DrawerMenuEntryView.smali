@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/drawermenu/DrawerMenuEntryView;
 .super Lcom/mplus/lib/ui/common/base/BaseFrameLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.drawermenu.DrawerMenuEntryView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseFrameLayout; implements android.widget.Checkable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/Checkable;

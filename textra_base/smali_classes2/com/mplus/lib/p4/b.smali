@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/p4/b;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.p4.b
+# ROLE  : hints: "OpenError"
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

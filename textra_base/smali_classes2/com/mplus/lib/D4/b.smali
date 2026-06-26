@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/D4/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.D4.b
+# ROLE  : database access object / cursor wrapper; hints: "com.teslacoilsw.notifier"; "select version from migrations"
+# SIG   : extends java.lang.Object; implements java.util.function.Supplier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Supplier;

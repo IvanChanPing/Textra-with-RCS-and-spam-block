@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/O3/T;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.O3.T
+# ROLE  : Callable
+# SIG   : extends java.lang.Object; implements java.util.concurrent.Callable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;

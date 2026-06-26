@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/W5/d;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.W5.d
+# ROLE  : widget helpers; hints: "selected-uris"
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.Q5.b, androidx.loader.app.LoaderManager$LoaderCallbacks
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/Q5/b;

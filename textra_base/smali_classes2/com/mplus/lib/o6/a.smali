@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/o6/a;
 .super Landroidx/lifecycle/ViewModel;
+# ANNOTATION
+# CLASS : com.mplus.lib.o6.a
+# ROLE  : ViewModel
+# SIG   : extends androidx.lifecycle.ViewModel
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

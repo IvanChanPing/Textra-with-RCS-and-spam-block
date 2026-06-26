@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/s5/n;
 .super Landroidx/loader/content/AsyncTaskLoader;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.n
+# ROLE  : settings / preferences subsystem
+# SIG   : extends androidx.loader.content.AsyncTaskLoader
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

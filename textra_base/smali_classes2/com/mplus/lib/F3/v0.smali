@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/v0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.v0
+# ROLE  : large utility / model package; hints: "No factory is available for message type: "
+# SIG   : extends java.lang.Object; implements com.mplus.lib.F3.B0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/F3/B0;

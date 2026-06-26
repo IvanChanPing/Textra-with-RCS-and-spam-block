@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/g;
 .super Lcom/google/android/gms/signin/internal/zac;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.g
+# ROLE  : JSON / serialization helpers
+# SIG   : extends com.google.android.gms.signin.internal.zac
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/p4/a;
 .super Lcom/mplus/lib/x5/d;
+# ANNOTATION
+# CLASS : com.mplus.lib.p4.a
+# ROLE  : methods: onPostExecute
+# SIG   : extends com.mplus.lib.x5.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

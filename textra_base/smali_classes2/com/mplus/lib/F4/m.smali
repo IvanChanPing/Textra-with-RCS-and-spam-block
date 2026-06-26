@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/F4/m;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F4.m
+# ROLE  : feature flags / capability detection
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

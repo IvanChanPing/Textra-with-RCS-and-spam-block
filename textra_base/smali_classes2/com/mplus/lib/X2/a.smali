@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X2/a;
 .super Lcom/google/android/gms/internal/common/zzak;
+# ANNOTATION
+# CLASS : com.mplus.lib.X2.a
+# ROLE  : yet-unclassified (X2)
+# SIG   : extends com.google.android.gms.internal.common.zzak
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t7/m;
 .super Ljava/util/ArrayList;
+# ANNOTATION
+# CLASS : com.mplus.lib.t7.m
+# ROLE  : thread-management utilities
+# SIG   : extends java.util.ArrayList
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/r4/O;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.O
+# ROLE  : messaging engine — DB R/W (messages/conversations), tapback attach (G0), delivery scheduling (F0/f0/H0/X0), notification dispatch
+# SIG   : extends java.lang.Object; implements android.database.Cursor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/database/Cursor;

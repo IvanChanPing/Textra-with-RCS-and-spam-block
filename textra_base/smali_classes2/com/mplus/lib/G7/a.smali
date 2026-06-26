@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/G7/a;
 .super Landroid/os/Binder;
+# ANNOTATION
+# CLASS : com.mplus.lib.G7.a
+# ROLE  : Binder (IPC)
+# SIG   : extends android.os.Binder; implements android.os.IInterface
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/IInterface;

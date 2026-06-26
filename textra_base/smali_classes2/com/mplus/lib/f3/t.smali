@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/t;
 .super Lcom/google/android/gms/internal/play_billing/zzcv;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.t
+# ROLE  : file / media helpers
+# SIG   : extends com.google.android.gms.internal.play_billing.zzcv
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v5/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.v5.c
+# ROLE  : methods: onLayoutChange, onSpringActivate, onSpringAtRest, onSpringEndStateChange
+# SIG   : extends java.lang.Object; implements com.mplus.lib.v5.b, com.mplus.lib.b2.f, android.view.View$OnLayoutChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/v5/b;

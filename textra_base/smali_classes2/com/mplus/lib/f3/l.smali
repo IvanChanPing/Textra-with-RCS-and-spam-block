@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/l;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.l
+# ROLE  : file / media helpers
+# SIG   : extends java.lang.Object; implements com.google.android.gms.internal.play_billing.zzdf
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/play_billing/zzdf;

@@ -1,5 +1,22 @@
 # TextRCS Changelog
 
+## 2026-06-26 — Annotate all 3,525 com/mplus/lib smali files
+
+Added `# ANNOTATION` class-header blocks to every obfuscated smali file in
+`textra_base/smali_classes2/com/mplus/lib/` (3,525 files across 200+ packages).
+Each annotation records: CLASS (fully-qualified), ROLE (inferred from superclass,
+interfaces, field types, and string constants), SIG (extends/implements), and SRC.
+
+The auto-annotation script (`scripts/annotate_smali.py`) inserts the block right
+after the `.class`/`.super` lines and before the `# interfaces` section. It skips
+any file that already has a `# ANNOTATION` block — so hand-crafted Opus annotations
+are never overwritten. The `strip_annotations.py` script has been disabled (prints
+ABORT) to prevent accidental destruction of hand-crafted annotations.
+
+Key package roles documented in the script's PACKAGE_ROLES table (r4=messaging engine,
+h5=tapback parser, C4=locale pattern registrar, c5=SMS delivery, Z2=utilities, etc.).
+Smali comment lines are ignored by the apktool assembler so this does NOT change the APK.
+
 ## 2026-06-26 — RCS reactions: fix tapback text format so Textra's native parser matches
 
 Root cause of receive-side tapback rendering failure was identified and fixed: Textra's `h5/h.N`

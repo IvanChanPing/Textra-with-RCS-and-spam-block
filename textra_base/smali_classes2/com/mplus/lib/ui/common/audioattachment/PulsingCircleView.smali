@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/audioattachment/PulsingCircleView;
 .super Lcom/mplus/lib/ui/common/base/BaseView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.audioattachment.PulsingCircleView
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseView
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

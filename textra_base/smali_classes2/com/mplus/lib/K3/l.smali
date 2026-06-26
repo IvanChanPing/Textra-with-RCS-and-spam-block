@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/K3/l;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.K3.l
+# ROLE  : keyboard / input helpers; hints: "CORE_LAST_UPDATED"; "V1_LAST_UPDATED"
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

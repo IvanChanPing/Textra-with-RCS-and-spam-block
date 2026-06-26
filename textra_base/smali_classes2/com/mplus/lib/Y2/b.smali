@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/b;
 .super Lcom/google/android/gms/common/api/internal/IStatusCallback$Stub;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.b
+# ROLE  : yet-unclassified utility
+# SIG   : extends com.google.android.gms.common.api.internal.IStatusCallback$Stub
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

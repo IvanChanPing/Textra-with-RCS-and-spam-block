@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/u5/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.u5.b
+# ROLE  : methods: onEventMainThread, onEventMainThread
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

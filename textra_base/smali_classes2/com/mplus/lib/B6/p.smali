@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/B6/p;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.p
+# ROLE  : broadcast / event bus helpers; hints: "%s: sample(data=%s): error root causes\n%s"; "%s: error loading media: %s\n%s"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.U1.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/U1/f;

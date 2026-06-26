@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/a5/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.a5.a
+# ROLE  : methods: onFailure, onSuccess
+# SIG   : extends java.lang.Object; implements com.google.android.gms.tasks.OnSuccessListener, com.google.android.gms.tasks.OnFailureListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/OnSuccessListener;

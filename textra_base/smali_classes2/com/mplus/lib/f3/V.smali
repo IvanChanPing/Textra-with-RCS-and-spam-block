@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/V;
 .super Lcom/mplus/lib/f3/G;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.V
+# ROLE  : file / media helpers
+# SIG   : extends com.mplus.lib.f3.G; implements java.util.concurrent.RunnableFuture
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/RunnableFuture;

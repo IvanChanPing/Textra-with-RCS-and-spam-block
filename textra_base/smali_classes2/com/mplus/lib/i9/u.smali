@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/i9/u;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i9.u
+# ROLE  : internal / integration helpers
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.video.utils.RepeatableAction$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/video/utils/RepeatableAction$Listener;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/y7/c;
 .super Landroid/widget/BaseAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.y7.c
+# ROLE  : BaseAdapter
+# SIG   : extends android.widget.BaseAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

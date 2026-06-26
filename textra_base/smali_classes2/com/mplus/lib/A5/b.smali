@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/A5/b;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.A5.b
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements androidx.viewpager.widget.ViewPager$OnPageChangeListener, android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;

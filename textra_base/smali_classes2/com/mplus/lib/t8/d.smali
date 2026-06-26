@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t8/d;
 .super Lcom/smaato/sdk/core/network/MimeType;
+# ANNOTATION
+# CLASS : com.mplus.lib.t8.d
+# ROLE  : hints: "Null subtype"; "Null type"
+# SIG   : extends com.smaato.sdk.core.network.MimeType
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

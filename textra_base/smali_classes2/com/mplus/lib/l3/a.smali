@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/l3/a;
 .super Landroid/os/Binder;
+# ANNOTATION
+# CLASS : com.mplus.lib.l3.a
+# ROLE  : Binder (IPC); hints: "confirmation_intent"
+# SIG   : extends android.os.Binder; implements android.os.IInterface
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/os/IInterface;

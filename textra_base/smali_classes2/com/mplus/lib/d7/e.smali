@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/d7/e;
 .super Lcom/mplus/lib/D5/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.d7.e
+# ROLE  : methods: onDismiss, onSaveInstanceState, onViewStateRestored
+# SIG   : extends com.mplus.lib.D5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

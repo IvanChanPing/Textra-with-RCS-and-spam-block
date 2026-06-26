@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/c3/D1;
 .super Lcom/google/android/gms/internal/mlkit_language_id_common/zzlb;
+# ANNOTATION
+# CLASS : com.mplus.lib.c3.D1
+# ROLE  : utility / helper classes
+# SIG   : extends com.google.android.gms.internal.mlkit_language_id_common.zzlb
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

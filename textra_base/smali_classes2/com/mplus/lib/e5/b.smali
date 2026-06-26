@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/e5/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.e5.b
+# ROLE  : hints: "%s: play(): security exception when playing sound%s"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

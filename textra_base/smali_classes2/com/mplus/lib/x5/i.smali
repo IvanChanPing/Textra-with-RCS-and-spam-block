@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x5/i;
 .super Landroidx/activity/OnBackPressedCallback;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.i
+# ROLE  : XML / resource helpers
+# SIG   : extends androidx.activity.OnBackPressedCallback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

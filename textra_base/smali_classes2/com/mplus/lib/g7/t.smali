@@ -8,6 +8,12 @@
         "Lcom/mplus/lib/y7/a;"
     }
 .end annotation
+# ANNOTATION
+# CLASS : com.mplus.lib.g7.t
+# ROLE  : group-messaging helpers
+# SIG   : extends com.mplus.lib.y7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

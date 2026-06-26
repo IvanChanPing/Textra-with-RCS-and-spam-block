@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/w0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.w0
+# ROLE  : large utility / model package; hints: "com.google.protobuf.DescriptorMessageInfoFactory"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

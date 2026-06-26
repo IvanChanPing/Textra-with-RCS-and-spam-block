@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/r4/z;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.r4.z
+# ROLE  : messaging engine — DB R/W (messages/conversations), tapback attach (G0), delivery scheduling (F0/f0/H0/X0), notification dispatch; hints: "deleted = 0 and unread = 1 and convo_id = "; "messages"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.r4.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/r4/b;

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/M2/c;
 .super Lcom/google/android/gms/common/internal/zzc;
+# ANNOTATION
+# CLASS : com.mplus.lib.M2.c
+# ROLE  : hints: "pendingIntent"
+# SIG   : extends com.google.android.gms.common.internal.zzc
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

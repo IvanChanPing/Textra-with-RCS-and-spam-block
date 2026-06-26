@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/b3/b;
 .super Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbi;
+# ANNOTATION
+# CLASS : com.mplus.lib.b3.b
+# ROLE  : methods: get
+# SIG   : extends com.google.android.gms.internal.mlkit_language_id_bundled.zbi
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

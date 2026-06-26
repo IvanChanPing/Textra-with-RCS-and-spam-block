@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/g;
 .super Landroid/text/SpannableStringBuilder;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.g
+# ROLE  : conversation list / thread list UI
+# SIG   : extends android.text.SpannableStringBuilder
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

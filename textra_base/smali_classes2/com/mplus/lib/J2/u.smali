@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/u;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.u
+# ROLE  : JSON / serialization helpers; hints: "erumcIclSmsnercsig  Sopevnue olinfnso nsedR"; "Received null response from onSignInSuccess"
+# SIG   : extends java.lang.Object; implements com.google.android.gms.common.internal.BaseGmsClient$ConnectionProgressReportCallbacks, com.google.android.gms.common.api.internal.zacs
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;

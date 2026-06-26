@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/e3/d;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.e3.d
+# ROLE  : UI components
+# SIG   : extends java.lang.Enum; implements java.util.concurrent.Executor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/concurrent/Executor;

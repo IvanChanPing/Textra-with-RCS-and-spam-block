@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/H6/c;
 .super Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
+# ANNOTATION
+# CLASS : com.mplus.lib.H6.c
+# ROLE  : custom RecyclerView
+# SIG   : extends androidx.recyclerview.widget.RecyclerView$ItemAnimator; implements com.mplus.lib.y5.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/g;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/E;
 .super Ljava/io/BufferedInputStream;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.E
+# ROLE  : conversation list / thread list UI
+# SIG   : extends java.io.BufferedInputStream
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

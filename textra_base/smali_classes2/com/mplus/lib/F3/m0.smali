@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/F3/m0;
 .super Ljava/io/IOException;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.m0
+# ROLE  : large utility / model package; hints: "Protocol message contained an invalid tag (zero)."; "Protocol message had invalid UTF-8."
+# SIG   : extends java.io.IOException
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P4/d;
 .super Landroidx/core/app/NotificationCompat$Builder;
+# ANNOTATION
+# CLASS : com.mplus.lib.P4.d
+# ROLE  : preferences / config; hints: "gsammsee"; "messages"
+# SIG   : extends androidx.core.app.NotificationCompat$Builder
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

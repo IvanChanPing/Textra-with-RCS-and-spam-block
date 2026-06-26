@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/m4/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.m4.c
+# ROLE  : obfuscated class in package m4
+# SIG   : extends java.lang.Object; implements java.util.function.Predicate
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Predicate;

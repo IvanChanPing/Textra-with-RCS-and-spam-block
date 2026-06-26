@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/T;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.T
+# ROLE  : large utility / model package; hints: "Unable to get message info for "; "Unsupported message type: "
+# SIG   : extends java.lang.Object; implements com.mplus.lib.F3.B0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/F3/B0;

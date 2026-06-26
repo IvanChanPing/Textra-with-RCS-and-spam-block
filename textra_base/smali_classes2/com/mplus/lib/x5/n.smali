@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x5/n;
 .super Lcom/mplus/lib/x5/o;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.n
+# ROLE  : XML / resource helpers
+# SIG   : extends com.mplus.lib.x5.o
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

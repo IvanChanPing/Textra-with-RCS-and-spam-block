@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/E3/v;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.v
+# ROLE  : event / listener subsystem
+# SIG   : extends java.lang.Object; implements com.google.android.gms.internal.mlkit_entity_extraction.zzajc
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/mlkit_entity_extraction/zzajc;

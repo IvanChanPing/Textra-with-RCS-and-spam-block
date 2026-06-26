@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/e3/b;
 .super Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzt;
+# ANNOTATION
+# CLASS : com.mplus.lib.e3.b
+# ROLE  : UI components
+# SIG   : extends com.google.android.gms.internal.mlkit_smart_reply_common.zzt
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/h3/a;
 .super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
+# ANNOTATION
+# CLASS : com.mplus.lib.h3.a
+# ROLE  : methods: buildClient
+# SIG   : extends com.google.android.gms.common.api.Api$AbstractClientBuilder
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

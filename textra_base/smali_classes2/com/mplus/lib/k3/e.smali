@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/k3/e;
 .super Lcom/mplus/lib/l3/f;
+# ANNOTATION
+# CLASS : com.mplus.lib.k3.e
+# ROLE  : hints: "error requesting in-app review for %s"
+# SIG   : extends com.mplus.lib.l3.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

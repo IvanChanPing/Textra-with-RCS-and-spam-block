@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P7/a;
 .super Lcom/smaato/sdk/core/ad/AdRequestParams;
+# ANNOTATION
+# CLASS : com.mplus.lib.P7.a
+# ROLE  : methods: getUBUniqueId
+# SIG   : extends com.smaato.sdk.core.ad.AdRequestParams
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

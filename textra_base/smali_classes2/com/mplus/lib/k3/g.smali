@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/k3/g;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.k3.g
+# ROLE  : obfuscated class in package k3
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

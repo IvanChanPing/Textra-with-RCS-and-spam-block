@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseGridLayout;
 .super Landroid/widget/GridLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseGridLayout
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends android.widget.GridLayout; implements com.mplus.lib.x5.z
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/z;

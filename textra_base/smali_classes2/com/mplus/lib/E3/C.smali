@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/E3/C;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.E3.C
+# ROLE  : event / listener subsystem; hints: "url == null"; "url == null"
+# SIG   : extends java.lang.Object; implements com.google.android.gms.internal.mlkit_entity_extraction.zzacc, com.mplus.lib.w2.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/google/android/gms/internal/mlkit_entity_extraction/zzacc;

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/a3/G0;
 .super Ljava/util/AbstractList;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.G0
+# ROLE  : data model — proto/parcel/row model objects (conversations, messages, participants)
+# SIG   : extends java.util.AbstractList
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

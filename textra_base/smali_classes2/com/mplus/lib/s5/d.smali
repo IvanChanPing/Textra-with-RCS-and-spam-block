@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/d;
 .super Landroid/widget/PopupMenu;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.d
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.widget.PopupMenu
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

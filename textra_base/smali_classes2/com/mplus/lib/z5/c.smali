@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z5/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z5.c
+# ROLE  : methods: onTouch
+# SIG   : extends java.lang.Object; implements android.view.View$OnTouchListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;

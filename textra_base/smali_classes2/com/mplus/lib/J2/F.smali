@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/F;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.F
+# ROLE  : Runnable; hints: "intermediate-response"
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

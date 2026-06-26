@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/B8/f;
 .super Ljava/util/AbstractSequentialList;
+# ANNOTATION
+# CLASS : com.mplus.lib.B8.f
+# ROLE  : Serializable
+# SIG   : extends java.util.AbstractSequentialList; implements java.io.Serializable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/Serializable;

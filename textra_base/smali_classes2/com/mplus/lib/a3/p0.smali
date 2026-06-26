@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/a3/p0;
 .super Ljava/util/AbstractMap;
+# ANNOTATION
+# CLASS : com.mplus.lib.a3.p0
+# ROLE  : Serializable
+# SIG   : extends java.util.AbstractMap; implements java.io.Serializable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/io/Serializable;

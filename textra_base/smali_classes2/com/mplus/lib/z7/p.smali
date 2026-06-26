@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/z7/p;
 .super Ljava/util/Observable;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.p
+# ROLE  : conversation list / thread list UI
+# SIG   : extends java.util.Observable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

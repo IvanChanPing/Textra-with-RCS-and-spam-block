@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/e5/d;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.e5.d
+# ROLE  : hints: "Txtr:sms"
+# SIG   : extends com.mplus.lib.F1.a; implements com.mplus.lib.N4.c, com.mplus.lib.d5.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/N4/c;

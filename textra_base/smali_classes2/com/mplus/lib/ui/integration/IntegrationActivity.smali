@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/integration/IntegrationActivity;
 .super Lcom/mplus/lib/x5/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.integration.IntegrationActivity
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments; hints: "base64_contacts"; "rdsmsda"
+# SIG   : extends com.mplus.lib.x5.l
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/R5/c;
 .super Lcom/mplus/lib/x5/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.R5.c
+# ROLE  : recipient / phone-number formatting
+# SIG   : extends com.mplus.lib.x5.g; implements com.mplus.lib.R5.e
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/R5/e;

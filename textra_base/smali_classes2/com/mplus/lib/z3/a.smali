@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z3.a
+# ROLE  : methods: annotationType
+# SIG   : extends java.lang.Object; implements com.mplus.lib.z3.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/z3/c;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Q4/a;
 .super Landroid/view/GestureDetector$SimpleOnGestureListener;
+# ANNOTATION
+# CLASS : com.mplus.lib.Q4.a
+# ROLE  : methods: onSingleTapUp
+# SIG   : extends android.view.GestureDetector$SimpleOnGestureListener; implements com.mplus.lib.C5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/C5/a;

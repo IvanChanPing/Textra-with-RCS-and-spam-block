@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/o3/j0;
 .super Lcom/mplus/lib/o3/e0;
+# ANNOTATION
+# CLASS : com.mplus.lib.o3.j0
+# ROLE  : outgoing / send pipeline
+# SIG   : extends com.mplus.lib.o3.e0; implements java.util.NavigableSet, com.mplus.lib.o3.P0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/NavigableSet;

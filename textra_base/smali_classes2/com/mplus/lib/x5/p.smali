@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/x5/p;
 .super Landroidx/fragment/app/ListFragment;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.p
+# ROLE  : XML / resource helpers
+# SIG   : extends androidx.fragment.app.ListFragment
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

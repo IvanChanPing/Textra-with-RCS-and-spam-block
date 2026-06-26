@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/s5/q;
 .super Lcom/mplus/lib/x5/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.q
+# ROLE  : settings / preferences subsystem; hints: "newMessageMode"; "whenToSend"
+# SIG   : extends com.mplus.lib.x5.l; implements com.mplus.lib.s5.S, com.mplus.lib.y7.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s5/S;

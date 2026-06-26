@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/t8/b;
 .super Lcom/smaato/sdk/core/network/f;
+# ANNOTATION
+# CLASS : com.mplus.lib.t8.b
+# ROLE  : methods: contentLength
+# SIG   : extends com.smaato.sdk.core.network.f
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

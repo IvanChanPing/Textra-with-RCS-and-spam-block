@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/z7/h;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.h
+# ROLE  : conversation list / thread list UI; hints: "Can\'t delete log file %s"; "Can\'t delete %s"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

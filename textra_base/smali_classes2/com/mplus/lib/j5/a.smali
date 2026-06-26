@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/j5/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j5.a
+# ROLE  : job scheduler helpers
+# SIG   : extends java.lang.Object; implements java.util.function.Supplier
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/function/Supplier;

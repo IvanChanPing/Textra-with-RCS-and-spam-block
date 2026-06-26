@@ -1,5 +1,11 @@
 .class public final enum Lcom/mplus/lib/i9/f;
 .super Ljava/lang/Enum;
+# ANNOTATION
+# CLASS : com.mplus.lib.i9.f
+# ROLE  : internal / integration helpers
+# SIG   : extends java.lang.Enum
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

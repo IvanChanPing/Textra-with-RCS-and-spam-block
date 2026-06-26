@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/V8/d;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V8.d
+# ROLE  : methods: onError
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.richmedia.mraid.bridge.ErrorListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/richmedia/mraid/bridge/ErrorListener;

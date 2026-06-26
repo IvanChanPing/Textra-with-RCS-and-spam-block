@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseDrawerLayout;
 .super Landroidx/drawerlayout/widget/DrawerLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseDrawerLayout
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends androidx.drawerlayout.widget.DrawerLayout
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

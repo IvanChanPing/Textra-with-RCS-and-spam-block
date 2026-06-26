@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/q0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.q0
+# ROLE  : file / media helpers; hints: "No factory is available for message type: "
+# SIG   : extends java.lang.Object; implements com.mplus.lib.f3.s0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/f3/s0;

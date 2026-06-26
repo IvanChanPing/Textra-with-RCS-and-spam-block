@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/p4/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.p4.e
+# ROLE  : hints: "error compressing bitmap to file"
+# SIG   : extends java.lang.Object; implements android.hardware.Camera$PictureCallback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/hardware/Camera$PictureCallback;

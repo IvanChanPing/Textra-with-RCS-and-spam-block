@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/R7/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.R7.a
+# ROLE  : obfuscated class in package R7
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.Predicate
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/Predicate;

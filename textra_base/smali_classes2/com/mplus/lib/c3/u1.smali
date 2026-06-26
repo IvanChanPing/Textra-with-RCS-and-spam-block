@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/c3/u1;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.c3.u1
+# ROLE  : utility / helper classes; hints: "gcmSenderId"
+# SIG   : extends java.lang.Object; implements com.mplus.lib.w3.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/w3/d;

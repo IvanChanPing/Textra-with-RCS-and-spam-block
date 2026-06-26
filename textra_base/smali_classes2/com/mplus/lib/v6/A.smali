@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/A;
 .super Lcom/mplus/lib/f6/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.A
+# ROLE  : conversation overlay / contact-info panel (x7/f menu host)
+# SIG   : extends com.mplus.lib.f6.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

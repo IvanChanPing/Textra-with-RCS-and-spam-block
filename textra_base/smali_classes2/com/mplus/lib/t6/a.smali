@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/t6/a;
 .super Landroid/text/style/ImageSpan;
+# ANNOTATION
+# CLASS : com.mplus.lib.t6.a
+# ROLE  : methods: getSize
+# SIG   : extends android.text.style.ImageSpan
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

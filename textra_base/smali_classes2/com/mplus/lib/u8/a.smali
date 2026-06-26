@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/u8/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.u8.a
+# ROLE  : methods: contentLength
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.network.Response$Body
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/network/Response$Body;

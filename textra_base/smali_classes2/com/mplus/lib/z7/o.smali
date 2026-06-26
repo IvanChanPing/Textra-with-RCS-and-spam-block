@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/z7/o;
 .super Landroid/os/ResultReceiver;
+# ANNOTATION
+# CLASS : com.mplus.lib.z7.o
+# ROLE  : conversation list / thread list UI
+# SIG   : extends android.os.ResultReceiver
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

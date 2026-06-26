@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/x;
 .super Lcom/google/android/gms/internal/base/zau;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.x
+# ROLE  : JSON / serialization helpers; hints: "TransformationResultHandler received unknown message type: "; "Runtime exception on the transformation worker thread: "
+# SIG   : extends com.google.android.gms.internal.base.zau
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

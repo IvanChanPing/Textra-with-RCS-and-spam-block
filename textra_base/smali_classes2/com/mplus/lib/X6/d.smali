@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X6/d;
 .super Lcom/mplus/lib/s5/n;
+# ANNOTATION
+# CLASS : com.mplus.lib.X6.d
+# ROLE  : hints: " and msg.ts_to_send != 0 "; "\' and deleted = 0)  union "
+# SIG   : extends com.mplus.lib.s5.n
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

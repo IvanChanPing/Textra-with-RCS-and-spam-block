@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/e6/a;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.e6.a
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.Q5.b, android.view.View$OnClickListener, android.app.DatePickerDialog$OnDateSetListener, android.app.TimePickerDialog$OnTimeSetListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/Q5/b;

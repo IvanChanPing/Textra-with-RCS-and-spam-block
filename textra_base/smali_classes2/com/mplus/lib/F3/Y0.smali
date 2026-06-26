@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/Y0;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.Y0
+# ROLE  : large utility / model package
+# SIG   : extends java.lang.Object; implements java.util.Map$Entry, java.lang.Comparable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/Map$Entry;

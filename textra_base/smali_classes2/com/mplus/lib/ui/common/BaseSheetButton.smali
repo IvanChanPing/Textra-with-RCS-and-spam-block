@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/BaseSheetButton;
 .super Lcom/mplus/lib/ui/common/base/BaseButton;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.BaseSheetButton
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseButton
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

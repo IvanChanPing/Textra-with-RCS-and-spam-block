@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/X;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.X
+# ROLE  : settings / preferences subsystem
+# SIG   : extends java.lang.Object; implements android.animation.Animator$AnimatorListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;

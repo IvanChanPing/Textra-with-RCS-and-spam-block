@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/cleanup/CleanupMgr$CleanupWork;
 .super Landroidx/work/Worker;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.cleanup.CleanupMgr$CleanupWork
+# ROLE  : WorkManager Worker; hints: "Error cleaning up. Info: "
+# SIG   : extends androidx.work.Worker
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

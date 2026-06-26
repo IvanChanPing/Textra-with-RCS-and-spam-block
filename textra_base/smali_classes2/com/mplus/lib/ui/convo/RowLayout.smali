@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/convo/RowLayout;
 .super Lcom/mplus/lib/ui/common/base/BaseConstraintLayout;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.convo.RowLayout
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseConstraintLayout
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

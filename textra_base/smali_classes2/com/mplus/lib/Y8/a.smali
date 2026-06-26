@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y8/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y8.a
+# ROLE  : methods: onViewAttachedToWindow, onViewDetachedFromWindow
+# SIG   : extends java.lang.Object; implements android.view.View$OnAttachStateChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/P5/c;
 .super Lcom/mplus/lib/f6/c;
+# ANNOTATION
+# CLASS : com.mplus.lib.P5.c
+# ROLE  : methods: getItemId, getItemViewType, onBindViewHolder
+# SIG   : extends com.mplus.lib.f6.c
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

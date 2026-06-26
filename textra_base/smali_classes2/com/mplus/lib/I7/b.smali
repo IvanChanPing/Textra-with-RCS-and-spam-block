@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/I7/b;
 .super Lcom/mplus/lib/H7/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.I7.b
+# ROLE  : hints: "notifyCount"; "com.htc.launcher.action.UPDATE_SHORTCUT"
+# SIG   : extends com.mplus.lib.H7.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

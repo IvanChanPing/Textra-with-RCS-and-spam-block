@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/B6/q;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B6.q
+# ROLE  : broadcast / event bus helpers; hints: "%s: onPlayerError(): error playing media:%s\n%s"
+# SIG   : extends java.lang.Object; implements androidx.media3.common.Player$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/media3/common/Player$Listener;

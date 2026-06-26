@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/i3/c;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.i3.c
+# ROLE  : input / compose helpers
+# SIG   : extends java.lang.Object; implements com.mplus.lib.i3.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/i3/b;

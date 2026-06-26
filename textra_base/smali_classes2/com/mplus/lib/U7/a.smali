@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/U7/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.U7.a
+# ROLE  : Runnable; hints: "new-message"; "%s: performDefaultBack(): ignoring IllegalStateException"
+# SIG   : extends java.lang.Object; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

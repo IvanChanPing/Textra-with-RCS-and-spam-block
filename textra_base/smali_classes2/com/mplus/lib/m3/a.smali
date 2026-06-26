@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/m3/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.m3.a
+# ROLE  : hints: "INTERNAL_ERROR"
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

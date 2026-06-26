@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/SendText;
 .super Lcom/mplus/lib/ui/common/base/BaseEditText;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.SendText
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseEditText; implements com.mplus.lib.n6.a, androidx.core.view.inputmethod.InputConnectionCompat$OnCommitContentListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/n6/a;

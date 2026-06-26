@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/J2/f;
 .super Lcom/mplus/lib/J2/i;
+# ANNOTATION
+# CLASS : com.mplus.lib.J2.f
+# ROLE  : JSON / serialization helpers
+# SIG   : extends com.mplus.lib.J2.i
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

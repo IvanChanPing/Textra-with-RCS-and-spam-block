@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/x5/g;
 .super Landroid/graphics/drawable/Drawable;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.g
+# ROLE  : XML / resource helpers
+# SIG   : extends android.graphics.drawable.Drawable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

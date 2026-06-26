@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/C8/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.C8.b
+# ROLE  : obfuscated class in package C8
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.NullableFunction
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/NullableFunction;

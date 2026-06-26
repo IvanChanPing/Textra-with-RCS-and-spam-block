@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/V8/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V8.f
+# ROLE  : methods: onVolumeChange
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.richmedia.mraid.dataprovider.AudioVolumeObserver$Listener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/richmedia/mraid/dataprovider/AudioVolumeObserver$Listener;

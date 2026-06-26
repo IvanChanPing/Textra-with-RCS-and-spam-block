@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/plus/camera/CameraPreview;
 .super Lcom/mplus/lib/ui/common/base/BaseTextureView;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.plus.camera.CameraPreview
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.ui.common.base.BaseTextureView; implements com.mplus.lib.y5.h
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/y5/h;

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/s5/p0;
 .super Lcom/mplus/lib/ui/common/base/BaseImageView;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.p0
+# ROLE  : settings / preferences subsystem
+# SIG   : extends com.mplus.lib.ui.common.base.BaseImageView
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

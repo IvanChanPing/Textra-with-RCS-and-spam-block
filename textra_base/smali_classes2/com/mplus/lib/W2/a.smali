@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/W2/a;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
+# ANNOTATION
+# CLASS : com.mplus.lib.W2.a
+# ROLE  : methods: getChangingConfigurations
+# SIG   : extends android.graphics.drawable.Drawable$ConstantState
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/t6/b;
 .super Lcom/mplus/lib/t6/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.t6.b
+# ROLE  : obfuscated class in package t6
+# SIG   : extends com.mplus.lib.t6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

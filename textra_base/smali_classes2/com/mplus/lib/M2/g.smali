@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M2/g;
 .super Lcom/google/android/gms/common/internal/GmsClientSupervisor;
+# ANNOTATION
+# CLASS : com.mplus.lib.M2.g
+# ROLE  : hints: "ServiceConnection must not be null"; "ServiceConnection must not be null"
+# SIG   : extends com.google.android.gms.common.internal.GmsClientSupervisor
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

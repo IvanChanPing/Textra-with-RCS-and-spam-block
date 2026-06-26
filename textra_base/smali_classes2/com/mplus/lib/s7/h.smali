@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s7/h;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.s7.h
+# ROLE  : SMS sender helpers
+# SIG   : extends com.mplus.lib.G5.a; implements androidx.viewpager.widget.ViewPager$OnPageChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;

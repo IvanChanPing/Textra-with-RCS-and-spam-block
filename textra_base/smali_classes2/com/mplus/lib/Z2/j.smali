@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Z2/j;
 .super Ljava/io/OutputStream;
+# ANNOTATION
+# CLASS : com.mplus.lib.Z2.j
+# ROLE  : utility functions — string manipulation, formatting helpers, shared static methods
+# SIG   : extends java.io.OutputStream
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/B4/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.B4.b
+# ROLE  : hints: "Error report request failed: %s"; "Error report request has been accepted by server"
+# SIG   : extends java.lang.Object; implements androidx.appcompat.widget.SearchView$OnQueryTextListener, com.mplus.lib.I1.r, com.mplus.lib.B1.c, com.google.android.gms.common.internal.zaj, com.mplus.lib.I9.a, com.mplus.lib.L1.l, com.google.android.gms.dynamic.OnDelegateCreatedListener, com.google.android.gms.internal.location.zzcs, com.smaato.sdk.core.network.Callback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroidx/appcompat/widget/SearchView$OnQueryTextListener;

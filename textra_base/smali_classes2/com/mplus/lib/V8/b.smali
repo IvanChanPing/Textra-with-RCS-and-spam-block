@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/V8/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.V8.b
+# ROLE  : obfuscated class in package V8
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.util.fi.BiConsumer
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/util/fi/BiConsumer;

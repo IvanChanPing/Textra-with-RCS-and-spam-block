@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/settings/sections/signature/ChooseSignatureActivity;
 .super Lcom/mplus/lib/x7/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.settings.sections.signature.ChooseSignatureActivity
+# ROLE  : OnClickListener; hints: "contacts"
+# SIG   : extends com.mplus.lib.x7.a; implements android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

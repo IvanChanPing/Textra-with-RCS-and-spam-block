@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseEditText;
 .super Landroid/widget/EditText;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseEditText
+# ROLE  : custom EditText
+# SIG   : extends android.widget.EditText; implements com.mplus.lib.x5.y, com.mplus.lib.y5.u
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

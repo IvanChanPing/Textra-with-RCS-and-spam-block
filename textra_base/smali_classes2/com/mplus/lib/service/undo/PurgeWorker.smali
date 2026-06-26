@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/undo/PurgeWorker;
 .super Lcom/mplus/lib/ui/common/base/SafeWorker;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.undo.PurgeWorker
+# ROLE  : Android Service — background SMS/notification service; hints: "T.deleted > 0 and T.deleted <= "
+# SIG   : extends com.mplus.lib.ui.common.base.SafeWorker
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

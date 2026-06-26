@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/D8/c;
 .super Lcom/smaato/sdk/core/util/notifier/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.D8.c
+# ROLE  : obfuscated class in package D8
+# SIG   : extends com.smaato.sdk.core.util.notifier.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

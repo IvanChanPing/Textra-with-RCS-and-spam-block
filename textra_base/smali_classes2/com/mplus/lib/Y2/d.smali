@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/Y2/d;
 .super Lcom/mplus/lib/Y2/m;
+# ANNOTATION
+# CLASS : com.mplus.lib.Y2.d
+# ROLE  : yet-unclassified utility
+# SIG   : extends com.mplus.lib.Y2.m
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

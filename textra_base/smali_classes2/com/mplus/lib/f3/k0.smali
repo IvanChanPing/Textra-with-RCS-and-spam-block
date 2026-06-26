@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/k0;
 .super Lcom/mplus/lib/f3/X;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.k0
+# ROLE  : file / media helpers
+# SIG   : extends com.mplus.lib.f3.X; implements java.util.RandomAccess, com.google.android.gms.internal.play_billing.zzhn, com.mplus.lib.f3.u0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/util/RandomAccess;

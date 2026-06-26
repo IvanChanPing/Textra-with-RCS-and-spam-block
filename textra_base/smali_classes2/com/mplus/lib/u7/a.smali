@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/u7/a;
 .super Lcom/mplus/lib/x5/s;
+# ANNOTATION
+# CLASS : com.mplus.lib.u7.a
+# ROLE  : methods: getItemCount, getItemId, getItemViewType, onBindViewHolder
+# SIG   : extends com.mplus.lib.x5.s
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

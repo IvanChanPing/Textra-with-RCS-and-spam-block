@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/X6/c;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.X6.c
+# ROLE  : OnClickListener; hints: "T.is_tapback = 0"
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.x5.x, android.view.View$OnClickListener, com.mplus.lib.s6.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/x;

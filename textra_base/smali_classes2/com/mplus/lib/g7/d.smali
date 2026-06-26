@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/g7/d;
 .super Landroid/widget/BaseAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.g7.d
+# ROLE  : BaseAdapter
+# SIG   : extends android.widget.BaseAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

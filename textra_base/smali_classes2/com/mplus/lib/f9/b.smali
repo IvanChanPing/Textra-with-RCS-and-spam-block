@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f9/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.f9.b
+# ROLE  : obfuscated class in package f9
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

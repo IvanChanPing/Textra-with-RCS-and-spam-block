@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/plus/giphy/category/GiphyCategoryGridFragment;
 .super Lcom/mplus/lib/x5/h;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.plus.giphy.category.GiphyCategoryGridFragment
+# ROLE  : OnItemClickListener
+# SIG   : extends com.mplus.lib.x5.h; implements android.widget.AdapterView$OnItemClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;

@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F8/c;
 .super Lcom/mplus/lib/F8/e;
+# ANNOTATION
+# CLASS : com.mplus.lib.F8.c
+# ROLE  : hints: ", error="
+# SIG   : extends com.mplus.lib.F8.e
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

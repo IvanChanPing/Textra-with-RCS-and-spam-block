@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/U5/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.U5.f
+# ROLE  : Runnable
+# SIG   : extends java.lang.Object; implements java.lang.Runnable, android.hardware.Camera$AutoFocusCallback
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

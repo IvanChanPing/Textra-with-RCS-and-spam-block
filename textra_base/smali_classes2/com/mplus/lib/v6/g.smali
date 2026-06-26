@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/g;
 .super Lcom/mplus/lib/W6/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.g
+# ROLE  : OnClickListener
+# SIG   : extends com.mplus.lib.W6.a; implements android.view.View$OnClickListener, com.mplus.lib.x7.e, com.mplus.lib.b2.f, com.mplus.lib.y5.d, com.mplus.lib.s6.a, android.widget.PopupMenu$OnMenuItemClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

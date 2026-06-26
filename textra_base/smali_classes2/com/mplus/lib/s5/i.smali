@@ -1,5 +1,11 @@
 .class public final synthetic Lcom/mplus/lib/s5/i;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.i
+# ROLE  : settings / preferences subsystem
+# SIG   : extends java.lang.Object; implements com.mplus.lib.s5.l0, androidx.core.view.OnApplyWindowInsetsListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/s5/l0;

@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/S3/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.S3.b
+# ROLE  : obfuscated class in package S3
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

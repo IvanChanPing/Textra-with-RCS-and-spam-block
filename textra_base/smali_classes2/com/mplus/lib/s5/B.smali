@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/s5/B;
 .super Landroid/view/animation/AccelerateDecelerateInterpolator;
+# ANNOTATION
+# CLASS : com.mplus.lib.s5.B
+# ROLE  : settings / preferences subsystem
+# SIG   : extends android.view.animation.AccelerateDecelerateInterpolator
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

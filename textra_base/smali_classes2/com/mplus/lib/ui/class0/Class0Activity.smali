@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/class0/Class0Activity;
 .super Lcom/mplus/lib/x5/l;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.class0.Class0Activity
+# ROLE  : OnClickListener; hints: "Can\'t retrieve message from intent: "
+# SIG   : extends com.mplus.lib.x5.l; implements com.mplus.lib.W6.d, android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/W6/d;

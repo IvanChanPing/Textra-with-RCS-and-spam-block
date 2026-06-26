@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/ads/AdMgr$FetchTrialLicenseWorker;
 .super Landroidx/work/Worker;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.ads.AdMgr$FetchTrialLicenseWorker
+# ROLE  : WorkManager Worker
+# SIG   : extends androidx.work.Worker
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/x5/f;
 .super Landroidx/fragment/app/DialogFragment;
+# ANNOTATION
+# CLASS : com.mplus.lib.x5.f
+# ROLE  : DialogFragment
+# SIG   : extends androidx.fragment.app.DialogFragment
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

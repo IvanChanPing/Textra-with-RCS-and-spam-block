@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/F3/c;
 .super Ljava/util/AbstractList;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.c
+# ROLE  : large utility / model package
+# SIG   : extends java.util.AbstractList; implements com.mplus.lib.F3.j0
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/F3/j0;

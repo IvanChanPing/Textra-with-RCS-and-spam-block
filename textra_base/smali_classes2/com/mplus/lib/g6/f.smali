@@ -1,5 +1,11 @@
 .class public interface abstract Lcom/mplus/lib/g6/f;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.g6.f
+# ROLE  : methods: getState
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # virtual methods

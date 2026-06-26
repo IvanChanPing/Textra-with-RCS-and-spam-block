@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/j8/e;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.j8.e
+# ROLE  : hints: "richmedia"; "Parameter environment cannot be null for LoggerImpl::new"
+# SIG   : extends java.lang.Object; implements com.smaato.sdk.core.log.Logger
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/smaato/sdk/core/log/Logger;

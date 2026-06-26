@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/x7/d;
 .super Landroidx/recyclerview/widget/LinearSmoothScroller;
+# ANNOTATION
+# CLASS : com.mplus.lib.x7.d
+# ROLE  : conversation action-menu overlay (contact info, Meet FAB, LocShare; extends x7/g, implements x7/l)
+# SIG   : extends androidx.recyclerview.widget.LinearSmoothScroller
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

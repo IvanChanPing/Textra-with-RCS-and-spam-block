@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/N5/b;
 .super Landroidx/fragment/app/FragmentStatePagerAdapter;
+# ANNOTATION
+# CLASS : com.mplus.lib.N5.b
+# ROLE  : Fragment (UI fragment)
+# SIG   : extends androidx.fragment.app.FragmentStatePagerAdapter
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

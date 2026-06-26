@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/v6/Z;
 .super Lcom/mplus/lib/G5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.v6.Z
+# ROLE  : Runnable; OnClickListener
+# SIG   : extends com.mplus.lib.G5.a; implements com.mplus.lib.b2.f, android.view.View$OnLayoutChangeListener, android.text.TextWatcher, java.lang.Runnable, com.mplus.lib.y5.g, android.view.View$OnClickListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/b2/f;

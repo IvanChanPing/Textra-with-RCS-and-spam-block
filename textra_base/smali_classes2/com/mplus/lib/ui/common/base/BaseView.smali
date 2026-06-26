@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/common/base/BaseView;
 .super Landroid/view/View;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.common.base.BaseView
+# ROLE  : custom View
+# SIG   : extends android.view.View; implements com.mplus.lib.x5.y
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/x5/y;

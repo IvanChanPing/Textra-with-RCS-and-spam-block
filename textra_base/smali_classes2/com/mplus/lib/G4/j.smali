@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/G4/j;
 .super Lcom/mplus/lib/f5/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.G4.j
+# ROLE  : methods: onReceive
+# SIG   : extends com.mplus.lib.f5.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

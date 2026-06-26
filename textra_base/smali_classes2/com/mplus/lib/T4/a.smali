@@ -1,5 +1,11 @@
 .class public abstract Lcom/mplus/lib/T4/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.T4.a
+# ROLE  : thread / conversation model
+# SIG   : extends java.lang.Object; implements com.mplus.lib.T4.d
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/T4/d;

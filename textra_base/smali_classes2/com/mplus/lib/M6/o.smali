@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/M6/o;
 .super Lcom/mplus/lib/x5/g;
+# ANNOTATION
+# CLASS : com.mplus.lib.M6.o
+# ROLE  : methods: getIntrinsicHeight, getIntrinsicWidth, getOpacity, setAlpha
+# SIG   : extends com.mplus.lib.x5.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

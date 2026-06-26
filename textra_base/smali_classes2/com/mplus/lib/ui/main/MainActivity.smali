@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/ui/main/MainActivity;
 .super Lcom/mplus/lib/M6/b;
+# ANNOTATION
+# CLASS : com.mplus.lib.ui.main.MainActivity
+# ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
+# SIG   : extends com.mplus.lib.M6.b
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

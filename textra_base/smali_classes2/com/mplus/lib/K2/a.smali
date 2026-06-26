@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/K2/a;
 .super Lcom/google/android/gms/common/config/GservicesValue;
+# ANNOTATION
+# CLASS : com.mplus.lib.K2.a
+# ROLE  : obfuscated class in package K2
+# SIG   : extends com.google.android.gms.common.config.GservicesValue
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

@@ -1,5 +1,11 @@
 .class public abstract synthetic Lcom/mplus/lib/L7/a;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.L7.a
+# ROLE  : obfuscated class in package L7
+# SIG   : extends java.lang.Object
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # static fields

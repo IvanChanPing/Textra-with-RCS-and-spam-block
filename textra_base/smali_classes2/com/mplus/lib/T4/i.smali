@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/T4/i;
 .super Lcom/mplus/lib/T4/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.T4.i
+# ROLE  : thread / conversation model
+# SIG   : extends com.mplus.lib.T4.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

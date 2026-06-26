@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F4/j;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.F4.j
+# ROLE  : feature flags / capability detection; hints: "emojis"; "emojis-packages"
+# SIG   : extends com.mplus.lib.F1.a; implements android.content.SharedPreferences$OnSharedPreferenceChangeListener, android.content.ComponentCallbacks2, com.mplus.lib.q4.a
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;

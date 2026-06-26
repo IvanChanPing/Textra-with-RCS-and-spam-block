@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/H6/b;
 .super Ljava/lang/Object;
+# ANNOTATION
+# CLASS : com.mplus.lib.H6.b
+# ROLE  : obfuscated class in package H6
+# SIG   : extends java.lang.Object; implements com.mplus.lib.H6.a, com.mplus.lib.y5.g
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Lcom/mplus/lib/H6/a;

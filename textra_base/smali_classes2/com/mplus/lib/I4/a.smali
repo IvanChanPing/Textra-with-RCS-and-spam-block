@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/I4/a;
 .super Lcom/mplus/lib/F1/a;
+# ANNOTATION
+# CLASS : com.mplus.lib.I4.a
+# ROLE  : hints: "%s: error writing to log file %s%s"
+# SIG   : extends com.mplus.lib.F1.a; implements android.content.SharedPreferences$OnSharedPreferenceChangeListener
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;

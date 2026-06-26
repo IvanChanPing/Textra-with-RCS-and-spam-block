@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/f3/U;
 .super Ljava/util/concurrent/atomic/AtomicReference;
+# ANNOTATION
+# CLASS : com.mplus.lib.f3.U
+# ROLE  : Runnable
+# SIG   : extends java.util.concurrent.atomic.AtomicReference; implements java.lang.Runnable
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 # interfaces
 .implements Ljava/lang/Runnable;

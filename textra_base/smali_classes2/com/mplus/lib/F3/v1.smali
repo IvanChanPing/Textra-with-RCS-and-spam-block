@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/F3/v1;
 .super Ljava/lang/IllegalArgumentException;
+# ANNOTATION
+# CLASS : com.mplus.lib.F3.v1
+# ROLE  : large utility / model package
+# SIG   : extends java.lang.IllegalArgumentException
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # direct methods

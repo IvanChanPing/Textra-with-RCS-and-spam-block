@@ -1,5 +1,11 @@
 .class public final Lcom/mplus/lib/y5/m;
 .super Lcom/mplus/lib/x5/v;
+# ANNOTATION
+# CLASS : com.mplus.lib.y5.m
+# ROLE  : yet-unclassified utility (y5)
+# SIG   : extends com.mplus.lib.x5.v
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields

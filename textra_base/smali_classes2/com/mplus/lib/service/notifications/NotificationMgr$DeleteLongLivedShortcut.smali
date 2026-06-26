@@ -1,5 +1,11 @@
 .class public Lcom/mplus/lib/service/notifications/NotificationMgr$DeleteLongLivedShortcut;
 .super Landroidx/work/Worker;
+# ANNOTATION
+# CLASS : com.mplus.lib.service.notifications.NotificationMgr$DeleteLongLivedShortcut
+# ROLE  : WorkManager Worker
+# SIG   : extends androidx.work.Worker
+# SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+
 
 
 # instance fields
