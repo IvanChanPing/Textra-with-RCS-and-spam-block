@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `f` of type `D2` with an instance of `D2` that is bound to the `K2` class. It sets up a class-level logger or handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/K2 class, setting up its internal state with an ArrayDeque, an Executor, and other fields. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 2
 
@@ -304,6 +306,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, including its hash code and the string representation of its Executor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

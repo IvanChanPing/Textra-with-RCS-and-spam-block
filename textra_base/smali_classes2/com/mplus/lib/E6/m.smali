@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field 'c' in class Lcom/mplus/lib/E6/m; by calling another method to calculate its value. The calculated value is based on the integer 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -35,6 +36,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calculates and sets the item offsets for a RecyclerView, specifically the left, right, and top margins.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 3
 

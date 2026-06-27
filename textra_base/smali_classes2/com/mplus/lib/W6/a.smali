@@ -30,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` to a string from an object of type `Lcom/mplus/lib/r4/n;` and registers the current object with another object of type `Lcom/mplus/lib/s5/E;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public O(JLcom/mplus/lib/r4/n;)V
     .locals 1
 
@@ -70,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the view visibility with animation based on the input boolean parameter. It controls the visibility of a view through the `setViewVisibleAnimated` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i(Z)V
     .locals 2
 
@@ -88,6 +90,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes fields of the class with views from the provided `Lcom/mplus/lib/t5/a;` object. It sets the `e`, `f`, and `g` fields with a view holder, a `BaseImageView`, and a `BaseTextView` respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Lcom/mplus/lib/t5/a;)V
     .locals 3
 
@@ -134,6 +137,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a material image on an `ImageView` using the provided `K5/b` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMaterialDirect(Lcom/mplus/lib/K5/b;)V
     .locals 9
 

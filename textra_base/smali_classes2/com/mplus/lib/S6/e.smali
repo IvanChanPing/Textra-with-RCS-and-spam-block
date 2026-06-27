@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method inserts an object of type `Lcom/mplus/lib/S6/a` into a sorted list of the same type, maintaining the sorted order based on a string comparison.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/util/List;Lcom/mplus/lib/S6/a;)V
     .locals 7
 
@@ -925,6 +926,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the CONTENT_URI of ContactsContract$Contacts. It ignores the integer value 5 and always returns the same Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Landroid/net/Uri;
     .locals 2
 

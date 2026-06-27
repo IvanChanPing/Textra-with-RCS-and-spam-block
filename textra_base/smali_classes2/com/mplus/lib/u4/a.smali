@@ -33,6 +33,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static string arrays in the class Lcom/mplus/lib/u4/a. It defines various column names for database tables, likely used for SMS or MMS messaging.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static synthetic constructor <clinit>()V
     .locals 17
 
@@ -215,6 +216,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/u4/a with a cursor and an integer. It calls the superclass constructor with the cursor and sets the object's field 'b' to the given integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/database/Cursor;I)V
     .locals 0
 
@@ -225,6 +227,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, including its properties and values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final I()Ljava/lang/String;
     .locals 8
 
@@ -1578,6 +1581,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the value of the `b` field in the class, using a switch statement to determine which integer to retrieve.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()I
     .locals 2
 
@@ -1646,6 +1650,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the value of the `b` field in the class, using a switch statement to determine which value to return. It appears to be retrieving integer values from another class, `Lcom/mplus/lib/r4/g;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()I
     .locals 2
 
@@ -1710,6 +1715,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the state of a database cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()I
     .locals 3
 
@@ -1852,6 +1858,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value from a database cursor based on the value of a switch variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()Ljava/lang/String;
     .locals 3
 
@@ -2154,6 +2161,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a long value by multiplying a retrieved long value by 1000 (0x3e8), based on the value of `b` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public l()J
     .locals 5
 
@@ -2342,6 +2350,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a long value representing time in milliseconds based on the value of the `b` field. It multiplies a value retrieved from the object by 1000 (0x3e8) to convert it to milliseconds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public s()J
     .locals 5
 
@@ -2418,6 +2427,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `b` field. It either calls the superclass's `toString()` method or a private `I()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 
@@ -2450,6 +2460,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value from a database cursor based on the value of `b` field in the class. It uses a switch statement to determine which column index to retrieve the string from.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public v()Ljava/lang/String;
     .locals 3
 

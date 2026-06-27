@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/s3/t, setting its 'a' field to the provided Lcom/mplus/lib/s3/C object. It also calls the superclass constructor of AbstractOwnableSynchronizer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s3/C;)V
     .locals 0
 
@@ -26,6 +27,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the exclusive owner thread of an AbstractOwnableSynchronizer instance. It takes an instance of Lcom/mplus/lib/s3/t and a Thread as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/mplus/lib/s3/t;Ljava/lang/Thread;)V
     .locals 1
 
@@ -48,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object 'a' of type Lcom/mplus/lib/s3/C. It delegates the toString() call to the 'a' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

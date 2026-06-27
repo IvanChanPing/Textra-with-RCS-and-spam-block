@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method loads the "textra" native library when the class is initialized. It sets up the native library for potential later use in GIF transcoding operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -19,6 +20,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to get the frame count of a GIF file and returns the count if successful, or -1 if an IOException occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/io/File;)I
     .locals 1
 

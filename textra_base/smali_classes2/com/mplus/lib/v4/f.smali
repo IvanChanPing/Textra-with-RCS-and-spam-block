@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array of strings, likely representing column names for a database query. It populates the array with various contact-related field names.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 11
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/v4/f, setting its context and cursor. It calls the superclass constructor with the cursor and stores the context in a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/database/Cursor;)V
     .locals 0
 

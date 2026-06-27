@@ -40,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/o3/p0; from a given string. It essentially implements the valueOf method for the enum class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/o3/p0;
     .locals 2
 
@@ -62,6 +63,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of `Lcom/mplus/lib/o3/p0` objects. It appears to be an implementation of the `values()` method, commonly used in Java enums.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/o3/p0;
     .locals 2
 
@@ -96,6 +98,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws a NoSuchElementException when called, indicating that there are no more elements to return. It does not actually retrieve or return any object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 
@@ -108,6 +111,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an IllegalStateException when called, indicating that remove() was called without a preceding next() call. It always throws this exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/o3/G0 class with an array of objects and two integers. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;II)V
     .locals 0
 
@@ -43,6 +44,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from an array at a calculated index based on the input parameter and instance fields. It also performs bounds checking using `Lcom/mplus/lib/a3/V0;->o(II)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -79,6 +81,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'e' as the size. It always returns the value of 'e', which is an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

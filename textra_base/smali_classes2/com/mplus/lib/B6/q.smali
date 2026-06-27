@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/B6/q class, storing a reference to an Lcom/mplus/lib/B6/u object. It sets the object's field 'a' to the provided Lcom/mplus/lib/B6/u parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/B6/u;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a playback error in an Android media player, logging the error with relevant details. It takes a PlaybackException as input and uses it to construct a log message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPlayerError(Landroidx/media3/common/PlaybackException;)V
     .locals 3
 
@@ -56,6 +58,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method hides a progress bar after the first frame is rendered.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onRenderedFirstFrame()V
     .locals 3
 

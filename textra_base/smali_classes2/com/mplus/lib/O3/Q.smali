@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/O3/Q; with a long and an integer value. It sets the object's fields 'a' and 'b' to the provided integer and long values, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(JI)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle different cases based on the value of `a` and performs actions such as calling `Lcom/mplus/lib/P4/p;->M` or `Lcom/inmobi/media/mc;->a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 5
 

@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/r4/F0;. It does this by acquiring a lock on the class and returning the static instance stored in Lcom/mplus/lib/r4/F0;->c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/r4/F0;
     .locals 3
 
@@ -60,6 +61,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of vibrate patterns from a SQLite database and returns them as an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static S()Ljava/util/ArrayList;
     .locals 6
 
@@ -180,6 +182,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an incoming SMS message, extracting relevant information such as the message body, sender's phone number, and timestamp, and returns an object containing this information.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public M(Landroid/content/Intent;)Lcom/mplus/lib/r4/s0;
     .locals 13
 
@@ -704,6 +707,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns a list of `E0` objects if it hasn't been initialized before.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public N()Ljava/util/List;
     .locals 8
 
@@ -1057,6 +1061,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method attempts to parse a given SMS PDU (Protocol Data Unit) and returns an `android/telephony/SmsMessage` object. It tries to use reflection to invoke the `createFromPdu` method on the `SmsMessage` class, and if that fails, it falls back to the standard `createFromPdu` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public Q(Ljava/lang/String;[B)Landroid/telephony/SmsMessage;
     .locals 6
 
@@ -1232,6 +1237,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object of type `Lcom/mplus/lib/r4/E0;` based on a given ID, first checking a list and then querying a database if not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public R(J)Lcom/mplus/lib/r4/E0;
     .locals 5
 

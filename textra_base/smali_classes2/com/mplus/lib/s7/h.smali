@@ -32,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles page selection, specifically invoking a method to get the current view and then passing it to another method for processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPageSelected(I)V
     .locals 2
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/X8/k; with a GestureDetector and an integer. It sets the instance's fields 'a' and 'b' to the provided integer and GestureDetector, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/view/GestureDetector;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles touch events for a view, delegating the handling to different classes based on the value of a field. It returns a boolean indicating whether the event was handled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 

@@ -15,6 +15,7 @@
 .method public abstract a(C)Z
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given character satisfies a certain condition by calling `a(C)Z` on the current object. It returns a boolean value indicating whether the character meets this condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Z
     .locals 1
 

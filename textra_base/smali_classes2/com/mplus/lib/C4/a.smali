@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static UriMatcher instance and adds URI patterns for "tmp/*", "draft/attachments/*/*", and "draft/attachments/*" with authorities "com.textra2.internal" and codes 1 and 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 

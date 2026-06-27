@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/T5/b, setting its fields with the provided Lcom/mplus/lib/T5/c and CompletableFuture objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/T5/c;Ljava/util/concurrent/CompletableFuture;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the file size of an export result exceeds a certain threshold and completes a CompletableFuture with a specific result based on the comparison.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCompleted(Landroidx/media3/transformer/Composition;Landroidx/media3/transformer/ExportResult;)V
     .locals 3
 
@@ -72,6 +74,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method completes a CompletableFuture exceptionally when an ExportException occurs. It handles the error by passing the exception to the CompletableFuture.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onError(Landroidx/media3/transformer/Composition;Landroidx/media3/transformer/ExportResult;Landroidx/media3/transformer/ExportException;)V
     .locals 1
 

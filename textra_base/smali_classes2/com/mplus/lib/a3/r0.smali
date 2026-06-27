@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/r0 with an integer parameter. It calls the superclass constructor with a null argument and sets the object's field 'a' to the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'a' as an integer. It does not use the defined constant value 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 

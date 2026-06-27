@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/z8/e, storing two IntConsumer objects. It sets up the object's state with the provided consumers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/core/util/IntConsumer;Lcom/smaato/sdk/core/util/IntConsumer;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls a static method to invoke two IntConsumer instances with the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(I)V
     .locals 3
 

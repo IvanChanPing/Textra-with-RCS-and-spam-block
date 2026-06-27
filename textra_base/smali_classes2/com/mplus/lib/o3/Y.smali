@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `d` with an empty array of `Map$Entry` objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -211,6 +212,7 @@
 .method public abstract c()Lcom/mplus/lib/o3/e0;
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually clear anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -225,6 +227,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a key is present in a map by attempting to retrieve its value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsKey(Ljava/lang/Object;)Z
     .locals 1
 
@@ -252,6 +255,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a value in a collection. It delegates the check to another method in class Lcom/mplus/lib/o3/O.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsValue(Ljava/lang/Object;)Z
     .locals 2
 
@@ -273,6 +277,7 @@
 .method public abstract d()Lcom/mplus/lib/o3/O;
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of calling `f()` on the current object, which presumably returns a set. It does not actually return an entry set as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic entrySet()Ljava/util/Set;
     .locals 2
 
@@ -285,6 +290,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided object is equal to the current object by delegating to Lcom/mplus/lib/o3/s;->f. It returns a boolean result indicating equality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
@@ -295,6 +301,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/o3/e0;`, either a cached one or a newly created one by calling `b()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public f()Lcom/mplus/lib/o3/e0;
     .locals 2
 
@@ -324,6 +331,7 @@
 .method public abstract get(Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a value from an object using the provided key and returns the value if it exists, otherwise it returns a default value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -345,6 +353,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/o3/e0;`, initializing it by calling `c()` if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h()Lcom/mplus/lib/o3/e0;
     .locals 2
 
@@ -368,6 +377,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a hash code for the object, specifically by calling a method to get a set and then passing it to a utility method to calculate the hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -386,6 +396,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/O, initializing it by calling d() if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i()Lcom/mplus/lib/o3/O;
     .locals 2
 
@@ -409,6 +420,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a map is empty by calling the size() method and returns true if the size is 0, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 2
 
@@ -436,6 +448,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set object by calling the `h()` method of the current class. It appears to be a bridge method for the `keySet()` method in a Map interface implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic keySet()Ljava/util/Set;
     .locals 2
 
@@ -450,6 +463,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not store any data as its name 'put' might suggest.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -464,6 +478,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the putAll operation is not supported. It does not actually add all elements from a given map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final putAll(Ljava/util/Map;)V
     .locals 1
 
@@ -478,6 +493,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the remove operation is not supported. It does not actually remove an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -492,6 +508,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a utility method to convert a map to a string. It delegates the conversion to Lcom/mplus/lib/o3/s;->u(Ljava/util/Map;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -19,6 +19,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a boolean field to true and modifies a byte field by performing a bitwise OR operation with 1, then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Z)Lcom/google/android/gms/internal/mlkit_common/zzsa;
     .locals 2
 
@@ -45,6 +46,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of a field `c` to 1 and sets a bit in field `d`, then returns the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(I)Lcom/google/android/gms/internal/mlkit_common/zzsa;
     .locals 1
 

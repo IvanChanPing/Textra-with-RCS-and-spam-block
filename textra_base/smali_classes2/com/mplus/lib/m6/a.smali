@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/m6/a; that calls the superclass constructor Lcom/mplus/lib/D5/b;-><init>()V. It initializes the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method schedules a delayed task to run after a 250ms (0xfa) delay on the fragment's view. It creates an instance of Lcom/mplus/lib/i9/i and posts it to the view with a delay.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 4
 
@@ -58,6 +60,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout with the ID 0x7f0d002b using the provided LayoutInflater and returns the inflated View. It also stores the LayoutInflater in the object's field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 
@@ -82,6 +85,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDismiss callback for a dialog, unregistering a shared preference change listener and removing an object from an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
 
@@ -118,6 +122,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a fragment and initializes various components, including a list view and its adapter. It also retrieves and processes contact data from a bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 6
 

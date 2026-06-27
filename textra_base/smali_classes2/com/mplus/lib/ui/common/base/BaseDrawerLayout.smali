@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a BaseDrawerLayout object, calling the superclass constructor. It sets up the layout with the given context and attribute set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
@@ -19,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual string creation to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

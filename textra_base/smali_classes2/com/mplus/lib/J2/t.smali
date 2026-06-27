@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/J2/t class with a Lcom/mplus/lib/J2/u object and a Lcom/google/android/gms/common/ConnectionResult object. It sets these objects as fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/J2/u;Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the connection result of a Google API client, either successfully connecting and getting a remote service or handling a failed connection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

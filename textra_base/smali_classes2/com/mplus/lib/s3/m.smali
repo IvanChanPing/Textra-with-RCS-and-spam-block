@@ -183,6 +183,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method sets the field at offset `f` of object `p1` to `p2` using `sun/misc/Unsafe`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L(Lcom/mplus/lib/s3/n;Lcom/mplus/lib/s3/n;)V
     .locals 4
 
@@ -195,6 +196,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a field in the provided `Lcom/mplus/lib/s3/n` object to the given `Ljava/lang/Thread` using `Lsun/misc/Unsafe;->putObject`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/s3/n;Ljava/lang/Thread;)V
     .locals 4
 
@@ -209,6 +211,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to perform an operation and returns a boolean result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p(Lcom/mplus/lib/s3/o;Lcom/mplus/lib/s3/c;Lcom/mplus/lib/s3/c;)Z
     .locals 7
 
@@ -239,6 +242,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to perform an operation, returning a boolean result. It appears to be using Java's Unsafe class for low-level memory access.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Lcom/mplus/lib/s3/o;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 7
 
@@ -267,6 +271,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to perform an operation and returns a boolean result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Lcom/mplus/lib/s3/o;Lcom/mplus/lib/s3/n;Lcom/mplus/lib/s3/n;)Z
     .locals 7
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/Y2/j, storing a LocationCallback and calling the superclass constructor with a GoogleApiClient.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/location/LocationCallback;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a location callback registration using Google's Location API. It creates a listener key and then invokes the `zzB` method on a `zzda` object to register the callback.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic doExecute(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     .locals 4
 

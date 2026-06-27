@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the 'useNonStandardStacks' value from a TCModel object and returns it as an Object. It appears to be related to GDPR TCFv2 settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -23,6 +24,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the use of non-standard stacks in a TCModel instance based on a provided Boolean value. It casts the input object to a Boolean and then calls the setUseNonStandardStacks method on the TCModel instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

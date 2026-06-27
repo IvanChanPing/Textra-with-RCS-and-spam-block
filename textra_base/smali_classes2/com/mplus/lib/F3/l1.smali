@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Lcom/mplus/lib/F3/l1 class. It creates a new instance with default parameters and assigns it to the static field f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -43,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor that initializes an object by calling another constructor with specific parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 4
 
@@ -61,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/F3/l1 class with the given parameters. It sets the object's fields with the provided integer, integer array, object array, and boolean values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I[I[Ljava/lang/Object;Z)V
     .locals 1
 
@@ -153,6 +156,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks a boolean flag and either returns immediately or throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 2
 
@@ -485,6 +489,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method appears to deserialize data from a `Lcom/mplus/lib/F3/r` object and store it in the current object, handling different data types based on the value of `p1`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(ILcom/mplus/lib/F3/r;)Z
     .locals 7
 
@@ -669,6 +674,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 9
 
@@ -814,6 +820,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method appears to store an integer and an object in arrays, then increments an index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(ILjava/lang/Object;)V
     .locals 3
 
@@ -1032,6 +1039,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on its fields, including an integer, an array of integers, and an array of objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 9
 

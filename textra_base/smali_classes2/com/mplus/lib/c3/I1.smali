@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/c3/I1, setting its 'a' field to the provided Lcom/mplus/lib/c3/a object and calling the superclass constructor. It appears to be a wrapper around Lcom/google/android/gms/internal/mlkit_language_id_common/zzu.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/c3/a;)V
     .locals 0
 
@@ -67,6 +68,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object, specifically the value of field 'c' in the 'a' object of class Lcom/mplus/lib/c3/a. It appears to be related to a data structure or collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

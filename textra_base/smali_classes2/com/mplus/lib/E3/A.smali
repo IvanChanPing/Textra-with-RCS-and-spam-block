@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/A with an integer parameter. It sets the integer value to a field 'a' in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current instance, specifically if it's an instance of the same class with the same 'a' field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -69,6 +71,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns a hash code for the object by XORing the value of instance variable 'a' with a constant. It appears to be a simple implementation of the hashCode method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 

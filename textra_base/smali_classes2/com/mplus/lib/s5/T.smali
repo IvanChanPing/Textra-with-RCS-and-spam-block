@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes received content by partitioning it and handling URIs in the clip data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceiveContent(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
     .locals 7
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static instances of the class Lcom/mplus/lib/o3/x0. It sets the values of the static fields b and c with new instances of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static synthetic constructor <clinit>()V
     .locals 2
 
@@ -44,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/o3/x0; that initializes a field 'a' with the provided integer value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -152,6 +154,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of an ordering based on the value of the instance field 'a'. It maps the field value to a specific ordering string, such as "Ordering.natural()" or "Ordering.natural().reverse()".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

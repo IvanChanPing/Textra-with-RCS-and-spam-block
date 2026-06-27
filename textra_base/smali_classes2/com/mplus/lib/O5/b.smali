@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O5/b; that calls the superclass constructor Lcom/mplus/lib/x5/p;-><init>()V.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -436,6 +437,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onAttach method of a Fragment to cast the attached Activity to a specific type and add the Fragment as an observer to an Observable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAttach(Landroid/app/Activity;)V
     .locals 1
 
@@ -464,6 +466,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout with the ID 0x7f0d00e8 and returns the resulting View. It does not utilize the provided Bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
@@ -484,6 +487,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method of a Fragment, calling the superclass's onDestroy and closing the cursor of a CursorAdapter if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 3
 
@@ -657,6 +661,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the fragment based on an observable change, checking a "SEARCH_FIELD" boolean in the fragment's arguments and calling a method to handle the view if it's true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final update(Ljava/util/Observable;Ljava/lang/Object;)V
     .locals 1
 

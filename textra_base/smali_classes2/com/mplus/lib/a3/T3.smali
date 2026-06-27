@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a T3 object with a U3 object, a long value, and a Va/h object. It sets these values as instance variables and calls the OutputStream constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/U3;JLcom/mplus/lib/Va/h;)V
     .locals 0
 
@@ -120,6 +121,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and conditionally calls the `flush()` method of an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final flush()V
     .locals 2
 
@@ -145,6 +147,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a single byte to an output stream after converting an integer to a byte. It then returns without any further action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write(I)V
     .locals 4
 

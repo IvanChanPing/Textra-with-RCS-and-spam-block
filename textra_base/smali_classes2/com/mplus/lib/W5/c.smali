@@ -408,6 +408,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method unregisters the current object from an event bus and quits a looper.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 2
 
@@ -440,6 +441,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a bitmap from a given Uri, handling different Android versions and image loading strategies.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/W5/b;)Landroid/graphics/Bitmap;
     .locals 7
 
@@ -590,6 +592,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the item count of the superclass plus one. It appears to add a fixed offset to the superclass's item count.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemCount()I
     .locals 2
 

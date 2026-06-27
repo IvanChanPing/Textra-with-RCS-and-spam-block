@@ -49,6 +49,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/O7/d` class, setting up various properties and configurations, including logging, network security, and dependency injection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/app/Application;Lcom/smaato/sdk/core/Config;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 9
 

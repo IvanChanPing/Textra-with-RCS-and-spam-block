@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/j5/e, setting its fields and calling the superclass constructor. It appears to be a constructor that takes a DebugTelephonyActivity, SharedPreferences, and an integer, and uses them to initialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/service/telephony/runtime/debug/DebugTelephonyActivity;Landroid/content/SharedPreferences;I)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a boolean value from a list of objects based on an index and returns it as a Boolean object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized g()Ljava/lang/Boolean;
     .locals 3
 
@@ -108,6 +110,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Boolean object by calling the `g()` method of the same class. It serves as a bridge to the `g()` method, providing a synthetic implementation of the `get()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic get()Ljava/lang/Object;
     .locals 2
 
@@ -120,6 +123,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sends a request with a boolean value to a telephony debug service.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized i(Ljava/lang/Boolean;)V
     .locals 4
 
@@ -173,6 +177,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean value by casting the input object to a Boolean and calling method `i` with it. It appears to be a bridge method for setting a boolean property.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic set(Ljava/lang/Object;)V
     .locals 1
 

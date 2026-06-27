@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/C0, storing the provided Iterator in a field. It checks the class of the provided Iterator object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Iterator;)V
     .locals 0
 
@@ -34,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there is a next item in an iterator and returns true if available, or if a certain condition (b) is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -75,6 +77,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in an iteration, either from an Iterator or a cached object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -120,6 +123,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an item from an iterator if no item has been peeked at.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 
@@ -152,6 +156,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object from an iterator if it hasn't been initialized, then marks it as initialized and returns the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Ljava/lang/Object;
     .locals 2
 

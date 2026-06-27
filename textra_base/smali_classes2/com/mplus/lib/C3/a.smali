@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static character array with hexadecimal digits. It populates the array with the characters from the string "0123456789ABCDEF".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object with a boolean array representing safe characters, throwing an exception if alphanumeric characters are explicitly specified as safe.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 7
 

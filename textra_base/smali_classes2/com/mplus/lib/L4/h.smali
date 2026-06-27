@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/L4/h, calling the superclass constructor with a specific value and setting a field 'c' to the provided Lcom/mplus/lib/E3/C object. It sets up the object with a given configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/B2/l;Lcom/mplus/lib/E3/C;)V
     .locals 1
 

@@ -25,6 +25,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method notifies observers of a change by calling `dispatchChange` on a `ContentObservable` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChange(Z)V
     .locals 3
 

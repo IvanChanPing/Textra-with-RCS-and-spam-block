@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J6/a; with a given integer value and calls the superclass constructor of java/util/ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -25,6 +26,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J6/a, setting its internal state with a given Element and initial capacity. It also sets a field 'a' to 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lorg/jsoup/nodes/Element;I)V
     .locals 1
 
@@ -41,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes a given CharSequence, handling spans and adding them to a collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/CharSequence;)V
     .locals 9
 
@@ -324,6 +327,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds an object at a specified index in the list, conditionally calling a `c()` method before adding if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public add(ILjava/lang/Object;)V
     .locals 2
 
@@ -430,6 +434,7 @@
     .end sparse-switch
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current list at a specified index, with special handling based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addAll(ILjava/util/Collection;)Z
     .locals 2
 
@@ -466,6 +471,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current list, conditionally calling a `c()` method before adding if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -535,6 +541,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the 'e' field of an Element object by setting it to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()V
     .locals 3
 
@@ -555,6 +562,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the list by either calling the superclass's clear method directly or by removing detached views from a CoverFlow widget before clearing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public clear()V
     .locals 5
 
@@ -637,6 +645,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object at a specified index from the list, conditionally calling an additional method `c()` based on the value of a field `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(I)Ljava/lang/Object;
     .locals 2
 
@@ -673,6 +682,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from the list, conditionally calling a method `c()` before removal if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(Ljava/lang/Object;)Z
     .locals 2
 
@@ -709,6 +719,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements from the collection that are contained in the specified collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -745,6 +756,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list, conditionally calling a method `c()` before removal if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public removeRange(II)V
     .locals 2
 
@@ -813,6 +825,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method overrides the set method of ArrayList to conditionally call a method c() before setting an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

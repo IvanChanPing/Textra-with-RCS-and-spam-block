@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/F3/G. It creates a new instance and assigns it to the static field c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/G, setting its 'a' field to an empty map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -43,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a singleton instance of `Lcom/mplus/lib/F3/G;`, attempting to create it via reflection if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b()Lcom/mplus/lib/F3/G;
     .locals 7
 
@@ -177,6 +180,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an instance of Lcom/mplus/lib/F3/X from a map using a custom key object Lcom/mplus/lib/F3/F.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(ILcom/mplus/lib/F3/D0;)Lcom/mplus/lib/F3/X;
     .locals 2
 

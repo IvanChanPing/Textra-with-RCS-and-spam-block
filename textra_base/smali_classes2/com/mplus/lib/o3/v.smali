@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/o3/v, setting its properties based on the provided Lcom/mplus/lib/o3/w object and an integer index. It retrieves an object from the array returned by Lcom/mplus/lib/o3/w;->j()[Ljava/lang/Object; using the given index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/w;I)V
     .locals 1
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object is present in a collection and updates the index if it's not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 5
 
@@ -126,6 +128,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a value from a map or an array based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue()Ljava/lang/Object;
     .locals 4
 

@@ -7,6 +7,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for an Android BroadcastReceiver. It initializes the receiver by calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -17,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method receives a broadcast intent and calls the Q() method of the X4/i class instance. It appears to be part of an initialization or setup process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 

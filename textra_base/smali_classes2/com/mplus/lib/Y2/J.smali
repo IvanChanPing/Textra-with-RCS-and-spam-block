@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/Y2/J, storing a provided zzcs object. It calls the superclass constructor and sets the object as a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/location/zzcs;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies a listener with a new location. It creates a new instance of Lcom/mplus/lib/Y2/H with the provided location and uses it to notify the listener held by Lcom/google/android/gms/internal/location/zzcs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Landroid/location/Location;)V
     .locals 3
 
@@ -49,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies a listener using the `ListenerHolder` from Google's Android API. It creates an instance of `Lcom/mplus/lib/Y2/I` and passes it to the `notifyListener` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()V
     .locals 3
 

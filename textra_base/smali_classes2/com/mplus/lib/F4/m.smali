@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of Lcom/mplus/lib/F4/l. It sets this instance as a static field in the class Lcom/mplus/lib/F4/m.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -49,6 +50,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string value from a HashMap based on a given CharSequence key, initializing the HashMap if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 9
 

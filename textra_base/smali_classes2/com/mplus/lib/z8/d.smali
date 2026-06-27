@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an array mapping Smaato ad formats to integer values. It populates the array with values for DISPLAY, STATIC_IMAGE, RICH_MEDIA, VIDEO, NATIVE, and INTERSTITIAL ad formats.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a gesture detector with a given context and listener. It sets up a new GestureDetector instance and stores it in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/C5/c;)V
     .locals 1
 
@@ -54,6 +55,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met. It appears to be a getter method for a boolean field 'c' in the class Lcom/mplus/lib/C5/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -101,6 +103,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a single tap up event on the screen, calling another method to process the tap and storing the result. It then returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 2
 
@@ -127,6 +130,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -78,6 +78,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method implements a singleton pattern for the `Lcom/mplus/lib/o4/a` class, ensuring only one instance is created. It returns the singleton instance of `Lcom/mplus/lib/o4/a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/o4/a;
     .locals 5
 
@@ -154,6 +155,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method deletes unused files in a given directory that are older than a specified time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Ljava/io/File;J)V
     .locals 7
 
@@ -266,6 +268,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new File object in the application's cache directory with the given file name and ensures the file's directory exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/String;)Ljava/io/File;
     .locals 3
 
@@ -296,6 +299,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a HashMap, checks the value of each entry, and if the value is greater than 0, it calls methods to create a file and set its last modified time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 8
 

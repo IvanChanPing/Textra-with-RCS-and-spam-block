@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/V3/a` class with a context, a `Lcom/mplus/lib/u5/b` object, and an ArrayList. It sets various instance fields based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/u5/b;Ljava/util/ArrayList;)V
     .locals 2
 
@@ -71,6 +72,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method schedules a runnable to run on the main thread using `Lcom/mplus/lib/ui/main/App;->runOnMainThread` with a `Lcom/mplus/lib/T/a` instance. It takes an instance of `Lcom/mplus/lib/Y3/a;` as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/Y3/a;)V
     .locals 4
 
@@ -538,6 +540,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

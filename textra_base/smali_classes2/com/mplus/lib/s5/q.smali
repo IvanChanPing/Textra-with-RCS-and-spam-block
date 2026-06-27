@@ -478,6 +478,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the top inset of the system bars and display cutout from the root window insets of a view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()I
     .locals 4
 
@@ -3548,6 +3549,7 @@
 .method public abstract Y()I
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/P6/c, either by retrieving an existing one or creating a new one if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Lcom/mplus/lib/P6/c;
     .locals 4
 
@@ -3591,6 +3593,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of an activity, specifically processing the result of a contact pick or other intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityResult(IILandroid/content/Intent;)V
     .locals 6
 
@@ -3717,6 +3720,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onCreate method of an Android Activity, calling the superclass's onCreate and setting the content view to a specific layout resource. It then returns without any further actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
@@ -4332,6 +4336,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the onResume lifecycle event, performing various tasks such as updating camera settings, checking alarm manager status, and registering event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onResume()V
     .locals 8
 
@@ -4946,6 +4951,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onUserInteraction() method of an Android Activity, calling the superclass method and then invoking o0() on an instance of Lcom/mplus/lib/v6/P.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onUserInteraction()V
     .locals 2
 
@@ -4962,6 +4968,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onUserLeaveHint() method of ComponentActivity, calling the superclass method and then invoking q0() on an instance of Lcom/mplus/lib/v6/P.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onUserLeaveHint()V
     .locals 2
 

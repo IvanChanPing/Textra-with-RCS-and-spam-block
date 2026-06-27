@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates a LongSparseArray with a given ID and processes a collection of objects, potentially triggering an asynchronous task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(JLcom/mplus/lib/r4/n;)V
     .locals 12
 
@@ -150,6 +151,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method schedules or reschedules a task based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized N(JLcom/mplus/lib/r4/n;)V
     .locals 3
 
@@ -320,6 +322,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method clears the LongSparseArray 'c' in the class Lcom/mplus/lib/v4/g while synchronizing access to it. It does not use the input event parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/v4/d;)V
     .locals 1
 

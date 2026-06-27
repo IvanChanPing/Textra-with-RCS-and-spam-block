@@ -63,6 +63,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes the default instance of `SendTextPersister$AttachmentSpan` and registers it with the protobuf library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -79,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the `SendTextPersister$AttachmentSpan` class, setting default values for its fields. It sets the `memoizedIsInitialized` byte to 2 and initializes the `uri_`, `contentType_`, and `contentTypeKind_` strings to empty strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private constructor <init>()V
     .locals 1
 
@@ -99,6 +101,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of SendTextPersister$AttachmentSpan. It provides static access to the DEFAULT_INSTANCE field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$000()Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -107,6 +110,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the start position of a span in a SendTextPersister AttachmentSpan. It invokes a private method to update the span's start index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$100(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;I)V
     .locals 1
 
@@ -115,6 +119,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type of a SendTextPersister AttachmentSpan. It invokes a private setter method with a given string parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1000(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;Ljava/lang/String;)V
     .locals 1
 
@@ -123,6 +128,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the content type of a SendTextPersister AttachmentSpan. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1100(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;)V
     .locals 1
 
@@ -131,6 +137,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type bytes for a SendTextPersister AttachmentSpan. It invokes a private method to update the content type bytes with the provided F3/m object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1200(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -143,6 +150,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type kind of a SendTextPersister$AttachmentSpan object using the provided string. It invokes a private setter method to update the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1300(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;Ljava/lang/String;)V
     .locals 1
 
@@ -155,6 +163,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the content type kind of a SendTextPersister AttachmentSpan. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1400(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;)V
     .locals 1
 
@@ -165,6 +174,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type kind bytes for an AttachmentSpan object. It invokes a private method to update the content type kind bytes with the provided data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1500(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -177,6 +187,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the span start of a SendTextPersister AttachmentSpan. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$200(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;)V
     .locals 1
 
@@ -185,6 +196,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the span end of a SendTextPersister$AttachmentSpan object. It takes an integer parameter and calls the private setSpanEnd method on the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$300(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;I)V
     .locals 1
 
@@ -197,6 +209,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the span end of a SendTextPersister AttachmentSpan. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$400(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;)V
     .locals 1
 
@@ -207,6 +220,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the span flags of a SendTextPersister$AttachmentSpan object. It invokes a private method to set the span flags with the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$500(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;I)V
     .locals 1
 
@@ -219,6 +233,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the span flags of a SendTextPersister$AttachmentSpan object. It invokes a private method to reset the flags.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$600(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;)V
     .locals 1
 
@@ -239,6 +254,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the URI of a SendTextPersister AttachmentSpan instance. It does this by invoking the private clearUri method on the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$800(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;)V
     .locals 1
 
@@ -249,6 +265,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the URI bytes for a SendTextPersister AttachmentSpan. It invokes a private setter method with a provided F3/m object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$900(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -343,6 +360,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the span flags by resetting the `spanFlags_` field to 0 and modifying the `bitField0_` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearSpanFlags()V
     .locals 2
 
@@ -367,6 +385,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the span start by resetting the `spanStart_` field to 0 and updating the `bitField0_` to reflect this change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearSpanStart()V
     .locals 2
 
@@ -421,6 +440,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of SendTextPersister$AttachmentSpan. It appears to be a getter for a predefined static instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static getDefaultInstance()Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -433,6 +453,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder instance for the AttachmentSpan class. It returns a new instance of Lcom/mplus/lib/k6/a, which is a builder for the AttachmentSpan class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder()Lcom/mplus/lib/k6/a;
     .locals 2
 
@@ -455,6 +476,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for a SendTextPersister$AttachmentSpan protobuf object. It returns a new instance of Lcom/mplus/lib/k6/a; based on the provided AttachmentSpan.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;)Lcom/mplus/lib/k6/a;
     .locals 2
 
@@ -473,6 +495,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited protocol buffer from an input stream and returns a SendTextPersister$AttachmentSpan object. It utilizes the parseDelimitedFrom method from the com/google/protobuf/c class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -493,6 +516,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited protocol buffer from an input stream. It returns an instance of SendTextPersister$AttachmentSpan.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -513,6 +537,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from a given input stream and returns a SendTextPersister$AttachmentSpan object. It utilizes the Google Protocol Buffers library to perform the parsing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -533,6 +558,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message into a SendTextPersister$AttachmentSpan object. It uses a default instance and invokes a parseFrom method from the com/google/protobuf/c class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -553,6 +579,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from a given input stream and returns a SendTextPersister$AttachmentSpan object. It utilizes the parseFrom method of the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -571,6 +598,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from input data using the `parseFrom` method of `com/google/protobuf/c`. It returns an instance of `SendTextPersister$AttachmentSpan`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -589,6 +617,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a SendTextPersister$AttachmentSpan object from an InputStream. It utilizes Google's protobuf library to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -607,6 +636,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a SendTextPersister$AttachmentSpan object from an input stream using Google's protobuf library. It returns the parsed AttachmentSpan object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -625,6 +655,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `SendTextPersister$AttachmentSpan` object from a given `ByteBuffer`. It utilizes Google's protobuf library to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -645,6 +676,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `SendTextPersister$AttachmentSpan` object from a `ByteBuffer` using the `parseFrom` method from `com/google/protobuf/c`. It returns the parsed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -661,6 +693,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a SendTextPersister$AttachmentSpan object using Google's protobuf library. It returns the parsed AttachmentSpan instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([B)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -677,6 +710,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a SendTextPersister$AttachmentSpan object using Google's protobuf library. It returns the parsed AttachmentSpan object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([BLcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;
     .locals 2
 
@@ -695,6 +729,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a parser for the AttachmentSpan class. It retrieves the parser from the DEFAULT_INSTANCE of SendTextPersister$AttachmentSpan.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parser()Lcom/mplus/lib/F3/O0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -717,6 +752,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type of an attachment span. It updates the bitField0_ and stores the provided content type string in the contentType_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setContentType(Ljava/lang/String;)V
     .locals 2
 
@@ -737,6 +773,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type bytes of an AttachmentSpan object. It retrieves a string from the input object and updates the object's contentType_ field, then sets the corresponding bit in the bitField0_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setContentTypeBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -763,6 +800,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type kind of an attachment span by storing the provided string and updating the bit field. It appears to be part of a protocol buffer implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setContentTypeKind(Ljava/lang/String;)V
     .locals 2
 
@@ -785,6 +823,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content type kind bytes in the AttachmentSpan object. It retrieves a string from the input object and stores it in the contentTypeKind_ field, then updates the bitField0_ field to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setContentTypeKindBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -813,6 +852,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the span end value in the AttachmentSpan object. It updates the bitField0_ and spanEnd_ fields of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSpanEnd(I)V
     .locals 2
 
@@ -833,6 +873,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the span flags of an AttachmentSpan object. It modifies the bitField0_ and sets the spanFlags_ to the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSpanFlags(I)V
     .locals 2
 
@@ -855,6 +896,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the start position of a span in the `SendTextPersister$AttachmentSpan` class. It updates the `bitField0_` and `spanStart_` fields with the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSpanStart(I)V
     .locals 2
 
@@ -875,6 +917,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the URI of an AttachmentSpan object. It updates the bitField0_ flag and stores the provided URI string in the uri_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setUri(Ljava/lang/String;)V
     .locals 2
 
@@ -895,6 +938,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the `uri_` field of the `SendTextPersister$AttachmentSpan` class and updates the `bitField0_` field to reflect the change. It takes a `com/mplus/lib/F3/m` object as input and extracts a string from it using the `o()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setUriBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -1143,6 +1187,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the content type of an attachment span. It retrieves the content type from the `contentType_` field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getContentType()Ljava/lang/String;
     .locals 2
 
@@ -1167,6 +1212,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the content type kind of an attachment span. It retrieves the value from the `contentTypeKind_` field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getContentTypeKind()Ljava/lang/String;
     .locals 2
 
@@ -1197,6 +1243,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the end position of a span. It retrieves the value of the `spanEnd_` field from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSpanEnd()I
     .locals 2
 
@@ -1207,6 +1254,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `spanFlags_` field of the `SendTextPersister$AttachmentSpan` class. It appears to be a getter method for the `spanFlags_` attribute.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSpanFlags()I
     .locals 2
 
@@ -1219,6 +1267,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the start position of a span. It retrieves the value of the `spanStart_` field from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSpanStart()I
     .locals 2
 
@@ -1229,6 +1278,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the 'uri_' field of the class as a string. It appears to be a getter method for the uri property.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getUri()Ljava/lang/String;
     .locals 2
 
@@ -1255,6 +1305,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `AttachmentSpan` object has a content type set by checking the `bitField0_` flag. It returns `true` if the flag is set, and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasContentType()Z
     .locals 2
 
@@ -1286,6 +1337,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a bit flag (0x20) is set in the `bitField0_` variable, indicating the presence of a content type kind. It returns true (1) if the flag is set and false (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasContentTypeKind()Z
     .locals 2
 
@@ -1315,6 +1367,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a span has an end by verifying a specific bit flag in the `bitField0_` integer field. It returns true if the flag is set and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasSpanEnd()Z
     .locals 2
 
@@ -1342,6 +1395,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific flag (0x4) is set in the `bitField0_` integer field of the `SendTextPersister$AttachmentSpan` class. It returns `true` if the flag is set and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasSpanFlags()Z
     .locals 2
 
@@ -1371,6 +1425,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a span start is present by checking the first bit of the `bitField0_` integer field. It returns true if the bit is set and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasSpanStart()Z
     .locals 3
 
@@ -1398,6 +1453,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `bitField0_` has the 4th bit (0x8) set, indicating the presence of a URI. It returns true if the bit is set, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasUri()Z
     .locals 2
 

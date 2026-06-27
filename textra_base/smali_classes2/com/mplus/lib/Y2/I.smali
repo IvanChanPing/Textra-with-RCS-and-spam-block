@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/Y2/I, setting its field 'a' to the provided Lcom/mplus/lib/Y2/J object. It is a constructor method for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/Y2/J;)V
     .locals 0
 

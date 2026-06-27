@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/b3/a, setting its properties based on the provided parameters. It checks the index against the size of the collection and throws an exception if it's out of bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbi;I)V
     .locals 2
 
@@ -55,6 +56,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if there are more elements to iterate over by comparing two instance variables. It returns true if the first variable is less than the second, indicating more elements are available, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 3
 
@@ -82,6 +84,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a previous item and returns true if the internal index `b` is greater than 0, and false otherwise. It appears to be part of an iterator or cursor implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -109,6 +112,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in a sequence if available, otherwise throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -150,6 +154,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'b' in the class Lcom/mplus/lib/b3/a. It does not appear to use or return the next index as its name suggests, but rather returns the current value of 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 2
 
@@ -162,6 +167,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous object in a sequence if it exists, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 2
 
@@ -205,6 +211,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous index by decrementing the current index stored in `b` by 1. It does not handle any potential underflow.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 

@@ -41,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the constant state of a drawable object, specifically an instance of Lcom/mplus/lib/W2/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 2
 

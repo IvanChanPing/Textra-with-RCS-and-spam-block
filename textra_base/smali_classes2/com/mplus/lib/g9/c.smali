@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/g9/c, setting its field 'a' to the provided Lcom/mplus/lib/g9/f object after checking it for null. It ensures the object is not null using the requireNonNull method from Smaato SDK.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/g9/f;)V
     .locals 0
 

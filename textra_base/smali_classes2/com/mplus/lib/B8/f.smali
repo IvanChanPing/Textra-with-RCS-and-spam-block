@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B8/f, setting its internal state with a provided list and object. It appears to be a constructor for a custom list wrapper class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/List;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzahx;)V
     .locals 1
 
@@ -40,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B8/f, setting its internal state with a given list and object. It appears to be a constructor that inherits from AbstractSequentialList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/List;Lcom/mplus/lib/n3/e;)V
     .locals 1
 
@@ -60,6 +62,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B8/f, setting its internal state with a provided list and a nullable function. It validates the inputs using Lcom/smaato/sdk/core/util/Objects;->requireNonNull.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/List;Lcom/smaato/sdk/core/util/fi/NullableFunction;)V
     .locals 1
 
@@ -90,6 +93,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the list based on the value of the instance variable 'a'. It either calls the superclass's clear method or clears a specific list 'b' if 'a' is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public clear()V
     .locals 2
 
@@ -120,6 +124,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a collection is empty. It overrides the `isEmpty()` method from `java/util/AbstractCollection` and provides a custom implementation based on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public isEmpty()Z
     .locals 2
 
@@ -158,6 +163,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator for the list at the specified index, wrapped in a custom iterator class based on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator(I)Ljava/util/ListIterator;
     .locals 3
 
@@ -236,6 +242,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list, either by calling the superclass's removeRange method or by clearing a sublist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public removeRange(II)V
     .locals 2
 

@@ -296,6 +296,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input Collection is an instance of Lcom/mplus/lib/o3/e0 and returns it if certain conditions are met; otherwise, it creates a new Lcom/mplus/lib/o3/e0 instance from the Collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Ljava/util/Collection;)Lcom/mplus/lib/o3/e0;
     .locals 3
 
@@ -353,6 +354,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/U, either by retrieving a cached instance or by calling method l() to initialize it if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Lcom/mplus/lib/o3/U;
     .locals 2
 
@@ -450,6 +452,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a hash code for the object, specifically by calling a method that calculates the hash code for a Set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hashCode()I
     .locals 2
 

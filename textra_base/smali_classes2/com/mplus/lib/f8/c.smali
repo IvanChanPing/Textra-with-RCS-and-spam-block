@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f8/c, setting its properties with the provided Context and boolean value. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/content/Context;Z)V
     .locals 1
 
@@ -36,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f8/c; with a boolean and a LogLevel object. It sets the instance's fields a, b, and c with the provided values and default value 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ZLcom/smaato/sdk/core/log/LogLevel;)V
     .locals 1
 
@@ -54,6 +56,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object based on the value of a switch statement, either a Logger or a KpiDBHelper.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Lcom/smaato/sdk/core/di/DiConstructor;)Ljava/lang/Object;
     .locals 3
 

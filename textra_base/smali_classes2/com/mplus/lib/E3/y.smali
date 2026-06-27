@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/E3/y that initializes an integer field 'a' with the provided value. It calls the superclass constructor of java/lang/Object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 

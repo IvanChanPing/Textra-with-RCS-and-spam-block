@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class by creating instances of `com/google/android/gms/internal/mlkit_entity_extraction/zzamg` using various string constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 11
 
@@ -69,6 +70,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to load native libraries and handles exceptions if the libraries are not found. It checks a flag to determine whether to load the libraries, and if so, it iterates over a list of library names and attempts to load each one using `System.loadLibrary`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a()V
     .locals 9
 

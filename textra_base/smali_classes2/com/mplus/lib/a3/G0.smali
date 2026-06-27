@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/a3/G0 class, storing the provided List in a field. It extends the AbstractList class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
@@ -63,6 +64,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the list stored in the 'a' field of the class Lcom/mplus/lib/a3/G0. It invokes the clear method on the list object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -73,6 +75,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a list at a specified index, but with a reversed order.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 4
 
@@ -105,6 +108,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator object by calling the listIterator() method of its superclass. It does not use the provided index 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -117,6 +121,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator for the list, starting from the specified index from the end. It validates the index using a method from the com/google/android/gms/internal/mlkit_entity_extraction/zzaii class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator(I)Ljava/util/ListIterator;
     .locals 4
 
@@ -191,6 +196,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list by clearing the sublist between the specified indices. It effectively removes elements from index `p1` to `p2`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeRange(II)V
     .locals 1
 
@@ -239,6 +245,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a list stored in the object's field 'a'. It retrieves the size of the list by calling the size() method on the list object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -17,6 +17,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes an object of type Lcom/mplus/lib/K5/e, extracts its Lcom/mplus/lib/K5/b instance, and passes it to method b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/K5/e;)V
     .locals 1
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the appearance of the status bar to light or dark based on the input parameter. It toggles the status bar appearance to the opposite of the input boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/K5/b;)V
     .locals 3
 
@@ -65,6 +67,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a material directly by calling another method `b` with the provided `Lcom/mplus/lib/K5/b` object. It then returns immediately after the call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setMaterialDirect(Lcom/mplus/lib/K5/b;)V
     .locals 1
 
@@ -77,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

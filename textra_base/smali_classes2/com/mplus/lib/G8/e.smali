@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/G8/e; with an integer and an object, then calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles general errors in a WebView, logging or notifying the error based on the instance's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onGeneralError(ILjava/lang/String;Ljava/lang/String;)V
     .locals 6
 
@@ -385,6 +387,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the event when a WebView's render process has exited, performing different actions based on the value of a local variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onRenderProcessGone()V
     .locals 6
 
@@ -481,6 +484,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method determines whether a URL should be loaded in the current WebView or handled externally.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public shouldOverrideUrlLoading(Ljava/lang/String;)Z
     .locals 6
 

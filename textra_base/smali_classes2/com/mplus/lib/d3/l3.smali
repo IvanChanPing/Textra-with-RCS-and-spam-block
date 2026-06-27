@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/d3/l3, setting its 'a' field to the provided Lcom/mplus/lib/d3/m3 object and calling the superclass constructor. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/d3/m3;)V
     .locals 0
 
@@ -75,6 +76,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object, specifically the value of the 'c' field in the 'm3' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

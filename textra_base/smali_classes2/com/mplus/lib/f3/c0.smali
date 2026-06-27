@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/c0; with a byte array. It calls the superclass constructor and stores the byte array in a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 0
 
@@ -279,6 +280,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a byte from an array at the index specified by the input parameter. It appears to be an array accessor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza(I)B
     .locals 2
 
@@ -303,6 +305,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of a byte array. It does not use the constant 3 as initially suggested by the code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzd()I
     .locals 2
 
@@ -317,6 +320,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the `zzb` method of `Lcom/google/android/gms/internal/play_billing/zzhp` to process a byte array and returns the result. It appears to be related to Google Play Billing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze(III)I
     .locals 2
 
@@ -335,6 +339,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a zzgk object based on the provided parameters, returning a default object if the generated index is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(II)Lcom/google/android/gms/internal/play_billing/zzgk;
     .locals 2
 
@@ -376,6 +381,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method calls a billing-related function with a byte array. It invokes a method on an object of type Lcom/google/android/gms/internal/play_billing/i;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg(Lcom/google/android/gms/internal/play_billing/zzgc;)V
     .locals 3
 

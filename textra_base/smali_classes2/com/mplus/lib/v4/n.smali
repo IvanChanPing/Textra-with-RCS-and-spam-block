@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object with a given `Lcom/mplus/lib/u4/e` and a string, parsing the string into a Uri. It then sets this Uri as a field in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/u4/e;Ljava/lang/String;)V
     .locals 1
 

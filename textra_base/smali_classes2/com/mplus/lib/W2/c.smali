@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the changing configurations of an object. It simply retrieves the value of the instance variable 'a' and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getChangingConfigurations()I
     .locals 2
 
@@ -23,6 +24,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zak` and returns it as a `Drawable`. It appears to be related to Google's internal base class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 

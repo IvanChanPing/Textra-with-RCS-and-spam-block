@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static instances of the class Lcom/mplus/lib/f6/f. It creates four objects with different parameter values and assigns them to static fields c, d, e, and f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -61,6 +62,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f6/f with two integer parameters. It sets the object's fields 'a' and 'b' to the provided integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(II)V
     .locals 0
 

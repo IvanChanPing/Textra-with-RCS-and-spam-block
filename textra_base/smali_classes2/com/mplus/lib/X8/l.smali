@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/X8/l;, setting its ViewGroup and integer properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/view/ViewGroup;I)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a single tap up event on an Android view, triggering different actions based on the view type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 4
 

@@ -79,6 +79,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method atomically updates a field in the provided object with a new value and returns the previous value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/internal/mlkit_entity_extraction/q;Lcom/mplus/lib/a3/Y1;)Lcom/mplus/lib/a3/Y1;
     .locals 2
 
@@ -97,6 +98,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method atomically replaces a field in the provided object with a predefined value and returns the previous value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/google/android/gms/internal/mlkit_entity_extraction/q;)Lcom/mplus/lib/a3/d2;
     .locals 3
 
@@ -129,6 +131,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a field in the provided `Lcom/mplus/lib/a3/d2` object to the given `Ljava/lang/Thread` using `Lcom/mplus/lib/a3/c2;->a` AtomicReferenceFieldUpdater. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/mplus/lib/a3/d2;Ljava/lang/Thread;)V
     .locals 2
 
@@ -143,6 +146,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `zza` from `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzavl` with an `AtomicReferenceFieldUpdater` and three objects, returning a boolean result. It appears to perform an atomic update operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/google/android/gms/internal/mlkit_entity_extraction/q;Lcom/mplus/lib/a3/Y1;Lcom/mplus/lib/a3/Y1;)Z
     .locals 2
 
@@ -157,6 +161,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks and updates an atomic reference field using the `zzavl` class from the `mlkit_entity_extraction` package.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/google/android/gms/internal/mlkit_entity_extraction/q;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 
@@ -173,6 +178,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls `zza` from `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzavl` to compare and potentially update atomic references.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/google/android/gms/internal/mlkit_entity_extraction/q;Lcom/mplus/lib/a3/d2;Lcom/mplus/lib/a3/d2;)Z
     .locals 2
 

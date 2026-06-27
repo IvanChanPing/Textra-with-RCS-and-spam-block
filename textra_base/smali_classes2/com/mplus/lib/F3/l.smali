@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/l, setting an integer field to 0 and storing a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 1
 
@@ -31,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a byte from an array at the index specified by the input parameter. It appears to be an array accessor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(I)B
     .locals 2
 
@@ -45,6 +47,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method copies the first 'p1' bytes from the object's 'd' byte array to the provided 'p2' byte array. It then returns without using the copied data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(I[B)V
     .locals 3
 
@@ -340,6 +343,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met by calling another method `j(II[B)` on an instance of `Lcom/mplus/lib/F3/X0;`, using the object's own state. It returns a boolean value indicating the result of this check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Z
     .locals 5
 
@@ -370,6 +374,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/F3/r, specifically an Lcom/mplus/lib/F3/o, by calling a static method on Lcom/mplus/lib/F3/r with parameters from the current object. It appears to be involved in data processing or decoding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i()Lcom/mplus/lib/F3/r;
     .locals 5
 
@@ -400,6 +405,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator object of type Lcom/mplus/lib/F3/i. It creates a new instance of this iterator, passing the current object (Lcom/mplus/lib/F3/l;) to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -515,6 +521,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method converts a byte array to a string using the provided charset. It uses the object's internal byte array and offset/length from methods `r()` and `size()` to create the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Ljava/nio/charset/Charset;)Ljava/lang/String;
     .locals 5
 
@@ -581,6 +588,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a byte array. It appears to be part of a class that handles data storage or processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public size()I
     .locals 2
 

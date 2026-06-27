@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/U5/a, setting its fields and calling the superclass constructor. It sets an integer and an OnTouchListener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILandroid/view/View$OnTouchListener;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the onFling gesture event, either by invoking the superclass's onFling method or by returning 0 based on the value of the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 2
 
@@ -69,6 +71,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a long press gesture, either by invoking the superclass's onLongPress method or by calling a custom OnLongClickListener if a specific condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onLongPress(Landroid/view/MotionEvent;)V
     .locals 2
 
@@ -116,6 +119,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a single tap up event on the screen, either by invoking the superclass's method or by notifying a CameraPreview instance of the tap location.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 3
 

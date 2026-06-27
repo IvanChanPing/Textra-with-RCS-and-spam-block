@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field 'a' of type Lcom/mplus/lib/F4/x;. It creates a new instance of Lcom/mplus/lib/F4/x; and assigns it to the static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -25,6 +26,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'a' field of the Lcom/mplus/lib/F4/x object to a string representation of a glyph, either directly from the input item's glyph or constructed from its codepoints.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$Item;)V
     .locals 5
 
@@ -84,6 +86,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method decodes a base64-encoded string, parses it into a protobuf object, and then iterates over the items in the object, calling another method on each item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized b(Ljava/lang/String;Lcom/mplus/lib/V5/j;)V
     .locals 6
 
@@ -212,6 +215,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method serializes a `Lcom/mplus/lib/V5/j` object into a Base64-encoded string using protobuf.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized c(Lcom/mplus/lib/V5/j;)Ljava/lang/String;
     .locals 9
 

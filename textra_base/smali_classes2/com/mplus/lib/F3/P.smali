@@ -901,6 +901,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum constant of type Lcom/mplus/lib/F3/P; from a given string. It essentially implements the valueOf method for the enum class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/F3/P;
     .locals 2
 

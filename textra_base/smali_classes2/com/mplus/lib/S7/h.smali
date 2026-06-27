@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/S7/h;, setting its fields and calling the superclass constructor. It appears to be a constructor for a DoubleClickPreventionListener subclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/core/browser/SmaatoSdkBrowserActivity;I)V
     .locals 0
 

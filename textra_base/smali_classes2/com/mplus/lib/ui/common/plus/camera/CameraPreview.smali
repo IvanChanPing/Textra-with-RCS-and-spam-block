@@ -42,6 +42,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a CameraPreview object, setting default values and creating a ScaleGestureDetector.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
@@ -172,6 +173,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method finds the optimal camera size from a list of available sizes based on the target width and height, considering both the size difference and aspect ratio.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(IILjava/util/List;)Landroid/hardware/Camera$Size;
     .locals 13
 
@@ -284,6 +286,7 @@
     return-object v4
 .end method
 
+# M-ROLE [GROQ]: This method generates a transformation matrix for mapping view coordinates to camera coordinates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getViewToCameraMatrix()Landroid/graphics/Matrix;
     .locals 5
 
@@ -348,6 +351,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the focus area and metering area for the camera, and then triggers an autofocus operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(II)V
     .locals 8
 
@@ -989,6 +993,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the display orientation of the camera preview. It simply returns the value of the instance variable 'g'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getDisplayOrientation()I
     .locals 2
 
@@ -999,6 +1004,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getLayoutSize() function to return a layout size object. It simply calls the superclass's getLayoutSize() method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -1015,6 +1021,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getMeasuredSize function to return the measured size of the CameraPreview. It simply calls the superclass's getMeasuredSize method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -1029,6 +1036,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getPaddingHorizontal()` method and returns its result. It appears to be a generated bridge method for compatibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -1039,6 +1047,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getPaddingVertical()` method and returns the result of calling the superclass's `getPaddingVertical()` method. It effectively delegates the calculation of vertical padding to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -1059,6 +1068,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getVisibileAnimationDelegate` method and returns its result. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -1073,6 +1083,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the fraction of the visible height of the CameraPreview view. It does this by dividing the visible height (stored in `i`) by the total height of the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getVisibleHeightFraction()F
     .locals 3
 
@@ -1097,6 +1108,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the fraction of the view's width that is visible. It does this by dividing the view's visible width by its total width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getVisibleWidthFraction()F
     .locals 3
 
@@ -1125,6 +1137,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -1139,6 +1152,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the ScaleGestureDetector object associated with the CameraPreview instance. It does not create or modify the detector, but simply retrieves the existing one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getZoomGestureDetector()Landroid/view/ScaleGestureDetector;
     .locals 2
 
@@ -1149,6 +1163,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets up and starts the camera preview. It checks for the availability of a surface texture, sets the camera parameters, and starts the preview if everything is ready.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 8
 
@@ -2017,6 +2032,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing a boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -2025,6 +2041,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of a CameraPreview object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -2047,6 +2064,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a CameraPreview instance. It invokes a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -2059,6 +2077,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the camera tap focus region by storing the provided `Lcom/mplus/lib/U5/f;` object in the `m` field of the class. It does not perform any actual camera operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setCameraTapFocusRegion(Lcom/mplus/lib/U5/f;)V
     .locals 1
 
@@ -2069,6 +2088,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method, passing the provided integer value. It effectively delegates the `setHeightTo` operation to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -2079,6 +2099,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -2089,6 +2110,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of the CameraPreview instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -2097,6 +2119,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method to set the margin of a CameraPreview object. It takes an android/graphics/Rect object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -2107,6 +2130,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of the CameraPreview instance. It calls a static method to configure the margin with the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -2115,6 +2139,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of the CameraPreview instance. It invokes a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -2123,6 +2148,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of the CameraPreview instance. It invokes a static method to configure the padding with the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -2133,6 +2159,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setViewVisible method to call the superclass's implementation. It takes a boolean parameter and invokes the superclass's setViewVisible method with that parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -2145,6 +2172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method to animate the visibility of a view. It takes a boolean parameter to determine whether the view should be visible or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -2153,6 +2181,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of the CameraPreview instance to a specified value. It calls a static method to configure the preview with the given width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 

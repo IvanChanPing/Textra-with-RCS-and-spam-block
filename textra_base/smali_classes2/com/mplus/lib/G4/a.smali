@@ -44,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/G4/a class with a Context and a Class object. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/Class;)V
     .locals 1
 
@@ -60,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to convert the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final d()Ljava/lang/String;
     .locals 2
 
@@ -85,6 +87,7 @@
 .method public abstract c(Lcom/mplus/lib/F4/x;)Z
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. If `a` is 0, it calls the private `d()` method; otherwise, it calls the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 
@@ -121,6 +124,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/J1/d` using the provided `Lcom/mplus/lib/I1/y` object and returns it. It appears to be involved in converting or mapping classes related to files and URIs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public y(Lcom/mplus/lib/I1/y;)Lcom/mplus/lib/I1/q;
     .locals 5
 

@@ -106,6 +106,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method merges two objects of type Lcom/mplus/lib/F3/y0;, returning the first object after merging.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mplus/lib/F3/y0;
     .locals 2
 

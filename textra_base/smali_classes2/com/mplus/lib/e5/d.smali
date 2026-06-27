@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/e5/d, retrieving a message from the database based on a given ID and storing its delivery information.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroidx/fragment/app/FragmentActivity;J)V
     .locals 3
 
@@ -128,6 +129,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method requests or abandons audio focus for the given context based on the provided boolean value. It uses the AudioManager to either request audio focus with a specific gain type or abandon the current audio focus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q(Landroid/content/Context;Z)V
     .locals 3
 
@@ -176,6 +178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/e5/d. It appears to be a singleton pattern implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized T()Lcom/mplus/lib/e5/d;
     .locals 3
 
@@ -215,6 +218,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method displays information about a multimedia file in a notification. It checks the file type and displays the corresponding information, such as file format, size, and resolution.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public M(Lcom/mplus/lib/A2/r;)V
     .locals 11
 
@@ -1560,6 +1564,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method divides a given string into SMS-sized chunks and processes them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public P(ILjava/lang/String;)Ljava/util/ArrayList;
     .locals 10
 
@@ -1856,6 +1861,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the current ringer mode of an Android device. It gets the AudioManager instance from the device's context and calls its getRingerMode method to obtain the current mode.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public S()I
     .locals 3
 
@@ -1890,6 +1896,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the volume of the audio stream is muted. It returns true if the volume is zero (i.e., muted) and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public U()Z
     .locals 3
 
@@ -1945,6 +1952,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method plays a sound from a given Uri, either immediately or after a delay, depending on the second parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public V(Landroid/net/Uri;ZLjava/lang/String;)V
     .locals 8
 
@@ -2179,6 +2187,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method generates an Android Intent based on the provided string and object. It delegates the Intent creation to the `Lcom/mplus/lib/fe;->a` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h(Ljava/lang/String;Lcom/mplus/lib/c5/b;)Landroid/content/Intent;
     .locals 2
 
@@ -2199,6 +2208,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method splits a given string into segments for SMS transmission, handling cases where the string exceeds the maximum allowed length for a single SMS message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 8
 
@@ -2541,6 +2551,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes an Android Uri and an object of type Lcom/mplus/lib/O4/b, then calls a method t on an object of type Lcom/mplus/lib/B4/b, returning a constant integer value 0x410.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)I
     .locals 2
 

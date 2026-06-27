@@ -21,6 +21,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an empty set. It does not perform any other operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/util/Set;
     .locals 2
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/a3/h. It creates a singleton object and assigns it to the static field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaed`, which appears to be related to entity extraction.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic zzb(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzadg;Ljava/lang/String;Ljava/util/concurrent/Executor;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaao;I)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaet;
     .locals 10
 
@@ -113,6 +115,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a constant string "singleproc" regardless of the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(I)Ljava/lang/String;
     .locals 1
 

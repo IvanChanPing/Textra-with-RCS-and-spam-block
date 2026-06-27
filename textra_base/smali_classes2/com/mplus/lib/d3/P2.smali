@@ -44,6 +44,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/d3/P2 by creating instances of Lcom/mplus/lib/w3/c and assigning them to various static fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -374,6 +375,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes an object of type `Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzqu` into another object of type `Lcom/mplus/lib/w3/e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 

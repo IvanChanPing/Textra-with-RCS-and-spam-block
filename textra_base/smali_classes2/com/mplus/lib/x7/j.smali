@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method constructs an instance of Lcom/mplus/lib/x7/j, wrapping another constructor with additional resource retrieval. It retrieves a text resource by ID and passes it to the wrapped constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;IZ)V
     .locals 1
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/x7/j, setting its properties with the provided parameters. It calls the superclass constructor and sets a text, a resource ID, and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Ljava/lang/CharSequence;Z)V
     .locals 1
 
@@ -102,6 +104,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of a view based on the value of a boolean field `n` in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 3
 

@@ -23,6 +23,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/R4/c`, which is a `Drawable`. It uses the integer field `a` of the current object to initialize the new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 3
 

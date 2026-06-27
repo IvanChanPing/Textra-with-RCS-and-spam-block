@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/X2/b, setting its fields with provided parameters. It appears to extend Lcom/google/android/gms/internal/common/zzag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/common/zzag;II)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a list at a specified index, performing bounds checking using the `zzs.zza` method. It returns the object at the calculated index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 3
 
@@ -63,6 +65,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'b' as the size. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -73,6 +76,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a collection by delegating to `zzh(II)` method. It appears to be a bridge method for Java 8's `List.subList()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -111,6 +115,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by adding the instance variable `a` to the result of calling `zzc()` on the `zzag` object. It appears to be related to Google's internal common library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()I
     .locals 3
 
@@ -161,6 +166,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to validate input parameters, then shifts the parameters and calls the `zzh` method on an internal `zzag` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh(II)Lcom/google/android/gms/internal/common/zzag;
     .locals 2
 

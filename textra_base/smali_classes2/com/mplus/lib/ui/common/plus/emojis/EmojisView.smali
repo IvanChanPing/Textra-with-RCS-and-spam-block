@@ -69,6 +69,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the EmojisView class. It sets the values of B and C fields based on resource and density-independent pixel calculations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -145,6 +146,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the total height of emojis by multiplying the number of rows (m) by the height of each row (k).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getEmojisTotalHeight()I
     .locals 3
 
@@ -161,6 +163,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given text contains an emoji and if so, attempts to replace it with a corresponding text representation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/F4/x;)Lcom/mplus/lib/F4/x;
     .locals 4
 
@@ -483,6 +486,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method calculates and sets the bounds of a rectangle based on the provided parameters and instance variables. It appears to be used for positioning or sizing emojis in the EmojisView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Landroid/graphics/Rect;II)V
     .locals 6
 
@@ -541,6 +545,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getLayoutSize() method to return a layout size object. It invokes the superclass's getLayoutSize() method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -557,6 +562,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the left alignment value with title by adding the instance variables `x` and `n`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getLeftAlignWithTitle()I
     .locals 3
 
@@ -575,6 +581,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getMeasuredSize()` method to return the measured size of the view. It simply calls the superclass's `getMeasuredSize()` method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -591,6 +598,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns its result. It appears to be an auto-generated bridge method for compatibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -605,6 +613,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getPaddingVertical()` method to return the vertical padding of its superclass `Lcom/mplus/lib/x5/y`. It simply invokes the superclass's method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -629,6 +638,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getVisibileAnimationDelegate` method and returns its result. It does not use the returned value's visibility or any animation delegate functionality, simply returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -641,6 +651,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not use the constant '5' as it is not related to the return value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -1467,6 +1478,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onMeasure function to calculate and set the measured dimensions of the EmojisView. It uses the width from the provided measure specs and the total height of the emojis.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(II)V
     .locals 1
 
@@ -1865,6 +1877,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing a boolean parameter. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -1877,6 +1890,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha (transparency) of an object directly. It calls the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -1887,6 +1901,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate for the EmojisView class by calling its superclass's method. It effectively delegates the background drawing to the provided delegate object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -1895,6 +1910,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of an EmojisView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -1905,6 +1921,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setHeightTo method to call the superclass's setHeightTo method. It takes an integer parameter and sets the height accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -1917,6 +1934,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setLayoutSize function to call its superclass's implementation. It takes a Lcom/mplus/lib/z7/G object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -1937,6 +1955,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setMargin function to set the margin of an EmojisView using a given Rect object. It calls the superclass's setMargin method with the provided Rect.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -1947,6 +1966,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of an EmojisView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -1959,6 +1979,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of an EmojisView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -1969,6 +1990,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of the EmojisView instance. It invokes a static method to adjust the padding based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -1985,6 +2007,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method to animate the visibility of a view. It takes a boolean parameter to determine whether the view should be visible or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -1993,6 +2016,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of an EmojisView instance based on the provided integer parameter. It invokes a static method to perform this action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 
@@ -2003,6 +2027,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the EmojisView object, including its ID and offset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -2059,6 +2084,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Drawable is associated with the EmojisView instance, specifically its RippleDrawable. It returns true if the Drawable is the RippleDrawable or if the superclass View verifies it, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 2
 

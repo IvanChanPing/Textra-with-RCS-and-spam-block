@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets item offsets for a RecyclerView, adding a bottom margin to the last item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 1
 

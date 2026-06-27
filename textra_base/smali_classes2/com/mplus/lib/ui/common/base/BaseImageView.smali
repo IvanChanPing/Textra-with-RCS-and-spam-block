@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a `BaseImageView` object, setting its properties and attributes based on the provided context and attribute set. It also configures the image view's appearance and behavior using various utility classes and methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
 
@@ -115,6 +116,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides the dispatchDraw method of the View class to conditionally draw a custom background before calling the superclass's dispatchDraw method. It checks a condition using an instance of Lcom/mplus/lib/x5/C and draws the background using Lcom/mplus/lib/y5/d if the condition is true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
@@ -177,6 +179,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getLayoutSize() and returns the result. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -191,6 +194,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getMeasuredSize() and returns the result. It does not use the returned value's size, instead returning the object itself with no modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -205,6 +209,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns the result. It appears to be an overridden method that simply delegates to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -217,6 +222,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() and returns its result. It appears to be a generated bridge method for compatibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -231,6 +237,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the horizontal scale factor of the view. It does not use the local variable v1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getScale()F
     .locals 2
 
@@ -245,6 +252,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the text color of a BaseImageView instance, conditionally updating it from a configuration object if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getTextColorDirect()I
     .locals 3
 
@@ -286,6 +294,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the scale of the BaseImageView. It does not actually return the text size as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getTextSizeDirect()F
     .locals 2
 
@@ -308,6 +317,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the view state of the BaseImageView instance. It simply returns the object referenced by the 'a' field of the class, which is of type Lcom/mplus/lib/x5/C.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getViewState()Lcom/mplus/lib/x5/C;
     .locals 2
 
@@ -318,6 +328,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getVisibileAnimationDelegate` method and returns the result of calling the same method on its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -332,6 +343,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -346,6 +358,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for the BaseImageView class, returning false if a certain condition is met and otherwise delegating to the superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
@@ -371,6 +384,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing the provided boolean parameter. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -383,6 +397,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha (transparency) of an object directly. It calls the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -413,6 +428,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method, passing the provided integer parameter. It effectively sets the height of the `BaseImageView` to the specified value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -423,6 +439,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method, passing the provided argument. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -445,6 +462,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method to set the margin of the BaseImageView. It takes an android/graphics/Rect object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -455,6 +473,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a BaseImageView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -465,6 +484,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the saturation of an image view using a ColorMatrix. It creates a new ColorMatrix, sets the saturation, and applies it to the image view as a ColorFilter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setSaturation(F)V
     .locals 2
 
@@ -491,6 +511,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the scale of a BaseImageView instance. It scales both the x and y axes by the provided factor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setScale(F)V
     .locals 1
 
@@ -503,6 +524,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an animated scale on a BaseImageView instance. It initializes an internal animator object if it doesn't exist and then sets the scale using the provided float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setScaleAnimated(F)V
     .locals 2
 
@@ -536,6 +558,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text color of a BaseImageView with animation. It creates an instance of Lcom/mplus/lib/y5/c if it doesn't exist and then calls its b(I) method with the provided color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextColorAnimated(I)V
     .locals 2
 
@@ -567,6 +590,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text color of a BaseImageView instance and then invalidates the view to trigger a redraw. It also calls a static method to potentially perform additional color-related operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextColorDirect(I)V
     .locals 1
 
@@ -587,6 +611,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the pivot point of a view for animation based on the provided Point object. It updates the pivotX and pivotY properties of the view using the x and y coordinates of the point.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextSizeAnimatablePivot(Landroid/graphics/Point;)V
     .locals 2
 
@@ -613,6 +638,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the scale of a BaseImageView instance directly using the provided float value if the 'd' Point object is not null. It does not actually set a text size, despite its name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextSizeDirect(F)V
     .locals 2
 
@@ -630,6 +656,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a BaseImageView instance. It calls a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -638,6 +665,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a BaseImageView instance. It invokes a static method to configure the padding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -648,6 +676,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided boolean value. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -660,6 +689,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method to animate the visibility of the view. It takes a boolean parameter to determine the visibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -668,6 +698,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of a BaseImageView instance. It invokes a static method to adjust the view's dimensions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 
@@ -744,6 +775,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Drawable is being used by the BaseImageView, first checking with a custom callback if available, and otherwise delegating to the superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 3
 

@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/L, initializing its fields with the provided parameters. It sets the object's state with a string, a map, a boolean, and two objects of types Lcom/inmobi/media/L4 and Lcom/inmobi/media/J1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/util/Map;ZLcom/inmobi/media/L4;Lcom/inmobi/media/J1;)V
     .locals 0
 
@@ -44,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method invokes a static method to process data with parameters from its class fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 6
 

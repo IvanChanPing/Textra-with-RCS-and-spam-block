@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the ChooseVibratePatternActivity class, initializing it by calling the superclass constructor. It sets up the activity with no additional parameters or actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a notification style object for "contacts" from a settings manager. It returns a Lcom/mplus/lib/r4/n object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()Lcom/mplus/lib/r4/n;
     .locals 3
 
@@ -57,6 +59,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method cancels the current vibration and then sets a new vibration pattern based on the provided input.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 5
 
@@ -113,6 +116,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event, starting a new activity (MakeVibratePatternActivity) with an intent containing serialized contacts data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
@@ -169,6 +173,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the ChooseVibratePatternActivity by setting its title, adding various UI elements, and registering event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 8
 
@@ -490,6 +495,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy activity lifecycle method to unregister the current activity from an event bus. It calls the superclass's onDestroy method and removes itself from the event bus managed by Lcom/mplus/lib/ui/main/App.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -790,6 +796,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onPause() method of an Android Activity, calling the superclass's onPause() and canceling any ongoing vibration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPause()V
     .locals 2
 

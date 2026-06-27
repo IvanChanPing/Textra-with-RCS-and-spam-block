@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `k` in class `Lcom/mplus/lib/T6/b;` with the value of `d` from class `Lcom/mplus/lib/z7/N;`. It sets the value of a float field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an object of type Lcom/mplus/lib/r4/l, attempts to create a bitmap from its byte array, and returns either a Lcom/mplus/lib/R4/a with the bitmap or a Lcom/mplus/lib/R4/e with a default drawable if the bitmap creation fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
@@ -124,6 +126,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a StateListDrawable and sets it as the image of an ImageView, combining a custom drawable with a provided Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 8
 

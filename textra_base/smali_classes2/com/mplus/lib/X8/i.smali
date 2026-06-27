@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/X8/i class with parameters from RichMediaAdContentView, RichMediaWebView, and a callback. It sets the instance's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/richmedia/widget/RichMediaAdContentView;Lcom/smaato/sdk/richmedia/widget/RichMediaWebView;Lcom/smaato/sdk/richmedia/widget/RichMediaAdContentView$Callback;I)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts a string object and performs different actions based on the value of `a` field in the class, invoking static methods of `Lcom/smaato/sdk/richmedia/widget/RichMediaAdContentView;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 4
 

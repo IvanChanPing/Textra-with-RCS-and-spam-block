@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/i9/p, storing a reference to a VastVideoPlayerPresenter. It sets up the object with the provided presenter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/video/vast/vastplayer/VastVideoPlayerPresenter;)V
     .locals 0
 

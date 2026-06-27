@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the F0 class, setting its 'd' and 'e' fields to the provided Y and G0 objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/Y;Lcom/mplus/lib/o3/G0;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the 'e' field, which is an instance of Lcom/mplus/lib/o3/G0;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/o3/U;
     .locals 2
 
@@ -37,6 +39,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `b` from class `Lcom/mplus/lib/o3/U;` with the provided parameters and returns the result. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I[Ljava/lang/Object;)I
     .locals 2
 
@@ -53,6 +56,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is present in a collection. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -114,6 +118,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

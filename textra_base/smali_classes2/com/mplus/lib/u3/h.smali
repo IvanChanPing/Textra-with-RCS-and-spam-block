@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/u3/h` class, setting up various data structures and components. It appears to be part of a dependency injection or component management system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/ArrayList;Ljava/util/List;)V
     .locals 4
 
@@ -341,6 +342,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an instance of `Lcom/mplus/lib/B3/a;` from a hashmap based on the provided `Ljava/lang/Class;` key, throwing an exception if the key is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized b(Ljava/lang/Class;)Lcom/mplus/lib/B3/a;
     .locals 2
 
@@ -392,6 +394,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a HashMap based on a given Class, returning the object if found or a default object if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized c(Ljava/lang/Class;)Lcom/mplus/lib/B3/a;
     .locals 2
 
@@ -923,6 +926,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method filters and processes a list of objects, adding new objects to a result list based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m0(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 7
 
@@ -1047,6 +1051,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a map of objects, filters and processes them, and returns an ArrayList of objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()Ljava/util/ArrayList;
     .locals 8
 

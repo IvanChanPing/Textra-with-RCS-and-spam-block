@@ -36,6 +36,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields, including a Parcelable creator and a mapping of enum values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 6
 
@@ -86,6 +87,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/c from a Parcel, extracting and setting various fields such as package ID, URI, actions, and display label. It throws an exception if an unknown action value is encountered.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/os/Parcel;)V
     .locals 7
 
@@ -197,6 +199,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/E3/c class with the provided parameters. It sets the object's fields with the given string, Uri, zzamg object, and another string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Landroid/net/Uri;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;Ljava/lang/String;)V
     .locals 0
 

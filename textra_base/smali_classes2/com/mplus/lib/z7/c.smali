@@ -121,6 +121,7 @@
     return-object p3
 .end method
 
+# M-ROLE [GROQ]: This method creates a new bitmap with the specified width, height, and configuration, and returns it if successful, or logs an error and returns null if an OutOfMemoryError occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 3
 
@@ -279,6 +280,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method decodes a byte array into a bitmap using BitmapFactory.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d([B)Landroid/graphics/Bitmap;
     .locals 4
 
@@ -351,6 +353,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method decodes a bitmap from an input stream using the provided options. It handles cases where the input stream or options are null, and also catches out-of-memory errors during decoding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Ljava/io/InputStream;Lcom/mplus/lib/z7/b;)Landroid/graphics/Bitmap;
     .locals 5
 

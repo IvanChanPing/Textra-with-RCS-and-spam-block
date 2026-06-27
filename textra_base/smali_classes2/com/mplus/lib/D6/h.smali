@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/D6/h with a string and sets an integer field to 0. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/D6/i;Ljava/lang/String;)V
     .locals 0
 
@@ -34,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/D6/h with a string and an integer. It sets the object's fields 'a' and 'b' to the provided integer and string, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
@@ -497,6 +499,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method takes a float parameter and returns an interpolated float value based on a string stored in the object. It delegates the interpolation calculation to the Transition class in the androidx.constraintlayout.core.state package.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getInterpolation(F)F
     .locals 2
 

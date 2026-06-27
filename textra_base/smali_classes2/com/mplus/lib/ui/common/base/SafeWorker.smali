@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a SafeWorker object with a given Context and WorkerParameters. It calls the superclass constructor of androidx/work/Worker.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
     .param p1    # Landroid/content/Context;
@@ -30,6 +31,7 @@
 .method public abstract a()Landroidx/work/ListenableWorker$Result;
 .end method
 
+# M-ROLE [GROQ]: This method attempts to perform work by calling `a()` and returns a `ListenableWorker$Result`, defaulting to a success result even if an exception occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doWork()Landroidx/work/ListenableWorker$Result;
     .locals 5
 
@@ -104,6 +106,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

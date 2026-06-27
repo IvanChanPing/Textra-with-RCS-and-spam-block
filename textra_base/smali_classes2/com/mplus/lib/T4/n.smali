@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/T4/n, setting a field 'e' to 1 and calling a superclass constructor with modified parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;JLandroid/content/SharedPreferences;)V
     .locals 1
 
@@ -29,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/T4/n with parameters and calls the superclass constructor. It sets the object's field 'e' to the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Landroid/content/SharedPreferences;I)V
     .locals 0
 
@@ -39,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a `Lcom/mplus/lib/K5/b` object based on the input string, either by parsing the string as an integer or using a default value if the string is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/lang/String;)Lcom/mplus/lib/K5/b;
     .locals 1
 
@@ -80,6 +83,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a string into two integers and returns a `Lcom/mplus/lib/K5/e` object with these integers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Ljava/lang/String;)Lcom/mplus/lib/K5/e;
     .locals 4
 
@@ -210,6 +214,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string by calling `Lcom/mplus/lib/g5/c;->f(JLjava/lang/String;)Ljava/lang/String;` with an empty string and a long parameter. It returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(J)Ljava/lang/String;
     .locals 2
 
@@ -228,6 +233,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string by concatenating two integer values from `Lcom/mplus/lib/K5/b` objects obtained from `Lcom/mplus/lib/K5/e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Lcom/mplus/lib/K5/e;)Ljava/lang/String;
     .locals 3
 
@@ -497,6 +503,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string value and attempts to parse it into a Long object. It returns the parsed Long value if successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public j()Ljava/lang/Long;
     .locals 3
 
@@ -521,6 +528,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method takes a Long object, converts it to a string using the l method, and then calls the f method with the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k(Ljava/lang/Long;)V
     .locals 3
 

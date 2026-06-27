@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the result of a Google API operation, setting the result or exception in a TaskCompletionSource. It takes a Status object as input and uses it to update the task completion source.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResult(Lcom/google/android/gms/common/api/Status;)V
     .locals 3
 

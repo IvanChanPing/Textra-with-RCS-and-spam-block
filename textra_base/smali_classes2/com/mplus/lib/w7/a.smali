@@ -21,6 +21,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/s5/r. It appears to be a getter method for a field named 'e' in the class Lcom/mplus/lib/w7/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 
@@ -31,6 +32,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles a button click event, specifically posting a suggestion to a forum.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 12
 

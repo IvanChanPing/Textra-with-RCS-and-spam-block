@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Lcom/mplus/lib/a3/l3 class. It creates a new instance with a constructor argument of 0 and assigns it to the static field d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/a3/l3 class, creating an instance of Lcom/mplus/lib/a3/E3 and assigning it to a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -49,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/l3, creating a new Lcom/mplus/lib/a3/E3 object and calling the e() method twice.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -67,6 +70,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to be a hash function that takes an enum value and an object as input and returns a hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcah;ILjava/lang/Object;)I
     .locals 5
 
@@ -575,6 +579,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method serializes various data types to a binary stream using the `zzbwp` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwp;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcah;ILjava/lang/Object;)V
     .locals 3
 
@@ -1297,6 +1302,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/a3/l3` and copies data from the current instance to the new one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/a3/l3;
     .locals 7
 
@@ -1405,6 +1411,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a map using the provided zzbwy object as a key and returns it if it's not an instance of zzbyc, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwy;)Ljava/lang/Object;
     .locals 2
 
@@ -1428,6 +1435,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a clone of the current object by calling the `b()` method. It appears to be part of a class that implements a cloning mechanism.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic clone()Ljava/lang/Object;
     .locals 2
 
@@ -1440,6 +1448,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator over the entries of a map, potentially wrapping it in another iterator if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Ljava/util/Iterator;
     .locals 3
 
@@ -1510,6 +1519,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the object is already frozen and if not, it iterates over its elements, calling `zzad()` on instances of `com/google/android/gms/internal/mlkit_entity_extraction/zzbxk` and `zzg()` on instances of `com/google/android/gms/internal/mlkit_entity_extraction/zzbwy`, then freezes the  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()V
     .locals 7
 
@@ -1796,6 +1806,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their `a` fields of type `Lcom/mplus/lib/a3/E3;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -1842,6 +1853,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks the type of an object and performs an action based on its type, throwing an exception if the type is not supported.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwy;Ljava/lang/Object;)V
     .locals 3
 
@@ -2176,6 +2188,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object referenced by the 'a' field of the class. It delegates the hash code calculation to the 'hashCode' method of the 'E3' class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -2194,6 +2207,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method processes a map entry, handling different types of values and keys, and updates an internal data structure accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Ljava/util/Map$Entry;)V
     .locals 7
 

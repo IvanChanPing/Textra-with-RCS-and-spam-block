@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the UpgradedToProActivity class that initializes the object by calling the superclass constructor. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -38,6 +39,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the finish method of an Android Activity to add a custom transition effect when the activity is finished. It calls the superclass's finish method and then overrides the pending transition with a specific animation resource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final finish()V
     .locals 3
 
@@ -58,6 +60,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event by finishing the current activity. It does not perform any additional actions based on the view that was clicked.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
@@ -68,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the `UpgradedToProActivity` by setting its content view and configuring a `BaseImageView` based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 5
 

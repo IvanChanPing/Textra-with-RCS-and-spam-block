@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/r4/h class, setting up its fields with default values. It creates a HashSet, a SparseArray, and initializes other fields with empty arrays or a provided Lcom/mplus/lib/v4/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/v4/a;)V
     .locals 1
 
@@ -266,6 +267,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method adjusts the input index based on the length of an array if a certain condition is not met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)I
     .locals 3
 
@@ -291,6 +293,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method closes the current object and all associated database cursors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 4
 
@@ -357,6 +360,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a blob from a database cursor based on a given index. It calls another method `b(I)` to adjust the index before retrieving the blob.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getBlob(I)[B
     .locals 2
 
@@ -377,6 +381,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of columns, which is the length of the 'q' string array. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnCount()I
     .locals 2
 
@@ -389,6 +394,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the index of a given string in the array `q` of the class `Lcom/mplus/lib/r4/h;` if it exists, otherwise returns -1. It performs a case-insensitive comparison using the `equalsIgnoreCase` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnIndex(Ljava/lang/String;)I
     .locals 4
 
@@ -440,6 +446,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the index of a specified column by name, throwing an IllegalArgumentException if the column does not exist. It returns the column index as an integer if found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnIndexOrThrow(Ljava/lang/String;)I
     .locals 4
 
@@ -512,6 +519,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a predefined array of column names. It does not perform any dynamic operations or calculations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnNames()[Ljava/lang/String;
     .locals 2
 
@@ -610,6 +618,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a double value from a database cursor based on a given column index. It calls the cursor's getDouble method after mapping the input index using the b(I) method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDouble(I)D
     .locals 3
 
@@ -630,6 +639,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a float value from a database cursor. It calls a helper method `b(I)` to adjust the column index before calling `getFloat(I)` on the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getFloat(I)F
     .locals 2
 
@@ -648,6 +658,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a database cursor. It takes an integer parameter, uses it to get the actual column index, and then returns the integer value at that index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInt(I)I
     .locals 2
 
@@ -670,6 +681,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a long value from a database cursor at a specified column index. It calls the `getLong` method of the `Cursor` interface to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLong(I)J
     .locals 3
 
@@ -692,6 +704,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a short value from a database cursor at a specified column index. It calls another method `b(I)` to adjust the column index before getting the short value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getShort(I)S
     .locals 2
 
@@ -716,6 +729,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string from a database cursor based on the provided index. It calls another method `b(I)` to adjust the index before getting the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getString(I)Ljava/lang/String;
     .locals 2
 
@@ -738,6 +752,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the data type of a column in a database cursor. It calls the cursor's getType method after mapping the input index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getType(I)I
     .locals 2
 
@@ -762,6 +777,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the status of a closed state. It returns a boolean value indicating whether the object is closed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isClosed()Z
     .locals 2
 
@@ -774,6 +790,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a column in a database cursor is null. It returns a boolean value indicating whether the column at the given index is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isNull(I)Z
     .locals 2
 

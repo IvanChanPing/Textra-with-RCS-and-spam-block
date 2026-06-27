@@ -31,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method cancels a CountDownTimer when it finishes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onFinish()V
     .locals 2
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a progress bar based on the elapsed time. It calculates the progress as a fraction of 50 seconds and sets the progress bar's progress accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTick(J)V
     .locals 3
 

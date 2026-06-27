@@ -31,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/s5/r. It appears to be a getter method for the 'l' field of the class Lcom/mplus/lib/b7/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 

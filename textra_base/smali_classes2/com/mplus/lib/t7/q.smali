@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/t7/q; that calls the superclass constructor Lcom/mplus/lib/t7/h;-><init>(). It initializes an instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -23,6 +24,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method extends the functionality of its superclass by parsing a JSONObject and storing a new instance of Lcom/mplus/lib/t7/i; in its field, specifically configured with the "forum" section of the input JSONObject. It calls the superclass's d method with the same JSONObject.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lorg/json/JSONObject;)V
     .locals 3
 

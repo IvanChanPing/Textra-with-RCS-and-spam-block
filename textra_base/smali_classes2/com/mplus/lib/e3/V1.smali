@@ -45,6 +45,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'c' field to 1 and the 'd' field to its current value OR 0x2, then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(I)Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzmi;
     .locals 1
 

@@ -36,6 +36,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static object in the class Lcom/mplus/lib/o3/w. It creates a new instance of java/lang/Object and assigns it to the static field j.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -48,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/w;` and initializes it with a given size, throwing an exception if the size is negative.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(I)Lcom/mplus/lib/o3/w;
     .locals 4
 
@@ -134,6 +136,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns an integer value based on the instance field `e` of the class. It performs bitwise operations on the field's value to derive the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()I
     .locals 3
 
@@ -319,6 +322,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given key is present in a map or a custom data structure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsKey(Ljava/lang/Object;)Z
     .locals 2
 
@@ -365,6 +369,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a value in a map or an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsValue(Ljava/lang/Object;)Z
     .locals 4
 
@@ -551,6 +556,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set of entries, specifically an instance of Lcom/mplus/lib/o3/u, creating it if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final entrySet()Ljava/util/Set;
     .locals 3
 
@@ -578,6 +584,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be implementing a custom data structure operation, likely related to a hash table or map, where it shifts elements and updates indices based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(II)V
     .locals 11
 
@@ -732,6 +739,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain object is null and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Z
     .locals 2
 
@@ -759,6 +767,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a map or an array based on the provided key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -920,6 +929,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field `b` as an array of integers. It checks if the field is not null before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i()[I
     .locals 2
 
@@ -936,6 +946,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the object is empty by calling the `size()` method and returns true if the size is 0, false otherwise. It returns a boolean value indicating whether the object is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 2
 
@@ -963,6 +974,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the `c` field of the class, which is an array of Objects, after checking it's not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j()[Ljava/lang/Object;
     .locals 2
 
@@ -981,6 +993,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the `d` field of the class, which is an array of Objects, after checking it's not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k()[Ljava/lang/Object;
     .locals 2
 
@@ -999,6 +1012,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set object, specifically an instance of Lcom/mplus/lib/o3/u, which is lazily initialized if it doesn't already exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final keySet()Ljava/util/Set;
     .locals 3
 
@@ -1030,6 +1044,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of bitwise operations and updates an object's state. It takes four integer parameters and returns an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(IIII)I
     .locals 9
 
@@ -1163,6 +1178,7 @@
     return p2
 .end method
 
+# M-ROLE [GROQ]: This method implements a put operation for a custom map data structure, handling collisions and resizing the map as necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 22
 
@@ -1680,6 +1696,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map if it exists, otherwise it returns a field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -1711,6 +1728,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Collection of values from a map, lazily initializing the collection if it hasn't been created yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final values()Ljava/util/Collection;
     .locals 3
 

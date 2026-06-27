@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/e, setting its fields with a zzaao object and a Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaao;Landroid/net/Uri;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method to retrieve a long value based on a provided Uri. It returns this long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()J
     .locals 3
 
@@ -50,6 +52,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method writes data from an input stream to an output stream, handling exceptions and closing the output stream when necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Ljava/io/InputStream;JJ)J
     .locals 4
 

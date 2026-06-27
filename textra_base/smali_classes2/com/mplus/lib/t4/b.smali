@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes a given Runnable from the callbacks of a Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized a(Ljava/lang/Runnable;)V
     .locals 2
 
@@ -63,6 +64,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Android Handler instance, creating a new one if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Landroid/os/Handler;
     .locals 4
 

@@ -35,6 +35,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/j5/t; that initializes two instance variables, an integer and an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -255,6 +256,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sends a POST request to a specified URL with a JSON payload and returns the response.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Lcom/mplus/lib/D6/d;)Lcom/mplus/lib/s2/b;
     .locals 21
 
@@ -808,6 +810,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a list of tracks based on the provided parameters using the DefaultTrackSelector. It delegates the creation to the DefaultTrackSelector's static method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public create(ILandroidx/media3/common/TrackGroup;[I)Ljava/util/List;
     .locals 2
 
@@ -826,6 +829,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates an adaptive track selection using the provided ExoTrackSelection$Definition. It utilizes a RandomTrackSelection$Factory to generate the selection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public createAdaptiveTrackSelection(Landroidx/media3/exoplayer/trackselection/ExoTrackSelection$Definition;)Landroidx/media3/exoplayer/trackselection/ExoTrackSelection;
     .locals 2
 
@@ -844,6 +848,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a ProgressiveMediaExtractor instance using the provided PlayerId. It utilizes an ExtractorsFactory to create the extractor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public createProgressiveMediaExtractor(Landroidx/media3/exoplayer/analytics/PlayerId;)Landroidx/media3/exoplayer/source/ProgressiveMediaExtractor;
     .locals 2
 
@@ -860,6 +865,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method submits a task to be executed by the app's multi-threading system. It creates a new instance of `Lcom/mplus/lib/v6/y` with a `Lcom/mplus/lib/r4/k0` object and a priority, then schedules it for execution.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(Lcom/mplus/lib/E1/K;)V
     .locals 4
 
@@ -898,6 +904,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object of type Lcom/tappx/a/J2 from an instance of Lcom/tappx/a/J.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public get()Ljava/lang/Object;
     .locals 2
 
@@ -920,6 +927,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls `b(III)` on the provided `Lcom/mplus/lib/s5/m0;` object with arguments 49, 0, and a calculated sum.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k(Lcom/mplus/lib/s5/m0;)V
     .locals 4
 
@@ -991,6 +999,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method calls a static method to update the network state monitor when the connection state changes. It appears to be part of a network state monitoring system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onConnectionStateChanged()V
     .locals 2
 
@@ -1007,6 +1016,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a display change event by calling a helper method to update the video frame release helper with the new display. It effectively notifies the video player of a display change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onDefaultDisplayChanged(Landroid/view/Display;)V
     .locals 2
 
@@ -1025,6 +1035,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the progress of a ProgressiveDownloader instance. It calls the static method `a` on the ProgressiveDownloader class with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onProgress(JJJ)V
     .locals 9
 
@@ -1053,6 +1064,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the DownloadManager of a change in requirements state. It calls the DownloadManager's method to handle the new state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onRequirementsStateChanged(Landroidx/media3/exoplayer/scheduler/RequirementsWatcher;I)V
     .locals 2
 
@@ -1195,6 +1207,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method converts a time in microseconds to a sample number using FlacStreamMetadata. It returns the sample number.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public timeUsToTargetTime(J)J
     .locals 2
 
@@ -1211,6 +1224,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is equal to the current object's field and if so, sets that field to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w(Lcom/mplus/lib/s5/Z;)V
     .locals 3
 

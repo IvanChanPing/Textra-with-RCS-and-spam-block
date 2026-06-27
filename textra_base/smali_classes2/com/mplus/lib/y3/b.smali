@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/y3/b with an integer value. It sets the integer value to a field 'a' in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes an object into a specific format based on the value of a class field `a`, handling `String` and `Boolean` types.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/V4/b, setting up its internal state with a context and another object. It appears to be a static constructor that sets up a singleton instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -43,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sends an HTTP request to the iframe.ly API to fetch oEmbed data for a given URL and returns the result as a `Lcom/mplus/lib/B7/a` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(Lcom/mplus/lib/V4/a;)Lcom/mplus/lib/B7/a;
     .locals 8
 

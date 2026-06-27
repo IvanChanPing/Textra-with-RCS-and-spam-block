@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object, checking if the provided byte array has a length of 25 and then sets an instance variable to the hash code of the array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 2
 
@@ -43,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method converts a given string to bytes using the "ISO-8859-1" encoding. It returns the byte array if successful, or throws an AssertionError if the encoding is not supported.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;)[B
     .locals 2
 
@@ -175,6 +177,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'c' as the hash code of the object. It does not use any complex hashing algorithm, simply returning the stored integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -187,6 +190,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'c' of type integer. It does not use the defined local variable v1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()I
     .locals 2
 
@@ -197,6 +201,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a wrapped byte array as an IObjectWrapper. It calls another method to get the byte array and then wraps it using ObjectWrapper.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/dynamic/IObjectWrapper;
     .locals 2
 

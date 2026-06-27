@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a FilterInputStream object with a given input stream and sets two instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/Y1/e;)V
     .locals 1
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a FilterInputStream subclass with a given InputStream and an integer value. It sets two instance variables, 'a' to 0 and 'b' to the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/InputStream;I)V
     .locals 1
 
@@ -157,6 +159,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method updates the object's field 'b' by subtracting the input parameter 'p1' from its current value if 'p1' is not -1 and 'b' is not -2147483648.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(J)V
     .locals 4
 
@@ -198,6 +201,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method marks the current position in the input stream, allowing it to be reset later. It overrides the mark method of the FilterInputStream class, adding additional logic based on the value of the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized mark(I)V
     .locals 2
 
@@ -247,6 +251,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method reads data from an input stream, handling different states and buffer conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read()I
     .locals 7
 
@@ -451,6 +456,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method resets the input stream based on the current state. It calls the superclass's reset method and updates the object's state variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized reset()V
     .locals 2
 

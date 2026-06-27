@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/o3/M0, setting its fields with a provided Set and an instance of Lcom/mplus/lib/n3/i.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Set;Lcom/mplus/lib/n3/i;)V
     .locals 0
 
@@ -71,6 +72,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current set, throwing an exception if any element fails a validation check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 4
 
@@ -345,6 +347,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current collection contains all elements from a given collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -397,6 +400,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided object is equal to the current set object. It delegates the equality check to Lcom/mplus/lib/o3/s;->g method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
@@ -411,6 +415,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a hash code for the object by delegating to `Lcom/mplus/lib/o3/s;->l(Ljava/util/Set;)I`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -550,6 +555,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object exists in a collection and removes it if found, returning true if removal was successful. It returns false if the object does not exist in the collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 2
 
@@ -589,6 +595,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes elements from a set that are present in a given collection and match a certain condition applied by `Lcom/mplus/lib/n3/i;->apply`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 5
 
@@ -719,6 +726,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a filtered set by iterating over its elements and counting those for which a given predicate (`Lcom/mplus/lib/n3/i;->apply`) returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 5
 
@@ -776,6 +784,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of objects by iterating over the elements of the current object and adding them to an ArrayList, which is then converted to an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toArray()[Ljava/lang/Object;
     .locals 5
 
@@ -834,6 +843,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method converts the collection to an array, using the provided array if possible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 5
 

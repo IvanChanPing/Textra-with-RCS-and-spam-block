@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method loads a class by its name, first checking if the class name starts with "java." or "android.", and if not, it attempts to find the class using the `findClass` method. If that fails, it calls the superclass's `loadClass` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final loadClass(Ljava/lang/String;Z)Ljava/lang/Class;
     .locals 2
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/g9/j; and sets its 'a' field to the provided DiConstructor object. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/core/di/DiConstructor;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Size object using the DiMacros class. It appears to be related to video ad tracking.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 2
 

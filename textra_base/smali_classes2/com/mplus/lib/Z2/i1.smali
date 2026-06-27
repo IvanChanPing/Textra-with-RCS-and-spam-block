@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/Z2/i1 with model information and download conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -128,6 +129,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes an object of type `zznl` into a format using the `w3/e` interface. It sets multiple fields using the `b` method of the `w3/e` interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 

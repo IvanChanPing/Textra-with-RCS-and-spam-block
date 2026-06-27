@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/P8/c class, setting its 'a' field to the provided RewardedAdViewModel and calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/rewarded/viewmodel/RewardedAdViewModel;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the ad space ID from a Smaato SDK view model, returning it if available or an empty string otherwise. It essentially acts as a wrapper around the `getAdSpaceId` method of the `RewardedAdViewModel` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAdSpaceId()Ljava/lang/String;
     .locals 2
 
@@ -89,6 +91,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a rewarded ad is available for presentation. It returns a boolean value indicating the ad's availability.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isAvailableForPresentation()Z
     .locals 2
 
@@ -105,6 +108,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method shows an ad internally by creating a new instance of Lcom/mplus/lib/O3/o and running it on the UI thread. It then returns without any further action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final showAdInternal()V
     .locals 3
 

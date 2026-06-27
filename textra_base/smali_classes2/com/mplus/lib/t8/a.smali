@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t8/a; with a given map of headers, throwing a NullPointerException if the map is null. It extends the Lcom/smaato/sdk/core/network/Headers; class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 1
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current object, specifically comparing the headers map if the input object is an instance of Lcom/smaato/sdk/core/network/Headers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -82,6 +84,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the object, specifically based on the hash code of a map stored in field 'a'. It applies a simple XOR operation with a constant value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -106,6 +109,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Map object stored in the 'a' field of the class. It does not modify the map or perform any other operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final headers()Ljava/util/Map;
     .locals 2
 
@@ -118,6 +122,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, specifically a formatted string containing the headers map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

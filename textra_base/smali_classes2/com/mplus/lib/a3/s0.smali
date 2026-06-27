@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static instances of the class Lcom/mplus/lib/a3/s0. It sets the values of the static fields b and c with new instances of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static synthetic constructor <clinit>()V
     .locals 2
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/s0 with an integer value. It sets the integer value to a field 'a' in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -105,6 +107,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appends a specific string to a StringBuilder based on the value of a class field, or throws an AssertionError if the field is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/StringBuilder;)V
     .locals 2
 
@@ -315,6 +318,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a class field `a` and returns a boolean based on its value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Z
     .locals 2
 

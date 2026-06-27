@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object with a given string and checks if the string's byte length exceeds 63. It throws an exception of type Lcom/mplus/lib/W7/d if the length exceeds 63.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
@@ -64,6 +65,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the character at a specified index in a string. It appears to be a wrapper around the standard Java String.charAt() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final charAt(I)C
     .locals 2
 
@@ -115,6 +117,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of a string stored in the object's field 'a'. It overrides the default hashCode method to provide a custom implementation based on the string's hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -131,6 +134,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of a string stored in the object's field 'a'. It appears to be a getter for the length of the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final length()I
     .locals 2
 
@@ -149,6 +153,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a subsequence of a string between specified start and end indices. It appears to be a wrapper around the standard Java String subSequence method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subSequence(II)Ljava/lang/CharSequence;
     .locals 2
 
@@ -167,6 +172,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the string value of a field named 'a' in the class Lcom/mplus/lib/W7/e. It appears to be an override of the toString method in Java.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

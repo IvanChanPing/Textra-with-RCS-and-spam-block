@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object is a key-value pair present in a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 4
 
@@ -92,6 +93,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by calling `zzw` on a `zzamg` object, which is obtained from the current object using `zzd`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -110,6 +112,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'd' which represents the size. It does not perform any calculations or operations, simply returning the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -118,6 +121,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `zza` from class `zzamg` to process an array of objects and an integer, then returns the result. It appears to be a wrapper method for the actual processing done in `zzamg`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 
@@ -168,6 +172,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of Lcom/mplus/lib/a3/M0. It does not appear to utilize any external classes or string constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzi()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;
     .locals 2
 

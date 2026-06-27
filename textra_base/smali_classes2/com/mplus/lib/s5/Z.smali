@@ -59,6 +59,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a custom Drawable object, setting up its properties and paint styles. It creates and configures multiple Paint objects with different styles and stroke widths.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 5
 
@@ -341,6 +342,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method draws a custom progress indicator on an Android Canvas, consisting of multiple arcs and circles.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 13
 
@@ -621,6 +623,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the constant state of a drawable object, specifically an instance of Lcom/mplus/lib/P1/b if it doesn't already exist. It creates a new instance if necessary and stores it in the 't' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 3
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/x7/p class, setting its properties and calling the superclass constructor. It sets a boolean flag to true, stores a reference to a Lcom/mplus/lib/P6/c object, and sets an integer field to a specific resource ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/a;Lcom/mplus/lib/P6/c;)V
     .locals 1
 
@@ -55,6 +56,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and sets click listeners for two buttons in a view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -105,6 +107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event, toggling a boolean flag and performing various operations based on the clicked view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 5
 
@@ -266,6 +269,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to handle a boolean value, setting an instance variable `r` to true if the input is true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v(Z)V
     .locals 1
 

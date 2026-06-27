@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/l3/f, setting its TaskCompletionSource field to null. It is a constructor method for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -28,6 +29,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/l3/f, storing a TaskCompletionSource object. It sets up the object with the provided TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 
@@ -43,6 +45,7 @@
 .method public abstract a()V
 .end method
 
+# M-ROLE [GROQ]: This method attempts to call `a()` and catches any exceptions, then sets the exception on a TaskCompletionSource if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 3
 

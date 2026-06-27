@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/P7/a with a given string parameter. It calls the superclass constructor and sets the string parameter to a field 'a' of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object, specifically comparing the `UBUniqueId` of `AdRequestParams` objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -81,6 +83,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'a'. It does not generate a unique ID despite its name suggesting so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getUBUniqueId()Ljava/lang/String;
     .locals 2
 
@@ -129,6 +132,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an AdRequestParams object, specifically formatting the UBUniqueId.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

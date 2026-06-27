@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/b6/c, setting its fields with a GifListRowLayout and a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/plus/giphy/gifs/GifListRowLayout;Z)V
     .locals 0
 

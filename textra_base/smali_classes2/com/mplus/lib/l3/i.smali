@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/l3/i; that initializes two instance variables, an integer and an object. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the connection to a billing service, logging a message and updating the service connection state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 4
 
@@ -156,6 +158,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the disconnection of a service, logging a message and updating the state of an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 4
 

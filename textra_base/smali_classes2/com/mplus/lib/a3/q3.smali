@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor that initializes an object with a Map Entry. It sets the object's field 'a' to the provided Map Entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/Map$Entry;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the key of a map entry stored in the object's field 'a'. It simply delegates the call to the getKey() method of the Map$Entry object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/Object;
     .locals 2
 
@@ -73,6 +75,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method sets a value in a map entry, specifically for MessageSet instances, by calling the `zzc` method on a `zzbyd` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/s3/A; with a ScheduledExecutorService. It calls the superclass constructor and sets the service as a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method schedules a given Runnable to be executed after a specified delay, returning a ScheduledFuture. It wraps the Runnable in a Callable and uses a ScheduledExecutorService to schedule the task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 3
 
@@ -62,6 +64,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method schedules a callable task for execution after a specified delay and returns a ScheduledFuture. It wraps the callable in a Runnable and submits it to a ScheduledExecutorService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 2
 
@@ -92,6 +95,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method schedules a runnable to be executed at a fixed rate using a ScheduledExecutorService. It wraps the ScheduledFuture returned by the service in a custom object of type Lcom/mplus/lib/s3/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 8
 
@@ -130,6 +134,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method schedules a runnable to be executed with a fixed delay using a ScheduledExecutorService. It then returns a ScheduledFuture object wrapped in a custom class Lcom/mplus/lib/s3/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 8
 

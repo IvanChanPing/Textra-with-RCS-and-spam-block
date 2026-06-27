@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/s3/d with five AtomicReferenceFieldUpdater objects. It sets these updaters as fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
     .locals 0
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method atomically swaps the value of a field in the provided object with a predefined value and returns the previous value. It appears to be part of a synchronization mechanism.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A(Lcom/mplus/lib/s3/o;)Lcom/mplus/lib/s3/n;
     .locals 3
 
@@ -61,6 +63,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates a field using an AtomicReferenceFieldUpdater, replacing the first argument with the second. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L(Lcom/mplus/lib/s3/n;Lcom/mplus/lib/s3/n;)V
     .locals 2
 
@@ -87,6 +90,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to atomically update a reference field using `AtomicReferenceFieldUpdater` and returns true if successful, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p(Lcom/mplus/lib/s3/o;Lcom/mplus/lib/s3/c;Lcom/mplus/lib/s3/c;)Z
     .locals 3
 
@@ -125,6 +129,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to atomically update a reference field using `AtomicReferenceFieldUpdater` and returns true if successful. If the update fails, it checks the current field value and returns false if it doesn't match the expected value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Lcom/mplus/lib/s3/o;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 3
 
@@ -199,6 +204,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method atomically swaps the value of a field in the provided object with a predefined value and returns the previous value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z(Lcom/mplus/lib/s3/o;)Lcom/mplus/lib/s3/c;
     .locals 3
 

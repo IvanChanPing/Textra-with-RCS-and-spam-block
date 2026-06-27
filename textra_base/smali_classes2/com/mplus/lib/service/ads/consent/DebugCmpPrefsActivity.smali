@@ -125,6 +125,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the DebugCmpPrefsActivity class, initializing the object by calling the superclass constructor. It sets up the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -207,6 +208,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for various views in the DebugCmpPrefsActivity, performing actions such as clearing consent preferences, copying IAB TCF 2 strings, and triggering other functionality based on the clicked view's ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 6
 
@@ -493,6 +495,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the `DebugCmpPrefsActivity` by setting up its UI components and registering listeners for shared preference changes. It also adds various preference items to the activity, including IAB TCF2 and GPP prefs, undocumented prefs, and deprecated prefs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 4
 
@@ -729,6 +732,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unregisters the current activity as a shared preference change listener and calls the superclass's onDestroy method. It cleans up shared preference listeners when the activity is destroyed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -763,6 +767,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method listens for changes to shared preferences and triggers a method `s()` on an object of class `Lcom/mplus/lib/P6/c` when a change occurs. It does not use the changed preference value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 1
 

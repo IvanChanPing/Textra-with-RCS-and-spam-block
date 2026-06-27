@@ -40,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls the `h()` method on an object that implements the `Lcom/mplus/lib/H5/a` interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 2
 

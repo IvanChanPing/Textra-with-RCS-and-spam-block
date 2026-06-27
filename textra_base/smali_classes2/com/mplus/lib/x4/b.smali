@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a string value from a database cursor. It returns the string at the second column index (since indexing starts at 0 for the first column, and 1 for the second, but the method uses 1 as the index, which corresponds to the second column).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D()Ljava/lang/String;
     .locals 2
 
@@ -26,6 +27,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the ID from a CursorWrapper object. It returns the value of the first column as a long integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getId()J
     .locals 3
 
@@ -48,6 +50,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a Uri from the MediaStore using the first column of the underlying Cursor. It returns this Uri as the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Landroid/net/Uri;
     .locals 4
 

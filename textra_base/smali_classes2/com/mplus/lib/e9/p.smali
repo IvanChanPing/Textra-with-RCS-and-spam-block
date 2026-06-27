@@ -60,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts a string object and passes it to the `InLineParser` class for parsing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 11
 

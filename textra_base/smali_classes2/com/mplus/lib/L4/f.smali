@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/L4/f, setting its integer and byte array fields if the byte array is not null. If the byte array is null, it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I[B)V
     .locals 0
 
@@ -41,6 +42,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object with a given string, converting it to bytes using "utf-8" encoding and setting an integer field to 106.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
@@ -79,6 +81,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor that calls another constructor with a hardcoded value 0x6a and a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 1
 
@@ -286,6 +289,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a copy of the byte array `b` and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()[B
     .locals 5
 
@@ -312,6 +316,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a deep copy of the current object, specifically cloning the byte array `b` and creating a new instance of `Lcom/mplus/lib/L4/f` with the cloned array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clone()Ljava/lang/Object;
     .locals 5
 

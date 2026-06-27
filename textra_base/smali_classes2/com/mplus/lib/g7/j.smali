@@ -414,6 +414,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method resets and releases resources by calling a method on an object and then setting the object to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L()V
     .locals 4
 
@@ -446,6 +447,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a touch event on an Android view, delegating the handling to an instance of `Lcom/mplus/lib/V5/p` if it exists. It returns a boolean indicating whether the event was consumed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
@@ -475,6 +477,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a view, setting its background and touch listener, and also sets up a ripple effect and text view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 6
 

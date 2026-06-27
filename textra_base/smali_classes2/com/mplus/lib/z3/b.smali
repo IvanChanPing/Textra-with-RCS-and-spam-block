@@ -53,6 +53,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/z3/b; from a given string. It uses the Java Enum.valueOf method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/z3/b;
     .locals 2
 
@@ -73,6 +74,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of Lcom/mplus/lib/z3/b; enum values. It creates a copy of the enum values array to prevent external modification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/z3/b;
     .locals 2
 

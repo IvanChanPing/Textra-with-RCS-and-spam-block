@@ -12,6 +12,7 @@
 .method public abstract b(Lcom/mplus/lib/x5/z;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 .end method
 
+# M-ROLE [GROQ]: This method creates a RecyclerView ViewHolder. It delegates the creation to method `b` with a ViewGroup cast to `Lcom/mplus/lib/x5/z;` and an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 1
 

@@ -51,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new `LayerDrawable` instance with two layers: a drawable from `R4/f` and a custom `R4/j` drawable with a given string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;)Lcom/mplus/lib/x5/m;
     .locals 7
 

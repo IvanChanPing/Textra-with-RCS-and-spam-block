@@ -63,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/g7/e;, setting up its properties and listeners. It appears to be part of a settings customization feature.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/settings/sections/look/SettingsCustomiseLookActivity;Lcom/mplus/lib/P6/c;)V
     .locals 2
 
@@ -133,6 +134,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met and if not, it calls another method to perform an action with a given view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 2
 

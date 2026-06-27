@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map with string keys and integer values representing different options. It populates the map with "yes", "yes except silent", and "no" options mapped to specific resource IDs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -78,6 +79,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method determines and sets a CharSequence based on a condition checked by `Lcom/mplus/lib/T4/j;->d()Z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 4
 

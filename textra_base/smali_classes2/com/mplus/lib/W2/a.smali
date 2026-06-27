@@ -21,6 +21,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a static Drawable object from class Lcom/mplus/lib/W2/b. It does not create a new drawable as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 

@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/f, calling the superclass constructor and setting a field 'c' to a zzaih instance. It appears to be related to Google's ML Kit entity extraction.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -61,6 +62,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the schema for the current object if it's not null, otherwise it throws a NullPointerException. It returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyt;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzadf;
     .locals 2
 
@@ -84,6 +86,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the Uri object in the class if it's not null and returns the class instance, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Landroid/net/Uri;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzadf;
     .locals 2
 
@@ -109,6 +112,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean flag and modifies a byte field, then returns the instance itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Z)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzadf;
     .locals 1
 
@@ -342,6 +346,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamc`, either by reusing an existing instance or creating a new one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamc;
     .locals 3
 

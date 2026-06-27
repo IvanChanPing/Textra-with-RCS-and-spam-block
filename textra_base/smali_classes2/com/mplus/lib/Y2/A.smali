@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/Y2/A, setting its fields and calling the superclass constructor. It sets the fields c, d, and e with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/internal/location/zzb;I)V
     .locals 0
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/Y2/A, setting its fields and calling the superclass constructor. It sets the object's fields with the provided Boolean and TaskCompletionSource objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Boolean;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 1
 
@@ -57,6 +59,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the result of a location request by checking the status and setting the result or API exception in a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Lcom/google/android/gms/internal/location/zzg;)V
     .locals 3
 

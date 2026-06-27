@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes an action on a Google API client, specifically calling the `zae` method on a `zal` service instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic doExecute(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     .locals 2
 

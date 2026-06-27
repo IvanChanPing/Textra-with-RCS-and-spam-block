@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/t7/i; that calls the superclass constructor Lcom/mplus/lib/t7/h;-><init>(). It initializes an instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -19,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides a superclass method, calls the superclass method, and then retrieves a "name" string from a JSONObject. It does not appear to use the retrieved string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lorg/json/JSONObject;)V
     .locals 2
 

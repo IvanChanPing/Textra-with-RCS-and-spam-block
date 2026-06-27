@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/j0, setting its internal state with a given collection and object. It appears to be a constructor that wraps a collection and another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Collection;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzahx;)V
     .locals 1
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/j0, setting its internal state with a given collection and an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaij. It also calls the superclass constructor from Ljava/util/AbstractCollection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Collection;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaij;)V
     .locals 1
 
@@ -55,6 +57,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds an object to a collection, conditionally using a delegate or the superclass implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public add(Ljava/lang/Object;)Z
     .locals 2
 
@@ -105,6 +108,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection, handling different cases based on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addAll(Ljava/util/Collection;)Z
     .locals 4
 
@@ -179,6 +183,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method clears the collection based on the value of a field. It either directly clears the collection or removes a specific object from it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 3
 
@@ -215,6 +220,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is contained in a collection, with special handling for certain collection types.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -273,6 +279,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if the collection contains all elements of the given collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -344,6 +351,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a collection is empty, with special handling for a specific case.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 3
 
@@ -412,6 +420,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator for the class Lcom/mplus/lib/a3/j0, handling different cases based on the value of the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 4
 
@@ -486,6 +495,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection based on the state of the object, either by calling the superclass's remove method or by checking if the object is contained and then removing it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(Ljava/lang/Object;)Z
     .locals 2
 
@@ -736,6 +746,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection, either directly or filtered based on a condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 5
 
@@ -863,6 +874,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method converts the collection to an array, either by using the superclass's `toArray` method or by iterating over the collection and adding elements to an ArrayList, then converting that to an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 3
 

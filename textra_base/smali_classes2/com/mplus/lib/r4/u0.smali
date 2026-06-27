@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/r4/u0; with a given long value. It calls the superclass constructor with a specific integer value and sets the instance's 'c' field to the provided long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(J)V
     .locals 1
 

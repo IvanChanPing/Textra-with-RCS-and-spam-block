@@ -24,6 +24,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws a NoSuchElementException when called, indicating that there are no more elements to return. It does not actually retrieve or return any object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 
@@ -36,6 +37,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually remove anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 

@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the last updated timestamp from a TCModel object and returns it as a string. It essentially acts as a getter for the last updated value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -19,6 +20,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the last updated value of a TCModel object using a provided string. It casts the second parameter to a string and calls the setLastUpdated method on the TCModel object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

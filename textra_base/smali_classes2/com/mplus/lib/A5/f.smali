@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static SimpleDateFormat object with the format "MMMM yyyy" based on the default locale. It sets this object as a static field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/A5/f class with a Context, two custom objects, and an integer. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/A5/b;Lcom/mplus/lib/A5/a;I)V
     .locals 0
 
@@ -62,6 +64,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the row and column specs for a GridLayout and adds a BaseTextView to a BaseGridLayout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Lcom/mplus/lib/ui/common/base/BaseTextView;II)V
     .locals 2
 
@@ -199,6 +202,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a view click event, deselecting all other views in a grid layout and selecting the clicked view, then posts a delayed runnable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 5
 
@@ -292,6 +296,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object by appending the string representation of its superclass and a field `f` of type `Lcom/mplus/lib/A5/a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

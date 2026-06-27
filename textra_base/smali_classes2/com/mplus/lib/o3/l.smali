@@ -58,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to recursively call itself if a certain condition is met, or adds an object to a map with a corresponding collection value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 4
 
@@ -89,6 +90,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds an object at a specified index in a list and updates a counter. It also calls other methods based on the list's initial state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(ILjava/lang/Object;)V
     .locals 3
 
@@ -136,6 +138,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds an object to a collection and updates a counter if the addition is successful. It also calls other methods to perform additional actions when the collection was previously empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 4
 
@@ -187,6 +190,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection at a specified index and updates the collection's size. It returns true if the collection was modified.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(ILjava/util/Collection;)Z
     .locals 4
 
@@ -447,6 +451,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the collection and updates the size counter. It returns immediately if the collection is already empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 4
 
@@ -490,6 +495,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in a collection. It calls the `contains` method on the collection stored in the `b` field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -512,6 +518,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the collection stored in the object contains all elements of the input collection. It returns a boolean result indicating whether all elements are present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -532,6 +539,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by first checking for self-equality, and if not, it delegates the equality check to its internal collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -565,6 +573,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from a list. It first calls method `b()` on the current object, then returns the object at the given index from the list `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -587,6 +596,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of a collection object stored in the class. It first calls a method `b()` and then returns the hash code of the collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -607,6 +617,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method finds the index of a given object in a list. It first calls an internal method `b()` and then uses the `indexOf` method of the `List` interface to find the index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 2
 
@@ -627,6 +638,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator object, specifically an instance of Lcom/mplus/lib/a3/X. It first calls the b() method on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -645,6 +657,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method finds the last index of a given object in a list. It checks the list's last index of the object after calling method b() on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lastIndexOf(Ljava/lang/Object;)I
     .locals 2
 
@@ -665,6 +678,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator instance, specifically an instance of Lcom/mplus/lib/o3/k.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator()Ljava/util/ListIterator;
     .locals 2
 
@@ -681,6 +695,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator instance, specifically an instance of Lcom/mplus/lib/o3/k, after calling the b() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator(I)Ljava/util/ListIterator;
     .locals 2
 
@@ -699,6 +714,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an object at a specified index from a list and updates a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(I)Ljava/lang/Object;
     .locals 3
 
@@ -739,6 +755,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection and updates a counter if removal is successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 3
 
@@ -774,6 +791,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements in the provided collection from the current collection and returns true if any elements were removed. It also updates an internal counter and calls a method c() if any elements were removed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 4
 
@@ -838,6 +856,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method implements the `retainAll` operation, removing from the collection all elements not contained in the specified collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 4
 
@@ -899,6 +918,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method sets an object at a specified index in a list and returns the replaced object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -923,6 +943,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It first calls a method `b()` and then invokes the `size()` method on a collection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -1007,6 +1028,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling the toString method on its 'b' field, which is a Collection. It also calls method b() on the object before returning the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/O3/o0, initializing its fields with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the onClick event for a dialog interface, invoking different methods based on the value of a switch statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 

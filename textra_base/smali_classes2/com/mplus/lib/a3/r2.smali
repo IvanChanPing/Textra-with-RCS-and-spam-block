@@ -61,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of Lcom/mplus/lib/a3/r2; values. It appears to be an implementation of the values() method in an enum class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/a3/r2;
     .locals 2
 

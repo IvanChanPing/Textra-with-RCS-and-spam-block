@@ -17,6 +17,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a boolean field and a byte field in the class, then returns the instance itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Z)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhg;
     .locals 1
 
@@ -33,6 +34,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method takes a Set, converts it to a zzamn object, and stores it in the class instance, then returns the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Ljava/util/Set;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhg;
     .locals 1
 
@@ -51,6 +53,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhi;` or throws an `IllegalStateException` if a required property is missing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhi;
     .locals 4
 

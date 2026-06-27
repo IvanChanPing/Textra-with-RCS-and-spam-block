@@ -78,6 +78,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event, specifically showing a dialog when a certain view is clicked.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 

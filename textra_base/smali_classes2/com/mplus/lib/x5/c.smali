@@ -485,6 +485,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a color resource from the application's resources. It calls a method `c(I)` to process the input color ID, then invokes the superclass's `getColor(I)` method to get the color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColor(I)I
     .locals 1
 
@@ -505,6 +506,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a ColorStateList resource by first mapping the input ID through a method `c(I)` and then calling the superclass's `getColorStateList(I)` method. It effectively wraps the superclass's method with an ID mapping step.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColorStateList(I)Landroid/content/res/ColorStateList;
     .locals 1
 
@@ -523,6 +525,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a drawable resource by ID, first trying a custom method `a(I)` and then falling back to the superclass's `getDrawable(I)` if that fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 2
 
@@ -564,6 +567,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a drawable resource by ID, first attempting to fetch it from a custom source, and if that fails, it falls back to the superclass's method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
@@ -599,6 +603,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

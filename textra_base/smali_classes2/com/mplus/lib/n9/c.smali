@@ -73,6 +73,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles an icon click event by retrieving the icon click-through URL and passing it to the superclass's onClicked method. It returns immediately after.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClicked(Ljava/lang/String;)V
     .locals 1
 
@@ -103,6 +104,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onContentLoaded method and schedules a delayed task using a Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onContentLoaded()V
     .locals 7
 
@@ -174,6 +176,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method records the current system uptime in milliseconds when content starts loading. It stores this value in the 'd' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onContentStartedToLoad()V
     .locals 3
 

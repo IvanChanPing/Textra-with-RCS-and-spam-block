@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a7/c, setting its 'p' field and calling the superclass constructor. It appears to be a generated synthetic constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/x5/l;I)V
     .locals 0
 
@@ -149,6 +150,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method sets an OnTouchListener on the provided object based on the value of a class field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n(Lcom/mplus/lib/x5/y;)V
     .locals 2
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/r4/T, setting its fields to the provided File and Object parameters. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/File;Ljava/io/File;Ljava/lang/Object;)V
     .locals 0
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/r4/Z`, either by reusing an existing instance or creating a new one based on the existence of certain files.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/r4/Z;
     .locals 7
 
@@ -171,6 +173,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an InputStream object by calling the getInputStream method on an object of type Lcom/mplus/lib/r4/S.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 3
 
@@ -211,6 +214,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of an object by calling the getLength method on an instance of Lcom/mplus/lib/r4/S. It appears to be a wrapper around another class's getLength method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLength()J
     .locals 3
 
@@ -229,6 +233,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Uri object by calling the getUri method of an object of type Lcom/mplus/lib/r4/Z, which is obtained by calling method a on the current object. It essentially delegates the getUri call to another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getUri()Landroid/net/Uri;
     .locals 2
 
@@ -249,6 +254,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, including its class name and file information. It constructs this string by appending the object's class name and file path to a string builder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

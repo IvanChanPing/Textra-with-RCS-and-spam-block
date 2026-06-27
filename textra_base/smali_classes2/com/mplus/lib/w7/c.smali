@@ -97,6 +97,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method enables or disables a button based on whether the text in an EditText is empty or not. It trims the text and checks for emptiness using TextUtils.isEmpty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 2
 
@@ -204,6 +205,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event for a specific view, checking if the view's ID matches a certain value and if the text in an EditText is not empty, then it calls a method on an object with a specific string parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 4
 

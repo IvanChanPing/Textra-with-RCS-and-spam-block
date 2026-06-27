@@ -22,6 +22,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calculates a translation value based on input parameters and applies it to a BaseImageView. It uses the `c(II)` method to calculate intermediate values and the `J;->u(FFFFF)` method to compute the final translation value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(IIFLcom/mplus/lib/ui/common/base/BaseImageView;)V
     .locals 3
 
@@ -104,6 +105,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates a float value based on the provided integer parameters and the width of a BaseImageView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(II)F
     .locals 4
 
@@ -192,6 +194,7 @@
     return p2
 .end method
 
+# M-ROLE [GROQ]: This method scales and translates various image views based on the input float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(F)V
     .locals 13
 
@@ -554,6 +557,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a spring value by retrieving a double value from an object and converting it to a float before passing it to another method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the SettingsPerContactActivity class that initializes the object by calling the superclass constructor. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -31,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a boolean extra named "wdb" is present in an Intent and returns its value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()Z
     .locals 4
 
@@ -63,6 +65,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a settings object related to contacts. It appears to be fetching a specific setting from a settings manager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()Lcom/mplus/lib/r4/n;
     .locals 3
 
@@ -87,6 +90,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if any element in a collection returned by `W()` matches a certain condition defined in `com/mplus/lib/C4/b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b0()Z
     .locals 4
 
@@ -117,6 +121,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes the settings for a contact in the SettingsPerContactActivity, setting up various UI elements and handling different conditions based on the contact's settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 12
 
@@ -692,6 +697,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of various UI components in the SettingsPerContactActivity based on certain conditions. It checks the status of a setting and updates the corresponding UI elements accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()V
     .locals 6
 

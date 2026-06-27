@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/n3/n, storing a reference to an object of type Lcom/mplus/lib/n3/m. It sets the object's field 'a' to the provided Lcom/mplus/lib/n3/m instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/n3/m;)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method implements a lazy initialization pattern, returning an object that is initialized only when first requested.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 3
 
@@ -113,6 +115,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including a memoized supplier and its returned value if available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

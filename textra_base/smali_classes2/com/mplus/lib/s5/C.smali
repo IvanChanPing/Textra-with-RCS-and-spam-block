@@ -41,6 +41,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/s5/C, setting up various graphics-related fields. It creates and configures Paint and RectF objects, and sets initial values for several fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/A;)V
     .locals 3
 
@@ -107,6 +108,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls the `invalidateDrawable` method on an instance of `Lcom/mplus/lib/s5/A;`, passing `null` as the drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 3
 

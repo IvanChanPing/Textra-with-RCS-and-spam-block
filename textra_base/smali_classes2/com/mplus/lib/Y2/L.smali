@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/Y2/L with a zzds object and two integers. It sets the object's fields c, a, and b with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/location/zzds;II)V
     .locals 0
 
@@ -67,6 +68,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer, representing the size of an object. It provides a way to access the size of the object externally.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -75,6 +77,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a larger list by delegating to `zzh(II)` which returns a `zzds` object. It appears to be a part of the `List` interface implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -117,6 +120,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by adding the result of `zzc()` from `com/google/android/gms/internal/location/zzdp` to the instance variable `a`. It appears to be related to location services.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()I
     .locals 3
 
@@ -151,6 +155,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of Objects by calling the `zzg()` method on the `zzds` object. It appears to be a wrapper around the `zzg()` method of the `zzdp` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()[Ljava/lang/Object;
     .locals 2
 
@@ -167,6 +172,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls `zzh(II)` on an internal `zzds` object with modified input parameters, then returns the result. It validates the input parameters using `zzdm;->zzc(III)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh(II)Lcom/google/android/gms/internal/location/zzds;
     .locals 2
 

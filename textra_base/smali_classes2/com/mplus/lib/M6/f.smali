@@ -64,6 +64,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class by calling methods from other classes to retrieve instances. It sets up the class's dependencies.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -84,6 +85,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/s5/r. It appears to be a getter method for the 's' field of the class Lcom/mplus/lib/M6/f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 
@@ -270,6 +272,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a touch event is within certain view boundaries.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(FFI)Z
     .locals 3
 
@@ -534,6 +537,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the UI based on spring update data, handling view clipping, translation, and floating action button behavior.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 12
 

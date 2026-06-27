@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map with integer keys and string resource IDs as values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -90,6 +91,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `TextView` using a `CharSequence` obtained from `Lcom/mplus/lib/L9/a;->a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 4
 

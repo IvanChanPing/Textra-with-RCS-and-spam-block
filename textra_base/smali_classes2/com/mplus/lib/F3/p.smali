@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/p with an input stream. It sets various instance variables, including the input stream, a byte array, and several integer counters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
@@ -61,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `w()` to get an integer, passes it to `Lcom/mplus/lib/F3/r;->c(I)I` for processing, and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A()I
     .locals 2
 
@@ -79,6 +81,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a modified long value by calling another method N() and then passing the result to Lcom/mplus/lib/F3/r;->d(J)J.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()J
     .locals 3
 
@@ -214,6 +217,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method appears to decode a byte array into a string, handling various conditions such as array bounds and empty data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D()Ljava/lang/String;
     .locals 6
 
@@ -354,6 +358,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of calling `w()` on the current object. It does not use the local variable `v1`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final F()I
     .locals 2
 
@@ -977,6 +982,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method reads data from an input stream in chunks of up to 4096 bytes and adds each chunk to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K(I)Ljava/util/ArrayList;
     .locals 7
 
@@ -1346,6 +1352,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method reads a variable-length integer from a byte array and returns its value as a long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()J
     .locals 13
 
@@ -1717,6 +1724,7 @@
     return-wide v2
 .end method
 
+# M-ROLE [GROQ]: This method reads a variable-length integer from a byte array and returns its value as a long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O()J
     .locals 7
 
@@ -1805,6 +1813,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the values of instance variables `e` and `f` based on their current values and other instance variables `i` and `j`. It appears to implement a simple counter or accumulator with overflow handling.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()V
     .locals 4
 
@@ -1920,6 +1929,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle seeking or skipping within an input stream, adjusting the current position based on the provided offset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(I)V
     .locals 10
 
@@ -2197,6 +2207,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to refill a buffer with data from an input stream, checking for available space and handling potential exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(I)Z
     .locals 7
 
@@ -2487,6 +2498,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a value based on the object's fields `j`, `i`, and `g`. It returns -1 if `j` is equal to 0x7fffffff, otherwise it returns the result of subtracting the sum of `i` and `g` from `j`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 4
 
@@ -2520,6 +2532,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the sum of two instance variables `i` and `g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()I
     .locals 3
 
@@ -2538,6 +2551,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met and calls another method `S(I)` if true, returning true if `S(I)` returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Z
     .locals 3
 
@@ -2577,6 +2591,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of field `j` to the provided integer and then calls method `P()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(I)V
     .locals 1
 
@@ -2647,6 +2662,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a value returned by `N()` is non-zero and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Z
     .locals 5
 
@@ -2678,6 +2694,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method reads and processes data from a byte array, handling various conditions such as insufficient data, and returns an object of type Lcom/mplus/lib/F3/l. It appears to be part of a data decoding or parsing process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m()Lcom/mplus/lib/F3/l;
     .locals 8
 
@@ -2851,6 +2868,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a double value by converting a long bits representation to a double. It appears to retrieve the long value from the `M()` method and then converts it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()D
     .locals 3
 
@@ -2869,6 +2887,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value obtained from calling the `w()` method. It does not use the constant 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()I
     .locals 2
 
@@ -2881,6 +2900,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by calling another method L() within the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p()I
     .locals 2
 
@@ -2893,6 +2913,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a long value by calling another method M() in the same class. It always returns the result of M() regardless of the constant 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q()J
     .locals 3
 
@@ -2905,6 +2926,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a float value by converting an integer to a float using `intBitsToFloat`. It appears to retrieve the integer from the `L()` method of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r()F
     .locals 2
 
@@ -2971,6 +2993,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of calling method w() in the same class. It does not use the constant 5.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()I
     .locals 2
 
@@ -2983,6 +3006,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a long value by calling another method N() in the same class. It does not perform any additional operations on the returned value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u()J
     .locals 3
 
@@ -2995,6 +3019,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle some kind of state management and error handling, invoking various methods and updating instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v(Lcom/mplus/lib/F3/C0;Lcom/mplus/lib/F3/G;)V
     .locals 3
 
@@ -3325,6 +3350,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by calling another method L() within the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()I
     .locals 2
 
@@ -3337,6 +3363,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a long value by calling another method M() and ignoring the result of a constant '7'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z()J
     .locals 3
 

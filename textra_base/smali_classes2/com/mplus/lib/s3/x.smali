@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/s3/x, storing the provided ExecutorService in a field. It extends AbstractExecutorService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method submits a Callable task to an executor service and returns a Future object cast to Lcom/mplus/lib/s3/v;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/util/concurrent/Callable;)Lcom/mplus/lib/s3/v;
     .locals 1
 
@@ -46,6 +48,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calls the awaitTermination method of an ExecutorService instance, passing the provided time and unit. It returns a boolean result indicating whether termination was successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
     .locals 2
 
@@ -60,6 +63,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method executes a given Runnable task using an ExecutorService. It appears to be part of a threading or asynchronous execution mechanism.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 2
 
@@ -76,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the ExecutorService is shut down. It returns a boolean value indicating the shutdown status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isShutdown()Z
     .locals 2
 
@@ -90,6 +95,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the ExecutorService is terminated. It returns a boolean value indicating the termination status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isTerminated()Z
     .locals 2
 
@@ -106,6 +112,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new RunnableFuture task for a given Runnable and result object. It wraps the Runnable in a Callable using Executors.callable and then creates a new instance of Lcom/mplus/lib/s3/D with this Callable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newTaskFor(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/RunnableFuture;
     .locals 2
 
@@ -122,6 +129,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new RunnableFuture task for a given Callable. It returns an instance of Lcom/mplus/lib/s3/D, which wraps the provided Callable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newTaskFor(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/RunnableFuture;
     .locals 2
 
@@ -136,6 +144,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method shuts down an ExecutorService instance. It stops the execution of new tasks and terminates existing tasks when they complete.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final shutdown()V
     .locals 2
 
@@ -150,6 +159,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method shuts down an executor service immediately and returns a list of tasks that were not completed. It invokes the shutdownNow method on an ExecutorService instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final shutdownNow()Ljava/util/List;
     .locals 2
 
@@ -166,6 +176,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method submits a Runnable task to an executor service and returns a Future representing the task. It essentially delegates the submission to its superclass, AbstractExecutorService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
     .locals 1
 
@@ -182,6 +193,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method submits a Runnable task to an executor service and returns a Future representing the task. It overrides the submit method of the AbstractExecutorService class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
     .locals 1
 
@@ -196,6 +208,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method submits a Callable task to an executor service and returns a Future representing the task. It then casts the result to Lcom/mplus/lib/s3/v;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
     .locals 1
 
@@ -212,6 +225,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, including its superclass's string representation and the object's ExecutorService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

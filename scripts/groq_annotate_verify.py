@@ -184,6 +184,10 @@ def main():
         i = args.index("--limit"); limit = int(args[i+1]); del args[i:i+2]
     path = args[0]
     text = open(path).read()
+    # RESUME GUARD: skip files already method-annotated by a prior run (idempotent batch).
+    if "# M-ROLE [GROQ]" in text:
+        print(f"{path}: already annotated, skip")
+        return
     cls = re.search(r"\.class[^\n]*?(L[\w/$]+;)", text)
     cls = cls.group(1) if cls else path
 

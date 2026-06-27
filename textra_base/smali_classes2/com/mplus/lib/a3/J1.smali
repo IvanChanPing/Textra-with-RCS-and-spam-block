@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of Lcom/mplus/lib/a3/L1 and assigns it to the field 'a' in the class Lcom/mplus/lib/a3/J1. It sets up a singleton of L1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 

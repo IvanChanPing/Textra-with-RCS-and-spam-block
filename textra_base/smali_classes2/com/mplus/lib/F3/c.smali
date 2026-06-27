@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/F3/c class, setting a boolean field 'a' to true. It extends the Java AbstractList class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks a boolean flag and returns immediately if it's true, otherwise it throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 2
 
@@ -55,6 +57,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an object to a list and calls a method `a()` before adding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -71,6 +74,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the list at a specified index and returns a boolean indicating success. It calls the superclass's addAll method to perform the actual addition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addAll(ILjava/util/Collection;)Z
     .locals 1
 
@@ -89,6 +93,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection and returns a boolean indicating whether any elements were added. It also calls an internal method 'a()' before adding elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -105,6 +110,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method clears the list by calling its superclass's clear method and an additional method 'a()'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public clear()V
     .locals 1
 
@@ -117,6 +123,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current list object is equal to another object. It first checks for reference equality, then checks if the object is a list and has the same size, and finally checks each element for equality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public equals(Ljava/lang/Object;)Z
     .locals 7
 
@@ -218,6 +225,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of a collection by iterating over its elements and combining their hash codes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hashCode()I
     .locals 5
 
@@ -265,6 +273,7 @@
 .method public abstract remove(I)Ljava/lang/Object;
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a list and returns true if successful, false if the object is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 2
 
@@ -298,6 +307,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements in the specified collection from the current collection and returns true if the collection was modified. It first calls an internal method `a()` and then invokes the superclass's `removeAll()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -314,6 +324,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retains all elements in the collection that are contained in the specified collection and returns true if the collection changed. It calls the superclass's retainAll method to perform the operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 1
 

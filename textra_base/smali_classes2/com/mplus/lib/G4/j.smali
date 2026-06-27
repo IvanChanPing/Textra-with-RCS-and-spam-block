@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a BroadcastReceiver object with a reference to an Lcom/mplus/lib/G4/m object. It sets up the object for potential future use in receiving broadcasts.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/G4/m;)V
     .locals 0
 
@@ -95,6 +96,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It does not directly use the input object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

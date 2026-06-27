@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/s5/b, setting a field 'a' to 4. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>()V
     .locals 1
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/s5/b class, setting its fields with the provided Context and object. It also sets an integer field 'a' to 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/T4/t;)V
     .locals 1
 
@@ -51,6 +53,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/s5/b, setting its properties including two Rect objects and a View object. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
@@ -77,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/s5/b; that initializes its fields with the provided parameters. It sets the instance variables a, b, c, and d with the given values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -196,6 +200,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the padding values of an Android View and assigns them to a Rect object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()V
     .locals 4
 
@@ -333,6 +338,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is supported by a factory and returns a new instance of `Lcom/mplus/lib/u2/p` if it is, or throws an `IllegalArgumentException` if it's not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(Ljava/lang/String;Lcom/mplus/lib/r2/b;Lcom/mplus/lib/r2/e;)Lcom/mplus/lib/u2/p;
     .locals 9
 
@@ -408,6 +414,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an object based on the value of a switch statement, either creating a `Lcom/mplus/lib/A2/d` object or a `Lcom/mplus/lib/u2/q` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public get()Ljava/lang/Object;
     .locals 11
 

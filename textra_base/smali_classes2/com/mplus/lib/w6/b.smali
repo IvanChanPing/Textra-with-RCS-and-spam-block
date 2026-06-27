@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/w6/b class with two Lcom/mplus/lib/w6/a objects and several integer and boolean fields. It sets the object's properties using the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/w6/a;Lcom/mplus/lib/w6/a;IIIIZ)V
     .locals 0
 

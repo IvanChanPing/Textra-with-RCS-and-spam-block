@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/X2/e; by calling the superclass constructor and setting a string field to "CharMatcher.none()".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the string value of a field named 'a' in the class Lcom/mplus/lib/X2/e. It appears to be an override of the toString method in Java.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

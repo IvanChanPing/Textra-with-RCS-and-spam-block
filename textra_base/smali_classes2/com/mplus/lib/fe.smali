@@ -3,6 +3,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for an Android BroadcastReceiver. It initializes the receiver by calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -11,6 +12,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an Android Intent with specific extras based on the provided context, string, and object of type Lcom/mplus/lib/c5/b. It appears to be related to sending or queuing data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Landroid/content/Context;Ljava/lang/String;Lcom/mplus/lib/c5/b;)Landroid/content/Intent;
     .locals 3
 
@@ -89,6 +91,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method receives a broadcast intent, logs the result code, and enqueues a one-time work request to process the intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
 

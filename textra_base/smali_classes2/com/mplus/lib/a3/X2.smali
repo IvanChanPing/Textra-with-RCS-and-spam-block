@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the X2 class, setting its 'a' field to the provided integer and calling the Throwable class constructor with the given string. It appears to be a custom exception class constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a custom implementation of the `fillInStackTrace()` method, which returns the current object (`p0`) after acquiring and releasing a monitor lock.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
     .locals 2
 

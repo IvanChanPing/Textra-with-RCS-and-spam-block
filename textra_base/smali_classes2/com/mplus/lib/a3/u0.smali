@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/u0, setting its fields 'a' and 'b' to the provided object and collection. It performs basic object initialization and field assignment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;Ljava/util/Collection;)V
     .locals 0
 
@@ -34,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the object stored in the 'a' field of the class. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/Object;
     .locals 2
 
@@ -56,6 +58,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that setting a value is not supported. It does not modify or return any meaningful value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 

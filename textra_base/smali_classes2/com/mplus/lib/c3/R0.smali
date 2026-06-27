@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/c3/R0, specifically creating instances of Lcom/mplus/lib/w3/c with "confidence" and "languageCode" keys.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -80,6 +81,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes an object of type `zzix` into another object using an `e` interface. It extracts a float and string from the `zzix` object and writes them to the target object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 

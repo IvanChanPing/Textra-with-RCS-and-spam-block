@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/y. It appears to be a getter method for a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -41,6 +42,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a BaseRecyclerView is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 2
 
@@ -57,6 +59,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes a loader with id 123 using the LoaderManager. It does not use the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e0(Z)V
     .locals 3
 
@@ -79,6 +82,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles file selection, either by launching an intent to choose a file or by starting a gallery selection activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(ILcom/mplus/lib/W5/g;)V
     .locals 5
 
@@ -350,6 +354,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/W5/h` Loader. It takes an integer and a Bundle as parameters but doesn't use them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateLoader(ILandroid/os/Bundle;)Landroidx/loader/content/Loader;
     .locals 1
 
@@ -435,6 +440,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the height of a view if a certain condition is not met, otherwise it returns a value from `Lcom/mplus/lib/x5/l;->M()I`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u(I)I
     .locals 2
 

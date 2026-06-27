@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes and populates an array of enum-like objects in the class Lcom/mplus/lib/E3/b. It creates instances of Lcom/mplus/lib/E3/b with various action names and integer values, then stores them in the array c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 16
 
@@ -145,6 +146,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, index, and an additional integer value. It sets the enum's properties and an instance field 'a' with the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -155,6 +157,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of Lcom/mplus/lib/E3/b; enum values. It appears to be an enum values() method that returns a copy of the enum constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/E3/b;
     .locals 2
 

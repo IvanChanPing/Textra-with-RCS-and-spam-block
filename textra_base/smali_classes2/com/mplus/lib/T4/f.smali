@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/T4/f, converting a boolean to a string and passing it to the superclass constructor. It takes a string, a boolean, and a SharedPreferences object as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;ZLandroid/content/SharedPreferences;)V
     .locals 0
 
@@ -23,6 +24,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a string value, attempts to parse it as a boolean, and returns the result as a Boolean object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized g()Ljava/lang/Boolean;
     .locals 2
 
@@ -66,6 +68,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Boolean object by calling the `g()` method. It appears to be a bridge method for a generic getter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 2
 
@@ -78,6 +81,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value by calling another method `g()` and retrieving its boolean result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h()Z
     .locals 2
 
@@ -141,6 +145,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method toggles a boolean value by calling `g()` to retrieve it, inverting it with `xor-int/lit8`, and then storing the result with `i(Ljava/lang/Boolean;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized j()V
     .locals 2
 
@@ -198,6 +203,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method casts the input object to a Boolean and then calls another method `i` with this Boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic set(Ljava/lang/Object;)V
     .locals 1
 

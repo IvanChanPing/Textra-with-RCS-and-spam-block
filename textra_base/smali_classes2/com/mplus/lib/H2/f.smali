@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static WeakReference field 'f' in the class Lcom/mplus/lib/H2/f. It sets the reference to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/H2/f class with a byte array and an integer. It sets the integer field 'e' and calls the superclass constructor with the byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([BI)V
     .locals 0
 
@@ -49,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method, `d()`, returns a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()[B
     .locals 3
 

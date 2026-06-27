@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields with new instances of `android/graphics/Rect` and `android/graphics/RectF`. It sets up the class's static rectangle objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the absolute position of a view within its parent view hierarchy as a RectF object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Landroid/view/View;Landroid/view/View;Landroid/graphics/RectF;Z)Landroid/graphics/RectF;
     .locals 7
 

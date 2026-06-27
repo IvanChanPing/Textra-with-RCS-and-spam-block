@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a `FixedTabsViewWithSlider` object, setting its properties and attributes from the provided `Context` and `AttributeSet`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
 
@@ -184,6 +185,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDraw function of the View class to draw the FixedTabsViewWithSlider, calling the superclass's onDraw method and then drawing additional content using the `Lcom/mplus/lib/B5/b;->a` method. It appears to be responsible for rendering the view with a slider.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
@@ -198,6 +200,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles page scroll events, updating the slider position and invalidating the view. It also calls the superclass's onPageScrolled method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPageScrolled(IFI)V
     .locals 1
 
@@ -220,6 +223,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles page selection in a tab view, updating the selected page index and resetting the slider position. It then invalidates the view to trigger a redraw.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPageSelected(I)V
     .locals 2
 
@@ -252,6 +256,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the color of the slider in the FixedTabsViewWithSlider class. It changes the color of the Paint object associated with the slider to the provided color value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setSliderColor(I)V
     .locals 2
 

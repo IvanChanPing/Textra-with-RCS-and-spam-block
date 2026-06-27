@@ -257,6 +257,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method takes a byte array as input and attempts to convert it into a string using the "iso-8859-1" encoding. If the conversion fails, it throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b([B)Ljava/lang/String;
     .locals 3
 

@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `c` of type `Lcom/mplus/lib/u2/m;` with a new instance of that class, passing `1` to its constructor. It sets up a static object for potential later use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/u4/e with an integer value. It sets the integer value to a field 'a' in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -43,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and populates an instance of `Lcom/mplus/lib/r4/j0` based on data from `Lcom/mplus/lib/u4/c` and `Lcom/mplus/lib/r4/n`. It initializes various fields of the `Lcom/mplus/lib/r4/j0` object, including booleans, integers, and strings, using data from the input objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Lcom/mplus/lib/u4/c;Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/r4/j0;
     .locals 7
 
@@ -378,6 +381,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to utilize a utility method to generate this string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final f()Ljava/lang/String;
     .locals 2
 
@@ -971,6 +975,7 @@
     throw v2
 .end method
 
+# M-ROLE [GROQ]: This method inserts data into a content provider using the `ContentResolver` and returns the resulting Uri, throwing a `RuntimeException` if the insertion fails and a flag is set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Landroid/net/Uri;Landroid/content/ContentValues;Z)Landroid/net/Uri;
     .locals 2
 
@@ -1441,6 +1446,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method updates a content provider using the provided Uri, ContentValues, and a where clause string. It invokes the update method of the ContentResolver object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;)V
     .locals 3
 
@@ -1461,6 +1467,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of its 'a' field. If 'a' is 0, it calls the private method f() to generate the string; otherwise, it calls the superclass's toString() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

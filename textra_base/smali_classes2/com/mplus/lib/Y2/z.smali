@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Y2/z, storing a TaskCompletionSource and calling the superclass constructor. It sets up the object with a TaskCompletionSource for later use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the result or API exception of a TaskCompletionSource based on the provided Status and Location. It handles the outcome of a location-related task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Lcom/google/android/gms/common/api/Status;Landroid/location/Location;)V
     .locals 2
 

@@ -60,6 +60,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/v6/a;. It sets various integer and object fields, including a Rect object and an instance of Lcom/mplus/lib/J5/g;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -134,6 +135,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and configures a new Android Paint object with specified color, anti-aliasing, and fill style. It returns the configured Paint object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(I)Landroid/graphics/Paint;
     .locals 3
 
@@ -286,6 +288,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the object's fields based on the value of `h.g`, a boolean flag. It sets `f`, `g`, `k`, and `l` fields using values from `p1`, static fields, or zeros.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/w6/a;)V
     .locals 2
 
@@ -362,6 +365,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the background color value from an instance of Lcom/mplus/lib/K5/b. It accesses the 'a' field of the object and returns its value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getBackgroundColorDirect()I
     .locals 2
 
@@ -382,6 +386,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background color of an object directly. It updates the color value in the `Lcom/mplus/lib/K5/b` object and creates a new `Paint` object with the given color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setBackgroundColorDirect(I)V
     .locals 2
 

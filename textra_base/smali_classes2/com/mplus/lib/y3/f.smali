@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/y3/f, setting its properties with the provided parameters. It creates a new JsonWriter instance and assigns the input parameters to the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/Writer;Ljava/util/HashMap;Ljava/util/HashMap;Lcom/mplus/lib/y3/a;Z)V
     .locals 1
 
@@ -85,6 +86,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method takes an object and a string from the input parameter, then calls another method `f` with these parameters and returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/w3/c;Ljava/lang/Object;)Lcom/mplus/lib/w3/e;
     .locals 1
 
@@ -97,6 +99,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method writes a string value to a JsonWriter and returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/String;)Lcom/mplus/lib/w3/g;
     .locals 2
 
@@ -131,6 +134,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method writes the provided object to a JSON writer, handling various types such as numbers, arrays, collections, maps, and custom objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/Object;)Lcom/mplus/lib/y3/f;
     .locals 6
 
@@ -656,6 +660,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appends a name-value pair to a JSON object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/Object;Ljava/lang/String;)Lcom/mplus/lib/y3/f;
     .locals 3
 
@@ -713,6 +718,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a flag `a` is set, and if so, returns immediately. If not, it throws an `IllegalStateException` with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()V
     .locals 3
 

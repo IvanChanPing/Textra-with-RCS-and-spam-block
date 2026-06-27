@@ -35,6 +35,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an `AutoResizeTextView` object, setting up its properties and internal state. It creates instances of `RectF` and `SparseIntArray`, and initializes various fields with default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
@@ -347,6 +348,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method resizes the text in an `AutoResizeTextView` to fit within its bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 9
 
@@ -547,6 +549,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getLayoutSize` method to return a `G` object from its superclass. It does not modify the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -563,6 +566,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the maximum number of lines of the AutoResizeTextView. It retrieves the value from the instance variable 'n'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getMaxLines()I
     .locals 2
 
@@ -571,6 +575,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getMeasuredSize() to retrieve the measured size. It returns a non-null Lcom/mplus/lib/z7/G object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -595,6 +600,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() and returns its result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -617,6 +623,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getVisibileAnimationDelegate` method to return the result from its superclass. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -631,6 +638,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -645,6 +653,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onSizeChanged` method to clear a `SparseIntArray` and call the superclass's method, and if the view's size has changed, it calls method `c()` on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSizeChanged(IIII)V
     .locals 2
 
@@ -678,6 +687,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onTextChanged behavior of a TextView to also call the 'c' method of AutoResizeTextView. It notifies the superclass and then resizes the text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 1
 
@@ -688,6 +698,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing the input boolean parameter. It does not perform any additional logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -700,6 +711,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -712,6 +724,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a background drawing delegate for the current view by calling its superclass's method. It effectively delegates the setBackgroundDrawingDelegate call to its superclass Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -730,6 +743,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the enable size cache flag and clears the size cache array, then calls a method `c()` to potentially redraw or update the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setEnableSizeCache(Z)V
     .locals 1
 
@@ -748,6 +762,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method, passing the provided height. It effectively delegates the height setting to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -756,6 +771,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -766,6 +782,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of an AutoResizeTextView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -792,6 +809,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the number of lines for the AutoResizeTextView and updates its internal state. It then calls the `c()` method to potentially resize the text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLines(I)V
     .locals 1
 
@@ -810,6 +828,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method with a Rect object and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -820,6 +839,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the maximum number of lines for the `AutoResizeTextView` and then calls a method `c()` to potentially resize the text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMaxLines(I)V
     .locals 1
 
@@ -838,6 +858,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the minimum text size of an AutoResizeTextView to a specified float value and then calls a method `c()` to potentially update the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMinTextSize(F)V
     .locals 1
 
@@ -864,6 +885,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text view to single-line mode and updates the internal state. It then calls a method `c()` to potentially resize the text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setSingleLine()V
     .locals 2
 
@@ -880,6 +902,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the single-line property of the `AutoResizeTextView` and updates its state accordingly. It also calls the `c()` method to potentially redraw or re-layout the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setSingleLine(Z)V
     .locals 1
 
@@ -910,6 +933,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text size of an AutoResizeTextView and then clears a SparseIntArray and calls a method c() to likely redraw or update the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextSize(F)V
     .locals 1
 
@@ -986,6 +1010,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of an AutoResizeTextView instance. It invokes a static method to perform the margin setting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -996,6 +1021,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of an `AutoResizeTextView` instance. It invokes a static method to adjust the padding based on the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -1008,6 +1034,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the typeface of the AutoResizeTextView and updates the internal TextPaint object. It also calls the superclass's setTypeface method and an internal method c().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTypeface(Landroid/graphics/Typeface;)V
     .locals 3
 
@@ -1051,6 +1078,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided boolean parameter. It does not perform any additional logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -1063,6 +1091,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -1073,6 +1102,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of an AutoResizeTextView to a specified value. It invokes a static method to adjust the width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 

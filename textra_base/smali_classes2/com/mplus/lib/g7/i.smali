@@ -80,6 +80,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/g7/i;, setting various properties and calling superclass constructors. It appears to be a constructor for a class that extends Lcom/mplus/lib/x7/g;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/c;Lcom/mplus/lib/P6/c;Lcom/mplus/lib/T4/f;III)V
     .locals 1
 
@@ -112,6 +113,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a synthetic constructor that calls the private constructor of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/x7/c;Lcom/mplus/lib/P6/c;Lcom/mplus/lib/T4/f;IIII)V
     .locals 0
 
@@ -124,6 +126,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks conditions and sets a string value based on the conditions. It appears to retrieve a string from a method `g(I)` based on certain integer values (`p` or `q`) or returns an empty string if conditions are not met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final C()V
     .locals 2
 
@@ -285,6 +288,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a switch case based on the value of `r` and performs actions on a `BaseSwitch` view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n(Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -336,6 +340,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle different states based on the value of `r` and performs actions such as displaying messages or calling other methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w()V
     .locals 3
 

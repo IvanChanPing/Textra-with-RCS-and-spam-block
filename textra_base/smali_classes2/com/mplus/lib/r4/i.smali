@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/i with a file and an integer, setting instance variables based on the integer value. It appears to handle a single case where the integer is 1, performing the same actions as the default case.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/File;I)V
     .locals 0
 
@@ -147,6 +148,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to get the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final g()Ljava/lang/String;
     .locals 2
 
@@ -159,6 +161,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to a file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Ljava/io/File;[B)V
     .locals 3
 
@@ -249,6 +252,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a directory with a name based on the provided long parameter and cleans it up using `Lcom/mplus/lib/z7/h;->c(Ljava/io/File;)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(J)V
     .locals 5
 
@@ -352,6 +356,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method deletes a given file and its corresponding file returned by `Lcom/mplus/lib/r4/i;->e(Ljava/io/File;)Ljava/io/File;` if they exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/io/File;)V
     .locals 3
 
@@ -495,6 +500,7 @@
     return-object p3
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/r4/T` using two files and an object, and returns it. It appears to be involved in file management or caching.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(JJ)Lcom/mplus/lib/r4/T;
     .locals 1
 
@@ -525,6 +531,7 @@
     return-object p3
 .end method
 
+# M-ROLE [GROQ]: This method saves a file to the device's storage, either by copying from an input stream or by deleting an existing file if no input stream is provided.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h(JJLcom/mplus/lib/r4/S;)V
     .locals 5
 
@@ -881,6 +888,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. It calls either the `f()` or `g()` method depending on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

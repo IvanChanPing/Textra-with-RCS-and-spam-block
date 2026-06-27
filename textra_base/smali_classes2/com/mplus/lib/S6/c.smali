@@ -24,6 +24,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and configures UI components, including a BaseImageView and a BaseTextView, with specific properties and event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Ljava/lang/String;Lcom/mplus/lib/S6/d;Lcom/mplus/lib/x5/y;II)V
     .locals 1
 
@@ -162,6 +163,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event by calling the onClick method of an instance of Lcom/mplus/lib/S6/d, passing the view returned by Lcom/mplus/lib/x5/y;->getView().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 

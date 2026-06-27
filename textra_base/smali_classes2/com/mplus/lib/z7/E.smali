@@ -49,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method closes a BufferedInputStream and checks the buffer size before calling the superclass's close method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 3
 
@@ -82,6 +83,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/g7/d, setting a field 'a' to 0 and calling the superclass constructor. It appears to be a generated synthetic constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>()V
     .locals 1
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to convert the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final c()Ljava/lang/String;
     .locals 2
 
@@ -65,6 +67,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object of type Lcom/mplus/lib/K5/b from an ArrayList at a specified index. It returns the retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(I)Lcom/mplus/lib/K5/b;
     .locals 2
 
@@ -83,6 +86,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method searches for an item in an ArrayList by a specific ID and returns its index if found, or -1 if not found. It iterates through the list, comparing the ID of each item with the given ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(I)I
     .locals 4
 
@@ -136,6 +140,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an ArrayList based on the value of a field 'a'. It has a default case and one specific case when 'a' is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -176,6 +181,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an item at a specified position based on the value of a class field. It either retrieves the item from an ArrayList or calls another method to get the item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItem(I)Ljava/lang/Object;
     .locals 2
 
@@ -214,6 +220,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the item ID of an item at a given position. It checks the value of a field `a` and either returns the position itself or retrieves an item from an `ArrayList` and returns its ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 3
 
@@ -441,6 +448,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method determines whether the adapter has stable IDs, returning true if the internal state 'a' is 1, and otherwise delegating to the superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasStableIds()Z
     .locals 2
 
@@ -473,6 +481,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either by calling its superclass's toString method or a private method c() based on the value of field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

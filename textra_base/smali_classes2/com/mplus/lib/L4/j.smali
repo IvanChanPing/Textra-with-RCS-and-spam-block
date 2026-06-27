@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/L4/j, setting up an array of 256 elements of the same class type and initializing two integer fields to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -39,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the length of an object if its state is valid, otherwise it throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()I
     .locals 4
 

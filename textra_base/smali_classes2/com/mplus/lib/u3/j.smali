@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/u3/j, storing a given Class object and a boolean value. It sets up the object's state with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Class;Z)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their class and a boolean field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -78,6 +80,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object based on its 'a' field and 'b' boolean field. It combines the hash codes of these fields using bitwise XOR and multiplication operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 

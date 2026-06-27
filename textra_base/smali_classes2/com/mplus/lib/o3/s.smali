@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method checks for null objects in an array and throws a NullPointerException if any are found. It iterates over the array up to a specified length, verifying each object is non-null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(I[Ljava/lang/Object;)V
     .locals 3
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if either of the two input objects is null and throws a NullPointerException with a descriptive message if so. It ensures that both key and value in an entry are non-null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
@@ -130,6 +132,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided integer is negative and throws an IllegalArgumentException if it is. It does nothing if the integer is non-negative.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(ILjava/lang/String;)V
     .locals 3
 
@@ -249,6 +252,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method creates an array of a specific primitive type based on the input size, which must be a power of 2 between 2^1 and 2^30.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(I)Ljava/lang/Object;
     .locals 3
 
@@ -374,6 +378,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two sets are equal by comparing their sizes and contents.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/util/Set;Ljava/lang/Object;)Z
     .locals 3
 
@@ -438,6 +443,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/M0` with the provided set and a potentially combined comparator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Ljava/util/Set;Lcom/mplus/lib/n3/i;)Lcom/mplus/lib/o3/M0;
     .locals 6
 
@@ -585,6 +591,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first item from an iterable, or a default object if the iterable is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -835,6 +842,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/L0` using two `Lcom/mplus/lib/o3/e0` objects and returns it. It also invokes a method to set properties on these objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Lcom/mplus/lib/o3/e0;Lcom/mplus/lib/o3/e0;)Lcom/mplus/lib/o3/L0;
     .locals 2
 
@@ -881,6 +889,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method performs a search operation based on the provided parameters, returning an index if a match is found, or -1 if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;[I[Ljava/lang/Object;[Ljava/lang/Object;)I
     .locals 9
 
@@ -978,6 +987,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method removes elements from a list based on a condition applied by the `Lcom/mplus/lib/n3/i` interface and also removes elements within a specified range.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Ljava/util/List;Lcom/mplus/lib/n3/i;II)V
     .locals 3
 
@@ -1039,6 +1049,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method performs a hash operation on the input integer. It applies a series of bitwise and arithmetic operations, including multiplication and rotation, to produce a hashed output.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static q(I)I
     .locals 5
 

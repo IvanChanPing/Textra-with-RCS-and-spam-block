@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `R0` in class `Lcom/mplus/lib/J4/b;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with the argument `0x24`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 

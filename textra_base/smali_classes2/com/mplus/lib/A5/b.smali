@@ -35,6 +35,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields `l` and `m` in class `Lcom/mplus/lib/A5/b;` by calling `Lcom/mplus/lib/z7/m;->c(I)I` with constants 0x12 and 0x18.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -57,6 +58,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the minimum distance between the center of a `BaseImageView` and a list of rectangles, then uses this distance to set the alpha of the `BaseImageView`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n0(Ljava/util/ArrayList;Lcom/mplus/lib/ui/common/base/BaseImageView;)V
     .locals 6
 
@@ -208,6 +210,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current item in a ViewPager is less than a certain threshold and returns true if so, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()Z
     .locals 4
 
@@ -440,6 +443,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method toggles the visibility of two `BaseImageView` instances based on the current item in a `ViewPager` and a boolean condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 3
 

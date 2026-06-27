@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/c7/b that calls the superclass constructor Lcom/mplus/lib/D5/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -47,6 +48,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns an instance of `Lcom/mplus/lib/A2/r` if it doesn't already exist. It creates a new instance with the fragment's activity and a configuration object from `Lcom/mplus/lib/r4/p;->Z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()Lcom/mplus/lib/A2/r;
     .locals 5
 

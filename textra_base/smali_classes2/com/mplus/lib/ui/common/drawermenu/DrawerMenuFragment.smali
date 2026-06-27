@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the DrawerMenuFragment class that calls the superclass constructor. It initializes a new instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -383,6 +384,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onAttach method of the Fragment class to cast the attached Activity to a specific type and store it in a field. It calls the superclass's onAttach method and then performs the casting and assignment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAttach(Landroid/app/Activity;)V
     .locals 1
 
@@ -397,6 +399,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout with the ID 0x7f0d0038 and returns the resulting View. It creates the user interface for the DrawerMenuFragment when it is created.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
@@ -415,6 +418,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method handles an item click event in a drawer menu, checking if the clicked item is of type Lcom/mplus/lib/E5/c and if so, calls the V method on the GiphyActivity instance with the clicked item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
 

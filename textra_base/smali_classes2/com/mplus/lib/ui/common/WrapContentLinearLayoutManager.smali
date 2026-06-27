@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a WrapContentLinearLayoutManager object, setting up its properties. It calls the superclass constructor and initializes fields with default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
@@ -332,6 +333,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method measures the size of a RecyclerView using a custom WrapContentLinearLayoutManager. It calculates the width and height of the RecyclerView based on its content and padding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;II)V
     .locals 20
 
@@ -692,6 +694,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the orientation of a LinearLayoutManager and resets certain internal state if the orientation changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setOrientation(I)V
     .locals 4
 

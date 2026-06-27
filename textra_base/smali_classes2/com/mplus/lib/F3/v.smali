@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static logger and a boolean flag in the class Lcom/mplus/lib/F3/v. It sets the logger to the class name and copies a boolean value from Lcom/mplus/lib/F3/t1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the sum of two values, one derived from an integer and the other from an object of type Lcom/mplus/lib/F3/m.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(ILcom/mplus/lib/F3/m;)I
     .locals 1
 
@@ -63,6 +65,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the size of an object of type Lcom/mplus/lib/F3/m, with some additional offset. It appears to be related to serialization or memory allocation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Lcom/mplus/lib/F3/m;)I
     .locals 2
 
@@ -85,6 +88,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method increments the result of a call to `u(I)` by 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(I)I
     .locals 1
 
@@ -113,6 +117,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the total serialized size of an object by multiplying a value by 2, adding the result to the serialized size of another object, and returning the total.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static r(ILcom/mplus/lib/F3/D0;Lcom/mplus/lib/F3/T0;)I
     .locals 1
 
@@ -141,6 +146,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a value based on the input integer, either by calling another method `w(I)` if the input is non-negative, or returning a fixed value if it's negative.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(I)I
     .locals 1
 
@@ -225,6 +231,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method takes two integers, modifies them using the `u` and `w` methods, and returns their sum.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static v(II)I
     .locals 1
 

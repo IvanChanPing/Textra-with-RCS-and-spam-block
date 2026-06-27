@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/f3/i, wrapping an existing Lcom/google/android/gms/internal/play_billing/zzco object. It sets the wrapped object as a field in the new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/play_billing/zzco;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object is contained in a collection. It delegates the contains check to a Google Play Billing internal class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -79,6 +81,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the index of the given object from the end of the collection. It returns the index from the end if the object is found, or -1 if not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 3
 
@@ -145,6 +148,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It appears to be a wrapper around the size() method of an AbstractCollection instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -161,6 +165,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method delegates the subList operation to another method `zzi(II)` and returns the result as a List. It appears to be part of a class that wraps or extends a Google Play Billing API class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -171,6 +176,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a Google Play Billing operation is supported. It returns a boolean value indicating the result of the check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()Z
     .locals 2
 
@@ -185,6 +191,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `com/google/android/gms/internal/play_billing/zzco`. It appears to be a getter method for a field named `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Lcom/google/android/gms/internal/play_billing/zzco;
     .locals 2
 
@@ -195,6 +202,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a subset of a collection and clones it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzi(II)Lcom/google/android/gms/internal/play_billing/zzco;
     .locals 3
 

@@ -39,6 +39,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/v6/a0 class, setting its fields and registering the instance as a layout change listener. It also calls the superclass constructor with a Context object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/x5/z;Lcom/mplus/lib/v6/x;Lcom/mplus/lib/v6/P;Lcom/mplus/lib/ui/common/SendText;Lcom/mplus/lib/h6/d;)V
     .locals 0
 
@@ -61,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a bubble specification for spans from a repository. It returns an instance of Lcom/mplus/lib/v6/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getBubbleSpecForSpans()Lcom/mplus/lib/v6/a;
     .locals 3
 
@@ -79,6 +81,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method resets the state of an object, specifically hiding a BubbleView and clearing various fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()V
     .locals 3
 

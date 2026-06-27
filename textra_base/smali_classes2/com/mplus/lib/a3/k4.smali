@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/k4, setting its fields 'a' and 'b' with the provided parameters. It also calls the superclass constructor Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhx;-><init>.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -272,6 +273,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzah object if the internal state 'a' is 0, otherwise it throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzah;
     .locals 3
 
@@ -356,6 +358,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzaxt object if the class's 'a' field is 1, otherwise it throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 3
 
@@ -398,6 +401,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzdj object if the class's state (represented by `a`) is 2, otherwise it throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzd()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj;
     .locals 3
 

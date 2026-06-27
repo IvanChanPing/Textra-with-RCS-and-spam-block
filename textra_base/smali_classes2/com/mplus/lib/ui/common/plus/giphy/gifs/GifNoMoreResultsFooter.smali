@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a GifNoMoreResultsFooter object, calling the superclass constructor. It sets up the object with a given Context and AttributeSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the last view by invoking the superclass's `getLastView()` method. It essentially delegates the call to its superclass `Lcom/mplus/lib/x5/z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLastView()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -37,6 +39,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the layout size of the GifNoMoreResultsFooter class by calling its superclass's getLayoutSize method. It does not modify the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -53,6 +56,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the measured size of the view by calling the superclass's getMeasuredSize() method. It simply invokes the superclass method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -67,6 +71,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns its result. It appears to be an overridden method that simply delegates to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -81,6 +86,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the vertical padding of the GifNoMoreResultsFooter class by invoking its superclass's getPaddingVertical method. It simply delegates the call to its superclass Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -109,6 +115,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the visible animation delegate by invoking the superclass's `getVisibileAnimationDelegate` method. It simply delegates the call to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -121,6 +128,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -135,6 +143,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes the `GifNoMoreResultsFooter` view after inflation, finding a specific view by ID and storing it in the `i` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onFinishInflate()V
     .locals 2
 
@@ -169,6 +178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -179,6 +189,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate for the class. It overrides a method from its superclass to perform this action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -189,6 +200,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a view. It invokes a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -199,6 +211,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setDispatchTouchEvents function to call its superclass's version. It takes a boolean parameter and returns immediately after the call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setDispatchTouchEvents(Z)V
     .locals 1
 
@@ -209,6 +222,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method and then returns without any further action. It effectively delegates the `setHeightTo` operation to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -219,6 +233,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method, passing the provided Gif layout size parameter. It does not perform any additional logic beyond the superclass call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -239,6 +254,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method to set the margin of the view. It effectively delegates the margin setting to its parent class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -247,6 +263,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a view. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -257,6 +274,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a view by invoking a static method with the provided margin value and the current object. It appears to be a part of a custom UI component.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -269,6 +287,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a view by invoking a static method with the provided padding value and the current object. It then returns without using the result of the invocation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -279,6 +298,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided visibility flag. It appears to be a generated bridge method for overriding the setViewVisible method in a subclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -291,6 +311,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setViewVisibleAnimated` method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -301,6 +322,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of the GifNoMoreResultsFooter to a specified value. It invokes a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 

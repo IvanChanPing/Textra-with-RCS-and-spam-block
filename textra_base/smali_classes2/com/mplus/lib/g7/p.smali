@@ -122,6 +122,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `TextView` based on certain conditions and configurations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 9
 

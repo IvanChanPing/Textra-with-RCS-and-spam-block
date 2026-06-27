@@ -52,6 +52,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a GiphyActivity object, setting a boolean field 'y' to false. It calls the superclass constructor Lcom/mplus/lib/x5/l;-><init>().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -66,6 +67,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles various actions based on the type of event received, such as closing the drawer, sending analytics events, and updating the UI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(Lcom/mplus/lib/E5/c;)V
     .locals 5
 
@@ -250,6 +252,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the Giphy activity with a given search query and optional second parameter, and logs the event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
@@ -552,6 +555,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method toggles the visibility of two views and potentially stops a GiphyCategoryGridFragment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Z()V
     .locals 3
 
@@ -648,6 +652,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific ID matches a certain value and returns a result from an interface method if true, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d0(Lcom/mplus/lib/t5/d;Lcom/mplus/lib/x5/z;)Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -683,6 +688,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onAttachFragment method to store attached fragments of specific types in instance variables. It checks for instances of GiphyGifsListFragment, DrawerMenuFragment, and GiphyCategoryGridFragment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAttachFragment(Landroidx/fragment/app/Fragment;)V
     .locals 2
 
@@ -740,6 +746,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for various views in the GiphyActivity, toggling the drawer layout and calling the a0 method based on the clicked view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
@@ -828,6 +835,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the GiphyActivity by setting up its layout, views, and event listeners. It also installs an HTTP response cache if it's not already installed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 7
 
@@ -1281,6 +1289,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method rotates an image view by 90 times the slide fraction when the drawer slides. It modifies the rotation of `BaseImageView` instance `G`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDrawerSlide(Landroid/view/View;F)V
     .locals 2
 
@@ -1401,6 +1410,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the focus change event of a specific `BaseEditText` view in the `GiphyActivity` class, updating the text of the view when it gains focus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onFocusChange(Landroid/view/View;Z)V
     .locals 3
 
@@ -1471,6 +1481,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onResumeFragments` method in the `GiphyActivity` class, handling fragment resumption and performing actions based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResumeFragments()V
     .locals 8
 
@@ -1630,6 +1641,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onStop` lifecycle method in an Android activity and flushes the HTTP response cache when the activity stops.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onStop()V
     .locals 3
 

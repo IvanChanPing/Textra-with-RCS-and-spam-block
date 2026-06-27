@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/l0, setting its fields 'a' and 'b' and calling the superclass constructor. It appears to be a constructor for a set implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/a3/p0;I)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the state of the object by calling the `clear()` method on its `b` field of type `Lcom/mplus/lib/a3/p0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -69,6 +71,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in a map or set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 5
 
@@ -194,6 +197,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator over the keys or entries of a map, depending on the value of the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 4
 
@@ -516,6 +520,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object, either by directly calling the size method of an internal object or through a switch statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

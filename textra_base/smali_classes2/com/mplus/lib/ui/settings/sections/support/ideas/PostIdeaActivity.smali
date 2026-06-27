@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the PostIdeaActivity class that initializes the object by calling the superclass constructor. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and initializes an instance of `Lcom/mplus/lib/j4/a`, setting its `f` field to `true`, and then calls its `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()V
     .locals 3
 
@@ -505,6 +507,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method of an Android Activity, quitting a looper and unregistering an object from an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 3
 

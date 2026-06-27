@@ -109,6 +109,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/F3/y1; from a given string. It uses the Java Enum.valueOf method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/F3/y1;
     .locals 2
 
@@ -133,6 +134,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of Lcom/mplus/lib/F3/y1; enum values. It appears to be an enum values() method, which is a standard method in Java enums.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/F3/y1;
     .locals 2
 

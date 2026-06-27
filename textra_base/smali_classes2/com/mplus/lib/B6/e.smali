@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/B6/e; that calls the superclass constructor Lcom/mplus/lib/D5/b;-><init>()V.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -85,6 +86,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a DialogFragment and updates the UI with specific text and view settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 2
 

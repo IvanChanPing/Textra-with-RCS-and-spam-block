@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/R1 with an integer value and calls the superclass constructor of Ljava/io/OutputStream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -89,6 +90,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method takes an integer parameter but does not write it, instead it seems to be a no-op. It appears to load a value from the object's field 'a' but does not use it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write(I)V
     .locals 1
 

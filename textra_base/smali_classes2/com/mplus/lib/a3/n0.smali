@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/n0, setting its fields based on the provided Lcom/mplus/lib/a3/p0 object and index. It stores the object at the specified index and the index itself in the instance's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/p0;I)V
     .locals 1
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object is present in a collection and updates an index accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 5
 
@@ -116,6 +118,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the object stored in the 'a' field of the class. It does not use the local variable v1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/Object;
     .locals 2
 
@@ -128,6 +131,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a value from a map or an array based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue()Ljava/lang/Object;
     .locals 4
 

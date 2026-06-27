@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/a3/S, setting its fields with a new zzajl object and the provided zzajc object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzajc;)V
     .locals 1
 
@@ -103,6 +104,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object, either by initializing and retrieving it from `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzajc;->zza()` if not already initialized, or by returning a previously initialized object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Ljava/lang/Object;
     .locals 4
 

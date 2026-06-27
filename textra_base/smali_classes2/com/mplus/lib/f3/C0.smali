@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to retrieve an instance of `sun/misc/Unsafe` by iterating over the declared fields of the `sun/misc/Unsafe` class and checking if any of them are instances of `sun/misc/Unsafe`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic run()Ljava/lang/Object;
     .locals 8
 

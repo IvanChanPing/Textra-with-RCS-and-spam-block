@@ -225,6 +225,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the InMobi SDK is initialized and if so, updates the GDPR consent using a JSON object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized onEventMainThread(Lcom/mplus/lib/Z3/c;)V
     .locals 1
 

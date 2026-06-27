@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map in the class Lcom/mplus/lib/E3/s; using enum values from Lcom/mplus/lib/E3/t;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 6
 
@@ -61,6 +62,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/E3/s, setting its fields 'a' and 'b' to the provided Lcom/mplus/lib/E3/C and Java/util/TimeZone objects, respectively. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/E3/C;Ljava/util/TimeZone;)V
     .locals 0
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J2/y;, setting its TaskCompletionSource. It calls the superclass constructor with an integer parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 .method public abstract zac(Lcom/google/android/gms/common/api/internal/zabq;)V
 .end method
 
+# M-ROLE [GROQ]: This method handles an error by creating an ApiException from a given Status and sets it as an exception on a TaskCompletionSource. It effectively propagates the error to a task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zad(Lcom/google/android/gms/common/api/Status;)V
     .locals 2
     .param p1    # Lcom/google/android/gms/common/api/Status;
@@ -54,6 +56,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an exception on a TaskCompletionSource when given an exception. It does not perform any additional error handling or logging.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zae(Ljava/lang/Exception;)V
     .locals 2
     .param p1    # Ljava/lang/Exception;
@@ -72,6 +75,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to call `zac` on the provided `zabq` object and handles potential exceptions by setting an exception on a `TaskCompletionSource` or calling `zad` with a `Status` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zaf(Lcom/google/android/gms/common/api/internal/zabq;)V
     .locals 2
 

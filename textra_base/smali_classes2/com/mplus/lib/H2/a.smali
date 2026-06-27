@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/H2/a class with GoogleApiAvailability, Activity, integer, and ActivityResultLauncher parameters. It sets these parameters as instance fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/GoogleApiAvailability;Landroid/app/Activity;ILandroidx/activity/result/ActivityResultLauncher;)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a dialog click event by dismissing the dialog and attempting to resolve a Google API error.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 

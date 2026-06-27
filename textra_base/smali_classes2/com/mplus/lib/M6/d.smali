@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/M6/d class, setting its fields and creating a new Lcom/mplus/lib/s5/j instance. It also sets a reference to itself in the provided Lcom/mplus/lib/s5/F object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/s5/F;Lcom/mplus/lib/M6/c;Lcom/mplus/lib/M6/m;)V
     .locals 0
 
@@ -149,6 +150,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of objects, merging their `b` field of type `Lcom/mplus/lib/r4/n` into a new `Lcom/mplus/lib/r4/n` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()Lcom/mplus/lib/r4/n;
     .locals 4
 
@@ -1154,6 +1156,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method schedules a task to run after a delay and then calls a method to perform some action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 6
 

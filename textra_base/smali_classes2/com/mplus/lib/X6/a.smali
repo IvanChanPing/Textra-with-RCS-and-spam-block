@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array `k` with values 0, 1, and 2. It sets up the class's static field `k` with an integer array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/X6/a class with a given Android context. It sets up various instance fields, including a Lcom/mplus/lib/E1/k object and instances of Lcom/mplus/lib/J4/a and Lcom/mplus/lib/D6/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
@@ -77,6 +79,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a RecyclerView.ViewHolder instance, specifically an instance of Lcom/mplus/lib/s5/r, which is initialized with a Lcom/mplus/lib/X6/e object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/x5/z;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 3
 
@@ -263,6 +266,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves two long values from a database cursor and returns them as an AndroidX Pair object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)Landroidx/core/util/Pair;
     .locals 4
 
@@ -317,6 +321,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an item ID from a cursor object, combining two long values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 7
 

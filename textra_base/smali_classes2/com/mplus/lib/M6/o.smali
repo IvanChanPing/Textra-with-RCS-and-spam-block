@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a custom Drawable object with various graphical properties, including a paint, text paint, and font.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
@@ -131,6 +132,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the internal state of the class based on the provided integer parameter and invalidates the drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 5
 
@@ -216,6 +218,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a shape (either a circle or a rounded rectangle) and text on a Canvas, depending on the length of the string stored in the object's `d` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 8
 
@@ -365,6 +368,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic height of an object, stored in the 'g' field. It does not perform any additional calculations or operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -375,6 +379,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic width of an object, which is stored in the field `f` of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 
@@ -399,6 +404,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of a Paint object. It takes an integer parameter representing the alpha value and applies it to the Paint object's alpha property.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 

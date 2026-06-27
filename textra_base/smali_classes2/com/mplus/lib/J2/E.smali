@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J2/E; with a Google API client and an integer. It sets the object's fields 'a' and 'b' to the provided integer and API client, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/common/api/internal/a;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a ConnectionResult by storing it in an internal object and then notifying the object to proceed with the stored result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zaa(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 3
 
@@ -140,6 +142,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a connection result, updating the connection status and notifying listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab(Landroid/os/Bundle;)V
     .locals 3
 
@@ -259,6 +262,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles connection suspension for Google Play Services, invoking `onConnectionSuspended` or `zac` methods based on the current state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zac(IZ)V
     .locals 4
 

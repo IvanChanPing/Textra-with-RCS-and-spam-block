@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/f8/a; with four string parameters. It calls the superclass constructor Lcom/smaato/sdk/core/kpi/KpiData;-><init>() and assigns the parameters to instance fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing fields of `KpiData` objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -143,6 +145,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns a string, specifically the value of the 'a' field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getRollingFillRatePerAdSpace()Ljava/lang/String;
     .locals 2
 
@@ -153,6 +156,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string, specifically the value of the object's 'b' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSessionDepthPerAdSpace()Ljava/lang/String;
     .locals 2
 
@@ -165,6 +169,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the total ad requests. It appears to simply return a stored string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getTotalAdRequests()Ljava/lang/String;
     .locals 2
 
@@ -177,6 +182,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the total fill rate. It simply returns the value of the object's 'd' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getTotalFillRate()Ljava/lang/String;
     .locals 2
 
@@ -189,6 +195,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on the hash codes of its four string fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f3/F0, storing the provided Lsun/misc/Unsafe object. It essentially sets up the object with the given Unsafe instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lsun/misc/Unsafe;)V
     .locals 0
 

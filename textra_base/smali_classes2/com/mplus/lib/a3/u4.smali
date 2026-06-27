@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/u4, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzzz;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzzo;)V
     .locals 0
 
@@ -63,6 +64,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method calls a static method to perform an operation on two objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 3
 

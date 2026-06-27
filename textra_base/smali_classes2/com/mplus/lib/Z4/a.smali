@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Z4/a class with a given Android context. It sets up various object fields within the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -71,6 +72,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string matches the ID of any ShortcutInfoCompat object in a list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Ljava/lang/String;Ljava/util/List;)Z
     .locals 2
 
@@ -131,6 +133,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/Z4/a;. It does this by acquiring a lock on the class itself and returning the static instance variable h.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/Z4/a;
     .locals 3
 
@@ -166,6 +169,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to add dynamic shortcuts to an Android app using `ShortcutManagerCompat` and logs a message if the operation fails due to rate limiting or an `IllegalArgumentException`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Ljava/util/ArrayList;)V
     .locals 3
 
@@ -233,6 +237,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a ShortcutInfoCompat object, configuring it with various properties such as icon, categories, and intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(JLcom/mplus/lib/r4/n;I)Landroidx/core/content/pm/ShortcutInfoCompat;
     .locals 9
 
@@ -720,6 +725,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method schedules a task to run after a 300ms delay using a Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S()V
     .locals 7
 
@@ -816,6 +822,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method named S() and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 1
 
@@ -826,6 +833,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method named S() and sets a local variable to 7 and then 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 1
 

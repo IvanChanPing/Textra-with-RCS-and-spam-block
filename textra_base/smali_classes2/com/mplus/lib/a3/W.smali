@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/W;, setting its 'b' field and calling the superclass constructor. It takes an object of type Lcom/mplus/lib/a3/Y; as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/Y;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the data in the object referenced by `b` of type `Lcom/mplus/lib/a3/Y`. It calls the `clear` method on this object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -41,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in the entry set of a map. It returns a boolean value indicating the presence of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -63,6 +66,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a map is empty. It returns a boolean value indicating whether the map contains any elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 2
 
@@ -79,6 +83,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator object for the class Lcom/mplus/lib/a3/W. It creates a new instance of Lcom/mplus/lib/a3/X, passing the object's Y field to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -93,6 +98,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes a given object from a collection if it exists. It checks if the object is present using the `contains` method and then removes it by calling `Lcom/mplus/lib/a3/e0;->zzj(Lcom/mplus/lib/a3/e0;Ljava/lang/Object;)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 2
 
@@ -203,6 +209,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method implements the `retainAll` operation, which removes from the collection all of its elements that are not contained in the specified collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 7
 
@@ -370,6 +377,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map stored in an object of class Lcom/mplus/lib/a3/Y. It always returns the actual size of the map, but the code has a redundant constant 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/l0, initializing its fields with provided parameters. It sets the object's fields 'a' and 'b' to the given Lcom/mplus/lib/ia/v and Lcom/inmobi/media/y9 instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/ia/v;Lcom/inmobi/media/y9;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the completion of a pixel copy operation, invoking a static method to process the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPixelCopyFinished(I)V
     .locals 3
 

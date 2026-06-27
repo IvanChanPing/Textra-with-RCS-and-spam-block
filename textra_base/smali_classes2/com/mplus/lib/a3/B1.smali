@@ -35,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the string "No-op Provider" as a string representation of the object. It does not perform any operations based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

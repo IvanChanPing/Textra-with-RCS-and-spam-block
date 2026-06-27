@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/x5/f, initializing a DialogFragment. It calls the superclass constructor to perform the initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -56,6 +57,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to show a DialogFragment using the provided FragmentActivity's FragmentManager. It catches and ignores any IllegalStateException that may occur during this process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/x5/l;)V
     .locals 2
 
@@ -109,6 +111,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `dismissAllowingStateLoss` and sets a boolean field `c` to true. It appears to be part of a DialogFragment subclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dismissAllowingStateLoss()V
     .locals 2
 
@@ -127,6 +130,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the Context of the Fragment's Activity. It gets the Activity instance using getActivity() and returns it as the Context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContext()Landroid/content/Context;
     .locals 2
 
@@ -141,6 +145,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a custom Dialog instance with a specific theme and style.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 4
 
@@ -228,6 +233,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDismiss callback of a DialogFragment, calling the superclass's onDismiss and then setting a boolean field 'c' to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
@@ -248,6 +254,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onStart() method of a DialogFragment, calling the superclass's onStart() and then putting a value into a SparseBooleanArray.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onStart()V
     .locals 4
 
@@ -288,6 +295,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onStop` method of a DialogFragment to remove an activity's hash code from a SparseBooleanArray when the fragment stops.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onStop()V
     .locals 3
 
@@ -342,6 +350,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

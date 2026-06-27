@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/x;, setting its properties and calling the superclass constructor. It also retrieves an exception from the provided Lcom/mplus/lib/a3/s; object and stores it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Lcom/mplus/lib/a3/s;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;ZLcom/google/android/gms/internal/mlkit_entity_extraction/zzagt;)V
     .locals 1
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/x; with the provided parameters and calls the superclass constructor. It also sets an exception object and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzafq;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagt;)V
     .locals 7
 
@@ -169,6 +171,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method returns an Exception object stored in the 'g' field of the class. It always returns this exception, regardless of any other state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Ljava/lang/Exception;
     .locals 2
 
@@ -189,6 +192,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a static instance of zzagn. It does nothing dynamically and always returns the same object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzk()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;
     .locals 2
 

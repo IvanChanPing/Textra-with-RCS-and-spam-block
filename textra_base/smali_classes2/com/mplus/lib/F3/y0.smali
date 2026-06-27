@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Lcom/mplus/lib/F3/y0 class and sets its 'a' field to false. It creates a singleton instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/F3/y0 class, which extends LinkedHashMap, and sets a boolean field 'a' to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -45,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates a hash code for the given object, handling byte arrays and other objects differently.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/Object;)I
     .locals 6
 
@@ -124,6 +127,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks a boolean flag and either returns immediately or throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 2
 
@@ -149,6 +153,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/F3/y0;, either empty if the current map is empty, or a copy of the current map otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/F3/y0;
     .locals 3
 
@@ -184,6 +189,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method clears the current object by calling its superclass's clear method and another method named b().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 1
 
@@ -198,6 +204,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set view of the mappings contained in the map, handling the case where the map is empty. It returns an empty set if the map is empty, otherwise it calls the superclass's entrySet method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final entrySet()Ljava/util/Set;
     .locals 2
 
@@ -225,6 +232,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object, specifically comparing the contents of two maps.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
@@ -475,6 +483,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method implements the put operation of a map, storing a key-value pair and returning the previous value associated with the key. It also performs some class checks and charset retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -503,6 +512,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a map's key set and retrieves corresponding values, but ultimately delegates the actual `putAll` operation to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final putAll(Ljava/util/Map;)V
     .locals 4
 
@@ -563,6 +573,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a map and calls a method `b()` on the current object. It then returns the removed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 

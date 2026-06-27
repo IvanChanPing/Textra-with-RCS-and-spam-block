@@ -83,6 +83,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a field `g` to the input value and modifies a byte field `h` by setting its 3rd bit, then returns the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(I)Lcom/google/android/gms/internal/mlkit_common/zzsi;
     .locals 1
 
@@ -103,6 +104,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the model type for the current object if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Lcom/google/mlkit/common/sdkinternal/ModelType;)Lcom/google/android/gms/internal/mlkit_common/zzsi;
     .locals 2
 
@@ -128,6 +130,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field and modifies a byte field in the class instance, then returns the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze(Z)Lcom/google/android/gms/internal/mlkit_common/zzsi;
     .locals 1
 

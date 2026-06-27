@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `b` of type `Lcom/mplus/lib/F3/T;` with a new instance of `Lcom/mplus/lib/F3/T;` constructed with an integer parameter value of 1. It is a class initializer for `Lcom/mplus/lib/F3/w0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -96,6 +97,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/F3/w0, setting its 'a' field to the provided Lcom/mplus/lib/F3/v object and establishing a backreference. It also validates the input object using Lcom/mplus/lib/F3/k0;->a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/F3/v;)V
     .locals 1
 
@@ -114,6 +116,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls `C` on an instance of `Lcom/mplus/lib/F3/v;`, passing an integer and an `Lcom/mplus/lib/F3/m;` object. It does not use any string constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(ILcom/mplus/lib/F3/m;)V
     .locals 2
 
@@ -130,6 +133,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `E(II)` on an instance of `Lcom/mplus/lib/F3/v;`, passing the provided integers. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(II)V
     .locals 2
 
@@ -146,6 +150,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `G(IJ)V` on an object of type `Lcom/mplus/lib/F3/v;`, passing the provided integer and long parameters. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(IJ)V
     .locals 2
 
@@ -202,6 +207,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `I(II)` on an object of type `Lcom/mplus/lib/F3/v;`, passing the provided integers. It appears to be a wrapper around this method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(II)V
     .locals 2
 
@@ -218,6 +224,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `T(IJ)` on an object of type `Lcom/mplus/lib/F3/v;`, passing the provided integer and long parameters. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public f(IJ)V
     .locals 2
 
@@ -236,6 +243,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `K` on an object of type `Lcom/mplus/lib/F3/v;`, passing the provided parameters. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g(ILjava/lang/Object;Lcom/mplus/lib/F3/T0;)V
     .locals 2
 

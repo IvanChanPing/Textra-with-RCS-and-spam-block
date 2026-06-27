@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/y5/c, setting its 'a' field to 0 and its 'b' field to the provided View. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/y5/b;)V
     .locals 1
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/y5/c, setting an integer field to 1 and storing a provided View object. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/y5/u;)V
     .locals 1
 
@@ -202,6 +204,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method updates the color of a view based on the animated fraction of a ValueAnimator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 

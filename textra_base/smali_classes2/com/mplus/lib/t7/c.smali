@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t7/c with an integer and a string. It sets the object's fields d and c to the provided integer and string values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t7/c with a given Exception. It stores the exception in a field 'a' of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Exception;)V
     .locals 0
 
@@ -43,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a JSONObject, either by retrieving an existing one or creating a new one from a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lorg/json/JSONObject;
     .locals 3
 

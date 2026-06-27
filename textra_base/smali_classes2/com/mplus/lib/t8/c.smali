@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/t8/c, setting its properties with the provided ExecutorService, List, and two long values. It also checks for null values and throws NullPointerExceptions with specific error messages if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/ExecutorService;Ljava/util/List;JJ)V
     .locals 0
 
@@ -59,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the connect timeout in milliseconds. It retrieves the value from the object's field 'c' of type long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final connectTimeoutMillis()J
     .locals 3
 
@@ -69,6 +71,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing the executor service, interceptors, connect timeout, and read timeout of two `HttpClient` instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 8
 
@@ -163,6 +166,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns an ExecutorService instance stored in the class field 'a'. It does not create or modify the instance, only retrieves it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final executor()Ljava/util/concurrent/ExecutorService;
     .locals 2
 
@@ -249,6 +253,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a List object stored in the 'b' field of the class. It does not appear to perform any actual interception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final interceptors()Ljava/util/List;
     .locals 2
 
@@ -261,6 +266,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `d` field, which represents the read timeout in milliseconds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final readTimeoutMillis()J
     .locals 3
 

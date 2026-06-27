@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the NotificationStyleActivity class, initializing it by calling the superclass constructor. It sets up the activity with no additional parameters or actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -100,6 +101,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a notification style object related to contacts. It returns an instance of Lcom/mplus/lib/r4/n.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()Lcom/mplus/lib/r4/n;
     .locals 3
 
@@ -790,6 +792,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onResume` method of its superclass, calling the superclass's `onResume` and then invoking a static method `Q()` from `Lcom/mplus/lib/P4/i;` to get an instance, which then calls `Z()` on that instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResume()V
     .locals 2
 

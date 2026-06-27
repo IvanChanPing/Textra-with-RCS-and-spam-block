@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/V8/g, storing a reference to a MraidPresenterImpl object. It sets the object's field 'a' to the provided MraidPresenterImpl instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/richmedia/mraid/presenter/MraidPresenterImpl;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an audio volume change event by firing a JavaScript event. It notifies the MraidJsEvents instance of the volume change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processAudioVolumeChange(Lcom/smaato/sdk/richmedia/mraid/dataprovider/MraidAudioVolumeLevel;)V
     .locals 2
 
@@ -46,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a collapse event by invoking a consumer on a MraidPresenterImpl instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processCollapse()V
     .locals 4
 
@@ -74,6 +77,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes the current app orientation change by updating the MraidJsProperties with the new orientation. It uses the provided MraidAppOrientation object to set the current app orientation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processCurrentAppOrientationChange(Lcom/smaato/sdk/richmedia/mraid/dataprovider/MraidAppOrientation;)V
     .locals 2
 
@@ -94,6 +98,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a change in the current position by updating the current position in MraidJsProperties and firing a size change event using MraidJsEvents.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processCurrentPositionChange(Landroid/graphics/Rect;)V
     .locals 3
 
@@ -126,6 +131,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a default position change by updating the MraidJsProperties with a given Rect object. It appears to be part of an ad framework, specifically handling position changes for MRAID (Mobile Rich-media Ad Interface Definitions) ads.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processDefaultPositionChange(Landroid/graphics/Rect;)V
     .locals 2
 
@@ -146,6 +152,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an error by firing an error event with the provided error messages. It appears to be part of a MRAID (Mobile Rich Media Ad Interface Definitions) implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -166,6 +173,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an expand event in an MRAID (Mobile Rich-media Ad Interface Definitions) context. It retrieves the current orientation properties and passes them along with the input string to a new instance of Lcom/mplus/lib/L8/e, which is then executed by the MraidPresenterImpl.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processExpand(Ljava/lang/String;)V
     .locals 4
 
@@ -200,6 +208,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes exposure change events by firing an exposure change event to the MraidJsEvents instance. It takes MraidExposureProperties as input and notifies the JavaScript events bridge.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processExposureChange(Lcom/smaato/sdk/richmedia/mraid/dataprovider/MraidExposureProperties;)V
     .locals 2
 
@@ -216,6 +225,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a hide operation by invoking a consumer on a MraidPresenterImpl instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processHide()V
     .locals 4
 
@@ -242,6 +252,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the MraidJsBridge that the load is completed by firing a ready event. It accesses the MraidPresenterImpl instance to get the MraidJsBridge.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processLoadCompleted()V
     .locals 2
 
@@ -260,6 +271,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the location properties in the MraidJsProperties instance. It takes a MraidLocationProperties object as input and sets it in the MraidJsProperties instance associated with the MraidPresenterImpl.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processLocationPropertiesChange(Lcom/smaato/sdk/richmedia/mraid/dataprovider/MraidLocationProperties;)V
     .locals 2
 
@@ -282,6 +294,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a change in maximum size by updating the MraidJsProperties with the new size. It takes an Android graphics Rect object as input and uses its width and height to create a new Size object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processMaxSizeChange(Landroid/graphics/Rect;)V
     .locals 4
 
@@ -318,6 +331,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an open event by creating a new instance of `Lcom/mplus/lib/G8/b` with the provided string and a specific code (11), then passes it to a consumer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processOpen(Ljava/lang/String;)V
     .locals 4
 
@@ -346,6 +360,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes orientation properties change by creating a new instance of Lcom/mplus/lib/D8/a and passing it to the MraidPresenterImpl.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processOrientationPropertiesChange(Lcom/smaato/sdk/richmedia/mraid/dataprovider/MraidOrientationProperties;)V
     .locals 3
 
@@ -368,6 +383,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes the placement type by setting it in the MraidJsProperties instance. It takes a PlacementType object as input and updates the placement type accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processPlacementType(Lcom/smaato/sdk/richmedia/mraid/dataprovider/PlacementType;)V
     .locals 2
 
@@ -390,6 +406,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a play video request by creating a new instance of `Lcom/mplus/lib/G8/b` and passing it to a consumer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processPlayVideo(Ljava/lang/String;)V
     .locals 4
 
@@ -418,6 +435,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a resize operation, handling cases where resize properties are not set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processResize(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 4
 
@@ -511,6 +529,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a screen size change by updating the MraidJsProperties with the new screen size. It takes an Android graphics Rect object as input and uses its width and height to create a new Size object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processScreenSizeChange(Landroid/graphics/Rect;)V
     .locals 4
 
@@ -543,6 +562,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a state change event by firing a JavaScript event through the MraidJsEvents instance. It notifies the JavaScript side of a state change in the Mraid state machine.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processStateChange(Lcom/smaato/sdk/richmedia/mraid/dataprovider/MraidStateMachineFactory$State;)V
     .locals 2
 
@@ -559,6 +579,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes and sets the supported MRAID features for a given list. It retrieves all MRAID features and sets them in the MraidJsProperties instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processSupportedFeatures(Ljava/util/List;)V
     .locals 3
 
@@ -593,6 +614,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a viewable change event by firing a JavaScript event based on the provided boolean value. It notifies the MraidJsEvents instance about the viewable change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processViewableChange(Z)V
     .locals 2
 
@@ -613,6 +635,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls a static method on MraidPresenterImpl to perform a visibility parameters check. It does not appear to use any input parameters or return values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processVisibilityParamsCheck()V
     .locals 2
 

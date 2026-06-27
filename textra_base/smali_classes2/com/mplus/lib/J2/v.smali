@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/J2/v, setting its fields with the provided parameters. It appears to be a constructor for the class, storing references to a GoogleApiManager, an API key, and two time values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/GoogleApiManager;ILcom/google/android/gms/common/api/internal/ApiKey;JJ)V
     .locals 0
 
@@ -138,6 +139,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the completion of a Google API task, logging method invocation telemetry if enabled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onComplete(Lcom/google/android/gms/tasks/Task;)V
     .locals 25
 

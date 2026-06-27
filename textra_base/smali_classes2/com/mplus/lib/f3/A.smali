@@ -58,6 +58,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks the state of a `zzdy` object and updates it if necessary, returning the resulting state as an `E` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/google/android/gms/internal/play_billing/zzdy;)Lcom/mplus/lib/f3/E;
     .locals 3
 
@@ -107,6 +108,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'b' field of the first input object to the second input object. It appears to be updating a reference in an object of type Lcom/mplus/lib/f3/E.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/f3/E;Lcom/mplus/lib/f3/E;)V
     .locals 1
 
@@ -117,6 +119,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the thread field 'a' of the provided Lcom/mplus/lib/f3/E object to the given thread. It does not perform any other operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/mplus/lib/f3/E;Ljava/lang/Thread;)V
     .locals 1
 
@@ -179,6 +182,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object matches the one stored in a `zzdy` instance and updates it if they match.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/google/android/gms/internal/play_billing/zzdy;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 

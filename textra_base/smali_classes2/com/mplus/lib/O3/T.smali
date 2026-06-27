@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/O3/T, setting its fields with the provided parameters. It appears to be a constructor that stores references to a Processor, an ArrayList, and a String.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroidx/work/impl/Processor;Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 1
 
@@ -60,6 +61,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to execute different blocks of code based on the value of `a` and returns an object, either by processing work specs or creating a media object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final call()Ljava/lang/Object;
     .locals 4
 

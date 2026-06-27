@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static HashMap `g` in class `Lcom/mplus/lib/L4/k;` and populates it with string-integer pairs from `Lcom/mplus/lib/L4/l;->a:[Ljava/lang/String;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -315,6 +316,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method writes an integer to a ByteArrayOutputStream and increments an internal counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)V
     .locals 2
 
@@ -391,6 +393,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle various operations based on the input parameter `p1`, including data processing, logging, and invoking other methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(I)I
     .locals 10
 
@@ -967,6 +970,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method takes a long integer, shifts and masks it to extract byte values, and then calls another method `a(I)V` to process these byte values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(J)V
     .locals 11
 
@@ -1049,6 +1053,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method modifies the input integer by setting its 8th bit and then clears all bits except the lower 8, before passing it to method `a(I)`. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)V
     .locals 1
 
@@ -1065,6 +1070,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to a ByteArrayOutputStream and updates a counter. It also checks the first byte of the array and calls method `a(I)` if it exceeds a certain value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g([B)V
     .locals 4
 
@@ -1209,6 +1215,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input long value is less than 31 and calls method `a(I)` with the input value if true, otherwise calls `a(I)` with 31 and then `h(J)` with the input value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(J)V
     .locals 3
 

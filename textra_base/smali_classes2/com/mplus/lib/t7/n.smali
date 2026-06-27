@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of Lcom/mplus/lib/t7/n. It creates a new instance with a context from Lcom/mplus/lib/ui/main/App;->getAppContext().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

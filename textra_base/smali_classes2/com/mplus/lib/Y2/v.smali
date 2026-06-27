@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a failed `LocationSettingsResult` based on the provided `Status`. It returns this result object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic createFailedResult(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/Result;
     .locals 3
 
@@ -23,6 +24,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the result of a pending operation using the provided object, which is cast to a Google API Result. It invokes the setResult method of the BasePendingResult class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic setResult(Ljava/lang/Object;)V
     .locals 1
 

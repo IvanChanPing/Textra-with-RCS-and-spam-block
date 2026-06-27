@@ -36,6 +36,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle InMobi ad requests based on a switch value, invoking different methods of the `Lcom/inmobi/media/tc` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 3
 

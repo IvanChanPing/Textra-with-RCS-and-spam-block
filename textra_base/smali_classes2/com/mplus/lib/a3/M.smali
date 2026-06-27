@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/M; with a given object. It calls the superclass constructor and sets the object as a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
@@ -56,6 +57,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the object referenced by field 'a' with an offset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -106,6 +108,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method transforms an object using a provided function and returns a new instance of class Lcom/mplus/lib/a3/M with the transformed object. It checks that the transformed object is not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzahx;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 3
 
@@ -136,6 +139,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object referenced by the field 'a' of the class Lcom/mplus/lib/a3/M. It does not use the integer constant 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/lang/Object;
     .locals 2
 
@@ -146,6 +150,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the object stored in the field 'a' of the class Lcom/mplus/lib/a3/M. It ignores the input parameter and the constants 2 and 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -158,6 +163,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object stored in the 'a' field of the class. It provides access to a private object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Ljava/lang/Object;
     .locals 2
 

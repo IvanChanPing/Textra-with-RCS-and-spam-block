@@ -42,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a File object, attempting to create or retrieve it in a synchronized manner.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized b()Ljava/io/File;
     .locals 6
 
@@ -102,6 +103,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual work to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -90,6 +90,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the text color of a BaseImageView based on a spring update value. It converts the spring value to a float, then uses this value along with instance variables to calculate a new text color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

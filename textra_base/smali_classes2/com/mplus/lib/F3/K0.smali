@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method attempts to dynamically load and instantiate the `com.google.protobuf.NewInstanceSchemaFull` class, and if that fails, it creates a default instance of `Lcom/mplus/lib/F3/J0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

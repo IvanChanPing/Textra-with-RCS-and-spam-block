@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/r3/b class with an array of integers and two integer values. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([III)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given integer object is present in the class's internal array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 4
 
@@ -106,6 +108,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object by comparing their sizes and elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 8
 
@@ -208,6 +211,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from a collection. It checks the index bounds using Lcom/mplus/lib/a3/V0;->o(II)V and returns the object as an Integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -240,6 +244,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object by iterating over an array of integers and combining their values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -280,6 +285,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method finds the index of a given integer object in an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 5
 
@@ -444,6 +450,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer value at a specified index in an array and returns the previous value at that index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
@@ -494,6 +501,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the size by subtracting the value of field 'b' from field 'c'. It returns the result as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 3
 
@@ -512,6 +520,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of the original list, bounded by the specified start and end indices. It checks for valid indices and returns an empty list if the start and end indices are equal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subList(II)Ljava/util/List;
     .locals 3
 

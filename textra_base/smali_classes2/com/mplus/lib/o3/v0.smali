@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Map object, wrapping the existing map in a specific implementation based on its type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Ljava/util/Map;
     .locals 4
 
@@ -75,6 +76,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a Collection object, specifically a List, retrieved from a field `g` of type `u0`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Ljava/util/Collection;
     .locals 2
 

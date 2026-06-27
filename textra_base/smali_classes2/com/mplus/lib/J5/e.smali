@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method retrieves an instance of Lcom/mplus/lib/J5/e; using the Mgrs class. It returns the retrieved instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(Landroid/content/Context;)Lcom/mplus/lib/J5/e;
     .locals 2
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a Typeface object, either by loading a custom font from assets or returning a default font style.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()Landroid/graphics/Typeface;
     .locals 6
 

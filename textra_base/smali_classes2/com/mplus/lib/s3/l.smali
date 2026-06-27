@@ -12,6 +12,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method attempts to retrieve an instance of `sun/misc/Unsafe` by iterating over its declared fields and checking if any of them are instances of `Unsafe`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a()Lsun/misc/Unsafe;
     .locals 7
 
@@ -101,6 +102,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of sun/misc/Unsafe. It does nothing else, simply returning the result of a static method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic run()Ljava/lang/Object;
     .locals 2
 

@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the Class0Activity class that calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -173,6 +174,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to perform an action with a float parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(F)V
     .locals 4
 
@@ -205,6 +207,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles a button click event, specifically for the `x` button in `Class0Activity`, and triggers actions such as setting a flag and invoking methods on other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
@@ -246,6 +249,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is the `onCreate` method of an Android Activity, responsible for initializing the activity's UI and handling intent data. It sets up the activity's layout, retrieves data from the intent, and configures various UI components.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 5
 

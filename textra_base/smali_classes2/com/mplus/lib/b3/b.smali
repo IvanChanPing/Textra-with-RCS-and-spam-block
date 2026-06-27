@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/b3/b, setting its fields with provided parameters. It appears to be a constructor that inherits from Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbi.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbi;II)V
     .locals 0
 
@@ -63,6 +64,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' which appears to represent the size of an object. It does not perform any calculations or operations, simply returning the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -115,6 +117,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by calling another method `zbc()` from a `zbf` object and adding an instance variable `a` to the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zbc()I
     .locals 3
 
@@ -137,6 +140,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of Objects by calling the `zbe()` method of the `zbf` class. It then returns this array, although the return type is specified as `[Ljava/lang/Object;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zbe()[Ljava/lang/Object;
     .locals 2
 
@@ -151,6 +155,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `zbf(II)` on an object of type `Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbi;` with modified parameters, after validating the input parameters using `Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbc;->zbc(III)`. It then returns the res  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zbf(II)Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbi;
     .locals 2
 

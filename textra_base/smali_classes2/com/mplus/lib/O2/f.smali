@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O2/f, storing a TaskCompletionSource and calling the superclass constructor. It sets up the object for use as an IStatusCallback$Stub.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the result of an API operation, attempting to set the result or an API exception. It returns immediately after processing the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResult(Lcom/google/android/gms/common/api/Status;)V
     .locals 3
 

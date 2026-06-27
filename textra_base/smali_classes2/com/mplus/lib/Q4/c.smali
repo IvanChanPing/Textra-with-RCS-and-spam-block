@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/Q4/c; and calls the P() method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized M()Lcom/mplus/lib/Q4/c;
     .locals 3
 

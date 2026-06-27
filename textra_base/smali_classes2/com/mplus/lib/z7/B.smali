@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/z7/B, setting up an ArrayList and potentially storing a reference to an instance of Lcom/mplus/lib/x5/l if the provided Context is of that type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -53,6 +54,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given integer matches a class field, and if so, it calls a method on an object and potentially runs a stored Runnable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final J(I[I)V
     .locals 2
 
@@ -114,6 +116,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks for a specific condition and either runs a provided Runnable or requests a permission.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Runnable;)V
     .locals 4
 

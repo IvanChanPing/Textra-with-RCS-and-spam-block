@@ -55,6 +55,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static float fields `s`, `t`, and `u` in class `Lcom/mplus/lib/S5/c;` using values obtained from `Lcom/mplus/lib/z7/m;->c(I)I`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -240,6 +241,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets an ArrayList in the class and initializes a float array based on the ArrayList's size, then invalidates the drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/util/ArrayList;)V
     .locals 1
 
@@ -262,6 +264,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the text to be drawn and recalculates its width if necessary. It then invalidates the drawable to trigger a redraw with the new text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/String;)V
     .locals 3
 
@@ -325,6 +328,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a custom view on an Android Canvas, including a background, a progress bar, and optional text and icons.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 31
 
@@ -1354,6 +1358,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the object's `m` field and modifies the color of two Drawables (`c` and `d`) based on values from the input object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/S5/d;)V
     .locals 3
 
@@ -1394,6 +1399,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic height of an object, determined by a boolean field `r` in the class. The height is either 72 or 60, scaled by a factor from `Lcom/mplus/lib/z7/m;->c(I)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -1422,6 +1428,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic width of an object. It invokes a static method to calculate the width based on a hardcoded value (0xb4).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 

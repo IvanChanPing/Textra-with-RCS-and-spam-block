@@ -20,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a leading margin on a Canvas using a Paint object. It temporarily changes the Paint's style and color to fill a rectangle, then restores the original style and color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final drawLeadingMargin(Landroid/graphics/Canvas;Landroid/graphics/Paint;IIIIILjava/lang/CharSequence;IIZLandroid/text/Layout;)V
     .locals 6
 
@@ -66,6 +67,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the total leading margin by adding two instance variables. It ignores the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLeadingMargin(Z)I
     .locals 2
 

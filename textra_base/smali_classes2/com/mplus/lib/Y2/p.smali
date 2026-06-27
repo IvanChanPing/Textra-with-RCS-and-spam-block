@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/Y2/p, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/location/zzbp;Lcom/google/android/gms/common/api/internal/ListenerHolder;Lcom/mplus/lib/Y2/o;)V
     .locals 0
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts a location request and a task completion source, then calls a callback method with the request, listener key, and task completion source.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 
@@ -119,6 +121,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the `ListenerHolder` object stored in the instance variable `b`. It is declared as synchronized, ensuring thread safety.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized zza()Lcom/google/android/gms/common/api/internal/ListenerHolder;
     .locals 2
 
@@ -210,6 +213,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method synchronizes and updates the `ListenerHolder` object if it has changed. It clears the old listener holder if a new one is provided.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized zzc(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
     .locals 2
 

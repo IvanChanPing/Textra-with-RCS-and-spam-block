@@ -42,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the layout of a BaseEditText when the spring value changes. It checks if the new spring value is different from the current value and if so, updates the current value and requests a layout update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 
@@ -79,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It delegates the actual conversion to this external method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

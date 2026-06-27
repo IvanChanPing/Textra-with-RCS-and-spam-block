@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/K8/g, initializing its fields with the provided parameters. It sets the object's state with the given values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;I)V
     .locals 0
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/K8/g, setting its fields with the provided parameters. It appears to be a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;II)V
     .locals 0
 
@@ -56,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a part of a larger system that handles various tasks based on the value of the `a` field in the `Lcom/mplus/lib/K8/g` class. It executes different blocks of code depending on the value of `a`, which seems to be an enumeration or a set of predefined values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 8
 

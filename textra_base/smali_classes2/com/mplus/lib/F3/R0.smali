@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of Lcom/mplus/lib/F3/R0 and sets a boolean field to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -40,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/F3/R0, setting its object array and integer fields. It calls the superclass constructor Lcom/mplus/lib/F3/c;-><init>().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 0
 
@@ -199,6 +201,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method adds an object to the end of a list, resizing the list's array if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 5
 
@@ -262,6 +265,7 @@
     return v3
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input index is within the bounds of a collection and throws an IndexOutOfBoundsException if it's not. It constructs the exception message with the index and collection size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)V
     .locals 4
 
@@ -356,6 +360,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from an array at a specified index after calling another method `b(I)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -374,6 +379,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes an object at a specified index from a list and returns the removed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(I)Ljava/lang/Object;
     .locals 5
 
@@ -433,6 +439,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method sets an object at a specified index in a list and returns the previous object at that index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
@@ -463,6 +470,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'c' which presumably represents the size of an object. It does not perform any calculations or operations, simply returning the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

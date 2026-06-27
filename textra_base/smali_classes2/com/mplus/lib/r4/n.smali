@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static instances of the Lcom/mplus/lib/r4/n class with different parameters. It sets up four static objects, e, f, g, and h, with varying constructors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -68,6 +69,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/r4/n, which extends ArrayList, and sets a boolean field 'b' to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -80,6 +82,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class, calling the superclass constructor with the given capacity and setting a boolean field to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -92,6 +95,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/r4/n, setting a boolean field to true and calling another method e with a Lcom/mplus/lib/r4/l parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/r4/l;)V
     .locals 1
 
@@ -106,6 +110,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/r4/n` and populates it with `Lcom/mplus/lib/r4/l` objects split from the input string using the "\\^" delimiter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A(Ljava/lang/String;)Lcom/mplus/lib/r4/n;
     .locals 6
 
@@ -371,6 +376,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if any element in a collection implements a certain condition by calling `k()` on each element of type `Lcom/mplus/lib/r4/l;`. It returns `true` as soon as it finds an element that satisfies the condition, and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D()Z
     .locals 5
 
@@ -424,6 +430,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method iterates over an ArrayList of objects implementing the Lcom/mplus/lib/r4/m interface and calls the n() method on each object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final E()V
     .locals 3
 
@@ -476,6 +483,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of objects, appending a string representation of each object to a StringBuilder, with commas separating each item. It returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final F()Ljava/lang/String;
     .locals 5
 
@@ -547,6 +555,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and adds an object to an ArrayList if it doesn't exist. It adds the provided object of type Lcom/mplus/lib/r4/m to the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final G(Lcom/mplus/lib/r4/m;)V
     .locals 2
 
@@ -733,6 +742,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of a collection of objects, handling different cases based on the collection's size and the device's locale.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 7
 
@@ -1030,6 +1040,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds an object of type Lcom/mplus/lib/r4/l to the class and returns a boolean result. It delegates the addition to the e(Lcom/mplus/lib/r4/l;)Z method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -1180,6 +1191,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the collection has exactly one element and if that element meets a certain condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 4
 
@@ -1221,6 +1233,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string that represents a group, either by returning a single item's string representation if the collection has one or zero items, or by generating a string that includes a lowercase MD5 hash of the string representation of the collection's items.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Ljava/lang/String;
     .locals 5
 
@@ -1343,6 +1356,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method clears the current list and then calls method E() on the same object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 1
 
@@ -1353,6 +1367,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a sorted and concatenated string from a collection of objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Ljava/lang/String;
     .locals 4
 
@@ -1395,6 +1410,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object can be added to a list and adds it if possible, then notifies of changes if the addition was successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/r4/l;)Z
     .locals 2
 
@@ -1498,6 +1514,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if all elements in a collection are valid by calling `g()` on each element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Z
     .locals 3
 
@@ -1615,6 +1632,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a collection has exactly one element and meets certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j()Z
     .locals 4
 
@@ -1670,6 +1688,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method checks the result of calling `t(Lcom/mplus/lib/r4/l;)` and returns true if it's not -1, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(Lcom/mplus/lib/r4/l;)Z
     .locals 2
 
@@ -1697,6 +1716,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a copy of the current object and returns it. It clones the collection and copies the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Lcom/mplus/lib/r4/n;
     .locals 3
 
@@ -1731,6 +1751,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a copy of the current object, iterating over its elements and adding them to the new object. It also copies the object's internal state, including a byte array and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m()Lcom/mplus/lib/r4/n;
     .locals 4
 
@@ -1801,6 +1822,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/r4/l` based on the input string, either by finding a match in a collection or returning a default instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Ljava/lang/String;)Lcom/mplus/lib/r4/l;
     .locals 4
 
@@ -1862,6 +1884,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a comma-separated string of names from a collection of objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p()Ljava/lang/String;
     .locals 6
 
@@ -2023,6 +2046,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a string field 'c' in the class is not empty and returns true if it's not empty, false otherwise. It uses the TextUtils.isEmpty method to perform the check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s()Z
     .locals 2
 
@@ -2045,6 +2069,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method searches for an object in a collection by calling the `i(Lcom/mplus/lib/r4/l;)Z` method on each item, returning the index of the first matching object or -1 if not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t(Lcom/mplus/lib/r4/l;)I
     .locals 4
 
@@ -2383,6 +2408,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a collection has more than one element or if the first element meets a certain condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u()Z
     .locals 3
 
@@ -2437,6 +2463,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks conditions and returns a boolean value based on the results of calling `x()` and `w()` methods. It returns true if `x()` is true or `w()` is true after `x()` is false, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v()Z
     .locals 2
 
@@ -2476,6 +2503,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the collection has only one element and if that element's 'e' field is "Keep", then it returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()Z
     .locals 5
 
@@ -2521,6 +2549,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the collection has exactly one element and if that element is valid according to the `j()` method of `Lcom/mplus/lib/r4/l;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Z
     .locals 4
 

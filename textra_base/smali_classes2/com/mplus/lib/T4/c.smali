@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method observes a LifecycleOwner with a given Observer, wrapping the Observer in a T4/b instance. It then calls the superclass's observe method with the wrapped Observer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
     .locals 2
 
@@ -30,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method observes a LiveData object forever with a given Observer. It creates a new instance of Lcom/mplus/lib/T4/b and passes it to the superclass's observeForever method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final observeForever(Landroidx/lifecycle/Observer;)V
     .locals 2
 
@@ -74,6 +76,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onInactive method of the LiveData class and unregisters the current object as a SharedPreferences change listener when the LiveData object becomes inactive.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onInactive()V
     .locals 2
 
@@ -96,6 +99,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a LiveData object when a specific shared preference changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 2
 

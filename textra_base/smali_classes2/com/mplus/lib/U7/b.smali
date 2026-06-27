@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/U7/b, setting its fields with a LocationManager and AppMetaData object. It checks for nullability of the input parameters using the requireNonNull method from the Objects class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/location/LocationManager;Lcom/smaato/sdk/core/util/AppMetaData;)V
     .locals 0
 

@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static string array `g` in class `Lcom/mplus/lib/v4/k;` with a single element "version".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/v4/k` class, setting up various fields and registering an object with a bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/u4/e;)V
     .locals 1
 
@@ -224,6 +226,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle contact information, specifically phone numbers, and performs various operations such as formatting, validation, and retrieval of contact data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/r4/l;Lcom/mplus/lib/v4/c;Z)V
     .locals 20
 
@@ -1359,6 +1362,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks for the "android.permission.READ_CONTACTS" permission and registers a content observer for contacts if the permission is granted.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q()V
     .locals 5
 
@@ -1450,6 +1454,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of `Lcom/mplus/lib/r4/l` objects and calls `M` on each object that returns true for `k()`, passing the object, a `Lcom/mplus/lib/v4/c` instance, and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Lcom/mplus/lib/r4/n;)V
     .locals 4
 

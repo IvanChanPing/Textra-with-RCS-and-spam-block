@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/h3; with a byte array. It calls the superclass constructor and stores the byte array in a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 0
 
@@ -269,6 +270,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a byte from an array at the index specified by the input parameter. It always returns the byte value, ignoring the constant 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza(I)B
     .locals 2
 
@@ -293,6 +295,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzd()I
     .locals 2
 
@@ -309,6 +312,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls a static method from the `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbxv` class to perform an operation, likely related to entity extraction, and returns the result. It appears to be using a byte array stored in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze(III)I
     .locals 2
 
@@ -327,6 +331,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a zzbwe object based on the provided parameters, returning a default object if the calculated index is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(II)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwe;
     .locals 2
 
@@ -366,6 +371,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method writes data from the object's byte array to a zzbvv object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbvv;)V
     .locals 4
 

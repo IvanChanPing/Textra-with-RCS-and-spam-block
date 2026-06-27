@@ -245,6 +245,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an ArrayList object. It appears to be part of a RecyclerView adapter, returning the number of items in the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemCount()I
     .locals 2
 
@@ -261,6 +262,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the item ID of an object at a given position in an ArrayList, either as a `com/mplus/lib/t7/h` or `com/mplus/lib/f6/e` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 3
 
@@ -318,6 +320,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method determines the view type of an item at a given position in a list. It checks if the item is an instance of Lcom/mplus/lib/t7/h and returns -100 if true, otherwise it returns the item ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemViewType(I)I
     .locals 3
 
@@ -351,6 +354,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method binds data to a RecyclerView ViewHolder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 13
 

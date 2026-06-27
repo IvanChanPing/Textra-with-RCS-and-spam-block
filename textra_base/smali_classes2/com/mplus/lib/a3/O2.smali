@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/O2, setting its fields b and c to instances of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a groupName string in the class instance if it's not null, otherwise throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzgv;
     .locals 2
 

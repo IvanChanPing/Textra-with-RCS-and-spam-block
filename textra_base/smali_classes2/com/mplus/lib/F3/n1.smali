@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an iterator has a next element. It returns the result of the iterator's hasNext() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -32,6 +33,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object from an iterator as a string. It retrieves the next item from the iterator and casts it to a string before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 
@@ -50,6 +52,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually remove anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 

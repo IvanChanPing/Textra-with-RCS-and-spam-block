@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/i5/j with an integer and a string. It sets the object's fields 'a' and 'b' to the provided integer and string values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 

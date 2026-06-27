@@ -35,6 +35,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/b6/d, setting up its properties and adding a footer view to a ListView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/b6/b;Lcom/mplus/lib/I5/b;Ljava/io/File;)V
     .locals 2
 

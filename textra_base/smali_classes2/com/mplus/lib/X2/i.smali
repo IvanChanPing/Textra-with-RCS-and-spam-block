@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/X2/i, setting its fields with the provided parameters. It appears to be a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/CharSequence;Ljava/lang/Object;I)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an Iterator based on the value of `a` field in the class, either by calling `zzd` method of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaiy;` or `zze` method of `Lcom/google/android/gms/internal/common/zzx;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -92,6 +94,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically handling iteration and string formatting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/j4/a, setting various member variables to default values. It takes an integer and an object as parameters, storing the object in the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -145,6 +146,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the pending transition of an Android activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(II)V
     .locals 3
 
@@ -179,6 +181,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/f9/c` and schedules it to run using `Lcom/mplus/lib/j4/a;->a(Ljava/lang/Runnable;)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Landroid/content/Intent;)V
     .locals 3
 
@@ -199,6 +202,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the context is an Activity and if so, sets the result of the Activity if a certain condition is met, then schedules a task to run. If the context is not an Activity, it throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 4
 
@@ -265,6 +269,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

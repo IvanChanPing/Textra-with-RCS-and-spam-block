@@ -80,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves conversation messages from a database, groups them by date, and returns an object containing the earliest and latest message dates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
@@ -286,6 +287,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a view from a layout based on the input parameter. It checks if the input parameter matches specific objects and removes the corresponding view if a match is found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(Lcom/mplus/lib/v5/b;)V
     .locals 2
 
@@ -348,6 +350,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates an object's state with a new `Lcom/mplus/lib/A5/d` object and notifies other components. It checks for the existence of certain objects before performing the update and notification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 
@@ -390,6 +393,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and sets up various UI components, including views and listeners, and schedules a task to run in the background.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()V
     .locals 5
 
@@ -659,6 +663,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event for a view, checking the view's identity and performing specific actions based on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
@@ -707,6 +712,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a countdown timer display based on the provided time in milliseconds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(J)V
     .locals 4
 

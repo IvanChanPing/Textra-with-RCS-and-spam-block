@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class, creating enum-like instances and storing them in an array. It sets up two instances with names "SMART" and "RAW".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, an integer index, and an additional integer value. It sets the enum's properties using the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -59,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of Lcom/mplus/lib/E3/t; objects. It appears to be an implementation of the values() method in an enum class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/E3/t;
     .locals 2
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array field `c` with two integer values, which are likely string resource IDs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a class instance, setting up a color state list based on values from other classes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;)V
     .locals 6
 

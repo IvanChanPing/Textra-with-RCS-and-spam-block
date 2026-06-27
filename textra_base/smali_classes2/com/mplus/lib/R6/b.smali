@@ -604,6 +604,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a view has been scrolled beyond a certain point and updates the state of several objects accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onGlobalLayout()V
     .locals 3
 
@@ -721,6 +722,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean flag and toggles the visibility of three FloatingActionButtonBackground views based on the input parameter and a condition related to a double value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(Z)V
     .locals 6
 

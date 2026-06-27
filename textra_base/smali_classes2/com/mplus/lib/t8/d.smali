@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t8/d; with four string parameters, checking for null values and throwing NullPointerExceptions if necessary. It also calls the superclass constructor Lcom/smaato/sdk/core/network/MimeType;-><init>()V.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -59,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representing the charset. It appears to return a predefined string stored in the object's field 'd'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final charset()Ljava/lang/String;
     .locals 2
 
@@ -181,6 +183,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on its string fields. It uses a combination of XOR and multiplication operations with a prime number (0xf4243) to combine the hash codes of the fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -259,6 +262,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'a'. It does not use the local variables or perform any operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final string()Ljava/lang/String;
     .locals 2
 
@@ -271,6 +275,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value from the object's 'c' field. It always returns this field's value, ignoring the const/4 v1, 0x1 instruction as it's not used.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subtype()Ljava/lang/String;
     .locals 2
 
@@ -349,6 +354,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value stored in the object's field 'b'. It provides the type of the object as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final type()Ljava/lang/String;
     .locals 2
 

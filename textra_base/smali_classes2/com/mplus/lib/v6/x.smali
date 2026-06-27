@@ -124,6 +124,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the width of a view based on various conditions and parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)I
     .locals 7
 
@@ -500,6 +501,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns an instance of `Lcom/mplus/lib/v6/q` if it hasn't been created yet. It inflates a layout, sets up a `BubbleView`, and configures its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/v6/q;
     .locals 6
 
@@ -668,6 +670,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;. It effectively converts the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

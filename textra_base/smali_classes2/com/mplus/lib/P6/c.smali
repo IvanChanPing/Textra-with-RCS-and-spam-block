@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/P6/c with an integer value and calls the superclass constructor of ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -23,6 +24,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/P6/c with a specified initial capacity and an integer value. It sets the integer field 'a' and calls the superclass constructor with the initial capacity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(II)V
     .locals 0
 
@@ -33,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/P6/c` and populates it with `Lcom/mplus/lib/r4/p` objects by iterating over a collection of `Lcom/mplus/lib/r4/l` objects. It utilizes `Lcom/mplus/lib/r4/H;->m0` to convert each `Lcom/mplus/lib/r4/l` to `Lcom/mplus/lib/r4/p`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/P6/c;
     .locals 4
 
@@ -91,6 +94,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to convert the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final o()Ljava/lang/String;
     .locals 2
 
@@ -117,6 +121,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method iterates over a collection of objects, checks if any of their properties match a given key, and adds the matching property to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Lcom/mplus/lib/T4/d;)Ljava/util/ArrayList;
     .locals 7
 
@@ -1391,6 +1396,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current list, handling a specific case when the collection is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -1443,6 +1449,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if the size of a collection is negative and returns true if so, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Z
     .locals 2
 
@@ -1468,6 +1475,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility and enabled state of a view based on the provided boolean value. It first checks if a specific object exists, and if not, returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(IZ)V
     .locals 2
 
@@ -1509,6 +1517,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method filters a stream of objects based on a predicate and returns the first matching object of type Lcom/mplus/lib/i5/j. It creates a new instance of Lcom/mplus/lib/h5/e with parameters p1 and 3, and uses it as the filter predicate.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(I)Lcom/mplus/lib/i5/j;
     .locals 4
 
@@ -1555,6 +1564,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection and returns the first object of type Lcom/mplus/lib/t5/d that matches a given integer ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(I)Lcom/mplus/lib/t5/d;
     .locals 4
 
@@ -1597,6 +1607,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/r4/n` and populates it with `Lcom/mplus/lib/r4/l` objects from an iterator. It returns the populated `Lcom/mplus/lib/r4/n` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g()Lcom/mplus/lib/r4/n;
     .locals 4
 
@@ -1643,6 +1654,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object of type Lcom/mplus/lib/x5/y; based on an input integer, returning null if the object is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h(I)Lcom/mplus/lib/x5/y;
     .locals 1
 
@@ -1734,6 +1746,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if any object in the current collection has a match in the provided ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public j(Ljava/util/ArrayList;)Z
     .locals 5
 
@@ -1813,6 +1826,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an ArrayList of strings, where each string is the key from an object of type Lcom/mplus/lib/T4/d if it exists, or null otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k()Ljava/util/ArrayList;
     .locals 4
 
@@ -1883,6 +1897,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an object of type Lcom/mplus/lib/t5/d to a collection if it doesn't already exist. It checks for existence by calling method e(I) with the object's 'c' field as an argument.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public l(Lcom/mplus/lib/t5/d;)V
     .locals 2
 
@@ -1947,6 +1962,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection and calls the `w()` method on each object of type `Lcom/mplus/lib/x7/g;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public s()V
     .locals 3
 
@@ -1985,6 +2001,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. It uses a switch statement to determine which string to return, either by calling `p()` or `o()` methods, or by calling the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

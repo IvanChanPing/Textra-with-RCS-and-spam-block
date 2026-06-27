@@ -18,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and returns an unmodifiable set of objects, lazily populating it from another set of objects if it hasn't been initialized yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 4
 

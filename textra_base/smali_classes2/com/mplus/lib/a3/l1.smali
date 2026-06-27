@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/l1, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbo;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing the `zzbo`, `zzaih` fields of the objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -173,6 +175,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `com/google/android/gms/internal/mlkit_entity_extraction/zzbo`. It appears to be a getter method for a field named `a` in the class `Lcom/mplus/lib/a3/l1`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbo;
     .locals 2
 
@@ -183,6 +186,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `com/google/android/gms/internal/mlkit_entity_extraction/zzaih`. It appears to be a getter method for a field named `b` in the class `Lcom/mplus/lib/a3/l1`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -195,6 +199,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `zzaih` from the `c` field of the class. It does not perform any operations, just returns the existing value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 

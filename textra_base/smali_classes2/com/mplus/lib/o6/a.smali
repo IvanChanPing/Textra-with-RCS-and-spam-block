@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a ViewModel with a SavedStateHandle. It sets the SavedStateHandle as a field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroidx/lifecycle/SavedStateHandle;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a value from the SavedStateHandle by key and returns it if present, otherwise returns the provided default Boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Object;
     .locals 3
 

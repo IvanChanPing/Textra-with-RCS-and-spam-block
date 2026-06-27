@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/o3/g0, setting its 'd' field to the provided Lcom/mplus/lib/o3/h0 object and calling the superclass constructor. It effectively sets up the object with a reference to an h0 instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/h0;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object is a key-value pair present in the map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 4
 
@@ -86,6 +88,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to check a condition and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Z
     .locals 2
 
@@ -126,6 +129,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object referenced by the 'd' field of the class, which is of type Lcom/mplus/lib/o3/h0;. It simply delegates the hashCode() call to this object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -142,6 +146,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/o3/f0. It appears to be a factory method for the f0 class, using the current object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Lcom/mplus/lib/o3/U;
     .locals 2
 
@@ -154,6 +159,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value, always false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m()Z
     .locals 2
 
@@ -172,6 +178,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It retrieves the size from an instance of `Lcom/mplus/lib/o3/U;`, which is an `AbstractCollection`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/p0, setting its properties from a Cursor and a Function. It sets default and input values for the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/database/Cursor;Ljava/util/function/Function;)V
     .locals 1
 
@@ -77,6 +78,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in a cursor-based iteration or throws a NoSuchElementException if there are no more elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 4
 

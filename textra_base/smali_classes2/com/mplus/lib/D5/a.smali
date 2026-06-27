@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/D5/a, setting its 'a' field to 0 and its 'b' field to the provided View. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/D5/b;Landroid/view/View;)V
     .locals 0
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/D5/a, setting an integer field to 1 and storing a reference to an object of type Lcom/mplus/lib/M5/f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/M5/f;)V
     .locals 1
 
@@ -80,6 +82,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes a Lcom/mplus/lib/b2/d object as input but doesn't use it, and simply returns without any action. It appears to retrieve the value of a field 'a' from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringActivate(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -137,6 +140,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to be a callback for a spring end state change event, but it doesn't perform any notable actions. It simply loads a constant value and accesses a field, then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringEndStateChange(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -147,6 +151,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the view's properties based on the spring update event. It handles scaling, alpha, and touch events for different views.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 12
 

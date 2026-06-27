@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a scaled and translated version of a drawable on a canvas.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 5
 

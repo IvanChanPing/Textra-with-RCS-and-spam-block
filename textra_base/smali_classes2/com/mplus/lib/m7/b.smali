@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static objects, including two instances of `Lcom/mplus/lib/T4/k` and a `Lcom/mplus/lib/F4/l` map, which is populated with string resources from the app context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -146,6 +147,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/m7/b, setting its properties and calling parent class constructors. It appears to be related to notification style settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/settings/sections/notificationstyle/DefineActionsActivity;ILcom/mplus/lib/P6/c;ILcom/mplus/lib/T4/x;)V
     .locals 1
 
@@ -826,6 +828,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a T4/k object based on the input integer, or throws an IllegalArgumentException for invalid inputs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y(I)Lcom/mplus/lib/T4/k;
     .locals 2
 

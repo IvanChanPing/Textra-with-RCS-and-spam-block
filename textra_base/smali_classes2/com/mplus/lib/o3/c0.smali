@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/o3/c0 class, setting its 'b' field to the provided Lcom/mplus/lib/o3/V object. It extends the Java AbstractCollection class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/V;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method iterates over a collection of objects and calls the `b(I[Ljava/lang/Object;)I` method on each object, passing the provided parameters, until all objects have been processed. It returns the result of the last method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I[Ljava/lang/Object;)I
     .locals 3
 
@@ -77,6 +79,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is contained in a collection. It delegates the containment check to another object's method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -93,6 +96,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/o3/a0;` using the `Lcom/mplus/lib/o3/V;` object stored in the class. It appears to be a factory method for `Lcom/mplus/lib/o3/a0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/o3/Q0;
     .locals 3
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/F3/a1, setting its 'a' field to the provided integer and its 'b' field to the provided object. It also calls the superclass constructor of AbstractSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds an object to a collection, specifically a map entry, based on the value of a field `a` in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public add(Ljava/lang/Object;)Z
     .locals 3
 
@@ -203,6 +205,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method clears the collection based on the value of the `a` field, invoking the `clear()` method on different objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public clear()V
     .locals 2
 
@@ -269,6 +272,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in a collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public contains(Ljava/lang/Object;)Z
     .locals 4
 
@@ -497,6 +501,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator for the object, creating a new instance of a specific class based on the value of the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public iterator()Ljava/util/Iterator;
     .locals 4
 
@@ -753,6 +758,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object based on its type, which is determined by the value of `a` in the class `Lcom/mplus/lib/F3/a1;`. It supports objects of types `Lcom/mplus/lib/f3/A0;`, `Lcom/mplus/lib/a3/E3;`, `Lcom/mplus/lib/a3/p1;`, and `Lcom/mplus/lib/F3/U0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -21,6 +21,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the layoutInDisplayCutoutMode of a WindowManager$LayoutParams object to 3. It modifies the display cutout mode for a window.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic B(Landroid/view/WindowManager$LayoutParams;)V
     .locals 2
 
@@ -47,6 +48,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the top safe inset of a DisplayCutout object. It appears to be a bridge method, always returning the result of getSafeInsetTop, but with a constant that is not used.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic D(Landroid/view/DisplayCutout;)I
     .locals 1
 
@@ -59,6 +61,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the app standby bucket from the UsageStatsManager and returns it. It effectively acts as a wrapper around the getAppStandbyBucket() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic a(Landroid/app/usage/UsageStatsManager;)I
     .locals 1
 
@@ -71,6 +74,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calls `getStreamMinVolume` on an `AudioManager` object and returns the result. It appears to be a bridge method for accessing the minimum volume of a specific audio stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic b(Landroid/media/AudioManager;I)I
     .locals 1
 
@@ -85,6 +89,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the process ID of a given MediaSessionManager RemoteUserInfo object. It always returns the PID, ignoring the constant values defined.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic c(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
     .locals 1
 
@@ -99,6 +104,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the right safe inset of a DisplayCutout object. It does not use the returned value of 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic d(Landroid/view/DisplayCutout;)I
     .locals 1
 
@@ -125,6 +131,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a bitmap from a given picture and returns it. It appears to be a bridge method for compatibility purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic f(Landroid/graphics/Picture;)Landroid/graphics/Bitmap;
     .locals 1
 
@@ -139,6 +146,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates an ImageDecoder Source from a given File. It returns the created Source object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic g(Ljava/io/File;)Landroid/graphics/ImageDecoder$Source;
     .locals 1
 
@@ -151,6 +159,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method decodes an ImageDecoder Source into a Drawable. It acts as a bridge to the ImageDecoder.decodeDrawable method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic h(Landroid/graphics/ImageDecoder$Source;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
@@ -163,6 +172,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of MediaSessionManager$RemoteUserInfo. It takes three parameters: two integers and a string, which are used to initialize the RemoteUserInfo object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic i(IILjava/lang/String;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
     .locals 2
 
@@ -179,6 +189,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the current browser info of a MediaBrowserService as a MediaSessionManager$RemoteUserInfo object. It appears to be a bridge method for accessing the getCurrentBrowserInfo method of MediaBrowserService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic j(Landroid/service/media/MediaBrowserService;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
     .locals 1
 
@@ -193,6 +204,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates an asynchronous Android Handler associated with a given Looper. It returns the created Handler instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic k(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 1
 
@@ -207,6 +219,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the metrics from a MediaDrm object and returns them as a PersistableBundle. It appears to be a bridge method for compatibility purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic l(Landroid/media/MediaDrm;)Landroid/os/PersistableBundle;
     .locals 1
 
@@ -229,6 +242,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the carrier ID name from a TelephonyManager instance. It returns the result as a CharSequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic n(Landroid/telephony/TelephonyManager;)Ljava/lang/CharSequence;
     .locals 1
 
@@ -253,6 +267,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the package name of a MediaSessionManager RemoteUserInfo object. It does not use the returned value's length or any other property, simply returning the package name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic p(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
     .locals 1
 
@@ -265,6 +280,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the main executor of a given Android context. It acts as a bridge to the getMainExecutor method of the Context class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic q(Landroid/content/Context;)Ljava/util/concurrent/Executor;
     .locals 1
 
@@ -275,6 +291,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method clears thread stats UID for traffic statistics. It serves as a bridge to the Android `TrafficStats` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic r()V
     .locals 1
 
@@ -285,6 +302,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the importance of a JobInfo while in the foreground to true. It modifies a JobInfo$Builder object to run with foreground importance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic s(Landroid/app/job/JobInfo$Builder;)V
     .locals 2
 
@@ -321,6 +339,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the layoutInDisplayCutoutMode of a WindowManager$LayoutParams object to 1. It does this to control how the window is laid out in relation to the display cutout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic v(Landroid/view/WindowManager$LayoutParams;)V
     .locals 2
 
@@ -337,6 +356,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if location services are enabled on the device. It returns a boolean value indicating whether location is enabled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic w(Landroid/location/LocationManager;)Z
     .locals 1
 
@@ -369,6 +389,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the UID of a given MediaSessionManager RemoteUserInfo object, but with no actual modification, just returning the UID as is.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic z(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
     .locals 1
 

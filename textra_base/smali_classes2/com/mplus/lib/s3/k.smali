@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method performs a compare-and-swap operation using the `sun/misc/Unsafe` class. It attempts to swap two objects at a specified memory location if they match a given expected value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic a(Lsun/misc/Unsafe;Lcom/mplus/lib/s3/o;JLjava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 

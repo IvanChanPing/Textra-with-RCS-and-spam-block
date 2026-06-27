@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/L2/a with a given Android Uri. It sets the Uri as a field in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their `a` fields of type `Landroid/net/Uri;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -75,6 +77,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of an object based on its `Uri` field. It uses the `Objects.hashCode()` method from the Google Android library to compute the hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

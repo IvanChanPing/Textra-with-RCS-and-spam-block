@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/t7/f` class with various parameters. It sets the object's fields with the provided values, including strings, a hashmap, an arraylist, and other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;Ljava/util/ArrayList;Lcom/mplus/lib/x5/l;ZI)V
     .locals 0
 
@@ -58,6 +59,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an ArrayList of strings and a HashMap, transforming the data into a nested HashMap structure and then converting it to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/util/ArrayList;Ljava/util/HashMap;)Ljava/lang/String;
     .locals 6
 
@@ -202,6 +204,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts a HashMap into a JSON-formatted string. It iterates over the map's key-value pairs, sorting the keys and appending each pair to a StringBuilder in JSON format.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/util/HashMap;)Ljava/lang/String;
     .locals 10
 
@@ -474,6 +477,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sends an HTTP request to a specified URL with query parameters and returns the response.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 10
 
@@ -1269,6 +1273,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a Runnable object, either an instance of Lcom/mplus/lib/v1/n or Lcom/mplus/lib/t0/c, depending on the value of the 'f' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/Runnable;
     .locals 4
 
@@ -1310,6 +1315,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over an ArrayList of Lcom/mplus/lib/t7/d objects and calls the g method on each object, passing an Lcom/mplus/lib/t7/c object. It does nothing if the ArrayList is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
@@ -1386,6 +1392,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by posting a runnable to a handler and then unregistering itself from an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/s7/j;)V
     .locals 2
 
@@ -1421,6 +1428,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name, two string fields, and a HashMap field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method creates an unmodifiable copy of the input HashMap. It does not modify the original map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A(Ljava/util/HashMap;)V
     .locals 2
 
@@ -27,6 +28,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a hash code by performing arithmetic operations on the input integers. It hashes the first integer, adds the second, and multiplies by the third.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static B(III)I
     .locals 1
 
@@ -47,6 +49,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzad`, configures it, and uses it to annotate an object, then returns a `w3/c` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static C(ILcom/mplus/lib/s5/m;)Lcom/mplus/lib/w3/c;
     .locals 2
 
@@ -79,6 +82,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the sum of three integers after applying a transformation to the first integer using `Lcom/google/android/gms/internal/play_billing/zzgr;->zzz`. It returns the resulting integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static D(III)I
     .locals 1
 
@@ -101,6 +105,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method shifts the binary representation of the number 1 to the left by a number of bits determined by the result of calling `Lcom/mplus/lib/l1/b;->a(I)I` with the input parameter. It then returns the result of this shift operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final a(I)I
     .locals 2
 
@@ -117,6 +122,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method determines the type of an object and returns a corresponding integer value. If the object is not of a recognized type, it throws an AssertionError with a message indicating the invalid type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic b(Ljava/lang/Object;)I
     .locals 3
 
@@ -268,6 +274,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calculates the sum of three integers after applying a transformation to the first integer using `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwp;->zzF`. It then returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(III)I
     .locals 1
 
@@ -290,6 +297,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates a value by multiplying two numbers, dividing by a third, adding a fourth, and then returning the maximum of this result and a fifth number.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(IIIII)I
     .locals 1
 
@@ -312,6 +320,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzay`, sets its value using the input parameter, and returns a `zzbc` object generated from it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(I)Lcom/google/android/gms/internal/mlkit_common/zzbc;
     .locals 2
 
@@ -366,6 +375,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzai`, sets a value using the input parameter, and returns a `zzam` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(I)Lcom/google/android/gms/internal/mlkit_language_id_common/zzam;
     .locals 2
 
@@ -426,6 +436,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzad`, configures it with the input integer, and returns the result of calling `zzb()` on it, effectively creating a `zzah` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(I)Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzah;
     .locals 2
 
@@ -480,6 +491,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a `zzan` object by configuring a `zzaj` instance with the provided integer parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(I)Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzan;
     .locals 2
 
@@ -536,6 +548,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a `zzay` object, sets its value, converts it to a `zzbc` object, and uses it to invoke a method on an `Lcom/mplus/lib/s5/m` object, ultimately returning a `Lcom/mplus/lib/w3/c` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(ILcom/mplus/lib/s5/m;)Lcom/mplus/lib/w3/c;
     .locals 2
 
@@ -598,6 +611,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends an integer to a given string and returns the resulting string. It takes an integer and a string as input parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(ILjava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -622,6 +636,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method concatenates three input strings. It returns the concatenated string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -662,6 +677,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new HashMap, puts an entry into it with the provided Class object as the key and another object as the value, and returns the HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Lcom/google/android/gms/internal/mlkit_common/zzbc;Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_common/zzbc;)Ljava/util/HashMap;
     .locals 2
 
@@ -684,6 +700,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new HashMap, puts an entry into it with the provided Class object as the key and another zzam object as the value, then returns the HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static t(Lcom/google/android/gms/internal/mlkit_language_id_common/zzam;Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_language_id_common/zzam;)Ljava/util/HashMap;
     .locals 2
 
@@ -702,6 +719,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new HashMap, puts an entry into it with the provided Class and zzah objects as key and value, and returns the HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzah;Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzah;)Ljava/util/HashMap;
     .locals 2
 
@@ -718,6 +736,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new HashMap, puts an entry into it using the provided Class object as the key and the second zzan object as the value, then returns the HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static v(Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzan;Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzan;)Ljava/util/HashMap;
     .locals 2
 
@@ -740,6 +759,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an IllegalArgumentException with a given message if the input integer is 0, otherwise it returns immediately. It does not perform any external invocations or string operations beyond the exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic w(ILjava/lang/String;)V
     .locals 1
 
@@ -763,6 +783,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method appends an integer to a string and logs the result as a warning.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -791,6 +812,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new ParseError object from a given string and exception, then adds it to a list. It essentially handles and logs a parsing error.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;Ljava/util/List;)V
     .locals 2
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/u, setting its fields to default values and moving the underlying cursor to an invalid position. It extends the constructor of its superclass Lcom/mplus/lib/t9/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/database/Cursor;)V
     .locals 2
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/r4/s by calling method a() on the current instance. It essentially acts as a wrapper around the a() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()Ljava/lang/Object;
     .locals 2
 
@@ -257,6 +259,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific column in a cursor is null and returns null if so, otherwise it retrieves a blob from the cursor, decodes it, and returns the result as a SpannableString.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Landroid/text/SpannableString;
     .locals 3
 
@@ -294,6 +297,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `Lcom/mplus/lib/r4/n` object from a database cursor, either by returning a cached object if the row ID matches, or by deserializing a blob from the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/r4/n;
     .locals 6
 
@@ -351,6 +355,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a notification channel is enabled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 4
 
@@ -454,6 +459,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object. It creates a new instance of Lcom/mplus/lib/r4/p0, passing the current object and a new Lcom/mplus/lib/m5/a instance to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 4
 

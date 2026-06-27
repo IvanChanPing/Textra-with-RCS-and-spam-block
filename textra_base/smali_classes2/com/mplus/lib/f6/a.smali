@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f6/a class with the provided parameters. It sets the object's fields with the given Lcom/mplus/lib/f6/b, Lcom/mplus/lib/f6/c, and RecyclerView$ItemAnimator instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f6/b;Lcom/mplus/lib/f6/c;Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles layout change events for a view, specifically setting an item animator for a RecyclerView and then removing the layout change listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 1
 

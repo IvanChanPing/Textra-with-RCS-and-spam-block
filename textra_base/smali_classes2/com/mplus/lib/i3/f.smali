@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i3/f, setting its fields with the provided Executor and OnCanceledListener. It also initializes an internal object and sets a field 'a' to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCanceledListener;)V
     .locals 1
 
@@ -47,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i3/f, setting its properties with the provided Executor and OnCompleteListener. It also sets an integer field to 1 and creates a new Object instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCompleteListener;)V
     .locals 1
 
@@ -69,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i3/f, setting its properties with the provided Executor and OnFailureListener. It also sets an integer field 'a' to 2 and creates a new Object instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnFailureListener;)V
     .locals 1
 
@@ -91,6 +94,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i3/f, setting its properties with the provided Executor and OnSuccessListener. It also sets an integer field 'a' to 3 and creates a new Object instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnSuccessListener;)V
     .locals 1
 
@@ -113,6 +117,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i3/f, setting its fields with the provided Executor, SuccessContinuation, and another object. It also sets an integer field 'a' to 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/SuccessContinuation;Lcom/mplus/lib/i3/j;)V
     .locals 1
 
@@ -133,6 +138,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a Google Tasks `Task` object based on its status and the instance's state, executing different listeners or runnables accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/tasks/Task;)V
     .locals 5
 
@@ -496,6 +502,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an exception by calling another method with the exception as a parameter. It appears to be part of an error handling or callback mechanism.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onFailure(Ljava/lang/Exception;)V
     .locals 2
 
@@ -514,6 +521,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `b` on an object of type `Lcom/mplus/lib/i3/j`, passing the input object. It appears to handle a successful operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onSuccess(Ljava/lang/Object;)V
     .locals 2
 
@@ -532,6 +540,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the `d` object field based on the value of the `a` field, using synchronization on the `c` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()V
     .locals 3
 

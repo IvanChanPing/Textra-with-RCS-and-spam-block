@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/N3/a class with an InMobiAdActivity object and an integer. It sets the object and integer as fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/ads/rendering/InMobiAdActivity;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles touch events for an Android view, delegating the handling to different methods of `InMobiAdActivity` based on the value of a field `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 

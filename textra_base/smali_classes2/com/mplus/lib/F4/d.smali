@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F4/d; with an integer parameter, setting a field 'c' and conditionally calling a superclass constructor with a context object. It handles a specific case when the parameter is 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -220,6 +221,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string based on the value of the `c` field in the class. It uses a switch statement to determine which string to return, with the default case and the case for `c` equal to 0 returning strings from resources 0x7f110331 and 0x7f11032b, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/String;
     .locals 2
 
@@ -316,6 +318,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a package name based on the value of the instance variable `c`. It returns "com.textra.emojis.androido" if `c` is 0, and "system" otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPackageName()Ljava/lang/String;
     .locals 2
 
@@ -426,6 +429,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a `Lcom/mplus/lib/z7/g` object, which appears to be a custom implementation of a spannable string builder, populated with emoji data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()Lcom/mplus/lib/z7/g;
     .locals 5
 
@@ -562,6 +566,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a request based on the value of `c` and returns an instance of `Lcom/mplus/lib/i5/a;`. It delegates the request to either `M()` or `N()` methods depending on the value of `c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Lcom/mplus/lib/F4/x;)Lcom/mplus/lib/i5/a;
     .locals 2
 
@@ -617,6 +622,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a field `c` and based on its value, sets another field `d` to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()V
     .locals 2
 
@@ -649,6 +655,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a field `c` and returns `true` (1) based on a switch statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v()Z
     .locals 2
 

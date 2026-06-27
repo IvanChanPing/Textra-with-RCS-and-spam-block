@@ -164,6 +164,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a string resource from the application's resources based on the provided ID and optionally decrypts it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(I)Ljava/lang/String;
     .locals 3
 
@@ -197,6 +198,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a `Lcom/mplus/lib/Ka/p` object based on the input string, performing various checks and operations to determine its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Ljava/lang/String;)Lcom/mplus/lib/Ka/p;
     .locals 14
 

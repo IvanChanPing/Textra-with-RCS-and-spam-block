@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/O3/D class with parameters from InMobi media and Android graphics. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/Z2;Landroid/graphics/drawable/Drawable;IIII)V
     .locals 0
 
@@ -48,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls a static method to perform an operation on an InMobi media object with a drawable and dimensions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/f6/g, initializing its fields with the provided parameters. It sets the object's state with an integer, an object of type Lcom/mplus/lib/f6/o, and an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/f6/o;Ljava/util/ArrayList;I)V
     .locals 0
 

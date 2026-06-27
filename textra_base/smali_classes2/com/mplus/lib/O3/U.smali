@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/U; that initializes an object with a reference to Lcom/inmobi/media/n7;. It sets the object's field 'a' to the provided Lcom/inmobi/media/n7; instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/n7;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles audio focus changes by calling a static method on the `Lcom/inmobi/media/n7;` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAudioFocusChange(I)V
     .locals 2
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/k3/f class, setting up a callback for in-app review and attaching an interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/k3/g;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 3
 

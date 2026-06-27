@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/u4/f` class, setting up its fields with various objects. It appears to be a constructor method that performs initialization tasks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/u4/e;)V
     .locals 1
 
@@ -67,6 +68,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method splits a string into substrings, trims and processes each substring using an interface method `c`, and adds the results to a `Lcom/mplus/lib/r4/n` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static W(Ljava/lang/String;Lcom/mplus/lib/w4/a;Ljava/lang/String;)Lcom/mplus/lib/r4/n;
     .locals 7
 
@@ -173,6 +175,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method iterates over a collection of objects, extracts and processes data from each object, and inserts the processed data into a database using a ContentValues object and a Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Landroid/net/Uri;ILcom/mplus/lib/r4/n;)V
     .locals 5
 
@@ -674,6 +677,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to get or create a thread ID for a set of recipients in the context of an Android application. It uses the `Telephony$Threads.getOrCreateThreadId` method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Lcom/mplus/lib/r4/n;)J
     .locals 5
 
@@ -750,6 +754,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific column 'sub_id' exists in the database table associated with the Uri 'android.provider.Telephony$Threads.CONTENT_URI'. It returns a boolean value indicating whether the column exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized Q()Z
     .locals 10
 
@@ -1564,6 +1569,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves data from a database and constructs an object of type Lcom/mplus/lib/r4/n based on the retrieved data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(J)Lcom/mplus/lib/r4/n;
     .locals 6
 

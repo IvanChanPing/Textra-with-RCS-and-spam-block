@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/q; that initializes its fields with the provided parameters. It sets the instance variables a, b, and c with the given integer, Lcom/inmobi/media/q7 object, and Landroid/view/View object, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/q7;Landroid/view/View;I)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the animation of a view based on the current state. It calls different methods from the `Lcom/inmobi/media/L0` class depending on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 

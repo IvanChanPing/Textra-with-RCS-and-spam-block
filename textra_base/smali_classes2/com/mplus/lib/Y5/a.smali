@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an AsyncTask object with a GiphyActivity and an Intent. It sets the activity and intent as fields of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/plus/giphy/GiphyActivity;Landroid/content/Intent;)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method downloads a GIF from a URL and saves it to a file specified by a Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
@@ -221,6 +223,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field 'e' to true when a dialog is cancelled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 1
 
@@ -333,6 +336,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a ProgressDialog, setting its indeterminate state, message, and cancelability, and schedules a delayed task using a Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPreExecute()V
     .locals 5
 

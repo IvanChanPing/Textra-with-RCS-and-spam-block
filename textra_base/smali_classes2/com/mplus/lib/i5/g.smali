@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a class instance, setting a field to the provided parameter and calling the superclass constructor. It sets up a listener for subscription changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/i5/h;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `Y()` on an object of class `Lcom/mplus/lib/i5/h` when subscriptions change. It appears to be a callback handler for subscription updates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSubscriptionsChanged()V
     .locals 2
 

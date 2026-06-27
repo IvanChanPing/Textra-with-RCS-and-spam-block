@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/Z;, setting its fields with provided parameters. It calls the superclass constructor with a hardcoded value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/e0;Ljava/util/Map;)V
     .locals 0
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a key in the map stored in the 'b' field of the class. It returns a boolean indicating whether the object is present as a key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -65,6 +67,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the key set of a map contains all elements of a given collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -130,6 +133,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the key set of a map object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -152,6 +156,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a map is empty. It returns true if the map is empty, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 2
 
@@ -170,6 +175,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator over the entries of a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 4
 
@@ -202,6 +208,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a map and clears the associated collection, then updates a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 3
 

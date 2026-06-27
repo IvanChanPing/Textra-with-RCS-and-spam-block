@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `b` of class `Lcom/mplus/lib/o3/U;` with an instance of `Lcom/mplus/lib/o3/G;`. It sets up a class-level object with a specific configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a C0 object based on the input integer, either a default C0 object if the input is 0, or a new C0 object initialized with the input array and integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(I[Ljava/lang/Object;)Lcom/mplus/lib/o3/C0;
     .locals 2
 
@@ -132,6 +134,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method takes an array of Objects, clones it, and then calls other methods to process the array, ultimately returning an instance of Lcom/mplus/lib/o3/C0. It handles the case where the input array is empty by returning a predefined instance of Lcom/mplus/lib/o3/C0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k([Ljava/lang/Object;)Lcom/mplus/lib/o3/C0;
     .locals 2
 
@@ -179,6 +182,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates an array of Long objects, logs or tracks it, and then uses it to retrieve an instance of Lcom/mplus/lib/o3/C0;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)Lcom/mplus/lib/o3/C0;
     .locals 1
 
@@ -203,6 +207,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method takes an Object as input, logs or tracks it, and returns an instance of Lcom/mplus/lib/o3/C0. It appears to be part of a logging or analytics system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Ljava/lang/Object;)Lcom/mplus/lib/o3/C0;
     .locals 2
 
@@ -229,6 +234,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates an array of two input objects and invokes other methods to process it, ultimately returning an instance of Lcom/mplus/lib/o3/C0. It appears to be part of a logging or event tracking system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mplus/lib/o3/C0;
     .locals 1
 
@@ -277,6 +283,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new array with the provided objects and additional elements, then calls other methods to process this array, returning an object of type Lcom/mplus/lib/o3/C0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs s(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)Lcom/mplus/lib/o3/C0;
     .locals 6
 
@@ -490,6 +497,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not add an object as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(ILjava/lang/Object;)V
     .locals 1
 
@@ -506,6 +514,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to add all elements from a collection. It always returns nothing due to the exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(ILjava/util/Collection;)Z
     .locals 1
 
@@ -522,6 +531,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method copies elements from the current collection to the provided array, starting at the specified index, and returns the new index after copying. It essentially implements a subset of the `toArray` or `addAll` functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(I[Ljava/lang/Object;)I
     .locals 5
 
@@ -564,6 +574,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is present in a collection. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
 
@@ -773,6 +784,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of a collection by iterating over its elements and combining their hash codes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 5
 
@@ -885,6 +897,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by calling method l(I) with argument 0. It appears to be part of a custom collection class, returning an iterator for its elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -901,6 +914,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/G; based on the input index and the state of the collection. It checks if the collection is empty and returns a default object if so, or creates a new instance with the given index otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(I)Lcom/mplus/lib/o3/G;
     .locals 2
 
@@ -938,6 +952,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the last index of a given object in a list, or -1 if the object is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public lastIndexOf(Ljava/lang/Object;)I
     .locals 4
 
@@ -998,6 +1013,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator object by calling method l(I) on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public listIterator()Ljava/util/ListIterator;
     .locals 2
 
@@ -1016,6 +1032,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list iterator at a specified index. It delegates to the `l(I)` method, which returns an object of type `Lcom/mplus/lib/o3/G;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic listIterator(I)Ljava/util/ListIterator;
     .locals 1
 
@@ -1028,6 +1045,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the remove operation is not supported. It does not actually remove any object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(I)Ljava/lang/Object;
     .locals 1
 
@@ -1044,6 +1062,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not set any value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -1056,6 +1075,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of the original list by delegating to `v(II)` and casting the result. It does not actually return a standard `List` but rather an `Lcom/mplus/lib/o3/U;` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -1068,6 +1088,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks the size of a collection and returns either the original collection or a new instance of Lcom/mplus/lib/o3/S if the size exceeds 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t()Lcom/mplus/lib/o3/U;
     .locals 3
 

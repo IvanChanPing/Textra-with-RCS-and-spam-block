@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static comparator in the class Lcom/mplus/lib/V3/b. It creates a comparator that compares integers based on a function from Lcom/mplus/lib/F4/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -92,6 +93,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method enqueues a unique one-time work request to fetch ad setup using the WorkManager API.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Z)V
     .locals 6
 
@@ -190,6 +192,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures ad setup data for various ad providers, including Inmobi, Amazon APS, Tappx, and Smaato, and then calls another method `T` to process this data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()V
     .locals 7
 
@@ -733,6 +736,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to configure and save ad setup data for various ad platforms, including Inmobi, Amazon APS, Tappx, and Smaato.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R()V
     .locals 9
 
@@ -1539,6 +1543,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method schedules a periodic work request to fetch ad setup using the WorkManager API.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized S()V
     .locals 13
 
@@ -1801,6 +1806,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures an object of type Lcom/mplus/lib/V3/b; by setting its 'e' field and clearing its 'c' ArrayList, then invokes the Q method on various fields of the 'e' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(Lcom/mplus/lib/Y3/b;)V
     .locals 2
 
@@ -1863,6 +1869,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a formatted string message using the `Lcom/mplus/lib/s5/m0` class if certain conditions are met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs U(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
@@ -1936,6 +1943,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an ArrayList is empty and if so, calls another method M with a boolean parameter set to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V()V
     .locals 4
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a Drawable object with a given Bitmap and creates a new Paint object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/graphics/Bitmap;)V
     .locals 0
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a rectangle and a bitmap on a Canvas.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 9
 
@@ -101,6 +103,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the height of a Bitmap object. It retrieves the height of the bitmap stored in the 'b' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -119,6 +122,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the width of a Bitmap object. It retrieves the width from the Bitmap instance stored in the 'b' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/e; with an integer parameter. It calls the superclass constructor with a null argument and sets an instance variable 'a' to the input integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'a' of the class Lcom/mplus/lib/f3/e. It does not appear to perform any other operations despite initializing a local variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 

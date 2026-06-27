@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/O0 class, setting its fields with provided parameters. It extends the Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamn class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamj;Lcom/mplus/lib/a3/P0;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object is contained in a collection. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -78,6 +80,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map. It invokes the size() method of a Map object stored in the 'a' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -94,6 +97,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `zza` from class `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;` and returns its result. It appears to be a wrapper method for the `zza` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 
@@ -120,6 +124,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an instance of zzaon from zzamg. It returns the result as zzaom.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaom;
     .locals 3
 

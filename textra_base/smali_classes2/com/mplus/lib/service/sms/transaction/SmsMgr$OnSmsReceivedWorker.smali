@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of `SmsMgr$OnSmsReceivedWorker` with a context and worker parameters, extracting an intent from the worker's input data. It sets this intent as a field in the worker instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
     .param p1    # Landroid/content/Context;
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an SMS intent and returns a successful worker result. It utilizes the `Lcom/mplus/lib/c5/d` class to handle the intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroidx/work/ListenableWorker$Result;
     .locals 3
 

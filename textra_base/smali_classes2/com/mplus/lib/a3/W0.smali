@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/W0, setting its 'a' field to the provided zzaoz object and calling the superclass constructor with the given logging level and a false boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaoz;Ljava/util/logging/Level;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `zzaoz` from the class field `a`. It does not perform any operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaoo;
     .locals 2
 

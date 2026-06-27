@@ -113,6 +113,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the item ID from a cursor object at a specific position. It returns the long value from the first column of the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 3
 

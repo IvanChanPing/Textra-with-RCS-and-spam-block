@@ -39,6 +39,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `t` in the `FloatingButton` class by calling `Lcom/mplus/lib/z7/m;->c(I)` with argument 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a FloatingButton object, setting up its graphical properties and paints.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
@@ -121,6 +123,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides the getLayoutSize() method to return a layout size object. It invokes the superclass's getLayoutSize() method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -137,6 +140,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getMeasuredSize() function to return the measured size of the FloatingButton. It invokes the superclass's getMeasuredSize() method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -165,6 +169,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() to retrieve the vertical padding. It returns the result as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -195,6 +200,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not modify the result in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -209,6 +215,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method draws the FloatingButton view, including its background and any additional visual elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 10
 
@@ -484,6 +491,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface with the provided float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -504,6 +512,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background view of a FloatingButton instance. It stores the provided FloatingActionButtonBackground object in the instance's 'h' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBackgroundView(Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;)V
     .locals 1
 
@@ -514,6 +523,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a FloatingButton instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -524,6 +534,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the color of a FloatingButton using the provided integer color value. It updates the button's paint object with the new color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setButtonColor(I)V
     .locals 2
 
@@ -536,6 +547,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the flood center of a FloatingButton using the provided PointF object. It updates the internal PointF object 's' with the given point.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setFloodCenter(Landroid/graphics/PointF;)V
     .locals 2
 
@@ -550,6 +562,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the flood color of a FloatingButton using the provided integer color value. It updates the color of the Paint object associated with the button.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setFloodColor(I)V
     .locals 2
 
@@ -564,6 +577,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field `r` in the `FloatingButton` class to the provided value, indicating whether to flood from the top. It does not appear to perform any additional actions based on this value within this method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setFloodFromTop(Z)V
     .locals 1
 
@@ -576,6 +590,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the flood radius of a FloatingButton instance. It stores the provided float value in the instance's 'q' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setFloodRadius(F)V
     .locals 1
 
@@ -584,6 +599,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setHeightTo method, passing the provided height. It appears to be a synthetic bridge method generated by the compiler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -594,6 +610,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the icon color of a FloatingButton by calling a static method from class Lcom/mplus/lib/z7/N. It takes an integer parameter representing the color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setIconColor(I)V
     .locals 1
 
@@ -604,6 +621,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -614,6 +632,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a FloatingButton instance. It calls a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -622,6 +641,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a listener for the FloatingButton class. It stores the provided listener object in the class's 'k' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setListener(Lcom/mplus/lib/M6/k;)V
     .locals 1
 
@@ -632,6 +652,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visual appearance of a FloatingButton based on the provided M6/l object, configuring its button color, icon color, ring visibility, ring color, and ring stroke width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLook(Lcom/mplus/lib/M6/l;)V
     .locals 3
 
@@ -686,6 +707,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method with a Rect object. It delegates the margin setting to its superclass Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -696,6 +718,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setPressed method of the View class and, if a certain condition is met, updates the look of the FloatingButton based on its pressed state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setPressed(Z)V
     .locals 3
 
@@ -752,6 +775,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a view by invoking a static method with the provided margin value and the current object. It appears to be part of a custom UI component, specifically a floating button.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -762,6 +786,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the ring color of a FloatingButton using the provided integer color value. It modifies the color of the Paint object associated with the button.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRingColor(I)V
     .locals 2
 
@@ -778,6 +803,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the stroke width of a paint object. It modifies the paint object's stroke width to the provided float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRingStrokeWidth(F)V
     .locals 2
 
@@ -800,6 +826,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of a ring on a FloatingButton. It takes a boolean parameter and stores it in the object's field 'n'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setShowRing(Z)V
     .locals 1
 
@@ -808,6 +835,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a FloatingButton instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -820,6 +848,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a view by invoking a static method with the provided padding value and the current object. It appears to be related to layout adjustments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -830,6 +859,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided boolean parameter. It essentially delegates the visibility setting to its parent class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -840,6 +870,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method to animate the visibility of a view. It takes a boolean parameter to determine the visibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -848,6 +879,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of the FloatingButton to a specified value. It calls a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/J2/c, setting up a TaskCompletionSource and storing an ApiKey. It does not perform any external actions or invoke other methods with side effects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/ApiKey;)V
     .locals 1
 

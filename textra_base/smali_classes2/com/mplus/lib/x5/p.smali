@@ -19,6 +19,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the Context of the Fragment's Activity. It retrieves the Activity using getActivity() and returns it as a Context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContext()Landroid/content/Context;
     .locals 2
 

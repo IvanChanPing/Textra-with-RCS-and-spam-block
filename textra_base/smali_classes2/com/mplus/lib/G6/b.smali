@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/G6/b; that initializes an integer field 'a' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -30,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/G6/b with two integer parameters. It sets the object's fields a, b, and c to 0, the first parameter, and the second parameter, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(II)V
     .locals 1
 
@@ -203,6 +205,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/z6/b` based on the value of `Lcom/mplus/lib/G6/b;->a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(Landroid/content/Context;)Lcom/mplus/lib/z6/a;
     .locals 5
 
@@ -259,6 +262,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a hash key based on the object's properties. It uses a switch statement to handle different cases based on the value of `a`, and returns a calculated hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getKey()I
     .locals 3
 
@@ -327,6 +331,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. If `a` is 0, it calls the private method `a()` to generate the string; otherwise, it calls the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

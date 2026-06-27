@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/t7/k; with an integer and an object of type Lcom/mplus/lib/t7/n;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/t7/n;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes a `Lcom/mplus/lib/t7/c` object based on the value of `a` field in the current object, handling JSON data and interacting with other classes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/t7/c;)V
     .locals 5
 

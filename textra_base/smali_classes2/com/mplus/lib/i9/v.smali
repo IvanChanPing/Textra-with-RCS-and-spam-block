@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/i9/v; that initializes an object with a reference to a Lcom/smaato/sdk/video/vast/vastplayer/d; object. It sets the object's field 'a' to the provided parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/video/vast/vastplayer/d;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles volume changes, updating the video player view and notifying other components based on the new volume level.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onVolumeChanged(F)V
     .locals 5
 

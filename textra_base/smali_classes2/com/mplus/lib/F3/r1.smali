@@ -39,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a boolean value from a memory location using the sun/misc/Unsafe class. It takes an object and a memory offset as parameters and returns the boolean value at that offset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(JLjava/lang/Object;)Z
     .locals 2
 
@@ -53,6 +54,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method reads a byte from a memory address. It returns the byte value at the specified memory location.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(J)B
     .locals 2
 
@@ -65,6 +67,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a byte value from a specified memory location using the sun/misc/Unsafe class. It takes a long offset and an object as parameters and returns the byte at that offset in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(JLjava/lang/Object;)B
     .locals 2
 
@@ -97,6 +100,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a float value from a given object at a specified memory offset using sun/misc/Unsafe. It returns the retrieved float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(JLjava/lang/Object;)F
     .locals 2
 
@@ -111,6 +115,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field in an object using sun/misc/Unsafe. It takes an object, a field offset, and a boolean value as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Ljava/lang/Object;JZ)V
     .locals 2
 
@@ -123,6 +128,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a byte field in an object using sun/misc/Unsafe. It takes an object, a long offset, and a byte value as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Ljava/lang/Object;JB)V
     .locals 2
 
@@ -137,6 +143,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a double field in an object using sun/misc/Unsafe.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Ljava/lang/Object;JD)V
     .locals 7
 

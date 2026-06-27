@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of Lcom/mplus/lib/a3/y; with a randomly generated UUID. It creates a new instance with a unique identifier and other parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 6
 
@@ -55,6 +56,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzagn object from the mlkit_entity_extraction package. It appears to be a getter method that always returns the same object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzk()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;
     .locals 2
 
@@ -65,6 +67,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an IllegalStateException when attempting to create a child trace for no trace.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagt;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagv;
     .locals 1
 

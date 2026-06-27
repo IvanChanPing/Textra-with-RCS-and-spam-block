@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/u3/t, populating its sets with classes based on the input parameters. It categorizes classes into different sets based on their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/u3/a;Lcom/mplus/lib/u3/b;)V
     .locals 11
 
@@ -162,6 +163,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an instance of a requested class, checking if it's declared as a dependency, and throws an exception if it's not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 4
 
@@ -307,6 +309,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Class is in a set and returns a dependency provider for it if found, otherwise throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Class;)Lcom/mplus/lib/B3/a;
     .locals 4
 

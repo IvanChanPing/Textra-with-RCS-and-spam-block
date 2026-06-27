@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a specific condition is met and returns an object of type Lcom/mplus/lib/x5/y; if not, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d0(Lcom/mplus/lib/t5/d;Lcom/mplus/lib/x5/z;)Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -225,6 +226,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a click event on a view, checking if the view's ID matches a specific value, and if so, calls the onBackPressed method of the OnBackPressedDispatcher.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
@@ -256,6 +258,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/W5/h, a custom Loader.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateLoader(ILandroid/os/Bundle;)Landroidx/loader/content/Loader;
     .locals 1
 
@@ -462,6 +465,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles page selection, calling a method to set a state to false and posting an event to a bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPageSelected(I)V
     .locals 3
 

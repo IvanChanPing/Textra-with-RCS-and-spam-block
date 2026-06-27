@@ -25,6 +25,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object is in an ArrayList, adds it if not, and then sets its background color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Ljava/lang/Object;)V
     .locals 3
 
@@ -60,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is in an ArrayList, adds it if not, and then sets the text color of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(Ljava/lang/Object;)Lcom/mplus/lib/s5/e;
     .locals 3
 
@@ -97,6 +99,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling `w0()` on the current object. It appears to be a part of an event bus system, triggering a specific action when an event is received.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/d7/d;)V
     .locals 1
 
@@ -130,6 +133,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is in an ArrayList, adds it if not, and then sets its text color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0(Ljava/lang/Object;)V
     .locals 3
 
@@ -171,6 +175,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/K5/b;`, either from a cached field or by creating a new one using `Lcom/mplus/lib/D6/d;->F(Lcom/mplus/lib/r4/n;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s0()Lcom/mplus/lib/K5/b;
     .locals 3
 
@@ -221,6 +226,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is in an ArrayList, adds it if not, and sets a material director on the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v0(Ljava/lang/Object;)Lcom/mplus/lib/s5/e;
     .locals 3
 
@@ -258,6 +264,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over various ArrayLists and applies styling to their elements, such as setting background colors and text colors, using values from a `Lcom/mplus/lib/K5/b` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w0()V
     .locals 5
 

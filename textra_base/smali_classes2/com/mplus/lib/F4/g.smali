@@ -172,6 +172,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method saves a list of bitmaps to files named after the provided string with an appended index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static P(Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 6
 

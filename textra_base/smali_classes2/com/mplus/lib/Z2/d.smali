@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/Z2/d class, setting its 'a' field to the provided Lcom/mplus/lib/Z2/e object and calling the superclass constructor. It extends the Lcom/google/android/gms/internal/mlkit_common/zzaf class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/Z2/e;)V
     .locals 0
 
@@ -77,6 +78,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object, specifically the value of field 'c' in the 'a' object of type Lcom/mplus/lib/Z2/e. It always returns this value, ignoring the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -166,6 +166,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event, specifically hiding a view and setting a boolean value to false when a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
@@ -460,6 +461,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the loader by calling the `d()` method on the `m` object of type `Lcom/mplus/lib/S6/b;`, which extends `Lcom/mplus/lib/f6/c;`. It takes an `Landroidx/loader/content/Loader;` as a parameter but does not use it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLoaderReset(Landroidx/loader/content/Loader;)V
     .locals 1
 
@@ -470,6 +472,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a shared preference change matches a specific string and if so, restarts a loader.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 2
 
@@ -539,6 +542,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the alpha and visibility of a view based on a spring update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 5
 

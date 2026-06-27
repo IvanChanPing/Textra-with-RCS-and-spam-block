@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field with a log level of WARNING. It sets the log level for the class Lcom/mplus/lib/j8/c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -25,6 +26,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and adds a log level to a singleton logger if it hasn't been initialized yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/smaato/sdk/core/log/LogLevel;)V
     .locals 4
 

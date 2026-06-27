@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to retrieve an input stream from a raw resource identified by the instance field `a` of class `Lcom/mplus/lib/r4/W;`. If the resource is not found, it returns `null`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 3
 
@@ -54,6 +55,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the length of an input stream by calling `Lcom/mplus/lib/z7/y;->A(Ljava/io/InputStream;)J` and returns the result, handling potential `IOException` exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLength()J
     .locals 4
 
@@ -129,6 +131,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its resource information. It appends the object's class name and resource details to a string builder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes and then re-schedules a Runnable task with a 2000ms (0x7d0) delay.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChange(Z)V
     .locals 4
 

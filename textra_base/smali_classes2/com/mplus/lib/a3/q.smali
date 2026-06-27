@@ -21,6 +21,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets an instance field `b` with the provided `zzamg` object if it's not null, returning the current object, or throws a `NullPointerException` with the message "Null extras" if it is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagy;
     .locals 2
 
@@ -72,6 +73,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a provided UUID is null, and if not, it sets the UUID as an instance variable and returns the current object. If the UUID is null, it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Ljava/util/UUID;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagy;
     .locals 2
 

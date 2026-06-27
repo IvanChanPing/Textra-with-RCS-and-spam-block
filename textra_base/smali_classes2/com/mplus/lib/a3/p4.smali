@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field with an instance of `com/google/android/gms/internal/mlkit_entity_extraction/zzus`. It sets up the class with a Google ML Kit entity extraction object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 

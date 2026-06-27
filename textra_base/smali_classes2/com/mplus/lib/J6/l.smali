@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor that initializes an object with an integer value. It sets the object's field 'a' to the provided integer and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method applies a transformation to an object and returns a long value based on the object's type and the method's internal state. It appears to extract a long field from the object, which is either an instance of Lcom/mplus/lib/r4/j0 or Lcom/mplus/lib/r4/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final applyAsLong(Ljava/lang/Object;)J
     .locals 3
 

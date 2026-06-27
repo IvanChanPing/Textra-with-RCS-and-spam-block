@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/G6/a class, setting its properties with default values and a provided Lcom/mplus/lib/G6/c object. It constructs a new Lcom/mplus/lib/G6/b object with specific parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/G6/c;)V
     .locals 3
 

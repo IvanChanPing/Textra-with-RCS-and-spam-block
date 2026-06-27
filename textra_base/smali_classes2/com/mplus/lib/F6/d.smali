@@ -52,6 +52,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/F6/d class with the provided parameters. It sets the object's fields with the passed values and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/e5/d;ZLcom/mplus/lib/E3/i;Lcom/mplus/lib/x5/z;Lcom/mplus/lib/v6/Q;Lcom/mplus/lib/h5/h;)V
     .locals 1
 

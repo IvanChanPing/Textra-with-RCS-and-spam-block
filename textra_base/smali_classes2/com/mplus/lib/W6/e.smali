@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/W6/e; class, setting its properties and calling the superclass constructor. It configures the object with provided parameters and default settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/W6/d;Lcom/mplus/lib/W6/c;)V
     .locals 0
 
@@ -52,6 +53,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method to clear or reset something, likely related to an array or list. It appears to be part of a larger system for managing data or resources.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final G()V
     .locals 3
 
@@ -78,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a value in an object and then calls another method with a double value and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(I)V
     .locals 4
 
@@ -288,6 +291,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles a MotionEvent on a View, calling a method on an object of type Lcom/mplus/lib/s5/K and then invoking the superclass's method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 2
 

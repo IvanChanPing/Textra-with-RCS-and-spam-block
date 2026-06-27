@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/x7/d, setting its properties and calling the superclass constructor. It sets the object's context, a custom object, and an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/f;Landroid/content/Context;I)V
     .locals 0
 

@@ -372,6 +372,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method executes a given Runnable on a provided Executor and logs any RuntimeException that occurs during execution.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 5
 
@@ -501,6 +502,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the result of a computation, handling various exceptions and edge cases. It checks if the computation was cancelled, and if so, returns a corresponding result object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Lcom/mplus/lib/s3/v;)Ljava/lang/Object;
     .locals 7
 
@@ -1046,6 +1048,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds a listener to be executed when a task is done, checking if the task is already done or in a certain state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 5
 
@@ -1119,6 +1122,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appends a string representation of an object to a StringBuilder, handling null and self-referential cases.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
     .locals 2
 
@@ -1572,6 +1576,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method waits for a future to complete with a specified timeout, returning the result if it completes within the timeout or throwing a TimeoutException if it does not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 20
 
@@ -2091,6 +2096,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is done by verifying if a field 'a' is not null and not an instance of Lcom/mplus/lib/s3/e. It returns true if both conditions are met, otherwise false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public isDone()Z
     .locals 4
 
@@ -2222,6 +2228,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a Throwable by creating a new instance of Lcom/mplus/lib/s3/b and then checks if the result of invoking Lcom/mplus/lib/y1/c;->q is true, returning true if so and calling Lcom/mplus/lib/s3/o;->d after.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k(Ljava/lang/Throwable;)Z
     .locals 3
 
@@ -2267,6 +2274,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name, status, and additional information if available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 7
 

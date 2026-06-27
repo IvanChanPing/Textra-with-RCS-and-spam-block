@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O3/B, setting its fields with the provided parameters. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/Z2;IIII)V
     .locals 0
 
@@ -44,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the loading of a drawable by invoking a static method in `Lcom/inmobi/media/Z2;` to process the loaded drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDrawableLoaded(Landroid/graphics/drawable/Drawable;)V
     .locals 7
 

@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/B5/b` class, setting up its properties such as paints, colors, and dimensions. It appears to be a constructor for a graphical or drawing-related object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/mplus/lib/B5/a;F)V
     .locals 4
 

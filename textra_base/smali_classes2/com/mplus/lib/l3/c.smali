@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/l3/c, storing an IBinder instance. It sets up the object with the provided IBinder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be implementing an in-app review service, specifically interacting with the Google Play Core In-App Review API. It writes data to a parcel, including a string, a bundle, and an IBinder, and then transacts with a remote service.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;Landroid/os/Bundle;Lcom/mplus/lib/k3/f;)V
     .locals 3
 
@@ -103,6 +105,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the IBinder object stored in the 'c' field of the class. It provides a way to retrieve the IBinder instance associated with the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final asBinder()Landroid/os/IBinder;
     .locals 2
 

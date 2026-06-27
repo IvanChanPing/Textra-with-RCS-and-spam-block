@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagt`, storing it in a `WeakHashMap` associated with the current thread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic initialValue()Ljava/lang/Object;
     .locals 5
 

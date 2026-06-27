@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/o3/K0 class, storing a reference to an Lcom/mplus/lib/o3/y0 object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/y0;)V
     .locals 0
 
@@ -38,6 +39,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method compares two objects in reverse order using a comparator. It returns the result of the comparison.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
@@ -56,6 +58,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current instance, and if not, checks if the input object is an instance of the same class and has the same 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -108,6 +111,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the negation of the hash code of the object stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

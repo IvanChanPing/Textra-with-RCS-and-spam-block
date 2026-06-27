@@ -292,6 +292,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'x' field of type Lcom/mplus/lib/P6/c. It does not perform any additional operations despite the constant 4 being assigned to a local variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Lcom/mplus/lib/P6/c;
     .locals 2
 
@@ -340,6 +341,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method of its superclass, calling the superclass's onDestroy and then unregistering itself from an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onDestroy()V
     .locals 2
 
@@ -358,6 +360,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling `Z()` on the current object and then `p0()` on the `v` field of type `Lcom/mplus/lib/x7/f;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/o;)V
     .locals 1
 
@@ -378,6 +381,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onResume() method, calling a custom method Z() and then the superclass's onResume() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onResume()V
     .locals 1
 

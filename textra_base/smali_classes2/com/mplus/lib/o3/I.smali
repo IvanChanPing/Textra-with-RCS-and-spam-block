@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a string representation of an iterable object, formatting it as a list enclosed in square brackets with comma-separated elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

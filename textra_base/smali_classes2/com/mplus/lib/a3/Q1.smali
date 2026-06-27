@@ -54,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a3/Q1 that takes two string parameters and delegates to another constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -94,6 +95,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their `a` and `b` fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -155,6 +157,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object by combining the hash codes of its 'a' and 'b' fields using XOR operation. It returns the resulting hash code as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -179,6 +182,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, specifically a BaseEncoding configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -406,6 +410,7 @@
     throw v2
 .end method
 
+# M-ROLE [GROQ]: This method scales an input integer by a factor stored in the object's field `a` of type `Lcom/mplus/lib/a3/M1;`, then applies an offset and division.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(I)I
     .locals 5
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/M2/c class, setting its properties and calling the superclass constructor. It sets the BaseGmsClient, an integer, and a Bundle object as instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/internal/BaseGmsClient;ILandroid/os/Bundle;)V
     .locals 1
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a connection result based on the instance's state, either invoking `BaseGmsClient.zzi` and creating a `ConnectionResult` or checking the instance's bundle for a pending intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic zza(Ljava/lang/Object;)V
     .locals 3
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static objects of type Lcom/mplus/lib/r6/b. It sets these objects as fields g and h of the class Lcom/mplus/lib/r6/e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -45,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method synchronizes and invokes `Lcom/mplus/lib/m5/c;->N` with a string and an array of `Lcom/mplus/lib/r6/a` objects, then calls `p0` and `t0` on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs declared-synchronized n0([Lcom/mplus/lib/r6/a;)V
     .locals 3
 
@@ -90,6 +92,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met based on the comparison of two strings and a boolean value, returning true if the condition is met and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()Z
     .locals 4
 
@@ -135,6 +138,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two strings are equal and calls `t0()` if they are.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/m5/b;)V
     .locals 2
 
@@ -418,6 +422,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a string field 'e' in the class and calls method t0().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0(Ljava/lang/String;)V
     .locals 1
 

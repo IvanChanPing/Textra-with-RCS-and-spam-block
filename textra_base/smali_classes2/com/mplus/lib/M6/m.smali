@@ -38,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a boolean value from a storage object using the key "checked" and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()Ljava/lang/Boolean;
     .locals 4
 
@@ -66,6 +67,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific double value (`h`) in an object of class `Lcom/mplus/lib/b2/d` is zero and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()Z
     .locals 5
 
@@ -103,6 +105,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles a click event on a view, specifically a floating button, and toggles a state by calling `p0(Z)V` based on the result of `n0()`. It also delegates the click event to another object if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
@@ -148,6 +151,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the object's field 'l' with the value of its field 'm' when the spring is at rest. It does not appear to use the input parameter or perform any other actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 1
 

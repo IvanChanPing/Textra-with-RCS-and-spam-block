@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls `g(Ljava/lang/Object;)V` on the current object and returns the current object cast to `Lcom/mplus/lib/o3/N;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic c(Ljava/lang/Object;)Lcom/mplus/lib/o3/N;
     .locals 1
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/o3/e0;` based on the value of `p0`'s field `b`. It handles different cases and creates or retrieves the instance accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/o3/e0;
     .locals 4
 

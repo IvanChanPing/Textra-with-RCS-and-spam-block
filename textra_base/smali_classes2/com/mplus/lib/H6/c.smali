@@ -300,6 +300,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method animates the disappearance of a RecyclerView item by creating a new instance of Lcom/mplus/lib/H6/b and passing it to method a in the same class. It returns a boolean indicating the success of the animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final animateDisappearance(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)Z
     .locals 1
 
@@ -330,6 +331,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method ends an animation by removing and calling the `c()` method on the corresponding `Lcom/mplus/lib/H6/a;` object associated with the given `RecyclerView$ViewHolder`. It iterates over a list of `Lcom/mplus/lib/H6/a;` objects to find the matching one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final endAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 5
 
@@ -382,6 +384,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method ends animations by iterating over a list of `Lcom/mplus/lib/H6/a` objects and calling their `c()` method if a certain condition is not met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final endAnimations()V
     .locals 3
 
@@ -440,6 +443,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a list is not empty and returns true if it is, indicating something is running. It returns false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isRunning()Z
     .locals 2
 
@@ -467,6 +471,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method runs pending animations by iterating over a list of animation objects and calling their `b()` method. It also resets the translation Y of a view to 0 if it's not already 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final runPendingAnimations()V
     .locals 3
 
@@ -540,6 +545,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

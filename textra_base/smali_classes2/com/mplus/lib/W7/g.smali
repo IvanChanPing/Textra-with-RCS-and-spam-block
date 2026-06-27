@@ -43,6 +43,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of `Lcom/mplus/lib/W7/g` by copying properties from a `Lcom/smaato/sdk/core/dns/DnsMessage$Builder` object. It sets various fields, including integers, enums, booleans, and lists, from the builder object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/dns/DnsMessage$Builder;)V
     .locals 2
 
@@ -137,6 +138,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class `Lcom/mplus/lib/W7/g` by parsing a byte array, extracting various DNS message fields, and storing them in the object's properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 7
 
@@ -361,6 +363,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a DNS message as a byte array. It constructs the message by writing various fields, including the header, question section, and answer section, to a `DataOutputStream`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()[B
     .locals 7
 
@@ -692,6 +695,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their byte arrays.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -746,6 +750,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of an object, using the hash code of a byte array if a cached hash code is not available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -795,6 +800,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either from a cached string or by generating one using a DnsMessage Builder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

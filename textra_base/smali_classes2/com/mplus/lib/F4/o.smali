@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static ThreadLocal variable. It creates a new instance of java/lang/ThreadLocal and assigns it to the static field b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/F4/o, setting its field 'a' to the provided Lcom/mplus/lib/F4/e object. It is a constructor method for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/F4/e;)V
     .locals 0
 
@@ -44,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/F4/p` associated with the current thread, creating a new one if necessary. It checks for an existing instance with a matching `Lcom/mplus/lib/F4/e` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/F4/p;
     .locals 5
 
@@ -101,6 +104,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given text has a glyph. It uses the paint from a TextView to perform the check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/F4/x;)Z
     .locals 2
 
@@ -149,6 +153,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a bitmap from a given text by measuring and drawing a `TextView` on a `Canvas`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Lcom/mplus/lib/F4/x;)Lcom/mplus/lib/i5/a;
     .locals 7
 
@@ -288,6 +293,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

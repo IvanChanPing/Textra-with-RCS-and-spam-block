@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O3/C with parameters from Lcom/inmobi/media/Z2 and five integers. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/Z2;IIIII)V
     .locals 0
 
@@ -48,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method invokes a static method in the `Lcom/inmobi/media/Z2` class, passing several instance fields as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/y3/c; that initializes an object field 'a' with the provided parameter. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 

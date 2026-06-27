@@ -47,6 +47,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of `DeliveryInfoPersister$DeliveryInfoSegmentList` and registers it as the default instance. It sets up the default instance for protobuf serialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -63,6 +64,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a `DeliveryInfoSegmentList` object, setting its `memoizedIsInitialized` flag and creating an empty list of segments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private constructor <init>()V
     .locals 1
 
@@ -81,6 +83,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of DeliveryInfoSegmentList. It provides access to a static instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1100()Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -89,6 +92,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets a segment at a specified index in a DeliveryInfoSegmentList. It invokes a private setSegments method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1200(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;ILcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;)V
     .locals 1
 
@@ -97,6 +101,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds a DeliveryInfoSegment to a DeliveryInfoSegmentList. It invokes the private addSegments method to perform the addition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1300(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;)V
     .locals 1
 
@@ -107,6 +112,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds a segment to a list of delivery info segments at a specified index. It invokes the private `addSegments` method of the `DeliveryInfoPersister$DeliveryInfoSegmentList` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1400(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;ILcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;)V
     .locals 1
 
@@ -115,6 +121,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds all segments from a given iterable to a DeliveryInfoSegmentList instance. It invokes the private addAllSegments method on the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1500(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;Ljava/lang/Iterable;)V
     .locals 1
 
@@ -135,6 +142,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private `removeSegments` method on the `DeliveryInfoPersister$DeliveryInfoSegmentList` instance, passing an integer parameter. It appears to remove segments based on the provided index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1700(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;I)V
     .locals 1
 
@@ -147,6 +155,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from the provided iterable to the segments list. It first ensures the list is mutable, then uses a utility method to add all elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private addAllSegments(Ljava/lang/Iterable;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -172,6 +181,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds a DeliveryInfoSegment object to a list of segments at a specified index. It first checks if the list is mutable and then performs the addition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private addSegments(ILcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;)V
     .locals 2
 
@@ -188,6 +198,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds a DeliveryInfoSegment to the list of segments. It first checks the class of the segment and ensures the segments list is mutable before adding it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private addSegments(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;)V
     .locals 2
 
@@ -206,6 +217,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the segments in the DeliveryInfoPersister by replacing them with an empty protobuf list. It resets the segments_ field of the class instance to an empty list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearSegments()V
     .locals 2
 
@@ -224,6 +236,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method ensures that the `segments_` field is mutable by checking its current state and creating a mutable copy if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private ensureSegmentsIsMutable()V
     .locals 3
 
@@ -257,6 +270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of `DeliveryInfoPersister$DeliveryInfoSegmentList`. It retrieves a pre-existing instance from a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static getDefaultInstance()Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -265,6 +279,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for `DeliveryInfoSegmentList`. It returns an instance of `Lcom/mplus/lib/A4/k;` by calling `createBuilder()` on the default instance of `DeliveryInfoPersister$DeliveryInfoSegmentList`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder()Lcom/mplus/lib/A4/k;
     .locals 2
 
@@ -279,6 +294,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for a DeliveryInfoSegmentList instance. It returns a builder object of type Lcom/mplus/lib/A4/k.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;)Lcom/mplus/lib/A4/k;
     .locals 2
 
@@ -299,6 +315,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited protocol buffer message from an input stream and returns a DeliveryInfoSegmentList object. It utilizes the parseDelimitedFrom method from the com/google/protobuf/c class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -317,6 +334,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited protocol buffer message from an input stream. It returns an instance of `DeliveryInfoPersister$DeliveryInfoSegmentList`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -333,6 +351,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `DeliveryInfoSegmentList` object from a given input using the `parseFrom` method of the `com/google/protobuf/c` class. It returns the parsed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -349,6 +368,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `DeliveryInfoSegmentList` object from input data using Google's protobuf library. It returns the parsed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -369,6 +389,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `DeliveryInfoSegmentList` object from a given input stream. It uses the `parseFrom` method from the `com/google/protobuf/c` class to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -389,6 +410,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `DeliveryInfoSegmentList` object from input data using Google's protobuf library. It returns the parsed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -409,6 +431,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a DeliveryInfoSegmentList object from an InputStream. It utilizes the Google Protobuf library to perform the parsing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -427,6 +450,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `DeliveryInfoPersister$DeliveryInfoSegmentList` object from an input stream. It utilizes the `parseFrom` method from `com/google/protobuf/c` to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -445,6 +469,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a DeliveryInfoSegmentList object from a ByteBuffer. It utilizes the Google Protobuf library to perform the parsing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -465,6 +490,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `DeliveryInfoSegmentList` object from a `ByteBuffer` using a `com/mplus/lib/F3/G` object. It utilizes the `parseFrom` method of `com/google/protobuf/c` to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -485,6 +511,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a DeliveryInfoSegmentList object using Google's protobuf library. It returns the parsed DeliveryInfoSegmentList instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([B)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -507,6 +534,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a `DeliveryInfoSegmentList` object using a protobuf parser. It utilizes the `parseFrom` method from the `com/google/protobuf/c` class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([BLcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;
     .locals 2
 
@@ -527,6 +555,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a parser for the `DeliveryInfoSegmentList` class. It retrieves the parser from the `DEFAULT_INSTANCE` of `DeliveryInfoPersister$DeliveryInfoSegmentList`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parser()Lcom/mplus/lib/F3/O0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -563,6 +592,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a DeliveryInfoSegment at a specified index in the segments list. It first ensures the list is mutable, then replaces the element at the given index with the provided segment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSegments(ILcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;)V
     .locals 2
 
@@ -797,6 +827,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a DeliveryInfoSegment object from a list at a specified index. It casts the retrieved object to DeliveryInfoPersister$DeliveryInfoSegment and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSegments(I)Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegment;
     .locals 2
 
@@ -817,6 +848,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of segments in the DeliveryInfoSegmentList. It retrieves the size of the 'segments_' list and returns it as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSegmentsCount()I
     .locals 2
 
@@ -833,6 +865,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of DeliveryInfoSegment objects. It retrieves the list from the 'segments_' field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSegmentsList()Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -851,6 +884,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a segment at a specified index from a list of segments. It returns the segment as an instance of Lcom/mplus/lib/A4/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSegmentsOrBuilder(I)Lcom/mplus/lib/A4/l;
     .locals 2
 
@@ -867,6 +901,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of segments. It appears to be part of a protobuf-generated class, returning an internal list of segments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSegmentsOrBuilderList()Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

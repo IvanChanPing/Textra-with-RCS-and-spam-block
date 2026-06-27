@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/r4/A, setting its fields with provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/r4/H;JLcom/mplus/lib/r4/n;)V
     .locals 1
 
@@ -40,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/r4/A, setting its fields with the provided parameters. It calls the superclass constructor and assigns the input values to the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/r4/H;Lcom/mplus/lib/r4/n;J)V
     .locals 1
 

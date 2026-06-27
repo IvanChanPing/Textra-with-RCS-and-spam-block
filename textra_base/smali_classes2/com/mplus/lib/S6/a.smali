@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/S6/a with an integer parameter. It sets a field 'a' to the input integer and another field 'c' to -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 2
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string based on the value of the instance variable `a`. It checks the value of `a` and returns a string from different objects (`Lcom/mplus/lib/r4/l;`, `Lcom/mplus/lib/r4/n;`, `Lcom/mplus/lib/v4/b;`) or throws an `IllegalStateException` if the value is not 1, 2, or 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 3
 

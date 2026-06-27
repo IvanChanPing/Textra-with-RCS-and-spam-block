@@ -33,6 +33,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static variables in the class Lcom/mplus/lib/t6/c. It sets an integer value and creates a new Rect object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a resized bitmap based on the provided width and image data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(ILcom/mplus/lib/F4/x;)Landroid/graphics/Bitmap;
     .locals 5
 
@@ -442,6 +444,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws text on an Android Canvas, handling ellipsization and background color for certain text spans.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .locals 6
 
@@ -754,6 +757,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It delegates the actual conversion to this external method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/k9/a; with a SurfaceHolder and an integer. It sets the object's fields 'a' and 'b' to the provided integer and SurfaceHolder, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/view/SurfaceHolder;I)V
     .locals 0
 

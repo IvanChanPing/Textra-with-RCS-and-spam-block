@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/X2/g class with the provided parameters. It sets various instance fields, including those related to a zzx object and a CharSequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/X2/h;Lcom/google/android/gms/internal/common/zzx;Ljava/lang/CharSequence;)V
     .locals 0
 
@@ -359,6 +360,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in a sequence if it exists, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -400,6 +402,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually remove anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 

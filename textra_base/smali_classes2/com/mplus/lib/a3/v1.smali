@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/v1, setting its fields with provided parameters. It stores references to Lcom/mplus/lib/a3/w1 and Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqm objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/w1;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqm;)V
     .locals 0
 

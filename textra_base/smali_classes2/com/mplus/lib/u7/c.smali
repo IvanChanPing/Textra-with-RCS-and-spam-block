@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/u7/c; that initializes an object with a reference to Lcom/mplus/lib/t0/c;. It sets the object's field 'a' to the provided Lcom/mplus/lib/t0/c; instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/t0/c;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a condition is met and runs a task if true. It appears to be related to executing a task based on a condition from an object of type Lcom/mplus/lib/t7/c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/t7/c;)V
     .locals 1
 

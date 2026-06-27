@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/w2, setting its fields with the provided parameters. It calls the superclass constructor and assigns the input values to the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Z)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
@@ -206,6 +208,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the `GetFileGroupRequest` object. It includes the group name, and several other parameters with default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -252,6 +255,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `zzaih` from the `b` field of the class. It does not perform any operations, just returns the existing value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -262,6 +266,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `zzaih` from the class field `c`. It does not perform any operations, just returns the existing value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -272,6 +277,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string field 'a' of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Ljava/lang/String;
     .locals 2
 
@@ -292,6 +298,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the `d` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Z
     .locals 2
 

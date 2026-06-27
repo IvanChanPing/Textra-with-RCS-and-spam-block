@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/e3/e, setting its integer and zzam object fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/google/android/gms/internal/mlkit_smart_reply_common/zzam;)V
     .locals 0
 
@@ -44,6 +45,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their types and values. It returns true if the objects are the same instance or have the same type and values, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -195,6 +197,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'a' as an integer. It does not appear to perform any operations based on the input parameter or the constant 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -205,6 +208,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `zzam` from the `mlkit_smart_reply_common` package. It retrieves the object from a field named `b` in the class `Lcom/mplus/lib/e3/e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzam;
     .locals 2
 

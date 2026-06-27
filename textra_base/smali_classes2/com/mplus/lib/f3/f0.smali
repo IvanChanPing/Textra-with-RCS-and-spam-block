@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f3/f0 class with an integer and a zzim object. It sets the object's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/google/android/gms/internal/play_billing/zzim;)V
     .locals 0
 
@@ -78,6 +79,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object by combining the identity hash code of the `zzim` object and the integer field `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 

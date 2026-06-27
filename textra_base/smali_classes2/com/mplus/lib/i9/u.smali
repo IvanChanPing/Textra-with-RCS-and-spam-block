@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/i9/u; with a Lcom/smaato/sdk/video/vast/vastplayer/d; object. It sets the object as a field in the current instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/video/vast/vastplayer/d;)V
     .locals 0
 

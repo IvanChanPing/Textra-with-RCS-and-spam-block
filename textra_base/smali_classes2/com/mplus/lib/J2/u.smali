@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/J2/u, setting its fields with the provided GoogleApiManager, Api$Client, and ApiKey. It performs basic object construction and field assignment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/GoogleApiManager;Lcom/google/android/gms/common/api/Api$Client;Lcom/google/android/gms/common/api/internal/ApiKey;)V
     .locals 0
 
@@ -53,6 +54,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a report service binding result by posting a new runnable to a handler. It uses the provided ConnectionResult to create the runnable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReportServiceBinding(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 3
 
@@ -73,6 +75,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a ConnectionResult by calling the zas method on a zabq object if it exists. It appears to be part of Google API connection management.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zae(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 3
 
@@ -108,6 +111,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a sign-in success event by storing the provided account accessor and scopes, and then calling the `getRemoteService` method on the `Api$Client` instance if a flag is set. If the input parameters are null, it logs an error and invokes the `zae` method with a connection result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zaf(Lcom/google/android/gms/common/internal/IAccountAccessor;Ljava/util/Set;)V
     .locals 2
 

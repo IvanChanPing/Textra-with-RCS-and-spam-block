@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a service by calling its superclass constructor and setting up instances of `Lcom/mplus/lib/G7/a` and `Lcom/mplus/lib/c5/a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/G7/a; when the service is bound. It does not utilize the provided Intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 1
 

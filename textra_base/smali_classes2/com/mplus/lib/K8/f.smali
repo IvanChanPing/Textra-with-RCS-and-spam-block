@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/K8/f, setting its fields with the provided parameters. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/interstitial/view/b;Landroid/graphics/Bitmap;Ljava/util/List;Lcom/smaato/sdk/core/api/ImpressionCountingType;)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts a context and a runnable, then calls a method to display an interstitial ad and runs the provided runnable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 8
 

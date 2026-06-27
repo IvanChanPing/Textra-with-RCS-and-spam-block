@@ -34,6 +34,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a RecyclerView can scroll vertically upwards and returns true if it cannot, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 3
 
@@ -58,6 +59,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `e0(Z)V` on an object of class `Lcom/mplus/lib/V5/i;`, passing a boolean parameter. It delegates the call to the object's method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e0(Z)V
     .locals 2
 

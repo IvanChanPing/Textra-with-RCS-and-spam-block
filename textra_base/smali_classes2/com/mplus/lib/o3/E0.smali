@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/o3/E0 class, setting its properties from the provided parameters. It appears to be a constructor for a collection-like object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/Y;[Ljava/lang/Object;II)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `b` in class `Lcom/mplus/lib/o3/U;` with an integer and an array of objects, and returns the result. It appears to be a wrapper method for the actual logic in `Lcom/mplus/lib/o3/U;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I[Ljava/lang/Object;)I
     .locals 2
 
@@ -57,6 +59,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a key-value pair contained in the map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 4
 
@@ -152,6 +155,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/o3/D0, passing the current object (Lcom/mplus/lib/o3/E0) to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Lcom/mplus/lib/o3/U;
     .locals 2
 
@@ -166,6 +170,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'g' as the size. It appears to be a getter method for the size, with a hardcoded value comparison or unrelated constant '3'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

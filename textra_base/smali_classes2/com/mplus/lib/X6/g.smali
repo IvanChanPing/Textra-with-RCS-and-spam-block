@@ -92,6 +92,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to reset or restore the state of various UI components, including setting alpha values and clip bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R()V
     .locals 4
 
@@ -312,6 +313,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha (transparency) of certain UI elements based on the input parameter `p1`. It appears to be part of an animation or visual effect.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X(D)V
     .locals 12
 
@@ -504,6 +506,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called after text has been changed and it invokes `n0(I)` with a value from `Lcom/mplus/lib/E1/k;->b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 1
 
@@ -530,6 +533,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific condition is met and returns an object if true, otherwise throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d0(Lcom/mplus/lib/t5/d;Lcom/mplus/lib/x5/z;)Lcom/mplus/lib/x5/y;
     .locals 1
 
@@ -559,6 +563,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles a click event on a view, checking if the click is within a specific area and performing actions based on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(ILandroid/view/View;FF)Z
     .locals 10
 
@@ -871,6 +876,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a search functionality, invoking a method to set up a search listener and logging a "Search" event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f0()V
     .locals 4
 
@@ -978,6 +984,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a loader with new data from an EditText and restarts it if the data has changed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(I)V
     .locals 5
 

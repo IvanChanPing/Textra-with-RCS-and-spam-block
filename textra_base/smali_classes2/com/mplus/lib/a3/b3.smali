@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/b3; with a boolean value. It sets the instance variable 'a' to the provided boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Z)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks a boolean flag and returns immediately if it's true, otherwise throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 2
 
@@ -51,6 +53,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the list at a specified index and returns a boolean result. It also calls a method `a()` before adding elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(ILjava/util/Collection;)Z
     .locals 1
 
@@ -65,6 +68,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection and returns a boolean indicating success. It first calls an internal method `a()` and then invokes the superclass's `addAll()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public addAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -81,6 +85,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method clears the list by calling its superclass's clear method and another method 'a()'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 1
 
@@ -95,6 +100,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current list object is equal to another object, which is also a list. It returns true if both lists have the same elements in the same order, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public equals(Ljava/lang/Object;)Z
     .locals 7
 
@@ -204,6 +210,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of a collection by iterating over its elements and combining their hash codes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hashCode()I
     .locals 5
 
@@ -294,6 +301,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements from the collection that are contained in the specified collection and returns true if the collection changed. It calls the superclass's removeAll method after calling its own 'a' method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -308,6 +316,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retains all elements in the collection that are contained in the specified collection and returns a boolean result. It calls the superclass's retainAll method after invoking a method named 'a' on itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -322,6 +331,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method resets a boolean flag `a` to false if it's currently true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()V
     .locals 2
 
@@ -345,6 +355,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the instance variable 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Z
     .locals 2
 

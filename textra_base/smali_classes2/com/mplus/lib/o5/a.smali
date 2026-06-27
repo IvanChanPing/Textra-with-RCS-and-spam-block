@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a synchronized instance of the class Lcom/mplus/lib/o5/a. It appears to be a singleton pattern implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized N()Lcom/mplus/lib/o5/a;
     .locals 3
 
@@ -59,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method logs a crash exception to a file. It takes a thread, a string context, and a throwable exception as parameters, and writes the thread, context, and exception details to a log file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Ljava/lang/Thread;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 9
 
@@ -252,6 +254,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles uncaught exceptions by logging the exception to a file and then passing it to a default uncaught exception handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 6
 

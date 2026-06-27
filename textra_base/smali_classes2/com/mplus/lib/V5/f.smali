@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/V5/f class with a given object of type Lcom/mplus/lib/V5/e. It sets a boolean field to false and stores the provided object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/V5/e;)V
     .locals 1
 
@@ -49,6 +50,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a flag is set. It retrieves the value of the instance variable 'a' and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -57,6 +59,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles a MotionEvent by canceling posts, checking a condition, and then invoking an interface method U and L if the condition is true, and finally recycles a stored MotionEvent if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Landroid/view/MotionEvent;)V
     .locals 3
 
@@ -115,6 +118,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles MotionEvent actions for a View, invoking various methods based on the action type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 5
 
@@ -252,6 +256,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a MotionEvent is handled by an object implementing Lcom/mplus/lib/V5/e, storing the result in a boolean field. It appears to be part of a touch event handling mechanism.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 4
 

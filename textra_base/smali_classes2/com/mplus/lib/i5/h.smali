@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `j` of type `Lcom/mplus/lib/E7/a;` with a new instance. It sets up a supplier with a 10-element limit and a 300-element buffer size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -52,6 +53,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/i5/h class, setting up its properties and fields. It calls the superclass constructor and initializes various fields, including lists and live data objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -406,6 +408,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/i5/d;` by first attempting to retrieve it using `S(I)` and if that fails, it tries to get the first element from a list returned by `U()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()Lcom/mplus/lib/i5/d;
     .locals 3
 
@@ -662,6 +665,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method filters a list of items using a predicate and maps the items using a function, then returns the resulting list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R()Ljava/util/List;
     .locals 4
 
@@ -732,6 +736,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object of type Lcom/mplus/lib/i5/d; from a list based on a given ID. If the provided ID is -1, it uses a default ID obtained from the P() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(I)Lcom/mplus/lib/i5/d;
     .locals 4
 
@@ -796,6 +801,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of items, and if a certain condition is not met, it calls another method `Y()` and sets a flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U()Ljava/util/List;
     .locals 3
 
@@ -851,6 +857,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the size of a list returned by `U()` is greater than 1 and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized V()Z
     .locals 3
 
@@ -904,6 +911,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks for the "android.permission.READ_PHONE_STATE" permission and, if granted, adds a subscriptions changed listener to the SubscriptionManager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()V
     .locals 3
 

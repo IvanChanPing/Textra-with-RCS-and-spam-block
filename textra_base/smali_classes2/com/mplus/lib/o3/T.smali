@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/T, setting its properties with the provided parameters. It calls the superclass constructor of AbstractCollection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(IILcom/mplus/lib/o3/U;)V
     .locals 0
 
@@ -49,6 +50,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns an integer value by adding the results of `Lcom/mplus/lib/o3/O;->e()` and the instance fields `c` and `d` of the class `Lcom/mplus/lib/o3/T;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()I
     .locals 3
 
@@ -105,6 +107,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a list at a calculated index, performing bounds checking.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -147,6 +150,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator object by calling method l(I) on the current object. It appears to be part of a custom list implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator()Ljava/util/ListIterator;
     .locals 2
 
@@ -163,6 +167,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list iterator object by calling `l(I)` on the current object. It appears to be a bridge method for the `listIterator(I)` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
     .locals 1
 
@@ -177,6 +182,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'd' which presumably represents the size of an object. It does not perform any actual size calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -187,6 +193,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a list, bridging to a synthetic method `v(II)` that returns an object of type `Lcom/mplus/lib/o3/U;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -201,6 +208,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method modifies input coordinates, calls a static method for logging or validation, and then invokes another method to update an object's position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v(II)Lcom/mplus/lib/o3/U;
     .locals 2
 

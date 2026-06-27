@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class and performs a series of operations involving the `com/google/android/gms/internal/mlkit_smart_reply_bundled/zzah` class. It appears to be setting up a configuration or registry for ML Kit Smart Reply.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

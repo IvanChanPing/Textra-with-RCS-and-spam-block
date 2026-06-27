@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a PopupMenu with a given Context and View, then calls method 'a' to perform additional setup. It extends the Android PopupMenu class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the context and an onDismissListener for a PopupMenu.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/content/Context;)V
     .locals 1
 
@@ -47,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the OnDismissListener for a PopupMenu. It stores the provided listener in a field named 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setOnDismissListener(Landroid/widget/PopupMenu$OnDismissListener;)V
     .locals 1
 
@@ -57,6 +60,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `show()` method of `PopupMenu` and also updates a `SparseBooleanArray` with a hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final show()V
     .locals 4
 

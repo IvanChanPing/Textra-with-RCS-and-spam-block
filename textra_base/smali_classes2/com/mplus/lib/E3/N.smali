@@ -33,6 +33,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an enum class with time units (UNKNOWN, YEAR, MONTH, WEEK, DAY, HOUR, MINUTE, SECOND) and creates a mapping between their integer values and enum instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 12
 
@@ -159,6 +160,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, an integer index, and an additional integer value. It sets the enum's properties using the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -169,6 +171,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of class Lcom/mplus/lib/E3/N. It appears to be an enum values() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/E3/N;
     .locals 2
 

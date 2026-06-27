@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f3/A0 class, setting its 'c' and 'f' fields to an empty map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a set of entries from a map, or an empty set if the map is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/Set;
     .locals 2
 
@@ -240,6 +242,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/f3/B0; at the specified index if it's within bounds, otherwise it throws an ArrayIndexOutOfBoundsException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)Lcom/mplus/lib/f3/B0;
     .locals 2
 
@@ -275,6 +278,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method clears the internal state of the object by resetting its array and map fields. It invokes the `h()` method and clears the map if it's not empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -321,6 +325,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given key is present in the object. It first attempts to find the key using a custom method `d(Ljava/lang/Comparable;)I`, and if that fails, it falls back to checking the key in a `Map` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsKey(Ljava/lang/Object;)Z
     .locals 2
 
@@ -481,6 +486,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set object, specifically an instance of Lcom/mplus/lib/F3/a1, which is lazily initialized if it doesn't already exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final entrySet()Ljava/util/Set;
     .locals 3
 
@@ -512,6 +518,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object, comparing the size and contents of two maps.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
@@ -654,6 +661,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method removes an object at a specified index from an array and returns the removed object, also handling a map of objects if it's not empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)Ljava/lang/Object;
     .locals 7
 
@@ -787,6 +795,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a SortedMap instance, specifically a TreeMap, if the current map is empty and not a TreeMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Ljava/util/SortedMap;
     .locals 2
 
@@ -842,6 +851,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a data structure based on a given comparable object. It first checks if the object is in an array, and if not, it falls back to a map lookup.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -889,6 +899,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a flag `d` is set, and if not, returns immediately; otherwise, it throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 2
 
@@ -916,6 +927,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object by summing the hash codes of its array elements and, if present, its map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 5
 
@@ -985,6 +997,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method implements a put operation, delegating to another method `b` with a `Comparable` key and an object value. It returns the result of this delegation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -1003,6 +1016,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection and returns the removed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -1059,6 +1073,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the total size by adding the value of instance variable 'b' and the size of the 'c' map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 3
 

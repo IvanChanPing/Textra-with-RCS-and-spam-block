@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of class Lcom/mplus/lib/v6/H, setting its 'a' field to the provided Lcom/mplus/lib/v6/K object and calling the superclass constructor. It effectively sets up an RecyclerView OnScrollListener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/v6/K;)V
     .locals 0
 
@@ -579,6 +580,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the scroll position and triggers events when the user scrolls a RecyclerView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .locals 2
 

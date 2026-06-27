@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the position of the last item in a cursor, relative to the current position. It calculates this by subtracting the current position from the total count minus one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPosition()I
     .locals 3
 
@@ -37,6 +38,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is before the first position and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isAfterLast()Z
     .locals 2
 
@@ -51,6 +53,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is after the last position. It returns the result of the superclass's isAfterLast method, effectively doing the opposite of what its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isBeforeFirst()Z
     .locals 2
 
@@ -61,6 +64,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is at the last position. It does not actually check if it's the first position as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isFirst()Z
     .locals 2
 
@@ -73,6 +77,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is at the first position. It does not actually check if it's the last position, despite its name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isLast()Z
     .locals 2
 
@@ -85,6 +90,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the move method of CursorWrapper, negating the offset before calling the superclass method. It always returns the result of the superclass method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final move(I)Z
     .locals 1
 
@@ -101,6 +107,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's moveToLast method and returns its result. It does not actually move to the first position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToFirst()Z
     .locals 2
 
@@ -115,6 +122,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to move the cursor to the first position, not the last, and returns a boolean indicating success. It does not actually move to the last position as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToLast()Z
     .locals 2
 
@@ -125,6 +133,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's moveToPrevious method and returns its result, but is named moveToNext.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToNext()Z
     .locals 2
 
@@ -139,6 +148,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method moves the cursor to the position that is the reverse of the input position. It effectively moves to the position from the end of the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToPosition(I)Z
     .locals 2
 
@@ -165,6 +175,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to move the cursor to the next position, not previous, and returns the result. It does not actually move to the previous position as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToPrevious()Z
     .locals 2
 

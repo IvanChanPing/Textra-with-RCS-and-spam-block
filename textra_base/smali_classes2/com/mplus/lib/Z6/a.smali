@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method creates a new Intent with a specified Context and Class, then adds extras to the Intent, including a boolean "wdb", a string "wwu" if provided, and an integer "wwt".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static V(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;IZ)Landroid/content/Intent;
     .locals 2
 
@@ -63,6 +64,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a boolean extra named "wdb" is present in an Intent and returns its value, defaulting to false if not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()Z
     .locals 4
 
@@ -93,6 +95,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method toggles the visibility and animation of an image view based on the input boolean parameter. It starts or stops the animation and sets the view's visibility accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(Z)V
     .locals 2
 
@@ -549,6 +552,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method to stop the loading of a WebView when the activity is destroyed. It also calls the superclass's onDestroy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -565,6 +569,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onPause() method and stops the CookieSyncManager from syncing cookies when the activity pauses.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPause()V
     .locals 2
 
@@ -585,6 +590,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onResume` method and calls the superclass's `onResume` method, then starts the cookie sync process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResume()V
     .locals 2
 

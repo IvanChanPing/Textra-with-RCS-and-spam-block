@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class with a GoogleApiClient. It extends the BaseImplementation$ApiMethodImpl constructor with the location API and the provided client.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
     .locals 1
 
@@ -29,6 +30,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the result of a pending operation by casting the input object to a Google API Result and calling the setResult method of the BasePendingResult class. It effectively bridges the setResult method to work with any object type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic setResult(Ljava/lang/Object;)V
     .locals 1
 

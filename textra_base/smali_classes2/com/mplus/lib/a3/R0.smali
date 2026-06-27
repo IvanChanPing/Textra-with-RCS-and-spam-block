@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/R0, storing the input object and calling the superclass constructor of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamn.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object is equal to the object stored in the class's 'a' field. It returns true if they are equal, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -41,6 +43,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object stored in the 'a' field of the class. It delegates the hash code calculation to the stored object's own hashCode method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -55,6 +58,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator instance of type Lcom/mplus/lib/a3/D0. It creates a new iterator object, passing the object referenced by 'a' to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -83,6 +87,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, specifically by wrapping the string representation of the object's field 'a' in square brackets.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -113,6 +118,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets an object at a specified index in an array and returns the next index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 
@@ -143,6 +149,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/a3/D0` with the object stored in `Lcom/mplus/lib/a3/R0;->a` and returns it. It claims to return a `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaom` but actually returns `Lcom/mplus/lib/a3/D0`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaom;
     .locals 3
 

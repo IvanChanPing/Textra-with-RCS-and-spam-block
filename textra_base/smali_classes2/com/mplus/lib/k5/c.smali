@@ -602,6 +602,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method logs a message and schedules a task to run.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public N()V
     .locals 4
 
@@ -834,6 +835,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given CharSequence is valid by hashing it and checking a LongSparseArray for a cached result, or by calling an interface method `f` on an object implementing `Lcom/mplus/lib/F4/n;` if no cached result exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public R(Lcom/mplus/lib/F4/x;)Z
     .locals 5
 
@@ -923,6 +925,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a signature object from a database based on a given ID, or returns a default signature object if the ID is -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public S(J)Lcom/mplus/lib/r4/y0;
     .locals 4
 
@@ -1098,6 +1101,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of signatures from a database and returns them as an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public T()Ljava/util/ArrayList;
     .locals 6
 

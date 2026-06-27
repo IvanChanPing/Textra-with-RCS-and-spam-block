@@ -148,6 +148,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks and potentially updates the state of a Google Play Billing purchase.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/internal/play_billing/zzdy;)Lcom/mplus/lib/f3/x;
     .locals 4
 
@@ -181,6 +182,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method checks the status of a Google Play Billing purchase and returns the corresponding status object. It iteratively checks the status until a specific condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/google/android/gms/internal/play_billing/zzdy;)Lcom/mplus/lib/f3/E;
     .locals 4
 
@@ -216,6 +218,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method sets the field at offset `Lcom/mplus/lib/f3/D;->f:J` of object `p1` to `p2` using `sun/misc/Unsafe`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/f3/E;Lcom/mplus/lib/f3/E;)V
     .locals 4
 
@@ -230,6 +233,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a field in the provided `Lcom/mplus/lib/f3/E` object to the given `Ljava/lang/Thread` using `Lsun/misc/Unsafe;->putObject`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/mplus/lib/f3/E;Ljava/lang/Thread;)V
     .locals 4
 

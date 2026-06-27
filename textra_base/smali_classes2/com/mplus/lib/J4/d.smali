@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/J4/d using the application context. It sets this instance as a static field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/J4/d, setting up entity extraction capabilities using the Google ML Kit library. It downloads the required model if necessary and sets up success and failure listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
@@ -129,6 +131,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method performs entity extraction on a given CharSequence using the Google ML Kit Entity Extraction API, with a reference time and preferred locale.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Ljava/lang/CharSequence;J)Ljava/util/List;
     .locals 3
 

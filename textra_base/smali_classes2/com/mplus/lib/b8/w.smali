@@ -27,6 +27,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the CMP version in a TCModel object using an integer value. It casts the provided object to an integer and then calls the setCmpVersion method on the TCModel object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

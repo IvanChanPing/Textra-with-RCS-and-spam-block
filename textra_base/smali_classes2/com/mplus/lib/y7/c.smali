@@ -79,6 +79,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a CharSequence item from an array at the specified index. It always returns the item, as the const/4 v1, 0x1 instruction does not affect the return value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItem(I)Ljava/lang/Object;
     .locals 2
 

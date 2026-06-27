@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a HandlerThread with the name "qht" and sets a field 'a' to the provided Lcom/mplus/lib/y4/b object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/y4/b;)V
     .locals 1
 
@@ -34,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles messages for a conversation, specifically checking the conversation type and updating the conversation state accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 17
 
@@ -614,6 +616,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method starts a thread and initializes a handler with the thread's looper.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized start()V
     .locals 3
 

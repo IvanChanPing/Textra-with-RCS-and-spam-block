@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/z with an integer parameter. It sets the integer value to a field named 'd' in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -61,6 +62,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'd' of type integer. It does not perform any operations based on the constant 5, which is loaded but not used.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()I
     .locals 2
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/h2, setting its fields 'a' and 'b' with the provided parameters. It extends the Lcom/google/android/gms/internal/mlkit_entity_extraction/zzawx class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;Ljava/lang/Object;)V
     .locals 0
 
@@ -329,6 +330,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to cancel a task and reset instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()V
     .locals 2
 

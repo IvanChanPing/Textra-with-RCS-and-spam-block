@@ -66,6 +66,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes a collection of objects, querying a database and performing operations based on the query results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 14
 
@@ -484,6 +485,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/h7/b and invokes its b method with an Lcom/mplus/lib/x5/l object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 
@@ -508,6 +510,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field 'n' in the class Lcom/mplus/lib/f7/a; based on the integer value passed as the second parameter, then calls method y().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
@@ -532,6 +535,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes UI components and sets an OnClickListener for a button if it hasn't been done before.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -998,6 +1002,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the text of a `BaseTextView` and sets the visibility of a `BaseButton` based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()V
     .locals 12
 

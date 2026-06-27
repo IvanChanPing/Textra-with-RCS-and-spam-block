@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/z1, setting its fields with logging level, a set, and an object from the mlkit_entity_extraction package. It also calls the superclass constructor with a string parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 3
 
@@ -49,6 +50,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a string value from the provided `zzaqm` object and uses it to log an event using the `zzase` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqm;)V
     .locals 10
 

@@ -37,6 +37,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method configures a CoverFlow widget with specific dimensions and scaling properties. It sets the cover height, width, maximum rotation angle, maximum scale factor, and scaling threshold.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n0(Landroid/content/Context;Lcom/mplus/lib/ui/common/widgets/coverflow/CoverFlow;)V
     .locals 2
 
@@ -287,6 +288,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles a click event on a BaseTextView by calling p0 with the clicked view. It casts the clicked view to BaseTextView and invokes a method to handle the click.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
@@ -297,6 +299,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of two CoverFlow views based on the input BaseTextView and updates the state of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(Lcom/mplus/lib/ui/common/base/BaseTextView;)V
     .locals 2
 

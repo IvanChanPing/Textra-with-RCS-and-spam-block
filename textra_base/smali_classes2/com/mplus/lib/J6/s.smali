@@ -42,6 +42,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/J6/s` class, setting its fields and calling the `g()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/convo/BubbleView;Lcom/mplus/lib/h5/h;Lcom/mplus/lib/J6/d;)V
     .locals 0
 
@@ -84,6 +85,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method filters a list of objects based on a predicate and returns the first matching object of type Lcom/mplus/lib/J6/u;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;Ljava/util/List;)Lcom/mplus/lib/J6/u;
     .locals 3
 
@@ -130,6 +132,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method filters a collection of objects based on a predicate and returns the first matching object of type Lcom/mplus/lib/J6/q. It constructs the predicate using a string and an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/lang/String;Lcom/mplus/lib/J6/a;)Lcom/mplus/lib/J6/q;
     .locals 3
 
@@ -224,6 +227,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes a list of objects based on a provided Long object, performing various filtering and mapping operations, and returns a resulting object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 10
 
@@ -727,6 +731,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a Drawable object from a cache or loads it asynchronously if it's not cached.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/F4/x;)Landroid/graphics/drawable/Drawable;
     .locals 7
 
@@ -1210,6 +1215,7 @@
     return-object v5
 .end method
 
+# M-ROLE [GROQ]: This method sets a callback and bounds for a given Drawable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Landroid/graphics/drawable/Drawable;II)V
     .locals 5
 
@@ -1268,6 +1274,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the object's state by clearing its fields and canceling a future task if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized g()V
     .locals 4
 
@@ -1346,6 +1353,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of an object based on the provided parameters, handling animations and view updates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 10
 
@@ -1795,6 +1803,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name and the string representation of its `BubbleView` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

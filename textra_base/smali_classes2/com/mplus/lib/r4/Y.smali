@@ -18,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a SequenceInputStream that combines the input streams from two sources.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 4
 
@@ -50,6 +51,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the sum of lengths from two objects, `S` and `U`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLength()J
     .locals 5
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/n4, setting its fields 'a' and 'b' to the provided zzdj objects. It extends the zzub class from the mlkit_entity_extraction package.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object, specifically comparing the `zzdj` fields of the objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -139,6 +141,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object based on the hash codes of its `a` and `b` fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -259,6 +262,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'a' field, which is an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj;
     .locals 2
 

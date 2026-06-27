@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the vendor legitimate interest from a TCModel object and returns it. It essentially extracts a SortedVector object from the input TCModel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -23,6 +24,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the vendor legitimate interest in a TCModel using a SortedVector. It casts the input object to a SortedVector and then calls the setVendorLegitimateInterest method on the TCModel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

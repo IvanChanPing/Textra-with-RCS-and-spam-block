@@ -219,6 +219,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, index, and an integer value. It sets the integer value to a field 'a' in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -229,6 +230,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of the class Lcom/mplus/lib/f3/n. It creates a copy of the enum values to prevent external modification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/f3/n;
     .locals 2
 

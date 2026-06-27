@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/K8/e class with parameters. It sets the object's fields with the provided values and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/interstitial/view/b;Ljava/lang/Object;Lcom/smaato/sdk/core/api/ImpressionCountingType;I)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle interstitial ad display and impression tracking based on the `a` field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 16
 

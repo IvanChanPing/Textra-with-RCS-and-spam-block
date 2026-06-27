@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes metadata by either storing a key-value pair or handling an invalid metadata value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzapt;Ljava/lang/Object;)V
     .locals 5
 
@@ -296,6 +297,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' of type integer. It appears to be a getter method for the field 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -341,6 +343,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from an array based on the result of another method call, then passes it to a zzapt object's zze method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzapt;)Ljava/lang/Object;
     .locals 3
 
@@ -388,6 +391,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from an array at a calculated index if it's within bounds, otherwise throws an IndexOutOfBoundsException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(I)Ljava/lang/Object;
     .locals 2
 

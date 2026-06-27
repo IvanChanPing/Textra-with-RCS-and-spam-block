@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `o0()` within the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()V
     .locals 1
 
@@ -115,6 +116,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to update a list of items by removing items from one collection and adding them to another, and then updates the UI accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 11
 
@@ -779,6 +781,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the alpha and visibility of a view based on a spring update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

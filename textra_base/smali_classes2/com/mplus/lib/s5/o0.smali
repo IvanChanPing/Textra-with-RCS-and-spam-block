@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s5/o0 with an integer and an object, setting its properties and calling the superclass constructor. It also sets a boolean property to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a boolean field 'a' to true when an animation is canceled. It does not perform any other actions or invoke other methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 

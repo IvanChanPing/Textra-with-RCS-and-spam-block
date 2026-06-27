@@ -82,6 +82,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method finds a view holder at a specified adapter position in a RecyclerView and, if it's an instance of Lcom/mplus/lib/v6/q;, creates a new Lcom/mplus/lib/z5/b object to animate the BubbleView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n0(Lcom/mplus/lib/v6/K;I)V
     .locals 3
 
@@ -367,6 +368,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the existence of certain objects and their properties, and if conditions are met, it calls a method to set a value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final F()V
     .locals 3
 
@@ -474,6 +476,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a new measure spec based on the input measure spec and a value from an object of type Lcom/mplus/lib/z7/G. It adjusts the size of the measure spec using the value from the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c0(ILcom/mplus/lib/x5/y;)I
     .locals 3
 
@@ -1874,6 +1877,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, checking a URI and potentially triggering an action based on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/G;)V
     .locals 3
 
@@ -2205,6 +2209,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling `r0()` when an instance of `Lcom/mplus/lib/v6/l` is received. It does not use the received event or the integer value 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/v6/l;)V
     .locals 1
 
@@ -2215,6 +2220,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the layout of a specific RecyclerView has changed and if so, it calls a method to notify about the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 1
 
@@ -2450,6 +2456,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method releases resources by setting certain objects to null and calling methods to disable or reset other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0()V
     .locals 4
 
@@ -2499,6 +2506,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if certain objects are not null and then calls a method to set a value, and finally sets a boolean field to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s0()V
     .locals 3
 
@@ -2528,6 +2536,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific object and its nested object are not null, returning true if they are, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0()Z
     .locals 2
 
@@ -2559,6 +2568,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/v6/J with the provided Lcom/mplus/lib/G6/a object and assigns it to a field. It also stores the provided object in another field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u0(Lcom/mplus/lib/G6/a;)V
     .locals 2
 

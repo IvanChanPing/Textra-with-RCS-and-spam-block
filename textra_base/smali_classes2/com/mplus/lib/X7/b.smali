@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/X7/b, storing a provided ExpirationBasedDnsResourceCache object. It sets up the object with the given cache.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/dnsbasedresource/ExpirationBasedDnsResourceCache;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes a callback from the NetworkStateMonitor when the network state changes to connected (p1 = true). It also calls a method to potentially refresh or update the ExpirationBasedDnsResourceCache.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onNetworkStateChanged(Z)V
     .locals 2
 

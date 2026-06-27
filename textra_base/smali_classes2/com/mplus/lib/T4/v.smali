@@ -39,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of a Uri object if it exists, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 2
 
@@ -118,6 +119,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an Android Uri object by calling the g() method. It serves as a bridge to provide the Uri object as a generic Object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic get()Ljava/lang/Object;
     .locals 2
 

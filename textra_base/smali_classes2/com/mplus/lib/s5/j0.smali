@@ -18,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the material design theme for an Android activity. It updates the task description with a new title, icon, and color based on the provided `Lcom/mplus/lib/K5/b` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setMaterialDirect(Lcom/mplus/lib/K5/b;)V
     .locals 7
 

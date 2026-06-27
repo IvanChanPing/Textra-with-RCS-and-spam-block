@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/E6/k, setting its fields and calling the superclass constructor Landroid/util/LruCache;-><init>.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;II)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates or retrieves an object from a cache, handling cases where the object is associated with a runnable task that needs to be removed or posted to a handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public create(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
@@ -142,6 +144,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calculates the size of an object in bytes, specifically for caching purposes. It overrides the sizeOf method from the LruCache class and handles different cases based on the value of the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 

@@ -52,6 +52,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates a boolean field and a TextView based on the value of an Integer object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the GiphyGifsListFragment class, initializing the object by calling the superclass constructor. It sets up the fragment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -171,6 +172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout with ID 0x7f0d0086 and returns the resulting View. It is used to create the user interface for a Fragment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
@@ -189,6 +191,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy() method of a Fragment, calling a custom method d() on an object of type Lcom/mplus/lib/b6/d and then invoking the superclass's onDestroy() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -205,6 +208,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an item click event in a list of Giphy GIFs, toggling the selected GIF's presence in a list of favorites and updating the list accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
 
@@ -378,6 +382,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the Fragment's onResume method, calling the superclass's onResume and then iterating over a HashMap using a BiConsumer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResume()V
     .locals 5
 

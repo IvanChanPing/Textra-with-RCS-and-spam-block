@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `h` of type `Lcom/mplus/lib/Q6/a;` with a new instance of `Lcom/mplus/lib/Q6/a;` having a value of 12.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/T6/a class, setting its properties and creating a spring object. It also registers itself as a listener to the spring object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;Lcom/mplus/lib/x5/y;I)V
     .locals 1
 

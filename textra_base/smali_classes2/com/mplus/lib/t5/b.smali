@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/t5/b class, setting its fields with the provided Lcom/mplus/lib/x5/l and Lcom/mplus/lib/ui/common/base/BaseFrameLayout objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/ui/common/base/BaseFrameLayout;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the background color of a view and its parent layout based on the color provided by an instance of Lcom/mplus/lib/K5/e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/K5/e;)V
     .locals 4
 
@@ -120,6 +122,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/t5/a`, initializing it with various dependencies. It appears to be part of a larger system for managing UI components and their interactions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/t5/a;
     .locals 5
 

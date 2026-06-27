@@ -89,6 +89,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a boolean field `Q` and calls `u0()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final E(Z)V
     .locals 1
 
@@ -168,6 +169,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unregisters the current object and its M field (if not null) from the event bus and shared preferences.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 3
 
@@ -215,6 +217,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws the background of a view, handling different cases based on the view being drawn.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final drawBackground(Landroid/view/View;Landroid/graphics/Canvas;)V
     .locals 13
 
@@ -692,6 +695,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the view visibility with animation and then calls `u0()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Z)V
     .locals 2
 
@@ -2026,6 +2030,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles menu item clicks, performing different actions based on the item's ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 7
 
@@ -2365,6 +2370,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the UI components of an Android view based on a spring animation progress value. It scales, translates, and sets alpha values for various views, and also updates the rotation of a vector drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 18
 
@@ -2755,6 +2761,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to set various flags to true and invoke methods to reset or update the state of objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 4
 
@@ -2837,6 +2844,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a drawable on a canvas, using a specific resource ID (0x7f080012) and color based on a condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0(Landroid/graphics/Canvas;I)V
     .locals 5
 
@@ -2916,6 +2924,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns a spring object of type Lcom/mplus/lib/b2/d if it hasn't been initialized yet. It configures the spring with a slow configuration and sets its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0()Lcom/mplus/lib/b2/d;
     .locals 4
 
@@ -2977,6 +2986,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to execute a specific task, likely related to initialization or setup, and displays a notification if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 6
 
@@ -3191,6 +3201,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and sets the translation X and Y of a view based on its position and other factors. It also scales the view using the `Lcom/mplus/lib/z7/N;->v` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0(DLcom/mplus/lib/ui/common/base/BaseImageView;I)V
     .locals 16
 
@@ -3398,6 +3409,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific value in an object is equal to 1.0 and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v0()Z
     .locals 5
 
@@ -3443,6 +3455,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears a ConcurrentHashMap and calls another method p0 on an object of class Lcom/mplus/lib/x7/f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z()V
     .locals 2
 

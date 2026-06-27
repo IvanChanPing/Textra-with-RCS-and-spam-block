@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/F4/u, setting up its context and an instance of Lcom/mplus/lib/A2/r.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -105,6 +106,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the string "iOS".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/String;
     .locals 2
 
@@ -117,6 +119,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `f` on an instance of `Lcom/mplus/lib/F4/q;` and returns its result. It appears to delegate the actual work to the `f` method of `Lcom/mplus/lib/F4/q;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/F4/x;)Z
     .locals 2
 
@@ -135,6 +138,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string constant "Emojis".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Ljava/lang/String;
     .locals 2
 
@@ -147,6 +151,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a hardcoded string "com.textra.emoji" as the package name. It does not dynamically retrieve the actual package name of the application.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPackageName()Ljava/lang/String;
     .locals 2
 
@@ -155,6 +160,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the version number by calling the F() method of the A2/r class instance stored in the 'c' field. It returns an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVersion()I
     .locals 2
 
@@ -225,6 +231,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `r` on an instance of `Lcom/mplus/lib/F4/q;` to process an object of type `Lcom/mplus/lib/F4/x;` and returns the result of type `Lcom/mplus/lib/i5/a;`. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Lcom/mplus/lib/F4/x;)Lcom/mplus/lib/i5/a;
     .locals 2
 
@@ -257,6 +264,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method resets the 'd' field of the class to null. It appears to be a cleanup or reset operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()V
     .locals 2
 
@@ -269,6 +277,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the result of `H()` method in `Lcom/mplus/lib/A2/r;` class. It appears to be related to checking a condition or status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v()Z
     .locals 2
 
@@ -287,6 +296,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the inverse of a boolean value obtained from `Lcom/mplus/lib/A2/r;->H()Z`. It essentially checks a condition and returns true if it's false, and vice versa.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Z
     .locals 2
 

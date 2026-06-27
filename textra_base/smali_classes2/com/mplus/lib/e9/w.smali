@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/e9/w; that initializes an integer field 'a' with the provided value. It also calls the superclass constructor (java/lang/Object) implicitly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -42,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method dispatches DRM events to an EventDispatcher based on the value of a field 'a'. It calls specific methods on the dispatcher, such as drmKeysLoaded, drmKeysRemoved, or drmKeysRestored.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public accept(Ljava/lang/Object;)V
     .locals 2
 
@@ -246,6 +248,7 @@
     .end sparse-switch
 .end method
 
+# M-ROLE [GROQ]: This method rearranges the first element of a list to the second position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Lcom/mplus/lib/P6/c;)V
     .locals 3
 
@@ -278,6 +281,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method scales a BubbleView object by a calculated factor based on the input float value. It applies the same scale to both the x and y axes of the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Ljava/lang/Object;F)V
     .locals 2
 
@@ -308,6 +312,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a ProgressiveMediaExtractor instance using the MediaParserExtractorAdapter. It returns the created extractor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public createProgressiveMediaExtractor(Landroidx/media3/exoplayer/analytics/PlayerId;)Landroidx/media3/exoplayer/source/ProgressiveMediaExtractor;
     .locals 1
 
@@ -322,6 +327,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a progressive media extractor using the MediaParserChunkExtractor class. It returns an instance of ChunkExtractor based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public createProgressiveMediaExtractor(ILandroidx/media3/common/Format;ZLjava/util/List;Landroidx/media3/extractor/TrackOutput;Landroidx/media3/exoplayer/analytics/PlayerId;)Landroidx/media3/exoplayer/source/chunk/ChunkExtractor;
     .locals 1
 
@@ -334,6 +340,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method decodes a byte array into a Bitmap image. It takes a byte array and an integer as input and returns the decoded Bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public decode([BI)Landroid/graphics/Bitmap;
     .locals 1
 
@@ -346,6 +353,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method deserializes an object from a Bundle based on the value of a class field. It returns a Bundleable object, which can be a DefaultTrackSelector$SelectionOverride, DefaultTrackSelector$Parameters, or TrackGroupArray.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public fromBundle(Landroid/os/Bundle;)Landroidx/media3/common/Bundleable;
     .locals 2
 
@@ -388,6 +396,7 @@
     .end sparse-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a Constructor object based on the value of the instance variable 'a'. It uses a switch statement to determine which Constructor to return, with a default case returning a Constructor from DefaultExtractorsFactory.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getConstructor()Ljava/lang/reflect/Constructor;
     .locals 2
 
@@ -420,6 +429,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method applies an interpolation to a given float value based on the object's state. It uses different interpolation functions from the `androidx/constraintlayout/core/state/Transition` class depending on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getInterpolation(F)F
     .locals 2
 
@@ -456,6 +466,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method invokes the `n0` method of `DefaultAnalyticsCollector` with an `AnalyticsListener` and a `FlagSet`. It appears to be part of an analytics collection process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public invoke(Ljava/lang/Object;Landroidx/media3/common/FlagSet;)V
     .locals 1
 
@@ -472,6 +483,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies that track selections are no longer valid and calls a static method to handle this situation. It effectively triggers an action in the ExoPlayer library when track selections become invalid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onTrackSelectionsInvalidated()V
     .locals 1
 
@@ -480,6 +492,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method releases a DrmSessionReference and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public release()V
     .locals 1
 

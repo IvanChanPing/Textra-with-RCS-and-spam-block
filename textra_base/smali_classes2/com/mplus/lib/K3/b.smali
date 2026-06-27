@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/K3/b, setting its 'a' field to the first set bit in the BitSet 'a' of the provided Lcom/mplus/lib/K3/c object, or -1 if the BitSet is empty. It also stores the provided Lcom/mplus/lib/K3/c object in its 'b' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/K3/c;)V
     .locals 1
 
@@ -55,6 +56,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there is a next item, returning true if a counter 'a' is not -1, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 3
 
@@ -98,6 +100,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of calling `next()` on the current object, which returns an Integer. It appears to be part of an iterator implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic next()Ljava/lang/Object;
     .locals 2
 
@@ -110,6 +113,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next integer in a sequence if available, otherwise throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextInt()I
     .locals 4
 

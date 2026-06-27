@@ -53,6 +53,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to bind to a service using the `ConnectionTracker` class from the Google Play Services library, and if successful, schedules a message to be sent after a delay.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
     .locals 10
 
@@ -247,6 +248,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the death of a bound service by calling onServiceDisconnected. It takes a ComponentName parameter and invokes another method with the same parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBindingDied(Landroid/content/ComponentName;)V
     .locals 1
 
@@ -257,6 +259,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the connection to a service, notifying all registered `ServiceConnection` objects and updating the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 5
 
@@ -352,6 +355,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles a service disconnection event, notifying all registered service connections and updating the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 5
 

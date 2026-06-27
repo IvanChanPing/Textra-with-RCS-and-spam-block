@@ -108,6 +108,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `U` in class `Lcom/mplus/lib/Q5/j;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with the argument `0x30`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -267,6 +268,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a drawable image on a BaseImageView and sets the current object as its onClick listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B0(Lcom/mplus/lib/ui/common/base/BaseImageView;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
@@ -1508,6 +1510,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles camera permission requests and waits for the permission to be granted.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D0(I)V
     .locals 6
 
@@ -1980,6 +1983,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to update a progress value and then notify a listener with the new progress.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(I)V
     .locals 5
 
@@ -2143,6 +2147,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method modifies the given measure spec if it matches a specific condition. It checks if the mode is AT_MOST and if the object matches a specific instance, then it converts the measure spec to EXACTLY mode.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c0(ILcom/mplus/lib/x5/y;)I
     .locals 2
 
@@ -2186,6 +2191,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'e' field, which is an instance of Lcom/mplus/lib/s5/q.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h0()Lcom/mplus/lib/x5/l;
     .locals 2
 
@@ -2249,6 +2255,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/Q5/g` using a drawable resource and a color state list. It returns this new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(ILandroid/content/res/ColorStateList;)Lcom/mplus/lib/Q5/g;
     .locals 3
 
@@ -2275,6 +2282,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for various views, invoking different methods based on the view clicked.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 4
 
@@ -2361,6 +2369,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, checking if a specific object exists and if so, calls a method `o0` on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/X4/c;)V
     .locals 2
 
@@ -2384,6 +2393,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks for layout changes in a view and updates the layout accordingly. It invokes methods like `w0()`, `q0()`, and `t0()` and interacts with objects like `Lcom/mplus/lib/x5/z;` and `Lcom/mplus/lib/b2/d;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 1
 
@@ -2662,6 +2672,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the spring at rest event, toggling the soft input focus and layout change listener based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 6
 
@@ -3221,6 +3232,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a Drawable resource based on the provided integer and an instance field R. It returns the retrieved Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(I)Landroid/graphics/drawable/Drawable;
     .locals 3
 
@@ -3728,6 +3740,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the visibility and focus of a view, specifically showing or hiding a soft keyboard input method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u0(Z)V
     .locals 9
 
@@ -3958,6 +3971,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sends an intent with a specific action and data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v0(Landroid/net/Uri;)V
     .locals 4
 
@@ -4006,6 +4020,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if certain conditions are met and returns true if they are, otherwise it returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w0()Z
     .locals 5
 
@@ -4073,6 +4088,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if certain conditions are met based on the object's state and returns true if they are, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x0()Z
     .locals 7
 
@@ -5339,6 +5355,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle some UI-related operations, including displaying a message, updating view states, and setting translations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z0()V
     .locals 6
 

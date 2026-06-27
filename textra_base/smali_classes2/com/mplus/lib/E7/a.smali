@@ -53,6 +53,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object, either by retrieving it from a supplier if a certain time threshold has passed, or by returning a previously retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Ljava/lang/Object;
     .locals 5
 

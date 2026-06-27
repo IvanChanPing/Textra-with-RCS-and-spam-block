@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a File object representing a database file in the application's databases directory. It takes a string parameter, presumably the database name, and returns the corresponding File object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;)Ljava/io/File;
     .locals 5
 
@@ -848,6 +849,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method logs a quota exceeded event for the Textra backup agent, providing the backed-up and quota sizes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onQuotaExceeded(JJ)V
     .locals 1
 

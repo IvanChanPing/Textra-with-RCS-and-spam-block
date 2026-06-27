@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array `g` with a set of predefined integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -56,6 +57,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/T4/z; that initializes its fields and calls the superclass constructor. It sets the field 'f' to the provided integer value and invokes the superclass constructor with the given parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;ILandroid/content/SharedPreferences;I)V
     .locals 0
 
@@ -270,6 +272,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an object based on the value of the `f` field, either by calling the superclass's `get()` method or its own `g()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 2
 

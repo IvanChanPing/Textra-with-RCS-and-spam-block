@@ -31,6 +31,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a memory location using sun/misc/Unsafe, converts it to a float, and returns the result. It appears to be accessing a field in an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(JLjava/lang/Object;)F
     .locals 2
 
@@ -51,6 +52,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `K3.b` or `K3.c` based on the value of `K3.g`, passing the provided object, long, and boolean parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;JZ)V
     .locals 2
 
@@ -70,6 +72,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `Lcom/mplus/lib/a3/K3;->b` or `Lcom/mplus/lib/a3/K3;->c` based on the value of `Lcom/mplus/lib/a3/K3;->g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Object;JB)V
     .locals 2
 
@@ -93,6 +96,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a long field in the given object using sun/misc/Unsafe. It takes an object, a long offset, a double value, and stores the double as a long after conversion.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/Object;JD)V
     .locals 7
 
@@ -117,6 +121,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field in an object using the sun/misc/Unsafe class. It takes an object, a field offset, and a float value which is converted to an integer before being stored.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/Object;JF)V
     .locals 2
 
@@ -133,6 +138,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and calls either `K3.m` or `K3.n` based on the condition, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(JLjava/lang/Object;)Z
     .locals 2
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/z6/j class, setting its fields 'a' and 'b' to the provided parameters. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/z6/i;Lcom/mplus/lib/v6/e;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a Drawable from resources based on a given string, and resizes it if its width exceeds a certain limit.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDrawable(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .locals 6
 

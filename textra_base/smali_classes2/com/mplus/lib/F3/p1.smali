@@ -87,6 +87,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of sun/misc/Unsafe.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic run()Ljava/lang/Object;
     .locals 2
 

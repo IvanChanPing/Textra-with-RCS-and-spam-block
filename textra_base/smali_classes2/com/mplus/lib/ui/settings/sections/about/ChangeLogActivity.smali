@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the ChangeLogActivity class that initializes the object by calling the superclass constructor. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -17,6 +18,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates an Intent to start the ChangeLogActivity, passing a URL with query parameters that include the app's version name and various theme settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Y(Landroid/content/Context;Z)Landroid/content/Intent;
     .locals 9
 

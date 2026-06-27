@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/W5/f class with parameters from Lcom/mplus/lib/W5/g, Lcom/mplus/lib/W5/d, and two integers. It sets the object's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/W5/g;Lcom/mplus/lib/W5/d;II)V
     .locals 0
 

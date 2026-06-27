@@ -75,6 +75,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Drawable object, either by retrieving a previously loaded drawable or by loading it from resources using the context and a stored resource ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDrawable()Landroid/graphics/drawable/Drawable;
     .locals 3
 

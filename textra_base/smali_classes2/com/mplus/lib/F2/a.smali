@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a thread with an AdvertisingIdClient instance and a timeout value. It sets up a WeakReference to the client, a countdown latch, and starts the thread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;J)V
     .locals 1
 

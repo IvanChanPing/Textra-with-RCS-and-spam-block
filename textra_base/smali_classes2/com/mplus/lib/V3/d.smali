@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static instances of the class Lcom/mplus/lib/V3/d with different constructor parameters. It sets up four static objects with varying combinations of boolean values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -59,6 +60,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/V3/d with two boolean parameters. It sets the object's fields 'a' and 'b' to the provided boolean values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ZZ)V
     .locals 0
 

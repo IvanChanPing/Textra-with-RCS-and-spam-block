@@ -110,6 +110,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the size of an ArrayList object. It does not use the constant 5, which is loaded but not used in the return statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -124,6 +125,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an item from an ArrayList at a specified index and returns it as an Object. It casts the retrieved item to Lcom/mplus/lib/a6/d;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItem(I)Ljava/lang/Object;
     .locals 2
 

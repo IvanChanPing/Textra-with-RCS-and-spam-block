@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an array to map VastVideoPlayerModel$Quartile enum values to integers. It assigns values 1 to 4 to the corresponding enum values (FIRST, MID, THIRD, ZERO).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

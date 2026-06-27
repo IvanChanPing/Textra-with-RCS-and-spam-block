@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/O4/a, setting its properties and calling the superclass constructor. It sets the context and other instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -36,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/O4/a class with a context and a string, setting internal fields. It calls the superclass constructor with a specific integer value and the context object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
@@ -52,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs information about the parts of a multimedia message, including their content type, location, ID, name, filename, and data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Lcom/mplus/lib/E3/C;)V
     .locals 10
 
@@ -406,6 +409,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a content URI by appending a long value to a base string "content://queue/" and then parsing it into a Uri object. It returns the resulting Uri object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static P(J)Landroid/net/Uri;
     .locals 3
 
@@ -442,6 +446,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method takes an Android Uri object, extracts the last path segment, and attempts to parse it as a long integer. It then returns this long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q(Landroid/net/Uri;)J
     .locals 3
 
@@ -460,6 +465,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over an ArrayList of PendingIntents and posts a Runnable to a Handler for each one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static R(Ljava/util/ArrayList;)V
     .locals 5
 
@@ -548,6 +554,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates an instance of Lcom/mplus/lib/r4/y and passes it to Lcom/mplus/lib/r4/H;->Z, likely for tracking or logging purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static T(Landroid/net/Uri;J)V
     .locals 8
 
@@ -586,6 +593,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method deletes a queue entry based on a provided Uri. It logs the deletion and then removes the entry from a database or storage system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public M(Landroid/net/Uri;)V
     .locals 4
 
@@ -681,6 +689,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method takes a string, wraps it in an array, and converts it to an ArrayList. It then returns this ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 1
 
@@ -711,6 +720,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `c` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

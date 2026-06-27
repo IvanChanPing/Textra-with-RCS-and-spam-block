@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a Worker object with a given Context and WorkerParameters. It calls the superclass constructor to perform the initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
     .param p1    # Landroid/content/Context;
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method performs SMS transaction work by processing input data and sending an intent, returning a success or failure result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doWork()Landroidx/work/ListenableWorker$Result;
     .locals 4
 
@@ -93,6 +95,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the simple name of the class as a string. It overrides the toString method of the Object class to provide a string representation of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

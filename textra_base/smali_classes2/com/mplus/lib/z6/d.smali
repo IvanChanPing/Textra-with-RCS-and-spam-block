@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/z6/d with an integer parameter and sets a boolean field to true. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -310,6 +311,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a hash code based on the object's fields. It combines the hash code of the superclass with the values of its own fields `a`, `b`, and `c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()I
     .locals 3
 

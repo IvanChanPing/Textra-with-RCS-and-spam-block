@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/f3/p, setting its field 'a' to the provided Lcom/mplus/lib/f3/q object and calling the superclass constructor. It extends the Lcom/google/android/gms/internal/play_billing/zzco class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f3/q;)V
     .locals 0
 
@@ -81,6 +82,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field 'c' from an object of class Lcom/mplus/lib/f3/q. It appears to be retrieving the size of something, likely a collection or data structure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

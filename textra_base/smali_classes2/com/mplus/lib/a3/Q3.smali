@@ -152,6 +152,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'f' of type long. It does not perform any operations, just returns the field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()J
     .locals 3
 

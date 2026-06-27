@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/t8/f, setting its fields with the provided parameters. It appears to be a constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/v1/c;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -39,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/t8/f, setting its fields with the provided parameters. It sets the integer field 'a' to 3 and stores the input objects in fields 'b', 'c', and 'd'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/v1/c;Ljava/lang/String;Lcom/mplus/lib/v1/j;)V
     .locals 1
 
@@ -57,6 +59,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/t8/f;, setting its fields with provided HttpClient and Request objects. It also sets an integer field 'a' to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/network/HttpClient;Lcom/smaato/sdk/core/network/Request;)V
     .locals 1
 
@@ -73,6 +76,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a purchase query or request, interacting with the Google Play Billing API through the `com/google/android/gms/internal/play_billing/zzan` interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final b()Ljava/lang/Object;
     .locals 9
 
@@ -238,6 +242,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be part of a network request process, specifically handling the execution of a request and returning a response. It checks for a valid request object, and if present, proceeds with the request using an interceptor and returns the response.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Lcom/smaato/sdk/core/network/Response;
     .locals 6
 
@@ -367,6 +372,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be part of a class that handles in-app billing for Android, specifically using the Google Play Billing library. It executes different billing-related tasks based on a switch statement, including querying owned items, consuming purchases, and querying product details.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final call()Ljava/lang/Object;
     .locals 25
 
@@ -2176,6 +2182,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method attempts to cancel a `Future` object if it exists and hasn't been cancelled yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public cancel()V
     .locals 3
 
@@ -2241,6 +2248,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method enqueues a task to be executed by an HttpClient's executor service if it hasn't been enqueued before, otherwise it throws an IllegalStateException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public enqueue(Lcom/smaato/sdk/core/network/Callback;)V
     .locals 4
 
@@ -2323,6 +2331,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method executes a network request using an HttpClient and returns the response.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public execute()Lcom/smaato/sdk/core/network/Response;
     .locals 4
 

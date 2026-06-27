@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `f` of type `Lcom/mplus/lib/a3/C1;` with a new instance of `C1`. It sets up the instance with a parameter value of 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -655,6 +656,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes a map entry, performs array copying, and updates an array with a new map entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/util/Map$Entry;II[Ljava/lang/Object;[I)I
     .locals 4
 
@@ -737,6 +739,7 @@
     return p3
 .end method
 
+# M-ROLE [GROQ]: This method returns a Map Entry object from an array at the specified index if it's within bounds, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)Ljava/util/Map$Entry;
     .locals 3
 
@@ -770,6 +773,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an object referenced by the 'c' field of the class, which is of type Lcom/mplus/lib/a3/D1, as the entry set. It does not actually compute or return a set based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final entrySet()Ljava/util/Set;
     .locals 2
 
@@ -780,6 +784,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the object, caching the result in the `d` field if it's not already set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -821,6 +826,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either by returning a cached string or by calling the superclass's toString method and caching the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -321,6 +321,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a BaseImageView, sets its onClickListener, and sets its image to a bitmap loaded from a drawable resource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(Lcom/mplus/lib/x5/y;II)Lcom/mplus/lib/ui/common/base/BaseImageView;
     .locals 3
 
@@ -748,6 +749,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles events related to camera operations, specifically when the camera is opened or closed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEvent(Lcom/mplus/lib/p4/b;)V
     .locals 3
 
@@ -845,6 +847,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called when a surface texture is available, and it triggers the camera preview.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 1
 
@@ -869,6 +872,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the surface texture size change event by calling the `h()` method on the `CameraPreview` object. It effectively notifies the camera preview of the size change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 1
 
@@ -906,6 +910,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a view, delegating them to a GestureDetector and a ScaleGestureDetector.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 

@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/i3/c, setting its fields with the provided parameters. It creates a new Object instance and assigns it to field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/mplus/lib/i3/j;)V
     .locals 1
 
@@ -50,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the status of underlying tasks and notifies the result to a callback object, either by invoking an error handler with an exception or by notifying the completion of tasks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 6
 
@@ -163,6 +165,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method increments a counter, sets a boolean flag, and calls another method when canceled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCanceled()V
     .locals 4
 
@@ -213,6 +216,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method handles an exception by incrementing a failure counter, storing the exception, and calling method `a()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onFailure(Ljava/lang/Exception;)V
     .locals 3
 
@@ -259,6 +263,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method increments a counter and calls another method `a()` when it's invoked, indicating a successful operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSuccess(Ljava/lang/Object;)V
     .locals 2
 

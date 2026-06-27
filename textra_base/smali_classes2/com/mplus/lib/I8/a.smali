@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/I8/a, initializing its fields 'a' and 'b' with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object based on the value of the `a` field in the class, using a switch statement to determine which object to return.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Lcom/smaato/sdk/core/di/DiConstructor;)Ljava/lang/Object;
     .locals 4
 

@@ -10,6 +10,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for an Android BroadcastReceiver. It initializes the receiver by calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -20,6 +21,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes a Long object as input, performs two separate operations using it: one with Lcom/mplus/lib/P4/p;->M and another with Lcom/mplus/lib/r4/H;->d0, then returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 

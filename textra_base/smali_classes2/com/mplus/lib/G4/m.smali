@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static object in the class Lcom/mplus/lib/G4/m. It creates a new instance of java/lang/Object and assigns it to the static field f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -87,6 +88,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to rename a file and handle exceptions, returning an exception if the operation fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/G4/k;)Ljava/lang/Exception;
     .locals 7
 
@@ -742,6 +744,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates through a list of objects, comparing their 'c' field values to find the object with the maximum 'c' value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(Lcom/mplus/lib/F4/k;)Lcom/mplus/lib/G4/l;
     .locals 5
 
@@ -924,6 +927,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an ArrayList of Lcom/mplus/lib/G4/l objects, each representing a file that passes the provided FilenameFilter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(Ljava/io/FilenameFilter;)Ljava/util/ArrayList;
     .locals 4
 
@@ -1037,6 +1041,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of downloads from the Android DownloadManager and filters them using a provided Function if available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(Ljava/util/function/Function;)Ljava/util/ArrayList;
     .locals 5
 

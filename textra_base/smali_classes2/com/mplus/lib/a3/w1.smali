@@ -131,6 +131,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a queue of tasks, invoking `zzc` on each task's `zzaqm` object if certain conditions are met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a()V
     .locals 4
 
@@ -199,6 +200,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method logs an internal error with a RuntimeException, either using a configured logger or the Android Log utility if no logger is configured.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Ljava/lang/RuntimeException;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqm;)V
     .locals 2
 
@@ -234,6 +236,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles logging by either directly invoking a logging method on an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqo;` if it exists, or by adding the log to a queue for later processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqm;)V
     .locals 5
 

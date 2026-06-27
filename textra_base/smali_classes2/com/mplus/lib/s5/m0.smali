@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/s5/m0;`, initializing its fields with default values and a `Lcom/mplus/lib/m2/b;` object. It takes an `Landroid/content/Context;` as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Landroid/content/Context;)Lcom/mplus/lib/s5/m0;
     .locals 4
 
@@ -356,6 +357,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a text resource by ID and passes it to another method `e` for further processing. It appears to be handling text retrieval based on the provided ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(I)V
     .locals 2
 
@@ -372,6 +374,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` using the provided `CharSequence`. It appears to be part of a class used for updating the UI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/CharSequence;)V
     .locals 2
 

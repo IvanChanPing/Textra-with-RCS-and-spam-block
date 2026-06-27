@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor that initializes an object with a Map Entry. It sets the object's field 'a' to the provided Map Entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/Map$Entry;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the key of a map entry. It retrieves the key from the map entry object stored in the instance variable 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/Object;
     .locals 2
 
@@ -42,6 +44,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the value associated with a map entry and attempts to cast it to Lcom/google/android/gms/internal/play_billing/zzhw, returning null if the value is null. If the value is not null, it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue()Ljava/lang/Object;
     .locals 3
 
@@ -75,6 +78,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method sets a value in a LazyField, specifically for MessageSet, and checks if the input is an instance of zzim.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

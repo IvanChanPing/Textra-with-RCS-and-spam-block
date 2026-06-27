@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/U5/e class, storing a reference to a CameraPreview object. It sets up the object with the provided CameraPreview instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/plus/camera/CameraPreview;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the onScale event for a ScaleGestureDetector, adjusting the camera zoom level based on the scale factor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 11
 
@@ -185,6 +187,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method handles the beginning of a scale gesture, checking the camera parameters and storing the initial zoom level and span.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
     .locals 3
 
@@ -289,6 +292,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a utility method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

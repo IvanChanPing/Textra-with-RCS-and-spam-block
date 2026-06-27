@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/a3/n3. It creates a new instance with a constructor argument of 0 and assigns it to a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/n3; with an integer value. It sets the object's field 'a' to the provided integer and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -113,6 +115,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method merges two `zzbyn` objects, returning the first object after merging, or its mutable copy if it's immutable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final e(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyn;
     .locals 2
 
@@ -990,6 +993,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method logs an error message with a throwable when the instance's state (represented by `a`) is 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza(Ljava/lang/Throwable;)V
     .locals 3
 
@@ -1030,6 +1034,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method logs a message based on the value of a class field, either logging a boolean value as a string or doing nothing with an object of type `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzah;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic zzb(Ljava/lang/Object;)V
     .locals 3
 

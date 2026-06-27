@@ -17,6 +17,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an Integer value based on the result of a conditional check involving the `h()` method of `Lcom/mplus/lib/T4/f;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized g()Ljava/lang/Integer;
     .locals 3
 
@@ -105,6 +106,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an Object that is the result of calling the g() method, which returns an Integer. It acts as a bridge to the g() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic get()Ljava/lang/Object;
     .locals 2
 
@@ -185,6 +187,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a value returned by `g()` is zero and returns false if so. It appears to always return false regardless of the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k()Z
     .locals 2
 
@@ -218,6 +221,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of an integer returned by `g()` and returns true if it equals 1, otherwise it returns true as well.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Z
     .locals 3
 
@@ -257,6 +261,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method casts the input object to an Integer and calls another method `i(Ljava/lang/Integer;)V` with the casted value. It appears to be a bridge method for setting an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic set(Ljava/lang/Object;)V
     .locals 1
 

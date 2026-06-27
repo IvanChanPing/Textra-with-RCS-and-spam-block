@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Y8/a, storing a reference to a Lcom/smaato/sdk/video/ad/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/video/ad/a;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies the Smaato SDK that a video view has been attached to a window, passing the skip interval and whether the video is skippable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 4
 
@@ -54,6 +56,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes the current object as an attach state change listener from the given view and notifies the Smaato SDK that the video view has been detached.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 1
 

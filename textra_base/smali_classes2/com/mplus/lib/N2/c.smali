@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/N2/c, setting its field 'c' to the provided Lcom/mplus/lib/N2/b object. It also calls the superclass constructor Lcom/google/android/gms/common/internal/service/zaa.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/N2/b;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new `Status` object with the given integer and sets it as the result using the `setResult` method of the `BaseImplementation$ResultHolder` interface. It appears to be part of a Google API implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab(I)V
     .locals 2
 

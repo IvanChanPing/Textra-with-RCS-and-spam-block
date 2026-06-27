@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields `o` and `p` in class `Lcom/mplus/lib/x7/k;` with a calculated value. It sets both fields to the result of `Lcom/mplus/lib/z7/m;->c(I)` with input `0x10`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/x7/k, setting its properties based on the provided parameters. It calls the superclass constructor and sets an integer and a boolean field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Z)V
     .locals 1
 
@@ -53,6 +55,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the layout parameters of a view, specifically the top and bottom margins, and the height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 5
 

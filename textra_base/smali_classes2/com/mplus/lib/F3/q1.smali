@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/q1; with an Unsafe instance and an integer value, then calls the superclass constructor. It sets the object's field 'b' to the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lsun/misc/Unsafe;I)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException based on the value of the instance field 'b'. It does not utilize the provided parameters J, [B, or J.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(J[BJ)V
     .locals 1
 
@@ -169,6 +171,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException based on the value of the instance field 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(J)B
     .locals 1
 
@@ -205,6 +208,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calls either `Lcom/mplus/lib/F3/t1;->h(JLjava/lang/Object;)B` or `Lcom/mplus/lib/F3/t1;->i(JLjava/lang/Object;)B` based on the value of `Lcom/mplus/lib/F3/t1;->h:Z` and the instance field `b` of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(JLjava/lang/Object;)B
     .locals 2
 
@@ -273,6 +277,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method takes a long and an object as input, performs a switch based on an instance variable, and returns a double value by converting a long to a double using `java/lang/Double;->longBitsToDouble(J)D`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(JLjava/lang/Object;)D
     .locals 2
 
@@ -321,6 +326,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method converts an integer to a float based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(JLjava/lang/Object;)F
     .locals 2
 
@@ -369,6 +375,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calls either `Lcom/mplus/lib/F3/t1;->l` or `Lcom/mplus/lib/F3/t1;->m` based on the value of `Lcom/mplus/lib/F3/t1;->h` and the instance field `b` of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Ljava/lang/Object;JZ)V
     .locals 2
 
@@ -565,6 +572,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method dispatches to another method `q` based on the value of `b` field, converting a float to an integer using `Float.floatToIntBits`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p(Ljava/lang/Object;JF)V
     .locals 2
 
@@ -609,6 +617,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a field `b` and returns a boolean based on a switch statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u()Z
     .locals 2
 

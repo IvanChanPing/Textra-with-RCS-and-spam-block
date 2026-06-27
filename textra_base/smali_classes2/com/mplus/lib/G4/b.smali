@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to return a Typeface but instead throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroid/graphics/Typeface;
     .locals 2
 
@@ -209,6 +210,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a ZipFile object, either by retrieving an existing one or creating a new one from a file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()Ljava/util/zip/ZipFile;
     .locals 3
 

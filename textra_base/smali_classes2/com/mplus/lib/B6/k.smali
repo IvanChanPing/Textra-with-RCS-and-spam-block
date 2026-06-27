@@ -294,6 +294,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for various views in the application, performing actions such as navigating back, opening new fragments, and handling item clicks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 10
 
@@ -720,6 +721,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/B6/i`, a custom Loader, in the `onCreateLoader` callback. It initializes the Loader with the current Context and other instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateLoader(ILandroid/os/Bundle;)Landroidx/loader/content/Loader;
     .locals 4
 
@@ -1207,6 +1209,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and configures a `Lcom/mplus/lib/r4/k0` object, setting up a query with conditions "T.is_tapback = 0" and another unspecified condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(J)Lcom/mplus/lib/r4/k0;
     .locals 4
 

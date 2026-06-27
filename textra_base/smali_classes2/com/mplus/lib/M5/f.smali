@@ -63,6 +63,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `A` in class `Lcom/mplus/lib/M5/f;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with argument 8.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -185,6 +186,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a view based on the provided data and type. It checks the type and data to determine whether to create a button, image view, or a custom view with both image and text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n0(Lcom/mplus/lib/t5/d;Lcom/mplus/lib/x5/z;I)Lcom/mplus/lib/x5/y;
     .locals 4
 
@@ -795,6 +797,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to reset or initialize certain components, specifically calling a method to set a value to 0 and invoking an interface method to set a boolean value to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 4
 

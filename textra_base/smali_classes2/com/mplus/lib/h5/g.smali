@@ -263,6 +263,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum constant with a string and integer value, and assigns two additional string fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -275,6 +276,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/h5/g; from a given string. It essentially wraps the Java Enum.valueOf method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/h5/g;
     .locals 2
 
@@ -295,6 +297,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of class Lcom/mplus/lib/h5/g. It appears to be an enum values() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/h5/g;
     .locals 2
 

@@ -36,6 +36,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static Parcelable creator for the class. It sets the CREATOR field to a new instance of Lcom/mplus/lib/P6/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -50,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/A5/a with three integer parameters. It sets the object's fields a, b, and c to the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(III)V
     .locals 0
 
@@ -64,6 +66,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/A5/a` using the year, month, and day of the month from the provided `Ljava/util/Calendar` object. It returns this new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/util/Calendar;)Lcom/mplus/lib/A5/a;
     .locals 4
 
@@ -256,6 +259,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object by comparing their class types and field values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -324,6 +328,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a hash code for the object based on its internal state. It combines the values of fields `a`, `b`, and `c` using multiplication and addition operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -406,6 +411,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method writes the object's integer fields to a Parcel. It serializes the object's state for inter-process communication or storage.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 

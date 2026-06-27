@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/R5/g; with a context, URI, string, and integer, then calls the superclass constructor. It sets the integer field 'd' of the instance to the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;I)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method resizes an image to fit within certain size limits.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/N4/d;)Lcom/mplus/lib/R5/h;
     .locals 22
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/r4/V, storing a given File object. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to return a FileInputStream for a file stored in the 'a' field of the class. If the file is not found, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 3
 
@@ -52,6 +54,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of a file in bytes. It retrieves the file length from a `File` object stored in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLength()J
     .locals 3
 
@@ -66,6 +69,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Uri object created from a File object stored in the class field 'a'. It essentially converts a file to a Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getUri()Landroid/net/Uri;
     .locals 2
 
@@ -82,6 +86,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, including its class name and file information.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

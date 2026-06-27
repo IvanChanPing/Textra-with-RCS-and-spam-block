@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/t; with a given object. It extends Lcom/google/android/gms/internal/play_billing/zzcv; and sets the object to a field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the provided object is equal to the object stored in the class instance. It returns a boolean value indicating whether the objects are equal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -43,6 +45,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object stored in the 'a' field of the class. It simply delegates the hashCode() call to the object referenced by 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -57,6 +60,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator instance of Lcom/mplus/lib/f3/m. It creates a new iterator based on the object stored in the 'a' field of the class Lcom/mplus/lib/f3/t.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -83,6 +87,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, wrapping the result of `toString()` on the object referenced by field `a` in square brackets.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -115,6 +120,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets an object reference at index 0 in the input array and returns 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 
@@ -135,6 +141,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzco object by calling zzco's zzm method with the object stored in the 'a' field of the class. It appears to be related to Google Play Billing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/play_billing/zzco;
     .locals 2
 

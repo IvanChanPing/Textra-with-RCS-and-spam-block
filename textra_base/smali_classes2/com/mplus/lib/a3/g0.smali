@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a3/g0. It initializes a new instance of the class by calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their `zzm()` map values if the object is an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzanm;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -84,6 +86,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of a map object retrieved by calling `zzm()`. It effectively delegates the `hashCode()` call to the map object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -102,6 +105,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of a map object obtained from the zzm() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 
@@ -126,6 +130,7 @@
 .method public abstract zzh()Ljava/util/Set;
 .end method
 
+# M-ROLE [GROQ]: This method returns a cached map, initializing it by calling `zzg()` if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzm()Ljava/util/Map;
     .locals 2
 
@@ -147,6 +152,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set, either by retrieving a cached instance or by calling zzh() to initialize and cache it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzn()Ljava/util/Set;
     .locals 2
 

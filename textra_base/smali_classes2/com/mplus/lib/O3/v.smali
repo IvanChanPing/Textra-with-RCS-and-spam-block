@@ -60,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to invoke a static method in the `Lcom/inmobi/media/O3` class, passing various instance fields as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 11
 

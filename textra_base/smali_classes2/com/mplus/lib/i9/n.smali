@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/i9/n class and sets its 'a' field to the provided VastVideoPlayerPresenter. It is a constructor method for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/video/vast/vastplayer/VastVideoPlayerPresenter;)V
     .locals 0
 
@@ -70,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a VAST element click event by tracking the click and notifying listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onVastElementClicked(Ljava/lang/String;)V
     .locals 6
 
@@ -140,6 +142,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an "onIconError" debug message and notifies a VastVideoPlayerPresenter of an error with a given error code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onVastElementError(I)V
     .locals 6
 
@@ -178,6 +181,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an "onIconRendered" debug message and triggers the SMAATO_ICON_VIEW_TRACKING beacon event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onVastElementRendered()V
     .locals 6
 

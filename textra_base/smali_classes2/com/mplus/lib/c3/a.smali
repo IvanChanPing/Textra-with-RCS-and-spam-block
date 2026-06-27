@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object is a key-value pair present in the map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 3
 
@@ -92,6 +93,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by calling zzj() on a zzu object obtained from zzf().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -116,6 +118,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'c' field, presumably representing the size of an object. It always returns the value of 'c', which is an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -126,6 +129,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to process an array of objects and returns an integer result. It appears to be part of the Google ML Kit language ID functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 
@@ -146,6 +150,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzaf object, but the provided code suggests it actually returns a zzag object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_language_id_common/zzaf;
     .locals 3
 

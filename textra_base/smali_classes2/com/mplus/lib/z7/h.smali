@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static character arrays `a` and `b` with the same hexadecimal values representing digits 0-9 and letters A-F.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static synthetic constructor <clinit>()V
     .locals 2
 
@@ -77,6 +78,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method converts a byte array to a hexadecimal string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A([B)Ljava/lang/String;
     .locals 9
 
@@ -151,6 +153,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts a byte array to a hexadecimal string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static B([B)Ljava/lang/String;
     .locals 9
 
@@ -236,6 +239,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to a file. It creates a FileOutputStream from the given File and writes the byte array to it, then closes the stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static C(Ljava/io/File;[B)V
     .locals 2
 
@@ -287,6 +291,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method copies the contents of one file to another.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/io/File;Ljava/io/File;)V
     .locals 2
 
@@ -386,6 +391,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method deletes a given file if it exists, and logs an error if deletion fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/io/File;)V
     .locals 3
 
@@ -429,6 +435,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method recursively deletes a given file or directory.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/io/File;)V
     .locals 3
 
@@ -1200,6 +1207,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a color resource from the given context, and if not found, it calls another method `l` as a fallback.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Landroid/content/Context;I)I
     .locals 2
 
@@ -1228,6 +1236,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a dimension resource from the given context and converts it to an integer. It then returns this integer value, truncated to 3 decimal places is not performed but rather a simple float to int conversion.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Landroid/content/Context;I)I
     .locals 1
 
@@ -1246,6 +1255,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method takes an Android Uri object, extracts the file extension from its string representation, and returns the corresponding MIME type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Landroid/net/Uri;)Ljava/lang/String;
     .locals 3
 
@@ -1313,6 +1323,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method resolves an attribute from a theme and returns its value. It takes a context and an attribute ID as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(Landroid/content/Context;I)I
     .locals 3
 
@@ -1339,6 +1350,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a resource entry name from the given context based on the provided resource ID. It returns the entry name as a string, or "<name not found>" if the resource is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Landroid/content/Context;I)Ljava/lang/String;
     .locals 1
 
@@ -1367,6 +1379,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a VectorDrawableCompat from a given resource ID in the provided Context. It returns the created VectorDrawableCompat object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(Landroid/content/Context;I)Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
     .locals 2
 
@@ -1389,6 +1402,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the authority of a given Uri matches a specified string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Landroid/net/Uri;Ljava/lang/String;)Z
     .locals 1
 
@@ -1503,6 +1517,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of files in a given directory that match a specified filename filter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static r(Ljava/io/File;Ljava/io/FilenameFilter;)Ljava/util/List;
     .locals 1
 
@@ -1532,6 +1547,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method generates a PendingIntent for a given Intent, using the application context and a flag created by combining the result of Lcom/mplus/lib/z7/y;->j() with 0x40000000.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Landroid/content/Intent;)Landroid/app/PendingIntent;
     .locals 4
 
@@ -1854,6 +1870,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string by concatenating the result of `v(Ljava/lang/Object;)` with the hexadecimal representation of the input object's hash code, separated by '@'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w(Ljava/lang/Object;)Ljava/lang/String;
     .locals 3
 
@@ -1902,6 +1919,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string that combines the simple name of the superclass of the input object with its hash code in hexadecimal format.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(Ljava/lang/Object;)Ljava/lang/String;
     .locals 3
 
@@ -1966,6 +1984,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method takes an Android Uri object and returns a corresponding File object if the Uri's scheme is "file". It returns null if the Uri is null or its scheme is not "file".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y(Landroid/net/Uri;)Ljava/io/File;
     .locals 4
 
@@ -2016,6 +2035,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts an integer into a byte array and then uses another method to convert it into a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static z(I)Ljava/lang/String;
     .locals 4
 

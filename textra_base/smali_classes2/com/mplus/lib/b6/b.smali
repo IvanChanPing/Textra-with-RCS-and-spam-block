@@ -19,6 +19,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the ArrayList `b`, notifies the adapter of a change, resets the integer `d` to 0, and iterates over the HashMap `c` using a BiConsumer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 4
 
@@ -63,6 +64,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an ArrayList object. It appears to be a getter method for the count of items in the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -79,6 +81,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an item from an ArrayList at a specified index if it's within bounds, otherwise it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItem(I)Ljava/lang/Object;
     .locals 3
 
@@ -120,6 +123,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a View for a specific item in a list, inflating a layout and setting up a Glide image loader to display a GIF.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 7
 

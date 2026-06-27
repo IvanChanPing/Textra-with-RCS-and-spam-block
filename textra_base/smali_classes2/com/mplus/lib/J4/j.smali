@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/J4/j with a string and an integer. It sets the object's fields 'a' and 'b' to the provided integer and string, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method tests an object against a set of predefined conditions based on the value of `a` field in the class. It checks for various types of objects and performs different operations on them, such as checking for string containment or equality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final test(Ljava/lang/Object;)Z
     .locals 3
 

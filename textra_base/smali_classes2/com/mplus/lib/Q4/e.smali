@@ -44,6 +44,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/Q4/e, storing the provided Android Context. It sets up the object with the given context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
@@ -56,6 +57,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles animation or positioning logic based on the input parameters, invoking various methods and interfaces to measure and adjust the layout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(IF)V
     .locals 4
 
@@ -193,6 +195,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a boolean flag and conditionally calls another method `a(IF)` with arguments 2 and 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 3
 
@@ -292,6 +295,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a spring's rest position is non-zero and calls `c()` if true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 5
 
@@ -325,6 +329,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the translation of a view based on the state and a spring update value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 4
 
@@ -422,6 +427,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

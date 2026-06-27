@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/o3/A; based on the input integer value. It checks if the input is less than zero, greater than zero, or equal to zero, and returns a corresponding object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(I)Lcom/mplus/lib/o3/A;
     .locals 1
 
@@ -121,6 +122,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method compares two objects using a provided comparator and returns a result based on the comparison. It invokes the comparator to determine the order of the objects and then maps the result to an instance of Lcom/mplus/lib/o3/A.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lcom/mplus/lib/o3/A;
     .locals 1
 
@@ -137,6 +139,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/A based on the comparison of two boolean parameters. It appears to be part of a conditional logic that determines the type of Lcom/mplus/lib/o3/A to return.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(ZZ)Lcom/mplus/lib/o3/A;
     .locals 1
 
@@ -176,6 +179,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/A based on the comparison of two boolean parameters. It appears to handle different cases and returns a result accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(ZZ)Lcom/mplus/lib/o3/A;
     .locals 1
 

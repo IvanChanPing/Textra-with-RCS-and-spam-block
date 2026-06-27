@@ -45,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a spring animation based on the elapsed time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTick(J)V
     .locals 5
 

@@ -33,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/d3, storing a reference to a Lcom/google/android/gms/internal/play_billing/zzgw object. It does not perform any other operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/play_billing/zzgw;)V
     .locals 0
 

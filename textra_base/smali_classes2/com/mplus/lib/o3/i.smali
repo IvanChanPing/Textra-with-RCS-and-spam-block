@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/o3/i, setting its 'g' field and calling the superclass constructor. It takes a Lcom/mplus/lib/o3/v0 object and a SortedMap as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/v0;Ljava/util/SortedMap;)V
     .locals 1
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a SortedSet instance, specifically an instance of Lcom/mplus/lib/o3/j. It does this by creating a new Lcom/mplus/lib/o3/j object, passing in a SortedMap from the d() method and an object referenced by the g field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Ljava/util/SortedSet;
     .locals 4
 
@@ -54,6 +56,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a SortedSet, initializing it by calling method b() if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()Ljava/util/SortedSet;
     .locals 2
 
@@ -75,6 +78,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Comparator instance from a SortedMap. It delegates the call to the comparator() method of the SortedMap instance returned by the d() method of the current class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final comparator()Ljava/util/Comparator;
     .locals 2
 
@@ -103,6 +107,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first key of a sorted map. It calls the `d()` method to get the map and then invokes the `firstKey()` method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final firstKey()Ljava/lang/Object;
     .locals 2
 
@@ -123,6 +128,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a new instance of Lcom/mplus/lib/o3/i, wrapping the head map of the current sorted map up to the given key. It creates a new sorted map view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
@@ -147,6 +153,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set of keys by calling the 'c()' method, which returns a SortedSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic keySet()Ljava/util/Set;
     .locals 2
 
@@ -159,6 +166,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the last key of a sorted map. It invokes the lastKey method of a SortedMap object obtained from the d() method of the current class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lastKey()Ljava/lang/Object;
     .locals 2
 
@@ -177,6 +185,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/i` with a subset of a sorted map, using the provided objects as the subset bounds. It returns this new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
@@ -207,6 +216,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a new instance of `Lcom/mplus/lib/o3/i` containing a tail map of the current sorted map, starting from the given key. It creates a new sorted map by calling `tailMap` on the current map and then wraps it in a new `Lcom/mplus/lib/o3/i` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 

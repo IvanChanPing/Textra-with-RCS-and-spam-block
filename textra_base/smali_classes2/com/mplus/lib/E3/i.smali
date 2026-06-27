@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/i, setting its integer field 'a' to 1 and its boolean field 'b' to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -34,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/E3/i; that initializes an integer field 'a' with the provided value. It also calls the superclass constructor (java/lang/Object) implicitly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -44,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/i, setting an integer field 'a' to 2 and a boolean field 'b' based on the input parameter. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Z)V
     .locals 1
 
@@ -58,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string indicating whether clear notification options are enabled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final a()Ljava/lang/String;
     .locals 4
 
@@ -88,6 +92,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks a boolean flag and calls either `j()` or `i()` on a `com/tappx/a/j` object based on the flag's value. It appears to handle an object of type `com/tappx/a/j` and perform actions based on the state of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public accept(Ljava/lang/Object;)V
     .locals 2
 
@@ -111,6 +116,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. If `a` is 1, it calls the private method `a()` to get the string, otherwise it calls the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

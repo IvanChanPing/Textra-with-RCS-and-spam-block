@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J4/k; with an integer and an object of type Lcom/mplus/lib/r4/n;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILcom/mplus/lib/r4/n;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method tests an object based on the value of a field `a` in the class, either checking if a string matches a specific value or if all elements in a collection match a certain predicate.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final test(Ljava/lang/Object;)Z
     .locals 4
 

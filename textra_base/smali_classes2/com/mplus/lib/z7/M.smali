@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/z7/M, setting its fields with a Runnable and an AtomicBoolean. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/atomic/AtomicBoolean;)V
     .locals 1
 
@@ -36,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/z7/M with a Runnable, an AtomicBoolean, and an integer. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/atomic/AtomicBoolean;I)V
     .locals 0
 
@@ -52,6 +54,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a Runnable based on the value of a switch variable, utilizing atomic operations for thread safety.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 4
 

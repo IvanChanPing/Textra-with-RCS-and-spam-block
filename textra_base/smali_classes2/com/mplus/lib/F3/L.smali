@@ -60,6 +60,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a set of static enum-like objects in the Lcom/mplus/lib/F3/L class, representing different data types.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 23
 
@@ -304,6 +305,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum object with a string, an integer index, and an additional integer value. It sets the enum's properties using the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -314,6 +316,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/F3/L; from a given string. It uses the Java Enum.valueOf method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/F3/L;
     .locals 2
 
@@ -338,6 +341,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of Lcom/mplus/lib/F3/L objects. It provides a way to access the static array v while preventing external modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/F3/L;
     .locals 2
 
@@ -356,6 +360,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of an enum if it's known, otherwise throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 3
 

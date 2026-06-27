@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a3/i; that initializes an object with a Lcom/google/android/gms/internal/mlkit_entity_extraction/zzade; instance. It sets the instance's 'b' field to the provided zzade object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzade;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and executes a list of tasks, returning a `zzaxt` object representing the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 6
 

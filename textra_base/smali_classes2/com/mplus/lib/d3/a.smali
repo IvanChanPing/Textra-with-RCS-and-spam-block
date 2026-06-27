@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/d3/a with an integer and a zzag object. It sets the object's fields 'a' and 'b' to the provided integer and zzag object, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzag;)V
     .locals 0
 
@@ -42,6 +43,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their integer values and zzag objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -191,6 +193,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field 'a' in the class. It does not perform any operations based on the provided constant 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 

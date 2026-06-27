@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/F3/s, setting its fields and establishing a reference to an instance of Lcom/mplus/lib/F3/r. It also validates the input parameter using Lcom/mplus/lib/F3/k0;->a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/F3/r;)V
     .locals 1
 
@@ -39,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input integer has any bits set in the lower 3 bits, and if not, it returns without action, otherwise it throws an exception from Lcom/mplus/lib/F3/m0;->f().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A(I)V
     .locals 1
 
@@ -64,6 +66,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input integer has any bits set in the lower 2 bits, and if not, it returns immediately, otherwise it throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static z(I)V
     .locals 1
 
@@ -224,6 +227,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle recursive parsing of a protocol message, incrementing a recursion counter and invoking a callback interface if the recursion limit is not exceeded.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;Lcom/mplus/lib/F3/T0;Lcom/mplus/lib/F3/G;)V
     .locals 5
 
@@ -299,6 +303,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of data based on the type of the list and the state of an object, performing actions such as adding boolean values to the list or updating the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/util/List;)V
     .locals 4
 
@@ -628,6 +633,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of data based on the instance type and a set of predefined conditions. It handles instances of `Lcom/mplus/lib/F3/w;` and `Ljava/util/List;` differently, performing various operations such as adding elements to the list or invoking methods on the `Lcom/mplus/lib/F3/r;` o  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Ljava/util/List;)V
     .locals 7
 
@@ -1120,6 +1126,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle different types of operations based on an enumeration value, performing various actions such as reading values from a data source and returning them as objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Lcom/mplus/lib/F3/E1;Ljava/lang/Class;Lcom/mplus/lib/F3/G;)Ljava/lang/Object;
     .locals 5
 
@@ -1750,6 +1757,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of data based on the instance type and a set of conditions, handling different cases and exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(Ljava/util/List;)V
     .locals 7
 
@@ -1992,6 +2000,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of float values based on the state of the object, either adding them to the list or modifying an existing `Lcom/mplus/lib/F3/Q` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(Ljava/util/List;)V
     .locals 6
 
@@ -2488,6 +2497,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of data based on the instance type and internal state, invoking various methods on `Lcom/mplus/lib/F3/r` and handling exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Ljava/util/List;)V
     .locals 6
 
@@ -2728,6 +2738,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to deserialize a protobuf object from a given class and then invokes a callback with the deserialized object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Ljava/lang/Class;Lcom/mplus/lib/F3/G;)Ljava/lang/Object;
     .locals 2
 
@@ -2764,6 +2775,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of integers based on the state of the object, either adding them to the list or throwing an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p(Ljava/util/List;)V
     .locals 6
 
@@ -3000,6 +3012,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of data based on the instance type and internal state, handling different conditions and exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Ljava/util/List;)V
     .locals 7
 
@@ -3478,6 +3491,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of data based on the instance type and certain conditions, invoking methods like `B()J`, `f()I`, `E()I`, and `g()Z` on an object of type `Lcom/mplus/lib/F3/r;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s(Ljava/util/List;)V
     .locals 6
 
@@ -4100,6 +4114,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of items based on the state of an object, either adding long values to the list or updating an object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v(Ljava/util/List;)V
     .locals 6
 
@@ -4346,6 +4361,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given integer matches a value from another class and returns if they match, otherwise it throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w(I)V
     .locals 2
 
@@ -4371,6 +4387,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given integer matches a specific bit mask of the object's field 'b', and if not, it throws an exception. It essentially validates the input against the object's state and throws an exception if validation fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x(I)V
     .locals 2
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/V8/h class, storing a reference to a MraidPresenterImpl object. It sets the object's field 'a' to the provided MraidPresenterImpl instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/richmedia/mraid/presenter/MraidPresenterImpl;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies the MraidPresenterImpl when the app enters the background. It calls a method on the MraidPresenterImpl instance to perform this notification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAppEnteredInBackground()V
     .locals 2
 
@@ -42,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the MraidPresenterImpl when the app enters the foreground. It calls a method to handle this event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAppEnteredInForeground()V
     .locals 2
 

@@ -25,6 +25,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object is contained in a collection. It delegates the contains check to an internal zzamg object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -41,6 +42,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a list at a specified index, but with a reversed index order.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 4
 
@@ -155,6 +157,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It appears to be a wrapper around the size() method of an AbstractCollection instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -171,6 +174,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist by delegating to `zzi(II)` and casting the result. It appears to be part of a List implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -183,6 +187,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns a boolean value indicating whether a certain condition is met by calling `zzf()` on the `zzamg` object. It appears to be related to Google's ML Kit entity extraction.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()Z
     .locals 2
 
@@ -199,6 +204,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'a' field, which is an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;
     .locals 2
 

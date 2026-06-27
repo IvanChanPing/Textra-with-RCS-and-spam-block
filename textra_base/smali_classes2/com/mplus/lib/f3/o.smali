@@ -30,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares two objects that implement the Comparable interface. It returns the result of the comparison between the two objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 

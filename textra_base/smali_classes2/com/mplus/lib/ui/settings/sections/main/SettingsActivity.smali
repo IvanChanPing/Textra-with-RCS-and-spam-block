@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the SettingsActivity class, calling its superclass constructor and creating a new ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -43,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates an Intent to start the SettingsActivity, adding an extra "jump-unique-id" with the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b0(Landroid/content/Context;I)Landroid/content/Intent;
     .locals 3
 
@@ -67,6 +69,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a static instance of Lcom/mplus/lib/r4/n, specifically the 'e' field. It does not appear to perform any other operations despite the local variable declarations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()Lcom/mplus/lib/r4/n;
     .locals 2
 
@@ -1348,6 +1351,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of various UI components in the SettingsActivity based on the current application settings and configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()V
     .locals 5
 

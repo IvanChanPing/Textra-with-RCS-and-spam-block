@@ -48,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a Drawable object onto a Canvas. It delegates the drawing to the Drawable's own draw method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 2
 
@@ -68,6 +69,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic height of a Drawable object. It retrieves the height from the Drawable instance stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -86,6 +88,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic width of a Drawable object. It delegates the call to the getIntrinsicWidth() method of the Drawable object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 
@@ -100,6 +103,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the minimum height of a Drawable object. It retrieves this value by calling the getMinimumHeight() method on the Drawable object stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMinimumHeight()I
     .locals 2
 
@@ -114,6 +118,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the minimum width of a Drawable object. It simply calls the getMinimumWidth() method of the Drawable object stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMinimumWidth()I
     .locals 2
 
@@ -128,6 +133,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the opacity of a Drawable object. It delegates the call to the getOpacity() method of the Drawable object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOpacity()I
     .locals 2
 
@@ -146,6 +152,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method invalidates a given Drawable by calling the invalidateDrawable method on its callback if it exists. It does nothing if the callback is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
@@ -165,6 +172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method schedules a drawable to run a runnable after a specified delay. It checks if the drawable has a callback and if so, invokes the callback's scheduleDrawable method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
     .locals 2
 
@@ -188,6 +196,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha (transparency) of a Drawable object. It takes an integer parameter representing the alpha value and applies it to the Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 
@@ -202,6 +211,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bounds of a Drawable object. It delegates the call to the setBounds method of the Drawable object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setBounds(IIII)V
     .locals 2
 
@@ -212,6 +222,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bounds of a Drawable object. It takes an android/graphics/Rect as input and applies it to the Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setBounds(Landroid/graphics/Rect;)V
     .locals 2
 
@@ -240,6 +251,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the dithering of a Drawable object based on the provided boolean value. It modifies the dithering property of the Drawable associated with the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setDither(Z)V
     .locals 2
 
@@ -254,6 +266,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unschedules a drawable and its associated runnable. It checks if the drawable has a callback, and if so, calls the callback's unscheduleDrawable method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 2
 

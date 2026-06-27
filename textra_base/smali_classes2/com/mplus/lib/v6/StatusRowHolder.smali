@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a StatusRowHolder object, setting its 'b' field to a BaseTextView found in the provided view. It extends the constructor of its superclass Lcom/mplus/lib/v6/B.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` to a string retrieved from an `f0` object. It updates the UI with the retrieved string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/r4/f0;)V
     .locals 1
 

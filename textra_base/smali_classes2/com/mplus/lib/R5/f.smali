@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/R5/f; with a context, URI, string, and integer, calling the superclass constructor. It sets the integer field 'd' of the instance to the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;I)V
     .locals 0
 

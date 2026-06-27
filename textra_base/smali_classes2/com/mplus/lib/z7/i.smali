@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adjusts the font metrics of a Paint object by modifying its top and ascent values based on a class field 'a'. It effectively chooses or adjusts the height of a font.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final chooseHeight(Ljava/lang/CharSequence;IIIILandroid/graphics/Paint$FontMetricsInt;)V
     .locals 1
 

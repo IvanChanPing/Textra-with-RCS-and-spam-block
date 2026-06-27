@@ -18,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a contact's photo input stream from the Android ContactsContract.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 5
 
@@ -78,6 +79,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of an input stream. It delegates the calculation to another class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLength()J
     .locals 3
 

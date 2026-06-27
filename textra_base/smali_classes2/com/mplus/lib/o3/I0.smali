@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/o3/I0, setting an empty object array and creating a new instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 7
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/o3/I0 class, setting its fields with the provided parameters. It extends the AbstractCollection class and stores the input integers and object arrays in its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(III[Ljava/lang/Object;[Ljava/lang/Object;)V
     .locals 0
 
@@ -73,6 +75,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method copies a portion of an array to another array and returns the updated index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I[Ljava/lang/Object;)I
     .locals 4
 
@@ -95,6 +98,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of Objects. It appears to be a getter method for the 'd' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()[Ljava/lang/Object;
     .locals 2
 
@@ -105,6 +109,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is present in a collection. It iterates through an array to find a match using the `equals` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 5
 
@@ -177,6 +182,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'h' of type integer. It does not perform any operations, just returns the field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()I
     .locals 2
 
@@ -227,6 +233,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'e' as the hash code. It does not perform any actual hashing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -237,6 +244,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/C0, cast as Lcom/mplus/lib/o3/U. It appears to create the instance using the object array and an integer index stored in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Lcom/mplus/lib/o3/U;
     .locals 3
 
@@ -253,6 +261,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'h' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static list of graphical objects, specifically a list of `Lcom/mplus/lib/w6/b` objects, which appear to represent icons or graphics.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 25
 

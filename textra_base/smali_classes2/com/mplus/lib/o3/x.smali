@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/x, storing a provided Comparator in a field. It does not perform any comparison or sorting operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Comparator;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares two objects using a stored Comparator. It delegates the comparison to the Comparator instance stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
@@ -48,6 +50,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current object, and if so, returns true. If the input object is of the same class, it compares the Comparator objects of the two instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -100,6 +103,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the Comparator object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -116,6 +120,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object's Comparator. It simply calls and returns the result of the toString method on the object's 'a' field, which is a Comparator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

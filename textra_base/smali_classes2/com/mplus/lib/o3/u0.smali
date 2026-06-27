@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/u0, setting an instance variable 'a' to 2 and logging or validating a value with key "expectedValuesPerKey".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -35,6 +36,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a new ArrayList with an initial capacity equal to the value of the instance variable 'a'. It does not perform any other operations or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 3
 

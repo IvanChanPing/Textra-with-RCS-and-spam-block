@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/v6/i class, setting its fields with the provided parameters. It also creates a new instance of Lcom/mplus/lib/s5/j and sets the h field of the Lcom/mplus/lib/s5/F object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/q;Lcom/mplus/lib/v6/P;Lcom/mplus/lib/v6/A;Lcom/mplus/lib/s5/F;Lcom/mplus/lib/s5/k;Lcom/mplus/lib/I6/a;Lcom/mplus/lib/v6/c0;)V
     .locals 0
 
@@ -469,6 +470,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method casts the second parameter to Lcom/mplus/lib/g6/b and calls another method o0 with the first parameter. It does not use the third parameter or the casted object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/t5/a;Ljava/lang/Object;Z)V
     .locals 1
 
@@ -585,6 +587,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to update a view with data from a configuration object and then triggers an action on a listener object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(Lcom/mplus/lib/t5/a;)V
     .locals 4
 
@@ -1272,6 +1275,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a `com/mplus/lib/t5/a` object, setting up its properties and event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Lcom/mplus/lib/t5/a;
     .locals 8
 

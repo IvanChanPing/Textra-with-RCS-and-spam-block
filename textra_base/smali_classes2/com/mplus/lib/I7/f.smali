@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/I7/f; with a given Context and sets a Uri for a Sony badge resource provider.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
@@ -31,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the badge count for an application, either by sending a broadcast intent to the Sony Home application or by scheduling a task to update the badge count.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)V
     .locals 6
 

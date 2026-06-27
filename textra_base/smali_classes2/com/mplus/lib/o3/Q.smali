@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes an Object, calls method 'a' on it, and returns the current instance of class N.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;)Lcom/mplus/lib/o3/N;
     .locals 1
 
@@ -21,6 +22,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean flag to true and returns the result of calling `Lcom/mplus/lib/o3/U;->i(I[Ljava/lang/Object;)Lcom/mplus/lib/o3/C0;` with the object's integer and object array fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Lcom/mplus/lib/o3/C0;
     .locals 3
 

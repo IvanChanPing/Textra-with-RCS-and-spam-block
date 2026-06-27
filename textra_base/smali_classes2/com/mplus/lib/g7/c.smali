@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/g7/c; that initializes a field 'a' to 0. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>()V
     .locals 1
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/g7/c with a Typeface and an integer. It sets the object's fields 'a' to 1, 'b' to the provided integer, and 'c' to the provided Typeface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/graphics/Typeface;I)V
     .locals 1
 
@@ -95,6 +97,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates an object based on the value of a field `a` in the class, either creating a `SpannableStringBuilder` with a custom typeface or a custom view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/content/Context;)Ljava/lang/Object;
     .locals 5
 
@@ -291,6 +294,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either by calling its private `b()` method or the superclass's `toString()` method, based on the value of its `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

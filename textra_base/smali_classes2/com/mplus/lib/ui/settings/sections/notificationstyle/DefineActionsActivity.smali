@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the DefineActionsActivity class, initializing the object by calling the superclass constructor. It sets up the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a notification style object for "contacts" from a settings manager. It returns a Lcom/mplus/lib/r4/n object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()Lcom/mplus/lib/r4/n;
     .locals 3
 

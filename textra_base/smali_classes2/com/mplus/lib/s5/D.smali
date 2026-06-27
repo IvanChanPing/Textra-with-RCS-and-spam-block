@@ -42,6 +42,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of class Lcom/mplus/lib/s5/D with instances of LinearInterpolator and two instances of Lcom/mplus/lib/s5/B.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -70,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a custom Drawable object, setting up its properties and animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;)V
     .locals 5
 
@@ -242,6 +244,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a rotated arc on a Canvas.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 10
 
@@ -352,6 +355,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the alpha value from an instance of Lcom/mplus/lib/s5/C. It retrieves the value from the 'o' field of the 'b' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAlpha()I
     .locals 2
 
@@ -364,6 +368,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic height of an object as an integer. It appears to be retrieving a double value from a field, converting it to an integer, and returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 3
 
@@ -378,6 +383,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic width of an object as an integer. It appears to be retrieving the width from a field 'h' of type double in the class Lcom/mplus/lib/s5/D and converting it to an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 3
 
@@ -402,6 +408,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if any animation in the ArrayList is running.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isRunning()Z
     .locals 7
 
@@ -469,6 +476,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object. It updates the 'o' field of the 'b' object, which is of type Lcom/mplus/lib/s5/C.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 
@@ -479,6 +487,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a color filter on a Paint object and then calls a method to update or invalidate something.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 3
 

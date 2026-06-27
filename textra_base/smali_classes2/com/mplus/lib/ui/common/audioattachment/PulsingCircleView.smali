@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static color fields in the PulsingCircleView class. It sets the values of fields g and h to the parsed color values of "#F6C4C2" and "#FF0000", respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a PulsingCircleView object, setting up paints, an ArgbEvaluator, and a ValueAnimator for animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
@@ -131,6 +133,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides the getLayoutSize function to return the layout size of its superclass. It simply calls the superclass's getLayoutSize method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -143,6 +146,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getMeasuredSize function to return the measured size of the view. It simply calls the superclass's getMeasuredSize method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -173,6 +177,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the vertical padding of the view by invoking the superclass's `getPaddingVertical()` method. It simply delegates the call to its superclass `Lcom/mplus/lib/x5/y`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -193,6 +198,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getVisibileAnimationDelegate` method and returns the result of calling the same method on its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -207,6 +213,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not modify the result in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -221,6 +228,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDetachedFromWindow method to cancel a running ValueAnimator when the view is detached from the window. It ensures that any ongoing animations are stopped when the view is no longer visible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDetachedFromWindow()V
     .locals 2
 
@@ -252,6 +260,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws two concentric circles on a Canvas, with the inner circle being 80% the size of the outer circle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 5
 
@@ -314,6 +323,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing the provided boolean value. It appears to be an overridden method with no additional functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -326,6 +336,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -334,6 +345,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate for the PulsingCircleView. It invokes the setBackgroundDrawingDelegate method of its superclass Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -358,6 +370,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setHeightTo method to call the superclass's implementation. It takes an integer parameter and then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -386,6 +399,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setMargin function to call the superclass's setMargin method with a Rect object. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -398,6 +412,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the pulsing state of a PulsingCircleView, starting or canceling the animation accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setPulsing(Z)V
     .locals 2
 
@@ -444,6 +459,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of the PulsingCircleView instance. It invokes a static method to configure the margin with the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -454,6 +470,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a PulsingCircleView instance. It invokes a static method to configure the view's layout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -476,6 +493,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method to set the visibility of the view. It takes a boolean parameter to determine whether the view should be visible or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -484,6 +502,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method with the provided boolean parameter. It appears to be a bridge method for overriding the superclass's behavior.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 

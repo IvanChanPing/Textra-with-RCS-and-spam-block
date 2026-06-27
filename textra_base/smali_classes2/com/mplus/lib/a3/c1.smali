@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/c1, setting its fields with the provided parameters and default values. It appears to be a constructor for logging purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
@@ -177,6 +178,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the object, lazily initializing it if it hasn't been calculated before.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -232,6 +234,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method replaces all occurrences of '/' with '.' in a string stored in the object's field 'a' and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/lang/String;
     .locals 4
 
@@ -252,6 +255,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the file name from a file path stored in the object's 'd' field. It does this by finding the last occurrence of the file separator character and taking the substring after it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Ljava/lang/String;
     .locals 3
 
@@ -282,6 +286,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'b'. It does not perform any operations based on the integer values 1 or 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Ljava/lang/String;
     .locals 2
 
@@ -294,6 +299,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's 'd' field. It does not use the local variables or perform any operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Ljava/lang/String;
     .locals 2
 

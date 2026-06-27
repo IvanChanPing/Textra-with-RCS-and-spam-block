@@ -27,6 +27,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'b' of type long. It does not appear to perform any other operations despite setting local variable v2 to 1 and then 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t()J
     .locals 3
 

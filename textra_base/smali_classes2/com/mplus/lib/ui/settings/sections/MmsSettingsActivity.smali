@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the MmsSettingsActivity class that initializes the object by calling the superclass constructor. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a static instance of Lcom/mplus/lib/r4/n, specifically the 'e' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()Lcom/mplus/lib/r4/n;
     .locals 2
 
@@ -37,6 +39,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes the MmsSettingsActivity by setting its title and adding various settings items to its list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 11
 

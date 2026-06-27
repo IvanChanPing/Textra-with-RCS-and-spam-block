@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s5/t with two integer parameters. It sets the object's fields 'a' and 'b' to the provided integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(II)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calculates and sets the layout parameters for a view based on given input. It uses the input integer and instance variables to determine the size, then applies this size to the view using the provided interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(ILcom/mplus/lib/x5/y;)V
     .locals 4
 

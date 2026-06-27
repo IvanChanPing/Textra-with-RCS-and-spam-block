@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/g, setting its 'a' field to the provided Cursor or a default value if the Cursor is null. It essentially constructs an object with a Cursor instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/database/Cursor;)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method closes the Android database Cursor object associated with the class instance. It appears to be a cleanup or release method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final E()V
     .locals 2
 
@@ -180,6 +182,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to call `E()` on the current object and ignores any exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 1
 
@@ -192,6 +195,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method copies a string from a cursor to a CharArrayBuffer. It delegates the copy operation to the underlying Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final copyStringToBuffer(ILandroid/database/CharArrayBuffer;)V
     .locals 2
 
@@ -206,6 +210,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method deactivates a database cursor. It calls the deactivate method on the cursor object stored in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final deactivate()V
     .locals 2
 
@@ -220,6 +225,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a binary large object (BLOB) from a database cursor at a specified index. It returns the BLOB as a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getBlob(I)[B
     .locals 2
 
@@ -234,6 +240,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of columns in a Cursor object. It delegates the call to the underlying Cursor's getColumnCount method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnCount()I
     .locals 2
 
@@ -252,6 +259,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the index of a column in a database cursor based on the provided column name. It delegates the operation to the underlying Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnIndex(Ljava/lang/String;)I
     .locals 2
 
@@ -268,6 +276,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls the Android Cursor method to get the column index for a given column name and returns it, throwing an exception if the column does not exist. It essentially wraps the Cursor's getColumnIndexOrThrow method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnIndexOrThrow(Ljava/lang/String;)I
     .locals 2
 
@@ -284,6 +293,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a column name from a Cursor object based on the provided index. It returns the column name as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnName(I)Ljava/lang/String;
     .locals 2
 
@@ -300,6 +310,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the column names of a Cursor object. It delegates the call to the underlying Cursor's getColumnNames method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnNames()[Ljava/lang/String;
     .locals 2
 
@@ -316,6 +327,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the count of rows in a Cursor object. It simply delegates the call to the underlying Cursor's getCount() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -330,6 +342,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a double value from a database cursor at a specified index. It returns the double value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDouble(I)D
     .locals 3
 
@@ -344,6 +357,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns the extras from a Cursor object. It delegates the getExtras call to the underlying Cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getExtras()Landroid/os/Bundle;
     .locals 2
 
@@ -362,6 +376,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a float value from a database cursor at a specified index. It returns the float value obtained from the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getFloat(I)F
     .locals 2
 
@@ -376,6 +391,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a database cursor at a specified column index, returning 0 if the value is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInt(I)I
     .locals 2
 
@@ -409,6 +425,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a long value from a database cursor at a specified index, returning 0 if the value is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLong(I)J
     .locals 3
 
@@ -442,6 +459,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the notification URI from a Cursor object. It delegates the call to the Cursor's getNotificationUri method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getNotificationUri()Landroid/net/Uri;
     .locals 2
 
@@ -460,6 +478,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the current position of a Cursor object. It simply delegates the call to the Cursor's own getPosition method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPosition()I
     .locals 2
 
@@ -476,6 +495,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a short value from a database cursor at a specified index. It returns the short value as a result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getShort(I)S
     .locals 2
 
@@ -488,6 +508,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string from a database cursor at a specified index. It returns the string value from the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getString(I)Ljava/lang/String;
     .locals 2
 
@@ -502,6 +523,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the data type of a column at a specified index from a Cursor object. It delegates the getType call to the underlying Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getType(I)I
     .locals 2
 
@@ -516,6 +538,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean indicating whether the associated Cursor wants all onMove calls. It delegates this call to the Cursor object stored in field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getWantsAllOnMoveCalls()Z
     .locals 2
 
@@ -532,6 +555,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is after the last row in the result set. It returns a boolean value indicating whether the cursor is after the last row.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isAfterLast()Z
     .locals 2
 
@@ -546,6 +570,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is before the first row in the result set. It returns a boolean value indicating whether the cursor is before the first row.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isBeforeFirst()Z
     .locals 2
 
@@ -562,6 +587,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an Android Cursor object is closed. It returns the result of the Cursor's isClosed() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isClosed()Z
     .locals 2
 
@@ -578,6 +604,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is at the first position. It returns a boolean value indicating whether the cursor is at the first row.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isFirst()Z
     .locals 2
 
@@ -592,6 +619,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current position in a database cursor is the last one. It returns a boolean value indicating whether the cursor is at the last position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isLast()Z
     .locals 2
 
@@ -608,6 +636,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a column at a given index in a Cursor is null. It returns a boolean value indicating whether the column is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isNull(I)Z
     .locals 2
 
@@ -620,6 +649,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method moves the cursor by a specified offset and returns whether the move was successful. It delegates the movement to the underlying Android database Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final move(I)Z
     .locals 2
 
@@ -636,6 +666,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls the moveToFirst() method of an Android Cursor object and returns the result. It essentially moves the cursor to the first row of a query result set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToFirst()Z
     .locals 2
 
@@ -652,6 +683,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the moveToLast() function on a Cursor object and returns the result. It effectively moves the cursor to the last row in the dataset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToLast()Z
     .locals 2
 
@@ -668,6 +700,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the moveToNext() function on a Cursor object and returns the result. It essentially moves the cursor to the next row in the database query result set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToNext()Z
     .locals 2
 
@@ -686,6 +719,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to move the cursor to a specified position and returns a boolean indicating success. It essentially wraps the moveToPosition method of an Android Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToPosition(I)Z
     .locals 2
 
@@ -702,6 +736,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to move the internal database cursor to the previous row and returns a boolean indicating success. It essentially wraps the moveToPrevious() method of the Android Cursor class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToPrevious()Z
     .locals 2
 
@@ -720,6 +755,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method registers a content observer with the cursor object. It notifies the observer of changes to the cursor's data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final registerContentObserver(Landroid/database/ContentObserver;)V
     .locals 2
 
@@ -734,6 +770,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method registers a DataSetObserver to a Cursor object. It allows the observer to be notified of changes to the cursor's data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 2
 
@@ -748,6 +785,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the requery() function on a stored Android Cursor object and returns the result. It effectively refreshes the cursor's data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final requery()Z
     .locals 2
 
@@ -762,6 +800,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method delegates the respond operation to a Cursor object, passing the input Bundle and returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final respond(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 2
 
@@ -778,6 +817,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets extras in a cursor object using the provided Bundle. It invokes the setExtras method of the Cursor interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setExtras(Landroid/os/Bundle;)V
     .locals 2
 
@@ -792,6 +832,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a notification URI for a cursor object. It delegates the operation to the underlying cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setNotificationUri(Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 2
 
@@ -816,6 +857,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method unregisters a ContentObserver from a Cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final unregisterContentObserver(Landroid/database/ContentObserver;)V
     .locals 2
 
@@ -832,6 +874,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unregisters a DataSetObserver from a Cursor. It invokes the Cursor's unregisterDataSetObserver method to remove the observer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 2
 

@@ -38,6 +38,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static comparator in the class Lcom/mplus/lib/y4/c. It creates a new instance of Lcom/mplus/lib/F4/b with a value of 4 and uses it to create a comparator that compares integers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -140,6 +141,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method searches for and returns an object of type Lcom/mplus/lib/y4/a; in a list based on a matching integer identifier.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)Lcom/mplus/lib/y4/a;
     .locals 6
 
@@ -282,6 +284,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method closes the current cursor and its associated resources, including other cursors stored in an ArrayList, and then quits a HandlerThread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 5
 
@@ -432,6 +435,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not perform any deactivation logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final deactivate()V
     .locals 2
 
@@ -537,6 +541,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a blob from a database cursor based on the provided column index. It returns the blob as a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getBlob(I)[B
     .locals 2
 
@@ -559,6 +564,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of column names from a Cursor object if it exists, otherwise an empty array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getColumnNames()[Ljava/lang/String;
     .locals 2
 
@@ -592,6 +598,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a class field 'e' as an integer, which seems to represent a count. The method does not perform any conditional checks or modifications to the value before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -602,6 +609,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a double value from a database cursor at a specified index. It returns the double value obtained from the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDouble(I)D
     .locals 3
 
@@ -622,6 +630,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a float value from a database cursor at a specified index. It returns the float value obtained from the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getFloat(I)F
     .locals 2
 
@@ -794,6 +803,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a short value from a database cursor at a specified index. It returns the short value obtained from the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getShort(I)S
     .locals 2
 
@@ -810,6 +820,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string from a database cursor based on the provided index. It returns the string value at the specified column index in the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getString(I)Ljava/lang/String;
     .locals 2
 
@@ -828,6 +839,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the data type of a column in a database cursor. It delegates the getType call to the underlying cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getType(I)I
     .locals 2
 
@@ -848,6 +860,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles messages for a cursor, processing data and updating the cursor's state accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 12
 
@@ -1476,6 +1489,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a column at a given index is null in a cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isNull(I)Z
     .locals 3
 
@@ -1547,6 +1561,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles movement in a list or grid, updating the position and potentially triggering other actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMove(II)Z
     .locals 4
 

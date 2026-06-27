@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/G; that initializes its fields with the provided parameters. It sets the fields a, b, and c with the given integer and objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/ca;Lcom/inmobi/media/X9;I)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle different cases based on the value of `a` and calls methods from the `Lcom/inmobi/media/ca` class, passing various parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/v1/f;Ljava/util/List;)V
     .locals 3
 

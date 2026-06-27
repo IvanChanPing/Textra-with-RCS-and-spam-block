@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static HashMap with LogDomain objects as keys and their corresponding string values. It also sets a class name and a regex pattern as static fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -303,6 +304,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method logs a message with a specified log level, log domain, and optional throwable and string format arguments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs c(Lcom/smaato/sdk/core/log/LogLevel;Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 9
 
@@ -902,6 +904,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a message at a specified log level by iterating over a list of log handlers and printing the message to the console using the Android `Log` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/smaato/sdk/core/log/LogLevel;Ljava/lang/String;)V
     .locals 11
 
@@ -1141,6 +1144,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a debug message using the Smaato SDK. It calls another method `c` with the log level set to DEBUG and the provided log domain, message, and arguments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs debug(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 
@@ -1169,6 +1173,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a debug message with a given LogDomain, Throwable, and string format with arguments. It calls another method `c` with LogLevel DEBUG.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs debug(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 
@@ -1231,6 +1236,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an error with the provided LogDomain, Throwable, and string message. It delegates the actual logging to another method `c` in the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs error(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 
@@ -1295,6 +1301,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an info message with the provided LogDomain, Throwable, and string format with arguments. It delegates the logging to another method 'c' with LogLevel.INFO.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs info(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 
@@ -1323,6 +1330,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a message with the provided log level, domain, and string, along with optional objects. It delegates the actual logging to another method `c` in the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs log(Lcom/smaato/sdk/core/log/LogLevel;Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 
@@ -1349,6 +1357,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs information with the provided log level, domain, throwable, message, and parameters. It delegates the actual logging to another method `c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs log(Lcom/smaato/sdk/core/log/LogLevel;Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
@@ -1361,6 +1370,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a one-shot tag using the provided string and stores it in a ThreadLocal variable. It also checks for null input using the requireNonNull method from the Smaato SDK.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setExplicitOneShotTag(Ljava/lang/String;)V
     .locals 2
 
@@ -1377,6 +1387,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a warning message with the provided log domain, message, and arguments. It calls another method `c` with the log level set to WARNING.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs warning(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 
@@ -1409,6 +1420,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a warning message with the provided LogDomain, Throwable, and string format. It delegates the logging to another method `c` with LogLevel set to WARNING.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs warning(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 

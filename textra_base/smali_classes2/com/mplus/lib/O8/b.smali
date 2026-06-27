@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O8/b, storing a RewardedAdDelegate object. It sets up the object with the provided delegate.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/rewarded/view/RewardedAdDelegate;)V
     .locals 0
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an ad error by calling the `onAdError` method of the `RewardedAdViewModel` instance. It appears to be part of an ad rewards system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdError()V
     .locals 2
 
@@ -66,6 +68,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies that an ad has been impressed by calling the `onAdImpressed()` method of the `RewardedAdViewModel`. It appears to be part of an ad tracking or analytics system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdImpressed()V
     .locals 2
 
@@ -86,6 +89,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies that an ad has been rewarded. It invokes the `onAdRewarded` method of the `RewardedAdViewModel` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdReward()V
     .locals 2
 
@@ -106,6 +110,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the RewardedAdViewModel that an ad has started. It delegates the onAdStarted event to the RewardedAdViewModel instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdStarted()V
     .locals 2
 

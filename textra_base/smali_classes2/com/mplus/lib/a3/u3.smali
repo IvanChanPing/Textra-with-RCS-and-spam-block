@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `c` of type `Lcom/mplus/lib/a3/n3;` with a new instance of `Lcom/mplus/lib/a3/n3;` having a value of 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -77,6 +78,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/a3/u3, initializing its fields 'a' and 'b' with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -109,6 +111,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to find a factory for a given message type by iterating over an array of factories and returns the result if found. If no factory is available, it throws an UnsupportedOperationException with a message indicating the unsupported message type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/Class;)Lcom/mplus/lib/a3/C3;
     .locals 4
 
@@ -180,6 +183,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given class matches any of the classes in an array of Lcom/mplus/lib/a3/x3; objects. It returns true if a match is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/lang/Class;)Z
     .locals 4
 
@@ -235,6 +239,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either by calling the superclass's toString method or by casting an object to Callable and calling its toString method based on the value of a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 
@@ -279,6 +284,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calls a Callable object and wraps its result in a zzaxt object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 2
 
@@ -301,6 +307,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new HttpURLConnection object from a given URL string. It utilizes a Google ML Kit internal class to establish the connection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza(Ljava/lang/String;)Ljava/net/HttpURLConnection;
     .locals 2
 
@@ -327,6 +334,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method logs an error when unable to increment network usage in the LoggingStateStore.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza(Ljava/lang/Throwable;)V
     .locals 3
 

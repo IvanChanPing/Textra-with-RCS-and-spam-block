@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `c` of type `Lcom/mplus/lib/b0/a;` with a new instance of that class, passing `3` to its constructor. It sets up a static object for potential later use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object, either by retrieving it from a stored supplier or by returning a previously retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 3
 

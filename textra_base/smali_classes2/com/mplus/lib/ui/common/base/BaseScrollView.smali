@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a `BaseScrollView` object, setting up its attributes and theme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
@@ -78,6 +79,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the scroll view has reached its bottom.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Z
     .locals 4
 
@@ -121,6 +123,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It always returns no value due to the exception, so the return type is misleading.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 2
 
@@ -293,6 +296,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getLastView` method to return the last view from its superclass. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLastView()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -305,6 +309,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getLayoutSize function to return a layout size object. It invokes the superclass's getLayoutSize method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -321,6 +326,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getMeasuredSize() function to return the measured size of the view. It simply calls the superclass's getMeasuredSize() method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -337,6 +343,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() to retrieve the horizontal padding. It returns the result as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -349,6 +356,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() and returns its result. It appears to be an overridden method that simply delegates to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -361,6 +369,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the vertical scroll offset of the view. It retrieves the current vertical scroll position using the `getScrollY` method and returns this value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getScrollOffset()I
     .locals 2
 
@@ -389,6 +398,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the view state of the BaseScrollView instance. It simply returns the object referenced by the 'a' field of the class, which is of type Lcom/mplus/lib/x5/C.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getViewState()Lcom/mplus/lib/x5/C;
     .locals 2
 
@@ -401,6 +411,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getVisibileAnimationDelegate` method and returns its result. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -423,6 +434,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method determines whether a touch event should be intercepted by the BaseScrollView, returning true if the event is intercepted and false otherwise, based on the value of the instance variable 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
@@ -450,6 +462,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onScrollChanged method of its superclass to call the superclass's onScrollChanged method. It then returns without performing any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onScrollChanged(IIII)V
     .locals 1
 
@@ -462,6 +475,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a BaseScrollView, conditionally calling the superclass's onTouchEvent method if a certain flag is set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
@@ -489,6 +503,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and conditionally calls the superclass's `requestDisallowInterceptTouchEvent` method. If the condition is true, it returns without calling the superclass method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final requestDisallowInterceptTouchEvent(Z)V
     .locals 2
 
@@ -514,6 +529,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing the provided boolean value. It appears to be a bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -524,6 +540,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -532,6 +549,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a background drawing delegate for the BaseScrollView. It overrides a method from its superclass to provide this functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -540,6 +558,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a view by invoking a static method with the provided margin value and the current object. It then returns without using the result of the invocation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -550,6 +569,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setDispatchTouchEvents method to set whether touch events should be dispatched. It essentially delegates the setting of touch event dispatching to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setDispatchTouchEvents(Z)V
     .locals 1
 
@@ -558,6 +578,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the height of a view by modifying its layout parameters. It updates the height and then applies the new layout parameters to the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setHeight(I)V
     .locals 2
 
@@ -578,6 +599,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method and then returns immediately. It effectively delegates the `setHeightTo` operation to its superclass `Lcom/mplus/lib/x5/y`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -588,6 +610,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -598,6 +621,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a BaseScrollView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -608,6 +632,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method with a Rect object and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -634,6 +659,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the scrollability of the BaseScrollView instance. It stores the provided boolean value in the instance's field 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setScrollable(Z)V
     .locals 1
 
@@ -644,6 +670,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a BaseScrollView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -652,6 +679,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a BaseScrollView instance by invoking a static method from class Lcom/mplus/lib/z7/N. It takes an integer parameter representing the padding value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -662,6 +690,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided boolean parameter. It does not perform any additional logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -674,6 +703,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method with the provided boolean parameter. It then returns immediately with a const/4 instruction, which doesn't affect the method's primary behavior.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -684,6 +714,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of the BaseScrollView to a specified value. It calls a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 
@@ -692,6 +723,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual string creation to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

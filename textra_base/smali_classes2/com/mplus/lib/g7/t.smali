@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of the class Lcom/mplus/lib/g7/t; by calling the superclass constructor with specific parameters. It sets up the object with a reference to Lcom/mplus/lib/r4/p;->J and Lcom/mplus/lib/g7/s;->p.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides the onViewStateRestored function to call its superclass's implementation and then invokes a method l with a string resource ID 0x7f11038e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 1
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/X8/d; that initializes an object with a reference to Lcom/smaato/sdk/richmedia/widget/b;. It sets the instance field 'a' to the provided Lcom/smaato/sdk/richmedia/widget/b; object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/richmedia/widget/b;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the close button click event by invoking a consumer on a non-null object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCloseClick()V
     .locals 5
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/Y, setting its properties and calling the superclass constructor. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/io/Serializable;Ljava/util/Map;I)V
     .locals 0
 
@@ -105,6 +106,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method clears the contents of a map by either calling a clear method on the map object or by iterating over the map entries and removing them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 4
 
@@ -219,6 +221,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a key in a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsKey(Ljava/lang/Object;)Z
     .locals 2
 
@@ -277,6 +280,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the entry set of a map, creating it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final entrySet()Ljava/util/Set;
     .locals 2
 
@@ -339,6 +343,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object, using different comparison methods based on the value of the object's field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -684,6 +689,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a map and transfers its associated collection to another collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
@@ -908,6 +914,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a collection of values from the object, specifically an instance of `Lcom/mplus/lib/a3/o0;` which is a view of the object's map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final values()Ljava/util/Collection;
     .locals 4
 

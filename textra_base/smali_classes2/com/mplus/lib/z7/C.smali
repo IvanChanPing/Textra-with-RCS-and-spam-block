@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their classes and fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -87,6 +88,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a hash code for the object based on its two integer fields `a` and `b`. It uses a simple formula to combine the values of these fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 

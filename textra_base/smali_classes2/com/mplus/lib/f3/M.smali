@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/M, setting its ScheduledFuture field. It calls the superclass constructor with a zzdy object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/play_billing/zzdy;Ljava/util/concurrent/ScheduledFuture;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to cancel a future task and returns a boolean indicating success. If the initial cancellation is successful, it also attempts to cancel a scheduled future task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final cancel(Z)Z
     .locals 3
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/L1 class, setting up a SHA-256 message digest and storing its digest length and a string identifier.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -77,6 +78,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the string value of a field named 'd' in the class Lcom/mplus/lib/a3/L1. It does not perform any complex operations, simply returning the stored string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 
@@ -87,6 +89,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/a3/K1`, which is created with a `MessageDigest` object and an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzatr;
     .locals 5
 

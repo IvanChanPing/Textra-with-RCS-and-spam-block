@@ -44,6 +44,7 @@
 .method public abstract b()Ljava/lang/String;
 .end method
 
+# M-ROLE [GROQ]: This method appears to implement a spin-wait mechanism for a thread, waiting for a specific condition to be met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Thread;)V
     .locals 9
 
@@ -288,6 +289,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to be part of a thread management system, handling thread execution and exception handling.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 6
 
@@ -436,6 +438,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object's state, indicating whether it is running, interrupted, or not started yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

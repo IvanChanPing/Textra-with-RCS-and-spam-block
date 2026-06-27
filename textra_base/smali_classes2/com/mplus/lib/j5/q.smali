@@ -74,6 +74,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and sets up various UI components, including radio buttons, edit texts, and a button, and sets their respective listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 3
 

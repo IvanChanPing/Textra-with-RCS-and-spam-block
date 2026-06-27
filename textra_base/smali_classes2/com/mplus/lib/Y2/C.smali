@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of class Lcom/mplus/lib/Y2/C, setting its 'c' field to the provided Lcom/mplus/lib/Y2/u object and calling the superclass constructor. It extends the Lcom/google/android/gms/internal/location/zzr class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/Y2/u;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the result of a LocationSettingsResult in a BasePendingResult. It updates the result in the 'c' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Lcom/google/android/gms/location/LocationSettingsResult;)V
     .locals 2
 

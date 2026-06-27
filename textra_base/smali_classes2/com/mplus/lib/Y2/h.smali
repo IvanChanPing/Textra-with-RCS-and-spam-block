@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/Y2/h, setting its location listener and calling the superclass constructor with a GoogleApiClient. It stores the provided LocationListener for potential future use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/location/LocationListener;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a location listener removal operation on a Google API client. It creates a listener key and then invokes the client to remove the listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic doExecute(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     .locals 4
 

@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/H2/j; with instances of Lcom/mplus/lib/H2/f; and a lock object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -93,6 +94,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a static context variable if it hasn't been set, and logs a warning if it has already been initialized.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized a(Landroid/content/Context;)V
     .locals 3
 
@@ -542,6 +544,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and loads the Google Certificates module using DynamiteModule if it hasn't been loaded yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d()V
     .locals 5
 

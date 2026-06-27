@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the Purpose One Treatment from a TCModel object and returns it as an Object. It does not use the returned value of 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -21,6 +22,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the purpose one treatment in a TCModel using a provided Boolean value. It casts the input object to a Boolean and then calls the setPurposeOneTreatment method on the TCModel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

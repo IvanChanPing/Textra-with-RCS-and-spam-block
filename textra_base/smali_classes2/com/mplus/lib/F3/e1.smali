@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `a` of type `Lcom/mplus/lib/F3/x0;` with a new instance, using default `Lcom/google/protobuf/Value;` and other class fields. It sets up the class's static state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 

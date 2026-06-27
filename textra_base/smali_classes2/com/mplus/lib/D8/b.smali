@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/D8/b, setting its handler and a timer. It also creates a new instance of Lcom/mplus/lib/D8/a and assigns it to a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;JLandroid/os/Handler;)V
     .locals 0
 
@@ -45,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `newValue` method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic a(Lcom/mplus/lib/D8/b;Ljava/lang/Object;)V
     .locals 1
 
@@ -57,6 +59,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/A2/e` and schedules it to run with a delay using a `Landroid/os/Handler`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newValue(Ljava/lang/Object;)V
     .locals 5
 

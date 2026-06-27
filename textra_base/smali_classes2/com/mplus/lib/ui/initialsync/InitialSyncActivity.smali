@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the InitialSyncActivity class that calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -34,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to set a boolean value and then navigate to the MainActivity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V()V
     .locals 3
 
@@ -78,6 +80,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the app's initialization status and permissions, then updates a text view accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()V
     .locals 3
 
@@ -152,6 +155,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the initial sync process in the InitialSyncActivity class, checking for essential permissions and performing various initialization tasks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y()V
     .locals 2
 
@@ -225,6 +229,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onActivityResult method to handle the result of an activity, specifically checking for a result code of 0xb91 and calling a method to sync data if it matches.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
@@ -263,6 +268,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event, checking for certain conditions before either requesting essential permissions or proceeding with an initial sync.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
@@ -534,6 +540,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of a permission request by calling the `Y()` method of the `InitialSyncActivity` class. It does not directly process the permission request results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
     .locals 1
 

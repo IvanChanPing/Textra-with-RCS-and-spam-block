@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method extracts and returns the value from a Map Entry object. It takes a Map Entry as input, casts it, and invokes the getValue method to retrieve the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 

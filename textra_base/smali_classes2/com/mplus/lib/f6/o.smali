@@ -35,6 +35,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f6/o, setting up various ArrayLists and configuring durations for RecyclerView item animations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/R1/d;)V
     .locals 4
 
@@ -125,6 +126,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the animator is running and if not, dispatches animations finished.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 2
 
@@ -146,6 +148,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method animates the addition of a RecyclerView item by setting its alpha to 0 and adding it to an animation list. It then returns true to indicate a successful animation addition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final animateAdd(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 3
 
@@ -386,6 +389,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method animates the movement of a RecyclerView item from its current position to a new position. It calculates the translation needed and sets it on the item view, then adds the animation details to a list for later processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final animateMove(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)Z
     .locals 4
 
@@ -596,6 +600,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given RecyclerView ViewHolder is associated with a specific item and resets its state if so. It then resets the ViewHolder's view's alpha, translation X, and translation Y, and dispatches a change finished event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/f6/m;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 5
 
@@ -667,6 +672,7 @@
     return v3
 .end method
 
+# M-ROLE [GROQ]: This method cancels all ongoing view animations for a list of RecyclerView view holders.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final cancelAll(Ljava/util/List;)V
     .locals 3
 
@@ -711,6 +717,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method ends an animation for a given RecyclerView.ViewHolder, resetting its translation and alpha values, and dispatching finished events for move, add, and remove operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final endAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 9
 
@@ -1060,6 +1067,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method ends all animations in the RecyclerView by resetting the translation and alpha of the views, dispatching finished events, and canceling pending animations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final endAnimations()V
     .locals 9
 
@@ -1725,6 +1733,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method runs pending animations for a RecyclerView, handling removals, moves, and changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final runPendingAnimations()V
     .locals 15
 
@@ -2315,6 +2324,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

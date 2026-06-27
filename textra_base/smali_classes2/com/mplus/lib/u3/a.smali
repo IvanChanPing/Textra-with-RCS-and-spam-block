@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/u3/a class, setting its fields with the provided parameters and making the sets unmodifiable. It stores the provided sets, integer, and object in its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/HashSet;Ljava/util/HashSet;ILcom/mplus/lib/u3/d;Ljava/util/HashSet;)V
     .locals 0
 
@@ -51,6 +52,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/M5/l` with the given class and an empty array of classes. It returns this new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/Class;)Lcom/mplus/lib/M5/l;
     .locals 3
 

@@ -104,6 +104,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes an object of type `zzhu` into another object of type `e` using specific keys from the `t0` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 

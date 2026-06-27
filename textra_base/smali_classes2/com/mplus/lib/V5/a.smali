@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/V5/a, setting its 'a' field to the provided Lcom/mplus/lib/V5/b object and calling the superclass constructor. It extends the RecyclerView AdapterDataObserver class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/V5/b;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the 'o' field of the 'a' object (of type Lcom/mplus/lib/V5/b) to -1. It appears to be a callback method, likely triggered by an observer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChanged()V
     .locals 3
 

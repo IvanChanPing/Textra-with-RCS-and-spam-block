@@ -37,6 +37,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns the number of milliseconds since a fixed timestamp.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M()J
     .locals 5
 
@@ -55,6 +56,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/J4/a;, initializing its SimpleDateFormat if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized S()Lcom/mplus/lib/J4/a;
     .locals 4
 
@@ -170,6 +172,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method formats a given time in milliseconds into a string using two different date formats.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(J)Ljava/lang/StringBuffer;
     .locals 3
 
@@ -348,6 +351,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a Date object to the given time and formats it into a StringBuffer using a DateFormat object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(J)Ljava/lang/StringBuffer;
     .locals 3
 
@@ -388,6 +392,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes various date and time formats for the class. It sets up SimpleDateFormat objects for day of the week, date, and time, as well as retrieves the device's default date and time formats.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T()V
     .locals 4
 
@@ -522,6 +527,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method formats a given time in milliseconds into a string representation. It checks the date and time to determine the appropriate format to use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(J)Ljava/lang/StringBuffer;
     .locals 6
 

@@ -40,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/L8/e, setting its fields with the provided parameters. It appears to be a constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -58,6 +59,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a part of a state machine or a switch statement that handles different cases based on the value of `a` field in the class `Lcom/mplus/lib/L8/e;`. It performs various actions such as parsing XML, handling ad content, and notifying event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 5
 

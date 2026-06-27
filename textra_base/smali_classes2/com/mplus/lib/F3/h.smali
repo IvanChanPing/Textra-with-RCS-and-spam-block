@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/F3/h. It sets a boolean field 'a' to false in the superclass Lcom/mplus/lib/F3/c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/F3/h class with a boolean array and an integer. It sets the instance's fields b and c to the provided array and integer, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([ZI)V
     .locals 0
 
@@ -229,6 +231,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection, handling cases where the collection is of the same type or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 6
 
@@ -357,6 +360,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method resizes an array of booleans if necessary and appends a new boolean value to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Z)V
     .locals 5
 
@@ -418,6 +422,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input index is within a valid range and throws an IndexOutOfBoundsException if it's not. It returns immediately if the index is valid and within a certain threshold.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 4
 
@@ -473,6 +478,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is present in a collection. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -586,6 +592,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/F3/h if the input parameter is greater than or equal to a certain threshold, otherwise it throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)Lcom/mplus/lib/F3/j0;
     .locals 3
 
@@ -627,6 +634,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a boolean value from an array at the specified index and returns it as a Boolean object. It also calls another method `c(I)V` before retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -713,6 +721,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method searches for a boolean value in an array and returns its index if found, or -1 if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 5
 
@@ -771,6 +780,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method removes an element at a specified index from a list and returns the removed element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(I)Ljava/lang/Object;
     .locals 5
 
@@ -897,6 +907,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean value at a specified index in an array and returns the previous value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
@@ -931,6 +942,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'c' which presumably represents the size of an object. It does not perform any calculations or operations, simply returning the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i9/a, setting its properties with the provided Logger, LinkHandler, and VideoClicks objects. It also creates an AtomicReference with an initial value of FALSE.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/log/Logger;Lcom/smaato/sdk/core/linkhandler/LinkHandler;Lcom/smaato/sdk/video/vast/model/VideoClicks;)V
     .locals 2
 
@@ -55,6 +56,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a click event by checking for a valid URL and then using a LinkHandler to handle the URL in the background.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 3
 

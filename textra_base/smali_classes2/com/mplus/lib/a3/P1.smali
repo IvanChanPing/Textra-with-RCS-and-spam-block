@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/a3/P1` class with various parameters. It sets the object's fields with the provided values, including strings and `zzaih` objects, and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;IZ)V
     .locals 0
 
@@ -61,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
@@ -270,6 +272,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code for an instance of the `Lcom/mplus/lib/a3/P1` class. It combines the hash codes of the object's fields, including a string, a `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih` object, a boolean, and an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 7
 
@@ -556,6 +559,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'd' field, which is an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih. It appears to be a getter method for the 'd' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -578,6 +582,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `com/google/android/gms/internal/mlkit_entity_extraction/zzaih`. It appears to be a getter method for the `h` field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -600,6 +605,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'a'. It does not perform any operations based on the constants 2 or 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzj()Ljava/lang/String;
     .locals 2
 
@@ -622,6 +628,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the instance variable `i`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzl()Z
     .locals 2
 
@@ -634,6 +641,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'j' of type integer. It appears to be a getter method for the field 'j'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzm()I
     .locals 2
 

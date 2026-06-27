@@ -25,6 +25,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies a listener with a ModuleInstallStatusUpdate. It creates a new instance of Lcom/mplus/lib/O2/a and uses it to notify the listener held by Lcom/google/android/gms/common/api/internal/ListenerHolder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab(Lcom/google/android/gms/common/moduleinstall/ModuleInstallStatusUpdate;)V
     .locals 2
 

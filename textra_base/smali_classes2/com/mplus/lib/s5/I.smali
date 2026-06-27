@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `d` in class `Lcom/mplus/lib/s5/I;` by multiplying a value from `Lcom/mplus/lib/z7/m;->a` by 4.0. It sets the result as the value of `d`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a rectangle on a Canvas if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 3
 
@@ -111,6 +113,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the opacity of a view, with -3 indicating a completely opaque view and -2 indicating a partially transparent view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOpacity()I
     .locals 2
 
@@ -144,6 +147,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the bounds of an object when its parent's bounds change. It adjusts the object's rectangle by setting it to the new bounds and then shrinking it by a certain amount.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBoundsChange(Landroid/graphics/Rect;)V
     .locals 3
 

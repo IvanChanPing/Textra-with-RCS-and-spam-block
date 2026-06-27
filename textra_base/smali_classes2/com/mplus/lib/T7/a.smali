@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/T7/a, setting its fields with the provided parameters. It appears to be a constructor for the class, storing a list and two strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
 
@@ -121,6 +122,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of networks. It does not perform any network operations, just returns a pre-existing list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getNetworks()Ljava/util/List;
     .locals 2
 
@@ -133,6 +135,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string field 'c' of the class Lcom/mplus/lib/T7/a. It does not perform any actual passback logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPassback()Ljava/lang/String;
     .locals 2
 
@@ -145,6 +148,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value stored in the object's field 'b'. It does not perform any computations or external calls.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSessionId()Ljava/lang/String;
     .locals 2
 
@@ -157,6 +161,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object based on its fields. It combines the hash codes of a list and two strings using bitwise XOR and multiplication operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 

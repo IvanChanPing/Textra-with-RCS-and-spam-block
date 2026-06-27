@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/K3/a class with a byte array and sets up its properties. It also creates a new instance of Lcom/mplus/lib/D6/d, passing the current instance to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 0
 
@@ -231,6 +232,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition based on the result of calling `b` on the input object and itself, then calls `b` on itself with the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/K3/l;)Z
     .locals 1
 
@@ -251,6 +253,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method extracts and combines bits from a byte array to form a 16-bit integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(I)I
     .locals 8
 
@@ -387,6 +390,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to get an integer value and then passes it to its own method 'd' to process, returning the result. It appears to be a wrapper method for processing an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/K3/l;)I
     .locals 1
 
@@ -403,6 +407,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform bit manipulation and byte extraction operations, likely for data encoding or decoding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)I
     .locals 6
 
@@ -527,6 +532,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method appears to decode a long value from a byte array using bit manipulation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/K3/l;)J
     .locals 13
 
@@ -822,6 +828,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method extracts a byte from a bitstream, handling bit alignment and byte boundaries.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(I)B
     .locals 5
 
@@ -915,6 +922,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method takes an object of type Lcom/mplus/lib/K3/l; and returns a byte value. It appears to call a method on the input object and then use the result to call another method on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Lcom/mplus/lib/K3/l;)B
     .locals 1
 
@@ -935,6 +943,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform bit manipulation and byte extraction from a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(II)B
     .locals 4
 
@@ -1026,6 +1035,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a 2-character string by retrieving and modifying byte values from the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(Lcom/mplus/lib/K3/l;)Ljava/lang/String;
     .locals 4
 

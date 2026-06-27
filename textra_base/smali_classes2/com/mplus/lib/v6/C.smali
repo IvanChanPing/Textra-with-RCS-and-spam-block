@@ -17,6 +17,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calculates the distance to fit an item in a RecyclerView, either by performing custom calculations or by invoking the superclass's method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final calculateDtToFit(IIIII)I
     .locals 8
 
@@ -80,6 +81,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method computes the scroll vector for a given position in a RecyclerView. It delegates the computation to a LinearLayoutManager instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final computeScrollVectorForPosition(I)Landroid/graphics/PointF;
     .locals 2
 
@@ -98,6 +100,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field 'b' as the vertical snap preference. It does not seem to consider any other factors or conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVerticalSnapPreference()I
     .locals 2
 

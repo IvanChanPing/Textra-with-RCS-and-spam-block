@@ -45,6 +45,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the getDouble operation is not supported. It does not return a double value as its signature suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDouble(I)D
     .locals 1
 
@@ -59,6 +60,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that getting a float value is not supported. It does not return a float value as its signature suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getFloat(I)F
     .locals 1
 
@@ -71,6 +73,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually return an integer value as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInt(I)I
     .locals 1
 
@@ -83,6 +86,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not retrieve a long value as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLong(I)J
     .locals 1
 
@@ -93,6 +97,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually retrieve a short value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getShort(I)S
     .locals 1
 
@@ -109,6 +114,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not retrieve a string based on the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getString(I)Ljava/lang/String;
     .locals 1
 
@@ -123,6 +129,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it's not implemented. It does not actually check for null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isNull(I)Z
     .locals 1
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/d7/e; that initializes its parent class Lcom/mplus/lib/D5/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -97,6 +98,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDismiss callback for a dialog interface, calling the superclass's onDismiss method and conditionally resetting a component's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
 

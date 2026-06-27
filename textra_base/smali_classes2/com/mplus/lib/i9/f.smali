@@ -109,6 +109,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/i9/f; from a given string. It essentially wraps the Java Enum.valueOf method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/i9/f;
     .locals 2
 
@@ -127,6 +128,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of the class Lcom/mplus/lib/i9/f. It creates a copy of the enum values array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/i9/f;
     .locals 2
 

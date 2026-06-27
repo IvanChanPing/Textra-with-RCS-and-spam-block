@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/S6/j; that initializes an object with a reference to Lcom/mplus/lib/S6/k;. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/S6/k;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if certain conditions are met in the `Lcom/mplus/lib/x5/y` object and returns true if both conditions are true, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Z
     .locals 3
 
@@ -74,6 +76,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the view visibility to visible with animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public run()V
     .locals 3
 

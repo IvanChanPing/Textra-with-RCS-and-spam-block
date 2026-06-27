@@ -37,6 +37,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an ArrayList object. It retrieves the count of elements in the list and returns it as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -49,6 +50,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that getting a double value is not supported. It does not perform any actual calculation or retrieval of a double value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDouble(I)D
     .locals 1
 
@@ -65,6 +67,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that getting a float value is not supported. It does not perform any actual retrieval of a float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getFloat(I)F
     .locals 1
 
@@ -81,6 +84,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, regardless of the input parameter. It does not actually return an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInt(I)I
     .locals 1
 
@@ -95,6 +99,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the getLong operation is not supported. It does not retrieve a long value as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLong(I)J
     .locals 1
 
@@ -111,6 +116,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the getShort operation is not supported. It does not perform any actual data retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getShort(I)S
     .locals 1
 
@@ -121,6 +127,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called with any integer argument, indicating that the getString operation is not supported. It does not actually retrieve a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getString(I)Ljava/lang/String;
     .locals 1
 
@@ -131,6 +138,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method always throws an UnsupportedOperationException, indicating it's not implemented.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isNull(I)Z
     .locals 1
 

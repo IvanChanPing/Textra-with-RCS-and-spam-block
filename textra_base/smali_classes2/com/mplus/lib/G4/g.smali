@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/G4/g with parameters from Lcom/mplus/lib/G4/m, a String, and an integer. It sets the instance's fields b, c, and d with these parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/G4/m;Ljava/lang/String;I)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method applies a condition to an object of type `Lcom/mplus/lib/G4/k;` and returns a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 

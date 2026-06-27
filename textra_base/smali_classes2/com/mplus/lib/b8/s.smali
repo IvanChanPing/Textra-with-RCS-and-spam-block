@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the Out-of-Band (OOB) support value from a TCModel object and returns it as an Object. It essentially acts as a getter for the OOB support boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -21,6 +22,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the Support OOB value in a TCModel instance using a provided Boolean object. It casts the object to a Boolean and then calls the setSupportOOB method on the TCModel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

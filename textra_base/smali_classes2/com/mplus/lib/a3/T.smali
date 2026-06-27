@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `d` with a new instance of `com/google/android/gms/internal/mlkit_entity_extraction/zzaje`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -36,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/a3/T, setting its fields with a new zzajl object and the provided zzajc object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzajc;)V
     .locals 1
 
@@ -56,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of the object, specifically a memoized supplier.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

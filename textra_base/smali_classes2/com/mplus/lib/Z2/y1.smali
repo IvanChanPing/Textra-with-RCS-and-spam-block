@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class and performs a series of operations involving hash maps and Google's ML Kit. It appears to be setting up some kind of data structure or configuration for the ML Kit.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

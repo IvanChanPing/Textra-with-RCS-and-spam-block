@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/K1 class with a MessageDigest object and an integer. It sets up a little-endian ByteBuffer and stores the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/security/MessageDigest;I)V
     .locals 2
 
@@ -50,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates a MessageDigest object with a specified number of bytes from a ByteBuffer and then clears the ByteBuffer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(I)V
     .locals 5
 
@@ -140,6 +142,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a CharSequence, putting each character into a ByteBuffer, and then calls another method `a(I)` with argument 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzd(Ljava/lang/CharSequence;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzatr;
     .locals 5
 
@@ -190,6 +193,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a `com/google/android/gms/internal/mlkit_entity_extraction/zzatp` object after hashing data using a `java/security/MessageDigest` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzatp;
     .locals 4
 

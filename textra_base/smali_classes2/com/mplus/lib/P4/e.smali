@@ -25,6 +25,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method configures and returns an Android NotificationChannel object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroid/app/NotificationChannel;
     .locals 4
 
@@ -123,6 +124,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes a NotificationChannel object and sets its properties. It also stores the channel and a provided object in the class's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/P4/a;ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
 

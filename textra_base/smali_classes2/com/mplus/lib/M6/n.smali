@@ -142,6 +142,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes a Long object, retrieves an instance of Lcom/mplus/lib/r4/H, and uses it to query a value based on the Long, then returns the result as an Integer. It essentially converts a Long to an Integer using a custom mapping.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
@@ -176,6 +177,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the visibility and text of several UI components based on the provided Long and Integer objects. It also stops an instance of `Lcom/mplus/lib/s5/D` and formats the Integer object for display.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
@@ -256,6 +258,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of an object based on a provided long value, potentially triggering UI changes and asynchronous tasks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(J)V
     .locals 3
 

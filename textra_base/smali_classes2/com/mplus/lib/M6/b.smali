@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/M6/b, calling its superclass constructor and creating a new instance of Lcom/mplus/lib/E3/C. It sets this new instance as a field in the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -113,6 +114,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onActivityResult` method to handle activity results, specifically calling `P4/p;->S()` when the request code is 0xb91.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
@@ -525,6 +527,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the UI components and sets up the layout for an Android activity. It checks if a certain condition is met, sets the content view, and configures various UI elements such as text views, image views, and a recycler view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 19
 
@@ -1591,6 +1594,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method, calling the superclass's onDestroy and then stopping a component if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -1620,6 +1624,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onPause() method, calling the superclass's onPause() and then unregistering an object from a bus and cancelling any pending posts.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPause()V
     .locals 3
 
@@ -1665,6 +1670,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onPostCreate method to handle the creation of an activity after its savedInstanceState is restored, specifically checking for a "search screen" boolean in the bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPostCreate(Landroid/os/Bundle;)V
     .locals 3
 
@@ -1718,6 +1724,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onResume` method and performs various actions such as registering an object with a bus, calling methods on other objects, and notifying a recycler view adapter of changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResume()V
     .locals 6
 
@@ -1887,6 +1894,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method saves the current state of the search screen to a Bundle, including a boolean indicating whether the search screen is active, the search scope, and the current search text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 6
 

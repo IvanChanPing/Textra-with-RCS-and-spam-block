@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls a cleanup function and then invokes a contact persister function to process a contact.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Lcom/mplus/lib/A4/c;)V
     .locals 2
 

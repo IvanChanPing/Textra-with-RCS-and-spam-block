@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/l, setting its fields with provided parameters and throwing a NullPointerException if the second parameter is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyt;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwu;)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their `zzbyt` and `zzbwu` fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -196,6 +198,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyt; from the class field 'a'. It does not perform any operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic zza()Ljava/lang/Object;
     .locals 2
 
@@ -206,6 +209,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzbwu object from the class field 'b'. It does not perform any operations, just returns the existing object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwu;
     .locals 2
 
@@ -216,6 +220,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `a` field, which is an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyt`. It appears to be a getter method for the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyt;
     .locals 2
 

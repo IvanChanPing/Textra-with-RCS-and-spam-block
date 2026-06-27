@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method generates a string based on an integer and a boolean, likely creating a class name. It appends a suffix "_bare" if the boolean is true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(IZ)Ljava/lang/String;
     .locals 3
 
@@ -73,6 +74,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a singleton instance of `Lcom/mplus/lib/u4/e;`, creating it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static S()Lcom/mplus/lib/u4/e;
     .locals 5
 
@@ -132,6 +134,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method implements a singleton pattern for the `Lcom/mplus/lib/j5/g` class, ensuring only one instance is created.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized T()Lcom/mplus/lib/j5/g;
     .locals 5
 
@@ -432,6 +435,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of activity information for certain activities in the application.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public P()Ljava/util/ArrayList;
     .locals 9
 
@@ -631,6 +635,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value from a `J5/b` object after calling `Z()` on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized Q()I
     .locals 2
 
@@ -674,6 +679,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a ComponentName object, which is created using the application context and a class name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized R()Landroid/content/ComponentName;
     .locals 4
 
@@ -735,6 +741,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of pending sends from storage, deserializes them from a base64-encoded string, and returns the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public U()Ljava/util/List;
     .locals 18
 
@@ -1055,6 +1062,7 @@
     goto :goto_2
 .end method
 
+# M-ROLE [GROQ]: This method checks the current app state and navigates to a series of activities if the state is not equal to 3. It also updates the app state to 3 and starts activities based on the Android SDK version.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public Y(I)V
     .locals 5
 
@@ -1379,6 +1387,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method searches for an object of type Lcom/mplus/lib/X4/j in a list, where the object's 'd' field matches the input parameter of type Lcom/mplus/lib/r4/n.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized a0(Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/X4/j;
     .locals 4
 
@@ -1571,6 +1580,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates and manages activities based on the provided parameters, including an integer and two boolean values. It checks for matching activities, updates their states, and invokes other methods to handle these activities.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized c0(IZZ)V
     .locals 6
 

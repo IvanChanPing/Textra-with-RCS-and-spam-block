@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the `e` field of the class by adding the size of an ArrayList to its current value, where the ArrayList is obtained by calling `Lcom/mplus/lib/a3/t1;->E` with the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/r4/j0;)V
     .locals 3
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/a3/D1 class, setting its internal state with a reference to an Lcom/mplus/lib/a3/E1 object and an integer value. It also calls the superclass constructor from java/util/AbstractSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/E1;I)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an integer value from an array based on an incremented index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 3
 
@@ -47,6 +49,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the state of the object, either 0 if a certain condition is met, or a value from an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()I
     .locals 3
 
@@ -80,6 +83,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is present in a sorted array using binary search.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 6
 
@@ -143,6 +147,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator for the class instance. It creates a new instance of Lcom/mplus/lib/a3/n1 and returns it as an iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -161,6 +166,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the size by subtracting the result of method `b()` from the result of method `a()`. It appears to be calculating a difference or remaining value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 3
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/s5/y, setting its fields and calling the superclass constructor. It sets up the object with references to Lcom/mplus/lib/s5/D and Lcom/mplus/lib/s5/C instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/D;Lcom/mplus/lib/s5/C;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method applies a transformation to an animation, modifying properties of objects in the `com/mplus/lib/s5` package based on the input float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 10
 

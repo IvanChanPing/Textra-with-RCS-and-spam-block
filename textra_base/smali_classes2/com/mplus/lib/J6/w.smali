@@ -19,6 +19,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the state of an object based on an input integer and invalidates the drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 5
 
@@ -90,6 +91,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a string on a Canvas at the bottom left of the drawable's bounds. It returns immediately if the string is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 5
 
@@ -131,6 +133,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the height of a rectangle stored in the object's field 'd'. It retrieves the height from the Rect object and returns it as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -147,6 +150,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the width of a rectangle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 
@@ -169,6 +173,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of a TextPaint object. It takes an integer parameter representing the alpha value and applies it to the paint object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 
@@ -183,6 +188,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a color filter on a TextPaint object. It takes a ColorFilter as a parameter and applies it to the paint.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 2
 

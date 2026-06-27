@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/f0, setting its fields 'b' and 'c' to the provided Lcom/mplus/lib/r4/i objects. It also calls the superclass constructor with an Landroid/database/Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/database/Cursor;Lcom/mplus/lib/r4/i;Lcom/mplus/lib/r4/i;)V
     .locals 0
 
@@ -34,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a string from a database cursor at index 13. It returns this string as the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K()Ljava/lang/String;
     .locals 3
 
@@ -52,6 +54,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string value from a database cursor, returning null if the value is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L()Ljava/lang/String;
     .locals 3
 
@@ -89,6 +92,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a long value from a cursor at index 16, returning 0 if the value is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()J
     .locals 3
 
@@ -122,6 +126,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific column in a cursor is null and returns 0 if it is, otherwise returns the integer value of that column.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()I
     .locals 3
 
@@ -159,6 +164,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/r4/j0`, populating its fields with data retrieved from a database cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O()Lcom/mplus/lib/r4/j0;
     .locals 4
 
@@ -615,6 +621,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a blob from a cursor, attempts to parse it into an object of type Lcom/mplus/lib/r4/n, and returns either the parsed object or a default object if parsing results in an empty collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q()Lcom/mplus/lib/r4/n;
     .locals 3
 
@@ -658,6 +665,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific column (index 14) in a Cursor is null and returns 0 if it is, otherwise returns the integer value of that column.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R()I
     .locals 3
 
@@ -693,6 +701,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific column (index 19) in a cursor is null and returns 0 if it is, otherwise it returns the long value at that column index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S()J
     .locals 3
 
@@ -807,6 +816,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a value returned by `S()` is greater than 0 and returns true if so, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U()Z
     .locals 5
 
@@ -1010,6 +1020,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific column in a cursor is null and returns true if it is, otherwise it calls another method F() to determine the return value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()Z
     .locals 3
 
@@ -1043,6 +1054,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific column (index 0x16) in a Cursor is null and returns -1 if it is, otherwise it returns the integer value of that column.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()I
     .locals 3
 

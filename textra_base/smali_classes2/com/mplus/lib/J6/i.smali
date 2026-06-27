@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/J6/i with three parameters. It sets the instance's fields a, b, and c to the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
@@ -34,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J6/i, setting its properties and calling the superclass constructor. It sets the 'a' field to 2 and stores the provided objects in 'b' and 'c' fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/v6/o;ILcom/mplus/lib/ui/common/base/BaseHorizontalScrollView;)V
     .locals 0
 
@@ -52,6 +54,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the animation of a view based on the animated value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 

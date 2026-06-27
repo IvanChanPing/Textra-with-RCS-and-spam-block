@@ -77,6 +77,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes the default instance of `AdSetupPersister$AmazonApsBannerSetup` and registers it with the protobuf framework.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -93,6 +94,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of `AdSetupPersister$AmazonApsBannerSetup` with default values. It sets various fields such as `appId_`, `slotUuid_`, `displayTimeInMillis_`, `rewardInMillis_`, `visibilityPct_`, and `adTimeout_` to their respective default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private constructor <init>()V
     .locals 2
 
@@ -121,6 +123,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of `AdSetupPersister$AmazonApsBannerSetup`. It appears to be a generated accessor method for the `DEFAULT_INSTANCE` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$4300()Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -133,6 +136,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the app ID for an Amazon Aps Banner Setup instance. It invokes a private setter method with the provided app ID string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$4400(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;Ljava/lang/String;)V
     .locals 1
 
@@ -141,6 +145,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the app ID of an AmazonApsBannerSetup instance. It invokes a private method to clear the app ID and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$4500(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -151,6 +156,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the app ID bytes for an Amazon APS banner setup. It invokes a private method to update the app ID bytes with the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$4600(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -163,6 +169,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the slot UUID for an Amazon Aps Banner Setup instance. It calls the private setSlotUuid method with the provided string parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$4700(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;Ljava/lang/String;)V
     .locals 1
 
@@ -185,6 +192,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private setSlotUuidBytes method on an AdSetupPersister$AmazonApsBannerSetup instance, passing an F3/m object. It appears to set the slot UUID bytes for Amazon APS banner setup.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$4900(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -193,6 +201,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the order of an AmazonApsBannerSetup instance. It invokes a private setter method to update the order with the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5000(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;I)V
     .locals 1
 
@@ -201,6 +210,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the order of an AmazonApsBannerSetup instance. It does this by calling the clearOrder method on the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5100(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -213,6 +223,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the display time in milliseconds for an Amazon Aps Banner Setup. It invokes a private method to update the display time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5200(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;J)V
     .locals 1
 
@@ -225,6 +236,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the display time in milliseconds for an Amazon Aps Banner Setup. It does this by invoking a private method to clear the display time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5300(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -235,6 +247,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private setRewardInMillis method on an AdSetupPersister$AmazonApsBannerSetup instance, passing a reward time in milliseconds. It serves as a synthetic accessor for the private method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5400(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;J)V
     .locals 1
 
@@ -243,6 +256,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the reward time in milliseconds for an Amazon Aps Banner setup. It invokes a private method to reset the reward time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5500(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -255,6 +269,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the prevent accidental clicks flag for an Amazon Aps Banner setup. It calls the setPreventAccidentalClicks method with the provided boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5600(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;Z)V
     .locals 1
 
@@ -267,6 +282,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the prevent accidental clicks setting for an Amazon APS banner setup. It appears to be a synthetic method generated by the compiler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5700(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -279,6 +295,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private setPrefetch method on an AdSetupPersister$AmazonApsBannerSetup instance, passing a boolean value. It allows controlled access to the private method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5800(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;Z)V
     .locals 1
 
@@ -287,6 +304,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the prefetch settings for an AmazonApsBannerSetup instance. It invokes a private method to reset the prefetch configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$5900(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -297,6 +315,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility percentage of an Amazon APS banner setup. It invokes a private method to update the visibility percentage with the given value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$6000(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;I)V
     .locals 1
 
@@ -307,6 +326,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the visibility percentage of an Amazon APS banner setup. It invokes a private method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$6100(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -317,6 +337,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the floor price of an Amazon APS banner setup. It invokes a private method to update the floor price with a given float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$6200(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;F)V
     .locals 1
 
@@ -327,6 +348,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the floor price of an Amazon APS banner setup. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$6300(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -337,6 +359,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the ad timeout for an AmazonApsBannerSetup instance. It invokes a private method to update the ad timeout with a given time value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$6400(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;J)V
     .locals 1
 
@@ -347,6 +370,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the ad timeout for an AmazonApsBannerSetup instance. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$6500(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)V
     .locals 1
 
@@ -383,6 +407,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the app ID by resetting the corresponding bit field and setting the app ID to its default value. It effectively resets the app ID to its default state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearAppId()V
     .locals 2
 
@@ -437,6 +462,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the floor price by resetting the `floorPrice_` field to 0 and updating the `bitField0_` to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearFloorPrice()V
     .locals 2
 
@@ -459,6 +485,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the order field in the AmazonApsBannerSetup class by resetting the corresponding bit in the bitField0_ and setting the order_ to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearOrder()V
     .locals 2
 
@@ -481,6 +508,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the prefetch setting by resetting the corresponding bit in the bitField0_ variable and setting the prefetch_ boolean to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearPrefetch()V
     .locals 2
 
@@ -499,6 +527,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the `preventAccidentalClicks_` flag and updates the `bitField0_` accordingly. It resets the prevent accidental clicks setting to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearPreventAccidentalClicks()V
     .locals 2
 
@@ -547,6 +576,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the slotUuid field by resetting the corresponding bit in the bitField0_ and then sets the slotUuid_ to its default value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearSlotUuid()V
     .locals 2
 
@@ -577,6 +607,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the visibility percentage by resetting the `visibilityPct_` field to 50 (0x32) and updating the `bitField0_` to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearVisibilityPct()V
     .locals 2
 
@@ -601,6 +632,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of `AdSetupPersister$AmazonApsBannerSetup`. It retrieves the default instance from a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static getDefaultInstance()Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -609,6 +641,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for the AmazonApsBannerSetup class. It returns an instance of Lcom/mplus/lib/U4/b, which is a builder for the AdSetupPersister$AmazonApsBannerSetup class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder()Lcom/mplus/lib/U4/b;
     .locals 2
 
@@ -627,6 +660,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for the given AdSetupPersister$AmazonApsBannerSetup instance. It returns a new instance of Lcom/mplus/lib/U4/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder(Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;)Lcom/mplus/lib/U4/b;
     .locals 2
 
@@ -645,6 +679,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited AmazonApsBannerSetup protocol buffer from an input stream. It uses the DEFAULT_INSTANCE to parse the input stream and returns the parsed AdSetupPersister$AmazonApsBannerSetup object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -665,6 +700,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited protocol buffer message from an input stream and returns an instance of `AdSetupPersister$AmazonApsBannerSetup`. It utilizes the `parseDelimitedFrom` method from the `com/google/protobuf/c` class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -685,6 +721,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from a given input stream and returns an instance of `AdSetupPersister$AmazonApsBannerSetup`. It uses the `parseFrom` method from `com/google/protobuf/c` to perform the parsing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -707,6 +744,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from input data using the `parseFrom` method from `com/google/protobuf/c` and returns an instance of `AdSetupPersister$AmazonApsBannerSetup`. It utilizes a default instance and input data from `com/mplus/lib/F3/m` and `com/mplus/lib/F3/G`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -723,6 +761,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from a given input stream and returns an instance of `AdSetupPersister$AmazonApsBannerSetup`. It uses the `parseFrom` method from `com/google/protobuf/c` to perform the parsing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -745,6 +784,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from input data using the `parseFrom` method of `com/google/protobuf/c` and returns an instance of `AdSetupPersister$AmazonApsBannerSetup`. It utilizes a default instance and input data from `com/mplus/lib/F3/r` and `com/mplus/lib/F3/G`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -763,6 +803,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protobuf message from an input stream and returns an instance of `AdSetupPersister$AmazonApsBannerSetup`. It utilizes the `parseFrom` method from `com/google/protobuf/c` to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -783,6 +824,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses an AmazonApsBannerSetup object from an input stream. It utilizes the Google Protocol Buffers library to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -803,6 +845,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ByteBuffer into an AdSetupPersister$AmazonApsBannerSetup object using Google's protobuf library. It returns the parsed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -823,6 +866,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protobuf message from a ByteBuffer and returns an instance of AdSetupPersister$AmazonApsBannerSetup. It utilizes the parseFrom method of the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -839,6 +883,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into an instance of `AdSetupPersister$AmazonApsBannerSetup`. It uses the `parseFrom` method from `com/google/protobuf/c` to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([B)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -855,6 +900,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into an instance of `AdSetupPersister$AmazonApsBannerSetup`. It utilizes the `parseFrom` method from `com/google/protobuf/c` to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([BLcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$AmazonApsBannerSetup;
     .locals 2
 
@@ -873,6 +919,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a parser for the AmazonApsBannerSetup class. It retrieves the parser from the DEFAULT_INSTANCE of AdSetupPersister$AmazonApsBannerSetup.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parser()Lcom/mplus/lib/F3/O0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -895,6 +942,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the ad timeout value and updates the bit field accordingly. It modifies the `adTimeout_` field and the `bitField0_` field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setAdTimeout(J)V
     .locals 2
 
@@ -911,6 +959,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the app ID for an Amazon APS banner setup. It updates the `bitField0_` and `appId_` fields of the current object with the provided app ID string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setAppId(Ljava/lang/String;)V
     .locals 2
 
@@ -933,6 +982,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the appId_ field of the AmazonApsBannerSetup object using the string value from the input object. It also updates the bitField0_ to indicate that appId_ has been set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setAppIdBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -961,6 +1011,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the display time in milliseconds for an Amazon Aps Banner Setup. It updates the `bitField0_` and `displayTimeInMillis_` fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setDisplayTimeInMillis(J)V
     .locals 2
 
@@ -983,6 +1034,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the floor price of an Amazon APS banner setup. It updates the `bitField0_` and `floorPrice_` fields of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setFloorPrice(F)V
     .locals 2
 
@@ -1001,6 +1053,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the order of an Amazon Aps Banner setup by updating the `order_` field with the provided integer value and modifying the `bitField0_` to reflect the change. It appears to be part of a protocol buffer implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setOrder(I)V
     .locals 2
 
@@ -1023,6 +1076,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the prefetch property of the AmazonApsBannerSetup object to the provided boolean value and updates the bitField0_ accordingly. It modifies the object's state to reflect the new prefetch setting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setPrefetch(Z)V
     .locals 2
 
@@ -1041,6 +1095,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the preventAccidentalClicks flag in the AdSetupPersister AmazonApsBannerSetup class. It updates the bitField0_ and preventAccidentalClicks_ fields based on the input boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setPreventAccidentalClicks(Z)V
     .locals 2
 
@@ -1079,6 +1134,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the slot UUID for an Amazon APS banner setup. It updates the bitField0_ and stores the provided slot UUID string in the slotUuid_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSlotUuid(Ljava/lang/String;)V
     .locals 2
 
@@ -1103,6 +1159,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the slotUuid_ field of the AmazonApsBannerSetup object using a string from the input object and updates the bitField0_ accordingly. It appears to be part of a protocol buffer implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSlotUuidBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -1131,6 +1188,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility percentage of an Amazon APS banner setup. It modifies the `bitField0_` and `visibilityPct_` fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setVisibilityPct(I)V
     .locals 2
 
@@ -1363,6 +1421,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the ad timeout value. It retrieves the adTimeout_ field from the current object and returns it as a long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getAdTimeout()J
     .locals 3
 
@@ -1373,6 +1432,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the appId_ string field of the AmazonApsBannerSetup object. It simply retrieves the appId_ value without any modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getAppId()Ljava/lang/String;
     .locals 2
 
@@ -1383,6 +1443,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the appId as a byte string by invoking a static method to convert the appId string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getAppIdBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 
@@ -1399,6 +1460,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the display time in milliseconds for an Amazon APS banner setup. It retrieves the value from the `displayTimeInMillis_` field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getDisplayTimeInMillis()J
     .locals 3
 
@@ -1411,6 +1473,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the floor price of an Amazon APS banner setup. It retrieves the floor price from the instance variable `floorPrice_`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getFloorPrice()F
     .locals 2
 
@@ -1421,6 +1484,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'order_' field of the current object. It retrieves the order value from the instance variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getOrder()I
     .locals 2
 
@@ -1429,6 +1493,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `prefetch_` field, indicating whether prefetch is enabled. It retrieves a boolean value from the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getPrefetch()Z
     .locals 2
 
@@ -1439,6 +1504,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a boolean field indicating whether to prevent accidental clicks. It retrieves the value from the `preventAccidentalClicks_` field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getPreventAccidentalClicks()Z
     .locals 2
 
@@ -1449,6 +1515,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the reward time in milliseconds. It retrieves the value from the `rewardInMillis_` field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getRewardInMillis()J
     .locals 3
 
@@ -1459,6 +1526,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the slotUuid_ string field of the AmazonApsBannerSetup class. It retrieves the stored slot UUID value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSlotUuid()Ljava/lang/String;
     .locals 2
 
@@ -1483,6 +1551,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the visibility percentage of an Amazon APS banner setup. It retrieves the value from the `visibilityPct_` field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getVisibilityPct()I
     .locals 2
 
@@ -1493,6 +1562,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `AdSetupPersister$AmazonApsBannerSetup` object has an ad timeout by checking the `bitField0_` value. It returns `true` if the 0x200 bit is set, indicating the presence of an ad timeout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasAdTimeout()Z
     .locals 2
 
@@ -1518,6 +1588,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `bitField0_` has the first bit set, indicating the presence of an app ID. It returns `true` if the bit is set and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasAppId()Z
     .locals 3
 
@@ -1541,6 +1612,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `displayTimeInMillis` field is set in the `AdSetupPersister$AmazonApsBannerSetup` object. It returns `true` if the field is set and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasDisplayTimeInMillis()Z
     .locals 2
 
@@ -1562,6 +1634,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `floorPrice` field is set in the `AdSetupPersister$AmazonApsBannerSetup` object. It returns `true` if the field is set and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasFloorPrice()Z
     .locals 2
 
@@ -1620,6 +1693,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the 'prefetch' flag is set in the bitField0_ variable. It returns true (1) if the flag is set, and false (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasPrefetch()Z
     .locals 2
 
@@ -1645,6 +1719,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `preventAccidentalClicks` flag is set in the `bitField0_` integer. It returns `true` (1) if the flag is set and `false` (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasPreventAccidentalClicks()Z
     .locals 2
 
@@ -1670,6 +1745,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a reward time in milliseconds is set for an Amazon APS banner setup. It returns true (1) if the bitField0_ has the 0x10 bit set, and false (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasRewardInMillis()Z
     .locals 2
 
@@ -1699,6 +1775,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `slotUuid` field is set in the `AdSetupPersister$AmazonApsBannerSetup` object. It returns `true` if the field is set and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasSlotUuid()Z
     .locals 2
 
@@ -1726,6 +1803,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `visibilityPct` field is set in the `AdSetupPersister$AmazonApsBannerSetup` object by checking the `bitField0_` bitmask. It returns `true` if the field is set and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasVisibilityPct()Z
     .locals 2
 

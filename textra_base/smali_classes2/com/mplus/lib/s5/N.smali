@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a custom Drawable object with a given Drawable and a float value. It sets up internal Path and RectF objects for potential future drawing operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;F)V
     .locals 1
 
@@ -45,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a rounded rectangle on a Canvas by clipping the canvas to the rounded rectangle path and then drawing another drawable within that clipped area.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 5
 
@@ -103,6 +105,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic height of a Drawable object. It retrieves the height from the Drawable object stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -121,6 +124,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic width of a Drawable object. It retrieves the width by calling the getIntrinsicWidth() method on the Drawable object stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 
@@ -139,6 +143,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the opacity of a Drawable object. It delegates the call to the getOpacity() method of the Drawable object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOpacity()I
     .locals 2
 
@@ -155,6 +160,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha (transparency) of a Drawable object. It takes an integer parameter representing the alpha value and applies it to the Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 
@@ -171,6 +177,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bounds of the current drawable object and its contained drawable. It overrides the setBounds method of the Drawable class to also update the bounds of the internal drawable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setBounds(IIII)V
     .locals 2
 
@@ -189,6 +196,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bounds of the current drawable object and its internal drawable. It overrides the setBounds method of the Drawable class to also update the bounds of the internal drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setBounds(Landroid/graphics/Rect;)V
     .locals 2
 
@@ -207,6 +215,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a color filter on a drawable object. It takes an android/graphics/ColorFilter as a parameter and applies it to the drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 2
 

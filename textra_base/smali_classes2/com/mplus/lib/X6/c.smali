@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/X6/c class, setting its fields with the provided parameters. It also creates a new instance of Lcom/mplus/lib/s5/j and sets the h field of the Lcom/mplus/lib/s5/F object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/X6/a;Lcom/mplus/lib/s5/F;Lcom/mplus/lib/X6/g;Lcom/mplus/lib/B2/l;)V
     .locals 0
 
@@ -48,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes an object and a pair, then calls another method `q0` with the provided object. It does not use the pair or the boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/t5/a;Ljava/lang/Object;Z)V
     .locals 1
 
@@ -180,6 +182,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to retrieve data from a `Lcom/mplus/lib/r4/k0` object, process it, and return a `Lcom/mplus/lib/r4/t` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()Lcom/mplus/lib/r4/t;
     .locals 8
 
@@ -861,6 +864,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the UI based on the state of certain data objects, specifically `Lcom/mplus/lib/r4/k0;` and `Lcom/mplus/lib/r4/t;`, and sets various UI elements to be visible or invisible accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0(Lcom/mplus/lib/t5/a;)V
     .locals 8
 
@@ -1220,6 +1224,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a dialog with various UI elements, including text views and image views, and returns the dialog object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Lcom/mplus/lib/t5/a;
     .locals 13
 

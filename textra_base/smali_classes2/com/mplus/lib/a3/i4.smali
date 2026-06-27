@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/i4; with various parameters. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/net/Uri;Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhi;ILcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbvr;)V
     .locals 0
 
@@ -199,6 +200,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -419,6 +421,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'd' as an integer. It does not appear to use the constant 3, which is loaded but not used.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -429,6 +432,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a stored Android Uri object. It always returns the Uri object referenced by the field 'a' of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Landroid/net/Uri;
     .locals 2
 
@@ -439,6 +443,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'c' field, which is an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhi. It appears to be a getter method for the 'c' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhi;
     .locals 2
 
@@ -471,6 +476,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of zzbvr. It appears to be a getter method for the 'g' field in the class Lcom/mplus/lib/a3/i4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbvr;
     .locals 2
 
@@ -483,6 +489,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's 'b' field. It does not perform any operations based on the constant 5.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Ljava/lang/String;
     .locals 2
 

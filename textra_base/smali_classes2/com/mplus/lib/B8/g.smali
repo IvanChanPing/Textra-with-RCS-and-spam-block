@@ -60,6 +60,7 @@
 .method public abstract c(Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a next element in an iterator. It uses a switch statement based on the value of `a` to determine which action to take, but ultimately calls `hasNext()` on the `b` iterator object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -104,6 +105,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in an iteration, applying different processing methods based on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 

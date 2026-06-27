@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the ConvoActivity class that initializes the object by calling the superclass constructor. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -24,6 +25,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an Intent for starting the ConvoActivity, setting various extras based on the input parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Z(Landroid/content/Context;ZLcom/mplus/lib/r4/n;ZJZ)Landroid/content/Intent;
     .locals 3
 
@@ -101,6 +103,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle the closing animation of a conversation activity, creating an instance of `Lcom/mplus/lib/j4/a` and attaching a corner animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()V
     .locals 3
 
@@ -169,6 +172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the value of a boolean field `r` in an object of class `Lcom/mplus/lib/v6/P`. It appears to be checking a property related to the conversation activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()Z
     .locals 2
 
@@ -487,6 +491,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value from a `G` object obtained through `N.m()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y()I
     .locals 2
 
@@ -505,6 +510,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current activity is the root of a task and if so, creates a new task stack and starts a new activity using an intent from MainActivity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0()V
     .locals 3
 
@@ -550,6 +556,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met and if so, returns immediately; otherwise, it calls methods t0() and p0() on an object of class Lcom/mplus/lib/v6/P.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 2
 
@@ -583,6 +590,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to call a cleanup or reset function and then invokes another method a0() on the ConvoActivity instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 2
 
@@ -832,6 +840,7 @@
     return v3
 .end method
 
+# M-ROLE [GROQ]: This method initializes the ConvoActivity, setting up the UI and attaching animations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 3
 
@@ -1015,6 +1024,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onWindowFocusChanged event to notify the typing indicator of focus changes and clears the Window flag 0x400000 when focus is gained.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onWindowFocusChanged(Z)V
     .locals 2
 

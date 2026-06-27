@@ -37,6 +37,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a class instance, setting up various UI components and their references. It also configures the layout transition for the view group.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;)V
     .locals 3
 

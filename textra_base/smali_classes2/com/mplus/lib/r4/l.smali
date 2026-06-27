@@ -46,6 +46,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static instances of the class Lcom/mplus/lib/r4/l. It creates three instances with different string values and assigns them to static fields m, n, and o.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -78,6 +79,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/l, setting its fields to default values. It sets the object's state with specific integer and long values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -102,6 +104,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/l with a string, a long value, and another string. It sets various instance fields with default or provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;JLjava/lang/String;)V
     .locals 2
 
@@ -126,6 +129,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor that calls another constructor with a default long value of -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -138,6 +142,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string based on various conditions, including the result of other method calls and string comparisons.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 3
 
@@ -223,6 +228,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two strings are equal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 3
 
@@ -245,6 +251,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string that starts with '^', followed by the result of `l()`, and ends with '^'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()Ljava/lang/String;
     .locals 3
 
@@ -341,6 +348,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string, either a cached value or one retrieved from Lcom/mplus/lib/i5/i;->N().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Ljava/lang/String;
     .locals 2
 
@@ -451,6 +459,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method compares the string returned by its own `l()` method with the string returned by the `l()` method of the input object, returning true if they are equal. It determines whether two objects of the same class have the same string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i(Lcom/mplus/lib/r4/l;)Z
     .locals 2
 
@@ -477,6 +486,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the string "Textra Team" is equal to the value of the object's field 'e'. It returns true if they are equal, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j()Z
     .locals 3
 
@@ -497,6 +507,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two string fields (`e` and `d`) are equal and if another condition `j()` is false, then it returns true, otherwise it returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k()Z
     .locals 3
 
@@ -532,6 +543,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a lazily initialized string, using `f()` and `e` if `h` is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Ljava/lang/String;
     .locals 3
 

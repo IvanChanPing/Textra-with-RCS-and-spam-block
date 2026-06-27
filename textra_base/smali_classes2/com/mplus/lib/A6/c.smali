@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/A6/c, setting up an ArrayDeque and storing a reference to Lcom/mplus/lib/A6/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/A6/b;)V
     .locals 1
 
@@ -39,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes a string and two objects as input, processes the string using Html.fromHtml, and returns a Spanned object. It appears to be used for parsing HTML strings with custom image handling and tag processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/String;Lcom/mplus/lib/z6/j;Lcom/mplus/lib/A6/b;)Landroid/text/Spanned;
     .locals 2
 
@@ -75,6 +77,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method implements the SAX `characters` callback, passing character data to a `ContentHandler`. It delegates the call to its `b` field, an instance of `ContentHandler`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final characters([CII)V
     .locals 2
 
@@ -89,6 +92,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the endDocument() function of the ContentHandler object, signaling the end of an XML document parsing process. It effectively notifies the handler that the document has been fully parsed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final endDocument()V
     .locals 2
 
@@ -101,6 +105,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the end of an XML element, removing the last element from a stack and notifying a content handler if necessary. It also updates an editable text object based on the element's name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final endElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
@@ -152,6 +157,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method ends a prefix mapping for a given namespace prefix in an XML document. It delegates the operation to an instance of `org/xml/sax/ContentHandler`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final endPrefixMapping(Ljava/lang/String;)V
     .locals 2
 
@@ -166,6 +172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an XML tag by setting the content handler and adding a boolean value to a queue.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final handleTag(ZLjava/lang/String;Landroid/text/Editable;Lorg/xml/sax/XMLReader;)V
     .locals 1
 
@@ -203,6 +210,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method delegates the handling of ignorable whitespace characters to an instance of `ContentHandler`. It passes the input character array and offset/length parameters to the `ignorableWhitespace` method of the `ContentHandler` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final ignorableWhitespace([CII)V
     .locals 2
 
@@ -215,6 +223,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an XML processing instruction by calling the `processingInstruction` method of an `Lorg/xml/sax/ContentHandler` object. It takes two string parameters, likely the target and data of the processing instruction.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processingInstruction(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -229,6 +238,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the document locator for the ContentHandler object. It delegates the operation to the ContentHandler instance stored in the 'b' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setDocumentLocator(Lorg/xml/sax/Locator;)V
     .locals 2
 
@@ -241,6 +251,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the ContentHandler that an entity has been skipped, passing the entity name. It delegates the notification to the ContentHandler instance stored in the object's field 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final skippedEntity(Ljava/lang/String;)V
     .locals 2
 
@@ -257,6 +268,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method starts an XML document parsing process by calling the startDocument method on a ContentHandler object. It also sets an integer value to 1 and then to 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final startDocument()V
     .locals 2
 
@@ -318,6 +330,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method starts a prefix mapping for XML parsing. It delegates the operation to an instance of `ContentHandler`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final startPrefixMapping(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 

@@ -111,6 +111,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a character to a StringBuilder and then logs the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(CLjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
     .locals 1
 
@@ -155,6 +156,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a long value to a given string and returns the resulting string. It does not perform any actual computation on the long value or the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(JLjava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -177,6 +179,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a Uri object to a given string and returns the resulting string. It essentially constructs a new string by concatenating the input string with the Uri object's string representation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -199,6 +202,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method concatenates two input strings. It returns the concatenated string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -217,6 +221,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method concatenates three input strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -249,6 +254,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a boolean value and a string to a StringBuilder, then returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/lang/String;Ljava/lang/StringBuilder;Z)Ljava/lang/String;
     .locals 1
 
@@ -269,6 +275,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends an integer and a character to a StringBuilder and returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
     .locals 1
 
@@ -289,6 +296,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends two strings to a StringBuilder and returns the resulting string. It does not perform any validation or modification on the input strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
@@ -309,6 +317,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new StringBuilder object, initializes it with the first string parameter, and then appends an integer and a second string to it. It returns the resulting StringBuilder object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 2
 
@@ -327,6 +336,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new StringBuilder and appends a CharSequence to it. It also performs null checks on certain parameters using Lcom/mplus/lib/ia/m;->f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(Ljava/lang/CharSequence;Ljava/lang/String;Lcom/mplus/lib/ha/l;Ljava/lang/String;Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
     .locals 1
 
@@ -345,6 +355,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new StringBuilder and appends a CharSequence to it. It also performs null checks on certain parameters using Lcom/mplus/lib/ia/m;->f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Ljava/lang/CharSequence;Ljava/lang/String;Lcom/mplus/lib/ha/p;Ljava/lang/String;Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
     .locals 1
 
@@ -365,6 +376,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new StringBuilder, appends a CharSequence to it, and returns the StringBuilder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
     .locals 1
 
@@ -415,6 +427,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new StringBuilder object with an initial string, then appends a long value and another string to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static r(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
     .locals 2
 
@@ -435,6 +448,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new StringBuilder and appends two input strings to it. It returns the resulting StringBuilder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 2
 
@@ -453,6 +467,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new StringBuilder object with the first input string and appends the second and third input strings to it. It returns the resulting StringBuilder object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
     .locals 2
 
@@ -471,6 +486,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds two integers, wraps the result in an Integer object, and passes it to a callback interface. It then returns without using the result of the callback invocation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(IILcom/mplus/lib/ha/l;)V
     .locals 1
 
@@ -489,6 +505,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method throws a NullPointerException with a custom error message if the input integer is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic v(ILjava/lang/String;)V
     .locals 1
 
@@ -526,6 +543,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method appends three input strings to a StringBuilder. It does not perform any conditional checks or operations based on the input strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
@@ -542,6 +560,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method concatenates two input strings and returns the result. It does not perform any additional operations on the strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 

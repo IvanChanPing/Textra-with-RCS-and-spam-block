@@ -36,6 +36,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/M6/g` class, setting its properties with the provided context, recycler view, and other objects. It also retrieves the scaled touch slop value from the Android view configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/ui/common/base/BaseRecyclerView;Lcom/mplus/lib/M6/d;Lcom/mplus/lib/M6/m;)V
     .locals 0
 
@@ -82,6 +83,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of the instance variable `k` and returns `true` if it's 1, otherwise returns `false`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 3
 
@@ -179,6 +181,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a view, specifically tracking movements and gestures to determine actions such as scrolling or selecting items.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 12
 
@@ -790,6 +793,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the current state and if it's 1, it computes the current velocity, then calls `o0` on `Lcom/mplus/lib/M6/f;` with the x-velocity and the input boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Z)V
     .locals 3
 

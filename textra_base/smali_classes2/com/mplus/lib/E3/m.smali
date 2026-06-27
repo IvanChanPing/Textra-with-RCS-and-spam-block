@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method closes an object by running a stored Runnable instance. It appears to be part of a class that implements a closeable resource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 2
 

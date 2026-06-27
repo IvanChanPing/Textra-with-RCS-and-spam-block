@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/a3/e4` class, setting its fields with the provided parameters and creating additional objects. It appears to be a constructor for a class that interacts with Google's ML Kit entity extraction functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzqp;Ljava/util/concurrent/Executor;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaao;Lcom/mplus/lib/a3/b4;)V
     .locals 1
 
@@ -199,6 +200,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a `zzaul` object, populating it with data from a `zzah` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzah;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaul;
     .locals 4
 
@@ -271,6 +273,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method processes entity extraction tasks using the provided parameters and returns a `zzaxt` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzag;ZLcom/google/android/gms/internal/mlkit_entity_extraction/zzqp;Ljava/util/concurrent/Executor;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaao;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 4
 
@@ -560,6 +563,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method recursively traverses a data structure and extracts entities from it, returning a list of extracted entities.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaao;Landroid/net/Uri;Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 9
 
@@ -1060,6 +1064,7 @@
     return-object v5
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzfa` and uses it to create a `zzaxt` object through a series of static method calls.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzci;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 2
 
@@ -1086,6 +1091,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method processes an input object of type `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcq;` and returns an object of type `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcq;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 10
 
@@ -1198,6 +1204,7 @@
     return-object v5
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzfe` and uses it to execute a task on an executor, returning a `zzaxt` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcs;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 3
 
@@ -1226,6 +1233,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzfd` and uses it to initiate an entity extraction task, returning a `zzaxt` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 4
 
@@ -1252,6 +1260,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `zzfl` and uses it to execute a task asynchronously using the `zzzb` object, returning a `zzaxt` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzgw;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 3
 

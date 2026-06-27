@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O2/a, storing a ModuleInstallStatusUpdate object. It sets the object's field 'a' to the provided ModuleInstallStatusUpdate.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/moduleinstall/ModuleInstallStatusUpdate;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies an InstallStatusListener about a module installation status update. It casts the input object to InstallStatusListener and calls its onInstallStatusUpdated method with a ModuleInstallStatusUpdate object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic notifyListener(Ljava/lang/Object;)V
     .locals 2
 

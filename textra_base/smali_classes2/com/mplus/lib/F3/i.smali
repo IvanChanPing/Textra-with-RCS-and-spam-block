@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/i, setting its fields based on the provided Lcom/mplus/lib/F3/l object. It stores the object, its size, and initializes a counter to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/F3/l;)V
     .locals 1
 
@@ -42,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there are more elements to iterate over by comparing two internal indices. It returns true if the current index is less than the end index, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 3
 
@@ -63,6 +65,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next byte object in a sequence or throws a NoSuchElementException if there are no more elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -108,6 +111,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually remove anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 

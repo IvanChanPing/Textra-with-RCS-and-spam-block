@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/s5/J by calculating and storing values based on the results of invoking Lcom/mplus/lib/z7/m;->c(I)I. It sets the values of fields b, c, d, and e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -260,6 +261,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic height of an object, which is stored in the static field `d` of class `Lcom/mplus/lib/s5/J;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 

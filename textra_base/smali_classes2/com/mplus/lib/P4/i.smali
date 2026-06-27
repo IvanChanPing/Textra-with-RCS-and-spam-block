@@ -41,6 +41,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/P4/i; with various string constants and objects. It sets up a list of strings and several objects of type Lcom/mplus/lib/P4/a; with specific string values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 9
 
@@ -163,6 +164,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/P4/e` with default values. It initializes the object's `d` field to `false` and its `e` field to `-1`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M()Lcom/mplus/lib/P4/e;
     .locals 4
 
@@ -187,6 +189,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/P4/a` using the provided `Lcom/mplus/lib/r4/r` object and conditionally sets its string field based on the result of `Lcom/mplus/lib/r4/r;->b()Z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Lcom/mplus/lib/r4/r;)Lcom/mplus/lib/P4/a;
     .locals 2
 
@@ -214,6 +217,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of `Lcom/mplus/lib/P4/i;` and calls the `W()` method on it. It handles exceptions by re-throwing them after exiting the synchronized block.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized Q()Lcom/mplus/lib/P4/i;
     .locals 3
 
@@ -533,6 +537,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to retrieve a NotificationChannel for a given object, and if it fails, it throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Lcom/mplus/lib/r4/r;)Landroid/app/NotificationChannel;
     .locals 5
 
@@ -856,6 +861,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'f' field of type Lcom/mplus/lib/P4/j; from the class Lcom/mplus/lib/P4/i;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T()Lcom/mplus/lib/P4/j;
     .locals 2
 
@@ -926,6 +932,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and populates a HashMap with notification channel settings if it hasn't been done before.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()V
     .locals 12
 
@@ -1267,6 +1274,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new NotificationCompat.Builder instance using a NotificationChannel ID. It returns this builder instance as an object of type Lcom/mplus/lib/P4/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X(Lcom/mplus/lib/P4/a;)Lcom/mplus/lib/P4/d;
     .locals 3
 
@@ -1299,6 +1307,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls a function to set an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y(I)V
     .locals 2
 
@@ -1329,6 +1338,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to reset and reinitialize notification channels.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized Z()V
     .locals 5
 
@@ -1433,6 +1443,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the resurrection of a notification channel, checking if a channel exists and if not, creates a new one based on provided data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0(Lcom/mplus/lib/r4/n;)V
     .locals 7
 
@@ -1771,6 +1782,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates and configures a notification channel based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b0(ZLcom/mplus/lib/r4/p;)V
     .locals 9
 
@@ -2453,6 +2465,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates or retrieves a NotificationChannel and optionally updates or notifies a listener about the channel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d0(Lcom/mplus/lib/P4/a;Z)Landroid/app/NotificationChannel;
     .locals 3
 
@@ -2833,6 +2846,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the importance of a notification channel based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f0(Lcom/mplus/lib/r4/l;Ljava/lang/String;)V
     .locals 4
 
@@ -3001,6 +3015,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks the app version and performs various initialization and migration tasks based on the version.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g0()V
     .locals 7
 
@@ -3391,6 +3406,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles notification channel operations, including creating or updating channels and storing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h0(Lcom/mplus/lib/r4/n;)V
     .locals 6
 

@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/O3/A; with various parameters. It sets the object's fields with the provided values and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/Z;Landroid/view/KeyEvent$Callback;JZLcom/inmobi/media/ra;I)V
     .locals 0
 

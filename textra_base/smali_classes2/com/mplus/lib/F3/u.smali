@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/u, setting up a buffer and output stream. It validates the buffer size and output stream, throwing exceptions if they are invalid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/OutputStream;I)V
     .locals 1
 
@@ -65,6 +66,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method writes a byte to an array and updates an index. It appears to be part of a binary data writing process, taking an integer and a boolean as input.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A(IZ)V
     .locals 2
 
@@ -105,6 +107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to call another method `S` with an integer parameter, then calls method `c0` with a byte array and two integer parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B(I[B)V
     .locals 2
 
@@ -121,6 +124,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls two other methods, Q and D, with specific parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final C(ILcom/mplus/lib/F3/m;)V
     .locals 2
 
@@ -135,6 +139,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes a collection, checks its size, and then notifies the current object with that size and passes itself to the collection for further processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D(Lcom/mplus/lib/F3/m;)V
     .locals 2
 
@@ -173,6 +178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls two other methods, `b0` and `V`, with the provided integer parameter and a hardcoded value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final F(I)V
     .locals 2
 
@@ -187,6 +193,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of operations involving bit shifting and method invocations, likely related to encoding or formatting data. It calls methods `b0`, `X`, and `W` with specific parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final G(IJ)V
     .locals 2
 
@@ -209,6 +216,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `b0(I)` with argument 8 and `W(J)` with a long argument, likely setting and then writing a value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H(J)V
     .locals 2
 
@@ -225,6 +233,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a conditional operation based on the sign of the second parameter `p2`, invoking different methods depending on whether `p2` is non-negative or negative.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final I(II)V
     .locals 2
 
@@ -260,6 +269,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls either `S(I)` or `U(J)` based on the sign of the input integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final J(I)V
     .locals 3
 
@@ -281,6 +291,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method serializes an object of type Lcom/mplus/lib/F3/D0; and writes it using the provided Lcom/mplus/lib/F3/T0; serializer. It also updates the internal state of the class Lcom/mplus/lib/F3/u;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K(ILcom/mplus/lib/F3/D0;Lcom/mplus/lib/F3/T0;)V
     .locals 2
 
@@ -317,6 +328,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes the serialized size and data of an object implementing Lcom/mplus/lib/F3/D0; to the current object. It calls getSerializedSize and writeTo methods on the provided object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L(Lcom/mplus/lib/F3/D0;)V
     .locals 2
 
@@ -335,6 +347,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of operations involving method calls to Q, R, and L, potentially related to state management or configuration. It takes an integer and an object of type Lcom/mplus/lib/F3/D0; as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(ILcom/mplus/lib/F3/D0;)V
     .locals 4
 
@@ -371,6 +384,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of operations involving method calls with integer and object parameters. It invokes various methods on the current object, passing different integer values and an object of type Lcom/mplus/lib/F3/m.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(ILcom/mplus/lib/F3/m;)V
     .locals 4
 
@@ -401,6 +415,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method Q with the provided integer and the value 2, then calls method P with the provided string. It then returns without using the result of these calls.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O(ILjava/lang/String;)V
     .locals 2
 
@@ -415,6 +430,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to be responsible for encoding a given string using a custom encoding scheme and storing the result in a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Ljava/lang/String;)V
     .locals 7
 
@@ -616,6 +632,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method shifts the first parameter 3 bits to the left, performs a bitwise OR operation with the second parameter, and then calls method S with the result. It appears to be modifying and passing parameters to another method for further processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(II)V
     .locals 1
 
@@ -634,6 +651,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of operations, including calling other methods `b0`, `X`, and `Y` with various parameters. It seems to be involved in some kind of initialization or setup process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(II)V
     .locals 2
 
@@ -656,6 +674,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls two other methods, `b0` and `Y`, with the provided integer parameter and a hardcoded value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(I)V
     .locals 2
 
@@ -672,6 +691,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of operations, including invoking other methods `b0`, `X`, and `Z` with various parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(IJ)V
     .locals 2
 
@@ -696,6 +716,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `b0(I)` with argument 10 and `Z(J)` with a long argument, likely performing some initialization or setup. It then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(J)V
     .locals 2
 
@@ -996,6 +1017,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method shifts the first parameter 3 bits to the left, performs a bitwise OR operation with the second parameter, and then calls method Y with the result. It appears to be a simple bitwise operation wrapper.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X(II)V
     .locals 1
 
@@ -1312,6 +1334,7 @@
     goto :goto_1
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to an output stream and then resets a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0()V
     .locals 5
 
@@ -1334,6 +1357,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the difference between two instance variables (`g` and `h`) is less than the input parameter `p1`, and if so, calls the `a0()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b0(I)V
     .locals 3
 
@@ -1363,6 +1387,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a portion of a byte array to an internal buffer or an output stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c0([BII)V
     .locals 5
 
@@ -1444,6 +1469,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `c0` with the provided byte array and integers. It appears to be a wrapper or helper method for `c0`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(II[B)V
     .locals 1
 

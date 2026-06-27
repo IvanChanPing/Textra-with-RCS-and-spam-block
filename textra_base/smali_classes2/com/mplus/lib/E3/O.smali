@@ -43,6 +43,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an enum class with various parcel carrier constants and creates a mapping of integer values to these constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 15
 
@@ -209,6 +210,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum object with a string, index, and an additional integer value. It sets the integer value to a field 'a' in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -219,6 +221,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of `Lcom/mplus/lib/E3/O` objects. It appears to be an implementation of the `values()` method, commonly used in Java enums.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/E3/O;
     .locals 2
 

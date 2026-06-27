@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method takes a string, parses it into an ArrayList of integers, and returns a `Lcom/mplus/lib/K5/a` object based on the parsed integers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/lang/String;)Lcom/mplus/lib/K5/a;
     .locals 6
 
@@ -134,6 +135,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method takes an object of type Lcom/mplus/lib/K5/a and returns a string representation of its properties. It extracts integers from the object and its nested objects, converts them to strings, and then joins these strings with commas.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Lcom/mplus/lib/K5/a;)Ljava/lang/String;
     .locals 4
 
@@ -229,6 +231,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string by calling a static method `i` with the result of `h()` which presumably retrieves some data. It then returns this string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 2
 
@@ -249,6 +252,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/K5/a. It appears to be a bridge method that delegates to the h() method of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic get()Ljava/lang/Object;
     .locals 2
 
@@ -407,6 +411,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets an object by casting it to Lcom/mplus/lib/K5/a, extracting a string from it, and then calling another method f with that string. It appears to be part of a class that handles some form of data or configuration setting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(Ljava/lang/Object;)V
     .locals 1
 

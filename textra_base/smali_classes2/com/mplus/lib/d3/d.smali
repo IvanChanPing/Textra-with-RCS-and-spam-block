@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/d3/d class, setting its properties based on the provided boolean parameter. It sets the object's fields, including a self-reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Z)V
     .locals 1
 
@@ -50,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/d3/d class, setting its properties and establishing relationships between objects. It appears to be a constructor that sets up a complex object graph with bidirectional references.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ZLcom/mplus/lib/d3/d;Ljava/lang/Object;Lcom/mplus/lib/d3/d;Lcom/mplus/lib/d3/d;)V
     .locals 0
 
@@ -191,6 +193,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object stored in the 'h' field of the class. It simply retrieves and returns the stored object without any modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue()Ljava/lang/Object;
     .locals 2
 
@@ -199,6 +202,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object by XORing the hash codes of its `f` and `h` fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -249,6 +253,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of an object and returns the previous value, throwing a NullPointerException if the new value is null and a certain condition is not met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -284,6 +289,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, concatenating the string values of its `f` and `h` fields with an "=" sign in between.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

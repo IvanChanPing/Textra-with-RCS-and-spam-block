@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/i9/r class, storing a reference to a VastVideoPlayerPresenter. It sets up the object with the provided presenter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/video/vast/vastplayer/VastVideoPlayerPresenter;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the event when a render process is gone, notifying the VastVideoPlayer's event listener and then resetting the VastVideoPlayerPresenter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onRenderProcessGone()V
     .locals 5
 
@@ -66,6 +68,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a VAST element click event, triggering companion click tracking and notifying event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onVastElementClicked(Ljava/lang/String;)V
     .locals 7
 
@@ -162,6 +165,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a VAST element error by logging a debug message and notifying the VastVideoPlayerPresenter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onVastElementError(I)V
     .locals 6
 
@@ -210,6 +214,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a "onCompanionRendered" debug message and triggers a VAST creative view event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onVastElementRendered()V
     .locals 6
 

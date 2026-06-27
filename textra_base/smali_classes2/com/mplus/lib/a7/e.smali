@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a7/e; that initializes an object with parameters and calls the superclass constructor. It sets the object's field 'n' to the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/T4/d;I)V
     .locals 0
 
@@ -23,6 +24,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a7/e, setting its text resource and layout ID. It also calls the superclass constructor with a context and null arguments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/a;I)V
     .locals 1
 
@@ -61,6 +63,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the maximum number of lines for a `TextView` based on the value of `n` in the class `Lcom/mplus/lib/a7/e;`. It only performs this action when `n` is equal to 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n(Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -97,6 +100,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to handle a CharSequence, conditionally calling the superclass method based on the value of a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public u(Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -121,6 +125,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of `n` and performs different actions based on its value, specifically handling the case when `n` is 3 by retrieving a string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w()V
     .locals 2
 

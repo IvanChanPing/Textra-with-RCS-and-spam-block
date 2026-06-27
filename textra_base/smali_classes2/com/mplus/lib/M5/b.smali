@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/M5/b, setting its 'a' field to the provided Lcom/mplus/lib/M5/f object. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/M5/f;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws the background of a view on a canvas, potentially clipping the canvas to the view's bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public drawBackground(Landroid/view/View;Landroid/graphics/Canvas;)V
     .locals 9
 
@@ -92,6 +94,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls a `d` method on an object of type `Lcom/mplus/lib/b2/d;`, passing in a double value of 0.0 and a boolean value of true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public run()V
     .locals 5
 

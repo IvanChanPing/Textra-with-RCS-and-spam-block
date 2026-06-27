@@ -216,6 +216,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the text of a `BubbleView` with a new list of items from a `D6/g` object if the object's ID matches the current ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 6
 
@@ -343,6 +344,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name and a value from the `d` field if it's not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

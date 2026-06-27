@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/E5/a, which appears to be a custom ArrayAdapter, with a given FragmentActivity and ArrayList. It sets up the adapter with the provided context and list, and also initializes an LayoutInflater instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroidx/fragment/app/FragmentActivity;Ljava/util/ArrayList;)V
     .locals 1
 
@@ -35,6 +36,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the ID of an item at a given position in a list. It retrieves the item, casts it to Lcom/mplus/lib/E5/b, and returns the 'b' field as a long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 3
 
@@ -57,6 +59,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method determines the item view type for a given position in an ArrayAdapter. It checks if the item at the specified position is an instance of Lcom/mplus/lib/E5/c and returns 1 if true, otherwise returns 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemViewType(I)I
     .locals 1
 
@@ -94,6 +97,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method generates and returns a View for a specific item in a list, based on the item's type and data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 5
 
@@ -256,6 +260,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an item at a given position is enabled based on its view type. It returns true if the view type is 1, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEnabled(I)Z
     .locals 2
 

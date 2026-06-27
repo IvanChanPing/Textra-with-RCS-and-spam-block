@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/u3/f class, setting its fields with provided parameters. It constructs an object with references to Lcom/mplus/lib/u3/h and Lcom/mplus/lib/u3/a instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/u3/h;Lcom/mplus/lib/u3/a;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object by creating a new instance of `Lcom/mplus/lib/u3/t` and passing it to the `create` method of `Lcom/mplus/lib/u3/d`. It returns the resulting object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 5
 

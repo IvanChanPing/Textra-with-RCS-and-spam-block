@@ -378,6 +378,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string represents an audio file path or MIME type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/String;)Z
     .locals 3
 
@@ -426,6 +427,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string represents a calendar MIME type. It returns true if the string is "text/calendar" or "text/x-vcalendar" (ignoring case), and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/lang/String;)Z
     .locals 2
 
@@ -470,6 +472,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string represents the MIME type of a GIF image and returns true if it does, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;)Z
     .locals 2
 
@@ -501,6 +504,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is equal to "text/html" (case-insensitive) and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/lang/String;)Z
     .locals 2
 
@@ -534,6 +538,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string starts with "image/" (case-insensitive) and returns true if it does, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Ljava/lang/String;)Z
     .locals 2
 
@@ -631,6 +636,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string represents the MIME type "text/plain" (case-insensitive) and returns true if it does, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/lang/String;)Z
     .locals 2
 
@@ -668,6 +674,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is present in a predefined list, returning true if found and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Ljava/lang/String;)Z
     .locals 2
 
@@ -707,6 +714,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is equal to "text/x-vcard" (case-insensitive) and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Ljava/lang/String;)Z
     .locals 2
 
@@ -740,6 +748,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string starts with "video/" (case-insensitive) and returns true if it does, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/lang/String;)Z
     .locals 2
 

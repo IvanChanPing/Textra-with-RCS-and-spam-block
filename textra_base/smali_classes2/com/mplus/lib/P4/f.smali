@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array `a` with a single element, a long value of 0. It sets up the class's static field `a` with this array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -495,6 +496,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an `AudioAttributes` object with usage type 5. It builds the object using an `AudioAttributes$Builder`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d()Landroid/media/AudioAttributes;
     .locals 3
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the M2 class, passing a zzawb object to a new instance of L2. It sets this L2 instance as a field in the M2 class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzawb;)V
     .locals 1
 
@@ -30,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the M2 class, wrapping a provided Callable object. It creates a new instance of L2, passing the current M2 instance and the Callable to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Callable;)V
     .locals 1
 
@@ -46,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method runs another method if a certain object is not null, then sets that object to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 
@@ -110,6 +113,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and conditionally calls `g()` on an object, then sets the object to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()V
     .locals 2
 

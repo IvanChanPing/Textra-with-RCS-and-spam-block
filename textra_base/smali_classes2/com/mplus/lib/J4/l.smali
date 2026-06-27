@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a singleton instance of `Lcom/mplus/lib/J4/l;` and initializes its `c` field with a `Vibrator` object if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized M()Lcom/mplus/lib/J4/l;
     .locals 5
 

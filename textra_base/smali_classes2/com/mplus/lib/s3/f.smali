@@ -48,6 +48,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'b' field of the first Lcom/mplus/lib/s3/n object to the second Lcom/mplus/lib/s3/n object. It modifies the object's state by updating a reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L(Lcom/mplus/lib/s3/n;Lcom/mplus/lib/s3/n;)V
     .locals 1
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'a' field of the provided Lcom/mplus/lib/s3/n object to the given Thread and then returns. It appears to be configuring or updating the object with the new thread information.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/s3/n;Ljava/lang/Thread;)V
     .locals 1
 
@@ -66,6 +68,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object's current state matches a given state, and if so, updates it to a new state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p(Lcom/mplus/lib/s3/o;Lcom/mplus/lib/s3/c;Lcom/mplus/lib/s3/c;)Z
     .locals 2
 
@@ -118,6 +121,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method checks if the object stored in `Lcom/mplus/lib/s3/o;->a` matches the provided object `p2`, and if so, updates it with `p3` and returns true. If not, it returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Lcom/mplus/lib/s3/o;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 
@@ -170,6 +174,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific object matches another and updates it if they match, returning true if updated and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Lcom/mplus/lib/s3/o;Lcom/mplus/lib/s3/n;Lcom/mplus/lib/s3/n;)Z
     .locals 2
 
@@ -218,6 +223,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method checks and potentially updates the state of an object of type Lcom/mplus/lib/s3/o;, returning its previous state of type Lcom/mplus/lib/s3/c;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z(Lcom/mplus/lib/s3/o;)Lcom/mplus/lib/s3/c;
     .locals 3
 

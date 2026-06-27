@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Y2/w, storing a TaskCompletionSource and calling the superclass constructor. It sets up the object with a TaskCompletionSource for later use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a Status object based on a Geofence status code and sets it as the result of a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(I[Ljava/lang/String;)V
     .locals 1
 
@@ -53,6 +55,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a Status object based on a provided geofence status code and sets it as the result of a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(ILandroid/app/PendingIntent;)V
     .locals 1
 
@@ -81,6 +84,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a Status object based on a Geofence status code and sets it as the result of a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(I[Ljava/lang/String;)V
     .locals 1
 

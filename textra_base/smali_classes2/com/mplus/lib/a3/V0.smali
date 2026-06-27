@@ -190,6 +190,7 @@
     return-object v4
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific shared storage value matches the string "STATE_AND_NATIONAL". It returns true if they match, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static B()Z
     .locals 3
 
@@ -520,6 +521,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to read from an input stream using multiple strategies defined in an ArrayList, returning the result of the first successful strategy.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static F(Ljava/util/ArrayList;Ljava/io/InputStream;Lcom/mplus/lib/F1/g;)I
     .locals 5
 
@@ -620,6 +622,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to parse the image type from an input stream using a list of parsers. It returns the image type if a parser is successful, otherwise it returns UNKNOWN.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static G(Ljava/util/ArrayList;Ljava/io/InputStream;Lcom/mplus/lib/F1/g;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 4
 
@@ -723,6 +726,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to determine the image type from a given ByteBuffer by iterating over a list of image parsers and returning the first successful parse result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static H(Ljava/util/ArrayList;Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 6
 
@@ -949,6 +953,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Uri has the "content" scheme and "media" authority.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static J(Landroid/net/Uri;)Z
     .locals 3
 
@@ -1010,6 +1015,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an Activity is a child and applies a function to its parent if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static K(Landroid/app/Activity;Lcom/mplus/lib/B2/g;)Z
     .locals 2
 
@@ -1051,6 +1057,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given character is a whitespace or space character.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final L(C)Z
     .locals 2
 
@@ -1096,6 +1103,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a drawable resource from the given context, applying the provided theme if available. It then returns the retrieved drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(Landroid/content/Context;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
@@ -1135,6 +1143,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts a given string to lowercase in English locale if it's not null, otherwise returns an empty string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -1686,6 +1695,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static T([BILcom/mplus/lib/a3/d3;)I
     .locals 3
 
@@ -1767,6 +1777,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an integer is negative and throws an IllegalArgumentException if it is. It constructs an error message with the provided string and the negative integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static U(ILjava/lang/String;)V
     .locals 3
 
@@ -2005,6 +2016,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle an object and perform some operation with it, then release the object and return an integer result. It also sets an object reference in the provided `d3` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Y(Lcom/mplus/lib/f3/y0;[BIIILcom/mplus/lib/a3/d3;)I
     .locals 8
 
@@ -2055,6 +2067,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method appears to parse and process data from a byte array, utilizing various helper methods and interfaces.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Z(Lcom/mplus/lib/f3/y0;I[BIILcom/google/android/gms/internal/play_billing/zzho;Lcom/mplus/lib/a3/d3;)I
     .locals 8
 
@@ -2181,6 +2194,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol message from a byte array and invokes a method on an object for each field in the message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a0([BILcom/google/android/gms/internal/play_billing/zzho;Lcom/mplus/lib/a3/d3;)I
     .locals 3
 
@@ -2232,6 +2246,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protocol buffer message from a byte array. It handles various wire types and field numbers, and stores the parsed data in a `zzjk` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b0(I[BIILcom/google/android/gms/internal/play_billing/zzjk;Lcom/mplus/lib/a3/d3;)I
     .locals 9
 
@@ -2498,6 +2513,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method reads a byte from an array and updates a field in an object if the byte is non-negative, otherwise it calls another method to handle the byte.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c0([BILcom/mplus/lib/a3/d3;)I
     .locals 2
 
@@ -2525,6 +2541,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method decodes a variable-length integer from a byte array and stores the result in an object of type Lcom/mplus/lib/a3/d3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d0(I[BILcom/mplus/lib/a3/d3;)I
     .locals 3
 
@@ -2671,6 +2688,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method parses a string in the format of two integers separated by a hyphen and returns an object of type `Lcom/mplus/lib/z9/e` based on the parsed integers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Ljava/lang/String;)Lcom/mplus/lib/z9/e;
     .locals 5
 
@@ -3031,6 +3049,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method reads a variable-length integer from a byte array and stores it in an object of type Lcom/mplus/lib/a3/d3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f0([BILcom/mplus/lib/a3/d3;)I
     .locals 10
 
@@ -3164,6 +3183,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method invokes a Google Play Billing API method to process a request, incrementing a recursion counter and throwing an exception if the recursion limit is exceeded.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g0(Ljava/lang/Object;Lcom/mplus/lib/f3/y0;[BIIILcom/mplus/lib/a3/d3;)I
     .locals 4
 
@@ -3235,6 +3255,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided Boolean object is true and logs a string based on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Ljava/lang/String;Ljava/lang/Boolean;)V
     .locals 2
 
@@ -3374,6 +3395,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method adds a listener to an object of type Lcom/mplus/lib/s3/v using an Executor. It creates a new instance of Lcom/mplus/lib/s3/s and passes it to the addListener method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Lcom/mplus/lib/s3/v;Lcom/mplus/lib/s3/r;Ljava/util/concurrent/Executor;)V
     .locals 3
 
@@ -3694,6 +3716,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a shared storage instance if it exists, otherwise it logs an error and throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m()Lcom/inmobi/cmp/data/storage/SharedStorage;
     .locals 2
 
@@ -3719,6 +3742,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an IllegalArgumentException if the input boolean is false. It constructs the exception message using the input string and long parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(JLjava/lang/String;Z)V
     .locals 1
 
@@ -3862,6 +3886,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is null and throws a NullPointerException with a given message if it is. It returns immediately if the object is not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
@@ -4171,6 +4196,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method closes a Closeable object, handling any exceptions that occur during closure. If an exception is provided, it also chains any closure exceptions to the provided exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final u(Ljava/io/Closeable;Ljava/lang/Throwable;)V
     .locals 1
 
@@ -4809,6 +4835,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a class using an interface, returning null if the object is not found. It checks the result of `b(Ljava/lang/Class;)` and calls `get()` on the result if it's not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 1
 
@@ -4838,6 +4865,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a set of objects based on the provided class. It does this by first getting an instance of `Lcom/mplus/lib/B3/a;` using the `c` method of `Lcom/mplus/lib/u3/b;`, then invoking the `get` method on that instance and casting the result to a `Ljava/util/Set;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(Ljava/lang/Class;)Ljava/util/Set;
     .locals 1
 

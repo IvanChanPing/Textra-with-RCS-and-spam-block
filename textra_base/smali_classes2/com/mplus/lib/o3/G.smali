@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/G, setting its properties and calling the superclass constructor. It sets the object's properties, including an integer and an iterable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/mplus/lib/o3/U;)V
     .locals 1
 

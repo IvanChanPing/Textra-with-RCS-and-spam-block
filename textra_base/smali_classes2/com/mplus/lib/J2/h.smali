@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/J2/h; that initializes an instance with a zaaw object. It sets the object as a field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/common/api/internal/zaaw;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a Google API connection event, specifically invoking the `zad` method on a `zae` interface instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onConnected(Landroid/os/Bundle;)V
     .locals 3
 
@@ -75,6 +77,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a Google API connection failure by attempting to resolve the issue or notify the user.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 3
 

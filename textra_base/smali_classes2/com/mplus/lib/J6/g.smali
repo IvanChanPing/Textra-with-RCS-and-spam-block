@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/J6/g class with the provided parameters. It sets the object's fields with the given values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/J6/s;Ljava/util/List;Lcom/mplus/lib/J6/a;Lcom/mplus/lib/J6/b;Lcom/mplus/lib/B2/l;Lcom/mplus/lib/J6/a;)V
     .locals 0
 
@@ -48,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts an object, checks its type, and performs different actions based on the type, including updating UI elements and scheduling delayed tasks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 10
 

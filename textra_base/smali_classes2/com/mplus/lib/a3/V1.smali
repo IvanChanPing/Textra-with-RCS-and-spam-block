@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method invokes the zza method of a zzahx interface instance, passing a Throwable object, and returns the result. It appears to be a wrapper around the zza method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic b(Ljava/lang/Object;Ljava/lang/Throwable;)Ljava/lang/Object;
     .locals 1
 

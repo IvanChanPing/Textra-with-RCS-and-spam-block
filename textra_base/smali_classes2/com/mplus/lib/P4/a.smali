@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/P4/a class, setting a string field 'f' to an empty string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes a NotificationChannel object, extracts its ID, and uses it to retrieve a P4/a object. It returns the retrieved P4/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Landroid/app/NotificationChannel;)Lcom/mplus/lib/P4/a;
     .locals 1
 
@@ -496,6 +498,7 @@
     return v3
 .end method
 
+# M-ROLE [GROQ]: This method replaces "|" with a space in the input string and truncates it to 60 characters if it's longer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
@@ -554,6 +557,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/P4/a` and populates its fields with data from the provided `Lcom/mplus/lib/r4/r` object. It initializes the object's fields `a`, `b`, `c`, and `d` with string values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Lcom/mplus/lib/r4/r;)Lcom/mplus/lib/P4/a;
     .locals 3
 
@@ -600,6 +604,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/P4/a` and initializes its fields with the provided string and empty strings. It then returns the newly created instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Ljava/lang/String;)Lcom/mplus/lib/P4/a;
     .locals 3
 
@@ -628,6 +633,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates and returns a formatted string based on the object's properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 5
 
@@ -803,6 +809,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from `Lcom/mplus/lib/T4/q;->h()` and appends it to a string, then assigns the resulting string to the `d` field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()V
     .locals 3
 
@@ -855,6 +862,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of calling the 'a()' method on the current object. It does not use the returned integer value 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

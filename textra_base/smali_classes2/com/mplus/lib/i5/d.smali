@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/i5/d. It creates a new object with default values and assigns it to the static field f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 6
 
@@ -47,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/i5/d, setting its properties with the provided parameters. It also converts the fifth parameter to uppercase if it's not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(IILjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -79,6 +81,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a string representation of a `SimpleSubscriptionInfo` object, including its index, subId, display, phone, and country.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

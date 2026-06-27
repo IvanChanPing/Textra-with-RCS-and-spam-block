@@ -45,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the object's state by modifying its fields and then calls another method `b()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 2
 
@@ -436,6 +437,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of a directed graph in the DOT language. It utilizes the `c` method to append graph details to a `StringBuilder`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

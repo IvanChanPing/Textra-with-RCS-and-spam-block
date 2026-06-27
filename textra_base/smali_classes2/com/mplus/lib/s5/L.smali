@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a synthetic constructor for class Lcom/mplus/lib/s5/L, setting an integer field 'a' and calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the changing configurations of an object, with the value determined by a switch statement based on the object's state. It returns 0 for the default case and when the object's state is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getChangingConfigurations()I
     .locals 2
 

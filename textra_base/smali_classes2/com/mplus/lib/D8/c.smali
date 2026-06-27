@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a new value is different from the current value and updates the value using the superclass's `newValue` method if they are different. It then returns without any further action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newValue(Ljava/lang/Object;)V
     .locals 2
 

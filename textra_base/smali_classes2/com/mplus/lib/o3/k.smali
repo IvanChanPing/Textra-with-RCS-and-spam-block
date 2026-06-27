@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/k, setting its 'e' field and calling the superclass constructor. It takes an Lcom/mplus/lib/o3/l object as a parameter and stores it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/l;)V
     .locals 0
 
@@ -26,6 +27,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/k, setting its 'e' field and calling the superclass constructor with a list iterator. It takes an Lcom/mplus/lib/o3/l object and an integer index as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/l;I)V
     .locals 1
 
@@ -46,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds an object to a list and updates a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)V
     .locals 4
 
@@ -89,6 +92,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator object after calling method b() on the current object. It appears to be part of a class that manages an iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Ljava/util/ListIterator;
     .locals 2
 
@@ -105,6 +109,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a previous element in a list iterator. It returns a boolean value indicating whether a previous element exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -123,6 +128,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the index of the next element in a list iterator. It delegates the call to the `nextIndex()` method of a `ListIterator` object obtained from the `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 2
 
@@ -139,6 +145,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous object in a list iteration. It invokes the `previous()` method on a `ListIterator` object obtained from the `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 2
 
@@ -157,6 +164,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the index of the element that would be returned by a call to the `previous()` method of a `ListIterator`. It delegates the call to the `previousIndex()` method of a `ListIterator` object obtained from the `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 
@@ -175,6 +183,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets an object in a list using a ListIterator. It invokes the set method on the iterator, passing the provided object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(Ljava/lang/Object;)V
     .locals 2
 

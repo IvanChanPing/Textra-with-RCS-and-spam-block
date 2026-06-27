@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/m0, initializing its fields with provided parameters. It sets the object's fields 'a' and 'b' to the given Lcom/inmobi/media/Ba and Lcom/inmobi/media/za instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/Ba;Lcom/inmobi/media/za;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a key event on an Android view, delegating the handling to the `Lcom/inmobi/media/za;->a` method. It returns a boolean indicating whether the event was handled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 3
 

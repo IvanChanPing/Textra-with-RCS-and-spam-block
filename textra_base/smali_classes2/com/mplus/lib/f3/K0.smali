@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f3/K0 class with five AtomicReferenceFieldUpdater objects. It sets these updaters as fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
     .locals 0
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a field of the provided object `p1` to `p2` using an `AtomicReferenceFieldUpdater`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/google/android/gms/internal/play_billing/p;Ljava/lang/Thread;)V
     .locals 2
 
@@ -63,6 +65,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the zza function from the zzk class in the com/google/android/gms/internal/play_billing package, passing an AtomicReferenceFieldUpdater and three objects, to perform an atomic update operation. It returns a boolean indicating the success of the operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/google/android/gms/internal/play_billing/zzq;Lcom/mplus/lib/f3/z0;Lcom/mplus/lib/f3/z0;)Z
     .locals 2
 
@@ -75,6 +78,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to perform an atomic update operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/google/android/gms/internal/play_billing/zzq;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 
@@ -93,6 +97,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls the zza function from the zzk class in the com/google/android/gms/internal/play_billing package to perform an atomic update operation. It returns a boolean value indicating the success of the operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/google/android/gms/internal/play_billing/zzq;Lcom/google/android/gms/internal/play_billing/p;Lcom/google/android/gms/internal/play_billing/p;)Z
     .locals 2
 

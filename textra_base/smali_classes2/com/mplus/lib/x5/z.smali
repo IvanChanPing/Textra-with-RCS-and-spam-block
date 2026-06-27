@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method traverses up the view hierarchy to find the nearest parent that implements the Lcom/mplus/lib/x5/z interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public B()Lcom/mplus/lib/x5/z;
     .locals 4
 
@@ -70,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes a view from its parent. It takes an object of type Lcom/mplus/lib/x5/y, retrieves its view, and then removes it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Lcom/mplus/lib/x5/y;)V
     .locals 1
 
@@ -95,6 +97,7 @@
 .method public abstract addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 .end method
 
+# M-ROLE [GROQ]: This method inflates a view from a given layout resource ID and returns the inflated view as an instance of Lcom/mplus/lib/x5/y. It utilizes the LayoutInflater to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(I)Lcom/mplus/lib/x5/y;
     .locals 4
 
@@ -127,6 +130,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method adds a `Lcom/mplus/lib/C5/a` object to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(Lcom/mplus/lib/C5/a;)V
     .locals 2
 
@@ -204,6 +208,7 @@
 .method public abstract setClipToPadding(Z)V
 .end method
 
+# M-ROLE [GROQ]: This method sets the dispatch touch events flag in the view state. It updates the 'f' field of the view state object based on the input boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setDispatchTouchEvents(Z)V
     .locals 2
 

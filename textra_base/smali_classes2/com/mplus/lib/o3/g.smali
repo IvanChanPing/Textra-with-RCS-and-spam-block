@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/g, setting its 'e' field and calling the superclass constructor. It takes a Lcom/mplus/lib/o3/v0 object and a NavigableMap as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/v0;Ljava/util/NavigableMap;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a SortedMap by calling another method `b()` that returns a NavigableMap. It essentially acts as a bridge to return a NavigableMap as a SortedMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic a()Ljava/util/SortedMap;
     .locals 2
 
@@ -42,6 +44,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a NavigableMap object from a sorted map. It casts an existing map object to a NavigableMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/util/NavigableMap;
     .locals 2
 
@@ -54,6 +57,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the ceiling key from a NavigableMap for a given object. It essentially returns the smallest key greater than or equal to the given object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final ceiling(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -74,6 +78,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a descending iterator over a set. It first retrieves a descending set and then returns an iterator over that set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final descendingIterator()Ljava/util/Iterator;
     .locals 2
 
@@ -94,6 +99,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a NavigableSet view of the keys in the map, in descending order. It creates a new instance of the class with a descending map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final descendingSet()Ljava/util/NavigableSet;
     .locals 4
 
@@ -124,6 +130,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the floor key from a NavigableMap. It returns the greatest key less than or equal to the given object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final floor(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -142,6 +149,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new NavigableSet by invoking the headMap method on a NavigableMap and returns it wrapped in a new instance of Lcom/mplus/lib/o3/g. It essentially returns a subset of the original map, including or excluding the specified object based on the boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
     .locals 3
 
@@ -170,6 +178,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a SortedSet containing elements less than a given object. It delegates to another headSet method with an additional boolean parameter set to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 2
 
@@ -186,6 +195,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the higher key from a NavigableMap. It takes an object as input and returns the next higher key object from the map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final higher(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -206,6 +216,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the key lower than the given key from a NavigableMap. It returns the lower key object if it exists, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lower(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -226,6 +237,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and removes the first element from a collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final pollFirst()Ljava/lang/Object;
     .locals 3
 
@@ -267,6 +279,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and removes the last element from a collection by using a descending iterator. It returns the last element if it exists, otherwise it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final pollLast()Ljava/lang/Object;
     .locals 3
 
@@ -304,6 +317,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new `Lcom/mplus/lib/o3/g` instance based on a subset of a navigable map. It returns this new instance as a `Ljava/util/NavigableSet`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subSet(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableSet;
     .locals 3
 
@@ -330,6 +344,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a subset of a sorted set, delegating to another method `subSet` with specific boolean parameters. It effectively creates a navigable subset based on the provided objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
@@ -348,6 +363,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new NavigableSet containing the elements of the original set that are greater than or equal to a specified object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
     .locals 3
 
@@ -376,6 +392,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a SortedSet containing all elements greater than or equal to the given object. It delegates to another method, tailSet, with an additional boolean parameter set to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 2
 

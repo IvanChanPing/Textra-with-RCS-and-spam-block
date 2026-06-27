@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/z7/G with two integer parameters. It sets the object's fields 'a' and 'b' to the provided integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(II)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method scales the object's integer fields `a` and `b` by a given float factor `p1`. It modifies the object's state by updating these fields with the scaled values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(F)V
     .locals 2
 
@@ -73,6 +75,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object, comparing the 'a' and 'b' fields if the given object is of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -138,6 +141,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a hash code for the object based on its `a` and `b` fields. It performs bitwise operations on the `a` field and then combines it with the `b` field using XOR.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 

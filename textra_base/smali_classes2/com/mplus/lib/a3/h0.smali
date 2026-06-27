@@ -12,6 +12,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a3/h0. It initializes a new instance of the class by calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -22,6 +23,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current object, specifically comparing sets if the input object is an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzanv.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -76,6 +78,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of a set obtained from the zzc() method of the zzanv interface. It does not use the provided constant 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

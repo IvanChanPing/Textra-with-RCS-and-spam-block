@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B8/b, setting its 'c' field to the provided Function and calling the superclass constructor with the given Iterator and an integer value of 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Iterator;Lcom/smaato/sdk/core/util/fi/Function;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method applies a function to an input object and returns the result. It appears to be a wrapper around the `apply` method of a `com/smaato/sdk/core/util/fi/Function` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

@@ -22,6 +22,7 @@
 .method public abstract c(Ljava/lang/StringBuilder;)V
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current instance by calling the `a(Lcom/mplus/lib/f3/g;)I` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/a3/V2 class, setting its fields with the provided parameters. It appears to be a constructor for the class, storing references to a zzaxv object, an Android Context, and a zzaao object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxv;Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaao;)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and configures a `com/google/android/gms/internal/mlkit_entity_extraction/zzbuf` object, which is then returned as the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Ljava/lang/Object;
     .locals 6
 

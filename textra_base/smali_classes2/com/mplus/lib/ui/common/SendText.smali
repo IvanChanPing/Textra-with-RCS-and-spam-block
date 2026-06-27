@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a SendText object, setting up input filters and content listeners for the view. It disables view saving and sets up listeners for receiving content of specific MIME types.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
@@ -77,6 +78,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the maximum hint width by subtracting the left and right padding from the view's width. It returns this calculated width as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getMaxHintWidth()I
     .locals 3
 
@@ -107,6 +109,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the MIME type of a given Android Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Landroid/net/Uri;)Ljava/lang/String;
     .locals 5
 
@@ -595,6 +598,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the send hint on the next layout by storing the provided object in a field. It does not perform any immediate actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSendHintOnNextLayout(Lcom/mplus/lib/r4/n;)V
     .locals 1
 
@@ -741,6 +745,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a bubble specification for spans from a data source. It returns an instance of Lcom/mplus/lib/v6/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getBubbleSpecForSpans()Lcom/mplus/lib/v6/a;
     .locals 3
 
@@ -771,6 +776,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getLayoutSize function to return a layout size object. It simply calls the superclass's getLayoutSize method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -785,6 +791,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getMeasuredSize function to return the measured size of a view. It simply calls the superclass's getMeasuredSize method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -801,6 +808,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns the result. It does not use the returned value in any further operations, simply passing it through.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -813,6 +821,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() to retrieve the vertical padding. It returns the result as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -831,6 +840,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getVisibileAnimationDelegate` method and returns its result. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -845,6 +855,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result of the superclass's getVisualDebugDelegate function, effectively doing nothing. It always returns the result of the superclass's method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -857,6 +868,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method formats a string based on the size of a collection and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Lcom/mplus/lib/r4/n;Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
     .locals 4
 
@@ -1055,6 +1067,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method inserts or replaces text in an EditText at the current selection position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Ljava/lang/CharSequence;)V
     .locals 9
 
@@ -1209,6 +1222,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method handles the commit content event for an input method, requesting permission if necessary and then scheduling a delayed task to process the content.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCommitContent(Landroidx/core/view/inputmethod/InputContentInfoCompat;ILandroid/os/Bundle;)Z
     .locals 3
 
@@ -1344,6 +1358,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onLayout` method of the `View` class and calls the superclass's implementation, then checks if a certain object (`q`) is not null and if so, calls a private method `setSendHintNow` to set a send hint.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLayout(ZIIII)V
     .locals 1
 
@@ -1424,6 +1439,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -1434,6 +1450,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha (transparency) of an object directly. It calls the setAlpha method of the Lcom/mplus/lib/x5/y interface, passing the provided float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -1444,6 +1461,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the animating drawable type for the SendText class. It stores the provided Class object in a field named 'n'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAnimatingDrawableType(Ljava/lang/Class;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -1463,6 +1481,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate by calling the superclass's setBackgroundDrawingDelegate method. It takes a Lcom/mplus/lib/y5/d; object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -1473,6 +1492,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of an object by calling a static method `x` from class `Lcom/mplus/lib/z7/N`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -1481,6 +1501,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bubble spec source for the SendText class. It stores the provided object in the 'o' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBubbleSpecSource(Lcom/mplus/lib/s5/h;)V
     .locals 1
 
@@ -1491,6 +1512,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the fancy hints for the SendText class by storing the provided integer array in the class field 'p'. It does not perform any validation or processing on the input array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setFancyHints([I)V
     .locals 1
 
@@ -1503,6 +1525,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a send hint for the SendText view, either immediately or on the next layout pass if the view's width is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setFancySendHint(Lcom/mplus/lib/r4/n;)V
     .locals 2
 
@@ -1526,6 +1549,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setHeightTo method, passing the provided height. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -1538,6 +1562,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method with the provided parameter. It then returns immediately without using the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -1562,6 +1587,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method with a Rect object and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -1572,6 +1598,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a view by invoking a static method with the provided margin value and the current object. It appears to be a wrapper around another method that performs the actual margin setting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -1582,6 +1609,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a TextWatcher listener on the current TextView and stores the listener internally. It allows the class to track changes to the text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextChangedListener(Landroid/text/TextWatcher;)V
     .locals 1
 
@@ -1592,6 +1620,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of an object by calling a static method `D` from class `Lcom/mplus/lib/z7/N`. It passes the provided integer `p1` and the current object `p0` as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -1612,6 +1641,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided boolean parameter. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -1624,6 +1654,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method, passing the input boolean parameter. It appears to be a bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -1634,6 +1665,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of an object to a specified value. It invokes a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 
@@ -1644,6 +1676,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Drawable is associated with the current View or an instance of a specific class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 3
 

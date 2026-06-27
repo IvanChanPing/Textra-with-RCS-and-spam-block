@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes and populates a `Lcom/mplus/lib/r4/M` object based on the input `Lcom/mplus/lib/r4/n` object. It checks the size of the input object and sets the size of the `M` object accordingly, then iterates over the `M` object's elements, updating their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static U(Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/r4/M;
     .locals 6
 
@@ -105,6 +106,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of MMS messages from a database and returns them as an ArrayList of Uri objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static V(Lcom/mplus/lib/B2/g;)Ljava/util/ArrayList;
     .locals 7
 
@@ -348,6 +350,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `Lcom/mplus/lib/O4/b` object from a database based on a given `android/net/Uri`. It queries the database, checks if a result exists, and returns the object if found, or null otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Y(Landroid/net/Uri;)Lcom/mplus/lib/O4/b;
     .locals 4
 
@@ -509,6 +512,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method marks a message as delivered.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public W(Ljava/lang/String;)V
     .locals 12
 
@@ -2349,6 +2353,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method processes an MMS message, extracting its parts and handling them accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public Z(Landroid/net/Uri;Lcom/mplus/lib/L4/o;Ljava/lang/String;I)V
     .locals 27
 
@@ -3703,6 +3708,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the 'when' timestamp of a message if it is more than 30 seconds (0x7530 milliseconds) out of date.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b0(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)V
     .locals 10
 

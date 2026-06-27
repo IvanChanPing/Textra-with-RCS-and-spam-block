@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/c9/f, setting its fields with provided Creative and Linear objects. It checks for nullability of the input parameters using Lcom/smaato/sdk/core/util/Objects;->requireNonNull.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/video/vast/model/Creative;Lcom/smaato/sdk/video/vast/model/Linear;)V
     .locals 0
 

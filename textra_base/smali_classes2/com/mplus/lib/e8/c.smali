@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/e8/c with an integer value. It sets the integer value to a field 'a' in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object based on the value of the `a` field in the class `Lcom/mplus/lib/e8/c;`, using a switch statement to determine which object to return.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Lcom/smaato/sdk/core/di/DiConstructor;)Ljava/lang/Object;
     .locals 2
 

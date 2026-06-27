@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/A5/e; with a context and an integer, then calls the superclass constructor. It sets the object's 'h' field to the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the value of the `h` field and returns a boolean based on a switch statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Z
     .locals 2
 
@@ -62,6 +64,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle different states and perform actions based on the state, including checking and updating various object properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 4
 

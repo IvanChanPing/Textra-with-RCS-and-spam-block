@@ -77,6 +77,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/a3/N1 and returns it, ignoring the provided Character parameter. It appears to be a factory method for Lcom/mplus/lib/a3/N1, using the provided Lcom/mplus/lib/a3/M1 instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/a3/M1;Ljava/lang/Character;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzauc;
     .locals 1
 
@@ -89,6 +90,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method encodes a given CharSequence into a byte array using a custom encoding scheme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([BLjava/lang/CharSequence;)I
     .locals 6
 

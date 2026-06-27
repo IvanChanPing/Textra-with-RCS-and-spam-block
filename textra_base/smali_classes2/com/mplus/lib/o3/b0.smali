@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/o3/b0 class, setting its 'b' field to the provided Lcom/mplus/lib/o3/V object. It extends the Java AbstractCollection class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/V;)V
     .locals 0
 

@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/i5/a; based on the input parameter, creating different types of objects and assigning them to instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -120,6 +121,7 @@
     .end sparse-switch
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/i5/a; that initializes its fields with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
@@ -134,6 +136,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/i5/a; that initializes its fields with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;Z)V
     .locals 0
 
@@ -148,6 +151,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/i5/a; that initializes an integer field 'a' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(IZ)V
     .locals 0
 
@@ -158,6 +162,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i5/a, setting its properties and creating an ArrayList. It takes an Android Context as a parameter and stores it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
@@ -310,6 +315,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i5/a, setting its fields with default values and a provided IntSupplier.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/function/IntSupplier;)V
     .locals 1
 
@@ -525,6 +531,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It invokes a helper method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final I()Ljava/lang/String;
     .locals 2
 
@@ -539,6 +546,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string that includes information about the object's usage, specifically appending the string representation of an object of type Lcom/mplus/lib/z7/G.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final J()Ljava/lang/String;
     .locals 3
 
@@ -713,6 +721,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and populates a `ChoiceColor` object from a given `JSONObject`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lorg/json/JSONObject;)Lcom/inmobi/cmp/data/model/ChoiceColor;
     .locals 3
 
@@ -1136,6 +1145,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a string object is null or empty, returning true if it is and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public B()Z
     .locals 2
 
@@ -1236,6 +1246,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string value from a HashMap based on a given long parameter, and if the HashMap is empty, it populates it by querying the device's SMS and MMS conversations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public D(J)Ljava/lang/String;
     .locals 11
 
@@ -1525,6 +1536,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method constructs and returns a query string from a TreeMap object, excluding certain keys like "oauth_signature" and "realm".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public E()Ljava/lang/String;
     .locals 12
 
@@ -1769,6 +1781,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method constructs a URL string by combining the scheme, authority, and path of a given `HttpURLConnection` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public F()Ljava/lang/String;
     .locals 6
 
@@ -1932,6 +1945,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds or removes a Long object from an ArrayList based on a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public G(Ljava/lang/Long;Z)V
     .locals 3
 
@@ -2085,6 +2099,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes a given string from a HashSet and then notifies all waiting threads.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public M(Ljava/lang/String;)V
     .locals 3
 
@@ -2135,6 +2150,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method takes a long value, converts it to a Long object, and then calls method G with this object and a boolean value of true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public N(J)V
     .locals 1
 
@@ -2153,6 +2169,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list of Long objects and calls method G on each object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public O(Ljava/util/List;)V
     .locals 3
 
@@ -2197,6 +2214,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to parse a JSON string into a `Lcom/mplus/lib/Ea/i` object, and returns the object if successful, or a default object with error handling if parsing fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/String;)Ljava/lang/Object;
     .locals 12
 
@@ -2389,6 +2407,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Long object is contained in an ArrayList and returns the result, potentially inverting it based on a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/lang/Object;)Z
     .locals 2
 
@@ -2424,6 +2443,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles an exception by calling a method on an object of type Lcom/mplus/lib/E1/m; if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Ljava/lang/Exception;)V
     .locals 5
 
@@ -2491,6 +2511,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the state of an object by resetting its boolean and integer fields and clearing an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public clear()V
     .locals 3
 
@@ -2681,6 +2702,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an IntSupplier object is available, and if so, it sets a flag and an integer value in a g6/e object and clears its ArrayList, otherwise it throws an IllegalStateException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e()V
     .locals 4
 
@@ -2734,6 +2756,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method casts an Object to a Long and calls another method G with the Long and a boolean parameter. It appears to be a bridge method for method overloading.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic f(Ljava/lang/Object;Z)V
     .locals 1
 
@@ -2748,6 +2771,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an ArrayList, either directly or after subtracting it from a certain value, depending on a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g()I
     .locals 3
 
@@ -2811,6 +2835,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the length of a byte array from an object of type Lcom/mplus/lib/L1/w and stores it in a field 'c' of the same object. It does this within a synchronized block to ensure thread safety.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h()V
     .locals 3
 
@@ -2858,6 +2883,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to process a Bitmap using the provided interface, but throws an IOException if one is present. If no exception is present, it simply returns without action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i(Landroid/graphics/Bitmap;Lcom/mplus/lib/F1/b;)V
     .locals 2
 
@@ -3014,6 +3040,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/Ea/c;`, which appears to be a configuration object for a consent management platform.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public l()Lcom/mplus/lib/Ea/c;
     .locals 63
 
@@ -4011,6 +4038,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method stores a mapping of strings to objects in a nested HashMap structure, using the first string as a key for the outer map and the second string as a key for the inner map. It converts the first string to uppercase before using it as a key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public m(Ljava/lang/String;Ljava/lang/String;Lcom/github/mangstadt/vinnie/SyntaxStyle;)V
     .locals 3
 
@@ -4225,6 +4253,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method sets a field `b` in the class `Lcom/mplus/lib/i5/a;` to the provided `Parcelable` object after casting it to `Lcom/mplus/lib/g6/e;`. It appears to be a setter method for an object field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public o(Landroid/os/Parcelable;)V
     .locals 1
 
@@ -4241,6 +4270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles task completion by removing a TaskCompletionSource from a HashSet or a Map based on the value of a switch variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onComplete(Lcom/google/android/gms/tasks/Task;)V
     .locals 3
 
@@ -4393,6 +4423,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves premium properties from a JSON object and returns an instance of `Lcom/mplus/lib/Ea/j` containing vendor blacklist, whitelist, and Google whitelist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p()Lcom/mplus/lib/Ea/j;
     .locals 6
 
@@ -5645,6 +5676,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a long value, either by parsing a string as a hexadecimal long or returning 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w()J
     .locals 3
 
@@ -5692,6 +5724,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method creates or resizes a bitmap to the specified width and height if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public x(II)Landroid/graphics/Bitmap;
     .locals 4
 
@@ -5945,6 +5978,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListenerHolder object. It casts an object field 'b' to ListenerHolder and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza()Lcom/google/android/gms/common/api/internal/ListenerHolder;
     .locals 2
 
@@ -5957,6 +5991,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles an exception by logging an error message and attempting to clean up a symlink structure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza(Ljava/lang/Throwable;)V
     .locals 5
 
@@ -6031,6 +6066,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to set the result of a TaskCompletionSource to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzb()V
     .locals 3
 
@@ -6059,6 +6095,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method throws an IllegalStateException when given a ListenerHolder. It does not utilize the provided ListenerHolder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzc(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
     .locals 1
 

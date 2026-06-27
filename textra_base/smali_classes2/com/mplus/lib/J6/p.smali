@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J6/p, setting its fields and calling the superclass constructor. It sets the instance's fields with provided parameters and invokes the AnimatorListenerAdapter constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/B2/l;Lcom/mplus/lib/J6/u;I)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the end of an animation by calling `I(J)` on `Lcom/mplus/lib/B2/l;` with a value from `Lcom/mplus/lib/J6/u;->a:J`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 

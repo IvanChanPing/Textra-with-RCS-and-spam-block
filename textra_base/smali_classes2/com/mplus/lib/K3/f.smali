@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/K3/f with an integer parameter. It sets the integer value to a field 'b' in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -40,6 +41,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method casts the input object to Lcom/mplus/lib/K3/a, then returns an Integer object representing the value of the instance field 'b' of the current class. It does not use the casted object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 

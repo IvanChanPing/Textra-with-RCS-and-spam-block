@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/A0, setting its fields with the provided Iterator and zzaij objects. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Iterator;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaij;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method iterates through a collection and returns the first object that satisfies a condition checked by `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaij;->zza`. If no object satisfies the condition, it calls `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzajn;->zzb` a  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Ljava/lang/Object;
     .locals 3
 

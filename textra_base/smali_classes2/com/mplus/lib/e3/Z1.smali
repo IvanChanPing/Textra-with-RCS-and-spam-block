@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/e3/Z1 class with a zzt object and two integers. It sets the object and integer fields of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzt;II)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from a list. It first checks if the index is within bounds using the `Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzj;->zza` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 3
 
@@ -61,6 +63,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -73,6 +76,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a collection by delegating to `zzf(II)` and casting the result to `Ljava/util/List`. It appears to be a bridge method for a subclass of a class that uses `com/google/android/gms/internal/mlkit_smart_reply_common/zzt`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -87,6 +91,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns an integer value by summing the results of `zzc()` from a `zzt` object and two instance variables `a` and `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()I
     .locals 3
 
@@ -137,6 +142,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of Objects by calling the `zze()` method on the `zzt` object. It appears to be a wrapper around the `zze()` method of the `zzp` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()[Ljava/lang/Object;
     .locals 2
 
@@ -155,6 +161,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls a validation method and then invokes another method to modify and return an object of type zzt.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(II)Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzt;
     .locals 2
 

@@ -78,6 +78,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes and assigns multiple static instances of the `Lcom/mplus/lib/a3/m` class to corresponding static fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static synthetic constructor <clinit>()V
     .locals 2
 
@@ -324,6 +325,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a3/m that initializes an integer field 'a' with the provided value. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 

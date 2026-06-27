@@ -44,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method invokes a static method to handle app background awareness.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

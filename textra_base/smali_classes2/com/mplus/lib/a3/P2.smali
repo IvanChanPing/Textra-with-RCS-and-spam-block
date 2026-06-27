@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/P2, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;)V
     .locals 0
 
@@ -125,6 +126,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method generates a custom hash code for the class instance based on the hash code of a string field. It applies a series of bitwise XOR and multiplication operations to the string's hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -165,6 +167,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of a RemoveFileGroupRequest object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -213,6 +216,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string field 'a' of the class Lcom/mplus/lib/a3/P2. It appears to be a getter method for the field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Ljava/lang/String;
     .locals 2
 

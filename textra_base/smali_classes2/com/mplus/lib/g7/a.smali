@@ -70,6 +70,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/g7/a; with a given context and sets up its properties. It also configures the object based on a boolean value from Lcom/mplus/lib/m4/d;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/c;)V
     .locals 1
 
@@ -110,6 +111,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/g7/b and invokes its b method with an Lcom/mplus/lib/x5/l object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 

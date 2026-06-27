@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static ThreadLocal variable. It creates a new instance of java/lang/ThreadLocal and assigns it to the class field 'd'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/F4/q class, setting its 'c' field to the provided Lcom/mplus/lib/A2/r object and calling the superclass constructor with a context and a specific integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/A2/r;)V
     .locals 2
 
@@ -135,6 +137,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object of type Lcom/mplus/lib/F4/x is valid or meets certain conditions. It returns a boolean value indicating the result of this check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/F4/x;)Z
     .locals 2
 
@@ -157,6 +160,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to decode a bitmap from an input stream and returns an object containing the bitmap and its dimensions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Lcom/mplus/lib/F4/x;)Lcom/mplus/lib/i5/a;
     .locals 10
 

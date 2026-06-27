@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/M5/g; that initializes an object with a reference to Lcom/mplus/lib/M5/k;. It sets the object's field 'a' to the provided Lcom/mplus/lib/M5/k; instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/M5/k;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the input integer matches a specific value stored in `Lcom/mplus/lib/M5/l;->b` and returns true if they match, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final test(I)Z
     .locals 2
 

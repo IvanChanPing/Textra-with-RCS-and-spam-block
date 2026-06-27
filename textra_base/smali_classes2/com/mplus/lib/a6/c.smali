@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a6/c, setting its properties with the provided parameters. It calls the superclass constructor with a specific thread name and stores the input fragment and string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/plus/giphy/category/GiphyCategoryGridFragment;Landroid/os/Handler;Ljava/io/File;Ljava/lang/String;)V
     .locals 1
 

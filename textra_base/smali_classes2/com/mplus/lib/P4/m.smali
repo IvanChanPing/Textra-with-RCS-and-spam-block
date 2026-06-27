@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/P4/m class with five parameters. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/P4/p;Lcom/mplus/lib/P4/d;Lcom/mplus/lib/r4/j0;Lcom/mplus/lib/P4/q;Lcom/mplus/lib/r4/p;)V
     .locals 0
 
@@ -44,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an object of type `Lcom/mplus/lib/s5/a` and adds a notification action based on its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 7
 

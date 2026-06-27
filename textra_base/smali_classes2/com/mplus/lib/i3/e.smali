@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i3/e, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;Lcom/mplus/lib/i3/j;I)V
     .locals 0
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a task based on the value of a field, either creating a new `Lcom/google/android/gms/tasks/a` instance or a `Lcom/mplus/lib/s3/s` instance and running it on an executor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/tasks/Task;)V
     .locals 4
 
@@ -101,6 +103,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method is called when an operation is canceled and it invokes a method `c()` on an object of type `Lcom/mplus/lib/i3/j`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCanceled()V
     .locals 2
 
@@ -115,6 +118,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a failure by calling another method with the exception. It appears to be part of an error handling or logging mechanism.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onFailure(Ljava/lang/Exception;)V
     .locals 2
 
@@ -129,6 +133,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `b` on an object of type `Lcom/mplus/lib/i3/j`, passing the input object. It appears to handle a successful operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onSuccess(Ljava/lang/Object;)V
     .locals 2
 
@@ -145,6 +150,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException based on the value of the instance variable 'a'. It does not perform any other actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()V
     .locals 2
 

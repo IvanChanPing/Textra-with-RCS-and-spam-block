@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/x7/h; with a given Lcom/mplus/lib/x7/a; and a String, then sets a resource ID. It calls the superclass constructor and sets a text and resource ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/a;Ljava/lang/String;)V
     .locals 1
 

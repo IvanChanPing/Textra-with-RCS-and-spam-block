@@ -49,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the string representation of the object referenced by `a` field of type `Lcom/mplus/lib/W7/g`. It delegates the `toString()` call to the `a` field object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Y3/e class, setting its fields to default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -62,6 +63,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of Lcom/mplus/lib/f4/a, passing the provided Context, the current object, and another object to its constructor. It returns this new instance as a Lcom/mplus/lib/V3/c object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/content/Context;Lcom/mplus/lib/u5/b;)Lcom/mplus/lib/V3/c;
     .locals 2
 
@@ -78,6 +80,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the instance variable 'g'. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -88,6 +91,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'e' of type long. It appears to be a getter method for the field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()J
     .locals 3
 
@@ -96,6 +100,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two string fields (`b` and `c`) in the class are not empty, returning true if both are not empty and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 2
 
@@ -139,6 +144,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'h' of type integer. It appears to be a getter method for the field 'h'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 2
 
@@ -147,6 +153,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'd' of type long. It does not perform any operations, just returns the field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()J
     .locals 3
 
@@ -157,6 +164,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string constant "smaatoBanner".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getName()Ljava/lang/String;
     .locals 2
 

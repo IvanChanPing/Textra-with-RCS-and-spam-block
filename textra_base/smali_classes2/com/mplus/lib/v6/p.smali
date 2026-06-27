@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/v6/p with an integer value. It sets the integer value to a field 'a' in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -30,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/v6/p class, setting its fields with the provided MutableLiveData and Lcom/mplus/lib/v6/L objects. It also sets an integer field 'a' to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroidx/lifecycle/MutableLiveData;Lcom/mplus/lib/v6/L;)V
     .locals 1
 
@@ -46,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/v6/p, setting its 'a' field to 6 and creating a new instance of Lcom/mplus/lib/z7/I.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/B6/o;)V
     .locals 1
 
@@ -64,6 +67,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/v6/p with a given string, setting instance variables a, b, and c. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
@@ -82,6 +86,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It delegates the conversion to the `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String>` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final e()Ljava/lang/String;
     .locals 2
 
@@ -144,6 +149,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a new head element in a data structure, potentially updating the tail element, and notifies all waiting threads.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized a(Lcom/mplus/lib/w9/g;)V
     .locals 2
 
@@ -231,6 +237,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a set of long values, either by parsing a comma-separated string or returning an existing set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Ljava/util/Set;
     .locals 5
 
@@ -339,6 +346,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a canonical address from a HashMap, which is populated by querying the "content://mms-sms/canonical-addresses" content provider.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
 
@@ -541,6 +549,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/w9/g;` and updates the object references in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized d()Lcom/mplus/lib/w9/g;
     .locals 3
 
@@ -605,6 +614,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. It uses a sparse switch statement to determine which string to return, either by calling `f()` or `e()` methods or the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

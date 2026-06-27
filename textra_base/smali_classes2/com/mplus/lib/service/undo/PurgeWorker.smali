@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a PurgeWorker instance, setting its 'a' field to the "undoBatchNumber" value from the worker's input data. It calls the superclass constructor with the provided context and worker parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 1
     .param p1    # Landroid/content/Context;
@@ -43,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to purge or remove certain data by iterating over a collection and invoking removal methods on various objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Lcom/mplus/lib/r4/t;)V
     .locals 7
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/w3/c with a string and a map. It sets the object's fields 'a' and 'b' to the provided string and map, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/util/Map;)V
     .locals 0
 
@@ -27,6 +28,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/s5/m` with the provided string. It does not appear to perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/String;)Lcom/mplus/lib/s5/m;
     .locals 2
 
@@ -41,6 +43,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/w3/c with an empty map. It takes a string parameter and uses it in the constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;)Lcom/mplus/lib/w3/c;
     .locals 3
 
@@ -59,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an annotation from a map based on a given class. It returns the associated annotation object if found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 2
 
@@ -77,6 +81,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their string fields and map fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -148,6 +153,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object by combining the hash codes of its 'a' string field and 'b' map field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -180,6 +186,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically a FieldDescriptor, including its name and properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

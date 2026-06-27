@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/M2/g` class, setting up various fields and objects, including a `GmsClientSupervisor`, a `HashMap`, and a `ConnectionTracker`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Ljava/util/concurrent/Executor;)V
     .locals 2
 
@@ -79,6 +80,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method unbinds a GmsServiceConnection from a service configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/common/internal/zzo;Landroid/content/ServiceConnection;Ljava/lang/String;)V
     .locals 5
 

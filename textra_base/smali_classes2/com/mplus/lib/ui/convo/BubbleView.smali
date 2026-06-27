@@ -144,6 +144,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the `BubbleView` class with various objects. It sets up rectangles, arrays, and other data structures that are likely used for conversation bubble rendering.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -260,6 +261,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a BubbleView object, setting up its properties and components, including auto-link masking, text view, and layout parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
 
@@ -666,6 +668,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the color of a heart emoji, either from a cached value or by loading the emoji image and getting the color of its center pixel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getColorOfHeartEmoji()I
     .locals 4
 
@@ -759,6 +762,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the original text size of a BubbleView, defaulting to the view's current text size if it hasn't been set. It returns this size as a float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getTextSizeOriginal()F
     .locals 3
 
@@ -788,6 +792,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the status text of a `BubbleView` and toggles the visibility of the text view based on whether the text is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setStatusText(Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -814,6 +819,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a text size multiplier for the BubbleView, updating the text size if the new multiplier is different from the current one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setTextSizeMultiplier(F)V
     .locals 2
 
@@ -851,6 +857,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method scales and sets the bounds of a given Drawable object based on certain conditions and object properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 7
 
@@ -2977,6 +2984,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the anchor bounds for a mini menu in a BubbleView. It adjusts the bounds based on the view's context and properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getAnchorBoundsForMiniMenu()Landroid/graphics/RectF;
     .locals 5
 
@@ -3100,6 +3108,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the background color of a BubbleView instance. It retrieves the color from a K5/b object associated with a v6/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getBackgroundColorDirect()I
     .locals 2
 
@@ -3116,6 +3125,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the top padding of a bubble view. It retrieves the top value from a Rect object associated with the BubbleView instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getBubbleOutgoingAntiSquashPaddingTop()I
     .locals 2
 
@@ -3130,6 +3140,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the right padding of the outgoing bubble drawable. It retrieves the padding value from a Rect object associated with the bubble's layout attributes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getBubbleOutgoingDrawablePaddingRight()I
     .locals 3
 
@@ -3162,6 +3173,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getLayoutSize function to return the layout size of its superclass. It does not modify the result, simply returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -3176,6 +3188,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getMeasuredSize() and returns the result. It does not use the returned value's size, instead returning the object itself with no modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -3190,6 +3203,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the offset to the text layout's x-coordinate. It considers the view's padding, a stored value `A`, and the left boundary of a `Rect` object `x`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getOffsetToTextLayoutX()I
     .locals 3
 
@@ -3290,6 +3304,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal method and returns its result. It effectively delegates the calculation of horizontal padding to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -3300,6 +3315,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getPaddingVertical()` and returns the result. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -3406,6 +3422,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the text color of a BubbleView object. It retrieves the color from a K5/b object instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getTextColorDirect()I
     .locals 2
 
@@ -3432,6 +3449,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a parent class method to return a visibility animation delegate. It simply calls the parent class's implementation of the same method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -3444,6 +3462,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides and calls the superclass's `getVisualDebugDelegate` method, returning its result. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -3706,6 +3725,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method invalidates the drawable of a BubbleView if it matches certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 5
 
@@ -3830,6 +3850,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the bubble view's drawable and checks if the new drawable is a bitmap with a transparent top-left pixel, triggering a specific action if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)V
     .locals 3
 
@@ -4076,6 +4097,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws the content of a BubbleView, including the bubble background, text, and any additional graphics or icons.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 17
 
@@ -5301,6 +5323,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method measures the size of a `BubbleView` component, taking into account various factors such as layout, padding, and content.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(II)V
     .locals 7
 
@@ -5857,6 +5880,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing the provided boolean value. It appears to be a bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -5869,6 +5893,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field `D` in the `BubbleView` class to the provided value, indicating whether to allow any height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAllowAnyHeight(Z)V
     .locals 1
 
@@ -5881,6 +5906,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -5893,6 +5919,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background color of a BubbleView with animation. It creates an instance of Lcom/mplus/lib/y5/c if it doesn't exist and then calls its a(I) method to set the color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBackgroundColorAnimated(I)V
     .locals 2
 
@@ -5924,6 +5951,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background color of a BubbleView instance directly and then invalidates the view to trigger a redraw. It delegates the color setting to an instance of Lcom/mplus/lib/v6/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBackgroundColorDirect(I)V
     .locals 2
 
@@ -5942,6 +5970,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate for the BubbleView class by calling its superclass's method. It effectively delegates the background drawing to the provided delegate object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -5950,6 +5979,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a BubbleView instance. It calls a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -5958,6 +5988,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bubble spec source for the BubbleView instance. It stores the provided Lcom/mplus/lib/s5/h; object in the instance's field j.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBubbleSpecSource(Lcom/mplus/lib/s5/h;)V
     .locals 1
 
@@ -5968,6 +5999,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method with the provided integer parameter. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -5980,6 +6012,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method with the provided argument. It does not perform any additional logic beyond the superclass call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -5992,6 +6025,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a BubbleView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -6002,6 +6036,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the link click movement method for a BubbleView instance. It stores the provided movement method in the instance's field 'l'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLinkClickMovementMethod(Lcom/mplus/lib/v6/v;)V
     .locals 1
 
@@ -6014,6 +6049,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method to set the margin of a view. It delegates the margin setting to its superclass Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -6022,6 +6058,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the maximum width of the BubbleView and stores the value in the 'P' field. It also calls the superclass's setMaxWidth method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMaxWidth(I)V
     .locals 1
 
@@ -6032,6 +6069,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a BubbleView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -6070,6 +6108,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text color of a BubbleView instance directly using the provided color code. It also updates the color in a K5/b object if the color code is not 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextColorDirect(I)V
     .locals 3
 
@@ -6106,6 +6145,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a BubbleView instance by calling a static method D in class Lcom/mplus/lib/z7/N.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -6116,6 +6156,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a BubbleView instance by invoking a static method from class Lcom/mplus/lib/z7/N. It takes an integer parameter representing the padding value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -6126,6 +6167,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method with a boolean parameter and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -6136,6 +6178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -6146,6 +6189,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of a BubbleView instance based on the provided integer parameter. It invokes a static method to perform this action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 
@@ -6156,6 +6200,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the BubbleView object, including its ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 
@@ -6192,6 +6237,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Drawable is associated with the BubbleView instance. It first calls the superclass's verifyDrawable method and returns true if that succeeds, or if the given Drawable matches the instance's own Drawable (n).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 3
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/D6/g, setting its fields 'a' and 'b' to the provided Lcom/mplus/lib/D6/f and List objects. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/D6/f;Ljava/util/List;)V
     .locals 0
 

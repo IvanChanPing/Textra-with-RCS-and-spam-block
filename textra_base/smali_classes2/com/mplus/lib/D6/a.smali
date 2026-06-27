@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws underlined text on a Canvas using a provided Paint object. It sets the underline text property of the Paint and then draws a string at a specified position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .locals 1
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method measures the width of a string using a Paint object and returns it as an integer. It ignores the input CharSequence and instead uses a string stored in the object's field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
     .locals 1
 

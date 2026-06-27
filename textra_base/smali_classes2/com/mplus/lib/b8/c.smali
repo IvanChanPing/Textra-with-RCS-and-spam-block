@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the publisher country code from a TCModel object and returns it as an Object. It does not use the returned string length or any other property, simply returning the country code string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -21,6 +22,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the publisher country code in a TCModel instance using a provided string. It casts the input object to a string and then calls the setPublisherCountryCode method on the TCModel instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

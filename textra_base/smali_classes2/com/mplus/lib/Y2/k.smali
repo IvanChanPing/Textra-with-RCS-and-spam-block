@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Y2/k, setting a boolean field and calling the superclass constructor with a GoogleApiClient. It configures the object with the provided GoogleApiClient and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;Z)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes an action on a Google API client, specifically setting a location setting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic doExecute(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     .locals 3
 

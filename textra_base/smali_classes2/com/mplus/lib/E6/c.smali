@@ -22,6 +22,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes an object and a boolean, casts the object to a Long, then calls another method o0 with the first parameter. It does not use the Long or the boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/t5/a;Ljava/lang/Object;Z)V
     .locals 1
 
@@ -138,6 +139,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the UI based on the state of an object, specifically setting the visibility of certain views and updating their states.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(Lcom/mplus/lib/t5/a;)V
     .locals 7
 
@@ -552,6 +554,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to stop or reset a process by calling `f()` on an object of type `Lcom/mplus/lib/R1/q;` and then setting a flag to false using `o0(Z)` on an object of type `Lcom/mplus/lib/s5/j;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p()V
     .locals 3
 
@@ -580,6 +583,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to check a condition, display a notification if true, and then schedule a task to run after a certain delay.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 6
 

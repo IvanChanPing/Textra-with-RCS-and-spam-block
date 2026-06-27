@@ -62,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there is a next element in either of two iterators.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -109,6 +110,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in an iteration, specifically a key-value pair from a map where the value is a collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 4
 
@@ -204,6 +206,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an element from an iterator and updates the collection and iterator state accordingly. It also decrements a counter in an instance of Lcom/mplus/lib/o3/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 

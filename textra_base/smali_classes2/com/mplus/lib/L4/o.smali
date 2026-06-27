@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls `M` on an instance of `Lcom/mplus/lib/B2/l;`, passing an object of type `Lcom/mplus/lib/L4/f;` and the integer `0x89`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final J(Lcom/mplus/lib/L4/f;)V
     .locals 3
 

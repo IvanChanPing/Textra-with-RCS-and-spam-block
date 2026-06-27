@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method constructs an exception with a message created by joining the elements of an input ArrayList with a comma and space. It initializes a DnsException with this joined string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 1
 

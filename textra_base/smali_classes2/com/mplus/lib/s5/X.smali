@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/s5/X, setting its field 'a' to the provided Lcom/mplus/lib/s5/Z object. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/Z;)V
     .locals 0
 
@@ -36,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies an animation end event to a listener, if one is set. It checks for the existence of a listener and calls its 'w' method if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 

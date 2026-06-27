@@ -469,6 +469,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an MMS download is okay and handles timeouts by throwing an exception and updating the download status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public N(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)I
     .locals 5
 
@@ -557,6 +558,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method recycles all Bitmap objects stored in a HashMap and then clears the map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public P()V
     .locals 4
 
@@ -1135,6 +1137,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a unique license string for an Android device by combining the device ID and the hash code of the app's signature.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public U()Ljava/lang/String;
     .locals 5
 
@@ -1557,6 +1560,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a table with a given name exists in a SQLite database and if its SQL definition matches a given pattern.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public Z(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
@@ -2088,6 +2092,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the database schema and performs various migrations to ensure data consistency and compatibility with the latest version of the app. It checks the current database version and performs the necessary updates, including adding or modifying tables, columns, and indexes, as well as u  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b0(Ljava/util/ArrayList;II)V
     .locals 55
 

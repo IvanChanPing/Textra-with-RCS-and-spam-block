@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/d3/c; with a given parameter and integer value. It calls the superclass constructor with the given parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzbj;I)V
     .locals 0
 

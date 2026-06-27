@@ -20,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method scales and posts a runnable to update an object's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public D(I)V
     .locals 5
 
@@ -237,6 +238,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method constructs and sends an email with device information, including app version, phone model, brand, and Android version.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b0()V
     .locals 6
 
@@ -435,6 +437,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the text and font of a `BaseTextView` with the ID passed as the first parameter, and adjusts its size based on the second parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public o0(II)V
     .locals 10
 
@@ -713,6 +716,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of a view with animation and loads an image into an image view if the view is being made visible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p0(Z)V
     .locals 3
 

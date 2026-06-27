@@ -41,6 +41,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/s7/c class, setting up its internal state with a new Lcom/mplus/lib/f1/e object and other default values. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
@@ -345,6 +346,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for two specific views: a FloatingActionButtonBackground and a BaseImageView, triggering different actions for each.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
@@ -381,6 +383,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the editor action event for a TextView, checking if the event is an action (e.g., enter key press) and if so, hides the keyboard.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 1
 
@@ -483,6 +486,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and either hides a FloatingActionButtonBackground or posts a Runnable to the App's handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onGlobalLayout()V
     .locals 4
 
@@ -694,6 +698,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a `BaseEditText` and a `BaseImageView` in an Android view, setting up text change listeners and click listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0(I)V
     .locals 3
 
@@ -764,6 +769,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the display and storage of a specific UI component's state, specifically related to a toggle or switch functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0(Lcom/mplus/lib/s7/e;)V
     .locals 10
 

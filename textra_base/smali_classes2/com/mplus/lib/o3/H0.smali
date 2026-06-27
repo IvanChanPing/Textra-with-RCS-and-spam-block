@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Lcom/mplus/lib/o3/H0 class. It creates a new instance with default parameters and assigns it to the static field h.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -39,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/o3/H0 class with an array of objects, an integer, and another object. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
@@ -53,6 +55,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/H0;` based on the provided parameters, handling different cases and invoking various methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(I[Ljava/lang/Object;Lcom/mplus/lib/o3/X;)Lcom/mplus/lib/o3/H0;
     .locals 5
 
@@ -845,6 +848,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/o3/E0`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/o3/e0;
     .locals 5
 
@@ -867,6 +871,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/F0` and returns it, using `Lcom/mplus/lib/o3/G0` and the current object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/o3/e0;
     .locals 5
 
@@ -893,6 +898,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/G0` and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Lcom/mplus/lib/o3/O;
     .locals 5
 
@@ -929,6 +935,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a collection based on the provided key. It calls a static method `l` to perform the retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
@@ -964,6 +971,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'g' as the size. It always returns the value of 'g', regardless of the constant 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

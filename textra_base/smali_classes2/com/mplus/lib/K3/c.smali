@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/K3/c with a new BitSet. It sets this instance as a static field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/K3/c, storing a BitSet in its field 'a'. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/BitSet;)V
     .locals 0
 
@@ -45,6 +47,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a deep copy of the current object. It clones the BitSet object and uses it to initialize a new instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clone()Ljava/lang/Object;
     .locals 3
 
@@ -73,6 +76,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their BitSet fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -148,6 +152,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object based on its BitSet field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -180,6 +185,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the BitSet object 'a' in the class Lcom/mplus/lib/K3/c. It does not utilize the integer value 6 or 0 in the return value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

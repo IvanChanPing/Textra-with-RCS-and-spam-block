@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/G5/a class, storing the provided Android context and potentially casting it to Lcom/mplus/lib/x5/l if applicable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/G5/a, setting its context and another field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;)V
     .locals 0
 
@@ -52,6 +54,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the 'c' field, which is an instance of Lcom/mplus/lib/x5/l. It does not perform any additional operations despite setting a local variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h0()Lcom/mplus/lib/x5/l;
     .locals 2
 
@@ -64,6 +67,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/t5/b; by calling the F() method on an object of type Lcom/mplus/lib/x5/l;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i0()Lcom/mplus/lib/t5/b;
     .locals 2
 
@@ -80,6 +84,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of LayoutInflater, either by retrieving it from an Activity or creating it from a Context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j0()Landroid/view/LayoutInflater;
     .locals 2
 
@@ -127,6 +132,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/s5/E; by calling Lcom/mplus/lib/x5/l;->L().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k0()Lcom/mplus/lib/s5/E;
     .locals 2
 
@@ -145,6 +151,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/y. It appears to be a getter method for a field named 'a' in the class Lcom/mplus/lib/G5/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public l0()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -157,6 +164,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o6/a; by calling the T() method on an object of type Lcom/mplus/lib/x5/l;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m0()Lcom/mplus/lib/o6/a;
     .locals 2
 

@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and configures a clear button in a UI component.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -101,6 +102,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a shared preference change is related to "knownSims" and if so, calls the x() method. It handles the onSharedPreferenceChanged event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 1
 
@@ -120,6 +122,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method collects and processes data from a stream, then stores the result as a CharSequence in the object's field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()V
     .locals 4
 

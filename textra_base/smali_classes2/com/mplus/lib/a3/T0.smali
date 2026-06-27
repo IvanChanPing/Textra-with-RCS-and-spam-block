@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/T0, storing the provided Iterator in a field. It checks the class of the provided Iterator object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Iterator;)V
     .locals 0
 
@@ -33,6 +34,7 @@
 .method public abstract b(Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a next element in an iterator. It returns true if the iterator has a next element, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -47,6 +49,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in an iteration sequence after applying a transformation. It delegates to an Iterator for the next object and then calls method b to transform the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 
@@ -69,6 +72,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an element from an iterator and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 

@@ -52,6 +52,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array field with values 0 and 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -70,6 +71,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method restarts a loader with ID 0 using the LoaderManager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final F()V
     .locals 4
 
@@ -760,6 +762,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the initialization and setup of various UI components and event listeners in an Android application. It checks for certain conditions and initializes or updates UI elements accordingly, including a floating action button and text views.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 15
 
@@ -1404,6 +1407,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for various views, performing actions such as checking permissions, opening conversations, and toggling settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 12
 
@@ -1730,6 +1734,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/M6/e` Loader. It takes an integer and a Bundle as parameters but doesn't use them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateLoader(ILandroid/os/Bundle;)Landroidx/loader/content/Loader;
     .locals 2
 
@@ -1752,6 +1757,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling the `o0()` method of its class. It appears to be a part of an event bus system, likely used for initialization or cleanup.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/V3/f;)V
     .locals 1
 
@@ -1760,6 +1766,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the loading of data into a RecyclerView, including setting up the adapter, handling empty data sets, and updating the UI accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLoadFinished(Landroidx/loader/content/Loader;Ljava/lang/Object;)V
     .locals 7
 

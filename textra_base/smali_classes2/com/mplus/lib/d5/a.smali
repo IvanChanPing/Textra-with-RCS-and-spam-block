@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class, setting an integer field 'e' and calling the superclass constructor with a Context and a String. It appears to be a generated synthetic constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/content/Context;ILjava/lang/String;)V
     .locals 0
 

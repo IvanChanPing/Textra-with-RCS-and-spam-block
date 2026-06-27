@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `o` in class `Lcom/mplus/lib/C6/a;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with the argument `0x32`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -104,6 +105,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a boolean flag and if true, resets the flag and calls a method to clear a text field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(I)V
     .locals 1
 
@@ -275,6 +277,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a touch event handler, calling the superclass's handler and then checking the motion event's action, setting a flag based on the state of a RecyclerView when the action is a down event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 1
 

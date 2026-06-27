@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/Y2/N, setting its fields with a GoogleApiClient, a long value, and a PendingIntent. It then calls the superclass constructor with the GoogleApiClient.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;JLandroid/app/PendingIntent;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a location request using the Google Play Services Location API, specifically requesting location updates with a specified detection interval and pending intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic doExecute(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     .locals 7
 

@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/e7/b, setting its fields with provided parameters. It calls the superclass constructor and assigns the given object and integer to its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;[II)V
     .locals 0
 
@@ -115,6 +116,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the selected item in a CoverFlow matches a specific ID and toggles the visibility of a BaseButton accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public K()V
     .locals 4
 
@@ -173,6 +175,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a slider view and sets its properties, including the index change listener and value count. It also finds and sets text views within the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n0(Lcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -283,6 +286,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific key exists in a Bundle, retrieves an integer value associated with that key if it exists, and then sets the index of a BaseSlider view based on that value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public o0(ILandroid/os/Bundle;)V
     .locals 4
 

@@ -33,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/F3/o0 with an ArrayList of a specified initial capacity. It delegates to another constructor, passing the newly created ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -45,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/o0, setting its 'b' field to the provided ArrayList. It calls the superclass constructor Lcom/mplus/lib/F3/c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
@@ -128,6 +130,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the end of the list and returns a boolean indicating success. It delegates to another `addAll` method with an index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -152,6 +155,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method clears the list of elements stored in the object and increments the modification count. It appears to be part of a custom list implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -323,6 +327,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method returns an unmodifiable list from the instance variable 'b'. It prevents external modifications to the original list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()Ljava/util/List;
     .locals 2
 
@@ -339,6 +344,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an object of type Lcom/mplus/lib/F3/m to a list and increments the list's modification count. It also calls the a() method of its class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Lcom/mplus/lib/F3/m;)V
     .locals 2
 
@@ -443,6 +449,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets an object at a specified index in a list and returns the object as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -517,6 +524,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an ArrayList. It retrieves the size of the list stored in the 'b' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -533,6 +541,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/F3/p0, either the current object or a new Lcom/mplus/lib/F3/o1 instance, based on the value of a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()Lcom/mplus/lib/F3/p0;
     .locals 2
 
@@ -556,6 +565,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from an ArrayList at a specified index. It then returns the retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z(I)Ljava/lang/Object;
     .locals 2
 

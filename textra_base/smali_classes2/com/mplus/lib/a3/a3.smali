@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/a3 class with five AtomicReferenceFieldUpdater objects. It sets these updaters as fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
     .locals 0
 
@@ -57,6 +58,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a field of the provided object to the given thread using an AtomicReferenceFieldUpdater. It updates the field in a lazy manner, meaning the update may not be immediately visible to other threads.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/google/android/gms/internal/mlkit_entity_extraction/w;Ljava/lang/Thread;)V
     .locals 2
 
@@ -67,6 +69,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `zza` from `zzbuq` class to perform an atomic update operation. It returns a boolean result indicating success or failure of the update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbuw;Lcom/mplus/lib/a3/Z2;Lcom/mplus/lib/a3/Z2;)Z
     .locals 2
 
@@ -81,6 +84,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to update a reference field atomically and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbuw;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 
@@ -99,6 +103,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks and updates an atomic reference field using `zzbuq.zza`. It returns a boolean indicating success.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbuw;Lcom/google/android/gms/internal/mlkit_entity_extraction/w;Lcom/google/android/gms/internal/mlkit_entity_extraction/w;)Z
     .locals 2
 

@@ -21,6 +21,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the vendorsDisclosed field of a TCModel object using a SortedVector object. It takes a TCModel and an Object as parameters, casts the Object to a SortedVector, and then calls the setVendorsDisclosed method on the TCModel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

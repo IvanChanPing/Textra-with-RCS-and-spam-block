@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static Parcelable creator for the class Lcom/mplus/lib/P6/b. It creates an instance of Lcom/mplus/lib/P6/a and assigns it to the CREATOR field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/P6/b with an Android Uri and a string. It sets the object's fields 'a' and 'c' to the provided Uri and string, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
     .locals 0
 
@@ -58,6 +60,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/P6/b with a given string. It sets the string as a field 'b' in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
@@ -125,6 +128,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of objects, processes their contents, and adds them to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Lcom/mplus/lib/r4/k0;)Ljava/util/ArrayList;
     .locals 11
 
@@ -443,6 +447,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a CharSequence, either a stored string, a formatted string from a Uri, or an empty string if both are empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/CharSequence;
     .locals 4
 
@@ -525,6 +530,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its text and URI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 
@@ -591,6 +597,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method writes the object's fields to a Parcel. It serializes a Uri and two Strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 

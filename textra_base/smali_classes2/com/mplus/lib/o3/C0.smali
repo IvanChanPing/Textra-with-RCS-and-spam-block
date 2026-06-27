@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/o3/C0. It creates a new instance with an empty array of objects and stores it in the static field e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/o3/C0 class with an array of objects and an integer. It sets the instance's fields c and d to the provided array and integer, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 0
 
@@ -49,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method copies an array segment from the object's internal array to the provided array and returns the updated index. It appears to be part of a buffer or queue implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I[Ljava/lang/Object;)I
     .locals 4
 
@@ -71,6 +74,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of Objects stored in the 'c' field of the class. It always returns this array, regardless of the assignment of the local variable 'v1'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()[Ljava/lang/Object;
     .locals 2
 
@@ -83,6 +87,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'd' of type integer. It does not perform any operations, just returns the field's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()I
     .locals 2
 
@@ -115,6 +120,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from an array, performing bounds checking and null checks. It returns the object at the index if it exists and is not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -137,6 +143,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'd' as the size. It does not perform any actual size calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

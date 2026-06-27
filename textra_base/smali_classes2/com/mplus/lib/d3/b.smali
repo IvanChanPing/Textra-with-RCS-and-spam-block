@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class, including a charset and several objects related to Google's ML Kit Smart Reply.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -100,6 +101,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/d3/b, setting its fields with the provided parameters. It also creates a new instance of Lcom/mplus/lib/Z2/m and assigns it to the field e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/ByteArrayOutputStream;Ljava/util/Map;Ljava/util/Map;Lcom/mplus/lib/w3/d;)V
     .locals 2
 
@@ -124,6 +126,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the value of a `@Protobuf` annotation from a given field and returns its value, or throws an exception if the annotation is not present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Lcom/mplus/lib/w3/c;)I
     .locals 2
 
@@ -163,6 +166,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `e` with parameters including a `com/mplus/lib/w3/c` object, a long value, and a boolean flag set to true, then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic a(Lcom/mplus/lib/w3/c;J)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -177,6 +181,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `c` with an additional boolean parameter set to true and then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/w3/c;Ljava/lang/Object;)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -1087,6 +1092,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method encodes an object using a provided encoder and writes the encoded data to an output stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/w3/d;Lcom/mplus/lib/w3/c;Ljava/lang/Object;Z)V
     .locals 6
 
@@ -1268,6 +1274,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a long value to an output stream using variable-length encoding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(J)V
     .locals 6
 

@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method constructs an IllegalArgumentException with a message indicating an unpaired surrogate at a specific index. It takes two integer parameters, likely the index and the length of a string or array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(II)V
     .locals 2
 

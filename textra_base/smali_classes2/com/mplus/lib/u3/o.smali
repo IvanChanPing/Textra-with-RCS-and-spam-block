@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static object in the class Lcom/mplus/lib/u3/o. It creates a new instance of java/lang/Object and assigns it to the static field c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -34,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/u3/o, setting its fields with a provided Lcom/mplus/lib/B3/a object and a shared object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/B3/a;)V
     .locals 1
 
@@ -50,6 +52,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object, either by retrieving it from a cached instance variable or by invoking a getter method on another object and caching the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 3
 

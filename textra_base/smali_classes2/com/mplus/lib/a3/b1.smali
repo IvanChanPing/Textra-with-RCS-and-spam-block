@@ -21,6 +21,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a constant string "<unknown class>" with a hardcoded value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/lang/String;
     .locals 2
 
@@ -43,6 +44,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string constant "<unknown method>". It does not perform any significant operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Ljava/lang/String;
     .locals 2
 

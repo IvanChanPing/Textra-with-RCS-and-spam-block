@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/N4/j; with integer and string parameters. It sets the object's fields a, c, d, and b with default, first, second integer, and string values respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(IILjava/lang/String;)V
     .locals 1
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/N4/j with a string and two integers. It sets the object's fields with the provided parameters and a default value of 1 for field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 1
 
@@ -55,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/N4/j;` with specified parameters. It takes a string as input and uses it to initialize the new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/String;)Lcom/mplus/lib/N4/j;
     .locals 4
 
@@ -77,6 +80,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, including its type, code, and text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final b()Ljava/lang/String;
     .locals 5
 
@@ -241,6 +245,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of its 'a' field. If 'a' is 0, it calls a private method 'b()' to get the string, otherwise it calls the superclass's toString() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

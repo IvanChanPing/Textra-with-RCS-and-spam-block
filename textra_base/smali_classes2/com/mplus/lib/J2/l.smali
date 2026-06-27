@@ -40,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the result of a Google API operation, clearing Google Sign-In storage and reconnecting if the operation is successful, then sets the result and potentially disconnects a Google API client.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic onResult(Lcom/google/android/gms/common/api/Result;)V
     .locals 3
 

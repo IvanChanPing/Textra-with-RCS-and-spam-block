@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of class Lcom/mplus/lib/r4/C, setting its fields 'b' and 'c' with provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/r4/H;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method applies different operations based on the value of `b` in the class `Lcom/mplus/lib/r4/C;`, invoking methods on `Lcom/mplus/lib/r4/w;` with `Lcom/mplus/lib/z7/O;` as an argument.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 

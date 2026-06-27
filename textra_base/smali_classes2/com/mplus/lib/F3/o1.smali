@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/F3/o1 class, setting its 'a' field to the provided Lcom/mplus/lib/F3/o0 object. It also calls the superclass constructor of java/util/AbstractList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/F3/o0;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a collection at a specified index and casts it to a String. It appears to be a wrapper around another class's get method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -49,6 +51,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator for the class Lcom/mplus/lib/F3/o1. It creates a new instance of Lcom/mplus/lib/F3/n1 and sets its iterator to the iterator of the object stored in the field 'a' of the current class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -97,6 +100,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an unmodifiable list from the 'b' field of the 'a' object. It does not use the returned value of 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()Ljava/util/List;
     .locals 2
 
@@ -113,6 +117,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not perform any other actions with the provided parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -127,6 +132,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object of type Lcom/mplus/lib/F3/o0. It delegates the size calculation to the size() method of the referenced object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -151,6 +157,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from a list. It returns the object at the given index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z(I)Ljava/lang/Object;
     .locals 2
 

@@ -27,6 +27,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/C0, cast as Lcom/mplus/lib/o3/U. It appears to retrieve an object from the class field 'd' and pass it to a static method in Lcom/mplus/lib/o3/U.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/o3/U;
     .locals 2
 
@@ -45,6 +46,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method stores an object reference in an array at a specified index and then increments the index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I[Ljava/lang/Object;)I
     .locals 2
 
@@ -65,6 +67,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is equal to the object stored in the 'd' field of the class instance. It returns a boolean value indicating whether the objects are equal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -91,6 +94,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/o3/m0;`, passing the object referenced by `Lcom/mplus/lib/o3/O0;->d` to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/o3/Q0;
     .locals 3
 
@@ -109,6 +113,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object stored in the 'd' field of the class. It delegates the hash code calculation to the hashCode() method of the object stored in 'd'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/f7/d, setting its fields with a SettingsActivity and an integer. It appears to be a constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/ui/settings/sections/main/SettingsActivity;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles changes to an object, casting it to either a List or a Boolean based on a switch statement, and then calls the c0 method of a SettingsActivity instance. It appears to be part of an observer pattern implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChanged(Ljava/lang/Object;)V
     .locals 3
 

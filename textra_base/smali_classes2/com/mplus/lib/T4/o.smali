@@ -79,6 +79,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/T4/o, calling the superclass constructor and setting a field 'e' to the provided Lcom/mplus/lib/r4/p object. It appears to be related to preference management.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/mplus/lib/r4/p;Lcom/mplus/lib/r4/p;)V
     .locals 0
 
@@ -91,6 +92,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of an object. It appears to be a wrapper around the getAsString() method of class Lcom/mplus/lib/T4/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 2
 
@@ -105,6 +107,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a string input, creating a new instance of `Lcom/mplus/lib/T/a` and then invoking `Lcom/mplus/lib/P4/i;->c0` with the created instance and other parameters. It also calls `Lcom/mplus/lib/T4/a;->f` on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/String;)V
     .locals 4
 
@@ -137,6 +140,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method casts the input object to a string and calls method e with that string. It appears to be a bridge method for setting a string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic set(Ljava/lang/Object;)V
     .locals 1
 

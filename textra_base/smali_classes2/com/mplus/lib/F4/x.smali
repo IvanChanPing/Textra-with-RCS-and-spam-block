@@ -45,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appends Unicode code points from a string to a StringBuilder, excluding certain code points (0xfe0f and 0x200d) and prefixing the code points with "_u" and converting them to hexadecimal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/StringBuilder;)V
     .locals 5
 
@@ -238,6 +239,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object by comparing their classes and a CharSequence field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -307,6 +309,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object's `a` field if it's not null, otherwise returns 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -332,6 +335,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, specifically by converting a CharSequence to a string and then processing it with Lcom/mplus/lib/z7/J;->l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

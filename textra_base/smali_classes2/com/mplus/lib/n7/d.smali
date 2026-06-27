@@ -20,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and configures UI components, including a radio button and an image view, based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 7
 
@@ -221,6 +222,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method resets a field `q` to null and then calls `u` with a string from `y()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 2
 
@@ -245,6 +247,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/r4/E0;`, either by retrieving a cached instance, creating a new one using `Lcom/mplus/lib/r4/F0;->R(J)Lcom/mplus/lib/r4/E0;` if the cache is empty, or initializing a new instance if the retrieval fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()Lcom/mplus/lib/r4/E0;
     .locals 4
 

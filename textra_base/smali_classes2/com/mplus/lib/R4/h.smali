@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `f` of type `Lcom/mplus/lib/v4/c` with an instance created using values from `Lcom/mplus/lib/z7/m;->e:I`. It sets up a static object for later use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -65,6 +66,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a byte array representing an image by combining multiple images.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()[B
     .locals 20
 
@@ -551,6 +553,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a Drawable object based on the provided long parameter, using various approaches such as checking for cached images, downloading images, and creating LayerDrawables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(J)Landroid/graphics/drawable/Drawable;
     .locals 6
 
@@ -776,6 +779,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method converts a Drawable object to a Bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(J)Landroid/graphics/Bitmap;
     .locals 5
 
@@ -1212,6 +1216,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a LayerDrawable based on the input object's properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/x5/m;
     .locals 7
 

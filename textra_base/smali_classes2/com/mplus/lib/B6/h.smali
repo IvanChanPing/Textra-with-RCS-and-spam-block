@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a PagerAdapter instance, setting up its internal state with two empty ArrayLists and storing references to an x5/l object and a BaseViewPager. It does not perform any visible operations beyond initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/ui/common/base/BaseViewPager;)V
     .locals 1
 
@@ -700,6 +701,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method populates an ArrayList with data from a Cursor object and then notifies a PagerAdapter to update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/r4/d0;)V
     .locals 10
 
@@ -800,6 +802,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over an ArrayList of Lcom/mplus/lib/B6/u objects and calls the c() method on each object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 3
 
@@ -836,6 +839,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes a view from a ViewGroup and removes the corresponding object from an ArrayList. It also calls a cleanup method on the removed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 1
 
@@ -868,6 +872,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an ArrayList object. It retrieves the size of the ArrayList 'k' in the class Lcom/mplus/lib/B6/h.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -944,6 +949,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given View object matches the view associated with a specific object. It returns true if they match, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
     .locals 1
 

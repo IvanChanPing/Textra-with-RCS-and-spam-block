@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/F5/a, setting its FloatingActionButtonBackground and scroll listener. It also resets a counter to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;)V
     .locals 0
 
@@ -31,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method resets a class field 'a' to 0 when the scroll state of a RecyclerView changes. It does not use the provided RecyclerView or scroll state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 1
 
@@ -45,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method listens for scroll events on a RecyclerView and toggles the visibility of a FloatingActionButtonBackground based on the scroll direction and distance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .locals 2
 

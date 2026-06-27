@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/t6/a, which extends Landroid/text/style/ImageSpan, with default values. It sets the drawable to null and various integer fields to 0, and creates a new Rect object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -57,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Drawable object, either by retrieving it from a WeakReference or by calling getDrawable() if the reference is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroid/graphics/drawable/Drawable;
     .locals 3
 
@@ -120,6 +122,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes font metrics for a given Paint object if they haven't been initialized yet, and calculates the font height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Landroid/graphics/Paint;)V
     .locals 2
 
@@ -173,6 +176,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a dynamic drawable span on a canvas, handling different types of drawables and alignments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .locals 1
 
@@ -493,6 +497,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/X2/d; with a character. It sets the character to a field 'a' in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(C)V
     .locals 0
 
@@ -145,6 +146,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input character matches the character stored in the object's field 'a' and returns true if they match, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(C)Z
     .locals 2
 

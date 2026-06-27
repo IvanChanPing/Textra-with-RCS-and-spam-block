@@ -269,6 +269,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an object of type Lcom/mplus/lib/X4/j, adding it to a list and posting a message if certain conditions are met, otherwise it calls another method R.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Lcom/mplus/lib/X4/j;)V
     .locals 5
 
@@ -360,6 +361,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method filters out expired items from a list and removes them, then updates the list and notifies of changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q()V
     .locals 8
 
@@ -493,6 +495,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes and sends data asynchronously using an AsyncTask.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Lcom/mplus/lib/X4/j;)V
     .locals 12
 
@@ -935,6 +938,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method Q() and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 1
 

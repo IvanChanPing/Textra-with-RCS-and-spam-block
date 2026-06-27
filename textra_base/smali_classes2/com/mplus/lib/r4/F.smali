@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/r4/F, initializing its fields with the provided parameters. It sets the object's properties, including references to other objects and primitive values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/r4/H;JILcom/mplus/lib/z7/u;Lcom/mplus/lib/r4/M;)V
     .locals 0
 

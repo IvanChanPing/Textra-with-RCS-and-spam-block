@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method formats a CharSequence based on the provided object, which contains data such as a URL, title, description, and image. It constructs a SpannableStringBuilder with the provided data, applying various styles and formatting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/CharSequence;Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 16
 

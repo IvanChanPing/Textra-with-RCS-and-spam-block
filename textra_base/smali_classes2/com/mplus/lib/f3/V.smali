@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/f3/V, setting up an internal handler with a given Callable task. It extends Lcom/google/android/gms/internal/play_billing/zzef.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Callable;)V
     .locals 1
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method runs another method if a certain object is not null, then sets that object to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 
@@ -57,6 +59,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of an object, either by formatting a `toString()` result of `Lcom/mplus/lib/f3/U;` or by calling the superclass's `zzg()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Ljava/lang/String;
     .locals 4
 

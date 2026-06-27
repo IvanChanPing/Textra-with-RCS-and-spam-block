@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/a0, setting its fields with provided parameters. It stores a Lcom/mplus/lib/u4/e object and an android/net/Uri object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/u4/e;Landroid/net/Uri;)V
     .locals 0
 
@@ -34,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to retrieve an input stream from a URI using the `Lcom/mplus/lib/u4/e;->d(Landroid/net/Uri;)Ljava/io/InputStream` method. If the URI is null or the retrieval fails with a `Ljava/io/FileNotFoundException;`, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 4
 
@@ -199,6 +201,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a stored Android Uri object. It does not perform any complex operations or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getUri()Landroid/net/Uri;
     .locals 2
 
@@ -211,6 +214,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, including its URI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O3/F; with a reference to Lcom/inmobi/media/c3;. It sets the 'a' field of the class to the provided Lcom/inmobi/media/c3; object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/c3;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a certain condition is met in the `com/inmobi/media/c3` object and returns a boolean value. It appears to be related to drawing or rendering.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPreDraw()Z
     .locals 2
 

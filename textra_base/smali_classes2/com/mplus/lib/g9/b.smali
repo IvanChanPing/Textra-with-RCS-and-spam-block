@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map with various video advertising settings. It populates the map with key-value pairs for VAST versions, API frameworks, extensions, verification vendors, and other video player capabilities.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 10
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Q8/b, setting its fields with the provided interface and integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/richmedia/injections/RichMediaLightModuleInterface;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object based on the value of `a` field, using `RichMediaLightModuleInterface` to create instances of `VisibilityPrivateConfig` or `RichMediaWebViewFactory`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Lcom/smaato/sdk/core/di/DiConstructor;)Ljava/lang/Object;
     .locals 2
 

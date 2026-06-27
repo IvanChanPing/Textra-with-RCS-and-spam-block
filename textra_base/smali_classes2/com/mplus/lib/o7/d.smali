@@ -46,6 +46,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/o7/d` class, setting up various fields and objects. It appears to be a constructor method that configures the object's state and dependencies.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;)V
     .locals 4
 
@@ -148,6 +149,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a specific condition is met based on the value of `e` and returns `true` if it's equal to 3, otherwise returns `false`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()Z
     .locals 3
 
@@ -255,6 +257,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates and invalidates a drawable when a spring update occurs. It does this by calling the invalidateSelf method on a drawable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -267,6 +270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a view, specifically tracking the state of touches and invoking methods on other objects in response to certain touch actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 5
 
@@ -697,6 +701,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the visibility of several UI components based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0()V
     .locals 7
 
@@ -867,6 +872,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the execution of a timer-based task, checking various conditions and updating the state of an object accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 15
 

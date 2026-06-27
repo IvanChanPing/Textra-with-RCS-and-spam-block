@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/Q0; with a given integer value and calls the superclass constructor. It sets the instance's field 'a' to the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes all elements in the given collection from the set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 4
 
@@ -177,6 +179,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method implements the `retainAll` operation, removing from the collection all elements not contained in the specified collection. It delegates to the superclass `AbstractCollection` implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 2
 

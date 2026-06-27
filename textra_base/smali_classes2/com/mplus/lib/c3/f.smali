@@ -106,6 +106,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/c3/f class, setting its fields with the provided parameters. It also creates a new instance of Lcom/mplus/lib/Z2/m and assigns it to the 'e' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/ByteArrayOutputStream;Ljava/util/Map;Ljava/util/Map;Lcom/mplus/lib/w3/d;)V
     .locals 2
 
@@ -130,6 +131,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given field has a specific annotation and returns its value if present, otherwise throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Lcom/mplus/lib/w3/c;)I
     .locals 2
 
@@ -175,6 +177,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `e` with the provided parameters and returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic a(Lcom/mplus/lib/w3/c;J)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -187,6 +190,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `c` with an additional boolean parameter set to true and returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/w3/c;Ljava/lang/Object;)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -1315,6 +1319,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a long value to an output stream using variable-length quantity (VLQ) encoding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(J)V
     .locals 5
 

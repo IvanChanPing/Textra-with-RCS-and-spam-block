@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a MutableLiveData object with a Boolean value and stores it in a field. It extends the MutableLiveData constructor to accept a Boolean object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Boolean;)V
     .locals 0
 

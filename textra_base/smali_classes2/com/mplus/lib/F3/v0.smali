@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to find a factory for a given message type by iterating over an array of factories and returns the result if found. If no factory is available, it throws an UnsupportedOperationException with a message indicating the unsupported message type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Class;)Lcom/mplus/lib/F3/S0;
     .locals 6
 
@@ -87,6 +88,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given class matches any of the classes in an array of interfaces, returning true if a match is found and false otherwise. It iterates over the array, calling the `b(Ljava/lang/Class;)Z` method on each interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Class;)Z
     .locals 6
 

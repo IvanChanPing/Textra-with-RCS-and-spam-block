@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/O3/j class with various parameters. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/D5;Lcom/inmobi/media/Z5;Ljava/lang/String;ILjava/lang/String;FZ)V
     .locals 0
 
@@ -52,6 +53,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method invokes a static method to perform an action with various parameters from the class fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 8
 

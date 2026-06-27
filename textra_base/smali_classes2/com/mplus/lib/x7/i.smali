@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a RecyclerView ViewHolder by iterating over a collection of items and finding the one that matches the given ID, then inflating a view for that item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/x5/z;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 5
 
@@ -93,6 +94,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method returns the count of items in a collection that have a specific flag (`i`) set to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemCount()I
     .locals 4
 
@@ -142,6 +144,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the ID of an item at a given position. It does this by retrieving the item from a collection using the position and then returning the item's ID as a long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 3
 
@@ -166,6 +169,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the view type of an item at a given position. It achieves this by retrieving the item from a list using the position and then calling a method to get the view type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemViewType(I)I
     .locals 2
 
@@ -188,6 +192,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method binds data to a RecyclerView ViewHolder. It retrieves an item from a list using its position, performs some operations on the item, and then binds the item to the ViewHolder's view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 2
 

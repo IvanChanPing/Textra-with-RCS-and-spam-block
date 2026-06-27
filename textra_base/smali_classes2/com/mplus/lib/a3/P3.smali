@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a P3 object with a zzcfl instance and a string. It extends the URLStreamHandler class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcfl;Ljava/lang/String;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the default port number based on the protocol ("http" or "https") stored in the object's field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDefaultPort()I
     .locals 3
 
@@ -79,6 +81,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method opens a URL connection using the `zzcfl` object. It returns an `HttpURLConnection` object for the given URL.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final openConnection(Ljava/net/URL;)Ljava/net/URLConnection;
     .locals 2
 
@@ -95,6 +98,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method opens an HTTP connection using a provided URL and proxy. It returns the established connection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final openConnection(Ljava/net/URL;Ljava/net/Proxy;)Ljava/net/URLConnection;
     .locals 2
 

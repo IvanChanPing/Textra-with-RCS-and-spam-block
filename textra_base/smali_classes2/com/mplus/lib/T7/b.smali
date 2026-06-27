@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/T7/b class with string and integer parameters. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
     .locals 0
 
@@ -57,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -285,6 +287,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the ad unit ID stored in the 'd' field of the class. It does not perform any additional operations or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAdUnitId()Ljava/lang/String;
     .locals 2
 
@@ -297,6 +300,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the class name. It retrieves the value from the object's 'e' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getClassName()Ljava/lang/String;
     .locals 2
 
@@ -307,6 +311,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a string field 'c' in the class Lcom/mplus/lib/T7/b. It does not perform any actual computation to determine a click URL.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getClickUrl()Ljava/lang/String;
     .locals 2
 
@@ -317,6 +322,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a custom data string stored in the object's field 'f'. It simply retrieves the value of the 'f' field without any modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCustomData()Ljava/lang/String;
     .locals 2
 
@@ -325,6 +331,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'i', presumably representing height. It does not perform any calculations or external calls.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeight()I
     .locals 2
 
@@ -335,6 +342,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the impression string stored in the object's field 'b'. It simply retrieves the value of the 'b' field and returns it as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getImpression()Ljava/lang/String;
     .locals 2
 
@@ -343,6 +351,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'a'. It does not perform any operations based on the integer value 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getName()Ljava/lang/String;
     .locals 2
 
@@ -367,6 +376,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the width stored in the object's field 'h'. It simply retrieves the value of 'h' and returns it as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getWidth()I
     .locals 2
 
@@ -375,6 +385,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code for an object of class Lcom/mplus/lib/T7/b based on its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 5
 
@@ -543,6 +554,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically a `Network` object, by concatenating its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `c` of type `Lcom/mplus/lib/A0/a;` with a new instance of `Lcom/mplus/lib/A0/a;` using its constructor that takes an integer parameter with value 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/C5/b, creating an ArrayList with an initial capacity of 2. It sets this ArrayList as a field in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -51,6 +53,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles touch events for a view, iterating through a list of gesture detectors to find the first one that consumes the event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 5
 
@@ -193,6 +196,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an ArrayList `a` has more than 0 elements and returns true if it does, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -224,6 +228,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to the `Lcom/mplus/lib/z7/h;->w` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

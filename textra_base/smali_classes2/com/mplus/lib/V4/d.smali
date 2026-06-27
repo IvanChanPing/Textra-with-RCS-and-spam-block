@@ -254,6 +254,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method serializes a `Lcom/mplus/lib/r4/M` object into a byte array using protobuf.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static P(Lcom/mplus/lib/r4/M;)[B
     .locals 5
 

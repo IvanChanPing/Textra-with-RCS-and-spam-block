@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/p2, storing a Runnable, an Executor, and another instance of the same class. It sets up the object's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;Lcom/mplus/lib/a3/p2;)V
     .locals 0
 

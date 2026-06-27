@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/y5/a; that initializes an integer field 'a' to 0. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>()V
     .locals 1
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/y5/a, setting an integer field to 1 and storing a View object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/y5/n;)V
     .locals 1
 
@@ -94,6 +96,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method scales a view using a spring animation, checking if the view's parent is a ViewGroup and if the scale change is significant enough to start the animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(F)V
     .locals 11
 
@@ -325,6 +328,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method does nothing with the input parameter and returns immediately. It appears to be a placeholder or unused method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringActivate(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -337,6 +341,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method does nothing with the input parameter and returns immediately after accessing a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 1
 

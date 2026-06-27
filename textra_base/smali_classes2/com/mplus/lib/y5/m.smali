@@ -21,6 +21,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes and then re-adds a TextWatcher to a BaseEditText, and sets its text to a value from Lcom/mplus/lib/z7/g.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 1
 

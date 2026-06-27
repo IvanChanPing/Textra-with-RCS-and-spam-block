@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/C4/b that initializes an integer field 'a' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -26,6 +27,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/C4/b; with a fixed value. It sets the object's field 'a' to 0x13 (19) and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/V5/i;)V
     .locals 0
 
@@ -40,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method tests an object based on the value of a field `a` in the class `Lcom/mplus/lib/C4/b;`, performing different checks depending on the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final test(Ljava/lang/Object;)Z
     .locals 6
 

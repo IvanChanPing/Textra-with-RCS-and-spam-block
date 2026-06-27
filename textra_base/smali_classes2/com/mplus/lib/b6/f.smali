@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/b6/f, setting its properties and calling the superclass constructor. It sets the object's fields, including a handler, file, and other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/b6/d;Landroid/os/Handler;ILjava/io/File;Lcom/mplus/lib/b6/h;)V
     .locals 1
 
@@ -36,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the content length of a URL by sending a HEAD request if the length is not already cached.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Lcom/mplus/lib/E4/a;)J
     .locals 5
 

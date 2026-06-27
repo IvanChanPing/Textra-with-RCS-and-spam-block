@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/x7/m, setting a field 'n' to 1 and calling the superclass constructor with a Lcom/mplus/lib/x5/l object and a null Lcom/mplus/lib/T4/d object. It also calls method d on itself with itself as an argument.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;)V
     .locals 1
 
@@ -165,6 +166,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an Intent object stored in the 'o' field of the class. It does not perform any additional operations on the Intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public x()Landroid/content/Intent;
     .locals 2
 

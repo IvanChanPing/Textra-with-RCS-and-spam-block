@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/v6/c, setting its properties and calling the superclass constructor. It sets the BubbleView, a string, and an integer as instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/convo/BubbleView;IILjava/lang/String;I)V
     .locals 0
 
@@ -89,6 +90,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets a BubbleView by calling its `k` method with null parameters and then sets its `I` field to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Landroid/graphics/drawable/Drawable;)V
     .locals 3
 

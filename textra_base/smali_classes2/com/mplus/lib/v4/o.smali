@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static string arrays in the class Lcom/mplus/lib/v4/o. It sets up column names for contact data, including IDs, names, and photo URIs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 7
 

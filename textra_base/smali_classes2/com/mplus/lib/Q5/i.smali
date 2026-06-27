@@ -49,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum constant of type Lcom/mplus/lib/Q5/i; from a given string. It essentially implements the valueOf method for the enum class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/Q5/i;
     .locals 2
 
@@ -65,6 +66,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enumeration values of the class Lcom/mplus/lib/Q5/i. It creates a copy of the internal array c to prevent external modification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/Q5/i;
     .locals 2
 

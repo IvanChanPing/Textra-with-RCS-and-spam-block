@@ -58,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a formatted string based on a value obtained from an interface method `g()` and a resource string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n0()Ljava/lang/String;
     .locals 5
 
@@ -552,6 +553,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a MotionEvent and checks if it's handled by an instance of Lcom/mplus/lib/u5/b. It returns a boolean indicating whether the event was handled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t(Landroid/view/MotionEvent;)Z
     .locals 3
 

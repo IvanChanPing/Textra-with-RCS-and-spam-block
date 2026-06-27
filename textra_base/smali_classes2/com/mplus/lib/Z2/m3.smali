@@ -49,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -420,6 +421,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'g' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -430,6 +432,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the ModelType object stored in the 'e' field of the class. It does not perform any complex operations, simply returning the existing value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/mlkit/common/sdkinternal/ModelType;
     .locals 2
 
@@ -440,6 +443,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'a' field, which is an instance of Lcom/google/android/gms/internal/mlkit_common/zzmu. It provides access to this internal object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_common/zzmu;
     .locals 2
 
@@ -448,6 +452,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the `zzna` object stored in the `f` field of the class. It does not perform any operations based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_common/zzna;
     .locals 2
 
@@ -458,6 +463,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'b'. It does not use the local variable 'v1' despite assigning it values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Ljava/lang/String;
     .locals 2
 
@@ -470,6 +476,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the `d` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()Z
     .locals 2
 
@@ -480,6 +487,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the `c` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Z
     .locals 2
 

@@ -161,6 +161,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a `zzapt` object from either of two `zzaqs` objects based on the input index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzapt;
     .locals 3
 
@@ -200,6 +201,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'd' as an integer. It does not use the assigned value 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -210,6 +212,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/F3/a1`, which is a set. It appears to be a factory method for creating a set with a specific configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/util/Set;
     .locals 3
 

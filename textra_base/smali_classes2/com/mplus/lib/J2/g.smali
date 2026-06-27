@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/J2/g, storing a weak reference to the provided Lcom/google/android/gms/common/api/internal/zaaw object. It calls the superclass constructor Lcom/google/android/gms/signin/internal/zac;-><init>().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaaw;)V
     .locals 1
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a Google Sign-In internal callback by creating a new instance of Lcom/mplus/lib/J2/d and passing it to Lcom/google/android/gms/common/api/internal/zabi;->zal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab(Lcom/google/android/gms/signin/internal/zak;)V
     .locals 4
 

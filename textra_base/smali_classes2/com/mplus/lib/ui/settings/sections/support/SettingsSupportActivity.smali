@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the SettingsSupportActivity class that initializes the object by calling the superclass constructor. It does not perform any additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -361,6 +362,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the title of the activity using the provided CharSequence. It checks if an object `x` of type `Lcom/mplus/lib/t5/a` is not null, then calls its `t0` method with the title.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setTitle(Ljava/lang/CharSequence;)V
     .locals 2
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/d4/b, setting its fields with provided context, Y3/d, and u5/b objects. It calls the superclass constructor with a specific integer and context object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/Y3/d;Lcom/mplus/lib/u5/b;)V
     .locals 1
 
@@ -158,6 +159,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes the InMobi SDK and sets up a listener for initialization completion.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(Lcom/mplus/lib/V3/a;)V
     .locals 7
 

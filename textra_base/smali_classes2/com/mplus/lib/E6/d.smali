@@ -32,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/s5/r. It appears to be a getter method for the 'i' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 
@@ -42,6 +43,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the view with a new drawable and text, and sets the visibility of certain views based on the presence of text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Lcom/mplus/lib/L5/a;)V
     .locals 11
 
@@ -240,6 +242,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, appending a key-value pair if the object's `h` field is not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

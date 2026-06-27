@@ -86,6 +86,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates an instance of Lcom/mplus/lib/g7/A and calls its b method with an Lcom/mplus/lib/x5/l object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 
@@ -106,6 +107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `TextView` using a `CharSequence` obtained from `Lcom/mplus/lib/L9/a;->a` and then calls `Lcom/mplus/lib/x7/g;->r` with a string resource ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 4
 

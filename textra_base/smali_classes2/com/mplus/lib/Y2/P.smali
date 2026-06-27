@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class with a GoogleApiClient, specifically for ActivityRecognition API. It calls the superclass constructor with the ActivityRecognition API and the provided GoogleApiClient.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
     .locals 1
 
@@ -27,6 +28,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the result of a pending operation using the provided object. It casts the object to a Google API Result and calls the setResult method of the BasePendingResult class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic setResult(Ljava/lang/Object;)V
     .locals 1
 

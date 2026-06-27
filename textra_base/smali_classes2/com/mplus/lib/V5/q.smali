@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the `com.mplus.lib.V5.q` class. The method creates multiple instances of `com.mplus/lib/V5/j` and assigns them to static fields in the `com.mplus.lib.V5.q` class. Each instance of `com.mplus/lib/V5/j` is initialized with a specific set of parameters: an integ  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 178
 

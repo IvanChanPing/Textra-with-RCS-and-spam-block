@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Comparator from a SortedSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final comparator()Ljava/util/Comparator;
     .locals 2
 
@@ -120,6 +121,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the last object in a sorted set that satisfies a condition defined by the `apply` method of `Lcom/mplus/lib/n3/i;`. It iteratively checks objects from the end of the set until it finds one that meets the condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final last()Ljava/lang/Object;
     .locals 4
 
@@ -164,6 +166,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/N0` (actually `Lcom/mplus/lib/o3/M0`) with a subset of a sorted set. It delegates the subset creation to the `subSet` method of the wrapped sorted set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 

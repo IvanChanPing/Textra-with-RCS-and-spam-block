@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/E3/q, setting its properties with the provided boolean, object, and runnable. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ZLjava/lang/Object;Ljava/lang/Runnable;)V
     .locals 0
 

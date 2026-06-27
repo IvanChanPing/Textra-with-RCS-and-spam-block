@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array `a` in class `Lcom/mplus/lib/z8/k;` to map Smaato ad formats to integer values. It specifically maps `RICH_MEDIA` to 1 and `VIDEO` to 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

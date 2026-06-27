@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/a3/m3, including an empty float array and a new instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -44,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/m3, setting its integer and float array fields. It calls the superclass constructor with a boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I[FZ)V
     .locals 0
 
@@ -201,6 +203,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method casts an Object to a Float, retrieves its value, and passes it to method b(F)V, then returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -223,6 +226,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection, handling cases where the collection is of the same type or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 6
 
@@ -432,6 +436,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input index is within the bounds of a collection and throws an IndexOutOfBoundsException if it's not. It returns immediately if the index is valid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 5
 
@@ -475,6 +480,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is present in a collection by calling the `indexOf` method and returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -602,6 +608,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a float value from an array at a specified index and returns it as a Float object. It also calls method c(I)V on the current object before retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic get(I)Ljava/lang/Object;
     .locals 2
 
@@ -628,6 +635,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on the elements of a float array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -678,6 +686,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Float object is present in an array of floats and returns its index if found, otherwise returns -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 5
 
@@ -738,6 +747,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method removes an element at a specified index from a list and returns the removed element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic remove(I)Ljava/lang/Object;
     .locals 5
 
@@ -809,6 +819,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list, shifting the remaining elements to fill the gap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeRange(II)V
     .locals 3
 
@@ -874,6 +885,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a float value at a specified index and returns the previous value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
@@ -912,6 +924,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'c' which represents the size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/g4;, setting its fields 'a' and 'b' based on the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ZLcom/google/android/gms/internal/mlkit_entity_extraction/zzamn;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object, specifically comparing the `zzb()` and `zza()` values of the `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhi` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -145,6 +147,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of a DownloadConstraints object, including its requireUnmeteredNetwork and requiredNetworkTypes properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -199,6 +202,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `zzamn` from the `mlkit_entity_extraction` package.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamn;
     .locals 2
 
@@ -209,6 +213,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating the state of the object's 'a' field. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Z
     .locals 2
 

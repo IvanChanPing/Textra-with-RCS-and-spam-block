@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `j` in class `Lcom/mplus/lib/h6/e;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with the argument `0x30`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -47,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes a view and clears object references.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Ljava/lang/Object;)V
     .locals 2
 
@@ -312,6 +314,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the translationY property of a BaseImageView based on the value from a SpringUpdate object. It retrieves the double value 'a' from the SpringUpdate object, converts it to a float, and applies it to the view's translationY.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

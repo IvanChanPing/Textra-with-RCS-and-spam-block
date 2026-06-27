@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/A with two integer parameters, validating that the first is less than or equal to the second. It sets up a HashMap and instance variables, or throws an exception if the validation fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(II)V
     .locals 2
 
@@ -54,6 +55,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of the object, specifically a hashed string containing the object's identity hash code and the string "Node".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

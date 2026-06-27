@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/X3/a with an integer value and calls the superclass constructor of Landroid/webkit/WebChromeClient.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a default video poster bitmap based on the value of `a` field in the class. It either returns the superclass's default poster or creates a new 64x64 ARGB_8888 bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getDefaultVideoPoster()Landroid/graphics/Bitmap;
     .locals 3
 
@@ -115,6 +117,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles JavaScript alerts in a WebView, either by confirming the alert or delegating to the superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 2
 
@@ -155,6 +158,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the onJsBeforeUnload event for a WebView, either confirming the JsResult or delegating to the superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onJsBeforeUnload(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 2
 
@@ -191,6 +195,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles JavaScript confirmation prompts in a WebView, overriding the default behavior based on the value of a class field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onJsConfirm(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 2
 

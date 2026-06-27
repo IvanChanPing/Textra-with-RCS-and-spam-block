@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the CMP ID from a TCModel object and returns it as an Integer object. It essentially extracts and wraps the CMP ID in an Integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -27,6 +28,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the CMP ID of a TCModel instance using an integer value. It casts the provided object to an integer and then calls the setCmpId method on the TCModel instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

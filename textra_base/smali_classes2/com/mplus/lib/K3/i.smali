@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/K3/i class with a Lcom/mplus/lib/K3/l object and an integer. It sets the object's fields and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/K3/l;I)V
     .locals 0
 
@@ -46,6 +47,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the status and returns a boolean value based on the enum value of `f` and the value of `e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Z
     .locals 3
 
@@ -106,6 +108,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method applies a transformation to an object of type Lcom/mplus/lib/K3/a;, returning an integer value based on the object's properties and the method's internal state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

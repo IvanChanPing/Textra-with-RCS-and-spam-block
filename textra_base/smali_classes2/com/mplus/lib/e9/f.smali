@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/e9/f; that initializes its fields with the provided parameters. It sets the integer field 'a' and two List fields 'b' and 'c'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;I)V
     .locals 0
 

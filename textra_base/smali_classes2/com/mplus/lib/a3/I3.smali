@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a long value from a given object using an Unsafe instance and then converts it to a double. It appears to be a getter method for a double field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(JLjava/lang/Object;)D
     .locals 2
 
@@ -31,6 +32,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a memory location using sun/misc/Unsafe, then converts it to a float.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(JLjava/lang/Object;)F
     .locals 2
 
@@ -53,6 +55,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `Lcom/mplus/lib/a3/K3;->b` or `Lcom/mplus/lib/a3/K3;->c` based on the value of `Lcom/mplus/lib/a3/K3;->g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;JZ)V
     .locals 2
 
@@ -78,6 +81,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `Lcom/mplus/lib/a3/K3;->b` or `Lcom/mplus/lib/a3/K3;->c` based on the value of `Lcom/mplus/lib/a3/K3;->g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Object;JB)V
     .locals 2
 
@@ -129,6 +133,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field in an object using the `sun/misc/Unsafe` class. It converts a float to an integer using `Float.floatToIntBits` before setting the field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/Object;JF)V
     .locals 2
 
@@ -147,6 +152,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and calls either `K3.m` or `K3.n` based on the condition, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(JLjava/lang/Object;)Z
     .locals 2
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class based on a boolean flag. It creates instances of the class with different parameters if the flag is false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s3/a with a boolean and a RuntimeException. It sets the object's fields 'a' and 'b' to the provided boolean and exception, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ZLjava/lang/RuntimeException;)V
     .locals 0
 

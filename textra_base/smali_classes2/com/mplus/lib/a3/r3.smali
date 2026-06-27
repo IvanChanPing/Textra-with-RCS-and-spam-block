@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/r3, storing the provided Iterator in a field. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Iterator;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the iterator has a next element. It returns a boolean value indicating the presence of a next element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -46,6 +48,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in an iteration, specifically returning a new Lcom/mplus/lib/a3/q3 instance if the object is an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyc, otherwise returning the original object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic next()Ljava/lang/Object;
     .locals 3
 
@@ -89,6 +92,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes the current element from the iterator. It invokes the remove method on the iterator object stored in the 'a' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 

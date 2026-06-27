@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/N, setting up an array of size 4 and logging an "initialCapacity" event. It also initializes a counter to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -94,6 +95,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appends an object to an array and increments an index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Object;)V
     .locals 4
 
@@ -270,6 +272,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resizes an array of objects if its current size is less than the specified size, or clones the array if it's marked as shared.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)V
     .locals 4
 

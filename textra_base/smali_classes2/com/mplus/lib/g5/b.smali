@@ -38,6 +38,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields with string and integer arrays.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -70,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/g5/b class, setting its properties and invoking the superclass constructor. It sets up the object's state with various parameters and default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/mplus/lib/r4/K;Lcom/mplus/lib/r4/H;)V
     .locals 1
 
@@ -108,6 +110,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears and repopulates an ArrayList with unread message data from a SQLite database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()V
     .locals 7
 
@@ -295,6 +298,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field `i` to `true` and exits a monitor on an `ArrayList` object `j`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()V
     .locals 3
 
@@ -331,6 +335,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method creates an Intent with the action "sins" and sends it using the M method of the com/mplus/lib/g5/e class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 4
 

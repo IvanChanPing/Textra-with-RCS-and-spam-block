@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/T4/b, setting a boolean flag to true and storing a provided Observer object. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroidx/lifecycle/Observer;)V
     .locals 1
 
@@ -34,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks a boolean flag and either resets the flag and returns or calls the `onChanged` method on an `Observer` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChanged(Ljava/lang/Object;)V
     .locals 2
 

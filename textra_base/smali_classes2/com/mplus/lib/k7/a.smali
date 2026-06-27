@@ -104,6 +104,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/k7/b and initializes it with Lcom/mplus/lib/x5/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 

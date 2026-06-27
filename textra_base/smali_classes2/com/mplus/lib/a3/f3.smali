@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/f3 class with a given Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwe object. It sets the object's fields with the provided object and its size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbwe;)V
     .locals 1
 
@@ -42,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there are more elements to iterate over by comparing two instance variables `a` and `b`. It returns `true` if `a` is less than `b`, indicating that there are more elements, and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 3
 
@@ -71,6 +73,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Byte object representing the result of calling `zza()` on the current instance. It effectively wraps the result of `zza()` in a Byte object and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic next()Ljava/lang/Object;
     .locals 2
 
@@ -89,6 +92,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually remove anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 
@@ -105,6 +109,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next byte from an internal array or throws a NoSuchElementException if all bytes have been returned.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()B
     .locals 3
 

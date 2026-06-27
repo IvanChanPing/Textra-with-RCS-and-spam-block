@@ -135,6 +135,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method clears the state of an object by resetting its fields and clearing its ArrayLists. It sets a long field to -1, an integer field to 0, and clears two ArrayLists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 4
 
@@ -181,6 +182,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method constructs and returns a query object of type `Lcom/mplus/lib/z7/O`, adding conditions based on the state of the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Lcom/mplus/lib/z7/O;
     .locals 7
 
@@ -339,6 +341,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and clears certain fields of the `Lcom/mplus/lib/g6/c` object. It sets the `a` and `b` fields of the object and clears its `c` and `d` ArrayLists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()V
     .locals 4
 
@@ -397,6 +400,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method manages the addition and removal of a long value from two ArrayLists based on a condition and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/Object;Z)V
     .locals 8
 
@@ -540,6 +544,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'a' field of the current object to the provided Parcelable object after casting it to Lcom/mplus/lib/g6/c. It stores the casted object for potential future use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Landroid/os/Parcelable;)V
     .locals 1
 

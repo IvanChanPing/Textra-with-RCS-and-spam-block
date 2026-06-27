@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an iterator object of type Lcom/mplus/lib/K3/m. It creates a new instance of Lcom/mplus/lib/K3/m, passing the current object (Lcom/mplus/lib/K3/n) to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 

@@ -40,6 +40,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `p` of class `Lcom/mplus/lib/W5/g;` with a `Lcom/mplus/lib/L5/a;` object, configuring a placeholder image.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -76,6 +77,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/s5/r, specifically the 'n' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 

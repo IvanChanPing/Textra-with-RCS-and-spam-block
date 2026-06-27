@@ -18,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object by calling the `get()` method of the `b` field, which is an instance of `Lcom/mplus/lib/B3/a;`. It ignores the constant 5 and returns the result directly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 2
 

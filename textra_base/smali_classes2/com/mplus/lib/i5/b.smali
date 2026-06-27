@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/i5/b with an integer and three strings. It sets the object's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string value stored in the object's 'c' field. It appears to be a getter method for a private string variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 2
 
@@ -45,6 +47,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically a HistoricSim object, including its subId, display, phone, and country information.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

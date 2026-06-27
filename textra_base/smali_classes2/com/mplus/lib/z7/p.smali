@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies all observers of a change with the given object. It first marks the object as changed, then calls the superclass's notifyObservers method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final notifyObservers(Ljava/lang/Object;)V
     .locals 1
 

@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides the fillInStackTrace() method to clear the stack trace of the current Throwable object. It does this by setting the stack trace to an empty array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
     .locals 2
 

@@ -45,6 +45,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes the default instance of the PlusPanelPersister$ItemGroup class and registers it with the protobuf library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -61,6 +62,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the `PlusPanelPersister$ItemGroup` class, calling the superclass constructor and setting up an empty protobuf list for items. It sets the initial state of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private constructor <init>()V
     .locals 1
 
@@ -75,6 +77,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private setItems method of the PlusPanelPersister$ItemGroup class. It takes an item group, an index, and an item as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1000(Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;ILcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$Item;)V
     .locals 1
 
@@ -87,6 +90,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds an item to an item group. It invokes the private addItems method of the PlusPanelPersister$ItemGroup class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1100(Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$Item;)V
     .locals 1
 
@@ -95,6 +99,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private `addItems` method of the `PlusPanelPersister$ItemGroup` class, adding an item to the group at a specified index. It serves as a synthetic accessor for the private method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1200(Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;ILcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$Item;)V
     .locals 1
 
@@ -103,6 +108,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private `addAllItems` method on the `PlusPanelPersister$ItemGroup` instance, passing an `Iterable` of items. It effectively adds all items from the given iterable to the item group.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1300(Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;Ljava/lang/Iterable;)V
     .locals 1
 
@@ -121,6 +127,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private removeItems method on a PlusPanelPersister$ItemGroup instance, passing an integer parameter. It effectively removes items from the group based on the provided index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1500(Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;I)V
     .locals 1
 
@@ -129,6 +136,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of PlusPanelPersister$ItemGroup. It serves as a static accessor for the DEFAULT_INSTANCE field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$900()Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -139,6 +147,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds all items from the provided iterable to the item group. It ensures the items list is mutable before adding the items.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private addAllItems(Ljava/lang/Iterable;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -168,6 +177,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds an item to the items list at a specified index. It first checks the class of the item and ensures the items list is mutable before adding the item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private addItems(ILcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$Item;)V
     .locals 2
 
@@ -208,6 +218,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the items in the PlusPanelPersister's ItemGroup by replacing them with an empty protobuf list. It resets the 'items_' field to an empty list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearItems()V
     .locals 2
 
@@ -224,6 +235,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `items_` field is mutable and creates a mutable copy if it's not. It ensures the `items_` field can be modified.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private ensureItemsIsMutable()V
     .locals 3
 
@@ -261,6 +273,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of `PlusPanelPersister$ItemGroup`. It simply retrieves and returns a predefined static instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static getDefaultInstance()Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -291,6 +304,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for a PlusPanelPersister ItemGroup, using the provided ItemGroup instance. It returns a new builder instance based on the default instance and the given ItemGroup.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder(Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;)Lcom/mplus/lib/d6/b;
     .locals 2
 
@@ -307,6 +321,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited `PlusPanelPersister$ItemGroup` object from an input stream. It utilizes the `parseDelimitedFrom` method from the `com/google/protobuf/c` class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -327,6 +342,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a delimited `PlusPanelPersister$ItemGroup` object from an input stream. It utilizes the `parseDelimitedFrom` method from the `com/google/protobuf/c` class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -343,6 +359,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a protobuf message from a given input stream and returns an instance of `PlusPanelPersister$ItemGroup`. It utilizes the `parseFrom` method from the `com/google/protobuf/c` class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -363,6 +380,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a PlusPanelPersister$ItemGroup object from input data using the Google Protocol Buffers library. It returns the parsed ItemGroup object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -381,6 +399,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a `PlusPanelPersister$ItemGroup` object from a given input stream. It utilizes the `parseFrom` method from the `com/google/protobuf/c` class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -399,6 +418,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a PlusPanelPersister$ItemGroup object from input data using the protobuf library. It returns the parsed ItemGroup object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -419,6 +439,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a PlusPanelPersister$ItemGroup object from an InputStream. It utilizes Google's protobuf library to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -437,6 +458,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a PlusPanelPersister$ItemGroup object from an InputStream. It utilizes Google's protobuf library to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -457,6 +479,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a PlusPanelPersister$ItemGroup object from a ByteBuffer. It utilizes Google's protobuf library to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -473,6 +496,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a PlusPanelPersister$ItemGroup object from a ByteBuffer. It utilizes Google's protobuf library to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -493,6 +517,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a PlusPanelPersister$ItemGroup object using Google's protobuf library. It utilizes the DEFAULT_INSTANCE to parse the byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([B)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -509,6 +534,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a PlusPanelPersister$ItemGroup object using the Google Protobuf library. It utilizes a default instance and a parser to deserialize the byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([BLcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$ItemGroup;
     .locals 2
 
@@ -527,6 +553,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a parser for the PlusPanelPersister$ItemGroup class. It retrieves the parser from the DEFAULT_INSTANCE of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parser()Lcom/mplus/lib/F3/O0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -757,6 +784,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an Item object from a list at a specified index. It returns the Item object at the given position in the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getItems(I)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$Item;
     .locals 2
 
@@ -775,6 +803,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of items in the 'items_' list. It retrieves the size of the list and returns it as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getItemsCount()I
     .locals 2
 
@@ -791,6 +820,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of PlusPanelPersister$Item objects. It appears to be retrieving the items from the 'items_' field of the ItemGroup class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getItemsList()Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -831,6 +861,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of items. It appears to be part of a protobuf-generated class, returning a list of `Lcom/mplus/lib/d6/c;` objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getItemsOrBuilderList()Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

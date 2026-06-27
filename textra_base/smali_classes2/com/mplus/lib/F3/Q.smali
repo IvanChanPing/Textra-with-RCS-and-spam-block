@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/F3/Q. It sets a boolean field 'a' to false in the superclass Lcom/mplus/lib/F3/c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/Q;, setting its float array and integer fields. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([FI)V
     .locals 0
 
@@ -56,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inserts a float value at a specified index in a list, resizing the list if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(ILjava/lang/Object;)V
     .locals 5
 
@@ -217,6 +220,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current object, handling cases where the collection is of the same type or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 6
 
@@ -343,6 +347,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appends a float value to an array, resizing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(F)V
     .locals 5
 
@@ -449,6 +454,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is present in a collection. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -621,6 +627,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a float value from an array at a specified index and returns it as a Float object. It also calls another method `c(I)V` before the retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -645,6 +652,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on the values of a float array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -691,6 +699,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method searches for a Float object in an array and returns its index if found, otherwise returns -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 5
 
@@ -759,6 +768,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method removes an element at a specified index from a list and returns the removed element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(I)Ljava/lang/Object;
     .locals 5
 
@@ -826,6 +836,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list, shifting the remaining elements to fill the gap. It checks if the end index is greater than or equal to the start index, and if not, throws an IndexOutOfBoundsException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeRange(II)V
     .locals 3
 
@@ -883,6 +894,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a float value at a specified index in an array and returns the previous value at that index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 

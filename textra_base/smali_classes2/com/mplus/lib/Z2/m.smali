@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Z2/m class, setting its properties. It sets the integer field 'a', and boolean fields 'b' and 'c', and stores a reference to an Lcom/mplus/lib/w3/e object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/w3/e;I)V
     .locals 0
 

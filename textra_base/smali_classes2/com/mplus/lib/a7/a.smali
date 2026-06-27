@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a7/a, setting its 'n' field and calling the superclass constructor. It also sets a resource ID and calls a method 'd' on itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/T4/f;I)V
     .locals 0
 
@@ -286,6 +287,7 @@
     .end sparse-switch
 .end method
 
+# M-ROLE [GROQ]: This method sets the state of a switch based on a configuration value and then disables the switch.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -456,6 +458,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calls the `j()` method on an object of type `Lcom/mplus/lib/T4/f;` after casting. It appears to be triggering some action related to the cast object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x(Lcom/mplus/lib/x7/g;)V
     .locals 1
 

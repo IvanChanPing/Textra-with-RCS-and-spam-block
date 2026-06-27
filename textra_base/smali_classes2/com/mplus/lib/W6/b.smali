@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/W6/b, storing a reference to an Lcom/mplus/lib/W6/c object and a Runnable. It sets up the object's state with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/W6/c;Ljava/lang/Runnable;)V
     .locals 0
 
@@ -39,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method schedules a delayed execution of a Runnable task. It posts the task to be run after a 200ms delay using the App instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H()V
     .locals 5
 

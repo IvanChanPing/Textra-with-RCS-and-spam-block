@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/g0, calling its superclass constructor with a Cursor object and storing an instance of Lcom/mplus/lib/r4/i. It sets up the object's state with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/database/Cursor;Lcom/mplus/lib/r4/i;)V
     .locals 0
 
@@ -106,6 +107,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/O4/b`, populating its fields with data retrieved from a database cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final I()Lcom/mplus/lib/O4/b;
     .locals 6
 

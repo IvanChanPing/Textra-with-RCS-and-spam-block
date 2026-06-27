@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/X3/b class, setting its properties and creating a new Lcom/mplus/lib/T/a instance. It appears to be a constructor for the class, taking a Context, Lcom/mplus/lib/Y3/c, and Lcom/mplus/lib/u5/b as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/Y3/c;Lcom/mplus/lib/u5/b;)V
     .locals 1
 
@@ -56,6 +57,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and configures Amazon Device Ads, including setting MRAID supported versions and policy, and creates a new DTBAdRequest.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(Lcom/mplus/lib/V3/a;)V
     .locals 5
 
@@ -311,6 +313,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called when an ad is loaded, and it cancels any pending posts and schedules a new task to run on the main thread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdLoaded(Landroid/view/View;)V
     .locals 5
 
@@ -480,6 +483,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an impression event for an Amazon banner ad, notifying the ad tracking system. It invokes a logging method on the `Lcom/mplus/lib/V3/b` class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onImpressionFired(Landroid/view/View;)V
     .locals 5
 
@@ -524,6 +528,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the success of an ad response from Amazon, processing the ad data and loading the ad if it meets certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSuccess(Lcom/amazon/device/ads/DTBAdResponse;)V
     .locals 8
 

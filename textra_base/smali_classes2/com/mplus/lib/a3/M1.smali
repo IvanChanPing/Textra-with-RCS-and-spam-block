@@ -93,6 +93,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/a3/M1` class with a string, character array, byte array, and boolean value. It performs various calculations and assignments to set up the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;[C[BZ)V
     .locals 3
 
@@ -405,6 +406,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the string value of a field named 'a' in the class Lcom/mplus/lib/a3/M1. It does not perform any actual string formatting or concatenation despite being named toString.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method constructs an instance of Lcom/mplus/lib/h5/c, wrapping a string in an ArrayList. It then calls a private constructor with the wrapped string and other parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/h5/g;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/h5/c class, setting its fields and applying operations to input lists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/h5/g;Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 1
 

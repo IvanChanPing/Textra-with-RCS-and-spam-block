@@ -54,6 +54,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a FragmentActivity instance, setting various member variables and incrementing a static counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -88,6 +89,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the extras from the current activity's intent, creates a new bundle if none exist, and merges the provided bundle into it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 3
 
@@ -137,6 +139,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and creates an instance of `Lcom/mplus/lib/j4/a` with different parameters based on the condition, then calls its `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public B()V
     .locals 3
 
@@ -187,6 +190,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/w5/a;`, creating one using `Landroidx/lifecycle/ViewModelProvider;` if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D()Lcom/mplus/lib/w5/a;
     .locals 3
 
@@ -226,6 +230,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the Android content view (root ViewGroup) of an Activity. It finds the view by its ID 0x1020002.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final E()Landroid/view/ViewGroup;
     .locals 2
 
@@ -293,6 +298,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a themed attribute value and converts it to a pixel size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final G()I
     .locals 5
 
@@ -337,6 +343,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/s5/m`, initializing it with the activity's intent if it hasn't been created yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H()Lcom/mplus/lib/s5/m;
     .locals 3
 
@@ -372,6 +379,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the LoaderManager instance associated with the current object, initializing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final I()Landroidx/loader/app/LoaderManager;
     .locals 2
 
@@ -397,6 +405,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/x5/z;`, initializing it if necessary by finding a view with ID `0x7f0a025f` in the activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final J()Lcom/mplus/lib/x5/z;
     .locals 2
 
@@ -538,6 +547,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to retrieve the height of the status bar by getting the root window insets of a view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public M()I
     .locals 4
 
@@ -670,6 +680,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the activity is finishing or a certain condition is met, returning true if so and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O()Z
     .locals 2
 
@@ -715,6 +726,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds a callback to the OnBackPressedDispatcher, which will execute the provided Runnable when the back button is pressed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(Ljava/lang/Runnable;)V
     .locals 3
 
@@ -739,6 +751,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a callback object and notifies an event handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(Lcom/mplus/lib/r4/n;)V
     .locals 2
 
@@ -755,6 +768,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/o6/a;`, creating one using `Landroidx/lifecycle/ViewModelProvider;` if it doesn't already exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T()Lcom/mplus/lib/o6/a;
     .locals 3
 
@@ -794,6 +808,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value obtained from `Lcom/mplus/lib/J5/g;->V()I`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public U()I
     .locals 2
 
@@ -810,6 +825,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the attachBaseContext method to wrap the provided context with a custom context, Lcom/mplus/lib/x5/a. It then calls the superclass's attachBaseContext method with the wrapped context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final attachBaseContext(Landroid/content/Context;)V
     .locals 2
 
@@ -828,6 +844,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and if false, updates a timestamp and recreates the activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 4
 
@@ -993,6 +1010,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onDestroy` method of a FragmentActivity, removing the current object from various lists and unregistering it from event buses.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onDestroy()V
     .locals 3
 
@@ -1216,6 +1234,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method customizes the activity's window and view layout after creation. It checks for system windows compatibility and applies window insets listener to a specific view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onPostCreate(Landroid/os/Bundle;)V
     .locals 3
 
@@ -1347,6 +1366,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles Android permission request results, calling the superclass's method and then notifying a listener if available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onRequestPermissionsResult(I[Ljava/lang/String;[I)V
     .locals 3
 
@@ -1372,6 +1392,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onResume` lifecycle method, calling the superclass's `onResume` and then performing various operations such as resetting a flag, invoking a static method, and interacting with other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onResume()V
     .locals 4
 
@@ -1427,6 +1448,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onWindowFocusChanged` method in an Android Activity, and when the window gains focus, it checks and potentially sends a message via an event bus if certain conditions are met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onWindowFocusChanged(Z)V
     .locals 8
 
@@ -1600,6 +1622,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an object of type Lcom/mplus/lib/x5/A to an ArrayList and optionally calls the 'a' method on the added object with a WindowInsetsCompat object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v(Lcom/mplus/lib/x5/A;)V
     .locals 2
 
@@ -1629,6 +1652,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of an object using the top inset value from an Insets object. It takes an object of type Lcom/mplus/lib/x5/y and an Insets object as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w(Lcom/mplus/lib/x5/y;Landroidx/core/graphics/Insets;)V
     .locals 1
 
@@ -1641,6 +1665,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the current theme and passes it to `Lcom/mplus/lib/J5/g;->e0` for processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public x()V
     .locals 3
 
@@ -1665,6 +1690,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the padding of an object implementing `Lcom/mplus/lib/x5/y` using the values from an `Landroidx/core/graphics/Insets` object. It takes no action based on the return value or any other conditional logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public z(Lcom/mplus/lib/x5/y;Landroidx/core/graphics/Insets;)V
     .locals 4
 

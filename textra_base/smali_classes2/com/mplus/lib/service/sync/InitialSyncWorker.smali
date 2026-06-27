@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the InitialSyncWorker class, calling the superclass constructor. It sets up the worker with a given context and worker parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
     .param p1    # Landroid/content/Context;
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method performs an initial sync operation for the application, which involves syncing conversations, messages, and other data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroidx/work/ListenableWorker$Result;
     .locals 30
 

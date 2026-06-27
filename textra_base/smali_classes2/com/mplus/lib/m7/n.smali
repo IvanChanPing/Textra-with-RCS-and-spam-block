@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map with various string keys and integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -360,6 +361,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/m7/o and invokes its b method with an Lcom/mplus/lib/x5/l object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 
@@ -380,6 +382,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the image of an ImageView based on certain conditions, specifically toggling its visibility and setting its image drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 4
 
@@ -503,6 +506,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and sets a CharSequence field based on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 2
 

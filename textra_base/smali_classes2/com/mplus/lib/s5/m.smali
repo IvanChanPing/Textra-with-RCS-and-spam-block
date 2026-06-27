@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/s5/m that initializes a field 'a' with the provided integer value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s5/m with an Android Intent, setting a field 'a' to 8 and storing the Intent in field 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Intent;)V
     .locals 1
 
@@ -45,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s5/m, setting an integer field to 6 and storing a reference to an AutoResizeTextView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/base/AutoResizeTextView;)V
     .locals 1
 
@@ -65,6 +68,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s5/m, setting its fields with provided parameters. It sets an integer field to 2 and stores the input objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/v1/f;Ljava/util/ArrayList;)V
     .locals 1
 
@@ -81,6 +85,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/s5/m class, setting its fields with provided parameters. It sets an integer field 'a' to 3 and stores the input objects in fields 'b' and 'c'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/w9/f;Lcom/mplus/lib/B2/e;)V
     .locals 1
 
@@ -97,6 +102,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s5/m with a given string and sets its properties. It sets an integer field 'a' to 4 and an object field 'b' to the input string, while another object field 'c' is set to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
@@ -115,6 +121,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns a `GenericConfig` object, which contains configuration settings for the Smaato SDK.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Lcom/mplus/lib/s5/m;)Lcom/smaato/sdk/core/remoteconfig/global/GenericConfig;
     .locals 11
 
@@ -750,6 +757,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/w3/c`, passing a string and a map to its constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()Lcom/mplus/lib/w3/c;
     .locals 4
 
@@ -802,6 +810,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `Lcom/mplus/lib/r4/n` object from a `HashMap` using the provided `String` key, and if not found, it attempts to retrieve a byte array from an `Intent` using the same key, deserialize it into a `Lcom/mplus/lib/r4/n` object, and store it in the `HashMap` for future use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(Ljava/lang/String;)Lcom/mplus/lib/r4/n;
     .locals 3
 
@@ -952,6 +961,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/r4/p, either by retrieving a cached instance or by creating a new one using Lcom/mplus/lib/r4/H;->n0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g()Lcom/mplus/lib/r4/p;
     .locals 3
 
@@ -997,6 +1007,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/v2/e`, created with a context and an object retrieved from `Lcom/mplus/lib/B2/e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public get()Ljava/lang/Object;
     .locals 4
 
@@ -1037,6 +1048,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method stores an annotation in a HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i(Ljava/lang/annotation/Annotation;)V
     .locals 3
 
@@ -1076,6 +1088,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either by calling the superclass's toString method or by invoking a private method h() based on the value of field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

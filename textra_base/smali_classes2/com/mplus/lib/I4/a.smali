@@ -36,6 +36,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static byte array field `k` with the bytes of a newline character string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -50,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/I4/a; and calls the P() method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized N()Lcom/mplus/lib/I4/a;
     .locals 3
 
@@ -155,6 +157,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes various fields and objects, including a file, date format, and shared preferences listener, and sets up logging.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()V
     .locals 5
 
@@ -291,6 +294,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes log data to a file, rolling over the file if it exceeds a certain size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
 

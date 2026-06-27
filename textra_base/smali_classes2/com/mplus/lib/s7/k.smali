@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/s7/k; that initializes its parent class Lcom/mplus/lib/D5/b;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -289,6 +290,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method saves the state of two `BaseEditText` fields, specifically the email address and name, to a `Bundle` when the fragment's instance state is saved. It calls the superclass's `onSaveInstanceState` method and then puts the text from the two edit texts into the bundle with keys "emailAddress"  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
 
@@ -327,6 +329,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a DialogFragment, specifically setting the text of two BaseEditText fields ("emailAddress" and "name") if their values are present in the provided Bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

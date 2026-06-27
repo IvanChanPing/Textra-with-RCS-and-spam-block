@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/Y2/K; with a given collection and index. It validates the index against the collection size and stores the collection, index, and collection size in instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/location/zzds;I)V
     .locals 2
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from a list. It returns the object at the given index, which is passed as a parameter to the method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)Ljava/lang/Object;
     .locals 2
 
@@ -57,6 +59,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if there are more elements to iterate over by comparing the current index (`b`) with the total count (`a`). It returns `true` if the current index is less than the total count, and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 3
 
@@ -82,6 +85,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a previous item and returns true if the value of `b` is greater than 0, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -107,6 +111,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in a sequence if available, otherwise throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -152,6 +157,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' of class Lcom/mplus/lib/Y2/K. It does not appear to increment or modify the index in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 2
 
@@ -162,6 +168,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous object in a sequence if it exists, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 2
 

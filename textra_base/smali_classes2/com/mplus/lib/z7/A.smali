@@ -29,6 +29,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a PhoneNumberUtil instance, initializing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a()Lio/michaelrocks/libphonenumber/android/PhoneNumberUtil;
     .locals 2
 

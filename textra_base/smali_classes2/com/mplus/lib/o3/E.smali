@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/E, storing a given Comparable object. It sets the object's field 'a' to the provided Comparable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Comparable;)V
     .locals 0
 
@@ -110,6 +111,7 @@
 .method public abstract c(Ljava/lang/StringBuilder;)V
 .end method
 
+# M-ROLE [GROQ]: This method compares the current object with another object of the same class, delegating the comparison to the `a(Lcom/mplus/lib/o3/E;)I` method. It implements the `compareTo` method from the `Comparable` interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
@@ -141,6 +143,7 @@
 .method public abstract e(Ljava/lang/Comparable;)Z
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current instance of Lcom/mplus/lib/o3/E. It does this by calling the 'a' method to compare the two objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 

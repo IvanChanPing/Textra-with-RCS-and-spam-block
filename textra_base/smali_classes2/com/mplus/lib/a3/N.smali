@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/N with a given integer and sets a boolean flag to true. It also invokes the constructor of its superclass, presumably Ljava/util/Random.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -29,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a SecureRandom instance from a ThreadLocal variable. It checks if the instance is not null before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final a()Ljava/security/SecureRandom;
     .locals 2
 
@@ -55,6 +57,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides the `next(I)` method of the `java/util/Random` class, conditionally throwing an `UnsupportedOperationException` or delegating to the superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public next(I)I
     .locals 2
 
@@ -89,6 +92,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a random boolean value based on the state of the object, either using the superclass's implementation or a SecureRandom instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public nextBoolean()Z
     .locals 2
 
@@ -165,6 +169,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a random double value, either by calling the superclass's `nextDouble()` method or by using a `SecureRandom` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public nextDouble()D
     .locals 3
 
@@ -205,6 +210,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a random float value based on the state of the object, either using the superclass's `nextFloat()` method or a `SecureRandom` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public nextFloat()F
     .locals 2
 
@@ -249,6 +255,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the next Gaussian random number, either by invoking the superclass's `nextGaussian()` method or by using a `SecureRandom` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public nextGaussian()D
     .locals 3
 
@@ -333,6 +340,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a random integer within a specified range based on the value of a class field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public nextInt(I)I
     .locals 2
 
@@ -373,6 +381,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a random long value based on the state of the object, either using the superclass's implementation or a SecureRandom instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public nextLong()J
     .locals 3
 
@@ -413,6 +422,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method sets the seed for a Random object, but throws an UnsupportedOperationException if the object is thread-local or shared.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setSeed(J)V
     .locals 2
 

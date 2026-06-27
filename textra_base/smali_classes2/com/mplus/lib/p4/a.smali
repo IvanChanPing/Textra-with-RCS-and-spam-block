@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/p4/a; with a Lcom/mplus/lib/p4/c; object and calls the superclass constructor of AsyncTask.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/p4/c;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle camera operations, including checking the number of cameras, opening a camera, and setting error callbacks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
@@ -347,6 +349,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of an asynchronous operation, checking if the result is a specific instance of `Lcom/mplus/lib/p4/b;` and updating a field in `Lcom/mplus/lib/p4/c;` accordingly, then posts the result to a bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPostExecute(Ljava/lang/Object;)V
     .locals 3
 

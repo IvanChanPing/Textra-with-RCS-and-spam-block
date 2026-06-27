@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array `a` with 14 integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -45,6 +46,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the input string, either a fixed value if the string is empty or a value from an array indexed by the string's hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/String;)I
     .locals 2
 

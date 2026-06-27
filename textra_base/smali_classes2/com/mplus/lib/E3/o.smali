@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/o, setting its 'a' field to 12. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>()V
     .locals 1
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/E3/o, setting its context and integer fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
@@ -44,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/E3/o, setting its context and a fixed integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/u3/q;)V
     .locals 0
 
@@ -317,6 +320,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of component registrars from the application's metadata.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Ljava/util/ArrayList;
     .locals 8
 
@@ -579,6 +583,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of GIFs from a server using a list of IDs and returns the result as a `Lcom/mplus/lib/Z5/a` object. It constructs a URL with the IDs and uses `Lcom/mplus/lib/R1/d;->m` to make the request.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public f(I)Lcom/mplus/lib/Z5/a;
     .locals 3
 
@@ -637,6 +642,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the ConnectivityManager instance from the Android system. It returns this instance as an Object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public get()Ljava/lang/Object;
     .locals 3
 
@@ -663,6 +669,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be a factory method that returns an instance of `Lcom/mplus/lib/I1/q` based on the value of `a` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public y(Lcom/mplus/lib/I1/y;)Lcom/mplus/lib/I1/q;
     .locals 4
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/s3/D, creating a new instance of Lcom/mplus/lib/s3/C with the provided Callable. It sets this new instance as a field in the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/Callable;)V
     .locals 1
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to interrupt and clean up a thread associated with an instance of `Lcom/mplus/lib/s3/C;`, if certain conditions are met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 7
 
@@ -247,6 +249,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object of class Lcom/mplus/lib/s3/C is not null and calls its run method if it exists, then sets the object to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 

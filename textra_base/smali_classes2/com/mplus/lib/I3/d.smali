@@ -70,6 +70,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/I3/d class with a Lcom/mplus/lib/K3/a object and a list of Lcom/mplus/lib/K3/a objects. It sets up the object's fields, including an EnumSet of Lcom/mplus/lib/K3/l and the provided objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public varargs constructor <init>(Lcom/mplus/lib/K3/a;[Lcom/mplus/lib/K3/a;)V
     .locals 1
 
@@ -320,6 +321,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a BitSet based on the state of bits in an object of type Lcom/mplus/lib/K3/a; and returns a new object of type Lcom/mplus/lib/K3/c; containing the BitSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Lcom/mplus/lib/K3/a;Lcom/mplus/lib/K3/l;)Lcom/mplus/lib/K3/c;
     .locals 5
 
@@ -555,6 +557,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific enum value can be added to a set and then checks a condition using this enum value, ultimately returning a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()Z
     .locals 3
 
@@ -596,6 +599,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and populates an ArrayList with L3/a objects based on data from a K3/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/List;
     .locals 11
 
@@ -787,6 +791,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and conditionally updates a field with a new object if the addition is successful, then returns the updated field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/K3/n;
     .locals 3
 
@@ -828,6 +833,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and conditionally updates a field with the result of a static method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/K3/n;
     .locals 4
 
@@ -871,6 +877,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates a field based on the result, then returns the field's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 3
 
@@ -912,6 +919,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing various fields and properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
@@ -1469,6 +1477,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates an object's state based on the addition result. It then returns the updated object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/K3/n;
     .locals 4
 
@@ -1528,6 +1537,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object by combining the hash codes of its various properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 26
 
@@ -1678,6 +1688,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates a field with a value retrieved from another object if the addition is successful, then returns the updated field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i()I
     .locals 3
 
@@ -1717,6 +1728,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates a field with a value retrieved from another object if the addition is successful, then returns the updated field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j()I
     .locals 3
 
@@ -1756,6 +1768,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string by adding an enum to a set and then using it to get a string from another object if the addition is successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k()Ljava/lang/String;
     .locals 3
 
@@ -1793,6 +1806,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates a field based on the result, then returns the field's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()I
     .locals 3
 
@@ -1830,6 +1844,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Java Instant object, either by retrieving and converting a value from `Lcom/mplus/lib/K3/a;` or returning a previously computed value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m()Ljava/time/Instant;
     .locals 5
 
@@ -1885,6 +1900,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates an object's state based on the addition result. It then returns the updated object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()Lcom/mplus/lib/K3/n;
     .locals 3
 
@@ -1936,6 +1952,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates an object's state based on the addition result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()Lcom/mplus/lib/K3/n;
     .locals 3
 
@@ -2158,6 +2175,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates an object's state based on the addition result. It then returns the updated object state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s()Lcom/mplus/lib/K3/n;
     .locals 3
 
@@ -2219,6 +2237,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns a string value, specifically by checking an EnumSet and then using a K3/a object to get the string if the check is successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()Ljava/lang/String;
     .locals 3
 
@@ -2666,6 +2685,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and checks if a specific condition is met, then returns a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u()Z
     .locals 3
 
@@ -2701,6 +2721,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and conditionally updates a field with a new object if the addition is successful, then returns the updated field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v()Lcom/mplus/lib/K3/n;
     .locals 3
 
@@ -2868,6 +2889,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and conditionally updates a field with a new object if the addition is successful. It then returns the updated field object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Lcom/mplus/lib/K3/n;
     .locals 3
 
@@ -2905,6 +2927,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and updates a field based on the result, then returns the field's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()I
     .locals 3
 
@@ -2944,6 +2967,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an enum value to a set and checks if a certain condition is met, then returns a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z()Z
     .locals 3
 

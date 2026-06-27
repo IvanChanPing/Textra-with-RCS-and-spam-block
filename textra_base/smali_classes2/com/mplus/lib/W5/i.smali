@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `e` in class `Lcom/mplus/lib/W5/i;` by multiplying a value from `Lcom/mplus/lib/z7/m;->a:F` by 1.5. It sets the result as the value of `e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -40,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a custom Drawable object, setting up Paint and TextPaint instances with specific styles and colors. It also stores a reference to an instance of Lcom/mplus/lib/x5/g.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/g;)V
     .locals 3
 
@@ -363,6 +365,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the drawable by invalidating it when a spring update occurs. It accesses the 'a' field of the 'c' object within the provided 'd' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 
@@ -387,6 +390,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adjusts the bounds of a drawable by offsetting the left, top, right, and bottom coordinates, then sets the new bounds on an internal drawable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setBounds(IIII)V
     .locals 5
 

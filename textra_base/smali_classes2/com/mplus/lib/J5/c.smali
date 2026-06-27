@@ -71,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resizes a shape to a square with the smaller of the provided width and height. It then calls the superclass's onResize method with the new dimensions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResize(FF)V
     .locals 1
 

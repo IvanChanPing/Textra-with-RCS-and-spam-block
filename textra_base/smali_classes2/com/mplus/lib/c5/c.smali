@@ -227,6 +227,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method takes a collection of intents, converts each intent to a pending intent with a specific flag, and returns them in an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/util/Collection;)Ljava/util/ArrayList;
     .locals 6
 
@@ -305,6 +306,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method filters a collection of intents based on a given string and returns the filtered collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Ljava/lang/String;)Ljava/util/Collection;
     .locals 5
 
@@ -407,6 +409,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method puts a string representation of an integer into a HashMap with a given key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(ILjava/lang/String;)V
     .locals 4
 

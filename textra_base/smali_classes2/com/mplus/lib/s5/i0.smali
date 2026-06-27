@@ -67,6 +67,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks the state of two boolean flags (`a` and `d`) in the class and returns `true` if both are `true`, otherwise returns `false`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -96,6 +97,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles a touch event by checking if a gesture detector is enabled and if it handles the event. If so, it sets a flag to true; otherwise, it sets the flag to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 1
 
@@ -158,6 +160,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles a long press event on a RecyclerView, finding the child view under the press location and calling a callback with the child's position and relative press coordinates if the view is enabled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLongPress(Landroid/view/MotionEvent;)V
     .locals 5
 
@@ -285,6 +288,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a single tap up event on a RecyclerView, checking if the tap is on a valid child view and if so, calls the `e` method on the `h0` interface with the child view's position and coordinates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 6
 
@@ -436,6 +440,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It delegates the actual conversion to this external method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/x7/f class, setting up its context, x5/y, and x7/e objects. It also creates a new instance of Lcom/mplus/lib/P6/c with a specific value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/x5/y;Lcom/mplus/lib/x7/e;)V
     .locals 1
 
@@ -52,6 +53,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the addition of a view to a layout, either by adding it to a specific position in a list or by displaying it in a specific container.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Lcom/mplus/lib/x7/g;I)V
     .locals 3
 
@@ -412,6 +414,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling `p0()` when a `com/mplus/lib/d7/d` event is received. It essentially triggers the `p0()` method in response to the event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/d7/d;)V
     .locals 1
 
@@ -420,6 +423,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of objects, checks if each object is an instance of Lcom/mplus/lib/x7/n, and if so, calls the b method on it with the provided event object. It effectively dispatches the event to registered listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Ljava/lang/Object;)V
     .locals 4
 
@@ -518,6 +522,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to notify and update various components, specifically an adapter and another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 2
 

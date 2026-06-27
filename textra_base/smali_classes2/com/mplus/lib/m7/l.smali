@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `n` in class `Lcom/mplus/lib/m7/l;` with a value from `Lcom/mplus/lib/T4/o;`. It sets the static field to an instance of `Lcom/mplus/lib/T4/k;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/m7/m` and passes `Lcom/mplus/lib/x5/l` to its `b` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 
@@ -50,6 +52,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and sets a CharSequence field based on the result, using either a string resource or a value from another class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 4
 

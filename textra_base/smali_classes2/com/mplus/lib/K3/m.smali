@@ -34,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there is a next element in an iterator. It delegates the check to the `hasNext()` method of the `Lcom/mplus/lib/K3/b` class instance stored in the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -50,6 +51,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object from an iterator, specifically an Integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/t7/g; that calls the superclass constructor Lcom/mplus/lib/t7/h;-><init>().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'b'. It does not use the local variables or constants defined in the method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 2
 
@@ -44,6 +46,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a CharSequence by parsing HTML from a string and then processing the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/CharSequence;
     .locals 2
 
@@ -68,6 +71,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method constructs and returns a string by concatenating the object's `b` field, a newline separator, and the result of calling the object's `b()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Ljava/lang/String;
     .locals 3
 
@@ -192,6 +196,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

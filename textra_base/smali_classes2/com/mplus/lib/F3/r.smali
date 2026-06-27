@@ -53,6 +53,7 @@
     return-wide p0
 .end method
 
+# M-ROLE [GROQ]: This method creates an instance of `Lcom/mplus/lib/F3/o` and attempts to call its `k` method, returning the instance if successful or throwing an `IllegalArgumentException` if an exception occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h([BIIZ)Lcom/mplus/lib/F3/o;
     .locals 2
 
@@ -274,6 +275,7 @@
 .method public abstract a(I)V
 .end method
 
+# M-ROLE [GROQ]: This method checks if a recursion limit (100) has been exceeded and throws an IOException if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 3
 

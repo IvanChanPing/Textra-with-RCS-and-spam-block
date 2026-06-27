@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the number of bytes that can be read from the input stream without blocking. It checks the availability of the input stream associated with the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final available()I
     .locals 2
 
@@ -31,6 +32,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method closes an InputStream and an HttpURLConnection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 2
 
@@ -51,6 +53,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method marks the current position in an input stream, allowing it to be reset later. It takes an integer parameter representing the maximum number of bytes that can be read before the mark is invalidated.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final mark(I)V
     .locals 2
 
@@ -61,6 +64,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the underlying input stream supports mark operations. It delegates the call to the `markSupported()` method of the input stream object stored in the `b` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final markSupported()Z
     .locals 2
 
@@ -77,6 +81,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method reads a single byte from an input stream and returns its value. It appears to be part of a class that handles input operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read()I
     .locals 2
 
@@ -93,6 +98,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method reads data from an input stream into a byte array and returns the number of bytes read. It appears to be a wrapper around the standard Java InputStream read method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read([B)I
     .locals 2
 
@@ -111,6 +117,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method reads a specified number of bytes from an input stream into a byte array. It returns the number of bytes actually read.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read([BII)I
     .locals 2
 
@@ -127,6 +134,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method resets the input stream associated with the object. It synchronizes access to ensure thread safety.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized reset()V
     .locals 2
 
@@ -162,6 +170,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method skips a specified number of bytes in an input stream and returns the actual number of bytes skipped. It delegates the skipping to the underlying InputStream object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final skip(J)J
     .locals 2
 

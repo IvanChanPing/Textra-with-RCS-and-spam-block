@@ -65,6 +65,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes a HashMap with string values from various sources and returns the string value associated with a given integer key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(I)Ljava/lang/String;
     .locals 5
 

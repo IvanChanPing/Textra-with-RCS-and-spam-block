@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/d4/a, setting its fields and calling the superclass constructor. It sets up the object with references to Lcom/mplus/lib/d4/b and Lcom/mplus/lib/V3/a instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/d4/b;Lcom/mplus/lib/V3/a;)V
     .locals 0
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an ad fetch failure by calling a static method M on an instance of Lcom/mplus/lib/d4/b, passing the ad request status. It appears to be part of an ad fetching process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdFetchFailed(Lcom/inmobi/ads/InMobiBanner;Lcom/inmobi/ads/InMobiAdRequestStatus;)V
     .locals 1
 
@@ -87,6 +89,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an ad load failure event by casting the ad object to InMobiBanner and then calling a static method M in class Lcom/mplus/lib/d4/b; to process the failure status. It does not directly use the casted InMobiBanner object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdLoadFailed(Ljava/lang/Object;Lcom/inmobi/ads/InMobiAdRequestStatus;)V
     .locals 1
 
@@ -177,6 +180,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a failed ad request payload creation by calling a static method M in class Lcom/mplus/lib/d4/b; with the ad request status. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onRequestPayloadCreationFailed(Lcom/inmobi/ads/InMobiAdRequestStatus;)V
     .locals 2
 

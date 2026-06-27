@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/Y2/E, storing a LocationAvailability instance. It sets the object's field 'a' to the provided LocationAvailability.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/location/LocationAvailability;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies a LocationCallback listener about location availability. It casts the input object to a LocationCallback and calls its onLocationAvailability method with the current location availability.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic notifyListener(Ljava/lang/Object;)V
     .locals 2
 

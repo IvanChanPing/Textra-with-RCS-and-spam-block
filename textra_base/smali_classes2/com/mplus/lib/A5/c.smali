@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/A5/c with an integer value. It sets the integer value to a field 'a' in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/A5/c with an integer, a string, and an ArrayList. It sets the object's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILjava/lang/String;Ljava/util/ArrayList;)V
     .locals 1
 
@@ -50,6 +52,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/A5/c, setting its fields based on the provided parameters. It creates a new SparseArrayCompat and a new instance of Lcom/mplus/lib/A5/a, and calculates a value for field b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/A5/a;Lcom/mplus/lib/A5/a;)V
     .locals 3
 
@@ -96,6 +99,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/A5/c class with the given parameters. It sets the object's fields, including an integer and two objects, and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/Ka/C;ILjava/lang/String;)V
     .locals 1
 
@@ -114,6 +118,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/A5/c class with a given object and class. It sets various instance fields, including integers and objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/P6/c;Ljava/lang/Class;)V
     .locals 1
 
@@ -134,6 +139,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/A5/c class with an ArrayList, an integer, and an object of type Lcom/mplus/lib/I9/b. It sets the instance's fields and validates the input ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/ArrayList;ILcom/mplus/lib/I9/b;)V
     .locals 1
 
@@ -440,6 +446,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object at a specific index in a collection is an instance of a certain class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Z
     .locals 4
 
@@ -499,6 +506,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object of type Lcom/mplus/lib/x7/g from a list at a specific index. It returns this object as the result of the method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Lcom/mplus/lib/x7/g;
     .locals 3
 
@@ -521,6 +529,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method increments an index and checks the size of a collection, returning the result of another method `a()` that seems to be related to the index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()Z
     .locals 3
 
@@ -833,6 +842,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an HTTP response, including the protocol version, status code, and optional reason phrase.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 4
 

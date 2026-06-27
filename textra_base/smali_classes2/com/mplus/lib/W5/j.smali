@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/W5/j class, setting a field 'a' to 0 and calling the superclass constructor. It appears to be a default constructor for a custom Drawable class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>()V
     .locals 1
 
@@ -29,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a custom Drawable object with a Paint and a stroke style.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(IFI)V
     .locals 2
 
@@ -139,6 +141,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws different shapes on a Canvas based on the value of `a` field in the class, specifically a line, a circle, or text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 11
 
@@ -517,6 +520,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method sets a color filter on a Paint object based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 2
 

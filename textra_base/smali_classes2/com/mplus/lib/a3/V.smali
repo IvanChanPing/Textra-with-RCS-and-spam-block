@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides a parent class method to return a Collection, specifically a List. It invokes the parent class's zzb method and casts the result to a List.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic zzb(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 1
 
@@ -28,6 +29,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method filters or modifies a collection based on an object. It calls another method `zze` to perform the actual operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/Collection;
     .locals 2
 

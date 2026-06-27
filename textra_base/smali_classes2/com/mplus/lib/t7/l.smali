@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/t7/l; that calls the superclass constructor Lcom/mplus/lib/t7/h;-><init>().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -23,6 +24,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an "oauth_token" string from a JSONObject and assigns it to the class field 'b'. It appears to parse JSON data related to authentication.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lorg/json/JSONObject;)V
     .locals 2
 

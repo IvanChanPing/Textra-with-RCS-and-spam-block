@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/T4/a class with a string, another string, and a SharedPreferences object. It sets these parameters as instance fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Landroid/content/SharedPreferences;)V
     .locals 0
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling the getAsString method. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Ljava/lang/String;
     .locals 2
 
@@ -50,6 +52,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific preference exists in the app's SharedPreferences. It returns true if the preference exists, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 3
 
@@ -68,6 +71,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string by calling the getAsString() method of the current object. It does not use the local variable v1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()Ljava/lang/String;
     .locals 2
 
@@ -115,6 +119,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `f` with the provided string and then returns. It does not perform any other significant actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(Ljava/lang/String;)V
     .locals 1
 
@@ -125,6 +130,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method saves a given string to the app's SharedPreferences. It stores the string with a key stored in the object's 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/String;)V
     .locals 3
 
@@ -151,6 +157,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a value from SharedPreferences and returns it as a string, defaulting to null if the value is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAsString()Ljava/lang/String;
     .locals 4
 
@@ -208,6 +215,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value stored in the object's field 'a'. It does not perform any operations based on the integer value 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/String;
     .locals 2
 
@@ -218,6 +226,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes a preference with the key stored in `Lcom/mplus/lib/T4/a;->a` from the shared preferences. It then applies the changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 
@@ -246,6 +255,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name and a key-value pair.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

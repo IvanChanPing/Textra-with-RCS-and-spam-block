@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/j5/n, setting its supplier and consumer, and calling parent class methods to set a CharSequence and a listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/c;Ljava/lang/String;Ljava/util/function/Supplier;Ljava/util/function/Consumer;)V
     .locals 1
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `TextView` using a string provided by a `Supplier`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 3
 

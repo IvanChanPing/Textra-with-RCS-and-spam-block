@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/t5/e, calling the superclass constructor and setting a field f to the provided Lcom/mplus/lib/x5/y object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/x5/y;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/y, inflating it from a layout resource if it hasn't been initialized.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l0()Lcom/mplus/lib/x5/y;
     .locals 5
 
@@ -73,6 +75,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and displays a popup window if it hasn't been created yet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()V
     .locals 7
 
@@ -228,6 +231,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes an item from a SparseBooleanArray when a dialog is dismissed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDismiss()V
     .locals 3
 

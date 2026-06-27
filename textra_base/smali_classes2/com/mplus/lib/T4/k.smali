@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a map with string keys and integer values representing resource IDs. It populates the map with various resource IDs based on the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Z)V
     .locals 2
 
@@ -112,6 +113,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method puts an integer key and a custom object value into a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(I)V
     .locals 3
 

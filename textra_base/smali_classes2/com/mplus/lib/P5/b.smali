@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/P5/b, setting its fields 'a' and 'b' with provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/P5/c;I)V
     .locals 0
 
@@ -30,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/P5/b, setting an integer field to 2 and storing a weak reference to the provided Lcom/mplus/lib/z7/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/z7/a;)V
     .locals 1
 
@@ -50,6 +52,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a part of a class that handles different types of objects and performs specific actions based on the object type. It checks the type of object and performs actions such as retrieving data from a database or creating a new cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 

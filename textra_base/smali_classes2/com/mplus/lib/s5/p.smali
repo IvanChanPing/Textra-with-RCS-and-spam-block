@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/s5/p. It creates a singleton object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -96,6 +97,7 @@
     return-object v3
 .end method
 
+# M-ROLE [GROQ]: This method configures a TextView to handle emojis, either by setting an input filter or using EmojiTextViewHelper.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Landroid/widget/TextView;)V
     .locals 3
 
@@ -194,6 +196,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

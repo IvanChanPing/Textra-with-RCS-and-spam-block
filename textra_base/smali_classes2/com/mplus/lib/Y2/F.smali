@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of class Lcom/mplus/lib/Y2/F, storing a reference to an object of type Lcom/mplus/lib/Y2/G. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/Y2/G;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies a location listener by calling the `zzb()` method on a `zzcs` object. It casts the input object to a `LocationCallback` but doesn't use it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic notifyListener(Ljava/lang/Object;)V
     .locals 1
 

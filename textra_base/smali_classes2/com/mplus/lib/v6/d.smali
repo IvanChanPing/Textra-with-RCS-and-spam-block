@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/v6/d, setting its 'd' field to the provided Lcom/mplus/lib/v6/e object and calling the superclass constructor. It essentially sets up the object with a reference to another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/v6/e;)V
     .locals 0
 
@@ -148,6 +149,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the `n` field of a `BubbleView` object to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 

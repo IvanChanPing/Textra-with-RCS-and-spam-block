@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/X, setting up an array of Objects with a size twice the input parameter and an integer field to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -91,6 +92,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to add a key-value pair to a data structure, resizing the underlying array if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mplus/lib/o3/X;
     .locals 4
 

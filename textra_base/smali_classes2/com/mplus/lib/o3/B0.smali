@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/o3/B0. It creates a new instance and assigns it to the static field j.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/o3/B0 class, setting its fields to default values. It does not perform any external operations or invoke other classes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -61,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/o3/B0 class, setting its fields with the provided parameters. It does not invoke any external methods or use string constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;[Ljava/lang/Object;ILcom/mplus/lib/o3/B0;)V
     .locals 0
 
@@ -81,6 +84,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/o3/B0` class, setting its properties and potentially creating a nested instance of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 4
 
@@ -165,6 +169,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/o3/E0`. It initializes the instance with the current object and its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/o3/e0;
     .locals 5
 
@@ -191,6 +196,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/F0` and returns it, which is initialized with a `Lcom/mplus/lib/o3/G0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/o3/e0;
     .locals 5
 
@@ -233,6 +239,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a collection based on the input object. It delegates the retrieval to the `Lcom/mplus/lib/o3/H0;->l` method and returns the result or null if it's not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 

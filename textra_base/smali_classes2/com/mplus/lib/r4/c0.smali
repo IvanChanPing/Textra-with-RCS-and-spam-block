@@ -28,6 +28,7 @@
 .method public abstract a()Ljava/util/function/Function;
 .end method
 
+# M-ROLE [GROQ]: This method initializes and sets up the `e` cursor field and related supplier fields if they are null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 4
 
@@ -98,6 +99,7 @@
 .method public abstract c()Lcom/mplus/lib/r4/c0;
 .end method
 
+# M-ROLE [GROQ]: This method closes a database cursor and sets it to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 2
 
@@ -169,6 +171,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by invoking the get method of a Supplier. It first calls method b() on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -189,6 +192,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets fields `a` and `b` of the class instance and returns the result of calling method `c()` on the same instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(Lcom/mplus/lib/z7/O;Ljava/util/function/Function;)Lcom/mplus/lib/r4/c0;
     .locals 1
 
@@ -207,6 +211,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object obtained from a supplier.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

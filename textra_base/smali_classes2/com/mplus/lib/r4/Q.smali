@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a `Lcom/mplus/lib/r4/n` object, either from a cached instance or by deserializing it from a blob in a database cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H()Lcom/mplus/lib/r4/n;
     .locals 6
 

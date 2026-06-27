@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the GiphyCategoryGridFragment class, initializing the object by calling the superclass constructor. It sets up the fragment's basic state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes the GiphyCategoryGridFragment after its activity has been created, setting up the fragment's view, handler, and adapter. It also checks if the activity is finishing and returns early if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityCreated(Landroid/os/Bundle;)V
     .locals 3
 
@@ -157,6 +159,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onAttach method of a Fragment to cast the attached Activity to a specific interface (Lcom/mplus/lib/a6/f) and store it in a field. It calls the superclass's onAttach method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAttach(Landroid/app/Activity;)V
     .locals 1
 
@@ -171,6 +174,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout with ID 0x7f0d0084 and returns the resulting View. It is used to create the user interface for a fragment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 

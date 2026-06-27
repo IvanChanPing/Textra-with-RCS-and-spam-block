@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/I1, storing a provided byte array. It appears to extend a class from the Google ML Kit library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method reads the first 4 bytes of a byte array and returns them as a 32-bit integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 6
 
@@ -141,6 +143,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a byte array in bits. It multiplies the length of the array by 8, which is the number of bits in a byte.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()I
     .locals 2
 
@@ -153,6 +156,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method compares the byte array of the input object `zzatp` with the byte array stored in the class instance, returning true if they are identical and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzatp;)Z
     .locals 8
 
@@ -234,6 +238,7 @@
     return v3
 .end method
 
+# M-ROLE [GROQ]: This method returns a byte array stored in the object's field 'a'. It provides direct access to the object's internal byte array state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()[B
     .locals 2
 

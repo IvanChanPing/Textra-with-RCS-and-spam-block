@@ -85,6 +85,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain object is not null and then calls its `g()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzk()V
     .locals 2
 

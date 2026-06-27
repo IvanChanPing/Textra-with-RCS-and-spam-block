@@ -69,6 +69,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/H7/a class, storing the provided Android Context. It sets up the object with the given context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
@@ -364,6 +365,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the package name of an activity that can handle a specific intent, or returns null if no such activity is found. It uses the PackageManager to resolve the activity and extract its package name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
@@ -405,6 +407,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the class name of a component. It retrieves the component name from Lcom/mplus/lib/j5/g;->e and then gets the class name from it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d()Ljava/lang/String;
     .locals 2
 
@@ -434,6 +437,7 @@
 .method public abstract a(I)V
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

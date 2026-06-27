@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/s5/F, setting its properties and establishing a reference to itself in another object. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/f6/c;Lcom/mplus/lib/g6/f;)V
     .locals 0
 
@@ -131,6 +132,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met and if so, calls the `t0()` method. It appears to be related to initialization or setup.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 2
 
@@ -211,6 +213,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the app is in action mode by retrieving a boolean value from a storage using a generated key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0()Z
     .locals 4
 
@@ -263,6 +266,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets a value indicating whether the app is in action mode.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0(Z)V
     .locals 4
 
@@ -315,6 +319,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle an object and a boolean flag, invoking various interfaces and methods to process the object and update the state. It also notifies a RecyclerView adapter to update its data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s0(Ljava/lang/Object;Z)V
     .locals 4
 
@@ -370,6 +375,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and updates the object's state, notifying the RecyclerView adapter and resetting certain values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0()V
     .locals 7
 
@@ -478,6 +484,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 
@@ -492,6 +499,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is not handled by the `Lcom/mplus/lib/g6/f;->b` method and then calls `Lcom/mplus/lib/s5/F;->s0` with the object and the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u0(Ljava/lang/Object;)V
     .locals 2
 

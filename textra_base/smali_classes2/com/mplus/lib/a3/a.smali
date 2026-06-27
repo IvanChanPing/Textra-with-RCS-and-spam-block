@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/a with an InputStream and an ArrayList. It calls the superclass constructor with the InputStream and sets the ArrayList as a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/InputStream;Ljava/util/ArrayList;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method closes the current object and all its associated `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzacq` objects. It also calls the superclass's `close()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 3
 
@@ -81,6 +83,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method reads a byte from the input stream and, if not end of stream, notifies all listeners in the ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read()I
     .locals 4
 
@@ -137,6 +140,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method reads bytes from an input stream and notifies listeners if data is available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read([B)I
     .locals 3
 
@@ -189,6 +193,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method reads data from an input stream into a byte array and notifies listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read([BII)I
     .locals 2
 

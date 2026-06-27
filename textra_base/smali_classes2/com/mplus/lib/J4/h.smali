@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/J4/h with the given parameters. It sets the instance's fields a, b, c, and d to the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;Z)V
     .locals 0
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/J4/h class with a string, a boolean, and an Lcom/inmobi/media/L4 object. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;ZLcom/inmobi/media/L4;)V
     .locals 1
 
@@ -58,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a part of a state machine or a switch-based system, executing different blocks of code based on the value of `a` field in the class. It handles various tasks such as processing work, handling inmobi media, and updating a database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 8
 

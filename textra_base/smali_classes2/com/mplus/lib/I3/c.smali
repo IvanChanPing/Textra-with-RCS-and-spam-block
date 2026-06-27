@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/I3/c, storing a reference to an Lcom/mplus/lib/K3/a object. It sets up the object with the provided parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/K3/a;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it's not implemented. It returns no actual List.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/List;
     .locals 2
 
@@ -38,6 +40,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/K3/c, which is obtained by calling a static method in Lcom/mplus/lib/I3/d; with parameters from the current object and an enum value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/K3/n;
     .locals 3
 
@@ -56,6 +59,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform bit manipulation and conditional checks on a BitSet object based on various conditions and values obtained from other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/K3/n;
     .locals 8
 
@@ -223,6 +227,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by calling the `e` method of the `Lcom/mplus/lib/K3/a` object with the argument `Lcom/mplus/lib/K3/l;->X`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 3
 
@@ -243,6 +248,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing various properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -493,6 +499,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a value from a configuration, converts it to milliseconds, and returns it as a Java Instant object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Ljava/time/Instant;
     .locals 5
 
@@ -523,6 +530,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if certain conditions are met in the `Lcom/mplus/lib/K3/a` object and returns true if both conditions are true, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Z
     .locals 3
 
@@ -566,6 +574,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns a version value. It appears to get this value from an object of type Lcom/mplus/lib/K3/a; using a specific key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVersion()I
     .locals 3
 
@@ -616,6 +625,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on its various properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 13
 
@@ -744,6 +754,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, including its version, creation and update times, and various consent-related properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

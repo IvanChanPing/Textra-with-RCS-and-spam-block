@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/Y0, setting its fields b and c to instances of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -39,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the dataFileGroup field of the class instance if the provided parameter is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbo;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzam;
     .locals 2
 
@@ -68,6 +70,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzan` if the required properties are present, otherwise it throws an `IllegalStateException`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzan;
     .locals 5
 

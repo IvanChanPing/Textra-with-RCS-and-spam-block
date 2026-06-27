@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J2/s; with an ApiKey and a Feature. It sets the instance's fields 'a' and 'b' to the provided ApiKey and Feature, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/common/api/internal/ApiKey;Lcom/google/android/gms/common/Feature;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their `a` (ApiKey) and `b` (Feature) fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -94,6 +96,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the object based on its `a` (ApiKey) and `b` (Feature) fields. It returns the hash code as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -118,6 +121,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its "key" and "feature" properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

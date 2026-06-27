@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the background color of an object implementing `Lcom/mplus/lib/y5/b;` using a value from `Lcom/mplus/lib/K5/b;`. It appears to be part of a UI customization process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n0(Ljava/lang/Object;)V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text color of an object using the `setTextColorDirect` method and returns the current instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public o0(Ljava/lang/Object;)Lcom/mplus/lib/s5/e;
     .locals 2
 
@@ -57,6 +59,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `t0` with the provided `Lcom/mplus/lib/x5/y` parameter and does nothing else. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p0(Lcom/mplus/lib/x5/y;)V
     .locals 1
 
@@ -67,6 +70,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text color of an object implementing `Lcom/mplus/lib/y5/u` interface using a value from `Lcom/mplus/lib/K5/b` instance. It appears to be part of a UI customization process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public q0(Ljava/lang/Object;)V
     .locals 2
 
@@ -91,6 +95,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a custom drawable object, setting its properties and then applying it to a BaseImageView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public r0(Lcom/mplus/lib/ui/common/base/BaseImageView;I)V
     .locals 11
 
@@ -209,6 +214,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a `Lcom/mplus/lib/K5/b` object cast from a field `e` of the class. It does not perform any complex operations or invocations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public s0()Lcom/mplus/lib/K5/b;
     .locals 2
 
@@ -223,6 +229,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets a RippleDrawable background on an object passed as an argument.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t0(Lcom/mplus/lib/x5/y;)V
     .locals 4
 
@@ -273,6 +280,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method toggles the visibility of a view with animation and starts or stops an object based on the input boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public u0(Z)V
     .locals 2
 

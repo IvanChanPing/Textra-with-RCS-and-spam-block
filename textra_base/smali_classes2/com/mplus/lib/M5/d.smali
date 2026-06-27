@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a RecyclerView Adapter with a given M5/f object. It sets the object as a field and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/M5/f;)V
     .locals 0
 
@@ -81,6 +82,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It appears to be part of a RecyclerView adapter, returning the number of items in the dataset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemCount()I
     .locals 2
 

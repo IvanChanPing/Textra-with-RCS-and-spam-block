@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/F0 class, setting its fields with provided parameters. It stores a ListIterator and an instance of Lcom/mplus/lib/a3/G0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/G0;Ljava/util/ListIterator;)V
     .locals 0
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the list iterator has a previous element. It returns true if there is a previous element, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -72,6 +74,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the list iterator has a previous element. It actually checks for a 'next' element, not 'previous', and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -86,6 +89,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous element in a list iteration if available, otherwise throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -127,6 +131,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the difference between the size of a list and the next index of a list iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 4
 
@@ -165,6 +170,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in a list iterator if available, otherwise throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 3
 
@@ -200,6 +206,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous index by calling nextIndex() and subtracting 1. It does not actually use the constants 7 or 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 
@@ -216,6 +223,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method removes the last element returned by a ListIterator and resets a flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 
@@ -248,6 +256,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an object in a list using a ListIterator. It first checks a boolean condition using Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaii;->zzl.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(Ljava/lang/Object;)V
     .locals 2
 

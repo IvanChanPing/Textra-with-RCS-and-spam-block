@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a QuickConvoActivity instance, setting up a BroadcastReceiver. It sets the activity as the receiver's context and stores the receiver in the activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -187,6 +188,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method Z() and then finishes the current activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()V
     .locals 1
 
@@ -211,6 +213,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a conversation interface, adding various menu items and handling different states.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(Lcom/mplus/lib/ui/common/base/BaseFrameLayout;)Lcom/mplus/lib/v6/W;
     .locals 9
 
@@ -623,6 +626,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks a boolean flag in an object and either returns immediately or calls methods on other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Z()V
     .locals 2
 
@@ -914,6 +918,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the state of an object and its dependencies, then conditionally executes a runnable and calls a method on another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()V
     .locals 3
 
@@ -1091,6 +1096,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for various views in the QuickConvoActivity, performing actions such as finishing the activity, navigating to other activities, or displaying dialogs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 7
 
@@ -1822,6 +1828,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onNewIntent function to handle new intents, finishing the current activity and processing the intent using Lcom/mplus/lib/j4/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onNewIntent(Landroid/content/Intent;)V
     .locals 3
 
@@ -1856,6 +1863,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onResume` method of its superclass and checks if a certain condition is met, then calls `o0()` on an object of type `Lcom/mplus/lib/v6/P` if true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResume()V
     .locals 2
 
@@ -1893,6 +1901,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the padding of an object using the provided insets. It takes an instance of Lcom/mplus/lib/x5/y and an instance of Landroidx/core/graphics/Insets, and uses the insets' values to set the padding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z(Lcom/mplus/lib/x5/y;Landroidx/core/graphics/Insets;)V
     .locals 4
 

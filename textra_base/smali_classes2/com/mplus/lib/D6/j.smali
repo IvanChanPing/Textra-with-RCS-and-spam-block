@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles an onClick event, specifically for requesting an in-app review. It checks if the Play Store app is installed and if it's the official version, then initiates the review request process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 11
 

@@ -69,6 +69,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the input object is an instance of Lcom/mplus/lib/G4/i and if so, calls the n method with an Lcom/mplus/lib/x5/y object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Object;)V
     .locals 1
 
@@ -114,6 +115,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the display of various UI elements based on certain conditions, including the version of a library and the availability of certain data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 14
 

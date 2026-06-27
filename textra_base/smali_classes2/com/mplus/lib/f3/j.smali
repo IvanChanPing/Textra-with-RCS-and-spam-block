@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/f3/j, setting its fields with provided parameters. It appears to be a constructor that extends Lcom/google/android/gms/internal/play_billing/zzco.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/play_billing/zzco;II)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a list at a calculated index, validating the input index beforehand. It returns the object at the calculated position in the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 3
 
@@ -65,6 +67,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'b' as the size. It does not perform any actual size calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -75,6 +78,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist by delegating to `zzi(II)` and casting the result to `Ljava/util/List`. It effectively returns a `com/google/android/gms/internal/play_billing/zzco` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -159,6 +163,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls a validation method and then invokes another method to modify and return a `zzco` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzi(II)Lcom/google/android/gms/internal/play_billing/zzco;
     .locals 2
 

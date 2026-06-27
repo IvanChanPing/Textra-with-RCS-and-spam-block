@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/V6/a, setting its fields with the provided QuickConvoActivity and integer. It does not perform any other actions besides initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/ui/quick/QuickConvoActivity;I)V
     .locals 0
 

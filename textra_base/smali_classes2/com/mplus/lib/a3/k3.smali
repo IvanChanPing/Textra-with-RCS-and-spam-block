@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of `Lcom/mplus/lib/a3/n3;` and assigns it to `Lcom/mplus/lib/a3/k3;->a`. It also accesses `Lcom/mplus/lib/a3/A3;->c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 

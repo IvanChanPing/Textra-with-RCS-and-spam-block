@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f3/q, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/play_billing/d;[Ljava/lang/Object;I)V
     .locals 0
 
@@ -96,6 +97,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by calling zzd() and then zzn(0) on the returned object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -116,6 +118,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'c' which represents the size. It does not perform any calculations or operations, simply returning the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -124,6 +127,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `zza` from class `zzco` to process an array of objects. It returns the result of this method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 
@@ -148,6 +152,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a zzdx object by calling zzn(0) on a zzco object obtained from zzd(). It returns the resulting zzdx object as a zzdw.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/play_billing/zzdw;
     .locals 3
 

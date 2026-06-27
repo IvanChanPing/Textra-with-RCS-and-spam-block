@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method appends a newline character to the end of a SpannableStringBuilder if it's not already there.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/mplus/lib/z7/g;)V
     .locals 3
 
@@ -53,6 +54,7 @@
 .method public abstract b(Ljava/lang/CharSequence;Ljava/lang/Object;)Ljava/lang/CharSequence;
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It delegates the actual work to this method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

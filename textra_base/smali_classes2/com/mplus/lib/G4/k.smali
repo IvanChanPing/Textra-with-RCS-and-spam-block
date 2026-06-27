@@ -115,6 +115,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a string representation of an object, including its ID, status, URI, and local URI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 8
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a6/b class, storing references to various objects. It sets up the class fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/base/BaseImageView;Lcom/mplus/lib/B4/b;Lcom/mplus/lib/R1/d;Lcom/mplus/lib/a6/d;Lcom/mplus/lib/E6/k;)V
     .locals 1
 
@@ -45,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method downloads an image in the background using an AsyncTask. It checks if the task is cancelled, and if so, returns null; otherwise, it attempts to retrieve the image from a cache or download it from a URL.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 
@@ -346,6 +348,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method is part of an AsyncTask that handles the result of a bitmap download or processing task, storing the result in an LruCache and updating an associated ImageView if it still exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPostExecute(Ljava/lang/Object;)V
     .locals 5
 

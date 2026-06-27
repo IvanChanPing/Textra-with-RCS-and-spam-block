@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the UriAdapter class, initializing it as a subclass of TypeAdapter. It sets up the adapter for potential use in JSON serialization or deserialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method reads a JSON value using a JsonReader and returns a Uri object if the value is a string, or null if the value is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 3
 
@@ -68,6 +70,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method writes an Android Uri object to a JsonWriter, handling null values by writing a null value to the JsonWriter. If the Uri is not null, it writes the string representation of the Uri to the JsonWriter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 1
 

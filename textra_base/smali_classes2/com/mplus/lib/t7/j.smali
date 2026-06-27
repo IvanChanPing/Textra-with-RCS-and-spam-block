@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/t7/j; that calls the superclass constructor Lcom/mplus/lib/t7/h;-><init>()V. It initializes an instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -94,6 +95,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string value stored in the object's field 'b'. It provides access to the object's internal state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 2
 
@@ -102,6 +104,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a CharSequence, either an empty string or the result of parsing the object's 'c' string field as HTML.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/CharSequence;
     .locals 3
 
@@ -157,6 +160,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method parses a JSON object and sets various fields of the class `Lcom/mplus/lib/t7/j;` based on the JSON data. It appears to be part of a data model or entity class, populating its fields with data from the JSON object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lorg/json/JSONObject;)V
     .locals 4
 
@@ -313,6 +317,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, including its ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

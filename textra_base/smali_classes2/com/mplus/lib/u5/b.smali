@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/u5/b` class, setting various fields and creating a new instance of `Lcom/mplus/lib/i9/i`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public varargs constructor <init>(Lcom/mplus/lib/u5/a;[I)V
     .locals 2
 
@@ -73,6 +74,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the status of an object and returns a boolean value based on its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/B2/l;)Z
     .locals 6
 
@@ -207,6 +209,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to be responsible for cleaning up resources and unregistering from event buses.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 3
 
@@ -292,6 +295,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/l; if the object's field d is not null, otherwise it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized c()Lcom/mplus/lib/x5/l;
     .locals 2
 
@@ -798,6 +802,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method cancels pending posts and schedules a new post with a delayed execution based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()V
     .locals 11
 
@@ -1013,6 +1018,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by resetting a field and optionally calling the F() method on an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/V3/e;)V
     .locals 2
 
@@ -1048,6 +1054,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the object's state by setting a field to 0 and a boolean field to false, then calls the `e()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/V3/i;)V
     .locals 3
 

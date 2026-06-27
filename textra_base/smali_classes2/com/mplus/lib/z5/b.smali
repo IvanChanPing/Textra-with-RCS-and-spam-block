@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of `Lcom/mplus/lib/z5/b;` with provided parameters and sets up a spring configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;Lcom/mplus/lib/z5/a;)V
     .locals 0
 
@@ -154,6 +155,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the spring animation based on the provided update data and checks if the animation should be stopped.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 7
 

@@ -36,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/z0, validating a range defined by two Lcom/mplus/lib/o3/E objects and throwing an exception if the range is invalid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/E;Lcom/mplus/lib/o3/E;)V
     .locals 4
 
@@ -99,6 +100,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/o3/z0;` using the provided `Long` parameters. It constructs instances of `Lcom/mplus/lib/o3/C;` and `Lcom/mplus/lib/o3/D;` (which extends `Lcom/mplus/lib/o3/E;`) to pass to the `Lcom/mplus/lib/o3/z0;` constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/Long;Ljava/lang/Long;)Lcom/mplus/lib/o3/z0;
     .locals 3
 
@@ -129,6 +131,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object is comparable and satisfies conditions in two `Lcom/mplus/lib/o3/E` instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Z
     .locals 2
 
@@ -180,6 +183,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their `a` and `b` fields of type `Lcom/mplus/lib/o3/E`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -237,6 +241,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object by combining the hash codes of its 'a' and 'b' fields. It uses a simple multiplication and addition formula to combine the hash codes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -263,6 +268,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object by concatenating the string representations of its `a` and `b` fields, separated by "..".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

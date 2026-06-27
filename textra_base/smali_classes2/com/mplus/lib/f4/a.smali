@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/f4/a, setting its properties with provided context, Y3/e, and u5/b objects. It calls the superclass constructor with a specific integer and context object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/Y3/e;Lcom/mplus/lib/u5/b;)V
     .locals 1
 
@@ -346,6 +347,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a failed ad load event for a Smaato banner, notifying the ad manager and logging the error.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdFailedToLoad(Lcom/smaato/sdk/banner/widget/BannerView;Lcom/smaato/sdk/banner/widget/BannerError;)V
     .locals 4
 

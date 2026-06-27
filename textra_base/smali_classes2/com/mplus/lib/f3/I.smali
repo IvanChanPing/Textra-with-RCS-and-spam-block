@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/f3/I;, setting its 'a' field to the provided Lcom/mplus/lib/f3/U; object. It also invokes the superclass constructor of AbstractOwnableSynchronizer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/f3/U;)V
     .locals 0
 
@@ -44,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the string representation of the object referenced by field 'a' of type Lcom/mplus/lib/f3/U. It does not use the returned integer value 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -23,6 +23,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method acts as a bridge to call another method `h` that returns a `Lcom/mplus/lib/v6/B;` object, which is then returned as a `Landroidx/recyclerview/widget/RecyclerView$ViewHolder;`. It essentially delegates the creation of a RecyclerView ViewHolder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic b(Lcom/mplus/lib/x5/z;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 1
 
@@ -33,6 +34,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a Cursor object by calling method f(I) which presumably returns a com/mplus/lib/r4/f0 object, and that object is returned as a Cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic e(I)Landroid/database/Cursor;
     .locals 1
 
@@ -47,6 +49,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition based on the input parameter and the state of an object, then calls a superclass method to retrieve a database cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)Lcom/mplus/lib/r4/f0;
     .locals 2
 
@@ -95,6 +98,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates and configures a RecyclerView ViewHolder, specifically setting its item view's activated and enabled states.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/v6/B;I)V
     .locals 8
 
@@ -418,6 +422,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method determines the view type of an item in a list based on its position and data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemViewType(I)I
     .locals 7
 
@@ -813,6 +818,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method retrieves data from a database or storage using the `f(I)` method and returns a `Lcom/mplus/lib/g6/b` object based on the retrieved data. If no data is found, it returns a default `Lcom/mplus/lib/g6/b` object from `Lcom/mplus/lib/g6/d;->d`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(I)Lcom/mplus/lib/g6/b;
     .locals 6
 
@@ -862,6 +868,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onBindViewHolder method in a RecyclerView adapter, delegating the work to its own g method. It takes a RecyclerView.ViewHolder and an integer position as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 1
 
@@ -874,6 +881,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a RecyclerView ViewHolder is an instance of Lcom/mplus/lib/v6/q and if so, calls the 'a' method on Lcom/mplus/lib/v6/x with the ViewHolder as an argument. It appears to handle a specific type of view attachment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 2
 

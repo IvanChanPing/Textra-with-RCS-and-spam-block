@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Z2/k3 class with an integer, string, and boolean value. It sets the object's fields a, b, and c to the provided string, boolean, and integer, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/String;Z)V
     .locals 0
 
@@ -236,6 +237,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a class field 'c' as an integer. It does not use the defined constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -246,6 +248,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value stored in the object's field 'a'. It appears to be a getter method for the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/lang/String;
     .locals 2
 
@@ -254,6 +257,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the instance variable `b`. It does not perform any additional operations or checks beyond returning this value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Z
     .locals 2
 

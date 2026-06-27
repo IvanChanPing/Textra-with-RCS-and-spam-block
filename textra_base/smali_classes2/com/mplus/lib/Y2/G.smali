@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/Y2/G, storing a provided zzcs object. It extends the Lcom/google/android/gms/location/zzq class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/location/zzcs;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies a listener of the location availability. It creates a new instance of `Lcom/mplus/lib/Y2/E` with the provided `LocationAvailability` and uses it to notify the listener held by `Lcom/google/android/gms/internal/location/zzcs`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Lcom/google/android/gms/location/LocationAvailability;)V
     .locals 3
 
@@ -51,6 +53,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies a listener with a LocationResult. It handles location updates by invoking a callback with the provided location data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze(Lcom/google/android/gms/location/LocationResult;)V
     .locals 3
 
@@ -75,6 +78,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies a listener using a `ListenerHolder` from the Google Play Services library. It creates an instance of `Lcom/mplus/lib/Y2/F` and uses it to notify the listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()V
     .locals 3
 

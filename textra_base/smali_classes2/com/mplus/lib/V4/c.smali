@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields `c` and `d` in class `Lcom/mplus/lib/V4/c;` by calling `Lcom/mplus/lib/z7/m;->c(I)I` with values 2 and 8.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 

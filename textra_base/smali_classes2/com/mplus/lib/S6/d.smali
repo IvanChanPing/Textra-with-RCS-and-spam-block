@@ -32,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method toggles the visibility of a background drawable and sets a value in `Lcom/mplus/lib/b2/d;->e(D)V` based on the input boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Z)V
     .locals 4
 
@@ -87,6 +88,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adjusts the translation of an object based on certain conditions and calculations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 15
 
@@ -240,6 +242,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event for a view, checking if the clicked view is a specific image view or an item in a list, and performs actions accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 4
 
@@ -339,6 +342,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the layout of a view has changed and updates the position of an image view accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 1
 
@@ -497,6 +501,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the spring is at rest and if so, runs a task and then resets the task reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 6
 

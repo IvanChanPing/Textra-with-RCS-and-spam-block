@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/s5/z, setting its fields 'b' and 'a' to the provided Lcom/mplus/lib/s5/D and Lcom/mplus/lib/s5/C objects, respectively. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/D;Lcom/mplus/lib/s5/C;)V
     .locals 0
 
@@ -40,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of objects `Lcom/mplus/lib/s5/C` and `Lcom/mplus/lib/s5/D` when an animation repeats.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 5
 
@@ -133,6 +135,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets a field 'g' in an object of class Lcom/mplus/lib/s5/D to 0 when an animation starts. It does not use the provided Animation object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 2
 

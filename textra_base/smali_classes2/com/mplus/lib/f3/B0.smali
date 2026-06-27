@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f3/B0 class with the provided parameters. It sets the object's fields c, a, and b to the given Lcom/mplus/lib/f3/A0, java/lang/Comparable, and java/lang/Object instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f3/A0;Ljava/lang/Comparable;Ljava/lang/Object;)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares the current object with another object of the same class, specifically comparing their 'a' fields which implement the Comparable interface. It returns the result of this comparison.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 2
 
@@ -57,6 +59,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing the key and value of the current object with those of a Map$Entry object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -176,6 +179,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'a' field, which is a Comparable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic getKey()Ljava/lang/Object;
     .locals 2
 
@@ -186,6 +190,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object stored in the 'b' field of the class. It does not perform any additional operations or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue()Ljava/lang/Object;
     .locals 2
 
@@ -196,6 +201,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object by combining the hash codes of its `a` and `b` fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -248,6 +254,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of an object and returns the previous value. It also invokes a method to perform some cleanup or initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -266,6 +273,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, combining the string values of its `a` and `b` fields with an "=" separator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

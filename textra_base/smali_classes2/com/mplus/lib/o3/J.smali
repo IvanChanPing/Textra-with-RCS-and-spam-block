@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the map delegated by the class Lcom/mplus/lib/o3/J. It invokes the clear method on the delegated map object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public clear()V
     .locals 2
 
@@ -28,6 +29,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given key is present in a map. It delegates the operation to another map object obtained through the `delegate()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 2
 
@@ -49,6 +51,7 @@
 .method public abstract delegate()Ljava/util/Map;
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set of entries from a delegated Map. It delegates the call to the entrySet() method of the Map object returned by the delegate() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public entrySet()Ljava/util/Set;
     .locals 2
 
@@ -69,6 +72,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a value from a map using the provided object as a key and returns the associated value. It delegates the retrieval to a map obtained from the `delegate()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -89,6 +93,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a map is empty by delegating to another map. It returns true if the map is empty, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public isEmpty()Z
     .locals 2
 
@@ -107,6 +112,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set of keys from a delegated Map. It calls the keySet() method on the Map object returned by the delegate() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public keySet()Ljava/util/Set;
     .locals 2
 
@@ -123,6 +129,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method puts a key-value pair into a map and returns the previous value associated with the key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
@@ -158,6 +165,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method puts all entries from a given map into the delegate map. It delegates the putAll operation to the underlying map instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public putAll(Ljava/util/Map;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -185,6 +193,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a map and returns the removed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
     .param p1    # Ljava/lang/Object;
@@ -221,6 +230,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map. It delegates to a map object and calls its size() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public size()I
     .locals 2
 
@@ -239,6 +249,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method clears all entries from a collection by iterating over its set of entries and removing each one. It appears to be part of a custom map implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardClear()V
     .locals 3
 
@@ -275,6 +286,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a key in the map by iterating over the map's entries. It returns true if the key is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardContainsKey(Ljava/lang/Object;)Z
     .locals 4
     .param p1    # Ljava/lang/Object;
@@ -313,6 +325,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a value in the map. It iterates over the map's entries and uses a helper class to perform the check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardContainsValue(Ljava/lang/Object;)Z
     .locals 4
     .param p1    # Ljava/lang/Object;
@@ -353,6 +366,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided object is equal to the current object using a custom equality check from class Lcom/mplus/lib/o3/s;. It returns a boolean result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardEquals(Ljava/lang/Object;)Z
     .locals 1
     .param p1    # Ljava/lang/Object;
@@ -369,6 +383,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a standard hash code for the object. It does this by calling the entrySet() method and then passing the result to a static method l() in class Lcom/mplus/lib/o3/s;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardHashCode()I
     .locals 2
 
@@ -387,6 +402,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a collection is empty by iterating over its entry set and returning true if there are no elements. It returns the opposite of the hasNext result of the set's iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardIsEmpty()Z
     .locals 2
 
@@ -415,6 +431,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method puts all entries from a given map into the current map. It iterates over the entries of the provided map and adds each key-value pair to the current map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardPutAll(Ljava/util/Map;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
@@ -480,6 +497,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes and returns the value associated with a given key from a map if the key is found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardRemove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
     .param p1    # Ljava/lang/Object;
@@ -555,6 +573,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of an object by delegating to Lcom/mplus/lib/o3/s;->u(Ljava/util/Map;)Ljava/lang/String;. It converts a map to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public standardToString()Ljava/lang/String;
     .locals 2
 
@@ -565,6 +584,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a collection of values from a map. It delegates to another method to get the map and then calls the `values()` method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public values()Ljava/util/Collection;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

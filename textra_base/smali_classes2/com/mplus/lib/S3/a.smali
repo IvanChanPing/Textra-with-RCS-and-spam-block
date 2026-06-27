@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static array field `a` with a single string element "null".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -27,6 +28,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes an array of Objects as input, iterates over each object, and attempts to convert it into a string representation. It handles various types of objects, including Intent, Bundle, Throwable, byte array, Class, Bitmap, BitmapDrawable, FontMetricsInt, FontMetrics, and more.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 13
 
@@ -1577,6 +1579,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method wraps an object in an array and calls another method `h` with the array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
@@ -1593,6 +1596,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs or reports data with a string, string, object, and long value. It wraps the object and long value in an array and passes it to another method for processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;J)V
     .locals 1
 
@@ -1617,6 +1621,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates an array from two objects and passes it, along with two strings, to another method. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
@@ -1631,6 +1636,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method constructs an array of objects and passes it to another method `h` for processing. It also converts a long value to a Long object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;J)V
     .locals 1
 
@@ -1653,6 +1659,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates an array of objects and passes it to another method `h` along with two string parameters. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
@@ -1722,6 +1729,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an error message with a formatted string using the `Log.e` method. It also handles exceptions by calling another method to log the exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
@@ -1764,6 +1772,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a formatted string using `java/lang/String;->format` and then sends it using `Lcom/mplus/lib/I4/a;->Q`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
 
@@ -1810,6 +1819,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method formats a string using the provided format and arguments, then logs the result as an info message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
@@ -1854,6 +1864,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a formatted string with the given format and arguments, and handles any exceptions that occur during logging.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs l(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
 
@@ -1900,6 +1911,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an error message with a given tag and exception. It constructs the error message by appending the exception's string representation to a prefix "Error during logging: ".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 3
 
@@ -1938,6 +1950,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an error message with a given tag and exception. It constructs the error message by appending the exception's string representation to a prefix "Error during logging: ".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 3
 
@@ -2017,6 +2030,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a formatted string by prepending thread and log information to the input string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
@@ -2127,6 +2141,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method logs a warning message with a formatted string using the provided format and arguments. It also handles exceptions by logging the error.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
@@ -2173,6 +2188,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a formatted string using `Lcom/mplus/lib/I4/a;->Q` and handles exceptions by calling `Lcom/mplus/lib/S3/a;->n`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs r(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
 

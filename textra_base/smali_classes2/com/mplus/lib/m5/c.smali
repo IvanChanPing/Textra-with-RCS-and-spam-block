@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a synchronized instance of the class Lcom/mplus/lib/m5/c. It appears to be a singleton pattern implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/m5/c;
     .locals 3
 
@@ -60,6 +61,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string by prefixing "Convo-" to the result of `Lcom/mplus/lib/r4/n;->d()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q(Lcom/mplus/lib/r4/n;)Ljava/lang/String;
     .locals 3
 
@@ -98,6 +100,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method resets the object's state by setting its fields to default values. It sets a boolean to false, a string to null, an integer to -1, and an object reference to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized M()V
     .locals 3
 

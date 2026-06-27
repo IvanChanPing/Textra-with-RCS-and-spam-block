@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f6/h class, setting its fields with provided parameters. It stores references to a RecyclerView ViewHolder and a ViewPropertyAnimatorCompat.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f6/o;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/core/view/ViewPropertyAnimatorCompat;)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method is called when an animation ends, and it resets the view's alpha, notifies the item animator that the removal is finished, and removes the view holder from the animator's list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationEnd(Landroid/view/View;)V
     .locals 3
 
@@ -79,6 +81,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called when an animation starts and notifies the item animator to dispatch remove starting for a view holder. It appears to be part of a RecyclerView animation process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationStart(Landroid/view/View;)V
     .locals 2
 

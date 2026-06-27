@@ -42,6 +42,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is valid and calls the superclass's method to verify it, returning true if valid and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;)Z
     .locals 1
 
@@ -73,6 +74,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object of type Lcom/mplus/lib/o3/U; from a cache or map, and if not found, returns a default instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/Object;)Lcom/mplus/lib/o3/U;
     .locals 2
 
@@ -100,6 +102,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a collection by calling `e(Ljava/lang/Object;)` on the current object and returning the result. It appears to be a bridge method for a generic type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic get(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 1
 
@@ -114,6 +117,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of calling `e(Ljava/lang/Object;)` on the current object, which presumably retrieves or computes a list. It appears to be a bridge method for type inference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic get(Ljava/lang/Object;)Ljava/util/List;
     .locals 1
 
@@ -128,6 +132,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to put an object into a collection. It does not store the provided objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
@@ -140,6 +145,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to remove an object. It does not actually remove anything from a collection or data structure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
@@ -166,6 +172,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a collection of values, lazily initializing it if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final values()Ljava/util/Collection;
     .locals 2
 

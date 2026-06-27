@@ -236,6 +236,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a color filter on a Paint object based on the provided K5/b object's 'h' field. It utilizes the J5/g class to generate a PorterDuffColorFilter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setMaterialDirect(Lcom/mplus/lib/K5/b;)V
     .locals 2
 

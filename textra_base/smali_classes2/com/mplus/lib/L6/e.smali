@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method named `o0()` within the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0()V
     .locals 1
 
@@ -124,6 +125,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method displays a popup window with an image at a specific position relative to a text layout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 12
 
@@ -1094,6 +1096,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, appending "[left]" or "[right]" based on the value of the `h` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

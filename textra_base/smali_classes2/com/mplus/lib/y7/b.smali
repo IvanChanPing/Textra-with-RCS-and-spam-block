@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/y7/b, setting its 'f' field to the provided Lcom/mplus/lib/L9/a object. It calls the superclass constructor Lcom/mplus/lib/D5/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/L9/a;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inflates a layout resource with ID 0x7f0d0123 and returns the resulting View. It appears to be part of a Fragment, using the Fragment's Activity as the context for inflation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 2
 
@@ -134,6 +136,7 @@
 .method public abstract o()I
 .end method
 
+# M-ROLE [GROQ]: This method handles a list item click event, checking the item and notifying the adapter to update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
 
@@ -160,6 +163,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method saves the state of a DialogFragment, specifically the checked item position of a ListView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
 
@@ -202,6 +206,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a DialogFragment, setting up a ListView with an adapter and handling item selection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

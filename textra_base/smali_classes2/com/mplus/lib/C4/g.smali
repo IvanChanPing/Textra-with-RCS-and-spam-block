@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/C4/g that initializes an integer field 'a' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -29,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a copy constructor that initializes a new instance of the class by copying the `b` field from another instance. It also sets the `a` field to 8.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/C4/g;)V
     .locals 1
 
@@ -125,6 +127,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/C4/g with a string, an integer, and a boolean. It sets the object's fields 'a' and 'b' with the provided integer and string values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
 
@@ -137,6 +140,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes an Android Uri, extracts the last path segment as a string, and uses it to create a new instance of Lcom/mplus/lib/C4/g. It then returns this instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Landroid/net/Uri;)Lcom/mplus/lib/C4/g;
     .locals 3
 
@@ -245,6 +249,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string field 'b' of the class. It does not perform any operations based on the provided constant value 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final j()Ljava/lang/String;
     .locals 2
 
@@ -386,6 +391,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is contained within another string, with containment defined as exact match, prefix, suffix, or substring separated by commas.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/lang/String;)Z
     .locals 5
 
@@ -532,6 +538,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new File object using a directory path obtained from `Lcom/mplus/lib/o4/a;->N` and a provided filename. It returns this new File object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
@@ -560,6 +567,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a file exists and returns a `Lcom/mplus/lib/r4/V` object if it does, or null if it doesn't.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized d(Ljava/lang/String;)Lcom/mplus/lib/r4/V;
     .locals 2
 
@@ -623,6 +631,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/D6/d`, initializing it with the value 10. It sets the instance's `c` field to the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e()Lcom/mplus/lib/D6/d;
     .locals 3
 
@@ -698,6 +707,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field, using a sparse switch statement to determine which string to return.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

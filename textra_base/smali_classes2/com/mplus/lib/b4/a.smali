@@ -158,6 +158,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates an XML string representing a license request, containing the app's version name and other information.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N()Ljava/lang/String;
     .locals 8
 

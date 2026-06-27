@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f6/i, setting its fields with the provided parameters. It stores references to a RecyclerView ViewHolder and a ViewPropertyAnimatorCompat.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f6/o;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/core/view/ViewPropertyAnimatorCompat;)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the alpha of a given View to 1.0f when an animation is cancelled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationCancel(Landroid/view/View;)V
     .locals 2
 
@@ -95,6 +97,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the start of an animation on a RecyclerView item. It invokes the dispatchAddStarting method on a SimpleItemAnimator instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationStart(Landroid/view/View;)V
     .locals 2
 

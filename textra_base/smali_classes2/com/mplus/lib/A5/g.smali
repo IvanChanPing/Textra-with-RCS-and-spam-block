@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a PagerAdapter with the given context, A5/b, and x5/y objects, and sets up calendar and date-related fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/A5/b;Lcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -95,6 +96,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and configures a calendar view component, including setting up its layout, text sizes, and click listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/x5/z;I)Ljava/lang/Object;
     .locals 20
 
@@ -1005,6 +1007,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method initializes and updates the state of an object with two `Lcom/mplus/lib/A5/a` objects, and notifies a pager adapter of changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/A5/a;Lcom/mplus/lib/A5/a;)V
     .locals 5
 
@@ -1085,6 +1088,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method destroys an item in a ViewGroup by calling the 'a' method on the ViewGroup with a specific view object. It appears to be part of a ViewPager or similar component.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 1
 
@@ -1103,6 +1107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the count from an object of class Lcom/mplus/lib/A5/c. It retrieves the value of field 'b' from the object referenced by 'n'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCount()I
     .locals 2
 
@@ -1170,6 +1175,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given View object matches the view associated with a specific object. It returns true if they match, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
     .locals 1
 

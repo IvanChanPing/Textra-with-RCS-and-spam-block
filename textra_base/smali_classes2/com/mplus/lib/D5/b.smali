@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/D5/b; that initializes its parent class Lcom/mplus/lib/x5/f;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -43,6 +44,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` and makes it visible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(I)V
     .locals 3
 
@@ -81,6 +83,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an OnClickListener on a given Android View. It creates a new instance of Lcom/mplus/lib/B6/m and passes it to the setOnClickListener method of the View.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(Landroid/view/View;)V
     .locals 3
 
@@ -108,6 +111,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an OnClickListener on a given View if it's not null. It creates a new instance of Lcom/mplus/lib/A9/c and passes the provided OnClickListener to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(Landroid/view/View;Landroid/view/View$OnClickListener;)V
     .locals 3
 
@@ -133,6 +137,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string resource by ID and passes it to method `m(Ljava/lang/CharSequence;)V`. It appears to handle string retrieval and forwarding to another method for processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(I)V
     .locals 1
 
@@ -151,6 +156,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` and then makes a `BaseLinearLayout` visible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -177,6 +183,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a click event on a view, checking if the view's ID matches a specific value and dismissing the current dialog if it does. It essentially closes a dialog when a specific button is clicked.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
@@ -196,6 +203,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onCreate method of a DialogFragment to set its style based on whether the instance is of type Lcom/mplus/lib/D5/c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
@@ -230,6 +238,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and customizes a Dialog based on the instance type of the class. It sets the soft input mode or window flags accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 3
 
@@ -277,6 +286,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and configures a fragment view, inflating a layout, setting up UI components, and adding event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 7
 

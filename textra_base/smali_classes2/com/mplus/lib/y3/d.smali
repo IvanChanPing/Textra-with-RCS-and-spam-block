@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static SimpleDateFormat object with a specific format and sets its time zone to UTC.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -42,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes a Date object into a string using a SimpleDateFormat and appends it to an object implementing the Lcom/mplus/lib/w3/g interface. It takes a Date and an object implementing Lcom/mplus/lib/w3/g as input and modifies the latter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 

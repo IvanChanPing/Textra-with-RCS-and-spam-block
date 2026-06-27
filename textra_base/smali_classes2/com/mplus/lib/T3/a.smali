@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method processes an Intent and updates the voice registration state, then potentially schedules work requests for SMS and MMS transactions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Landroid/content/Intent;)V
     .locals 7
 

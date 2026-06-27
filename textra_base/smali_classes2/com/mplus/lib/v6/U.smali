@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method posts a new Runnable to the main App after text has been changed. It creates a new instance of Lcom/mplus/lib/v6/T and passes it to the App's post method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 3
 
@@ -68,6 +69,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a double-tap gesture on a view, checking if the tap is within a certain distance and time threshold, and if so, it selects a word in the text at the tapped position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t(Landroid/view/MotionEvent;)Z
     .locals 9
 

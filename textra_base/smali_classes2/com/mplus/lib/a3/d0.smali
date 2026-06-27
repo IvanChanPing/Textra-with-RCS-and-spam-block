@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/d0 class, calling the superclass constructor with the provided parameters. It sets the f field to the provided Lcom/mplus/lib/a3/e0 object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/e0;Ljava/lang/Object;Ljava/util/List;Lcom/mplus/lib/a3/b0;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds an object at a specified index in a collection and updates a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(ILjava/lang/Object;)V
     .locals 3
 
@@ -153,6 +155,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from a list. It first calls `zzb()` to possibly initialize or validate the list, then returns the object at the given index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -177,6 +180,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method finds the index of a given object in a list. It first checks the object's state with zzb() and then calls the indexOf method on the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 2
 
@@ -197,6 +201,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method finds the last index of a given object in a list. It calls the `lastIndexOf` method of the underlying `List` interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lastIndexOf(Ljava/lang/Object;)I
     .locals 2
 
@@ -219,6 +224,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator instance, specifically an instance of Lcom/mplus/lib/a3/c0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator()Ljava/util/ListIterator;
     .locals 2
 
@@ -235,6 +241,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator instance, specifically an instance of Lcom/mplus/lib/a3/c0, after calling zzb() on the current object. It takes an integer parameter and passes it to the Lcom/mplus/lib/a3/c0 constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator(I)Ljava/util/ListIterator;
     .locals 2
 
@@ -251,6 +258,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an object at a specified index from a list and updates the list's size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(I)Ljava/lang/Object;
     .locals 3
 
@@ -293,6 +301,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets an object at a specified index in a list and returns the replaced object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -319,6 +328,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a collection, invoking a zze method for further processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subList(II)Ljava/util/List;
     .locals 3
 

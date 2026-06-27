@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object with a byte array and an offset, validating the array range. It throws an IllegalArgumentException if the range is invalid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([BI)V
     .locals 2
 
@@ -74,6 +75,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls other methods to process an integer and a boolean value. It appears to convert the boolean to a byte and then invoke methods Q and z with the provided and converted values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A(IZ)V
     .locals 2
 
@@ -90,6 +92,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to call other methods to process an array of bytes based on an input integer. It invokes methods to set a state and write the byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B(I[B)V
     .locals 2
 
@@ -110,6 +113,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls two other methods, Q and D, with specific parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final C(ILcom/mplus/lib/F3/m;)V
     .locals 2
 
@@ -126,6 +130,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes a collection, checks its size, and then calls another method with that size and iterates over the collection using a callback.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D(Lcom/mplus/lib/F3/m;)V
     .locals 2
 
@@ -304,6 +309,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method calls two other methods, Q and H, with the provided parameters. It appears to be a wrapper or initializer method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final G(IJ)V
     .locals 2
 
@@ -588,6 +594,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input integer is non-negative and calls `S(I)` if true, otherwise calls `U(J)` with the input as a long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final J(I)V
     .locals 3
 
@@ -613,6 +620,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method serializes an object of type Lcom/mplus/lib/F3/b and writes it to an output stream. It calls other methods to write the object's size and then the object itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K(ILcom/mplus/lib/F3/D0;Lcom/mplus/lib/F3/T0;)V
     .locals 2
 
@@ -665,6 +673,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of internal state updates and calls other methods with specific parameters. It invokes methods Q, R, and L with various integer values and an object of type Lcom/mplus/lib/F3/D0;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(ILcom/mplus/lib/F3/D0;)V
     .locals 4
 
@@ -699,6 +708,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of operations involving method calls with specific integer parameters and an object of type Lcom/mplus/lib/F3/m;. It invokes various methods on the current object with different parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(ILcom/mplus/lib/F3/m;)V
     .locals 4
 
@@ -729,6 +739,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls two other methods, Q and P, with the provided integer and string parameters. It appears to be a wrapper method for these two calls.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O(ILjava/lang/String;)V
     .locals 2
 
@@ -747,6 +758,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to process a given string by either writing it to a byte array or handling an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Ljava/lang/String;)V
     .locals 7
 
@@ -900,6 +912,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method shifts the first parameter 3 bits to the left, performs a bitwise OR operation with the second parameter, and then calls method S with the result. It appears to be modifying and passing parameters to another method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(II)V
     .locals 1
 
@@ -1309,6 +1322,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the difference between two instance variables `g` and `h`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V()I
     .locals 3
 
@@ -1327,6 +1341,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method copies a specified length of bytes from an input array to an internal array, then updates the internal index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W([BII)V
     .locals 3
 
@@ -1403,6 +1418,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method calls another method named W, passing a byte array and two integers. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(II[B)V
     .locals 1
 
@@ -1411,6 +1427,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appends a byte to an internal array and handles IndexOutOfBoundsException by throwing a custom exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z(B)V
     .locals 5
 

@@ -716,6 +716,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/z7/s` and initializes it with a context and class, then sets a string value and modifies an intent with a generated Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(JLjava/lang/String;)Lcom/mplus/lib/z7/s;
     .locals 4
 

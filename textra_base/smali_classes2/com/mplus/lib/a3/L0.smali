@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Lcom/mplus/lib/a3/L0 class. It creates a new instance and assigns it to the static field f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/L0 class, setting its fields to default values. It appears to be a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -61,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the Lcom/mplus/lib/a3/L0 class, initializing its fields with the provided parameters. It appears to be setting up an object with various attributes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;[Ljava/lang/Object;ILcom/mplus/lib/a3/L0;)V
     .locals 0
 
@@ -81,6 +84,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/a3/L0` class, setting its properties and potentially creating a nested instance. It throws an `IllegalArgumentException` if the input data is invalid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 4
 
@@ -165,6 +169,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a collection based on the provided input object. It delegates the retrieval to a method in the `Lcom/google/android/gms/internal/mlkit_entity_extraction/g` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
@@ -196,6 +201,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'd' as an integer. It appears to represent the size of an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -206,6 +212,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/zzalx, but the return type does not match the object being returned.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzalx;
     .locals 2
 
@@ -218,6 +225,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/a3/N0`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamn;
     .locals 5
 
@@ -240,6 +248,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates instances of `P0` and `O0` classes and returns an `O0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzi()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamn;
     .locals 5
 

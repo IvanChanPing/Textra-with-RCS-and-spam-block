@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/E3/F class with multiple parameters. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbsg;Lcom/mplus/lib/E3/r;Lcom/mplus/lib/E3/r;Lcom/mplus/lib/E3/r;Lcom/mplus/lib/E3/r;Lcom/mplus/lib/E3/r;Lcom/mplus/lib/E3/r;Lcom/mplus/lib/E3/r;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;Lcom/mplus/lib/E3/G;)V
     .locals 0
 
@@ -61,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their fields. It returns true if all fields are equal, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 

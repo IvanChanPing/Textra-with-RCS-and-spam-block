@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/S2/e, setting its fields with a DeferredLifecycleHelper and an integer. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an integer value based on the value of the instance variable `a`. It uses a packed-switch statement to determine the return value, with a default return value of 5 and a specific case for when `a` is 0, returning 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zaa()I
     .locals 2
 
@@ -64,6 +66,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle lifecycle events based on the value of `a` in the class `Lcom/mplus/lib/S2/e;`, calling `onStart()` or `onResume()` on a `LifecycleDelegate`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab()V
     .locals 2
 

@@ -46,6 +46,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static object in the class Lcom/mplus/lib/F4/j. It creates a new instance of java/lang/Object and assigns it to the static field o.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -419,6 +420,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method deletes all files in a given directory except for a specified file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q(Ljava/io/File;Ljava/lang/String;)V
     .locals 5
 
@@ -482,6 +484,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/F4/j; and calls the Z() method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized U()Lcom/mplus/lib/F4/j;
     .locals 3
 
@@ -521,6 +524,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method synchronizes access to and returns an instance of `Lcom/mplus/lib/J4/b;` by calling `M()` on the singleton instance of `Lcom/mplus/lib/F4/j;`. It also calls `Z()` on the same instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized V()Lcom/mplus/lib/J4/b;
     .locals 3
 
@@ -572,6 +576,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the result of `V()` is an instance of `Lcom/mplus/lib/F4/k;` and returns it if so, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static W()Lcom/mplus/lib/F4/k;
     .locals 3
 
@@ -599,6 +604,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an ArrayList of Lcom/mplus/lib/V5/j objects. It creates an array of these objects and then converts it to an ArrayList using Lcom/mplus/lib/z7/J;->c([Ljava/lang/Object;)Ljava/util/ArrayList;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static X()Ljava/util/ArrayList;
     .locals 9
 
@@ -643,6 +649,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and returns an instance of `Lcom/mplus/lib/F1/a` based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()Lcom/mplus/lib/J4/b;
     .locals 4
 
@@ -1196,6 +1203,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'l' field, which is an instance of Lcom/mplus/lib/G4/m. It does not appear to perform any other operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T()Lcom/mplus/lib/G4/m;
     .locals 2
 
@@ -1206,6 +1214,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/S4/b;`, initializing it if necessary using `Lcom/mplus/lib/S4/b;->N(Landroid/content/Context;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y()Lcom/mplus/lib/S4/b;
     .locals 2
 
@@ -2008,6 +2017,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a shared preference has changed and performs specific actions based on the changed preference key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 1
 
@@ -2138,6 +2148,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles Android's onTrimMemory callback, releasing resources based on the given memory level. It clears various objects and calls methods like Lcom/mplus/lib/D4/d;->P()V and Lcom/mplus/lib/J4/b;->t()V when the memory level exceeds certain thresholds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTrimMemory(I)V
     .locals 3
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/i8/a, setting its fields with the provided string and integer values, or throws a NullPointerException if the string is null. It extends the Lcom/smaato/sdk/core/locationaware/TxtRecord class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'a'. It does not perform any operations on the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final data()Ljava/lang/String;
     .locals 2
 
@@ -50,6 +52,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing the `data` and `ttl` fields of `Lcom/smaato/sdk/core/locationaware/TxtRecord` objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -112,6 +115,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the object based on its string and integer fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -144,6 +148,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of a TxtRecord object, including its data and ttl (time to live) values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 
@@ -194,6 +199,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final ttl()I
     .locals 2
 

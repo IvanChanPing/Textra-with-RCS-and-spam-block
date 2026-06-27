@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/t8/e class with various parameters. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/t8/f;Lcom/smaato/sdk/core/network/Request;JJLjava/util/ArrayList;I)V
     .locals 0
 
@@ -45,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object of type Lcom/smaato/sdk/core/network/Call, but the actual return type is Lcom/mplus/lib/t8/f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final call()Lcom/smaato/sdk/core/network/Call;
     .locals 2
 
@@ -57,6 +59,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the connect timeout in milliseconds. It retrieves the value from the object's field 'c' of type long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final connectTimeoutMillis()J
     .locals 3
 
@@ -288,6 +291,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the read timeout in milliseconds. It retrieves the value from a field named 'd' in the class Lcom/mplus/lib/t8/e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final readTimeoutMillis()J
     .locals 3
 
@@ -296,6 +300,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Smaato SDK Request object. It appears to be a getter method for a pre-existing request object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final request()Lcom/smaato/sdk/core/network/Request;
     .locals 2
 
@@ -306,6 +311,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its call, request, timeouts, interceptors, and index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

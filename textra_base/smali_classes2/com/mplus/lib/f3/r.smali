@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f3/r, setting its fields with provided parameters. It extends the Lcom/google/android/gms/internal/play_billing/zzcv class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/play_billing/d;Lcom/mplus/lib/f3/s;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object is present in a collection. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -56,6 +58,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by calling the zzn method on an instance of zzco.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 3
 
@@ -76,6 +79,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object, specifically the 'c' field of an instance of Lcom/google/android/gms/internal/play_billing/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -86,6 +90,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `zza` from class `Lcom/google/android/gms/internal/play_billing/zzco` with an array of objects and an integer, and returns the result. It appears to be related to Google Play Billing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 

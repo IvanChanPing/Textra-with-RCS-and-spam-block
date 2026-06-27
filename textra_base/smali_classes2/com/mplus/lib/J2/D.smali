@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/J2/D that initializes an object with a BasePendingResult. It sets the object's field 'a' to the provided BasePendingResult.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/common/api/internal/BasePendingResult;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method finalizes the object by releasing any held resources, specifically a Google API pending result. It calls superclass finalize method afterwards.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final finalize()V
     .locals 2
 

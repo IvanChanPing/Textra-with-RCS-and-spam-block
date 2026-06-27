@@ -237,6 +237,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method clears a HashMap of Runnables and removes their callbacks from a Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 6
 
@@ -299,6 +300,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves data from a cursor and populates a `Lcom/mplus/lib/r4/n` object with it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)Lcom/mplus/lib/r4/n;
     .locals 5
 
@@ -584,6 +586,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method determines the item view type based on a cursor object. It returns a specific resource ID (0x7f0d00eb or 0x7f0d00ec) depending on whether the cursor matches a certain condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemViewType(I)I
     .locals 2
 

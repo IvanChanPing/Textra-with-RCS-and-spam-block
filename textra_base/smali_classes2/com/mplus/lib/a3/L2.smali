@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/L2, setting its fields and calling the superclass constructor. It sets the object's fields with provided parameters and default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/M2;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzawb;)V
     .locals 1
 
@@ -53,6 +54,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a callable or an interface method based on the value of `c` field in the class, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/Object;
     .locals 4
 
@@ -103,6 +105,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of an object based on the value of the `c` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/String;
     .locals 2
 
@@ -155,6 +158,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a Throwable exception by calling the zzo method on an object of type com/google/android/gms/internal/mlkit_entity_extraction/zzavj.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Throwable;)V
     .locals 2
 

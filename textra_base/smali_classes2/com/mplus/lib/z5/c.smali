@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/z5/c, setting its fields and registering itself as an OnTouchListener for a BubbleView. It configures the object with the provided BubbleView and another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/convo/BubbleView;Lcom/mplus/lib/c7/c;)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/z5/b`, creating a new one if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/z5/b;
     .locals 4
 
@@ -71,6 +73,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a view, tracking the movement and velocity of the touch, and triggering various actions based on the touch event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 8
 

@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/M5/l class with an integer and two objects. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/mplus/lib/P6/c;Lcom/mplus/lib/M5/e;)V
     .locals 1
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/M5/l class, setting its properties with the provided Handler and array of Views. It also creates a new instance of Lcom/mplus/lib/E1/c and assigns it to a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/os/Handler;[Landroid/view/View;)V
     .locals 2
 
@@ -65,6 +67,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/M5/l, setting its properties and adding the provided class and interface array to a HashSet. It also performs null checks on the interfaces.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Class;[Ljava/lang/Class;)V
     .locals 3
 
@@ -183,6 +186,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a component is already providing an interface and throws an exception if so, otherwise adds it to a set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Lcom/mplus/lib/u3/k;)V
     .locals 3
 
@@ -236,6 +240,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/u3/a` if the required `factory` property is present, otherwise it throws an `IllegalStateException`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Lcom/mplus/lib/u3/a;
     .locals 8
 
@@ -327,6 +332,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. If `a` is 0, it calls the private `c()` method; otherwise, it calls the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

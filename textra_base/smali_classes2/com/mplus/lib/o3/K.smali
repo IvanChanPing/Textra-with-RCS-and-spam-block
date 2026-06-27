@@ -12,6 +12,7 @@
 .method public abstract delegate()Ljava/lang/Object;
 .end method
 
+# M-ROLE [GROQ]: This method returns the string representation of the object returned by the `delegate()` method. It essentially delegates the `toString()` call to another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

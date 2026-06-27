@@ -177,6 +177,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the value of a boolean field `p` in a `BubbleView` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Z
     .locals 2
 
@@ -324,6 +325,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the anchor bounds for a mini menu as a RectF object. It retrieves this from a BubbleView object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Landroid/graphics/RectF;
     .locals 2
 
@@ -369,6 +371,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to clean up and reset various resources and states within the class, including removing spans from a Spannable object, dismissing PopupWindows, and resetting flags and indices.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 7
 
@@ -536,6 +539,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the start and end positions of a span in a Spannable object and stores them in instance variables, then calls another method `q0(II)` if certain conditions are met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(Lcom/mplus/lib/L6/a;)V
     .locals 3
 
@@ -936,6 +940,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the text of a BubbleView as a Spannable object. It retrieves the text from the BubbleView and casts it to Spannable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s0()Landroid/text/Spannable;
     .locals 2
 

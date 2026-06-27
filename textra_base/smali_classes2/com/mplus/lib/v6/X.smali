@@ -40,6 +40,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/v6/X class, setting its properties with the provided parameters. It also calls the superclass constructor and initializes an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Ljava/util/concurrent/ConcurrentHashMap;Lcom/mplus/lib/r4/n;IZ)V
     .locals 1
 
@@ -70,6 +71,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and updates the UI components of a view, including text views and image views, based on the data from an object of type `Lcom/mplus/lib/r4/l`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 6
 
@@ -519,6 +521,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the onClick event for two BaseImageViews, triggering different actions based on the view clicked.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 9
 
@@ -783,6 +786,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles menu item clicks, performing different actions based on the item's ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 11
 
@@ -991,6 +995,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/A5/c`, initializing it with various data, including phone numbers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Lcom/mplus/lib/A5/c;
     .locals 6
 

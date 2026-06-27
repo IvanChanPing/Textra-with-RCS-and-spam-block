@@ -69,6 +69,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Contact class and registers it as the default instance. It sets up the ContactPersister$Contact class for use with Google's protobuf library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -85,6 +86,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Contact class, setting default values for phone, name, countryCode, and googleColor fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private constructor <init>()V
     .locals 1
 
@@ -105,6 +107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of ContactPersister$Contact. It serves as a static accessor for the DEFAULT_INSTANCE field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$000()Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -115,6 +118,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the phone number of a Contact object. It invokes a private setter method to update the phone field with the provided string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$100(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Ljava/lang/String;)V
     .locals 1
 
@@ -125,6 +129,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the type of a ContactPersister$Contact object by calling its clearType method. It serves as a synthetic accessor for the private clearType method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1000(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -133,6 +138,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the ID of a ContactPersister$Contact object. It invokes a private setter method to update the ID with a given long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1100(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;J)V
     .locals 1
 
@@ -141,6 +147,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the 'id' field of a Contact object. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1200(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -151,6 +158,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the nested contact list for a given contact. It invokes a private setter method to update the contact's nested list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1300(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$NestedContactList;)V
     .locals 1
 
@@ -161,6 +169,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private `mergeNested` method on a `ContactPersister$Contact` object, passing a `NestedContactList` object. It effectively merges nested contacts.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1400(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$NestedContactList;)V
     .locals 1
 
@@ -169,6 +178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the nested fields of a ContactPersister$Contact object. It invokes a private method to perform the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1500(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -179,6 +189,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the country code for a ContactPersister$Contact object. It invokes a private setter method with the provided country code string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1600(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Ljava/lang/String;)V
     .locals 1
 
@@ -189,6 +200,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the country code of a ContactPersister$Contact object. It does this by invoking the clearCountryCode method on the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1700(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -201,6 +213,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the country code bytes for a ContactPersister$Contact object. It invokes a private setter method to update the country code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1800(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -211,6 +224,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the Google color for a ContactPersister$Contact object. It invokes a private setter method with the provided color code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$1900(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;I)V
     .locals 1
 
@@ -219,6 +233,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the phone information of a ContactPersister$Contact object. It appears to be a synthetic method generated by the compiler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$200(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -231,6 +246,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the Google color of a ContactPersister$Contact object. It does this by invoking a private method to clear the color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$2000(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -243,6 +259,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the phone bytes for a ContactPersister$Contact object. It invokes a private setter method to update the phone bytes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$300(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -253,6 +270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the name of a ContactPersister$Contact object. It invokes a private setter method to update the name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$400(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Ljava/lang/String;)V
     .locals 1
 
@@ -273,6 +291,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the name bytes of a ContactPersister$Contact object. It invokes a private method to update the contact's name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$600(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -281,6 +300,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the checksum of a ContactPersister$Contact object. It invokes a private setter method to update the checksum with a given long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$700(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;J)V
     .locals 1
 
@@ -289,6 +309,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the checksum of a ContactPersister$Contact object. It does this by invoking the clearChecksum method on the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$800(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -301,6 +322,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the type of a ContactPersister$Contact object using the provided A4/c object. It invokes a private method to perform this action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$900(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;Lcom/mplus/lib/A4/c;)V
     .locals 1
 
@@ -313,6 +335,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the checksum field of a Contact object by setting it to 0 and updating the bitField0_ to reflect this change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearChecksum()V
     .locals 3
 
@@ -369,6 +392,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the Google color field by resetting the corresponding bit in the bitField0_ and setting googleColor_ to 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearGoogleColor()V
     .locals 2
 
@@ -393,6 +417,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the 'id' field of the Contact object by setting it to 0 and updating the bitField0_ to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearId()V
     .locals 3
 
@@ -473,6 +498,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the phone field of a Contact object by resetting its bitField0_ flag and setting the phone_ field to its default value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearPhone()V
     .locals 2
 
@@ -503,6 +529,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the 'type' field of the Contact object by resetting the corresponding bit in the bitField0_ and setting type_ to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearType()V
     .locals 2
 
@@ -525,6 +552,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of the Contact class. It retrieves a predefined static instance of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static getDefaultInstance()Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -535,6 +563,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method merges a `NestedContactList` into the current `Contact` object, either by merging the new list into the existing one or replacing the existing one if it's the default instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private mergeNested(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$NestedContactList;)V
     .locals 3
 
@@ -603,6 +632,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for the ContactPersister$Contact class. It returns an instance of Lcom/mplus/lib/A4/a, which is a builder for the Contact class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder()Lcom/mplus/lib/A4/a;
     .locals 2
 
@@ -621,6 +651,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for a ContactPersister$Contact object. It returns a new instance of Lcom/mplus/lib/A4/a; based on the provided ContactPersister$Contact object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)Lcom/mplus/lib/A4/a;
     .locals 2
 
@@ -639,6 +670,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from a delimited input stream. It utilizes the parseDelimitedFrom method from the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -655,6 +687,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from a delimited input stream. It utilizes the parseDelimitedFrom method from the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseDelimitedFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -673,6 +706,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from a given input stream. It utilizes the parseFrom method from the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -693,6 +727,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from input data using the protobuf library. It returns the parsed ContactPersister$Contact instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -711,6 +746,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from a given input stream. It utilizes the parseFrom method from the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -729,6 +765,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from input data using the protobuf library. It returns the parsed ContactPersister$Contact instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -745,6 +782,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from an InputStream. It utilizes the parseFrom method of the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -765,6 +803,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from an InputStream using a provided extension registry. It utilizes the parseFrom method of the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -783,6 +822,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from a ByteBuffer. It utilizes the parseFrom method of the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -803,6 +843,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from a ByteBuffer. It utilizes the parseFrom method of the com/google/protobuf/c class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -823,6 +864,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a ContactPersister$Contact object using Google's protobuf library. It utilizes the parseFrom method of the protobuf library to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([B)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -843,6 +885,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a ContactPersister$Contact object from a byte array using the parseFrom method of com/google/protobuf/c. It returns the parsed ContactPersister$Contact object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([BLcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;
     .locals 2
 
@@ -863,6 +906,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a parser for the ContactPersister$Contact class. It retrieves the parser from the DEFAULT_INSTANCE of ContactPersister$Contact.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parser()Lcom/mplus/lib/F3/O0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -885,6 +929,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the checksum of a Contact object. It updates the bitField0_ flag and assigns the provided long value to the checksum_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setChecksum(J)V
     .locals 2
 
@@ -905,6 +950,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the country code of a Contact object. It updates the bitField0_ flag and stores the provided country code string in the countryCode_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setCountryCode(Ljava/lang/String;)V
     .locals 2
 
@@ -925,6 +971,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the countryCode_ field of the Contact class to the result of calling o() on the provided F3/m object and updates the bitField0_ accordingly. It effectively stores the country code from the input object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setCountryCodeBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -953,6 +1000,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the googleColor_ field of the Contact class and updates the bitField0_ to reflect the change. It takes an integer parameter representing the new googleColor_ value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setGoogleColor(I)V
     .locals 2
 
@@ -973,6 +1021,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'id_' field of the Contact object to the provided long value and updates the 'bitField0_' to reflect the change. It essentially marks the 'id_' field as set and stores the given id value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setId(J)V
     .locals 2
 
@@ -989,6 +1038,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the name of a Contact object. It updates the bitField0_ flag and assigns the provided string to the name_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setName(Ljava/lang/String;)V
     .locals 2
 
@@ -1009,6 +1059,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'name_' field of the Contact class and updates the 'bitField0_' flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setNameBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -1031,6 +1082,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the `nested_` field of the `Contact` object to the provided `NestedContactList` and updates the `bitField0_` to reflect this change. It essentially marks the `nested_` field as set in the object's bit field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setNested(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$NestedContactList;)V
     .locals 1
 
@@ -1051,6 +1103,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the phone number of a contact by storing the provided string and updating the bit field. It appears to be part of a protocol buffer implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setPhone(Ljava/lang/String;)V
     .locals 2
 
@@ -1075,6 +1128,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the phone number of a contact and updates the bit field to reflect the change. It takes a `com/mplus/lib/F3/m` object as input and extracts the phone number as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setPhoneBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -1099,6 +1153,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the type of a ContactPersister$Contact object based on the provided A4/c object. It updates the type_ field and sets the corresponding bit in the bitField0_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setType(Lcom/mplus/lib/A4/c;)V
     .locals 1
 
@@ -1349,6 +1404,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the checksum value of a Contact object. It simply retrieves the checksum_ field from the object and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getChecksum()J
     .locals 3
 
@@ -1361,6 +1417,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the countryCode_ string field of the Contact class. It simply retrieves the stored country code without any modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getCountryCode()Ljava/lang/String;
     .locals 2
 
@@ -1371,6 +1428,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the countryCode as a byte string. It retrieves the countryCode from the object's field and converts it using Lcom/mplus/lib/F3/m;->d(Ljava/lang/String;)Lcom/mplus/lib/F3/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getCountryCodeBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 
@@ -1389,6 +1447,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the googleColor_ field of the Contact class. It retrieves the value of the googleColor_ instance variable and returns it as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getGoogleColor()I
     .locals 2
 
@@ -1399,6 +1458,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the 'id_' field of the Contact class as a long value. It retrieves the id from the current object instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getId()J
     .locals 3
 
@@ -1407,6 +1467,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the 'name_' field of the Contact class as a String. It retrieves the name from the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getName()Ljava/lang/String;
     .locals 2
 
@@ -1433,6 +1494,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the nested contact list, defaulting to a default instance if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getNested()Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$NestedContactList;
     .locals 2
 
@@ -1450,6 +1512,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the phone number of a contact. It retrieves the phone number from the 'phone_' field of the Contact class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getPhone()Ljava/lang/String;
     .locals 2
 
@@ -1476,6 +1539,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Contact type, specifically an instance of Lcom/mplus/lib/A4/c, based on the 'type_' field of the ContactPersister$Contact object. It defaults to Lcom/mplus/lib/A4/c;->b if the type is not recognized.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getType()Lcom/mplus/lib/A4/c;
     .locals 2
 
@@ -1499,6 +1563,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a checksum field is present in the Contact object. It returns true if the checksum field is set, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasChecksum()Z
     .locals 2
 
@@ -1526,6 +1591,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a contact has a country code set. It returns true (1) if the 6th bit (0x40) of the bitField0_ integer is set, and false (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasCountryCode()Z
     .locals 2
 
@@ -1551,6 +1617,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a contact has a Google color and returns true if the 8th bit (0x80) of the bitField0_ is set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasGoogleColor()Z
     .locals 2
 
@@ -1578,6 +1645,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the 'id' field is set in the Contact object by checking the bitField0_ flag. It returns true if the 0x10 bit is set, indicating the presence of an 'id' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasId()Z
     .locals 2
 
@@ -1603,6 +1671,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a contact has a name by verifying a specific bit flag in the `bitField0_` integer. It returns true if the flag is set and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasName()Z
     .locals 2
 
@@ -1630,6 +1699,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a 'nested' field is set in the ContactPersister$Contact object. It returns true (1) if the field is set, and false (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasNested()Z
     .locals 2
 
@@ -1659,6 +1729,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a contact has a phone number. It returns true (1) if the first bit of the bitField0_ integer is set, indicating the presence of a phone number, and false (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasPhone()Z
     .locals 3
 
@@ -1686,6 +1757,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a 'type' field is set in the Contact object. It returns true if the field is set, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasType()Z
     .locals 2
 

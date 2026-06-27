@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static enum-like objects for directions (Right, Left, Up, Down) and stores them in an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 7
 
@@ -81,6 +82,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum constant with a given string and integer, and sets a boolean field 'a' to false. It appears to be a constructor for the enum class Lcom/mplus/lib/s5/o.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
@@ -93,6 +95,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum constant of type Lcom/mplus/lib/s5/o; from a given string. It essentially wraps the Java Enum.valueOf method to get the enum instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/s5/o;
     .locals 2
 
@@ -115,6 +118,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of Lcom/mplus/lib/s5/o; objects. It appears to be an implementation of the values() method in an enum class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/s5/o;
     .locals 2
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/q6/b class, setting up its properties and registering itself with a spring object. It also creates an empty ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -54,6 +55,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method iterates over a list of objects, calls a method on each, and then schedules a runnable to be executed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Z)V
     .locals 5
 
@@ -142,6 +144,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a spring is at rest and notifies listeners accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 8
 
@@ -309,6 +312,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates spring values for a list of objects and checks if the spring is at rest.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 5
 
@@ -372,6 +376,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It does not directly return the result, but the return type is still a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

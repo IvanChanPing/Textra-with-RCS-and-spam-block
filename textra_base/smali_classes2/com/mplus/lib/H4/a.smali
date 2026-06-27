@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method implements a singleton pattern for the `Lcom/mplus/lib/H4/a` class, returning the single instance. It creates the instance if it doesn't exist, using `Lcom/mplus/lib/ui/main/App;->getAppContext()` to get the application context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M()Lcom/mplus/lib/H4/a;
     .locals 4
 
@@ -62,6 +63,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string by concatenating an MD5 hash of a URI, and dimensions from an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Landroid/net/Uri;Lcom/mplus/lib/z7/G;)Ljava/lang/String;
     .locals 3
 
@@ -144,6 +146,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of `Lcom/mplus/lib/H4/a;`, initializing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/H4/a;
     .locals 7
 
@@ -214,6 +217,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compresses a bitmap into a JPEG format and saves it to a file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public Q(Landroid/net/Uri;Lcom/mplus/lib/z7/G;Landroid/graphics/Bitmap;)V
     .locals 4
 

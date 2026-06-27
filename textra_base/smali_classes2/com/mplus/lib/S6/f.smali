@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/S6/f class, setting its fields with the provided parameters. It appears to be a constructor for an AsyncTask subclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/S6/h;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/mplus/lib/v4/c;Landroid/util/LongSparseArray;)V
     .locals 0
 
@@ -182,6 +183,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method stores a downloaded Drawable in a LongSparseArray and sets it as the image of a BaseImageView if the task is not cancelled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPostExecute(Ljava/lang/Object;)V
     .locals 4
 

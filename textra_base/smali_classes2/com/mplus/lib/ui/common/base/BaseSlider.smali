@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a `BaseSlider` object, setting its properties such as the slider's drawable, color, and paint.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
@@ -140,6 +141,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the available width for a slider by subtracting twice the value of `d` from the view's width. It returns this calculated width as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getPositionWidth()I
     .locals 3
 
@@ -193,6 +195,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the 'k' field of the BaseSlider class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getIndex()I
     .locals 2
 
@@ -205,6 +208,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getLayoutSize()` method to return a layout size object. It simply calls the superclass's `getLayoutSize()` method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -219,6 +223,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getMeasuredSize()` method to return the measured size of the base slider. It simply calls the superclass's `getMeasuredSize()` method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -235,6 +240,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns the result. It appears to be an overridden method that simply delegates to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -247,6 +253,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() to retrieve the vertical padding. It returns the result as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -265,6 +272,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getVisibileAnimationDelegate` method and returns its result. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -279,6 +287,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getVisualDebugDelegate` method to return the result from its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -293,6 +302,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onDraw` method of the `View` class to draw a slider with a spring animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 13
 
@@ -669,6 +679,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and sets the measured dimensions of a `BaseSlider` view based on its intrinsic height, padding, and provided width and height measures.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(II)V
     .locals 4
 
@@ -832,6 +843,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a slider, updating the slider's position based on the touch location.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 13
 
@@ -1048,6 +1060,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value directly on an object implementing the Lcom/mplus/lib/x5/y interface. It takes a float parameter representing the alpha value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -1066,6 +1079,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a BaseSlider object. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -1076,6 +1090,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setHeightTo method, passing the provided height. It effectively delegates the height setting to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -1084,6 +1099,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the index of a slider and updates its position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setIndex(I)V
     .locals 5
 
@@ -1136,6 +1152,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the index change listener for the BaseSlider class. It stores the provided listener in the 'b' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setIndexChangeListener(Lcom/mplus/lib/x5/u;)V
     .locals 1
 
@@ -1148,6 +1165,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method with the provided argument. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -1160,6 +1178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a BaseSlider object. It invokes a static method to configure the margin with the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -1172,6 +1191,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method to set the margin of a view. It takes an android/graphics/Rect object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -1182,6 +1202,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a BaseSlider object. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -1194,6 +1215,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a BaseSlider object. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -1206,6 +1228,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a BaseSlider instance. It invokes a static method to configure the padding with the provided value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -1216,6 +1239,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the value count of the BaseSlider instance. It stores the provided integer value in the instance's field 'j'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setValueCount(I)V
     .locals 1
 
@@ -1226,6 +1250,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided boolean parameter. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -1236,6 +1261,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method to animate the visibility of a view. It takes a boolean parameter to determine the visibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -1244,6 +1270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of the BaseSlider instance to a specified value. It calls a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 
@@ -1252,6 +1279,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the BaseSlider object, including its ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

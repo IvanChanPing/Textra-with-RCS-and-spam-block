@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/E3/f, storing a reference to an object of type Lcom/mplus/lib/E3/g. It sets the field 'a' of the current object to the provided Lcom/mplus/lib/E3/g object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/E3/g;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares two string objects by retrieving their corresponding float values from an ArrayMap and returning the result of Float.compare.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 

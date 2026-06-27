@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/Q5/a; that initializes its parent class Lcom/mplus/lib/D5/b;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -19,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inflates a layout resource with ID 0x7f0d006b and returns the resulting View. It does not modify the inflated View in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 
@@ -39,6 +41,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a DialogFragment and sets an OnClickListener on a specific view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

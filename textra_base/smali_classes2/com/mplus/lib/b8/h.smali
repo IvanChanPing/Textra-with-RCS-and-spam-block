@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the vendor consents from a given TCModel and returns them. It always returns the result of getVendorConsents, ignoring the initial const/4 v0, 0x1 and const/4 v0, 0x0 instructions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -23,6 +24,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the vendor consents in a TCModel object using a SortedVector object. It casts the provided Object to a SortedVector and then calls the setVendorConsents method on the TCModel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

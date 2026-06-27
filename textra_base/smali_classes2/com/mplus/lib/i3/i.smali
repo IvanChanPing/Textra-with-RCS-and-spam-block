@@ -33,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves or creates an instance of `Lcom/mplus/lib/i3/i;` associated with a given Android Activity. It checks if an instance already exists in the LifecycleFragment and creates a new one if it doesn't.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Landroid/app/Activity;)Lcom/mplus/lib/i3/i;
     .locals 3
 
@@ -106,6 +107,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds a WeakReference to the provided object to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/i3/g;)V
     .locals 4
 

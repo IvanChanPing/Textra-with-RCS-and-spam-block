@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a custom Drawable object with a given Drawable and ColorStateList, setting the custom object as a callback for the given Drawable. It also sets a boolean flag to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
     .locals 1
 
@@ -42,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a PorterDuffColorFilter based on the input integer. It appears to delegate the creation of the filter to the `Lcom/mplus/lib/J5/g;->N(I)` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(I)Landroid/graphics/PorterDuffColorFilter;
     .locals 2
 
@@ -66,6 +68,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method draws a drawable object on a given Canvas, using the bounds of the current drawable. It delegates the drawing to another drawable object stored in the field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 3
 
@@ -88,6 +91,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic height of a Drawable object. It delegates the call to the getIntrinsicHeight method of the Drawable object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -102,6 +106,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the intrinsic width of a Drawable object. It delegates the call to the getIntrinsicWidth() method of the Drawable object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 
@@ -120,6 +125,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the minimum height of a Drawable object. It delegates the call to the getMinimumHeight() method of the Drawable object stored in the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMinimumHeight()I
     .locals 2
 
@@ -132,6 +138,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the minimum width of a Drawable object. It retrieves the minimum width by calling the getMinimumWidth() method on the Drawable object stored in the 'a' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMinimumWidth()I
     .locals 2
 
@@ -160,6 +167,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the padding of a Drawable object and returns a boolean result. It delegates the padding retrieval to the Drawable object's getPadding method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPadding(Landroid/graphics/Rect;)Z
     .locals 2
 
@@ -176,6 +184,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the transparent region of a drawable object. It delegates the call to the getTransparentRegion method of the drawable object stored in field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getTransparentRegion()Landroid/graphics/Region;
     .locals 2
 
@@ -217,6 +226,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks the state change of a color state list and updates the color filter of a drawable accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onStateChange([I)Z
     .locals 3
 
@@ -272,6 +282,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method schedules a runnable to be executed after a specified delay, related to a drawable. It checks if the drawable has a callback and uses it to schedule the runnable if available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
     .locals 1
 
@@ -307,6 +318,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unschedules a drawable and its associated runnable. It checks if the drawable has a callback and if so, calls the callback's unscheduleDrawable method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 1
 

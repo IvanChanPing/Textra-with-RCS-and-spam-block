@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static objects of type Lcom/mplus/lib/E7/a; with different parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -57,6 +58,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/R3/a, registering it with a bus if not already registered.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized N()Lcom/mplus/lib/R3/a;
     .locals 4
 
@@ -113,6 +115,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves unread conversation data from a database and stores it in an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()V
     .locals 6
 
@@ -302,6 +305,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method clamps an input integer to a range (0-99) and attempts to call a method on an object of class Lcom/mplus/lib/H7/a; with the clamped value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(I)V
     .locals 3
 
@@ -392,6 +396,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the unread count for a notification and sends a broadcast intent to notify other components of the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q()V
     .locals 6
 
@@ -621,6 +626,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event by calling the Q() method of the current class. It takes an object of type Lcom/mplus/lib/r4/A0; as a parameter but does not use it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEvent(Lcom/mplus/lib/r4/A0;)V
     .locals 1
 

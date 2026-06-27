@@ -15,6 +15,7 @@
 .method public abstract b()Z
 .end method
 
+# M-ROLE [GROQ]: This method returns a string by calling the `d()` method of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()Ljava/lang/String;
     .locals 2
 

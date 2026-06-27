@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a RecyclerView ViewHolder. It calls another method `f` to get an object, then calls `a` on that object to get the ViewHolder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/x5/z;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 1
 
@@ -57,6 +58,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a Cursor object by calling another method `h(I)` that returns an object of type `com/mplus/lib/r4/u`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic e(I)Landroid/database/Cursor;
     .locals 1
 
@@ -519,6 +521,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the item count by calling the superclass's getItemCount method and returning its result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()I
     .locals 2
 
@@ -533,6 +536,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the total item count, adding 1 to the superclass's item count if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemCount()I
     .locals 3
 
@@ -575,6 +579,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the ID of an item at a given position, returning -1 if the item is not available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 3
 
@@ -614,6 +619,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method determines the item view type based on the input position, returning a specific type if the position meets a certain condition, otherwise returning a default type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemViewType(I)I
     .locals 1
 

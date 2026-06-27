@@ -61,6 +61,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/m5/a;` as a `Ljava/util/function/Function;`. It creates the instance with an integer parameter of value 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/function/Function;
     .locals 3
 

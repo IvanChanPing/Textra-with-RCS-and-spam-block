@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/z3/d, setting up charset, maps, and other objects. It appears to be a static constructor that sets up various class-level variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -106,6 +107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/z3/d class, setting its fields with the provided parameters. It also creates a new instance of Lcom/mplus/lib/Z2/m and assigns it to the 'e' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/ByteArrayOutputStream;Ljava/util/HashMap;Ljava/util/HashMap;Lcom/mplus/lib/y3/a;)V
     .locals 2
 
@@ -245,6 +247,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `d` with an additional boolean parameter set to true and returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/w3/c;Ljava/lang/Object;)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -319,6 +322,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method serializes an object to a binary format.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/mplus/lib/w3/c;Ljava/lang/Object;Z)V
     .locals 5
 
@@ -1081,6 +1085,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method writes a variable-length integer to an output stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(I)V
     .locals 5
 
@@ -1133,6 +1138,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a long value to an output stream using a variable-length encoding scheme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(J)V
     .locals 5
 

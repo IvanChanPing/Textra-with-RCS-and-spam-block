@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/v6/Q class, setting up its fields with a context, supplier, and other dependencies. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Ljava/util/function/Supplier;)V
     .locals 2
 
@@ -182,6 +183,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves or creates an instance of `Lcom/mplus/lib/v6/S` based on the provided string key, utilizing various other classes and methods to initialize its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(Ljava/lang/String;)Lcom/mplus/lib/v6/S;
     .locals 6
 
@@ -356,6 +358,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method generates and returns an Android Drawable object based on the provided input parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(Lcom/mplus/lib/v6/S;)Landroid/graphics/drawable/Drawable;
     .locals 9
 

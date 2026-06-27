@@ -61,6 +61,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer, representing the size of an object. It provides a way to access the size of the object externally.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -69,6 +70,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of elements from index `p1` to `p2`. It delegates the actual work to `zzi(II)` method, returning the result as a `List`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -81,6 +83,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns an integer value by summing the results of `zzc()` from `zzamg` object and two instance variables `a` and `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()I
     .locals 3
 
@@ -107,6 +110,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by adding the result of `zzc()` from `zzama` to a class field `a`. It appears to be related to entity extraction.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()I
     .locals 3
 
@@ -141,6 +145,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of Objects by calling the zzg method on the zzamg object. It appears to be a wrapper around the zzg method of the zzama class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()[Ljava/lang/Object;
     .locals 2
 
@@ -157,6 +162,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks and adjusts input coordinates, then calls another method to perform an operation on a zzamg object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzi(II)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;
     .locals 2
 

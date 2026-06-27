@@ -38,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a `ColorStateList` object with specific colors and states.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 7
 
@@ -128,6 +129,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inflates a BaseTextView from a layout resource and sets its text color and content based on the provided integer parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(ILcom/mplus/lib/x1/a;)Lcom/mplus/lib/ui/common/base/BaseTextView;
     .locals 4
 

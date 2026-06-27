@@ -124,6 +124,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the value of a `@Protobuf` annotation from a given class and returns its value, or throws a `RuntimeException` if the annotation is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Lcom/mplus/lib/w3/c;)I
     .locals 2
 
@@ -175,6 +176,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `e` with the provided parameters and then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic a(Lcom/mplus/lib/w3/c;J)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -189,6 +191,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `c` with the provided parameters and a boolean flag set to true, then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/w3/c;Ljava/lang/Object;)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -201,6 +204,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method serializes an object to a binary format.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/w3/c;Ljava/lang/Object;Z)V
     .locals 5
 
@@ -787,6 +791,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a field annotation and writes data to an output stream based on the annotation's configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/mplus/lib/w3/c;IZ)V
     .locals 2
 
@@ -1147,6 +1152,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method encodes an object using a provided encoder and writes the encoded data to an output stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/w3/d;Lcom/mplus/lib/w3/c;Ljava/lang/Object;Z)V
     .locals 6
 
@@ -1320,6 +1326,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a long value to an output stream using a variable-length encoding scheme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(J)V
     .locals 6
 

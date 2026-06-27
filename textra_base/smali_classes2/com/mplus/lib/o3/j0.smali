@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/o3/j0, setting its comparator. It extends the AbstractCollection class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Comparator;)V
     .locals 0
 
@@ -29,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/J0 based on the provided Comparator, either by reusing an existing instance or creating a new one. It checks if the provided Comparator is equal to a specific instance and returns a cached result if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Ljava/util/Comparator;)Lcom/mplus/lib/o3/J0;
     .locals 3
 
@@ -62,6 +64,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Comparator object stored in the 'd' field of the class. It does not perform any comparison itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final comparator()Ljava/util/Comparator;
     .locals 2
 
@@ -74,6 +77,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a descending set by calling the 'o()' method on the current object. It essentially delegates the call to the 'o()' method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic descendingSet()Ljava/util/NavigableSet;
     .locals 2
 
@@ -84,6 +88,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a subset of a NavigableSet based on a given object and a boolean flag. It appears to be implementing a headSet operation from the NavigableSet interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
     .locals 3
 
@@ -116,6 +121,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a subset of a sorted set, from the start up to a specified element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
@@ -221,6 +227,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the pollFirst operation is not supported. It does not return any object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final pollFirst()Ljava/lang/Object;
     .locals 2
 
@@ -231,6 +238,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the pollLast operation is not supported. It does not return any object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final pollLast()Ljava/lang/Object;
     .locals 2
 
@@ -241,6 +249,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method compares two objects using a comparator and returns a new instance of Lcom/mplus/lib/o3/J0; based on the comparison result. If the comparison result is greater than 0, it throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Ljava/lang/Object;ZLjava/lang/Object;Z)Lcom/mplus/lib/o3/J0;
     .locals 2
 
@@ -314,6 +323,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method delegates to `r(Ljava/lang/Object;ZLjava/lang/Object;Z)` and returns the result as a `NavigableSet`. It effectively calls the `r` method with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subSet(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableSet;
     .locals 1
 
@@ -326,6 +336,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a SortedSet by calling another method `r` with specific parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
@@ -348,6 +359,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a subset of a navigable set, starting from a specified object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
     .locals 2
 
@@ -384,6 +396,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a subset of a sorted set, starting from a specified object. It appears to be part of a data structure implementation, likely a sorted set or map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 

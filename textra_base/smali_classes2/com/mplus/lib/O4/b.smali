@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/F1/a;`, initializing it if necessary by decoding a byte array `d` using `Lcom/mplus/lib/E3/C;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/F1/a;
     .locals 3
 
@@ -121,6 +122,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its ID, timestamp, state, and other properties. It uses various string constants and invokes other methods to format the output.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

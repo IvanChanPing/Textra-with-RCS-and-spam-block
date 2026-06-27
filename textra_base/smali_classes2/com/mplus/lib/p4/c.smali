@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/p4/c class with a given Android context. It sets up an executor service and various instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method releases a Camera object if it exists. It checks if the input object is not null and has a non-null Camera field, then calls the release method on the Camera object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q(Lcom/mplus/lib/p4/f;)V
     .locals 1
 
@@ -85,6 +87,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a certain object (`f`) is not null and returns true if it is, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()Z
     .locals 2
 
@@ -110,6 +113,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the application has the "android.permission.CAMERA" permission and calls method P(I) with argument 1 if the permission is granted.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()V
     .locals 3
 
@@ -188,6 +192,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided object is the same as the existing one, and if not, updates the existing object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Lcom/mplus/lib/p4/f;)V
     .locals 3
 
@@ -297,6 +302,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles an error in the camera, notifying and releasing resources.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onError(ILandroid/hardware/Camera;)V
     .locals 1
 

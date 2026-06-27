@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an array mapping AdType enum values to integers. It sets specific AdType values (IMAGE, RICH_MEDIA, VIDEO) to corresponding integer values (1, 2, 3).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

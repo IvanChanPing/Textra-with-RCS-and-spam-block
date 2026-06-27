@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a Fragment by calling its superclass constructor and sets its `f` field to a `T4/z` object obtained from a `S4/b` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -39,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method dismisses the current dialog and updates the progress of a task by calculating a ratio and posting a runnable to the main thread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dismiss()V
     .locals 5
 
@@ -174,6 +176,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method saves the current index of a BaseSlider to a Bundle when the fragment's state is saved.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 5
 

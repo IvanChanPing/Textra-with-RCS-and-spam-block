@@ -25,6 +25,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles messages based on their 'what' field, invoking different methods of the GoogleApiClientImpl or logging unknown message IDs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 3
 

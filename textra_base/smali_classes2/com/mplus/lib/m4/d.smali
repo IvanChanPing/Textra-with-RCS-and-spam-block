@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a singleton instance of `Lcom/mplus/lib/m4/d;`, creating it if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N()Lcom/mplus/lib/m4/d;
     .locals 5
 

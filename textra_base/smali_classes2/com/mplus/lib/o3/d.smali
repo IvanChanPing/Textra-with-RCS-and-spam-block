@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/o3/d, setting its 'b' field and calling the superclass constructor with argument 1. It effectively sets up the object with a provided Lcom/mplus/lib/a3/Y instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/Y;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the data in the object by calling the clear method on the 'b' field of type Lcom/mplus/lib/a3/Y. It also sets a local variable to 3 and then 4, but these have no apparent effect on the clearing operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -41,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in the entry set of a map. It returns true if the object is found, and false otherwise, handling potential ClassCastException and NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -72,6 +75,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a map is empty. It returns true if the map is empty, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 2
 
@@ -86,6 +90,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator object. It creates a new instance of Lcom/mplus/lib/a3/X, passing in the object's b field and the value 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 4
 
@@ -106,6 +111,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a map and returns true if successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 3
 
@@ -206,6 +212,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements from the current set that are contained in the specified collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 3
 
@@ -436,6 +443,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

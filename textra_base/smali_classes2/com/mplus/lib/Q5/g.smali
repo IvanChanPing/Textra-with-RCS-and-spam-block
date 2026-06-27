@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a PorterDuffColorFilter with the specified color and SRC_IN mode. It takes an integer color as input and returns the filter object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)Landroid/graphics/PorterDuffColorFilter;
     .locals 3
 

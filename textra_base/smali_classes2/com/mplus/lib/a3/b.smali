@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class, storing an ArrayList and validating the provided OutputStream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/OutputStream;Ljava/util/ArrayList;)V
     .locals 1
 
@@ -47,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method closes all `zzacd` objects in an `ArrayList` and then calls the `close()` method of its superclass `java/io/OutputStream`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 3
 
@@ -91,6 +93,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a single byte to an output stream and then iterates over a list of objects, calling a method on each object to process the byte.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write(I)V
     .locals 5
 
@@ -161,6 +164,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to an output stream and then notifies a list of listeners by calling their `zza` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write([B)V
     .locals 5
 
@@ -213,6 +217,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to an output stream and notifies listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write([BII)V
     .locals 3
 

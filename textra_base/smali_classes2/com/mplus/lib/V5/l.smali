@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of `Lcom/mplus/lib/V5/l;` with the given parameters, setting up its fields and calculating layout properties for an EmojisView. It also creates a new instance of `Lcom/mplus/lib/s5/r;` and assigns it to a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/x5/y;Landroid/view/ViewGroup;Lcom/mplus/lib/V5/i;)V
     .locals 1
 
@@ -83,6 +84,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of `d` from the `j` object referenced by `h` in the class `l`. It appears to be retrieving a specific integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y()I
     .locals 2
 
@@ -97,6 +99,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/s5/r, specifically the value of the 'g' field. It does not appear to perform any other operations despite the constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 

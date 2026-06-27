@@ -185,6 +185,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method retrieves an instance of Lcom/mplus/lib/S4/b; using the Mgrs class. It returns the retrieved instance cast to Lcom/mplus/lib/S4/b;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Landroid/content/Context;)Lcom/mplus/lib/S4/b;
     .locals 2
 
@@ -209,6 +210,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes the "appIsEnabled" preference from the shared preferences and applies the changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()V
     .locals 3
 
@@ -239,6 +241,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method registers a shared preference change listener. It adds the provided listener to the SharedPreferences instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
     .locals 2
 

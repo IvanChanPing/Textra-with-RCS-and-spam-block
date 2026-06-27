@@ -296,6 +296,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition using `Lcom/mplus/lib/g5/d;->Q()` and displays a corresponding message using `Lcom/mplus/lib/x7/g;->r(I)V` with either string `0x7f11037a` or `0x7f11037b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 3
 

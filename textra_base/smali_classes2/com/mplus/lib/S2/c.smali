@@ -54,6 +54,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method removes all views from a FrameLayout and then adds a new view created by a LifecycleDelegate's onCreateView method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab()V
     .locals 6
 

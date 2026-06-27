@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/F3/X0; by creating instances of Lcom/mplus/lib/F3/V0; and Lcom/mplus/lib/F3/W0;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -937,6 +938,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method reads a primitive field from an object of type `Lcom/mplus/lib/F3/r;` based on the provided enum value and index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/E1;I)Ljava/lang/Object;
     .locals 1
 
@@ -1293,6 +1295,7 @@
 .method public abstract g(Ljava/lang/String;[BII)I
 .end method
 
+# M-ROLE [GROQ]: This method checks the result of calling `k(II[B)` and returns `true` if it's 0, otherwise returns `false`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public j(II[B)Z
     .locals 1
 

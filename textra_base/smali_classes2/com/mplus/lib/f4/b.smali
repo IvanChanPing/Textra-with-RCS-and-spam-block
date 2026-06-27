@@ -22,6 +22,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the event listener and destroys a Smaato banner view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 3
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a boolean flag `e` and sets it to true if it's false, then gets an instance of `Lcom/mplus/lib/V3/b;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 2
 
@@ -83,6 +85,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a static instance of Lcom/mplus/lib/V3/d;. It does not perform any complex operations, simply returning the existing static object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Lcom/mplus/lib/V3/d;
     .locals 2
 
@@ -101,6 +104,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain flag is set. It checks the value of the 'f' field in the 'Lcom/mplus/lib/Y3/e' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Z
     .locals 2
 
@@ -113,6 +117,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It does not directly use the returned string but still returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

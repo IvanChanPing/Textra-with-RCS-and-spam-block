@@ -108,6 +108,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a CharSequence, either a saved sharing text or a generated one based on a boolean value stored with the key "haveSavedSharingText".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()Ljava/lang/CharSequence;
     .locals 4
 
@@ -250,6 +251,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a Spanned text object based on the value of the `i` flag in the class. If the flag is true, it returns an empty SpannedString; otherwise, it returns the editable text from an EditText.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()Landroid/text/Spanned;
     .locals 3
 

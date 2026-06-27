@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/T4/j, storing the provided ArrayList in a field. It does not perform any other operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string by calling the getAsString method of the same class. It does not use the returned integer value 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 2
 
@@ -40,6 +42,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method always throws an UnsupportedOperationException. It does not actually return a boolean value despite its declared return type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -52,6 +55,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first element of an ArrayList as an object of type Lcom/mplus/lib/T4/d. It retrieves the element at index 0 from the ArrayList 'a' in the class Lcom/mplus/lib/T4/j.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/T4/d;
     .locals 3
 
@@ -74,6 +78,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if all elements in an ArrayList have the same string value returned by the `a()` method of the `Lcom/mplus/lib/T4/d` interface. It returns true if not all elements have the same string value, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 7
 
@@ -146,6 +151,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object by delegating the retrieval to another object obtained through the `c()` method. It returns the retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 2
 
@@ -164,6 +170,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string value from an object of type Lcom/mplus/lib/T4/d. It delegates the retrieval to the getAsString method of that object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAsString()Ljava/lang/String;
     .locals 2
 
@@ -182,6 +189,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns a key string by calling the `getKey()` method of an object obtained from `c()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/String;
     .locals 2
 
@@ -202,6 +210,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list of objects implementing the Lcom/mplus/lib/T4/d interface and calls the remove() method on each object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 
@@ -242,6 +251,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over an ArrayList of Lcom/mplus/lib/T4/d objects and calls the set method on each object, passing the provided Object as an argument. It effectively propagates the set operation to all registered listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(Ljava/lang/Object;)V
     .locals 3
 

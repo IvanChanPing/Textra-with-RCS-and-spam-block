@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/L8/g, setting its InterstitialAdViewModel and calling the superclass constructor. It essentially sets up a new InterstitialAd object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/interstitial/viewmodel/InterstitialAdViewModel;)V
     .locals 0
 
@@ -94,6 +95,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the session ID from the InterstitialAdViewModel instance, or an empty string if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSessionId()Ljava/lang/String;
     .locals 2
 
@@ -119,6 +121,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an interstitial ad is available for presentation. It returns a boolean value indicating the ad's availability.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isAvailableForPresentation()Z
     .locals 2
 
@@ -135,6 +138,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method shows an ad internally by creating a new instance of Lcom/mplus/lib/A2/e and running it on the UI thread. It takes an Android Activity as a parameter and uses it to initialize the ad object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final showAdInternal(Landroid/app/Activity;)V
     .locals 3
 

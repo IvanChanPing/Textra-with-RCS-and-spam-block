@@ -49,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum constant of type Lcom/mplus/lib/p4/b; from a given string. It uses the Java Enum class to perform the retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/p4/b;
     .locals 2
 
@@ -71,6 +72,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of class Lcom/mplus/lib/p4/b. It creates a copy of the enum values array to prevent external modification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/p4/b;
     .locals 2
 

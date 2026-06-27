@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/a3/B3. It creates an empty array and a new instance of B3, storing them in the static fields d and e, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the B3 class with an array of objects, an integer, and a boolean. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;IZ)V
     .locals 0
 
@@ -282,6 +284,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input index is within the bounds of a collection and throws an IndexOutOfBoundsException if it's not. It returns immediately if the index is valid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)V
     .locals 5
 
@@ -321,6 +324,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from an array at a specified index after calling method b(I). It returns the retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
@@ -434,6 +438,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'c' as the size. It appears to be a getter method for the size, with a hardcoded value comparison or unrelated constant '6'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the IntegrationActivity class that calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -17,6 +18,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates an Intent for the IntegrationActivity, optionally adding a base64-encoded contacts string as an extra.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static V(Landroid/content/Context;Lcom/mplus/lib/r4/n;)Landroid/content/Intent;
     .locals 3
 
@@ -94,6 +96,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the creation of an `IntegrationActivity` and processes an incoming intent to determine the conversation to display. It checks the intent for various extras and actions, such as "address", "base64_contacts", and "android.intent.action.SEND", to extract the conversation data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 17
 
@@ -1147,6 +1150,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method of an Android Activity, calling the superclass's onDestroy and then unregistering the current object from an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -1163,6 +1167,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method finishes the current IntegrationActivity when an event is received on the main thread. It takes a V6/b object as a parameter but doesn't use it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/V6/b;)V
     .locals 1
 
@@ -1173,6 +1178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the IntegrationActivity object by calling a helper method. It delegates the actual conversion to the Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String; method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -51,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles an Android message, checking if Google Play Services is available and showing an error notification if it's not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 4
 

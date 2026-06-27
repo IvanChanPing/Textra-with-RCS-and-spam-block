@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/s5/H by calling Lcom/mplus/lib/z7/m;->c(I)I with different integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -61,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a cached or newly created `BitmapDrawable` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Landroid/graphics/drawable/Drawable;
     .locals 5
 
@@ -302,6 +304,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field 'c' to true when the bounds of an object change. It does not utilize the input Rect object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 

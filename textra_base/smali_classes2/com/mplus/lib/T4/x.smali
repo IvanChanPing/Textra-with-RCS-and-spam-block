@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string object by calling the `c()` method. It appears to be a bridge method for a generic getter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 2
 
@@ -21,6 +22,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method casts the input object to a String and calls method e with the String. It appears to be a bridge method for setting a string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic set(Ljava/lang/Object;)V
     .locals 1
 

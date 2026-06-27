@@ -1069,6 +1069,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a given Uri and returns an integer value after performing various checks and operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)I
     .locals 5
 

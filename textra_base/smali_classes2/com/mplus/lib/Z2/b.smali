@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Z2/b, setting its fields with provided parameters. It appears to be a constructor that extends Lcom/google/android/gms/internal/mlkit_common/zzaf.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_common/zzaf;II)V
     .locals 0
 
@@ -67,6 +68,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -117,6 +119,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by adding the result of `zzc()` from `com/google/android/gms/internal/mlkit_common/zzab` to a class field `a`. It appears to be related to a calculation or encoding process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()I
     .locals 3
 
@@ -139,6 +142,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of objects by calling the `zze()` method of the `zzab` class. It appears to be related to Google's ML Kit.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()[Ljava/lang/Object;
     .locals 2
 
@@ -153,6 +157,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to validate input parameters, then modifies and passes these parameters to another method of a `zzaf` object, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(II)Lcom/google/android/gms/internal/mlkit_common/zzaf;
     .locals 2
 

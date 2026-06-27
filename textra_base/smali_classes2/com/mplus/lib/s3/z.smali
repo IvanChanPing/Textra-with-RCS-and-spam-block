@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s3/z, storing a provided Runnable instance. It does not execute the Runnable, only stores it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
@@ -64,6 +65,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method executes a stored Runnable and catches RuntimeException and Error, then calls `k(Ljava/lang/Throwable;)Z` on the exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 

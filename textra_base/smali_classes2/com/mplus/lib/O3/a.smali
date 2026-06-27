@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/O3/a class with the provided parameters. It sets the instance's fields with the given values and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/C0;Ljava/lang/ref/WeakReference;I)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle different states of an object, invoking methods from the `Lcom/inmobi/media/A0` class based on the value of `a`. It calls either `a` or `b` method from `A0` class with `Lcom/inmobi/media/C0` and `Ljava/lang/ref/WeakReference` as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 3
 

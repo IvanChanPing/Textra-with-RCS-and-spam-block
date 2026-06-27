@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f6/l class with the provided parameters. It sets the object's fields with the given values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f6/o;Lcom/mplus/lib/f6/m;Landroidx/core/view/ViewPropertyAnimatorCompat;Landroid/view/View;)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method resets the animation of a view after it ends, setting its alpha to 1.0 and translation to 0, and notifies the item animator that the change is finished.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationEnd(Landroid/view/View;)V
     .locals 4
 
@@ -105,6 +107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called when an animation starts and notifies the item animator to dispatch a change starting event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationStart(Landroid/view/View;)V
     .locals 3
 

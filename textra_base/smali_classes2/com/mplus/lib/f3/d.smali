@@ -21,6 +21,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method compares two `Comparable` objects and returns a `zzca` object based on the comparison result. It returns `zzca` objects obtained from `zzd()`, `zzc()`, or `zze()` methods, depending on whether the comparison is greater than, equal to, or less than.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Ljava/lang/Comparable;Ljava/lang/Comparable;)Lcom/google/android/gms/internal/play_billing/zzca;
     .locals 1
 

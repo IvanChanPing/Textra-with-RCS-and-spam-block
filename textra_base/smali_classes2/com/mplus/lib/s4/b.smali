@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/C4/e` and uses it as a consumer to retrieve a `Ljava/io/File` object. It then returns this file object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i()Ljava/io/File;
     .locals 3
 
@@ -60,6 +61,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Uri object by first retrieving a string using the `com/mplus/lib/z7/h;->m` method and then converting it to a Uri using `com/mplus/lib/r4/a;->c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m()Landroid/net/Uri;
     .locals 3
 

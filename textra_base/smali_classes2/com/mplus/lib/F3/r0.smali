@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method to retrieve an object, casts it to a specific type, and then sets a boolean field of that object to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(JLjava/lang/Object;)V
     .locals 2
 

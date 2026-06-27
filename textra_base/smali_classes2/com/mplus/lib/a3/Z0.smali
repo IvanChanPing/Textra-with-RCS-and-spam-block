@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Z0 class, calling the superclass constructor and setting an integer field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Class;ZI)V
     .locals 0
 
@@ -143,6 +144,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method processes an object and invokes a callback with key-value pairs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic zzb(Ljava/lang/Object;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaps;)V
     .locals 5
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f6/e, setting its fields with the provided parameters. It sets the object's 'c' field to -1, and 'a' and 'b' fields to the given Lcom/mplus/lib/f6/f and Lcom/mplus/lib/G5/a objects, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f6/f;Lcom/mplus/lib/s5/u;)V
     .locals 2
 

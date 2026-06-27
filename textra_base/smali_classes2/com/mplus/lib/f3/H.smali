@@ -34,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f3/H class with a given object. It sets the object as a field 'a' in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
@@ -56,6 +57,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object referenced by the field 'a' in the class Lcom/mplus/lib/f3/H. It simply retrieves and returns the stored object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 2
 
@@ -64,6 +66,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object, ignoring the input parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 1
 
@@ -102,6 +105,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, specifically formatting the status and result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

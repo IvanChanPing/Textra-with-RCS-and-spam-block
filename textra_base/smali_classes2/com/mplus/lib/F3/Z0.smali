@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/F3/Z0, setting its fields 'a' and 'e' based on the provided parameters. It also sets field 'b' to -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/AbstractMap;I)V
     .locals 0
 
@@ -42,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an iterator over the entry set of a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Ljava/util/Iterator;
     .locals 2
 
@@ -83,6 +85,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator over the entries of a map, depending on the value of the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()Ljava/util/Iterator;
     .locals 2
 
@@ -392,6 +395,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method implements the `next()` function of an iterator, returning the next object in a sequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 4
 
@@ -586,6 +590,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes the last element returned by the iterator if `remove()` is called after `next()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 5
 

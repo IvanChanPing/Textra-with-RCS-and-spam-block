@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `g` in class `Lcom/mplus/lib/R4/j;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with the argument `0x40`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -344,6 +345,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of a TextPaint object. It takes an integer parameter representing the alpha value and applies it to the paint object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 

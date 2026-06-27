@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a RecyclerView Adapter with a given Context and sets it to have stable IDs. It stores the Context in a field and enables stable IDs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the cursor and notifies the RecyclerView adapter of changes. It closes the previous cursor if it exists and is different from the new one, then sets the new cursor and notifies the adapter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Landroid/database/Cursor;)V
     .locals 2
 
@@ -60,6 +62,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method closes and releases a Cursor object if it is not null. It then sets the Cursor reference to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()V
     .locals 2
 
@@ -83,6 +86,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to move a cursor to a specified position and returns the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(I)Landroid/database/Cursor;
     .locals 2
 
@@ -110,6 +114,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of items in a cursor, or 0 if the cursor is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getItemCount()I
     .locals 2
 

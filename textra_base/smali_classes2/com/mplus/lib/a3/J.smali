@@ -62,6 +62,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a constant string "Functions.constant(null)".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

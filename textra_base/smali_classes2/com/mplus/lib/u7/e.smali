@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `e` of type `Lcom/mplus/lib/A0/a;` with a new instance of that class, passing the integer value 10 to its constructor. It sets up a static object for potential later use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/u7/e, setting up a HandlerThread and a Handler. It also creates an instance of Lcom/mplus/lib/v6/p and associates it with the Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 3
 
@@ -85,6 +87,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given string contains the substring "suggestions". It returns true if the string contains the substring, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/t7/f;)Z
     .locals 2
 
@@ -107,6 +110,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of field 'a' in the class Lcom/mplus/lib/u7/e to the provided Lcom/mplus/lib/u7/a object. It stores the input object for potential later use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/u7/a;)V
     .locals 1
 
@@ -471,6 +475,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

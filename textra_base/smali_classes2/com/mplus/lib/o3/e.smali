@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/o3/e, setting its fields with provided parameters. It calls the superclass constructor with a specific value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/b;Ljava/util/Map;)V
     .locals 0
 
@@ -35,6 +36,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the collection by iterating over its elements and removing each one. It effectively empties the collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 4
 
@@ -73,6 +75,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is a key in the map stored in the 'b' field of the class. It returns true if the object is a key, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -91,6 +94,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the key set of the map 'b' in the class contains all elements from the given collection. It returns a boolean value indicating whether all elements are present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -178,6 +182,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a map is empty. It returns a boolean value indicating whether the map contains any elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 2
 
@@ -295,6 +300,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map object. It appears to be part of a class that wraps a map and provides a size method to get the number of elements in the map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

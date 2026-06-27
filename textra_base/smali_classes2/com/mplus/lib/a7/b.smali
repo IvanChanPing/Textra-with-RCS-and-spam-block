@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a7/b; that initializes an object with parameters and calls the superclass constructor. It sets the value of the instance variable n to the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/T4/d;I)V
     .locals 0
 
@@ -26,6 +27,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a7/b, setting its properties and calling the superclass constructor. It also sets a string resource with ID 0x7f1100a1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/a;Lcom/mplus/lib/P6/c;)V
     .locals 2
 
@@ -1276,6 +1278,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method determines a string to display based on the state of an object, specifically checking if a certain condition is met and setting the string accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w()V
     .locals 2
 

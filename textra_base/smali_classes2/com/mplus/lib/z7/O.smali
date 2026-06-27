@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/z7/O, setting up a StringBuilder object. It does not perform any complex operations or external interactions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -29,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/z7/O, creating a new StringBuilder and calling method b with the provided array of strings. It sets up the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public varargs constructor <init>([Ljava/lang/String;)V
     .locals 1
 
@@ -165,6 +167,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `a` with the string "and" and an array of objects, then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs b([Ljava/lang/Object;)V
     .locals 2
 
@@ -237,6 +240,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/z7/O, copying the 'a' StringBuilder and 'b' String fields from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Lcom/mplus/lib/z7/O;
     .locals 4
 

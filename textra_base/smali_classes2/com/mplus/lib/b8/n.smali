@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the publisher consents from a given TCModel and returns it as an Object. It essentially extracts the SortedVector of publisher consents.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -21,6 +22,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the publisher consents in a TCModel using a SortedVector. It casts the provided Object to a SortedVector and then calls the setPublisherConsents method on the TCModel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

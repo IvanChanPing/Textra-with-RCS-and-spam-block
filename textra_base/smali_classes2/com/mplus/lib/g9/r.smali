@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/g9/r, setting its fields with the provided SomaGdprDataSource, DataCollector, and g objects. It checks for nullability of the input parameters using the requireNonNull method from the Objects utility class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/gdpr/SomaGdprDataSource;Lcom/smaato/sdk/core/datacollector/DataCollector;Lcom/mplus/lib/g9/g;)V
     .locals 0
 

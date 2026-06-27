@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor that calls another constructor in the same class with a Context and specific parameters. It initializes an object of the class with a given Context, no Q5/j object, and a boolean flag set to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/s5/b0 class with a Context, an object of type Lcom/mplus/lib/Q5/j, and a boolean value. It sets various instance fields, including touch slop and flags.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/Q5/j;Z)V
     .locals 1
 
@@ -90,6 +92,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the instance variable 'c'. It appears to be a getter method for the 'c' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Z
     .locals 2
 
@@ -101,6 +104,7 @@
 .method public abstract c(Lcom/mplus/lib/B2/l;Lcom/mplus/lib/B2/l;I)Z
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a view, tracking the movement and direction of the touch. It determines whether the touch is a swipe gesture and notifies a listener if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 10
 
@@ -453,6 +457,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

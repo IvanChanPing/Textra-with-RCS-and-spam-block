@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/F3/s1, storing a provided Lsun/misc/Unsafe object. It essentially sets up the object with the given Unsafe instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lsun/misc/Unsafe;)V
     .locals 0
 
@@ -39,6 +40,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the array index scale of a given class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Class;)I
     .locals 2
 
@@ -91,6 +93,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a long value from a memory location using sun/misc/Unsafe. It returns the retrieved long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(JLjava/lang/Object;)J
     .locals 2
 
@@ -185,6 +188,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an object field using sun/misc/Unsafe.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s(JLjava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
@@ -197,6 +201,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the `sun.misc.Unsafe` class is available and if certain methods exist in the class, returning true if they do and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t()Z
     .locals 7
 

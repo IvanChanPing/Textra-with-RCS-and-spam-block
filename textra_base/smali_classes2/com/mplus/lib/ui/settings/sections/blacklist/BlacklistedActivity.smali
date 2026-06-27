@@ -39,6 +39,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the BlacklistedActivity class that initializes the object by calling the superclass constructor. It sets up the base class Lcom/mplus/lib/x5/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -49,6 +50,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates an instance of `Lcom/mplus/lib/j4/a` and calls its `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 3
 
@@ -85,6 +87,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event and creates an instance of Lcom/mplus/lib/b7/c, then invokes a method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
@@ -105,6 +108,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the BlacklistedActivity by setting up its UI components, such as the content view, title, and recycler view, and loading data using a loader manager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 8
 
@@ -449,6 +453,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/M6/e` loader. It appears to be part of the Android LoaderManager initialization process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateLoader(ILandroid/os/Bundle;)Landroidx/loader/content/Loader;
     .locals 1
 
@@ -475,6 +480,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the completion of a loader operation, updating the UI based on the loaded data. It checks if the activity is in a certain state and if so, returns early, otherwise it updates the list view and visibility of certain UI elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLoadFinished(Landroidx/loader/content/Loader;Ljava/lang/Object;)V
     .locals 3
 
@@ -567,6 +573,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the loader in the BlacklistedActivity by calling the 'd()' method on the 'v' object. It effectively clears or resets the data associated with the loader.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLoaderReset(Landroidx/loader/content/Loader;)V
     .locals 1
 
@@ -579,6 +586,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onPause() method of an Android Activity, calling the superclass's onPause() and then unregistering the current object from an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPause()V
     .locals 2
 
@@ -597,6 +605,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onResume() method of its superclass, registers the current activity with a bus, and then returns. It appears to be part of an event-driven architecture, allowing the activity to receive events.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onResume()V
     .locals 2
 

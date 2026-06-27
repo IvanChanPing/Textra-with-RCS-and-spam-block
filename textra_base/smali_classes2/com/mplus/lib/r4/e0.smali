@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/r4/e0, setting its fields with the provided Lcom/mplus/lib/r4/f0 object and a singleton instance of Lcom/mplus/lib/N4/e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/r4/f0;)V
     .locals 0
 
@@ -36,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string by calling the `K()` method of the `f0` class instance stored in the `b` field. It effectively retrieves and returns a string value from the `f0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D()Ljava/lang/String;
     .locals 2
 
@@ -50,6 +52,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific string is tracked by calling another class's method with an integer and string parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()Z
     .locals 4
 
@@ -80,6 +83,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Uri object by retrieving a long value and passing it to Lcom/mplus/lib/r4/a;->d(J)Landroid/net/Uri;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Landroid/net/Uri;
     .locals 3
 

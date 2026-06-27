@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/y5/p, parsing boolean attributes from an AttributeSet. It sets the object's fields 'a' and 'c' based on the attribute values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
@@ -55,6 +56,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws gradient backgrounds on a Canvas based on certain conditions. It checks the state of the object and the provided interface, then draws top or bottom gradients accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/graphics/Canvas;Lcom/mplus/lib/y5/o;)V
     .locals 13
 
@@ -356,6 +358,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It delegates the actual conversion to this external method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

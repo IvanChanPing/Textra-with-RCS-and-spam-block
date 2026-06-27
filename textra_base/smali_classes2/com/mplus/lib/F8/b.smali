@@ -414,6 +414,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets an ad space string in the class instance if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAdSpace(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -447,6 +448,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets an API key for the class instance if the provided key is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setApiKey(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -476,6 +478,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the API version in the class instance if the provided string is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setApiVersion(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -501,6 +504,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the `asnId` field of the class if the provided string is not null, otherwise it throws a `NullPointerException`. It returns the instance of the class itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAsnId(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -555,6 +559,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the click URL for a report builder, throwing a NullPointerException if the URL is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setClickUrl(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -582,6 +587,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the creativeId in the class if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setCreativeId(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -609,6 +615,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets an error message for a report builder, returning the builder instance if the message is not null, or throws a NullPointerException with a "Null error" message if it is.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setError(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -665,6 +672,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the platform string in the class instance if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setPlatform(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -769,6 +777,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the SDK version in the class Lcom/mplus/lib/F8/b if the provided string is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setSdkVersion(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -885,6 +894,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a type string in the class instance if the input string is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setType(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -912,6 +922,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a violated URL in the class instance if the provided URL is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setViolatedUrl(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 

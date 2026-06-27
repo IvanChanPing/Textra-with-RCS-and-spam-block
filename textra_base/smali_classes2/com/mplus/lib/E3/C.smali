@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/C with an integer parameter, setting various fields based on the parameter's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -109,6 +110,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/E3/C; that initializes an integer field 'a' and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(IZ)V
     .locals 0
 
@@ -221,6 +223,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/E3/C, setting its fields with provided parameters. It sets integer field 'a' to 7 and assigns the input objects to its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/k2/a;Lcom/mplus/lib/f2/c;)V
     .locals 1
 
@@ -241,6 +244,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/E3/C with six parameters and assigns them to its fields. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -261,6 +265,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/E3/C class with the provided parameters. It sets various instance fields, including a string, locale list, and other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Landroidx/core/os/LocaleListCompat;Lcom/mplus/lib/R1/q;Ljava/lang/Long;Landroid/os/Bundle;)V
     .locals 1
 
@@ -298,6 +303,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/C, setting its field 'a' to 1. It does not use the provided boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Z)V
     .locals 0
 
@@ -310,6 +316,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/C with a byte array and sets up various instance variables. It creates a ByteArrayInputStream from the input byte array and assigns it to one of the instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 1
 
@@ -958,6 +965,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method checks the validity of an object of type Lcom/mplus/lib/B2/l; based on various conditions and returns a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Lcom/mplus/lib/B2/l;)Z
     .locals 12
 
@@ -1562,6 +1570,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method reads a variable-length integer from a ByteArrayInputStream, where the first byte determines the number of subsequent bytes to read.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static r(Ljava/io/ByteArrayInputStream;)J
     .locals 8
 
@@ -2015,6 +2024,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to convert the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final y()Ljava/lang/String;
     .locals 2
 
@@ -2029,6 +2039,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It invokes a helper method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final z()Ljava/lang/String;
     .locals 2
 
@@ -2215,6 +2226,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle coroutine operations for fetching and processing data, specifically related to the InMobi Choice CMP (Consent Management Platform). It checks the state of the coroutine and performs actions accordingly, such as invoking methods on other objects, handling exceptions, and  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Lcom/mplus/lib/aa/c;)Ljava/lang/Object;
     .locals 6
 
@@ -2826,6 +2838,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an object of type Lcom/mplus/lib/L4/m to a Vector at index 0 and calls method w on the same object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(Lcom/mplus/lib/L4/m;)V
     .locals 3
 
@@ -2852,6 +2865,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle coroutine-based operations, specifically invoking a callback and storing data in shared storage.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(Lcom/mplus/lib/aa/c;)Ljava/lang/Object;
     .locals 6
 
@@ -3096,6 +3110,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/Ka/G if the object 'b' is not null, otherwise it throws an IllegalStateException with the message "url == null".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public f()Lcom/mplus/lib/Ka/G;
     .locals 3
 
@@ -3137,6 +3152,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/z2/a`, constructed with various dependencies retrieved from the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public get()Ljava/lang/Object;
     .locals 8
 
@@ -3241,6 +3257,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object of type Lcom/mplus/lib/L4/m from a Vector at a specified index. It returns the retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h(I)Lcom/mplus/lib/L4/m;
     .locals 2
 
@@ -3259,6 +3276,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns an instance of `Lcom/mplus/lib/q6/b`, which appears to be a spring animation configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i()Lcom/mplus/lib/q6/b;
     .locals 15
 
@@ -4108,6 +4126,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a bitmap from a given string by inflating a layout, setting the text, and then converting the view to a bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public j(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 9
 
@@ -4229,6 +4248,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a bitmap from a given string by inflating a layout, setting the text, and then converting the view to a bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 9
 
@@ -4526,6 +4546,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method parses a message and returns a specific type of message object based on the message type. It handles different message types, including MMS and WAP multipart messages, and returns a corresponding object, such as Lcom/mplus/lib/L4/a or Lcom/mplus/lib/L4/n.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public m()Lcom/mplus/lib/F1/a;
     .locals 9
 
@@ -5575,6 +5596,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method reads data from a `ByteArrayInputStream` and constructs a `B2/l` object based on the data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p(Ljava/io/ByteArrayInputStream;)Lcom/mplus/lib/B2/l;
     .locals 17
 
@@ -6777,6 +6799,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method parses a multipart message from a `ByteArrayInputStream` and returns a `Lcom/mplus/lib/E3/C` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public s(Lcom/mplus/lib/B2/l;Ljava/io/ByteArrayInputStream;)Lcom/mplus/lib/E3/C;
     .locals 24
 
@@ -7929,6 +7952,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. It uses a switch statement to determine which string to return, calling different methods (`A()`, `z()`, `y()`) or the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 
@@ -8115,6 +8139,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `o` on an object of type `Lcom/mplus/lib/Ka/t;` with a given string parameter. It appears to be delegating the call to the `o` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public x(Ljava/lang/String;)V
     .locals 2
 

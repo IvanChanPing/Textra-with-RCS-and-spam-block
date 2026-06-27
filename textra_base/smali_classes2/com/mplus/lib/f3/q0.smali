@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `b` of type `Lcom/mplus/lib/f3/j0;` with a new instance of `Lcom/mplus/lib/f3/j0;` having a parameter of value 3. It sets up the class's static state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -68,6 +69,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/f3/q0, storing the provided array of Lcom/mplus/lib/f3/s0 objects. It calls the superclass constructor and assigns the input array to a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public varargs constructor <init>([Lcom/mplus/lib/f3/s0;)V
     .locals 0
 
@@ -80,6 +82,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to find a factory for a given message type by iterating over an array of factories and returns the result if found. If no factory is available, it throws an UnsupportedOperationException with a message indicating the unsupported message type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/Class;)Lcom/mplus/lib/f3/x0;
     .locals 4
 
@@ -155,6 +158,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given class satisfies any of the conditions defined in an array of `Lcom/mplus/lib/f3/s0;` objects. It iterates over the array and returns true as soon as it finds a match, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/lang/Class;)Z
     .locals 4
 

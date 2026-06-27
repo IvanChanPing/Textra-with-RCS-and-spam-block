@@ -35,6 +35,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/r4/l`, initializing its fields with data from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/r4/l;
     .locals 4
 

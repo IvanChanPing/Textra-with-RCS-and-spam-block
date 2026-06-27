@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/v3 class with two zzcah objects and another object. It sets the instance's fields a, b, and c to the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcah;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcah;Ljava/lang/Object;)V
     .locals 0
 

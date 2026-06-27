@@ -27,6 +27,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/R4/e` with the drawable stored in the class and sets its property with the value stored in `a`. It then returns this new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 3
 

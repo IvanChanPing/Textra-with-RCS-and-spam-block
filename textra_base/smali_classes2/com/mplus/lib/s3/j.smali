@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method performs a compare-and-swap operation using `sun/misc/Unsafe` to atomically update an object reference. It returns true if the swap is successful and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic a(Lsun/misc/Unsafe;Lcom/mplus/lib/s3/o;JLcom/mplus/lib/s3/c;Lcom/mplus/lib/s3/c;)Z
     .locals 2
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/K7/a, setting its fields with the provided BannerCsmAdLoader and Network objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/banner/model/csm/BannerCsmAdLoader;Lcom/smaato/sdk/core/csm/Network;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method triggers the execution of a Runnable associated with a BannerCsmAdLoader when an ad is clicked. It effectively runs the ad loader's associated task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdClicked()V
     .locals 2
 
@@ -50,6 +52,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an ad load failure event by calling a static method `DianePie()` from class `Lcom/PinkiePie;`. It also accesses a `BannerCsmAdLoader` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdFailedToLoad()V
     .locals 2
 
@@ -64,6 +67,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method constructs an AdResponse object using the provided view and various ad parameters, then passes it to a consumer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdLoaded(Landroid/view/View;)V
     .locals 5
 
@@ -242,6 +246,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method runs a Runnable associated with a BannerCsmAdLoader when an ad TTL (time to live) expires.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdTTLExpired()V
     .locals 2
 

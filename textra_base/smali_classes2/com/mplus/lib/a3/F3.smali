@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/a3/F3 class with three parameters. It sets the instance's fields c, a, and b to the provided E3 object, Comparable object, and arbitrary Object, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/E3;Ljava/lang/Comparable;Ljava/lang/Object;)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares the current object with another object of the same class, specifically comparing their 'a' fields which implement the Comparable interface. It returns the result of this comparison.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 2
 
@@ -178,6 +180,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'a' field, which is a Comparable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic getKey()Ljava/lang/Object;
     .locals 2
 
@@ -190,6 +193,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object field 'b' in the class Lcom/mplus/lib/a3/F3. It does not use the integer constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue()Ljava/lang/Object;
     .locals 2
 
@@ -254,6 +258,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of an object and returns the previous value. It also invokes a method to perform some cleanup or initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -272,6 +277,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, concatenating the string values of its 'a' and 'b' fields with an '=' sign in between.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

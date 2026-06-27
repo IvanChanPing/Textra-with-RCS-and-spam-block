@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/e3/Y1, validating and storing the provided index and collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzt;I)V
     .locals 2
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from a list. It returns the object at the given index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)Ljava/lang/Object;
     .locals 2
 
@@ -57,6 +59,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if there are more elements to iterate over by comparing the current index (`b`) with the total count (`a`). It returns `true` (1) if the current index is less than the total count, and `false` (0) otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 3
 
@@ -84,6 +87,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a previous item and returns true if the internal counter `b` is greater than 0, and false otherwise. It essentially determines the availability of a previous element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -107,6 +111,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in a sequence if available, otherwise throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -148,6 +153,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' in the class Lcom/mplus/lib/e3/Y1. It does not appear to use or return the next index as its name suggests, but rather returns the current value of 'b'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 2
 
@@ -160,6 +166,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous object in a sequence if it exists, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 2
 
@@ -203,6 +210,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous index by decrementing the current index stored in `b` by 1. It does not use the constants 3 and 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 

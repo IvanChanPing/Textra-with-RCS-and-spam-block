@@ -245,6 +245,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an onTouchListener on the provided object. It configures the object to use the onTouchListener defined in the class's 'o' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 2
 

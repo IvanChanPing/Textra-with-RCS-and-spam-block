@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a GestureDetector with a SimpleOnGestureListener and sets various instance variables. It also creates a new GestureDetector instance with the provided Context and itself as the OnGestureListener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -76,6 +77,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the 'd' field in the class. It always returns the current state of this field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Z
     .locals 2
 
@@ -86,6 +88,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a view, specifically resetting a flag when a touch action starts and delegating the event to a GestureDetector.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 1
 

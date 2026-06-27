@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/t, validating a zzagn object and storing it. It calls the superclass constructor with provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Lcom/mplus/lib/a3/s;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagt;)V
     .locals 0
 
@@ -29,6 +30,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/t, calling its superclass constructor and validating a zzagn object. It then stores the zzagn object in a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagt;)V
     .locals 0
 
@@ -47,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a merged `zzagn` object by combining the existing `f` field with a new `zzagn` object obtained from `zzk()`. It appears to be related to entity extraction functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;
     .locals 3
 

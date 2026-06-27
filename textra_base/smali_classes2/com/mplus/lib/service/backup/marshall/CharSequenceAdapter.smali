@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the CharSequenceAdapter class, initializing it as a subclass of TypeAdapter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method reads a JSON string using a JsonReader and returns it as a CharSequence object. It essentially parses a string from the JSON input.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
 
@@ -41,6 +43,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method writes a CharSequence object to a JsonWriter as a string value. It converts the CharSequence to a string using the toString() method and then writes it to the JsonWriter using the value() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 1
 

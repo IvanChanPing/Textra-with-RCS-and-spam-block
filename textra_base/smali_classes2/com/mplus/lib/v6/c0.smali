@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/v6/c0` class, setting its properties and registering itself with a spring object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/v6/g0;Lcom/mplus/lib/v6/K;Lcom/mplus/lib/v6/x;)V
     .locals 0
 
@@ -213,6 +214,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a value `e` in object `m` of class `Lcom/mplus/lib/v6/x` is negative and returns 1 if true, otherwise returns 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 2
 

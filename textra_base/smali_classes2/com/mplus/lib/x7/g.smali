@@ -40,6 +40,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/x7/g class with provided parameters. It sets various instance fields, including integer and boolean values, as well as object references.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/T4/d;)V
     .locals 1
 
@@ -66,6 +67,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes all views from a ViewGroup and then adds a new view to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Lcom/mplus/lib/x5/y;Landroid/view/View;)V
     .locals 2
 
@@ -92,6 +94,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility and text of a given TextView based on whether the provided CharSequence is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -136,6 +139,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and adds an object to an ArrayList if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/mplus/lib/x7/l;)V
     .locals 2
 
@@ -194,6 +198,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the current object. It does not use the constant 0x2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public j()I
     .locals 2
 
@@ -206,6 +211,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout and initializes its components, setting up a view with a specific structure and event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(Landroid/view/ViewGroup;)Lcom/mplus/lib/x5/y;
     .locals 5
 
@@ -368,6 +374,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method inflates a view with a given layout ID and returns the inflated view, reusing an existing view if its tag matches the layout ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Lcom/mplus/lib/x5/y;II)Lcom/mplus/lib/x5/y;
     .locals 3
 
@@ -461,6 +468,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over an ArrayList of Lcom/mplus/lib/x7/l objects and calls the e method on each, handling any Lcom/mplus/lib/n5/a exceptions that occur.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
@@ -584,6 +592,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a CharSequence field 'f' based on the result of calling method 'g' with the input parameter. It appears to be updating a field with a string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(I)V
     .locals 1
 
@@ -600,6 +609,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes an integer, converts it to a string using `g(I)`, and then passes the string to `u(Ljava/lang/CharSequence;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t(I)V
     .locals 1
 
@@ -618,6 +628,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 
@@ -630,6 +641,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets a CharSequence object and updates a TextView with the provided CharSequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public u(Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -648,6 +660,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field `i` and toggles the visibility of an object based on the input boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public v(Z)V
     .locals 3
 

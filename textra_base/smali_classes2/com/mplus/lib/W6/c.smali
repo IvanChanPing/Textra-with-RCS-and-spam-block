@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/W6/c, storing a ViewGroup and its root view, and sets up a spring object. It also registers itself as a listener to the spring object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/view/ViewGroup;)V
     .locals 1
 
@@ -125,6 +126,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle animation or movement of a view based on the input parameters. It updates the object's state and calls methods on other objects to perform the animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(IFLcom/mplus/lib/W6/b;)V
     .locals 3
 
@@ -230,6 +232,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called when a spring is at rest and it runs a task if available, then resets the task reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -370,6 +373,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual work to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

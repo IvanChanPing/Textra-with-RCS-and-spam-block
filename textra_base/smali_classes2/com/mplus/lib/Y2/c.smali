@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Y2/c, storing a TaskCompletionSource object. It checks if the provided TaskCompletionSource is not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a failed result for a task by creating an ApiException from a given Status and setting it as an exception on a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setFailedResult(Lcom/google/android/gms/common/api/Status;)V
     .locals 2
 
@@ -55,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the result of a TaskCompletionSource based on a provided Status object. It handles both successful results and API exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic setResult(Ljava/lang/Object;)V
     .locals 3
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/i3/d, calling the superclass constructor and creating a new instance of Lcom/mplus/lib/i3/j. It sets this new instance as a field in the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a task is complete by calling `isComplete()` on an instance of `Lcom/mplus/lib/i3/j;`. It returns a boolean indicating whether the task is complete.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isCancellationRequested()Z
     .locals 2
 

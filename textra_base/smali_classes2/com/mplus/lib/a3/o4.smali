@@ -77,6 +77,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class `Lcom/mplus/lib/a3/o4;` with several dependencies. It sets up various fields of the class with instances of other classes, which are created using the provided dependencies.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzuc;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzui;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzul;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzup;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzvj;)V
     .locals 21
 
@@ -601,6 +602,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzmv`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzmv;
     .locals 15
 
@@ -713,6 +715,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zztm`. It initializes the instance with various objects obtained from the class fields, including context, entity extraction models, and executors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/google/android/gms/internal/mlkit_entity_extraction/zztm;
     .locals 18
 
@@ -921,6 +924,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a `zzwu` object by calling `zzb` on `zzup` with various parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzwu;
     .locals 6
 
@@ -1385,6 +1389,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzxg object by calling the zzb method on the zzcei object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzxg;
     .locals 2
 

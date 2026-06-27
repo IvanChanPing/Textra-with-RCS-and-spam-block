@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an AsyncTaskLoader with a given Context and sets a boolean field 'a' to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 .method public abstract a()Landroid/database/Cursor;
 .end method
 
+# M-ROLE [GROQ]: This method returns a new instance of Lcom/mplus/lib/m5/a, which implements the Java.util.function.Function interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Ljava/util/function/Function;
     .locals 3
 
@@ -47,6 +49,7 @@
 .method public abstract c()Landroid/net/Uri;
 .end method
 
+# M-ROLE [GROQ]: This method loads data in the background and returns a Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final loadInBackground()Ljava/lang/Object;
     .locals 2
 
@@ -113,6 +116,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks conditions and calls `onContentChanged()` if certain conditions are met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/G;)V
     .locals 2
 
@@ -168,6 +172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the loader and unregisters itself from the event bus if it was previously registered.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReset()V
     .locals 2
 
@@ -232,6 +237,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method forces the loader to load its data. It overrides the default behavior of the Loader class to immediately start loading data when started.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onStartLoading()V
     .locals 1
 
@@ -240,6 +246,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;` on the current object. It also retrieves the context using `Landroidx/loader/content/Loader;->getContext()Landroid/content/Context;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

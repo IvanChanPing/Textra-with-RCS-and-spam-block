@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/V8/d, storing a provided MraidInteractor$Callback object. It essentially sets up the class with a callback reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/richmedia/mraid/interactor/MraidInteractor$Callback;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles an error by calling the `processError` method of the `MraidInteractor$Callback` interface with two error strings. It appears to be part of an ad or rich media processing system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 

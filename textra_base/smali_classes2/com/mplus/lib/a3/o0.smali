@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/o0, setting its fields 'a' and 'b' with the provided parameters. It also calls the superclass constructor of Ljava/util/AbstractCollection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/AbstractMap;I)V
     .locals 0
 
@@ -27,6 +28,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/o0, setting its fields with the provided parameters. It extends the constructor of its superclass Ljava/util/AbstractCollection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/AbstractMap;IZ)V
     .locals 0
 
@@ -113,6 +115,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is contained in a collection. It uses a switch statement based on the value of `a` to determine which type of collection to check, and then calls the corresponding `contains` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -389,6 +392,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(Ljava/lang/Object;)Z
     .locals 5
 

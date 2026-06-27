@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor that calls another constructor in the same class with modified parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(IIFFLandroid/graphics/Rect;Ljava/lang/String;)V
     .locals 7
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/w6/a, setting its properties with the provided parameters. It also creates a new Rect object with scaled coordinates using the Lcom/mplus/lib/z7/m;->c method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I[IFFLandroid/graphics/Rect;Ljava/lang/String;)V
     .locals 0
 

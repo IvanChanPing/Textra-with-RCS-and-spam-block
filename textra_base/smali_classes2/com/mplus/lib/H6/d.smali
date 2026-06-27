@@ -71,6 +71,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a RecyclerView ViewHolder instance. It appears to be a simple getter method for the 'd' field of the class Lcom/mplus/lib/H6/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 2
 
@@ -83,6 +84,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `d(I)V` with the value of its field `g`. It appears to trigger an action based on the field's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 2
 
@@ -93,6 +95,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `d(I)` with argument 0. It then sets a local variable to 2 but doesn't use it, and returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 2
 
@@ -107,6 +110,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle animation or physics-related functionality, specifically creating and configuring a spring object based on the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(I)V
     .locals 5
 
@@ -377,6 +381,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `e(I)` with the value of field `g` as an argument, likely initializing something. It appears to be part of a class's initialization process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final init()V
     .locals 2
 
@@ -397,6 +402,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets and releases a spring object when it comes to rest. It also notifies another object of this event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -436,6 +442,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a spring value by calling `e(I)` with the integer value of a double from the input object. It takes a `Lcom/mplus/lib/b2/d` object as input and uses its `d` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

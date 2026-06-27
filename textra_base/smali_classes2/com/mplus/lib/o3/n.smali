@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/o3/n, setting its fields 'a' and 'b' and calling the superclass constructor. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/o3/b;I)V
     .locals 0
 
@@ -154,6 +155,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator based on the value of `a` field in the class. It creates an instance of `Lcom/mplus/lib/o3/c` with the `b` field and a specific integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 4
 

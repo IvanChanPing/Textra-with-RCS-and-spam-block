@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `h` of type `Lcom/mplus/lib/Ba/b;` with a new instance. It sets up a `Ba/b` object with parameters 0x12c and 0x1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/g5/d; and calls the R() method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized N()Lcom/mplus/lib/g5/d;
     .locals 3
 
@@ -752,6 +754,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain value is less than or equal to a threshold and returns true if so, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q()Z
     .locals 2
 
@@ -1015,6 +1018,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method sends an intent to process a queued task. It creates a new intent with the action "processQueued" and invokes the `M` method on the `f` object of type `Lcom/mplus/lib/g5/e;` to handle this intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T()V
     .locals 4
 

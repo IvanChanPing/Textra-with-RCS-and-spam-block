@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/C4/h class with a given Android context. It sets up a HashMap object as a field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a singleton implementation that returns an instance of `Lcom/mplus/lib/C4/h;`, creating it if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/C4/h;
     .locals 4
 
@@ -349,6 +351,7 @@
     goto :goto_1
 .end method
 
+# M-ROLE [GROQ]: This method takes an Android Uri and returns a corresponding File object. It checks if the Uri is already being processed and waits if necessary, then attempts to create a File object based on the Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Landroid/net/Uri;)Ljava/io/File;
     .locals 5
 
@@ -476,6 +479,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of URIs from a database cursor and filters them, then maps a list of files to another format and applies a consumer to the mapped list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 8
 

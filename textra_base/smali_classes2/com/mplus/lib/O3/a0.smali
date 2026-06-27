@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/O3/a0, initializing its fields 'a' and 'b' with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a MediaPlayer error by delegating to either `Lcom/smaato/sdk/video/vast/vastplayer/system/SystemMediaPlayer;->a` or `Lcom/inmobi/media/s8;->a` based on the value of `Lcom/mplus/lib/O3/a0;->a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
 

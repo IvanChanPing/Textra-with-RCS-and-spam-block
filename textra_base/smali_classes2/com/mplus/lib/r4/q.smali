@@ -231,6 +231,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/r4/E0`, populating its fields with data from a database cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public J()Lcom/mplus/lib/r4/E0;
     .locals 8
 
@@ -352,6 +353,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a long value retrieved from an index of 0. It appears to be part of a data storage or retrieval class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getId()J
     .locals 3
 

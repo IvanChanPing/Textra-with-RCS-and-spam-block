@@ -45,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a Drawable object based on the provided integer parameter. It uses the J5/g class to fetch the Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(I)Landroid/graphics/drawable/Drawable;
     .locals 3
 
@@ -145,6 +146,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event for a view, retrieving a V5/c object and then invoking a method on a V5/i object with a V5/j object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 3
 
@@ -434,6 +436,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a drawable image on a BaseImageView and sets the current object as its onClick listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0(Lcom/mplus/lib/ui/common/base/BaseImageView;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 

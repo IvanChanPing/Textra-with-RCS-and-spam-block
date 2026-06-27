@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/d, setting up an AutoCloseOutputStream with a ParcelFileDescriptor and storing a BlobStoreManager Session. It also sets a boolean flag to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/os/ParcelFileDescriptor;Landroid/app/blob/BlobStoreManager$Session;)V
     .locals 0
 
@@ -31,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method closes the output stream and calls `zza()` afterwards, regardless of whether an exception occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final close()V
     .locals 2
 
@@ -59,6 +61,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to commit a blob store session and handles exceptions that may occur during the process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()V
     .locals 6
 

@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates an instance of `Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzmp` using the provided `Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzmj` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic create(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 

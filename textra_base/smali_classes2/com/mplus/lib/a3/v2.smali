@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/v2, storing a provided zzaxt object. It calls the superclass constructor and sets the object as a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;)V
     .locals 0
 
@@ -57,6 +58,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the result of an asynchronous operation with a specified timeout. It delegates the call to a Future object, blocking until the result is available or the timeout expires.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 2
 
@@ -73,6 +75,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a Future task is cancelled. It returns a boolean value indicating the cancellation status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isCancelled()Z
     .locals 2
 
@@ -91,6 +94,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a Future task is done. It returns a boolean value indicating the completion status of the task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isDone()Z
     .locals 2
 
@@ -127,6 +131,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method executes a given Runnable task using a provided Executor. It delegates the execution to an instance of zzaxt, likely part of Google's ML Kit.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzj(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 2
 

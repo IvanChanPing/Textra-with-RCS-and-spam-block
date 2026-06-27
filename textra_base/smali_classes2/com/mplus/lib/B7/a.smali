@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/B7/a that initializes an integer field 'a' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -38,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/B7/a class with provided parameters. It sets the instance's fields with the given objects and an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zztf;Ljava/lang/String;Ljava/util/Date;Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzrw;)V
     .locals 1
 
@@ -58,6 +60,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string matches a specific regex pattern and returns the string if it matches, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -195,6 +198,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds a key-value pair to a HashMap if it exists, or throws an IllegalStateException if it doesn't. It handles the storage of metadata.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -834,6 +838,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either by calling its superclass's toString method or a private method g() based on the value of field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

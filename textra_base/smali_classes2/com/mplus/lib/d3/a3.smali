@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/d3/a3, setting its fields with provided parameters. It appears to be a constructor that extends Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzo.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzo;II)V
     .locals 0
 
@@ -63,6 +64,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -73,6 +75,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a collection by delegating to `zzf(II)` and casting the result to `Ljava/util/List`. It appears to be a synthetic bridge method for a subclass of a class that uses `com/google/android/gms/internal/mlkit_smart_reply_bundled/zzo`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -113,6 +116,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by adding the instance variable 'a' to the result of calling 'zzc()' on the 'c' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()I
     .locals 3
 
@@ -149,6 +153,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls a validation method and then invokes another method to update and return an object of type zzo.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(II)Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzo;
     .locals 2
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f6/j class with parameters. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f6/o;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IILandroidx/core/view/ViewPropertyAnimatorCompat;)V
     .locals 0
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method resets the translationX and translationY of a given View to 0 when an animation is cancelled, if certain conditions are met. It checks the values of `b` and `c` fields in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationCancel(Landroid/view/View;)V
     .locals 3
 
@@ -111,6 +113,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the start of an animation on a RecyclerView item. It invokes the dispatchMoveStarting method on a SimpleItemAnimator instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationStart(Landroid/view/View;)V
     .locals 2
 

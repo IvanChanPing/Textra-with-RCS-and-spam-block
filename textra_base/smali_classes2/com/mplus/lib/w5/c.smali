@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/w5/c, setting various properties and creating a spring object. It also configures the spring object with initial values and adds the instance as a listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/net/Uri;)V
     .locals 3
 
@@ -74,6 +75,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and prepares a MediaPlayer instance, setting its data source and seeking to a specific position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Z
     .locals 4
 
@@ -142,6 +144,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method cancels posts and releases a MediaPlayer instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 3
 
@@ -199,6 +202,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to control the playback of a media file, pausing or starting it based on its current state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 5
 
@@ -465,6 +469,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called when a MediaPlayer completes playback, and it resets the object's state and calls other methods to handle the completion.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCompletion(Landroid/media/MediaPlayer;)V
     .locals 3
 
@@ -521,6 +526,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a double value from an object and then calls another method `d()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 
@@ -601,6 +607,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;. It effectively converts the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

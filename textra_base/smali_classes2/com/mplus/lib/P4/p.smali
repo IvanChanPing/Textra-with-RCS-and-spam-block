@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static instances of `Lcom/mplus/lib/E3/i;` in the class `Lcom/mplus/lib/P4/p;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -50,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of `Lcom/mplus/lib/P4/p;`, initializing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/P4/p;
     .locals 7
 
@@ -148,6 +150,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method generates and configures an instance of `Lcom/mplus/lib/P4/d` using the provided `Lcom/mplus/lib/P4/a` object. It sets various properties, including an ID, timestamp, and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static R(Lcom/mplus/lib/P4/a;)Lcom/mplus/lib/P4/d;
     .locals 3
 
@@ -182,6 +185,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method schedules a task to run in the background, passing a URI and a string representation of a long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Y(Lcom/mplus/lib/r4/p;J)V
     .locals 4
 
@@ -357,6 +361,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle notification cancellation and performs various cleanup tasks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(JLcom/mplus/lib/E3/i;)V
     .locals 5
 
@@ -1260,6 +1265,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the provided parameters and schedules a task using `Lcom/mplus/lib/t4/a;->a` if they are valid. It creates a new instance of `Lcom/mplus/lib/P4/o;` if the second parameter is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(Lcom/mplus/lib/r4/j0;Lcom/mplus/lib/P4/o;)V
     .locals 4
 
@@ -1307,6 +1313,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sends a notification to a Pebble smartwatch using an Intent with the action "com.getpebble.action.SEND_NOTIFICATION".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
@@ -1457,6 +1464,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a ForegroundInfo object for Android WorkManager, creating a notification with specific title and content.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(Lcom/mplus/lib/G6/b;)Landroidx/work/ForegroundInfo;
     .locals 4
 
@@ -3493,6 +3501,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to invoke `Lcom/mplus/lib/B4/b;->p(ILcom/mplus/lib/P4/d;Landroid/content/Intent;)V` and returns a `SecurityException` if one is thrown.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0(Lcom/mplus/lib/r4/j0;Landroid/content/Intent;Lcom/mplus/lib/P4/d;)Ljava/lang/SecurityException;
     .locals 4
 
@@ -3523,6 +3532,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method named S() and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 1
 

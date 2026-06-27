@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/S7/d class, storing a reference to an Lcom/mplus/lib/S7/e object. It sets up the object's internal state with the provided parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/S7/e;)V
     .locals 0
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the navigation stack of a BrowserView based on the provided boolean parameters. It sets the back and forward navigation buttons' enabled state accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPageNavigationStackChanged(ZZ)V
     .locals 3
 
@@ -75,6 +77,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the progress indicator of a BrowserView based on the provided progress value. It hides the indicator when progress reaches 100 and updates it otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onProgressChanged(I)V
     .locals 4
 
@@ -117,6 +120,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the render process going away by creating a new instance of `Lcom/mplus/lib/C8/a` and invoking `onNotNull` on the `BrowserView` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onRenderProcessGone()V
     .locals 4
 
@@ -143,6 +147,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the start of URL loading by extracting the hostname and scheme from the URL and displaying them in a browser view, also indicating whether the connection is secure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onUrlLoadingStarted(Ljava/lang/String;)V
     .locals 5
 
@@ -198,6 +203,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method determines whether a URL should be overridden and handles the URL accordingly by checking if an external app can handle it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final shouldOverrideUrlLoading(Ljava/lang/String;)Z
     .locals 4
 

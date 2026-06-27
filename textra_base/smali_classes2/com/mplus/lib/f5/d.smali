@@ -12,6 +12,7 @@
 .method public abstract a(Landroid/content/Intent;)V
 .end method
 
+# M-ROLE [GROQ]: This method handles a broadcast receiver event by creating a new thread to run a task asynchronously.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 

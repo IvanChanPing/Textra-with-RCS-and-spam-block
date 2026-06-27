@@ -35,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/a3/O1 that takes two string parameters and delegates to another constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -75,6 +76,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method encodes a given CharSequence into a byte array using a custom encoding scheme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza([BLjava/lang/CharSequence;)I
     .locals 9
 

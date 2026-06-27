@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/g5/e class, setting up its properties with a LinkedList and a lock object. It also stores a reference to a provided Lcom/mplus/lib/g5/d object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/g5/d;)V
     .locals 1
 
@@ -48,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an Intent is already in a LinkedList, and if not, adds it and acquires a WakeLock if it's not already held.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Landroid/content/Intent;)V
     .locals 4
 
@@ -170,6 +172,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to be part of a thread that processes a queue of intents, removing and handling each intent in the queue.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 5
 

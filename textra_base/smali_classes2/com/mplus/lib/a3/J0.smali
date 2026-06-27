@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/a3/J0. It creates a new instance of the class and assigns it to a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares two objects that implement the Comparable interface and returns the result. It essentially delegates the comparison to the compareTo method of the first object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
@@ -52,6 +54,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a fixed string "Ordering.natural()".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -44,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a provided object and conditionally runs it or adds a global layout listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/s6/a;)V
     .locals 1
 
@@ -172,6 +173,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

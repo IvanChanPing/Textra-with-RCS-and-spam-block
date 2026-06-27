@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/y5/z, setting a boolean flag to true and storing a reference to an Lcom/mplus/lib/x5/y object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;)V
     .locals 1
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the visibility of a view based on the provided boolean parameter and handles animation using a spring.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Z)V
     .locals 12
 
@@ -277,6 +279,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met based on the value of `h` in `Lcom/mplus/lib/b2/d;` or calls `y()` on `Lcom/mplus/lib/x5/y;` if `c` is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 5
 
@@ -335,6 +338,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain object is not null and if so, calls the `P` method on it with the current object as an argument. It appears to be part of a spring animation callback.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -358,6 +362,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the alpha and visibility of a view based on a spring update. It sets the alpha directly and toggles the view's visibility based on whether the alpha is greater than zero.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 
@@ -408,6 +413,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It delegates the `toString` implementation to this external method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

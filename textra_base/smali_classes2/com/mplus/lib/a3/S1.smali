@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/S1, setting its fields b and c to instances of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a groupName field in the class if the input string is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcp;
     .locals 2
 
@@ -70,6 +72,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean flag and modifies a byte field in the class instance, then returns the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Z)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcp;
     .locals 1
 

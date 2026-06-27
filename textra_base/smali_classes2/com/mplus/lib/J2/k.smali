@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/J2/k, storing a StatusPendingResult object. It sets the object's field 'c' to the provided StatusPendingResult.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/StatusPendingResult;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a Google API connection failure by creating a new Status object with a specific error code and setting it as the result of a StatusPendingResult.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 2
 

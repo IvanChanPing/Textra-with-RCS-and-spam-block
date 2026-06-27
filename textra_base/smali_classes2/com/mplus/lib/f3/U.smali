@@ -42,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/f3/U;, setting its fields with the provided callable and another object. It extends the AtomicReference class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f3/V;Ljava/util/concurrent/Callable;)V
     .locals 0
 
@@ -190,6 +191,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be part of a thread execution mechanism, where it attempts to execute a callable task and handle any exceptions that may occur.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

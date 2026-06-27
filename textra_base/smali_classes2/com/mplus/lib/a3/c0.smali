@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/c0, setting its 'e' field and calling the superclass constructor. It takes an Lcom/mplus/lib/a3/d0 object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/d0;)V
     .locals 0
 
@@ -97,6 +98,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a previous element in a list iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -119,6 +121,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the `c()` method and then returns the next index from a `ListIterator`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 2
 
@@ -141,6 +144,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the previous object in a list iteration. It checks if the iteration is valid and then calls the `previous()` method on the underlying `ListIterator`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 2
 
@@ -189,6 +193,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets an object in a list using a ListIterator. It first calls a method c() on the current object, then uses the set method of the ListIterator to replace the current element with the provided object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(Ljava/lang/Object;)V
     .locals 2
 

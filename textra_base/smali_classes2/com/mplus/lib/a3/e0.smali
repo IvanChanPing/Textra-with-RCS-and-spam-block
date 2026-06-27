@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/e0, checking if the provided map is empty and storing it as an instance variable. It ensures the map is not empty using a validation method from the Google ML Kit library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/p0;)V
     .locals 1
 
@@ -64,6 +65,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a map and updates a counter based on the size of the removed collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic zzj(Lcom/mplus/lib/a3/e0;Ljava/lang/Object;)V
     .locals 2
 
@@ -122,6 +124,7 @@
 .method public abstract zza()Ljava/util/Collection;
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a collection associated with a given object from a map, and if not found, creates a new collection using the `zza()` method. It then calls `zzc()` to further process the collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzb(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 2
 
@@ -193,6 +196,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/a3/Y` and returns it as a `Ljava/util/Map`. It appears to be a wrapper around the `zza` map field of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Ljava/util/Map;
     .locals 4
 
@@ -213,6 +217,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set instance, specifically an instance of Lcom/mplus/lib/a3/Z, which is initialized with the current object and its zza map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Ljava/util/Set;
     .locals 3
 
@@ -229,6 +234,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method clears all collections in a map and then clears the map itself, also resetting a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzk()V
     .locals 4
 
@@ -283,6 +289,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object can be added to a collection associated with a given key in a map, and updates the collection and a counter accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzl(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 4
 

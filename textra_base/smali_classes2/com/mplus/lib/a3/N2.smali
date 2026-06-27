@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/N2; with various parameters. It sets the object's fields with the provided boolean and zzaih objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ZLcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;Z)V
     .locals 0
 
@@ -45,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcs;`, by comparing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
@@ -311,6 +313,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `zzaih` from the `d` field of the class `N2`. It does not perform any operations, just returns the existing value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -341,6 +344,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `e` field, which is an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih`. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -363,6 +367,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the instance variable 'a'. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf()Z
     .locals 2
 
@@ -383,6 +388,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain flag `f` is set. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Z
     .locals 2
 

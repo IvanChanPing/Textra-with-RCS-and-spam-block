@@ -27,6 +27,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the state of an object based on a boolean parameter and triggers a redraw if the state has changed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Z)V
     .locals 19
 
@@ -1015,6 +1016,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method draws a circle on a Canvas, with its size and opacity changing over time based on a predefined animation curve.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 14
 
@@ -1264,6 +1266,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the bounds of a drawable and calculates two instance variables `h` and `g` based on the minimum dimension of the new bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBoundsChange(Landroid/graphics/Rect;)V
     .locals 5
 

@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a gesture detector with a given context, and sets up various instance variables. It extends the `SimpleOnGestureListener` class and creates a new `GestureDetector` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/Q4/e;Lcom/mplus/lib/x5/y;)V
     .locals 1
 
@@ -78,6 +79,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the `h` field. It does not perform any additional operations or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -256,6 +258,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events for a view, detecting gestures and triggering actions based on the gesture type. It checks for swipe gestures and triggers an action if the swipe distance exceeds a certain threshold.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 18
 
@@ -752,6 +755,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

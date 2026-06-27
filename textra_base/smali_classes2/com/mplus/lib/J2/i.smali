@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/J2/i, setting its integer field 'a' to 0 and its object field 'b' to the provided zaaw object. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/common/api/internal/zaaw;)V
     .locals 1
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/J2/i, setting an integer field to 1 and a string field using the provided format string and arguments. It formats the string using the US locale.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
@@ -62,6 +64,7 @@
 .method public abstract b()V
 .end method
 
+# M-ROLE [GROQ]: This method appears to run a task in a thread, handling exceptions and locking mechanisms.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 4
 

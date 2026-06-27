@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/x6/b, setting its 'e' field to a singleton instance of Lcom/mplus/lib/J4/a. It essentially sets up the object with a reference to a shared instance of another class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method writes a given CharSequence to an OutputStream, creating the OutputStream if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O(Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -91,6 +93,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method processes and displays information from a `Lcom/mplus/lib/r4/j0` object, including its timestamp and a list of items.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/r4/j0;)V
     .locals 6
 

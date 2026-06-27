@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/B4/b based on the input parameter, creating different objects depending on the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 2
 
@@ -120,6 +121,7 @@
     .end sparse-switch
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/B4/b with an integer and an object. It sets the instance's fields 'a' and 'b' to the provided integer and object, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -132,6 +134,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/B4/b that initializes an integer field 'a' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(IZ)V
     .locals 0
 
@@ -142,6 +145,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/B4/b, setting an integer field to 3 and creating a new instance of Lcom/mplus/lib/E3/o.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
@@ -162,6 +166,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It delegates the conversion to the `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String>` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final A()Ljava/lang/String;
     .locals 2
 
@@ -282,6 +287,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method takes an Android Uri and a string as input, and returns a SpannableString. If the Uri is null, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Landroid/net/Uri;Ljava/lang/String;)Landroid/text/SpannableString;
     .locals 2
 
@@ -392,6 +398,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a bitmap on a canvas, handling cases where the bitmap is provided as a byte array or directly as a bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Landroid/graphics/Canvas;Landroid/graphics/Paint;IILjava/lang/Object;IIIIII)V
     .locals 12
 
@@ -551,6 +558,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It essentially converts the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final x()Ljava/lang/String;
     .locals 2
 
@@ -561,6 +569,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It delegates the conversion to the `Lcom/mplus/lib/z7/h;->w` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final z()Ljava/lang/String;
     .locals 2
 
@@ -575,6 +584,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method reads data from an input stream and writes it to a file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/Object;Ljava/io/File;Lcom/mplus/lib/B1/k;)Z
     .locals 5
 
@@ -751,6 +761,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method downloads a file from a given URL and caches it, returning the cached file if it exists, or the downloaded file if caching is successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Ljava/net/URL;)Ljava/io/File;
     .locals 6
 
@@ -1072,6 +1083,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method reads a byte from an input stream and returns it as a short if successful, or throws an exception if the end of the stream is reached.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e()S
     .locals 3
 
@@ -1109,6 +1121,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method reads data from an input stream into a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public f(I[B)I
     .locals 5
 
@@ -1176,6 +1189,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves or compiles a regular expression pattern from a given string, caching compiled patterns for future use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h(Ljava/lang/String;)Ljava/util/regex/Pattern;
     .locals 4
 
@@ -1283,6 +1297,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method takes a URL and returns a File object representing a file within a directory.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i(Ljava/net/URL;)Ljava/io/File;
     .locals 5
 
@@ -1382,6 +1397,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a Google API client is connected. It returns a boolean value indicating the connection status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public isConnected()Z
     .locals 2
 
@@ -1400,6 +1416,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles various intent actions and updates the `SendText` object accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public j(ILcom/mplus/lib/ui/common/SendText;Landroid/content/Intent;)Z
     .locals 9
 
@@ -2235,6 +2252,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given CharSequence matches a regex pattern derived from a string in the provided Lcom/mplus/lib/K9/g object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public o(Ljava/lang/CharSequence;Lcom/mplus/lib/K9/g;)Z
     .locals 3
 
@@ -2399,6 +2417,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method notifies and clears a list of deferred lifecycle callbacks when a LifecycleDelegate is created.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onDelegateCreated(Lcom/google/android/gms/dynamic/LifecycleDelegate;)V
     .locals 3
 
@@ -2465,6 +2484,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an error when a call fails, specifically an error report request.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onFailure(Lcom/smaato/sdk/core/network/Call;Ljava/lang/Exception;)V
     .locals 3
 
@@ -2499,6 +2519,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles text change events in a search query, updating the adapter with new data based on the input text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onQueryTextChange(Ljava/lang/String;)Z
     .locals 4
 
@@ -2692,6 +2713,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to post a notification using `NotificationManagerCompat` if the required "android.permission.POST_NOTIFICATIONS" permission is granted, otherwise it logs an error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p(ILcom/mplus/lib/P4/d;Landroid/content/Intent;)V
     .locals 5
 
@@ -2866,6 +2888,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of a contact picker intent, extracting contact information and displaying it as text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public q(Lcom/mplus/lib/ui/common/SendText;Landroid/content/Intent;)V
     .locals 11
 
@@ -3313,6 +3336,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method skips a specified number of bytes in an input stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public skip(J)J
     .locals 9
 
@@ -3405,6 +3429,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a message or conversation retrieval operation, interacting with various classes and objects to process the request.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)Lcom/mplus/lib/r4/j0;
     .locals 12
 
@@ -3651,6 +3676,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. It uses a sparse switch statement to determine which string to return.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 
@@ -3838,6 +3864,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sends a multimedia message using the `SmsManager` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public v(Landroid/content/Context;Landroid/net/Uri;Landroid/os/Bundle;Lcom/mplus/lib/z7/s;I)V
     .locals 10
 
@@ -3918,6 +3945,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of text messages from a database cursor, creates `TextMessage` objects, and uses the Google ML Kit Smart Reply API to suggest replies.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w(Lcom/mplus/lib/r4/f0;ILjava/util/function/Consumer;)V
     .locals 12
 
@@ -4300,6 +4328,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the ListenerHolder object in the class if it's different from the provided one, clearing the old one. It synchronizes access to ensure thread safety.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized zzc(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
     .locals 2
 

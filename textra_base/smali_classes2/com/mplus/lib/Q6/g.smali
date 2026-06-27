@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/y1/i`, a class that likely represents a Glide model loader.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Class;)Lcom/mplus/lib/y1/i;
     .locals 4
 
@@ -27,6 +28,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to return an instance of Lcom/mplus/lib/Q6/f. It calls the superclass method c() and casts the result to Lcom/mplus/lib/Q6/f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/y1/i;
     .locals 2
 
@@ -65,6 +67,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to handle a Uri and returns a casted Lcom/mplus/lib/Q6/f object. It essentially delegates the handling to its superclass Lcom/mplus/lib/y1/k.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Landroid/net/Uri;)Lcom/mplus/lib/y1/i;
     .locals 1
 
@@ -77,6 +80,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to return a casted object of type Lcom/mplus/lib/Q6/f. It calls the superclass method with the same parameters and returns the result cast to Lcom/mplus/lib/Q6/f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Lcom/mplus/lib/r4/T;)Lcom/mplus/lib/y1/i;
     .locals 1
 
@@ -91,6 +95,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a parent class method to handle a File object and returns an instance of Lcom/mplus/lib/Q6/f;. It simply calls the parent class method and casts the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p(Ljava/io/File;)Lcom/mplus/lib/y1/i;
     .locals 1
 
@@ -109,6 +114,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to retrieve an object of type Lcom/mplus/lib/y1/i; and casts it to Lcom/mplus/lib/Q6/f;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Ljava/lang/Integer;)Lcom/mplus/lib/y1/i;
     .locals 1
 
@@ -125,6 +131,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to handle a URL and returns a casted object of type Lcom/mplus/lib/Q6/f. It appears to be part of a class hierarchy involving URL processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Ljava/net/URL;)Lcom/mplus/lib/y1/i;
     .locals 1
 
@@ -141,6 +148,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is an instance of Lcom/mplus/lib/Q6/e and calls the superclass method u with the input object or a new Lcom/mplus/lib/Q6/e instance, depending on the type. It handles the input object based on its class type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u(Lcom/mplus/lib/U1/g;)V
     .locals 2
 

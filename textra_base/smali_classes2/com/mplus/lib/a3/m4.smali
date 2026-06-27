@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/m4, setting its fields to the provided parameters if they are not null. It throws a NullPointerException if either parameter is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzeh;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj;)V
     .locals 0
 
@@ -51,6 +52,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing instances of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzua`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -123,6 +125,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the current object by combining the hash codes of its `a` and `b` fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -213,6 +216,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `zzeh` from the `mlkit_entity_extraction` package.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzeh;
     .locals 2
 

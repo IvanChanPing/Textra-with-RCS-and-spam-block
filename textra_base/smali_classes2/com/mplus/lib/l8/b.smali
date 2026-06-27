@@ -47,6 +47,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/l8/b` class, setting its fields with the provided parameters. It extends the `Lcom/smaato/sdk/core/mvvm/model/AdResponse` class and assigns various ad-related properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/smaato/sdk/core/ad/AdType;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Long;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/smaato/sdk/core/api/ImpressionCountingType;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
@@ -629,6 +630,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the AdType object stored in the 'c' field of the class. It appears to be a getter method for the AdType.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAdType()Lcom/smaato/sdk/core/ad/AdType;
     .locals 2
 
@@ -641,6 +643,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of click tracking URLs. It simply retrieves the list from the object's field 'n'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getClickTrackingUrls()Ljava/util/List;
     .locals 2
 
@@ -651,6 +654,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'q' field, which appears to be a URL string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getClickUrl()Ljava/lang/String;
     .locals 2
 
@@ -663,6 +667,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the 'r' object field of the class instance. It does not appear to perform any additional operations based on the provided constant value 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCsmObject()Ljava/lang/Object;
     .locals 2
 
@@ -673,6 +678,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of extensions. It retrieves the list from the object's field 'o'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getExtensions()Ljava/util/List;
     .locals 2
 
@@ -683,6 +689,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the height value stored in the object's 'e' field as a Java Integer object. It does not perform any calculations or external calls.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeight()Ljava/lang/Integer;
     .locals 2
 
@@ -693,6 +700,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a stored bitmap image. It does not create or load the image, but rather retrieves a previously stored bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getImageBitmap()Landroid/graphics/Bitmap;
     .locals 2
 
@@ -703,6 +711,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'f' field, which appears to be an image URL. It does not perform any additional operations or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getImageUrl()Ljava/lang/String;
     .locals 2
 
@@ -713,6 +722,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the impression counting type of an object. It retrieves the impression counting type from a field named 'p' in the class Lcom/mplus/lib/l8/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getImpressionCountingType()Lcom/smaato/sdk/core/api/ImpressionCountingType;
     .locals 2
 
@@ -725,6 +735,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of impression tracking URLs stored in the 'm' field of the class. It does not perform any actual tracking or URL generation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getImpressionTrackingUrls()Ljava/util/List;
     .locals 2
 
@@ -737,6 +748,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'j' field, which is an Object. It does not perform any native operations despite its name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getNativeObject()Ljava/lang/Object;
     .locals 2
 
@@ -747,6 +759,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'h' field, which presumably contains rich media content. It does not perform any actual computation or processing to generate the content.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getRichMediaContent()Ljava/lang/String;
     .locals 2
 
@@ -759,6 +772,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the rich media reward interval in seconds. It retrieves the value from a field named 'l' in the class Lcom/mplus/lib/l8/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getRichMediaRewardIntervalSeconds()Ljava/lang/Integer;
     .locals 2
 
@@ -771,6 +785,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string field 'b' of the class Lcom/mplus/lib/l8/b. It does not perform any scientific calculation despite its name getSci.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSci()Ljava/lang/String;
     .locals 2
 
@@ -783,6 +798,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'a'. It does not perform any actual session ID generation or retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSessionId()Ljava/lang/String;
     .locals 2
 
@@ -795,6 +811,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'k' field, which represents a time-to-live (TTL) value in milliseconds. It simply retrieves the stored TTL value without any modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getTtlMs()Ljava/lang/Long;
     .locals 2
 
@@ -803,6 +820,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the object stored in the 'i' field of the class. It does not appear to use the vast object as its name suggests, but rather returns a pre-existing object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVastObject()Ljava/lang/Object;
     .locals 2
 
@@ -815,6 +833,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the width value stored in the object's 'd' field as a Java Integer object. It simply retrieves the value without any modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getWidth()Ljava/lang/Integer;
     .locals 2
 

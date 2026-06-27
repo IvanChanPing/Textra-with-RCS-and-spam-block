@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/o3/r class, setting its fields with provided parameters. It constructs an object with references to Lcom/mplus/lib/n3/e and Lcom/mplus/lib/o3/y0 instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/n3/e;Lcom/mplus/lib/o3/y0;)V
     .locals 0
 
@@ -64,6 +65,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their `a` and `b` fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -132,6 +134,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the current object based on its fields `a` and `b`. It uses the `Arrays.hashCode()` method to compute the hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 

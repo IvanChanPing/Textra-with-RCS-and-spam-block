@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/d3/Z2, validating and storing the provided index and collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzo;I)V
     .locals 2
 
@@ -57,6 +58,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if there are more elements to iterate over and returns true if the current index is less than the total count. It returns a boolean value indicating whether the iteration has more elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 3
 
@@ -82,6 +84,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a previous item and returns true if the internal counter `b` is greater than 0. It returns a boolean value indicating the presence of a previous item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -107,6 +110,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in a sequence if available, otherwise throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 3
 
@@ -150,6 +154,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'b' of the class Lcom/mplus/lib/d3/Z2. It does not appear to increment or modify the index in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 2
 
@@ -162,6 +167,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous object in a sequence if it exists, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 2
 
@@ -205,6 +211,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous index by decrementing the current index stored in 'b' by 1. It effectively subtracts 1 from the current index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 

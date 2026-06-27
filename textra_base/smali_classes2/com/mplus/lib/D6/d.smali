@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/D6/d that initializes an integer field 'a' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/D6/d with the given parameters. It sets the instance's fields a, b, c, and d to the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
     .locals 0
 
@@ -53,6 +55,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/D6/d class with an Android Application and a Locale. It sets the instance's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/app/Application;Ljava/util/Locale;)V
     .locals 1
 
@@ -95,6 +98,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/D6/d class, setting its properties with the provided Context and Lcom/mplus/lib/O4/c objects. It also retrieves a singleton instance of Lcom/mplus/lib/P4/p.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/O4/c;)V
     .locals 1
 
@@ -245,6 +249,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/D6/d, validating and storing the provided ParcelFileDescriptor, ArrayList, and another object. It also creates a new instance of Lcom/bumptech/glide/load/data/a with the ParcelFileDescriptor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/os/ParcelFileDescriptor;Ljava/util/ArrayList;Lcom/mplus/lib/F1/g;)V
     .locals 1
 
@@ -273,6 +278,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/D6/d class, setting its fields with the provided parameters. It also sets an integer field 'a' to 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/E1/u;Lcom/mplus/lib/U1/h;Lcom/mplus/lib/E1/y;)V
     .locals 1
 
@@ -377,6 +383,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/D6/d; that initializes its fields with the provided parameters. It sets the instance variables a, d, b, and c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -407,6 +414,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to generate this string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final G()Ljava/lang/String;
     .locals 2
 
@@ -419,6 +427,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to delegate the conversion to the `Lcom/mplus/lib/z7/h;->w` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final H()Ljava/lang/String;
     .locals 2
 
@@ -433,6 +442,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically an `Intent`, and appends it to another string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final I()Ljava/lang/String;
     .locals 3
 
@@ -483,6 +493,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/D6/d`. It initializes the instance with a new `Lcom/mplus/lib/ib/b` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o()Lcom/mplus/lib/D6/d;
     .locals 3
 
@@ -553,6 +564,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method parses an HTML string using Jsoup and returns a Document object. It utilizes a custom parser configuration and a StringReader to read the input string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w(Ljava/lang/String;Ljava/lang/String;)Lorg/jsoup/nodes/Document;
     .locals 3
 
@@ -784,6 +796,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method checks the input object and returns a `Lcom/mplus/lib/K5/b` object based on certain conditions. It handles cases where the input object is null or not, and performs various checks and operations to determine the return value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public F(Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/K5/b;
     .locals 3
 
@@ -1064,6 +1077,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method parses a JSON string and returns a `Lcom/mplus/lib/z9/d` object containing the parsed data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/String;)Ljava/lang/Object;
     .locals 5
 
@@ -1280,6 +1294,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a coroutine-based operation, specifically related to geoIP data retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Lcom/mplus/lib/aa/c;)Ljava/lang/Object;
     .locals 7
 
@@ -1723,6 +1738,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method cancels a pending broadcast intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e()V
     .locals 5
 
@@ -1820,6 +1836,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method decodes a bitmap from different sources based on the value of `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g(Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 3
 
@@ -2133,6 +2150,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns a `TappxVastGeneratorRequest` object by creating a new instance of `Lcom/mplus/lib/o9/A`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public init(Lcom/tappx/sdk/android/vastgenerator/TappxVideoPosition;II)Lcom/tappx/sdk/android/vastgenerator/TappxVastGeneratorRequest;
     .locals 8
 
@@ -2490,6 +2508,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a RectF object based on the positions of two points.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public l()Landroid/graphics/RectF;
     .locals 6
 
@@ -3348,6 +3367,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a CMP (Consent Management Platform) error by logging the error using the `Lcom/mplus/lib/Z3/d;->M` method. It takes a `Lcom/inmobi/cmp/model/ChoiceError` object as a parameter and logs a formatted string "CMP.onCmpError(%s)" with the error object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCmpError(Lcom/inmobi/cmp/model/ChoiceError;)V
     .locals 3
 
@@ -3490,6 +3510,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a message when Google Basic Consent changes, using the provided GoogleBasicConsents object. It invokes a logging method on an instance of Lcom/mplus/lib/Z3/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onGoogleBasicConsentChange(Lcom/inmobi/cmp/core/model/gbc/GoogleBasicConsents;)V
     .locals 3
 
@@ -3518,6 +3539,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a message indicating that Google vendor consent has been given, using the provided ACData object. It invokes a logging function on an instance of Lcom/mplus/lib/Z3/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onGoogleVendorConsentGiven(Lcom/inmobi/cmp/core/model/ACData;)V
     .locals 3
 
@@ -3544,6 +3566,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs the event of IAB vendor consent being given, passing the GDPRData object as a parameter. It invokes a logging function with a formatted string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onIABVendorConsentGiven(Lcom/inmobi/cmp/core/model/GDPRData;)V
     .locals 3
 
@@ -3570,6 +3593,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a message indicating that non-IAB vendor consent has been given. It invokes a logging function with a formatted string containing the provided NonIABData object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onNonIABVendorConsentGiven(Lcom/inmobi/cmp/model/NonIABData;)V
     .locals 3
 
@@ -3598,6 +3622,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs the receipt of US regulations consent data. It invokes a logging method on an instance of Lcom/mplus/lib/Z3/d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onReceiveUSRegulationsConsent(Lcom/inmobi/cmp/core/model/mspa/USRegulationData;)V
     .locals 3
 
@@ -3626,6 +3651,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a message "CMP.onUserMovedToOtherState()" when the user moves to another state. It appears to be a callback method that notifies the logging system of this event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onUserMovedToOtherState()V
     .locals 4
 
@@ -4042,6 +4068,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field, using a sparse switch statement to determine which string to return. It calls different private methods (`I()`, `H()`, `G()`) or the superclass's `toString()` method depending on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 
@@ -4160,6 +4187,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method schedules a one-time work request to progress all pending MMS transactions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public x()V
     .locals 8
 
@@ -4303,6 +4331,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle various commands related to SMS and MMS messages, including inserting, deleting, and marking messages as read.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public y()V
     .locals 26
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method checks for the presence of specific classes ("libcore.io.Memory" and "org.robolectric.Robolectric") and sets static fields accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -62,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific class and a boolean flag are set, returning true if the class is not null and the flag is false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a()Z
     .locals 2
 

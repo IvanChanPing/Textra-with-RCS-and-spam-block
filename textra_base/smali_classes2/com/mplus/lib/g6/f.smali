@@ -30,6 +30,7 @@
 .method public abstract getState()Landroid/os/Parcelable;
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `d()` to obtain an `Lcom/mplus/lib/z7/O` object, then calls `d()` on that object and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k()Lcom/mplus/lib/z7/O;
     .locals 2
 

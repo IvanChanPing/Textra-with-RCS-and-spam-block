@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/r4/K class with a context and another object, setting up various fields. It appears to be a constructor for the class, setting up dependencies and objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/r4/H;)V
     .locals 1
 
@@ -1058,6 +1059,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of objects and invokes another method `P` with various parameters for each object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(Lcom/mplus/lib/r4/j0;)V
     .locals 12
 
@@ -1122,6 +1124,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inserts data into a database table named "sync_queue" with values including a command, message ID, participants, and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Ljava/lang/String;JLcom/mplus/lib/r4/n;Z)V
     .locals 4
 
@@ -1204,6 +1207,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the status of an SMS message in the Android SMS database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(IJ)V
     .locals 6
 
@@ -1706,6 +1710,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an MMS message from the device's content provider and processes it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(J)V
     .locals 13
 
@@ -1951,6 +1956,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an SMS message from the Android SMS database and processes it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X(J)V
     .locals 12
 
@@ -2330,6 +2336,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method updates a database record in the "convos" table with a new "sync_in_state" value and then calls a method to update a timestamp.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y(IJ)V
     .locals 5
 

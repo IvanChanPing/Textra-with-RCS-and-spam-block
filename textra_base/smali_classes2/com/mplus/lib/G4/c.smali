@@ -90,6 +90,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to open an input stream from a raw resource based on the provided object, returning the stream if successful or null if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/F4/x;Ljava/io/InputStream;)Ljava/io/InputStream;
     .locals 1
 
@@ -121,6 +122,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks the result of calling `e(Lcom/mplus/lib/F4/x;)` and returns true if it's non-zero, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/F4/x;)Z
     .locals 1
 

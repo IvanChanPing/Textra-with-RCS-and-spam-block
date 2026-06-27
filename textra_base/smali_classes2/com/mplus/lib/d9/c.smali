@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an array mapping VastEvent enum values to integers. It populates the array with values for specific VastEvent instances, such as THIRD_QUARTILE, MID_POINT, FIRST_QUARTILE, and START.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method throws an AssertionError when called, indicating it should never be executed. It returns no meaningful value, only an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Lcom/mplus/lib/o3/O;
     .locals 3
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/c7/a;, setting a boolean flag based on conditions and calling methods to set a string resource and register a listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/a;Lcom/mplus/lib/P6/c;)V
     .locals 2
 
@@ -87,6 +88,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/c7/b and initializes it with Lcom/mplus/lib/x5/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 
@@ -105,6 +107,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and either creates a new view using `Lcom/mplus/lib/p4/f` or removes all views from a `ViewGroup` found by ID `0x7f0a048c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 4
 
@@ -166,6 +169,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/v6/a` based on the input parameter and the state of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(I)Lcom/mplus/lib/v6/a;
     .locals 3
 
@@ -243,6 +247,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and sets a CharSequence field based on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 2
 

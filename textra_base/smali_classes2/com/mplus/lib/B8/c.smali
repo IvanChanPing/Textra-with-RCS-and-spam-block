@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/B8/c with an ArrayList and an integer. It sets the instance's fields 'a' and 'b' to the provided integer and ArrayList, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/util/ArrayList;I)V
     .locals 0
 

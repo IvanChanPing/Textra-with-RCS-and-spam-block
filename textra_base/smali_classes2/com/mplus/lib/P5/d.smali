@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/P5/d; that calls the superclass constructor Lcom/mplus/lib/x5/h;-><init>()V.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves and processes phone number data from a database, sorting and filtering the results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
@@ -368,6 +370,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a fragment's view and sets up a RecyclerView with a custom adapter and layout manager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityCreated(Landroid/os/Bundle;)V
     .locals 5
 
@@ -517,6 +520,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onAttach method of a Fragment to cast the attached Activity to Lcom/mplus/lib/N5/a and store it in a field. It calls the superclass's onAttach method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAttach(Landroid/app/Activity;)V
     .locals 1
 
@@ -535,6 +539,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout and returns the resulting View. It appears to be part of a Fragment's onCreateView method, responsible for creating the Fragment's UI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
@@ -557,6 +562,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the Fragment's onDestroy method and calls the superclass's onDestroy, then checks if an object of type Lcom/mplus/lib/P5/c is not null and calls its d() method if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 

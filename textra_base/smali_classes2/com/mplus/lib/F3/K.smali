@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static enum values for cardinality types. It creates instances of the `Lcom/mplus/lib/F3/K` class with different string constants and integer values, and stores them in static fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 8
 
@@ -94,6 +95,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, index, and an integer value. It sets the integer value to a field 'a' in the enum instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -104,6 +106,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum constant of type Lcom/mplus/lib/F3/K; from a given string. It uses the Java Enum class to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/F3/K;
     .locals 2
 
@@ -126,6 +129,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of class Lcom/mplus/lib/F3/K. It creates a copy of the enum constants array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/F3/K;
     .locals 2
 
@@ -148,6 +152,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of an enum instance's field 'a' if it's not the unknown enum value, otherwise it throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 3
 

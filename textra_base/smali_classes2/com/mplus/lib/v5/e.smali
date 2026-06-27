@@ -23,6 +23,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a value to 1.0 or 0.0 based on the input boolean and then calls a method to set this value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Z)V
     .locals 3
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific double value (`h`) in the `d` object of class `Lcom/mplus/lib/b2/d` is equal to 1.0 and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 5
 
@@ -110,6 +112,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the translationX property of an object based on a spring update value. It applies a constraint to the update value if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 5
 
@@ -155,6 +158,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

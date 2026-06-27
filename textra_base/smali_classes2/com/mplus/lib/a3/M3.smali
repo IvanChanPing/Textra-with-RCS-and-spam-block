@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method checks the static boolean flags in class Lcom/mplus/lib/a3/K3 and accesses a static integer field in Lcom/mplus/lib/a3/c3, but does not perform any visible actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -145,6 +146,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method encodes a given string into UTF-8 bytes and writes them to a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/lang/String;[BII)I
     .locals 9
 
@@ -786,6 +788,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method decodes a byte array to a UTF-8 string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(II[B)Ljava/lang/String;
     .locals 11
 

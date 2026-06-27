@@ -12,6 +12,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes the class by calling the static method `b()` of class `Lcom/mplus/lib/F3/G;`. It retrieves an instance of `Lcom/mplus/lib/F3/G;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 0
 

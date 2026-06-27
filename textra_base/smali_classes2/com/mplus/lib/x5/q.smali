@@ -12,6 +12,7 @@
 .method public abstract a(Lcom/mplus/lib/x5/z;I)Ljava/lang/Object;
 .end method
 
+# M-ROLE [GROQ]: This method instantiates an item in a ViewGroup by calling another method `a` with the ViewGroup and an integer index. It then returns the result of this method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
     .locals 1
 
@@ -26,6 +27,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

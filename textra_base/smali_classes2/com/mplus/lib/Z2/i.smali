@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/Z2/i, setting its fields 'a' and 'b' with the provided integer and zzbb object. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/google/android/gms/internal/mlkit_common/zzbb;)V
     .locals 0
 
@@ -46,6 +47,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their types and values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -195,6 +197,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field 'a' in the class Lcom/mplus/lib/Z2/i. It does not appear to perform any operations related to the constant 5, which is loaded but not used.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -205,6 +208,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `b` field, which is an instance of `com/google/android/gms/internal/mlkit_common/zzbb`. It provides access to this internal object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_common/zzbb;
     .locals 2
 

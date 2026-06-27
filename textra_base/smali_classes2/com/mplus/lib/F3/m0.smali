@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/F3/m0, which is actually an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a()Lcom/mplus/lib/F3/m0;
     .locals 3
 
@@ -43,6 +44,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/F3/l0, which is actually an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c()Lcom/mplus/lib/F3/l0;
     .locals 3
 
@@ -57,6 +59,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/F3/m0, which is actually an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d()Lcom/mplus/lib/F3/m0;
     .locals 3
 
@@ -75,6 +78,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of Lcom/mplus/lib/F3/m0, which is actually an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e()Lcom/mplus/lib/F3/m0;
     .locals 3
 
@@ -93,6 +97,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/F3/m0, which is actually an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f()Lcom/mplus/lib/F3/m0;
     .locals 3
 
@@ -105,6 +110,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of Lcom/mplus/lib/F3/m0, which is actually an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g()Lcom/mplus/lib/F3/m0;
     .locals 3
 

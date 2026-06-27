@@ -557,6 +557,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given string is a key in a HashMap and if not, checks if it's in a list and then attempts to create or retrieve a NotificationChannel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;)Z
     .locals 4
 
@@ -650,6 +651,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies all registered `OnSharedPreferenceChangeListener` instances of a change and then posts an object to a bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 4
 
@@ -731,6 +733,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method clears the internal HashMap and returns the SharedPreferences Editor object. It modifies the state of the object it's called on.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()Landroid/content/SharedPreferences$Editor;
     .locals 2
 
@@ -805,6 +808,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string key exists in a HashMap. It returns true if the key is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/String;)Z
     .locals 2
 
@@ -821,6 +825,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a clone of a HashMap and assigns it to another field, then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final edit()Landroid/content/SharedPreferences$Editor;
     .locals 2
 
@@ -845,6 +850,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Map containing all data from the current object and its parent object, if it exists. It creates a new HashMap and populates it with data from the parent's 'W' HashMap and the current object's 'W' HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAll()Ljava/util/Map;
     .locals 3
 
@@ -903,6 +909,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called with a String and a float. It does not retrieve a float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getFloat(Ljava/lang/String;F)F
     .locals 1
 
@@ -927,6 +934,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the getLong operation is not supported. It does not retrieve a long value based on the provided string key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLong(Ljava/lang/String;J)J
     .locals 1
 
@@ -943,6 +951,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string from a HashMap, and if not found, recursively searches in another instance of the same class or returns a default string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -997,6 +1006,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it's not implemented. It doesn't retrieve or return any string set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
     .locals 1
 
@@ -1023,6 +1033,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to put a float value into SharedPreferences. It does not actually store the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
     .locals 1
 
@@ -1051,6 +1062,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to put a long value into SharedPreferences. It does not actually store the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
     .locals 1
 
@@ -1061,6 +1073,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method stores a string key-value pair in a HashMap. It returns the SharedPreferences Editor object itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
     .locals 2
 
@@ -1075,6 +1088,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to put a string set into SharedPreferences. It does not actually store the set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
     .locals 1
 
@@ -1087,6 +1101,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method registers a SharedPreferences change listener by adding it to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
     .locals 2
 
@@ -1121,6 +1136,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a key-value pair from a HashMap and returns the SharedPreferences Editor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
     .locals 2
 
@@ -1135,6 +1151,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method unregisters a shared preference change listener from an internal list. It synchronizes access to the list using a monitor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
     .locals 2
 

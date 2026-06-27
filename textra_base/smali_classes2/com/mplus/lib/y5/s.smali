@@ -33,6 +33,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/y5/s;, setting its properties and calling another method to process a TypedArray. It sets a boolean field to true and stores a ViewGroup reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/view/ViewGroup;Landroid/content/res/TypedArray;)V
     .locals 1
 
@@ -49,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/y5/s, setting its properties based on the provided ViewGroup and AttributeSet. It also obtains styled attributes from the context and passes them to another method for further processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;)V
     .locals 1
 
@@ -501,6 +503,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes various properties of the class based on the provided TypedArray, including boolean flags and paint objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Landroid/content/res/TypedArray;)V
     .locals 5
 
@@ -750,6 +753,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It does not directly use the returned string length of 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

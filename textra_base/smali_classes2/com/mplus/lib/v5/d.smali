@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/v5/d, storing references to provided objects and then sets the translationY property of the first object based on its height. It negates the height if it's non-zero, otherwise sets translationY to -10000.0f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;Lcom/mplus/lib/v6/m;)V
     .locals 4
 
@@ -132,6 +133,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific object's field value equals 1.0 and returns true if so, otherwise returns false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 5
 
@@ -179,6 +181,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a spring is at rest and performs an action if it's not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 6
 
@@ -230,6 +233,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the translationY property of an object based on the height of another object and a spring update value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 7
 
@@ -288,6 +292,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

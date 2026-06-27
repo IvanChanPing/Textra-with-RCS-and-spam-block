@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t8/g; with a byte array and an integer. It sets the object's fields 'a' and 'b' to the provided integer and byte array, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>([BI)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method writes data to an OutputStream based on the value of a field 'a'. It uses either Lcom/smaato/sdk/core/network/interceptors/LoggingInterceptor or Lcom/smaato/sdk/core/network/Request to write the data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final writeTo(Ljava/io/OutputStream;)V
     .locals 2
 

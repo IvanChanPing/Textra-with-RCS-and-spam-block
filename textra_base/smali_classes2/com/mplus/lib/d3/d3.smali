@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/d3/d3 class with parameters from Google's ML Kit Smart Reply Bundled library. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzrp;Ljava/lang/String;Ljava/lang/String;J)V
     .locals 0
 

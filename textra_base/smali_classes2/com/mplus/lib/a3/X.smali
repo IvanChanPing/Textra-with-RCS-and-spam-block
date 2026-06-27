@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/X, setting its fields and storing an iterator over a map from the provided Lcom/mplus/lib/a3/Y object. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/Y;)V
     .locals 1
 
@@ -48,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/X, setting its properties and iterator from a provided Lcom/mplus/lib/a3/Y object. It also sets a hardcoded integer value 'a' to 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/Y;B)V
     .locals 0
 
@@ -112,6 +114,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/X, setting its properties with the provided parameters. It sets the object's fields, including an integer, two objects, and an iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/d0;Ljava/util/ListIterator;)V
     .locals 1
 
@@ -132,6 +135,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/X, setting its properties and obtaining an iterator for a collection. It takes an object of type Lcom/mplus/lib/o3/l as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/l;)V
     .locals 1
 
@@ -170,6 +174,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/a3/X, setting its fields with provided parameters. It sets an integer field to 5 and stores the input objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/l;Ljava/util/ListIterator;)V
     .locals 1
 
@@ -206,6 +211,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if two collections are the same and throws a ConcurrentModificationException if they are not. It also calls the b() method on an object of type Lcom/mplus/lib/o3/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()V
     .locals 3
 
@@ -245,6 +251,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two collections are the same instance and throws a ConcurrentModificationException if they are not. It also calls the zzb method on an object of type Lcom/mplus/lib/a3/b0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()V
     .locals 3
 
@@ -286,6 +293,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a next element in an iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -378,6 +386,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in an iteration, handling different cases based on the value of `a` in the class `Lcom/mplus/lib/a3/X;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 4
 
@@ -596,6 +605,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes the last element returned by an iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 5
 

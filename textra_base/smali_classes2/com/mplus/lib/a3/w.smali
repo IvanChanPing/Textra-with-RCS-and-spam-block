@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `g` with a new instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzafr;`. It sets up the class with a Google ML Kit entity extraction object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -32,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/w, calling its superclass constructor and setting a field. It takes a UUID, string, and two specific Google ML Kit entity extraction objects as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/UUID;Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzafq;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagt;)V
     .locals 1
 
@@ -91,6 +93,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a static instance of zzagn. It does not use the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzagn;
     .locals 2
 

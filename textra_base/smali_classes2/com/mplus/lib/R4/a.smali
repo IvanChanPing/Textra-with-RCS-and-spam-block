@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static Matrix object. It creates a new instance of the Android Graphics Matrix class and assigns it to a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -87,6 +88,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a circle on a Canvas using a BitmapShader.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 6
 
@@ -197,6 +199,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the height of a Bitmap object. It retrieves the height of the bitmap stored in the 'a' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicHeight()I
     .locals 2
 
@@ -209,6 +212,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the width of a Bitmap object. It retrieves the width from the Bitmap instance variable 'a' of the class Lcom/mplus/lib/R4/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 
@@ -235,6 +239,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of a Paint object. It takes an integer parameter and applies it to the Paint object's alpha.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 

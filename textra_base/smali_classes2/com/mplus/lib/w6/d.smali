@@ -92,6 +92,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not add an arc as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addArc(FFFFFF)V
     .locals 1
 
@@ -106,6 +107,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it's not implemented. It doesn't actually add an arc to a RectF.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addArc(Landroid/graphics/RectF;FF)V
     .locals 1
 
@@ -122,6 +124,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it's not implemented. It doesn't actually add a circle to a path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addCircle(FFFLandroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -136,6 +139,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that adding an oval is not supported. It does not perform any actual drawing or modification of the path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOval(FFFFLandroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -150,6 +154,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to add an oval to a Path. It does not actually add an oval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOval(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -164,6 +169,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to add a path. It does not actually add the path to anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addPath(Landroid/graphics/Path;)V
     .locals 1
 
@@ -180,6 +186,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually add a path to anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addPath(Landroid/graphics/Path;FF)V
     .locals 1
 
@@ -194,6 +201,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually add a path to anything.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addPath(Landroid/graphics/Path;Landroid/graphics/Matrix;)V
     .locals 1
 
@@ -208,6 +216,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it does not support adding a rectangle to a path. It does not perform any actual rectangle addition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addRect(FFFFLandroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -220,6 +229,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to add a rectangle to a path. It does not actually add a rectangle to a path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -236,6 +246,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually add a round rectangle to a path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addRoundRect(FFFFFFLandroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -248,6 +259,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually add a round rectangle to a path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addRoundRect(FFFF[FLandroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -264,6 +276,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to add a round rectangle to a path. It does not actually add a round rectangle to the path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -276,6 +289,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually add a round rect to a path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
     .locals 1
 
@@ -288,6 +302,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the arcTo operation is not supported. It does not perform any actual arcTo functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final arcTo(FFFFFFZ)V
     .locals 1
 
@@ -300,6 +315,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called with a RectF and two floats. It does not perform any actual arc-to operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final arcTo(Landroid/graphics/RectF;FF)V
     .locals 1
 
@@ -314,6 +330,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not perform any actual arc-to operation on the provided RectF object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final arcTo(Landroid/graphics/RectF;FFZ)V
     .locals 1
 
@@ -449,6 +466,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method scales input coordinates and then invokes the `lineTo` method of its superclass `android/graphics/Path`. It appears to be part of a custom `Path` class, scaling the input before drawing a line.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lineTo(FF)V
     .locals 1
 
@@ -469,6 +487,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method scales input coordinates using methods `a(F)` and `b(F)`, then calls the superclass `moveTo(FF)` method with the scaled coordinates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveTo(FF)V
     .locals 1
 
@@ -493,6 +512,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called with two float parameters. It does not modify any state or perform any other action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final offset(FF)V
     .locals 1
 
@@ -505,6 +525,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually offset a Path object by given coordinates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final offset(FFLandroid/graphics/Path;)V
     .locals 1
 
@@ -519,6 +540,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the quadTo operation is not supported. It does not perform any actual quadratic curve calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final quadTo(FFFF)V
     .locals 1
 
@@ -543,6 +565,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if both input float parameters are zero and returns immediately if so, otherwise it throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final rLineTo(FF)V
     .locals 2
 
@@ -584,6 +607,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the rQuadTo operation is not supported. It takes four float parameters but does not use them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final rQuadTo(FFFF)V
     .locals 1
 
@@ -600,6 +624,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it is not implemented. It does not set any last point as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setLastPoint(FF)V
     .locals 1
 
@@ -612,6 +637,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating it does not support transformation of an Android graphics Matrix. It does not perform any actual transformation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final transform(Landroid/graphics/Matrix;)V
     .locals 1
 
@@ -624,6 +650,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually transform a Matrix or Path.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final transform(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
     .locals 1
 

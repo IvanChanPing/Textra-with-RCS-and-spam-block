@@ -42,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from an Iterable to a List. It delegates the operation to another method for execution.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static addAll(Ljava/lang/Iterable;Ljava/util/List;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -63,6 +64,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a byte string is UTF-8 and throws an exception if it's not. It returns immediately if the byte string is valid UTF-8.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static checkByteStringIsUtf8(Lcom/mplus/lib/F3/m;)V
     .locals 2
 
@@ -250,6 +252,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method converts the object to a ByteString by serializing it and writing it to a byte array. It throws an exception if the serialization fails or if the written data size does not match the expected size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toByteString()Lcom/mplus/lib/F3/m;
     .locals 4
 
@@ -387,6 +390,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes the serialized form of an object to an OutputStream, with a buffer size limit of 0x1000. It uses a helper class to perform the actual writing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public writeTo(Ljava/io/OutputStream;)V
     .locals 3
 

@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class, including display density and various integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -232,6 +233,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method compresses a given Bitmap into a byte array using the specified CompressFormat. It returns the compressed byte array or null if the input Bitmap is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap$CompressFormat;)[B
     .locals 3
 
@@ -265,6 +267,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method scales an input integer by a class field factor and returns the result. It appears to be a simple linear transformation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(I)I
     .locals 2
 
@@ -481,6 +484,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an Android graphics Matrix object, scaling and translating it based on input parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(IIFF)Landroid/graphics/Matrix;
     .locals 6
 
@@ -571,6 +575,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method recycles a given Android Bitmap if it's not null. It sets a local variable to 6, but this value is not used.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Landroid/graphics/Bitmap;)V
     .locals 1
 
@@ -586,6 +591,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method scales and draws a bitmap onto a new canvas, optionally applying a mask bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Landroid/graphics/Bitmap;Lcom/mplus/lib/z7/G;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 9
 
@@ -1000,6 +1006,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to retrieve a `Lcom/mplus/lib/z7/k` object from the provided `Lcom/mplus/lib/r4/S` object, and then uses it to generate an `Landroid/graphics/Bitmap` along with a `Lcom/mplus/lib/z7/G` object. It returns a default object if an exception occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Lcom/mplus/lib/r4/S;Lcom/mplus/lib/z7/G;)Landroid/graphics/Bitmap;
     .locals 2
 

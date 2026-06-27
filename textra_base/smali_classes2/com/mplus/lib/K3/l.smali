@@ -1101,6 +1101,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/K3/l class, setting its properties and creating new instances of Lcom/mplus/lib/K3/f and Lcom/mplus/lib/K3/i. It appears to be a constructor for an enumeration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -1129,6 +1130,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/K3/l class, setting its properties and creating a new Lcom/mplus/lib/K3/f object. It appears to be a constructor for an enumeration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;III)V
     .locals 0
 
@@ -1153,6 +1155,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/K3/l class, setting its properties and creating new instances of Lcom/mplus/lib/K3/f and Lcom/mplus/lib/K3/i. It appears to be a constructor for an enumeration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;IILcom/mplus/lib/K3/l;)V
     .locals 0
 
@@ -1181,6 +1184,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/K3/l; class, setting its properties and creating new instances of Lcom/mplus/lib/K3/f; and Lcom/mplus/lib/K3/h;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;IILjava/lang/Object;)V
     .locals 0
 
@@ -1209,6 +1213,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance of class Lcom/mplus/lib/K3/l;, setting its properties and creating a new instance of Lcom/mplus/lib/K3/i;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;ILcom/mplus/lib/K3/g;)V
     .locals 0
 
@@ -1233,6 +1238,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum constant of type Lcom/mplus/lib/K3/l; from a given string. It essentially parses a string to its corresponding enum value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/K3/l;
     .locals 2
 
@@ -1249,6 +1255,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of the class Lcom/mplus/lib/K3/l. It creates a copy of the enum values array f0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/K3/l;
     .locals 2
 
@@ -1269,6 +1276,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `v` on an object of type `Lcom/mplus/lib/D6/d;` and returns the integer result. It appears to be involved in some kind of mapping or function application.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/K3/a;)I
     .locals 3
 
@@ -1297,6 +1305,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method takes an object of type Lcom/mplus/lib/K3/a; and returns an integer value by invoking the v method on the object's c field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/K3/a;)I
     .locals 3
 

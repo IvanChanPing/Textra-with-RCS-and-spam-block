@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method applies a transformation to an integer input using `Lcom/mplus/lib/z7/m;->c(I)I` and returns the result. It appears to be a simple wrapper around this transformation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final applyAsInt(I)I
     .locals 1
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `a` in class `Lcom/mplus/lib/o3/O;` with an empty array of objects. It does not perform any other actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -73,6 +74,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the add operation is not supported. It always returns by throwing an exception, rather than a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -85,6 +87,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the addAll operation is not supported. It always throws an exception, never actually adding elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -99,6 +102,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection and fills an array with its elements. It returns the number of elements added to the array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(I[Ljava/lang/Object;)I
     .locals 4
 
@@ -151,6 +155,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the clear operation is not supported. It does not perform any actual clearing of data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -168,6 +173,7 @@
 .method public abstract contains(Ljava/lang/Object;)Z
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It always returns no value and instead raises an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()I
     .locals 2
 
@@ -182,6 +188,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not perform any other actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e()I
     .locals 2
 
@@ -210,6 +217,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the remove operation is not supported. It always returns by throwing an exception, rather than a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 1
 
@@ -222,6 +230,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to remove all elements from a collection. It always returns nothing due to the exception, and the collection remains unchanged.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -236,6 +245,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the retainAll operation is not supported. It always returns nothing due to the exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -248,6 +258,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of objects by calling another toArray method with a predefined array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toArray()[Ljava/lang/Object;
     .locals 2
 

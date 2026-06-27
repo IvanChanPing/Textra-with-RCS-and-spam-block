@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of `Lcom/mplus/lib/a3/q1` by merging two `zzaqs` objects into a map and making it unmodifiable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqs;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqs;)V
     .locals 2
 
@@ -86,6 +87,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method populates a LinkedHashMap with data from a zzaqs object, handling both single values and lists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/util/LinkedHashMap;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqs;)V
     .locals 5
 

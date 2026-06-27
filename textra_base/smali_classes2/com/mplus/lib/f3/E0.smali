@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a double value from a memory location using sun/misc/Unsafe and converts the long bits to a double. It takes an object and a memory offset as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(JLjava/lang/Object;)D
     .locals 2
 
@@ -31,6 +32,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a memory location using sun/misc/Unsafe and converts it to a float. It appears to be a getter method for a float field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(JLjava/lang/Object;)F
     .locals 2
 
@@ -51,6 +53,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `Lcom/mplus/lib/f3/G0;->b` or `Lcom/mplus/lib/f3/G0;->c` based on the value of `Lcom/mplus/lib/f3/G0;->g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;JZ)V
     .locals 2
 
@@ -76,6 +79,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `Lcom/mplus/lib/f3/G0;->b` or `Lcom/mplus/lib/f3/G0;->c` based on the value of `Lcom/mplus/lib/f3/G0;->g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Object;JB)V
     .locals 2
 
@@ -145,6 +149,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition based on a static boolean flag and calls either `G0.l` or `G0.m` method depending on the flag's value, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(JLjava/lang/Object;)Z
     .locals 2
 

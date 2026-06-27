@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/H6/b class, setting its fields with the provided parameters. It stores a reference to a RecyclerView ViewHolder and its associated itemView, cast to Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/H6/c;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method releases resources by calling `b()` on `Lcom/mplus/lib/b2/d;` and then clears references to `Lcom/mplus/lib/y5/z;` and notifies `Lcom/mplus/lib/H6/c;` via `P(Ljava/lang/Object;)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Ljava/lang/Object;)V
     .locals 3
 
@@ -89,6 +91,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a RecyclerView ViewHolder instance stored in the class field 'b'. It provides access to the ViewHolder object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 2
 
@@ -97,6 +100,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes a `y5/z` object if it doesn't exist, and sets its properties. It appears to be part of a lazy initialization pattern.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 3
 
@@ -126,6 +130,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific object exists and if so, calls a method to perform an action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 5
 
@@ -155,6 +160,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a view by setting its alpha and visibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final init()V
     .locals 3
 
@@ -177,6 +183,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name and a string representation of its RecyclerView.ViewHolder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

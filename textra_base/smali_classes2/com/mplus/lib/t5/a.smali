@@ -37,6 +37,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `n` in class `Lcom/mplus/lib/t5/a;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with the argument `0x10`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -107,6 +108,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/y, which is actually an Lcom/mplus/lib/x5/z object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l0()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -117,6 +119,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a view based on the provided `Lcom/mplus/lib/t5/d` object and returns it as a `Lcom/mplus/lib/x5/y` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Lcom/mplus/lib/t5/d;Z)Lcom/mplus/lib/x5/y;
     .locals 11
 
@@ -605,6 +608,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the `C` interface method on an object of type `Lcom/mplus/lib/x5/z;`, passing another object of type `Lcom/mplus/lib/x5/z;`. It appears to be invoking a callback or listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 3
 
@@ -621,6 +625,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a click event on a view, performing different actions based on the view's ID and type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 14
 
@@ -839,6 +844,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is called when a popup menu is dismissed, and it removes an item from a SparseBooleanArray if the dismissed menu matches a specific object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDismiss(Landroid/widget/PopupMenu;)V
     .locals 2
 
@@ -882,6 +888,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a specific task based on an input integer, invoking a static method from `Lcom/mplus/lib/t5/d;` and then calling another method `n0` on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(I)V
     .locals 4
 
@@ -920,6 +927,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `c(IZ)` on an object of class `Lcom/mplus/lib/P6/c;`, passing an integer and a boolean as arguments. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0(IZ)V
     .locals 2
 
@@ -936,6 +944,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a drawable on a BaseImageView and then adds it to a layout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0(Landroid/graphics/drawable/Drawable;)Lcom/mplus/lib/ui/common/base/BaseImageView;
     .locals 3
 
@@ -975,6 +984,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` using a resource ID passed as an argument. It does not appear to use the local variable `v1` for any meaningful purpose.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s0(I)V
     .locals 2
 
@@ -989,6 +999,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` object. It takes a `CharSequence` as input and updates the text view with this value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0(Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -1003,6 +1014,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and shows a popup window if it's not already showing, or dismisses it if it is.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u0(Lcom/mplus/lib/t5/d;)V
     .locals 7
 

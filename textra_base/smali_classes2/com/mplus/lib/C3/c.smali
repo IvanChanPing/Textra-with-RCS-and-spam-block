@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field 'a' of type Lcom/mplus/lib/C3/b; with a new instance of Lcom/mplus/lib/C3/b;. It sets up the class Lcom/mplus/lib/C3/c; with a default instance of Lcom/mplus/lib/C3/b;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 

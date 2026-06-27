@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a local file for an attachment and writes to it using a provided Consumer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Ljava/util/function/Consumer;)Ljava/io/File;
     .locals 4
 

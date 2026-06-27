@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `a` of type `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbym;` with a new instance. It sets up an entity extraction configuration using specific constants from the `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcah;` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 

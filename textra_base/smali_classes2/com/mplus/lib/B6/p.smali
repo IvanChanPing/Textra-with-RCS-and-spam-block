@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/B6/p, initializing its fields 'a' and 'b' with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the visibility of a `BaseProgressBar` based on the value of `a` in the class `Lcom/mplus/lib/B6/p;`. It checks if `a` is 0 and if so, sets the visibility to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
@@ -88,6 +90,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles error logging and display for a given exception, with different handling based on the value of `a` in the class `Lcom/mplus/lib/B6/p;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/E1/C;)V
     .locals 6
 

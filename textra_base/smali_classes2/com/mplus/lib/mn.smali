@@ -7,6 +7,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for a BroadcastReceiver subclass. It initializes the receiver by calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -17,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a broadcast intent by cloning it, adding the result code as an extra, and then passing it to `Lcom/mplus/lib/N4/e;->b0(Landroid/content/Intent;)V`. It returns early if the intent is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 

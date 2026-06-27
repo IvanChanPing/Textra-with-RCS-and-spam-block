@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/v6/E, initializing its fields with the provided parameters. It sets the instance variables a, b, and c with the given integer and object references.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/v6/K;Lcom/mplus/lib/r4/k0;I)V
     .locals 0
 

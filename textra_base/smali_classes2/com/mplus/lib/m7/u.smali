@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map with string keys ("qr", "qrnk", "app") and integer values (0x7f11027f, 0x7f110280, 0x7f11027e) representing resource IDs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -60,6 +61,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/m7/v and initializes it with Lcom/mplus/lib/x5/l. It then returns immediately without further action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 
@@ -76,6 +78,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and sets a CharSequence field based on the result, using either a string resource or a value from another class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 4
 

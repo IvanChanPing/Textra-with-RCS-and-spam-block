@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/z7/w, setting up its properties with default values and a provided Handler. It sets a boolean to false, creates an empty ArrayList, and stores the given Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 1
 

@@ -51,6 +51,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method creates and returns a PorterDuffColorFilter with the specified color and SRC_ATOP mode.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(I)Landroid/graphics/PorterDuffColorFilter;
     .locals 3
 
@@ -77,6 +78,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of `Lcom/mplus/lib/D6/d;` from the `f` field of the `Lcom/mplus/lib/J5/g;` class. It appears to be a thread-safe getter for this field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized R()Lcom/mplus/lib/D6/d;
     .locals 3
 
@@ -216,6 +218,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and retrieves a themed attribute value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()I
     .locals 5
 
@@ -267,6 +270,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a drawable resource by ID, mutates it, and then applies a tint to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(II)Landroid/graphics/drawable/Drawable;
     .locals 2
 
@@ -293,6 +297,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a mutated VectorDrawableCompat based on the provided parameters. It checks if the first parameter is zero and returns null if true, otherwise it retrieves a VectorDrawableCompat and mutates it with the provided color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(II)Landroid/graphics/drawable/Drawable;
     .locals 2
 
@@ -336,6 +341,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and resolves a theme attribute with ID 0x7f040289 if it hasn't been done before, then returns the resolved attribute's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S()I
     .locals 5
 
@@ -395,6 +401,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/z7/r` using a drawable resource and a color filter. It returns this instance, or null if an OutOfMemoryError occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(II)Lcom/mplus/lib/z7/r;
     .locals 3
 
@@ -437,6 +444,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the Android Resources object, either by retrieving it from the Context or by unwrapping a custom Resources wrapper class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U()Landroid/content/res/Resources;
     .locals 3
 
@@ -482,6 +490,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and retrieves a themed attribute value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V()I
     .locals 5
 
@@ -535,6 +544,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and retrieves a TypedValue object, specifically resolving an attribute with ID 0x7f0404c1 from the current theme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W()I
     .locals 5
 
@@ -588,6 +598,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns a themed attribute value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X()I
     .locals 5
 
@@ -637,6 +648,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns the resolved attribute value of a specific resource ID (0x7f040515).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y()I
     .locals 5
 
@@ -688,6 +700,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns a themed attribute value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Z()I
     .locals 5
 
@@ -741,6 +754,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an Android Context object, specifically a themed context if it doesn't already exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b0()Landroid/content/Context;
     .locals 5
 

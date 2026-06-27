@@ -33,6 +33,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/R6/c, setting its fields with provided parameters. It calls the superclass constructor and assigns the given objects to its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/q;Lcom/mplus/lib/R6/b;Lcom/mplus/lib/Q5/j;)V
     .locals 0
 
@@ -47,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method is called after the text in an `Editable` has been changed, and it updates a loader with the new text and notifies a `MutableLiveData` about the text's emptiness.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 5
 
@@ -150,6 +152,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific condition related to the `h` field of the `g` object is met, returning true if the condition is met and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()Z
     .locals 5
 
@@ -185,6 +188,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method toggles the visibility and functionality of various UI components based on the input parameter `p1`. It updates the state of the UI components, including a spring animation, edit text, and image views, and notifies other components of the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(ZLcom/mplus/lib/T6/c;Lcom/mplus/lib/S6/k;)V
     .locals 8
 
@@ -491,6 +495,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a click event by delegating it to another object's onClick method. It takes an Android View as input and calls the onClick method of its 'e' field, which is of type Lcom/mplus/lib/R6/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
@@ -605,6 +610,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a spring is at rest and if so, clears the text in a BaseEditText and resets a RecyclerView's adapter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 5
 
@@ -670,6 +676,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the alpha and visibility of a view based on a spring update event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

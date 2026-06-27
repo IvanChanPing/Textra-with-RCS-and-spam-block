@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a Fragment by calling its superclass constructor and sets its `f` field to a `T4/n` object obtained from the `S4/b` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -149,6 +150,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inflates a layout resource with ID 0x7f0d0140 and returns the resulting View. It ignores the provided LayoutInflater and instead uses the Fragment's own layout inflater.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 

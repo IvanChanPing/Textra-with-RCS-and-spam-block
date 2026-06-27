@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/r, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;Ljava/util/UUID;J)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 8
 
@@ -209,6 +211,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'd' of type long. It does not appear to perform any operations based on the input parameter or the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()J
     .locals 3
 
@@ -227,6 +230,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the zzamg object stored in the class field 'a'. It always returns this object, regardless of any other state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;
     .locals 2
 
@@ -237,6 +241,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a UUID object stored in the 'c' field of the class. It does not generate or modify the UUID in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Ljava/util/UUID;
     .locals 2
 

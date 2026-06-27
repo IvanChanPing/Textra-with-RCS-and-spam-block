@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/D2, setting its fields with a new instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzajl and the name of the input class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
 
@@ -39,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Java Logger instance, either by reusing an existing one or creating a new one using the `java.util.logging.Logger.getLogger` method with a logger name stored in the `b` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/logging/Logger;
     .locals 3
 

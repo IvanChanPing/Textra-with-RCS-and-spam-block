@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method checks the static boolean flags in Lcom/mplus/lib/f3/G0 and accesses a static integer in Lcom/mplus/lib/f3/Y if both conditions are true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 

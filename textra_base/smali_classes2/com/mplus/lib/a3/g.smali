@@ -45,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzadg;`, by comparing their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -393,6 +394,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a stored Android Uri object. It does not perform any operations based on the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Landroid/net/Uri;
     .locals 2
 
@@ -423,6 +425,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;` stored in the object's field `d`. It does not perform any operations based on the provided constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;
     .locals 2
 
@@ -455,6 +458,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain flag `f` is set. It appears to be related to the class's internal state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Z
     .locals 2
 

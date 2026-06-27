@@ -87,6 +87,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a CoverFlow object, setting up its properties and attributes. It also handles the parsing of XML attributes if provided.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
@@ -365,6 +366,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the center x-coordinate of a given Android View. It does this by getting the view's left position and adding half of its width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Landroid/view/View;)I
     .locals 2
 
@@ -389,6 +391,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the center of a Gallery by dividing its width by 2. It returns the calculated center point as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getCenterOfGallery()I
     .locals 2
 
@@ -403,6 +406,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the maximum over-scroll value. It retrieves the value from the 't' field of the CoverFlow class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getMaxOverScroll()I
     .locals 2
 
@@ -413,6 +417,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the widget size multiplier as a float by dividing the value of `q` by the view's width. It returns this ratio as the multiplier.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getWidgetSizeMultiplier()F
     .locals 3
 
@@ -635,6 +640,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the layout and rendering of child views in a CoverFlow widget, ensuring that they are properly positioned and sized.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 7
 
@@ -786,6 +792,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the dispatchDraw function to update an internal state variable 'h' before calling the superclass's dispatchDraw method. It retrieves the value from method f() and assigns it to 'h'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
@@ -802,6 +809,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a child view in a 3D cover flow layout, applying transformations such as rotation, scaling, and translation to create a 3D effect.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 9
 
@@ -1197,6 +1205,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the index of the child view that is closest to the center of the CoverFlow view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()I
     .locals 7
 
@@ -1276,6 +1285,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the adapter associated with the CoverFlow instance. It simply retrieves the adapter from a field and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getAdapter()Landroid/widget/Adapter;
     .locals 2
 
@@ -1342,6 +1352,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of items in the CoverFlow's adapter, or 0 if the adapter is null. It essentially delegates to the adapter's getCount() method if available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getCount()I
     .locals 2
 
@@ -1365,6 +1376,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'u' field, which presumably represents the cover height. It does not appear to perform any calculations or invoke other methods to determine the height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getCoverHeight()I
     .locals 2
 
@@ -1377,6 +1389,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 't', which represents the cover width. It simply retrieves and returns the stored cover width value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getCoverWidth()I
     .locals 2
 
@@ -1385,6 +1398,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first visible position of the CoverFlow. It retrieves the value of the instance variable 'c' and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getFirstVisiblePosition()I
     .locals 2
 
@@ -1468,6 +1482,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the item ID at a specified position in the CoverFlow's adapter. It delegates the getItemId call to the adapter object stored in the 'b' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemIdAtPosition(I)J
     .locals 3
 
@@ -1484,6 +1499,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the last visible position of the CoverFlow. It simply returns the value of the instance variable 'd'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getLastVisiblePosition()I
     .locals 2
 
@@ -1494,6 +1510,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the position of a given view within the CoverFlow layout, or -1 if the view is not found. It iterates through the child views to find a match.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPositionForView(Landroid/view/View;)I
     .locals 4
 
@@ -1537,6 +1554,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the currently selected view in the CoverFlow as an Object. It retrieves the selected view using the getSelectedView method and returns it directly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSelectedItem()Ljava/lang/Object;
     .locals 2
 
@@ -1551,6 +1569,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the ID of the currently selected item in the CoverFlow. It achieves this by calling the getItemId method on its adapter with the currently selected position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSelectedItemId()J
     .locals 3
 
@@ -1569,6 +1588,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the currently selected item position in the CoverFlow. It retrieves the value from the instance variable 'e' and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSelectedItemPosition()I
     .locals 2
 
@@ -1577,6 +1597,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the currently selected view in the CoverFlow, or null if no view is selected. It checks the value of the instance variable 'e' and returns either the view at the position 'e' or null if 'e' is -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSelectedView()Landroid/view/View;
     .locals 3
 
@@ -1610,6 +1631,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the spacing value of the CoverFlow object. It retrieves the spacing from the object's field 'g' and returns it as a float.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSpacing()F
     .locals 2
 
@@ -1730,6 +1752,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method creates or reuses a view for a CoverFlow item, populating it with data from an adapter and laying it out.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(IIIZ)Lcom/mplus/lib/u6/c;
     .locals 7
 
@@ -2029,6 +2052,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a child view with a specific ID exists in the CoverFlow, and if so, calls the `m` method on that view; otherwise, it sets the selection to the specified ID and requests a layout update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(I)V
     .locals 5
 
@@ -2581,6 +2605,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the `onDown` event of a MotionEvent in the CoverFlow class, determining which child view is being touched.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDown(Landroid/view/MotionEvent;)Z
     .locals 8
 
@@ -2937,6 +2962,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method measures the size of a CoverFlow view, taking into account its width and height, and sets its measured dimensions accordingly. It handles cases where the view's size is not explicitly specified, using the display's width and the view's own properties to determine its size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(II)V
     .locals 8
 
@@ -3083,6 +3109,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a scroll event, converting the scroll distance to an integer and passing it to the `n(I)V` method. It then returns true, indicating the event was handled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 1
 
@@ -3111,6 +3138,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a single tap up event on the CoverFlow view, checking if a child view is selected and if so, calls the `m` method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 2
 
@@ -3260,6 +3288,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method removes a detached view from the CoverFlow. It calls the superclass's removeDetachedView method to perform the removal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeDetachedView(Landroid/view/View;Z)V
     .locals 1
 
@@ -3270,6 +3299,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the adapter for the CoverFlow view and subsequently removes all existing views and requests a layout update. It also resets certain instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAdapter(Landroid/widget/Adapter;)V
     .locals 1
 
@@ -3302,6 +3332,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the adjust position multiplier for the CoverFlow instance. It stores the provided float value in the instance's field 'l'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAdjustPositionMultiplier(F)V
     .locals 1
 
@@ -3314,6 +3345,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the adjust position threshold value in the CoverFlow class. It stores the provided float value in the class's 'k' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAdjustPositionThreshold(F)V
     .locals 1
 
@@ -3322,6 +3354,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the cover height of the CoverFlow object to the provided integer value. It stores this value in the object's 'u' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setCoverHeight(I)V
     .locals 1
 
@@ -3334,6 +3367,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the cover width of a CoverFlow object, adjusting the input value if it's odd by subtracting 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setCoverWidth(I)V
     .locals 3
 
@@ -3361,6 +3395,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the maximum rotation angle of the CoverFlow object. It stores the provided float value in the object's `m` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMaxRotationAngle(F)V
     .locals 1
 
@@ -3371,6 +3406,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the maximum scale factor for the CoverFlow object. It stores the provided float value in the object's field 'n'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMaxScaleFactor(F)V
     .locals 1
 
@@ -3381,6 +3417,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the on-center item selected listener for the CoverFlow widget. It stores the provided listener in the object's field `f`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setOnCenterItemSelectedListener(Lcom/mplus/lib/u6/b;)V
     .locals 1
 
@@ -3391,6 +3428,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the radius of the CoverFlow object. It stores the provided float value in the object's field 'o'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRadius(F)V
     .locals 1
 
@@ -3401,6 +3439,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the radius in matrix space for the CoverFlow object. It stores the provided float value in the object's 'p' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRadiusInMatrixSpace(F)V
     .locals 1
 
@@ -3409,6 +3448,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the rotation threshold of the CoverFlow object. It stores the provided float value in the object's field `i`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRotationTreshold(F)V
     .locals 1
 
@@ -3419,6 +3459,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the scaling threshold value for the CoverFlow object. It stores the provided float value in the object's field 'j'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setScalingThreshold(F)V
     .locals 1
 
@@ -3427,6 +3468,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the selection of a CoverFlow widget to a specified position, ensuring it's within the bounds of the adapter's count. It also notifies a listener if the selection has changed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setSelection(I)V
     .locals 3
 
@@ -3476,6 +3518,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the spacing of the CoverFlow widget to the provided float value. It updates the instance variable 'g' with the given spacing value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setSpacing(F)V
     .locals 1
 
@@ -3486,6 +3529,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the tuning widget size by storing the input parameter in the instance variable `q`. It does not perform any additional operations or checks on the input value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTuningWidgetSize(I)V
     .locals 1
 
@@ -3496,6 +3540,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the vertical padding bottom value for the CoverFlow object. It stores the provided integer value in the object's field `s`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setVerticalPaddingBottom(I)V
     .locals 1
 
@@ -3506,6 +3551,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the vertical padding top of the CoverFlow widget. It stores the provided integer value in the instance variable `r`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setVerticalPaddingTop(I)V
     .locals 1
 
@@ -3518,6 +3564,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of a view based on the provided boolean parameter. It calls a static method to handle the visibility change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setViewVisible(Z)V
     .locals 1
 
@@ -3526,6 +3573,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the CoverFlow object, including its selected position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

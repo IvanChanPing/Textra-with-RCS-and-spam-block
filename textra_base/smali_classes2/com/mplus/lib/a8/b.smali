@@ -49,6 +49,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a8/b, setting its fields with the provided parameters. It extends the Lcom/smaato/sdk/core/gdpr/CmpV2Data class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ZLcom/smaato/sdk/core/gdpr/SubjectToGdpr;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -489,6 +490,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the consent string stored in the object's 'c' field. It simply retrieves and returns the stored string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getConsentString()Ljava/lang/String;
     .locals 2
 
@@ -497,6 +499,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the policy version. It retrieves the value from a field named 'h' in the class Lcom/mplus/lib/a8/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPolicyVersion()Ljava/lang/String;
     .locals 2
 
@@ -507,6 +510,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the publisher country code. It simply returns the value of the 'i' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPublisherCC()Ljava/lang/String;
     .locals 2
 
@@ -517,6 +521,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the publisher consent. It simply returns the value of the 'p' field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPublisherConsent()Ljava/lang/String;
     .locals 2
 
@@ -527,6 +532,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the publisher's custom purposes consents. It simply returns a predefined string value without any processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPublisherCustomPurposesConsents()Ljava/lang/String;
     .locals 2
 
@@ -537,6 +543,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the publisher's custom purposes or legitimate interests. It simply returns the value of the object's 's' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPublisherCustomPurposesLegitimateInterests()Ljava/lang/String;
     .locals 2
 
@@ -547,6 +554,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'q' as a string, presumably representing the publisher's legitimate interests. It does not perform any validation or processing on the field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPublisherLegitimateInterests()Ljava/lang/String;
     .locals 2
 
@@ -557,6 +565,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a string field 'o' in the class Lcom/mplus/lib/a8/b. It appears to be related to getting publisher restrictions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPublisherRestrictions()Ljava/lang/String;
     .locals 2
 
@@ -567,6 +576,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the purpose of legitimate interests. It simply returns the value of the object's 'm' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPurposeLegitimateInterests()Ljava/lang/String;
     .locals 2
 
@@ -577,6 +587,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string value from the object's field 'j'. It does not use the local variables v1 or the constant values assigned to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPurposeOneTreatment()Ljava/lang/String;
     .locals 2
 
@@ -589,6 +600,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'e'. It does not perform any actual processing based on the provided constant values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPurposesString()Ljava/lang/String;
     .locals 2
 
@@ -601,6 +613,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a string field named 'f' in the class Lcom/mplus/lib/a8/b. It retrieves the SDK ID stored in this field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSdkId()Ljava/lang/String;
     .locals 2
 
@@ -609,6 +622,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing special features opt-ins. It simply returns the value of the 'n' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSpecialFeaturesOptIns()Ljava/lang/String;
     .locals 2
 
@@ -619,6 +633,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the SubjectToGdpr object associated with the class instance. It does not perform any conditional checks based on the initially set value, but directly returns the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSubjectToGdpr()Lcom/smaato/sdk/core/gdpr/SubjectToGdpr;
     .locals 2
 
@@ -631,6 +646,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's 'k' field. It does not use the local variables or constants defined.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getUseNonStandardStacks()Ljava/lang/String;
     .locals 2
 
@@ -643,6 +659,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the vendor's legitimate interests. It appears to be retrieving a pre-stored value from the object's field 'l'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVendorLegitimateInterests()Ljava/lang/String;
     .locals 2
 
@@ -655,6 +672,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing vendors. It simply retrieves the value of the 'd' field from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVendorsString()Ljava/lang/String;
     .locals 2
 
@@ -973,6 +991,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the presence of a component, indicated by a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isCmpPresent()Z
     .locals 2
 

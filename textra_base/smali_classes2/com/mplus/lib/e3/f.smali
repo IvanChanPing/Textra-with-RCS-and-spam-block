@@ -106,6 +106,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/e3/f class, setting its fields with the provided parameters. It also creates a new instance of Lcom/mplus/lib/Z2/m and assigns it to the 'e' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/ByteArrayOutputStream;Ljava/util/Map;Ljava/util/Map;Lcom/mplus/lib/w3/d;)V
     .locals 2
 
@@ -130,6 +131,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object has a specific annotation and returns the annotation's value if present, otherwise throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Lcom/mplus/lib/w3/c;)I
     .locals 2
 
@@ -175,6 +177,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `e` with an additional boolean parameter set to true and returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic a(Lcom/mplus/lib/w3/c;J)Lcom/mplus/lib/w3/e;
     .locals 2
 
@@ -203,6 +206,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method serializes an object to a binary format. It handles various data types, including strings, numbers, booleans, arrays, and custom objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/w3/c;Ljava/lang/Object;Z)V
     .locals 5
 
@@ -940,6 +944,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method writes data to an output stream based on the provided annotation and value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/w3/c;JZ)V
     .locals 3
 

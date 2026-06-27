@@ -249,6 +249,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next object in an iteration if available, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 
@@ -292,6 +293,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method removes the last element returned by an iterator if `next()` has been called, otherwise it throws an `IllegalStateException`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 

@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/i3/j, calling the superclass constructor and setting up two instance fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -45,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles an exception by setting a flag and storing the exception, then notifies a task listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Exception;)V
     .locals 3
 
@@ -118,6 +120,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnCanceledListener to a task and registers it with the main thread executor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnCanceledListener(Landroid/app/Activity;Lcom/google/android/gms/tasks/OnCanceledListener;)Lcom/google/android/gms/tasks/Task;
     .locals 3
 
@@ -156,6 +159,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds a listener to be notified when a task is canceled, specifically on the main thread. It then returns the Task object itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnCanceledListener(Lcom/google/android/gms/tasks/OnCanceledListener;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -168,6 +172,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnCanceledListener to a task and returns the task. It creates a new instance of Lcom/mplus/lib/i3/f and adds it to the task using the Lcom/mplus/lib/R1/q object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnCanceledListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCanceledListener;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -226,6 +231,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnCompleteListener to a Task and executes it on the main thread. It then calls an internal method `e()` and returns the Task object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
     .locals 3
 
@@ -254,6 +260,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnCompleteListener to a Task and then invokes an internal method. It returns the Task object itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnCompleteListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -274,6 +281,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnFailureListener to a task and registers it with the main thread executor. It also notifies an activity and invokes a method e() on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnFailureListener(Landroid/app/Activity;Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
     .locals 3
 
@@ -306,6 +314,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnFailureListener to a Task, executing it on the main thread. It returns the Task object itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnFailureListener(Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -320,6 +329,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnFailureListener to a task and then invokes a method to notify or update the task state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnFailureListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -342,6 +352,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnSuccessListener to a Task and executes it on the main thread. It also notifies an Activity and updates the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnSuccessListener(Landroid/app/Activity;Lcom/google/android/gms/tasks/OnSuccessListener;)Lcom/google/android/gms/tasks/Task;
     .locals 3
 
@@ -374,6 +385,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnSuccessListener to a Task, executing on the main thread. It then returns the Task itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnSuccessListener(Lcom/google/android/gms/tasks/OnSuccessListener;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -390,6 +402,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnSuccessListener to a Task and then notifies the task to proceed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnSuccessListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnSuccessListener;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -546,6 +559,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method continues a task with a given continuation on the main thread. It delegates the work to another `continueWith` method with the main thread executor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final continueWith(Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -562,6 +576,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method continues a task with a given executor and continuation, returning a new task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final continueWith(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
     .locals 4
 
@@ -594,6 +609,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method continues a task with the provided continuation on the main thread. It delegates the work to another `continueWithTask` method with the main thread executor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final continueWithTask(Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
     .locals 2
 
@@ -612,6 +628,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new task and schedules it for execution with a given executor and continuation. It then returns the newly created task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final continueWithTask(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
     .locals 4
 
@@ -748,6 +765,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the exception stored in the object's field `f`. It synchronizes access to this field using the object `a` as a lock.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getException()Ljava/lang/Exception;
     .locals 3
 
@@ -780,6 +798,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of a task if it is complete, otherwise it throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getResult()Ljava/lang/Object;
     .locals 4
 
@@ -859,6 +878,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the result of a task, throwing exceptions if the task is not complete, canceled, or has failed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getResult(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 4
 
@@ -971,6 +991,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the cancellation status of an object. It returns a boolean value indicating whether the object is canceled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isCanceled()Z
     .locals 2
 
@@ -981,6 +1002,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met by returning the value of the `c` field. It synchronizes access to this field using the `a` object as a lock.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isComplete()Z
     .locals 3
 
@@ -1017,6 +1039,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an operation is successful based on the state of the object's flags and exception. It returns a boolean value indicating success or failure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isSuccessful()Z
     .locals 4
 
@@ -1076,6 +1099,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new task and executes it on the main thread using a SuccessContinuation. It also invokes a method to start a process and calls another method e().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSuccessTask(Lcom/google/android/gms/tasks/SuccessContinuation;)Lcom/google/android/gms/tasks/Task;
     .locals 4
 
@@ -1104,6 +1128,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new task and executes it using a provided executor and success continuation. It then notifies an object to start a process and returns the created task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSuccessTask(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/SuccessContinuation;)Lcom/google/android/gms/tasks/Task;
     .locals 3
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields with AtomicReferenceFieldUpdater and AtomicIntegerFieldUpdater instances for a class. It sets up updaters for fields "a" and "b" in class Lcom/google/android/gms/internal/mlkit_entity_extraction/s.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

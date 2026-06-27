@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a long value from a given object at a specified offset, then converts it to a double. It returns this double value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(JLjava/lang/Object;)D
     .locals 2
 
@@ -31,6 +32,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a memory location using sun/misc/Unsafe and converts it to a float. It appears to be a part of a class that provides direct memory access.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(JLjava/lang/Object;)F
     .locals 2
 
@@ -53,6 +55,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `Lcom/mplus/lib/f3/G0;->b` or `Lcom/mplus/lib/f3/G0;->c` based on the value of `Lcom/mplus/lib/f3/G0;->g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/Object;JZ)V
     .locals 2
 
@@ -78,6 +81,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls either `Lcom/mplus/lib/f3/G0;->b` or `Lcom/mplus/lib/f3/G0;->c` based on the value of `Lcom/mplus/lib/f3/G0;->g`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Object;JB)V
     .locals 2
 
@@ -105,6 +109,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a long field in the provided object using the sun/misc/Unsafe class. It takes an object, an offset, and a double value which is converted to a long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/Object;JD)V
     .locals 7
 
@@ -129,6 +134,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field in an object using the sun/misc/Unsafe class. It takes an object, a long offset, and a float value which is converted to an integer before being stored.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/Object;JF)V
     .locals 2
 
@@ -145,6 +151,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition based on a static boolean flag and calls either `Lcom/mplus/lib/f3/G0;->l(JLjava/lang/Object;)Z` or `Lcom/mplus/lib/f3/G0;->m(JLjava/lang/Object;)Z` to determine its return value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(JLjava/lang/Object;)Z
     .locals 2
 

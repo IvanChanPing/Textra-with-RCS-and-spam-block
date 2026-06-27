@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves data from a database cursor and constructs an object of type Lcom/mplus/lib/S6/a. It extracts a long value and a byte array from the cursor, converts the byte array to an object of type Lcom/mplus/lib/r4/n, and uses these values to initialize the Lcom/mplus/lib/S6/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()Ljava/lang/Object;
     .locals 6
 

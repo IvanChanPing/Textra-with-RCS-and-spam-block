@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a custom RuntimeException with a reference to an object of type Lcom/mplus/lib/N4/j. It sets this object as a field in the current instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/N4/j;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of an object, specifically the `toString()` result of the `a` field of type `Lcom/mplus/lib/N4/j;`, or null if the field is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMessage()Ljava/lang/String;
     .locals 2
 

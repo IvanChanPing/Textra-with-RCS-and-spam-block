@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the BubbleActivity class that calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -605,6 +606,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onCreate` method of an Android Activity, checking for essential permissions and redirecting to `InitialSyncActivity` if they are not present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 3
 
@@ -668,6 +670,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onWindowFocusChanged event and calls the superclass method, then checks if the window has lost focus and calls a method q0 on an object of class Lcom/mplus/lib/v6/P if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onWindowFocusChanged(Z)V
     .locals 1
 

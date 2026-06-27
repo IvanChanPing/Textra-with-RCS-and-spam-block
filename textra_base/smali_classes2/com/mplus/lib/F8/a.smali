@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/F8/a, setting its logger and header utils fields. It checks for nullability of the provided logger and header utils.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/log/Logger;Lcom/smaato/sdk/core/util/HeaderUtils;)V
     .locals 0
 
@@ -112,6 +113,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a unique session ID and extracts specific headers from a response, then calls another method to create an object of type `Lcom/mplus/lib/F8/e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;J)Lcom/mplus/lib/F8/e;
     .locals 22
 

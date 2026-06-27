@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/r4/f, setting up various fields with new instances of Object, DataSetObservable, ContentObservable, and an empty Bundle. It appears to be a constructor method for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -110,6 +111,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method copies a string from a cursor to a CharArrayBuffer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final copyStringToBuffer(ILandroid/database/CharArrayBuffer;)V
     .locals 5
 
@@ -195,6 +197,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method deactivates an object by unregistering a content observer and notifying a data set observable of invalidation. It also sets a boolean flag to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final deactivate()V
     .locals 3
 
@@ -228,6 +231,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unregisters a content observer and closes resources if not already closed, as part of the object's finalization. It then calls the superclass's finalize method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final finalize()V
     .locals 3
 
@@ -272,6 +276,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the getBlob operation is not supported. It does not return a byte array as its signature suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getBlob(I)[B
     .locals 2
 
@@ -292,6 +297,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of columns in a database cursor. It does this by getting the column names and returning the length of the resulting array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getColumnCount()I
     .locals 2
 
@@ -306,6 +312,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the column index of a given column name from a database cursor, handling cases where the column name includes a table name.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getColumnIndex(Ljava/lang/String;)I
     .locals 6
 
@@ -392,6 +399,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the index of a column by its name and throws an exception if the column does not exist. It returns the column index if found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getColumnIndexOrThrow(Ljava/lang/String;)I
     .locals 4
 
@@ -429,6 +437,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a column name from a Cursor object based on the provided index. It returns the column name as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getColumnName(I)Ljava/lang/String;
     .locals 2
 
@@ -441,6 +450,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the 'j' field of the class, which is an android/os/Bundle object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getExtras()Landroid/os/Bundle;
     .locals 2
 
@@ -453,6 +463,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the notification Uri stored in the object's 'd' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getNotificationUri()Landroid/net/Uri;
     .locals 3
 
@@ -557,6 +568,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor is before the first row. It returns true if the cursor is empty or at the position before the first row, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isBeforeFirst()Z
     .locals 4
 
@@ -595,6 +607,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is closed by returning the value of its 'b' field. It returns a boolean indicating the object's closed state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public isClosed()Z
     .locals 2
 
@@ -636,6 +649,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current position in a cursor is the last one. It returns true if the current position matches the last index of the cursor and the cursor is not empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isLast()Z
     .locals 4
 
@@ -673,6 +687,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to move to a new position by adding the input parameter to the current position and calling `moveToPosition`. It returns a boolean indicating success.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final move(I)Z
     .locals 2
 
@@ -691,6 +706,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to move the cursor to the first position and returns a boolean indicating success. It essentially calls moveToPosition(0) and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToFirst()Z
     .locals 2
 
@@ -707,6 +723,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method moves the cursor to the last position and returns whether the operation was successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToLast()Z
     .locals 2
 
@@ -793,6 +810,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method moves to the previous position in a list by decrementing the current position and calling `moveToPosition`. It returns a boolean indicating success.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final moveToPrevious()Z
     .locals 2
 
@@ -813,6 +831,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method registers a ContentObserver with the ContentObservable instance held by the class. It allows the observer to receive notifications when the content changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final registerContentObserver(Landroid/database/ContentObserver;)V
     .locals 2
 
@@ -825,6 +844,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method registers a DataSetObserver with the DataSetObservable instance. It allows the observer to be notified of changes to the data set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 2
 
@@ -837,6 +857,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method re-registers a content observer and notifies a data set change if not already done.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final requery()Z
     .locals 5
 
@@ -874,6 +895,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method responds to a request by returning an empty Bundle. It ignores the input parameter and always returns an empty Bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final respond(Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
@@ -884,6 +906,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the extras Bundle in the class, using an empty Bundle if none is provided. It stores the Bundle in the 'j' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setExtras(Landroid/os/Bundle;)V
     .locals 1
 
@@ -903,6 +926,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a notification URI for a content resolver and registers a content observer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setNotificationUri(Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 4
 
@@ -1002,6 +1026,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling `Lcom/mplus/lib/z7/h;->v(Ljava/lang/Object;)Ljava/lang/String;`. It does not directly use the input but relies on the static method for conversion.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 
@@ -1033,6 +1058,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unregisters a DataSetObserver from the DataSetObservable. It removes the observer from the observable's list of registered observers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 2
 

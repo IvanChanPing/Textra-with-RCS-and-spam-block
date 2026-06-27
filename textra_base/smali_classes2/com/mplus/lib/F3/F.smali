@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/F3/F, setting its fields with the provided parameters. It stores an integer and an object of type Lcom/mplus/lib/F3/D0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/mplus/lib/F3/D0;)V
     .locals 0
 
@@ -90,6 +91,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the current object, based on the hash code of the `a` field and the value of the `b` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 

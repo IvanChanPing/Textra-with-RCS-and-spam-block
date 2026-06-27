@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/k, setting its properties based on the provided byte array and integer parameters. It calls the superclass constructor and validates the input parameters using a method from Lcom/mplus/lib/F3/m.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([BII)V
     .locals 1
 
@@ -125,6 +126,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method copies a portion of an array into another array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(I[B)V
     .locals 4
 
@@ -145,6 +147,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a byte from an array at an index offset by the input parameter. It appears to be part of a class that handles some form of byte array or data processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(I)B
     .locals 2
 
@@ -161,6 +164,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'e' of type integer. It appears to be a getter method for the field 'e'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r()I
     .locals 2
 

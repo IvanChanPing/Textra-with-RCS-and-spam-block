@@ -31,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/n0 with a given Throwable. It sets the object's field 'a' to the provided Throwable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 1
 

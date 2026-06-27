@@ -17,6 +17,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and configures a view based on the input parameter, either creating a `Lcom/mplus/lib/i7/c` or `Lcom/mplus/lib/w7/b` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/x5/z;I)Ljava/lang/Object;
     .locals 10
 
@@ -332,6 +333,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given View object is the same as the View object associated with a specific Lcom/mplus/lib/G5/a object. It returns true if they are the same, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
     .locals 1
 

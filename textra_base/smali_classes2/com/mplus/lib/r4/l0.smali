@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static SimpleDateFormat object with the pattern "yyyyMMdd_HHmmss". It sets this object as a static field in the class Lcom/mplus/lib/r4/l0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -45,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/r4/l0 class, setting its fields to default values. It sets an integer field to 0 and a long field to -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -63,6 +65,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appends a timestamp to the input string, either by appending it directly or by inserting it before the file extension.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
@@ -172,6 +175,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of a byte array obtained from `Lcom/mplus/lib/r4/S;` or an empty string if the byte array is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/String;
     .locals 3
 
@@ -203,6 +207,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method checks the validity of a string and updates object fields based on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 3
 
@@ -300,6 +305,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the validity of a string and an object, then updates the object's fields if they are valid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 3
 
@@ -406,6 +412,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method determines the resource ID of a string to display based on various conditions related to the input object `Lcom/mplus/lib/r4/j0;` and the current state of the object `Lcom/mplus/lib/r4/l0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/r4/j0;)I
     .locals 8
 
@@ -1061,6 +1068,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

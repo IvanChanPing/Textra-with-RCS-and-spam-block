@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/z7/n class, setting its fields with the provided parameters. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/view/View;Lcom/mplus/lib/w9/f;Landroid/content/Context;Lcom/mplus/lib/Q5/d;Lcom/mplus/lib/Q5/d;)V
     .locals 0
 
@@ -44,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes a window focus change listener when the window gains focus and posts a new runnable to the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onWindowFocusChanged(Z)V
     .locals 7
 

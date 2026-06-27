@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/o3/o; that initializes a new object. It does not perform any additional actions beyond the default object initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object exists in any collection within a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Ljava/lang/Object;)Z
     .locals 3
 
@@ -94,6 +96,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided ArrayList is not empty and if so, adds all its elements to a collection retrieved using the provided String.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 2
 
@@ -177,6 +180,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of a map retrieved from the object. It delegates the hash code calculation to the map's hashCode method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -197,6 +201,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection associated with a key in a map. It returns true if the object was removed, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 
@@ -240,6 +245,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of a map object. It calls the 'b()' method to get the map and then returns its string representation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

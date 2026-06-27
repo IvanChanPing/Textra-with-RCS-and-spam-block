@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `l` in class `Lcom/mplus/lib/V5/p;` by calling `Lcom/mplus/lib/z7/m;->c(I)` with the argument `0x3c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -46,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/V5/p, setting its fields with provided parameters. It calls the superclass constructor and assigns the input objects to its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/x5/z;Lcom/mplus/lib/E1/k;)V
     .locals 0
 
@@ -251,6 +253,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the Euclidean distance between a given point and the center of a rectangle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(Landroid/graphics/PointF;Lcom/mplus/lib/V5/o;)D
     .locals 7
 
@@ -409,6 +412,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a spring end state has changed to 1.0 and if the parent view is null, then it adds the view to another parent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringEndStateChange(Lcom/mplus/lib/b2/d;)V
     .locals 5
 
@@ -462,6 +466,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the alpha value of an object using the `setAlpha` method. It retrieves a double value from an object and converts it to a float before passing it to `setAlpha`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

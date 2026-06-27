@@ -36,6 +36,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the FloatingActionButtonBackground class by calculating and storing values based on a density factor. It sets the values of fields l, m, and n using multiplication and subtraction operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -60,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a `FloatingActionButtonBackground` object, setting up its paints, styles, and spring animation configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 7
 
@@ -185,6 +187,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the end value when hiding a FloatingActionButton by returning twice the height of its layout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getEndValueWhenHiding()I
     .locals 2
 
@@ -209,6 +212,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the end value when the FloatingActionButtonBackground is showing. It retrieves the value from the object's 'k' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getEndValueWhenShowing()I
     .locals 2
 
@@ -242,6 +246,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calculates and returns the radius of a FloatingActionButtonBackground view. It does this by dividing the view's width by 2 and subtracting a predefined offset value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()F
     .locals 3
 
@@ -266,6 +271,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the end value when showing is equal to a specific double value, returning true if they are equal and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Z
     .locals 5
 
@@ -303,6 +309,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to animate the hiding of a FloatingActionButtonBackground by setting an end value and invoking a method to animate the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()V
     .locals 5
 
@@ -329,6 +336,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the first child view of the ViewGroup as a BaseImageView. It assumes the first child is an instance of BaseImageView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getIconView()Lcom/mplus/lib/ui/common/base/BaseImageView;
     .locals 2
 
@@ -347,6 +355,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getLastView` method to return the last view from its superclass. It invokes the superclass's `getLastView` method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLastView()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -359,6 +368,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getLayoutSize() function to return the layout size of its superclass. It always returns a non-null value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -373,6 +383,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getMeasuredSize() and returns the result. It does not use the constant 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -387,6 +398,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns the result. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -399,6 +411,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() and returns its result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -413,6 +426,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the text color from the icon view of a FloatingActionButtonBackground. It delegates the retrieval to the getTextColorDirect method of the BaseImageView instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getTextColorDirect()I
     .locals 2
 
@@ -449,6 +463,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getVisibileAnimationDelegate` method to return the result from its superclass. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -463,6 +478,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not modify the result in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -477,6 +493,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the end value of an animation based on whether the FloatingActionButtonBackground is showing or hiding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Z)V
     .locals 3
 
@@ -516,6 +533,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a circle on a Canvas, representing the background of a FloatingActionButton, with different appearances based on the view's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 6
 
@@ -685,6 +703,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the view's translation Y based on a spring update and toggles its visibility when the spring is not at rest.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 
@@ -716,6 +735,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method refreshes the drawable state of the view and then invalidates it. It overrides the parent class's method to add an additional invalidate call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final refreshDrawableState()V
     .locals 1
 
@@ -740,6 +760,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object directly. It invokes the setAlpha method of the Lcom/mplus/lib/x5/y interface with the provided float value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -750,6 +771,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate for a FloatingActionButtonBackground instance. It invokes the setBackgroundDrawingDelegate method of its superclass Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -760,6 +782,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a FloatingActionButtonBackground instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -770,6 +793,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the color of a FloatingActionButtonBackground object and then invalidates the view to apply the change. It takes an integer color value as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setColor(I)V
     .locals 2
 
@@ -790,6 +814,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the color of the border of a FloatingActionButtonBackground instance. It updates the color of the Paint object associated with the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setColorBorder(I)V
     .locals 2
 
@@ -804,6 +829,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the color of a FloatingActionButtonBackground when pressed. It updates the paint color used by the background.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setColorPressed(I)V
     .locals 2
 
@@ -818,6 +844,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setDispatchTouchEvents method, passing a boolean parameter. It appears to be a bridge method for overriding touch event dispatching behavior.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setDispatchTouchEvents(Z)V
     .locals 1
 
@@ -830,6 +857,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method with the provided integer parameter. It appears to be a generated bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -842,6 +870,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the icon of a FloatingActionButtonBackground using the provided Drawable. It retrieves the icon view and updates its image drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
@@ -860,6 +889,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method, passing the provided argument. It effectively delegates the setLayoutSize operation to its parent class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -876,6 +906,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean flag indicating whether to listen to list scrolls. It stores the input boolean value in the instance variable `i`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setListenToListScrolls(Z)V
     .locals 1
 
@@ -888,6 +919,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method, passing a Rect object. It effectively delegates the setting of the margin to its parent class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -958,6 +990,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a FloatingActionButtonBackground object. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -968,6 +1001,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text color of the icon view in a FloatingActionButtonBackground with animation. It takes an integer parameter representing the new text color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextColorAnimated(I)V
     .locals 2
 
@@ -986,6 +1020,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text color of the icon view in a FloatingActionButtonBackground. It takes an integer color value as a parameter and applies it to the icon view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextColorDirect(I)V
     .locals 2
 
@@ -1004,6 +1039,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a FloatingActionButtonBackground instance. It invokes a static method to update the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -1016,6 +1052,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a FloatingActionButtonBackground object. It invokes a static method to configure the padding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -1028,6 +1065,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method to set the visibility of a view. It delegates the visibility setting to its superclass Lcom/mplus/lib/x5/y.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -1036,6 +1074,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method with the provided boolean parameter. It appears to be a bridge method for setting the visibility of a view with animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -1048,6 +1087,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of a FloatingActionButtonBackground object. It invokes a static method to configure the width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 

@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/z7/y, specifically a byte array and an Object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the size of an input stream in bytes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A(Ljava/io/InputStream;)J
     .locals 9
 
@@ -385,6 +387,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the result of overlaying two colors, taking into account the alpha channel of the first color. It returns the resulting color as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(II)I
     .locals 6
 
@@ -467,6 +470,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method converts an integer to a hexadecimal string, padding it with zeros to a length of 8 characters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(I)Ljava/lang/String;
     .locals 2
 
@@ -499,6 +503,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is present in an array of strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;[Ljava/lang/String;)Z
     .locals 5
 
@@ -548,6 +553,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method copies data from an input stream to an output stream, optionally closing the streams afterwards.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/io/InputStream;Ljava/io/OutputStream;ZZ)V
     .locals 4
 
@@ -701,6 +707,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method converts a given time in milliseconds to a human-readable time format (HH:MM:SS or MM:SS).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(J)Ljava/lang/String;
     .locals 3
 
@@ -824,6 +831,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a declared method from a given class using reflection and makes it accessible. It returns the method object if found, or throws a RuntimeException if the method is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs g(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 1
 
@@ -862,6 +870,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method reads vCard data from an input stream, extracts the formatted names, and returns them as a comma-separated string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Lcom/mplus/lib/r4/S;)Ljava/lang/String;
     .locals 5
 
@@ -1065,6 +1074,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method reads data from an input stream, processes it, and returns an integer value based on the processed data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Lcom/mplus/lib/r4/S;)I
     .locals 5
 
@@ -1249,6 +1259,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a flag value based on the Android SDK version.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j()I
     .locals 3
 
@@ -1276,6 +1287,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves metadata from a media file using `MediaMetadataRetriever` and applies a given function to the retriever.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Landroid/content/Context;Landroid/net/Uri;Ljava/util/function/Function;)Ljava/lang/Object;
     .locals 5
 
@@ -1550,6 +1562,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method invokes a given Java method using reflection and returns the result, or throws a RuntimeException if an exception occurs. It handles varargs by passing the array of objects to the invoke method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs m(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -1576,6 +1589,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an Intent's URI scheme is "sms" or "smsto", returning true if it is, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(Landroid/content/Intent;)Z
     .locals 3
 
@@ -2008,6 +2022,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a flag value based on the Android SDK version. It returns 0x2000000 if the SDK version is 31 or higher, and 0 otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s()I
     .locals 3
 
@@ -2230,6 +2245,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method processes an Android Uri object and returns a com/mplus/lib/r4/n object based on the Uri's scheme-specific part and query.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(Landroid/net/Uri;)Lcom/mplus/lib/r4/n;
     .locals 3
 
@@ -2401,6 +2417,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method reads an input stream into a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w(Ljava/io/InputStream;)[B
     .locals 7
 
@@ -2535,6 +2552,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method invokes another method `k` with a `Context`, `Uri`, and a custom `Function` object, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(Landroid/content/Context;Landroid/net/Uri;Ljava/util/function/Function;)Ljava/lang/Object;
     .locals 3
 
@@ -2622,6 +2640,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets a field of an object using reflection. It takes an object, a class, a field name, and a value, and attempts to set the field to the given value, making the field accessible if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static z(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 

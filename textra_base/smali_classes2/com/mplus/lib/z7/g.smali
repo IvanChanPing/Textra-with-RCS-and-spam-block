@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method checks if the input CharSequence is an instance of Lcom/mplus/lib/z7/g and returns it if so, otherwise it creates a new instance of Lcom/mplus/lib/z7/g with the input CharSequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Ljava/lang/CharSequence;)Lcom/mplus/lib/z7/g;
     .locals 2
 
@@ -65,6 +66,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appends a character to the current object and returns the result. It overrides the append method of its superclass SpannableStringBuilder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final append(C)Landroid/text/Editable;
     .locals 1
 
@@ -73,6 +75,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a CharSequence to the current object and returns the object itself. It does not actually modify the object as an Editable, but rather calls a method named 'd' to handle the append operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic append(Ljava/lang/CharSequence;)Landroid/text/Editable;
     .locals 1
 
@@ -83,6 +86,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a character to a SpannableStringBuilder and returns the result. It overrides the append method of its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final append(C)Landroid/text/SpannableStringBuilder;
     .locals 1
 
@@ -93,6 +97,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a CharSequence to the current object and returns the object itself. It does this by calling the 'd' method with the provided CharSequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
     .locals 1
 
@@ -103,6 +108,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a character to the current object and returns the object itself. It overrides the append method of its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final append(C)Ljava/lang/Appendable;
     .locals 1
 
@@ -113,6 +119,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appends a CharSequence to the current object and returns the object itself. It does not modify any external state, only calling an internal method d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
     .locals 1
 
@@ -123,6 +130,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls the setSpan method of its superclass, passing the provided parameters. It sets a span on a SpannableStringBuilder object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Object;III)V
     .locals 1
 
@@ -133,6 +141,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appends a character to a SpannableStringBuilder. It does this by invoking the append method of its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(C)V
     .locals 1
 
@@ -145,6 +154,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appends a given CharSequence to the current SpannableStringBuilder if it's not empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/CharSequence;)V
     .locals 2
 
@@ -217,6 +227,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appends a string to a SpannableStringBuilder and sets spans for each object in the provided array. It appears to be formatting text with the given objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs f(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 6
 
@@ -273,6 +284,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method replaces a substring in a SpannableStringBuilder instance with a provided SpannableString if the substring "%1$s" is found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Landroid/text/SpannableString;)V
     .locals 3
 
@@ -310,6 +322,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method replaces a portion of the text with a given CharSequence and returns the modified Editable object. It calls the superclass's replace method to perform the actual replacement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
     .locals 1
 
@@ -320,6 +333,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the replace method of its superclass to replace a portion of the string with a specified CharSequence. It then returns the modified string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
     .locals 1
 

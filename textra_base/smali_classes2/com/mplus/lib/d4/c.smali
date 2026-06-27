@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/d4/c class, setting its properties with the provided parameters. It sets the object's fields with the given ad metadata, frame layout, and other data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/Y3/d;Lcom/mplus/lib/ui/common/base/BaseFrameLayout;Lcom/inmobi/ads/AdMetaInfo;)V
     .locals 1
 
@@ -50,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks and sets a boolean flag `e` to true if it's not already set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 2
 
@@ -83,6 +85,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a static instance of Lcom/mplus/lib/V3/d;. It ignores the initial value of 6 and returns the static field f of Lcom/mplus/lib/V3/d;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Lcom/mplus/lib/V3/d;
     .locals 2
 
@@ -95,6 +98,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/y, which is actually a BaseFrameLayout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -103,6 +107,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of `f` in the `Lcom/mplus/lib/Y3/d` object. It appears to be checking a flag or status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Z
     .locals 2
 
@@ -119,6 +124,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String;. It effectively converts the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

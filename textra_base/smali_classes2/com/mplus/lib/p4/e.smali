@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/p4/e, initializing its fields with the provided parameters. It sets the object's properties, including references and primitive values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/p4/f;FFFZLcom/mplus/lib/A2/h;)V
     .locals 0
 
@@ -48,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a picture taken event, processing the image, saving it to a file, and sending it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPictureTaken([BLandroid/hardware/Camera;)V
     .locals 12
 

@@ -627,6 +627,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method of an Android Activity, calling the superclass's onDestroy and then unregistering an object from an event bus and stopping a component if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 3
 
@@ -660,6 +661,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the padding of a view using the provided insets. It takes an instance of `Lcom/mplus/lib/x5/y` and `Landroidx/core/graphics/Insets` as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w(Lcom/mplus/lib/x5/y;Landroidx/core/graphics/Insets;)V
     .locals 4
 

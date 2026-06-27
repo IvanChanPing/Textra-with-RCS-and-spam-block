@@ -40,6 +40,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method filters text after it has been changed. It invokes the filter method of the widget's Filter class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 2
 
@@ -64,6 +65,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method binds data from a cursor to a view, specifically setting the text and checkbox state of various UI elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V
     .locals 3
 
@@ -169,6 +171,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method to get the position for a given section and returns the result. It delegates the getPositionForSection operation to an instance of Lcom/mplus/lib/s5/f0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPositionForSection(I)I
     .locals 2
 
@@ -183,6 +186,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the section for a given position by delegating the call to `getSectionForPosition` of the `e` field object. It always returns the result of this delegation, ignoring the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSectionForPosition(I)I
     .locals 2
 
@@ -197,6 +201,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of objects, specifically a string array from the `g` field of the `f0` class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSections()[Ljava/lang/Object;
     .locals 2
 
@@ -213,6 +218,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method inflates a view from a layout resource and returns the inflated view. It uses the layout resource ID stored in the object's field `a` to inflate the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 2
 
@@ -313,6 +319,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by delegating to `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/B, storing two comparator objects in an array. It sets up the object's state with the provided comparators.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/r;Lcom/mplus/lib/o3/r;)V
     .locals 2
 
@@ -40,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares two objects using an array of comparators, returning the result of the first comparator that returns a non-zero value, or 0 if all comparators return 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 5
 
@@ -89,6 +91,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their arrays of comparators if the objects are of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -133,6 +136,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of an array of Comparators.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

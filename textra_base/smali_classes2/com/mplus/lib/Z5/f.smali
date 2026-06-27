@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/Z5/f class, setting up a thread with a given name, handler, and file. It creates instances of Lcom/mplus/lib/z7/w and Lcom/mplus/lib/B4/b, assigning them to fields a and b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;Landroid/os/Handler;Ljava/io/File;)V
     .locals 0
 
@@ -170,6 +171,7 @@
 .method public abstract c()V
 .end method
 
+# M-ROLE [GROQ]: This method checks the thread's interruption status and the state of an object, then conditionally adds a new Runnable to a list and posts it to a Handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Runnable;)V
     .locals 4
 
@@ -246,6 +248,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to call `c()` on the current object, catching any `Lcom/mplus/lib/Z5/e` exceptions that occur. If an exception is caught, it returns immediately with no further action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 1
 

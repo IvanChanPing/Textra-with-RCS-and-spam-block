@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/T4/q, converting an integer to a string and storing it. It also sets an instance variable 'e' to the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;ILandroid/content/SharedPreferences;)V
     .locals 1
 
@@ -27,6 +28,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string based on the input integer by calling `Lcom/mplus/lib/Z2/k;->p(ILjava/lang/String;)Ljava/lang/String;`. It returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(I)Ljava/lang/String;
     .locals 2
 
@@ -45,6 +47,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to parse a string as an integer and returns the integer value, defaulting to a stored value if parsing fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized g()Ljava/lang/Integer;
     .locals 2
 
@@ -107,6 +110,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the result of calling `g()` which presumably retrieves an integer value. It then returns this integer as an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 2
 
@@ -119,6 +123,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method increments an integer value by 1 and stores it. It returns the new integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized h()I
     .locals 3
 
@@ -214,6 +219,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method casts an Object to an Integer and calls another method `i(Ljava/lang/Integer;)V` with the casted value. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic set(Ljava/lang/Object;)V
     .locals 1
 

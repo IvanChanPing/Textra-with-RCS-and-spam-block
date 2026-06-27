@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/G7/a class, setting up an interface and a weak reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/G7/a class, setting up an interface for an IMessagingExtension. It also calls the superclass constructor and attaches the interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/bp;)V
     .locals 1
 
@@ -62,6 +64,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the object itself as an IBinder. It appears to be part of the implementation of the IBinder interface, but does not actually perform any binding operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final asBinder()Landroid/os/IBinder;
     .locals 2
 

@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes an Object, attempts to cast it to a String, then immediately throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)V
     .locals 1
 
@@ -32,6 +33,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if there are more elements in a list iterator. It returns true if there are more elements, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 
@@ -46,6 +48,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if there is a previous element in a list iterator. It returns a boolean value indicating whether a previous element exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasPrevious()Z
     .locals 2
 
@@ -62,6 +65,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the next string object from a list iterator. It casts the result to a string before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 2
 
@@ -76,6 +80,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the index of the next element in a list iterator. It delegates the call to the underlying ListIterator object's nextIndex method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final nextIndex()I
     .locals 2
 
@@ -92,6 +97,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the previous object in a list iterator as a string. It invokes the `previous()` method of a `ListIterator` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previous()Ljava/lang/Object;
     .locals 2
 
@@ -110,6 +116,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the index of the element that would be returned by a call to the `previous()` method in a list iterator. It delegates the call to the `previousIndex()` method of the `ListIterator` object stored in the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 
@@ -126,6 +133,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the remove operation is not supported. It does not perform any actual removal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 2
 
@@ -138,6 +146,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method takes an Object, attempts to cast it to a String, then immediately throws an UnsupportedOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final set(Ljava/lang/Object;)V
     .locals 1
 

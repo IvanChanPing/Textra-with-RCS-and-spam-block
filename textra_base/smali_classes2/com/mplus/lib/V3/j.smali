@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static byte array `d` in the class `Lcom/mplus/lib/V3/j;` with a predefined set of values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -201,6 +202,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/V3/j; with an integer value. It sets the integer value to a field 'a' in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -211,6 +213,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to convert the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final c()Ljava/lang/String;
     .locals 2
 
@@ -225,6 +228,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to generate this string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final d()Ljava/lang/String;
     .locals 2
 
@@ -239,6 +243,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method parses an XML string using `XmlPullParser` and calls another method `b` to process the parsed XML, or logs an error if parsing fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Ljava/lang/String;)V
     .locals 7
 
@@ -1877,6 +1882,7 @@
     goto/16 :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the instance variable 'a'. It calls either the 'c()' or 'd()' method depending on the value of 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a singleton instance of Lcom/mplus/lib/U3/b, registering it as an ActivityLifecycleCallbacks if not already registered.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized N()Lcom/mplus/lib/U3/b;
     .locals 4
 
@@ -86,6 +87,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if any value in the SparseBooleanArray `d` is true or if any corresponding key in `e` is true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()Z
     .locals 8
 
@@ -162,6 +164,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes an activity from a SparseBooleanArray when it is destroyed. It uses the activity's hash code as the key for removal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityDestroyed(Landroid/app/Activity;)V
     .locals 2
 
@@ -202,6 +205,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an activity's hash code is already in a SparseBooleanArray and adds it if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityStarted(Landroid/app/Activity;)V
     .locals 3
 
@@ -241,6 +245,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes an activity from a SparseBooleanArray when it stops, using the activity's hash code as the key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityStopped(Landroid/app/Activity;)V
     .locals 2
 

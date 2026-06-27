@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static Parcelable creator for the class. It sets the CREATOR field to a new instance of Lcom/mplus/lib/P6/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -48,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/g6/c, setting a field to -1 and creating two empty ArrayLists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -84,6 +86,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method writes the object's fields to a Parcel. It serializes a long, an integer, and two lists of longs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 

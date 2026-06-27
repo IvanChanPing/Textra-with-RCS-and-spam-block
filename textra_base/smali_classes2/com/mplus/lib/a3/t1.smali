@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static integer arrays in the class Lcom/mplus/lib/a3/t1. It sets the values of the arrays a, b, and c to [1, 2, 3, 4], [5], and [6] respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static constructor <clinit>()V
     .locals 4
 
@@ -58,6 +59,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears an array of objects by setting elements to null within a specified range.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final B([Ljava/lang/Object;II)V
     .locals 2
 
@@ -94,6 +96,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of a field using Java reflection. It checks for null references of the field and object before attempting to set the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final C(Ljava/lang/reflect/Field;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
@@ -503,6 +506,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates a BigDecimal from a character array, handling cases where the length exceeds a certain threshold by recursively splitting the calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static F([CIIII)Ljava/math/BigDecimal;
     .locals 3
 
@@ -1136,6 +1140,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a Vector object from a given string, where each character in the string corresponds to a bit in the Vector.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(ILjava/lang/String;)Lcom/inmobi/cmp/core/model/Vector;
     .locals 6
 
@@ -1711,6 +1716,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method compares two byte arrays, `p0` and `p3`, starting from offsets `p1` and `p2` respectively, for a length of `p4` bytes, and returns true if they are equal, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final i([BII[BI)Z
     .locals 5
 
@@ -1780,6 +1786,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle configuration settings for an ad platform, specifically determining the ad format based on region and other factors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Lcom/mplus/lib/Ca/a;)V
     .locals 8
 
@@ -2486,6 +2493,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given offset and byte count are within the bounds of a buffer of a specified size, throwing an ArrayIndexOutOfBoundsException if they are not. It validates the input parameters to ensure they do not exceed the buffer size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final l(JJJ)V
     .locals 5
 
@@ -2561,6 +2569,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method validates zoom levels, ensuring the minimum zoom is less than the medium zoom and the medium zoom is less than the maximum zoom. It throws an IllegalArgumentException if these conditions are not met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(FFF)V
     .locals 1
 
@@ -3542,6 +3551,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method formats a string by replacing occurrences of "%s" with the string representation of objects in an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs s(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 10
 
@@ -4555,6 +4565,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a character array into a BigDecimal object, handling decimal points, exponents, and signs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w([CII)Ljava/math/BigDecimal;
     .locals 17
 
@@ -4934,6 +4945,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves data from the Giphy API and parses the JSON response.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y(Ljava/lang/String;)Lcom/mplus/lib/Z5/a;
     .locals 5
 
@@ -5178,6 +5190,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over an Iterable of Lcom/mplus/lib/r4/j0; objects and applies an operation to each one using the Lcom/mplus/lib/r4/n0;->a method. It then returns the Lcom/mplus/lib/r4/n0; instance itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public G(Ljava/lang/Iterable;)Lcom/mplus/lib/r4/n0;
     .locals 3
 

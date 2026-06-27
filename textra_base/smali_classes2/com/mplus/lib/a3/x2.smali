@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a specific object is not null and if so, calls another method with that object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 
@@ -78,6 +79,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method resets the `a` field of the class `Lcom/mplus/lib/a3/x2;` to null. It appears to be clearing a reference to a Google ML Kit entity extraction object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()V
     .locals 2
 

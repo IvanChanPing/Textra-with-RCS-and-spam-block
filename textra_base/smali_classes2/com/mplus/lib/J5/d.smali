@@ -81,6 +81,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method provides a synchronized instance of the `Lcom/mplus/lib/J5/d` class, initializing its members if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized Q()Lcom/mplus/lib/J5/d;
     .locals 5
 
@@ -249,6 +250,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a ripple drawable as the background of a given View if a specific attribute is non-zero.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Landroid/view/View;Landroid/content/res/TypedArray;)V
     .locals 5
 
@@ -341,6 +343,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a RippleDrawable based on the provided context and parameters. It checks the value of `p3` and returns a RippleDrawable with a specific color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Landroid/content/Context;II)Landroid/graphics/drawable/RippleDrawable;
     .locals 3
 
@@ -497,6 +500,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a custom background and state list animator on an object implementing `Lcom/mplus/lib/x5/y`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(Lcom/mplus/lib/x5/y;II)V
     .locals 9
 
@@ -603,6 +607,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method customizes a `TextView` with various attributes and settings, including text color, compound drawables, and scrolling behavior.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(Landroid/widget/TextView;Landroid/content/Context;Landroid/util/AttributeSet;Landroid/content/res/TypedArray;)V
     .locals 10
 
@@ -1267,6 +1272,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/K5/b; based on the type of the provided Android context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(Landroid/content/Context;)Lcom/mplus/lib/K5/b;
     .locals 2
 

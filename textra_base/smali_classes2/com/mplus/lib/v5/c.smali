@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/v5/c` class, setting up its properties and configuring a spring animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/y5/e;Lcom/mplus/lib/v5/a;)V
     .locals 2
 
@@ -279,6 +280,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles layout change events for a view, updating its state and notifying other components. It checks the current layout state, updates the view's dimensions, and removes itself as a layout change listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 1
 
@@ -332,6 +334,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a spring is at rest and calls either the H() or T() method on an interface based on the spring's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 6
 
@@ -378,6 +381,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the clip path of a view based on the spring update values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 9
 

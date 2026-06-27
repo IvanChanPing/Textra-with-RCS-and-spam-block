@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Y3/f class, setting its fields to default values. It sets string, integer, and boolean fields, as well as two long fields to 0x7530 (30000 in decimal).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -58,6 +59,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of Lcom/mplus/lib/h4/a, passing the provided context, itself, and another object to the constructor. It essentially acts as a factory method for Lcom/mplus/lib/h4/a instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/content/Context;Lcom/mplus/lib/u5/b;)Lcom/mplus/lib/V3/c;
     .locals 2
 
@@ -72,6 +74,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain flag `f` is set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -84,6 +87,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'd' of type long. It appears to be a getter method for the field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()J
     .locals 3
 
@@ -92,6 +96,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a string field `b` is not empty and returns true if it's not empty, false otherwise. It uses the `TextUtils.isEmpty` method to perform the check.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 2
 
@@ -110,6 +115,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'g' as an integer. It does not use the assigned value 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 2
 
@@ -120,6 +126,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'c' of type long. It does not perform any operations, just returns the field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()J
     .locals 3
 
@@ -130,6 +137,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a constant string "tappxBanner" as the name. It does not perform any dynamic computation or input-based logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getName()Ljava/lang/String;
     .locals 2
 
@@ -142,6 +150,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'a' in the class. It does not appear to use the constant 7, which is loaded but not used.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOrder()I
     .locals 2
 

@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/r4/L class, setting its properties to default values. It creates a new instance of Lcom/mplus/lib/P6/c and assigns it to the 'b' field, along with initializing other fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -200,6 +201,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a collection is not empty and the last item in the collection has a specific flag set to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Z
     .locals 4
 

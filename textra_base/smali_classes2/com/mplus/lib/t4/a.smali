@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method submits a given Runnable to a ScheduledExecutorService, creating the service if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
     .locals 4
 
@@ -103,6 +104,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method schedules a given Runnable to be executed after a specified delay using a ScheduledExecutorService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized b(Ljava/lang/Runnable;J)V
     .locals 4
 

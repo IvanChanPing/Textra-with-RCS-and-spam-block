@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/F3/O. It creates a new instance with a constructor argument of 0 and assigns it to a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/F3/O, creating a new Lcom/mplus/lib/F3/U0 object with a parameter of 16. It sets this object as a field of the current instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -49,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/F3/O class, creating a new Lcom/mplus/lib/F3/U0 object and calling the l() method twice.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -69,6 +72,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns an integer value based on the input parameters, involving a conditional check and a method invocation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Lcom/mplus/lib/F3/E1;ILjava/lang/Object;)I
     .locals 2
 
@@ -102,6 +106,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be a part of a serialization or encoding process, taking an enum value and an object as input and returning an integer value based on the enum and object type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Lcom/mplus/lib/F3/E1;Ljava/lang/Object;)I
     .locals 4
 
@@ -532,6 +537,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calculates the size of a given object or list of objects based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Lcom/mplus/lib/F3/W;Ljava/lang/Object;)I
     .locals 4
 
@@ -672,6 +678,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the serialized size of a map entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/util/Map$Entry;)I
     .locals 5
 
@@ -777,6 +784,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a map entry is initialized. It handles both repeated and singular fields, checking if all elements in a repeated field are initialized or if a singular field is initialized.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/util/Map$Entry;)Z
     .locals 4
 
@@ -1543,6 +1551,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds an object to a repeated field if the field is marked as repeated, otherwise it throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/F3/W;Ljava/lang/Object;)V
     .locals 3
 
@@ -1610,6 +1619,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/F3/O` and copies data from the current object's `a` field, which is of type `Lcom/mplus/lib/F3/U0`, to the new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/F3/O;
     .locals 5
 
@@ -1722,6 +1732,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a clone of the current object by calling the `b()` method. It appears to be a synthetic bridge method for cloning.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic clone()Ljava/lang/Object;
     .locals 2
 
@@ -1736,6 +1747,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their `a` fields of type `Lcom/mplus/lib/F3/U0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -1786,6 +1798,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the sum of values from a list and an iterable in the `Lcom/mplus/lib/F3/U0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()I
     .locals 5
 
@@ -1874,6 +1887,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the total size of all entries in a list and an iterable by invoking `Lcom/mplus/lib/F3/O;->e(Lcom/mplus/lib/F3/W;Ljava/lang/Object;)I` for each entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()I
     .locals 5
 
@@ -1996,6 +2010,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object referenced by the 'a' field of the class. It delegates the hash code calculation to the 'hashCode' method of the 'U0' class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -2012,6 +2027,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if all map entries in a list and an iterable are valid according to the `j` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i()Z
     .locals 5
 
@@ -2111,6 +2127,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator over the entries of a map stored in the `a` field of the class. It casts the set of entries to a custom class `Lcom/mplus/lib/F3/a1` before returning its iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k()Ljava/util/Iterator;
     .locals 2
 
@@ -2133,6 +2150,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method makes certain fields in the object immutable by calling `makeImmutable()` on `com/google/protobuf/c` instances and `unmodifiableList()` or `unmodifiableMap()` on collections.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()V
     .locals 5
 
@@ -2416,6 +2434,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list and an iterable of map entries in the provided `Lcom/mplus/lib/F3/O` object, invoking `n(Ljava/util/Map$Entry;)V` on each entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Lcom/mplus/lib/F3/O;)V
     .locals 4
 
@@ -2504,6 +2523,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a map entry and stores its value in an object based on the key's properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Ljava/util/Map$Entry;)V
     .locals 9
 
@@ -2735,6 +2755,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an object based on the properties of the provided `Lcom/mplus/lib/F3/W` instance, either by iterating over a list or directly invoking another method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Lcom/mplus/lib/F3/W;Ljava/lang/Object;)V
     .locals 3
 

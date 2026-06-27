@@ -143,6 +143,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method pauses the ExoPlayer instance when an event is received on the main thread. It checks if the player is not null before pausing it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/B6/s;)V
     .locals 1
 
@@ -160,6 +161,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, toggling the visibility of a view based on a boolean value. It updates the view's visibility using the `Lcom/mplus/lib/z7/N;->F` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/B6/t;)V
     .locals 2
 
@@ -176,6 +178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, specifically checking a condition and updating a database entry if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/B6/w;)V
     .locals 6
 
@@ -293,6 +296,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, appending the URI from the `f` field to the result of the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

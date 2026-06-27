@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/E3/e class with the provided parameters. It sets the object's fields with the given string, float, integers, and bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Float;IILandroid/os/Bundle;)V
     .locals 0
 
@@ -49,6 +50,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an Android Bundle object, populating it with various data from the class instance. It puts string, float, integer, and bundle values into the bundle with specific keys.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroid/os/Bundle;
     .locals 4
 

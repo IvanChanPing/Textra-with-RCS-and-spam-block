@@ -33,6 +33,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/x1, setting its fields b through h to instances of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -95,6 +96,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets a groupName field in the class instance if the input string is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzch;
     .locals 2
 
@@ -138,6 +140,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets a flag in the object's state by modifying the `j` field and returns the object itself. It appears to be enabling a feature or option, regardless of the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze(Z)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzch;
     .locals 1
 
@@ -385,6 +388,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of a field 'k' to 2 and returns the current object. It does not use the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh(I)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzch;
     .locals 1
 

@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to retrieve an input stream from a URL stored in the object's 'a' field. It returns the input stream if successful, or null if an IOException occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 3
 
@@ -58,6 +59,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its URL.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

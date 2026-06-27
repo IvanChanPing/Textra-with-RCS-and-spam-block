@@ -179,6 +179,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method iterates through an ArrayList of `Lcom/mplus/lib/V5/j` objects and returns a `Lcom/mplus/lib/J5/b` object based on the provided index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)Lcom/mplus/lib/J5/b;
     .locals 9
 
@@ -354,6 +355,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the total item count of a list, considering various factors such as item size and layout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemCount()I
     .locals 6
 
@@ -485,6 +487,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method determines the item view type based on the item at a given position. It checks if the item is of a certain type and returns a specific layout resource ID (0x7f0d00f3 or 0x7f0d00f2) accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemViewType(I)I
     .locals 1
 
@@ -510,6 +513,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method binds data to a RecyclerView ViewHolder. It checks if the data item is of a certain type and sets the corresponding view properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 6
 

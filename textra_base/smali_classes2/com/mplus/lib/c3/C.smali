@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of class `Lcom/mplus/lib/c3/C` and performs a series of operations involving `Lcom/google/android/gms/internal/mlkit_language_id_common/zzam` objects and `Ljava/util/HashMap` instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method retrieves an instance of `Lcom/mplus/lib/r4/j0;` and sets its `i` field to the provided string, then returns another instance of `Lcom/mplus/lib/r4/j0;` from `Lcom/mplus/lib/E1/k;->b()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(Ljava/lang/String;)Lcom/mplus/lib/r4/j0;
     .locals 4
 
@@ -53,6 +54,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/n4/a; and calls its P() method. It ensures thread safety by acquiring a lock on the class object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized N()Lcom/mplus/lib/n4/a;
     .locals 3
 

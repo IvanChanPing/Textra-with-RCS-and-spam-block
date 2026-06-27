@@ -26,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method toggles the visibility of two `BaseLinearLayout` views based on the state of an `Lcom/mplus/lib/o7/d` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()V
     .locals 7
 

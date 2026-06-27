@@ -25,6 +25,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new drawable by getting the constant state of the current drawable and using it to create a new drawable, then wraps it in a new instance of Lcom/mplus/lib/z7/r.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 4
 

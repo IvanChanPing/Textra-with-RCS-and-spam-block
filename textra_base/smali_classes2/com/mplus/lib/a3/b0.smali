@@ -51,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a certain object exists, and if so, calls its `a()` method, otherwise, it adds an object to a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 4
 
@@ -92,6 +93,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds an object to a collection and updates related state if the addition is successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 5
 
@@ -153,6 +155,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection and returns true if the collection changed as a result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 5
 
@@ -285,6 +288,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the collection and updates the associated state. It checks the size of the collection and if it's empty, it returns immediately, otherwise, it clears the collection and updates the state accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 4
 
@@ -332,6 +336,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in a collection. It first calls `zzb()` and then delegates the containment check to the `contains()` method of the collection stored in the `b` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -350,6 +355,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the collection contained in the class instance contains all elements of the input collection. It returns a boolean result indicating whether all elements are present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 2
 
@@ -372,6 +378,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is equal to the current instance, and if not, it calls `zzb()` and checks if the input object is equal to the `b` collection field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -399,6 +406,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object's 'b' collection field after calling zzb().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -417,6 +425,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator object, specifically an instance of Lcom/mplus/lib/a3/X. It first calls zzb() on the current object, then creates and returns the iterator instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -435,6 +444,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection and updates related state if removal is successful.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 3
 
@@ -476,6 +486,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements from the collection that are contained in the specified collection and returns true if the collection was modified. It also updates the size and notifies changes if any elements were removed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 4
 
@@ -595,6 +606,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It first calls `zzb()` to possibly initialize or validate the object, then returns the size of the collection stored in the `b` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -635,6 +647,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks and updates the collection in the object, potentially throwing a ConcurrentModificationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()V
     .locals 3
 

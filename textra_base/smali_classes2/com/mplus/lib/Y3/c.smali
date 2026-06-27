@@ -74,6 +74,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/X3/b and returns it. It appears to be a factory method for Lcom/mplus/lib/X3/b instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/content/Context;Lcom/mplus/lib/u5/b;)Lcom/mplus/lib/V3/c;
     .locals 2
 
@@ -88,6 +89,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether a certain condition is met, specifically the value of the instance variable 'g'. It appears to be a getter method for the 'g' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 2
 
@@ -96,6 +98,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'e' of type long. It does not perform any operations based on the input parameter or the constant 5.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()J
     .locals 3
 
@@ -106,6 +109,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two string fields (`b` and `c`) in the class are not empty, returning true if both are not empty and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 2
 
@@ -149,6 +153,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'h' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 2
 
@@ -159,6 +164,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'd' of type long. It does not perform any operations, just returns the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()J
     .locals 3
 
@@ -169,6 +175,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a constant string "amazonBannerAPS". It does not perform any computation or logic based on the input.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getName()Ljava/lang/String;
     .locals 2
 
@@ -179,6 +186,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'a' in the class Lcom/mplus/lib/Y3/c. It appears to be an accessor method for an integer field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOrder()I
     .locals 2
 
@@ -187,6 +195,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its order, appId, and slotUuid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

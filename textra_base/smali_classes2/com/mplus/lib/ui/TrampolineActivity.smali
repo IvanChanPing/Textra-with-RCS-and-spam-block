@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the TrampolineActivity class, initializing it as an Android Activity. It does not perform any additional actions beyond the default Activity initialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the finish method of an Android Activity to also override the pending transition animation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final finish()V
     .locals 2
 
@@ -55,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the creation of a TrampolineActivity, processing an intent and its data, and then finishing the activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 7
 

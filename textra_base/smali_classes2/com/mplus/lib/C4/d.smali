@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/C4/d class with various parameters. It sets the instance's fields with the provided objects and an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroidx/work/impl/WorkManagerImpl;Ljava/lang/String;Landroidx/work/impl/OperationImpl;Lcom/mplus/lib/ha/a;Landroidx/work/WorkRequest;)V
     .locals 1
 
@@ -48,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/C4/d class with six parameters. It sets the instance's fields with the provided parameters and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -68,6 +70,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/C4/d class with various object and integer parameters. It sets the instance's fields with the provided values and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -90,6 +93,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a part of a larger system that handles various tasks based on a switch statement. It executes different blocks of code depending on the value of `a` in the class `Lcom/mplus/lib/C4/d;`, which seems to be an integer that determines the action to be taken.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 10
 

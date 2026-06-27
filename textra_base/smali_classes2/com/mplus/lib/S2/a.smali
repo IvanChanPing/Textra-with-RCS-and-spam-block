@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/S2/a class, storing the provided DeferredLifecycleHelper, Activity, and two Bundles as instance fields. It is a constructor method for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 0
 
@@ -52,6 +53,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the `onInflate` method of a `LifecycleDelegate` instance, passing the current activity and two bundles.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab()V
     .locals 5
 

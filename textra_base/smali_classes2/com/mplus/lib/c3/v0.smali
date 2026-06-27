@@ -168,6 +168,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class `Lcom/mplus/lib/c3/v0;` with various logging event configurations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 

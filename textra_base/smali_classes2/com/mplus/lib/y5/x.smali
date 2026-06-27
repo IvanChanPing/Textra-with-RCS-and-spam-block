@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the text size of a `TextView` object. It retrieves the text size directly from the `TextView`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getTextSizeDirect()F
     .locals 2
 
@@ -30,6 +31,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the text size of a `TextView` directly. It takes a float parameter representing the text size and applies it to the `TextView` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setTextSizeDirect(F)V
     .locals 3
 

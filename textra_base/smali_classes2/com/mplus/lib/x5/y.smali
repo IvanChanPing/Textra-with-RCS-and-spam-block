@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method measures the width and height of the current object and returns a new instance of Lcom/mplus/lib/z7/G with these dimensions. It appears to be a part of a view or layout management system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public A()Lcom/mplus/lib/z7/G;
     .locals 4
 
@@ -68,6 +69,7 @@
 .method public abstract getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the layout size of a view, returning a `Lcom/mplus/lib/z7/G` object containing the width and height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 4
 
@@ -119,6 +121,7 @@
 .method public abstract getMeasuredHeight()I
 .end method
 
+# M-ROLE [GROQ]: This method returns a `G` object containing the measured width and height of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 4
 
@@ -149,6 +152,7 @@
 .method public abstract getPaddingBottom()I
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the total horizontal padding of an object. It does this by summing the left and right padding values obtained from the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getPaddingHorizontal()I
     .locals 3
 
@@ -184,6 +188,7 @@
 .method public abstract getPaddingTop()I
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the total vertical padding of an object. It does this by summing the top and bottom padding values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getPaddingVertical()I
     .locals 3
 
@@ -238,6 +243,7 @@
 .method public abstract getViewTreeObserver()Landroid/view/ViewTreeObserver;
 .end method
 
+# M-ROLE [GROQ]: This method returns the visible animation delegate for the current view state, creating a new instance if it doesn't exist. It retrieves the view state and returns its associated animation delegate.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 4
 
@@ -401,6 +407,7 @@
 .method public abstract requestLayout()V
 .end method
 
+# M-ROLE [GROQ]: This method sets clip children and clip to padding for all parent view groups of the current view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAllParentsClip(Z)V
     .locals 3
 
@@ -469,6 +476,7 @@
 .method public abstract setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate for the view state. It updates the view state object with the provided delegate.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 2
 
@@ -498,6 +506,7 @@
 .method public abstract setEnabled(Z)V
 .end method
 
+# M-ROLE [GROQ]: This method sets the height of a view to a specified value if it's different from the current height. It then updates the view's layout parameters with the new height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setHeightTo(I)V
     .locals 3
 
@@ -535,6 +544,7 @@
 .method public abstract setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 .end method
 
+# M-ROLE [GROQ]: This method sets the layout size using the provided `Lcom/mplus/lib/z7/G` object. It calls a static method to update the layout size with the object's width and height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 2
 
@@ -555,6 +565,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the margins of a view based on the provided Rect object. It updates the top, bottom, left, and right margins of the view's layout parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMargin(Landroid/graphics/Rect;)V
     .locals 3
 
@@ -662,6 +673,7 @@
 .method public abstract setTranslationY(F)V
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of a view based on the provided boolean parameter. It toggles the view's visibility by calling a helper method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setViewVisible(Z)V
     .locals 2
 
@@ -704,6 +716,7 @@
 .method public abstract setWidthTo(I)V
 .end method
 
+# M-ROLE [GROQ]: This method checks if the view returned by `getView()` is not null and visible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public y()Z
     .locals 3
 

@@ -31,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class and invokes a method from the Google ML Kit library to potentially set up entity extraction. It also gets the current thread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 

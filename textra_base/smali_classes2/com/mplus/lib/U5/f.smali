@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/U5/f, setting up a Paint object with a stroke style and width. It also calls method a(I) with argument 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -57,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the color of a paint object based on the input parameter and then invalidates a view to trigger a redraw.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)V
     .locals 4
 
@@ -144,6 +146,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the autofocus event of a camera, calling method `a(I)` based on the autofocus result and scheduling a delayed post of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAutoFocus(ZLandroid/hardware/Camera;)V
     .locals 3
 
@@ -174,6 +177,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a field `d` and calls `a(I)` with argument 1 if `d` is 3 or 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 3
 

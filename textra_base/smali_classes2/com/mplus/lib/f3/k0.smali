@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/f3/k0. It creates an empty array and a new instance of the class, storing them in the fields d and e, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -44,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/k0; with an array of integers, an integer, and a boolean. It sets the object's fields with the provided parameters and calls the superclass constructor with the boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([IIZ)V
     .locals 0
 
@@ -58,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inserts an integer at a specified index in a list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(ILjava/lang/Object;)V
     .locals 7
 
@@ -211,6 +214,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method casts an Object to an Integer, calls method b(I) with its value, and returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -235,6 +239,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current collection, handling cases where the collection is of the same type or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 6
 
@@ -361,6 +366,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method resizes an array if necessary and appends an integer to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)V
     .locals 6
 
@@ -436,6 +442,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided index is within the bounds of a collection and throws an IndexOutOfBoundsException if it's not. It returns immediately if the index is valid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 5
 
@@ -481,6 +488,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is present in a collection by calling the `indexOf` method and returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -608,6 +616,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from an array at a specified index and returns it as an Integer object. It also calls method c(I)V before the retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic get(I)Ljava/lang/Object;
     .locals 2
 
@@ -630,6 +639,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object by iterating over an array of integers and combining their values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -672,6 +682,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method searches for an integer in an array and returns its index if found, or -1 if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 5
 
@@ -732,6 +743,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method removes an element at a specified index from a list and returns the removed element.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic remove(I)Ljava/lang/Object;
     .locals 5
 
@@ -803,6 +815,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list, shifting the remaining elements to fill the gap. It checks if the end index is greater than or equal to the start index and throws an IndexOutOfBoundsException if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeRange(II)V
     .locals 3
 
@@ -904,6 +917,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field 'c' in the class, presumably representing the size of something. It always returns this field's value, regardless of the constant 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -971,6 +985,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method calls `c(I)V` with the input parameter and returns the value at the input index in the `b` array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze(I)I
     .locals 2
 

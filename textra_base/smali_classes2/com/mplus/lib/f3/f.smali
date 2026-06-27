@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static instances of the class Lcom/mplus/lib/f3/f. It creates two instances with different constructor parameters and assigns them to static fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static synthetic constructor <clinit>()V
     .locals 2
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/f; with an integer value. It sets the object's field 'a' to the provided integer and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -109,6 +111,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appends a specific string to a StringBuilder based on the value of a class field, or throws an AssertionError if the field is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/StringBuilder;)V
     .locals 2
 
@@ -143,6 +146,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appends a specific string to a StringBuilder based on the value of a class field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Ljava/lang/StringBuilder;)V
     .locals 2
 
@@ -175,6 +179,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method compares the current object with another object, returning an integer indicating their order.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final compareTo(Ljava/lang/Object;)I
     .locals 2
 
@@ -239,6 +244,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a hash code for the object, using the object's identity hash code if its internal state 'a' is 0, otherwise it defaults to the object's identity hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

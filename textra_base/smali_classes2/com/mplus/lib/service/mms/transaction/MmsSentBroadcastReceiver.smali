@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the MmsSentBroadcastReceiver class, initializing a new instance. It calls the superclass constructor of BroadcastReceiver.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -19,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles an Android broadcast receiver's onReceive event, processing the intent and sending the result code to another component. It checks the intent, clones or creates it if necessary, and then puts the result code as an extra in the intent before passing it to another method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/J4/c that initializes an object with a reference to Lcom/mplus/lib/J4/d. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/J4/d;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets an AtomicBoolean to false when an exception occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onFailure(Ljava/lang/Exception;)V
     .locals 2
 
@@ -49,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an AtomicBoolean to true and another to false when called, indicating a successful operation. It appears to be part of a state management system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onSuccess(Ljava/lang/Object;)V
     .locals 3
 

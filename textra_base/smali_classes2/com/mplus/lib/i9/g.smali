@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/i9/g class, setting its properties with the provided View and object. It sets the integer field 'a' to 1 and stores the View and object in fields 'b' and 'c' respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/view/View;Lcom/mplus/lib/w9/f;)V
     .locals 1
 
@@ -36,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/i9/g;, setting its fields with the provided VastVideoPlayer and VastVideoAdPlayerView. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/video/vast/vastplayer/VastVideoPlayer;Lcom/smaato/sdk/video/vast/widget/VastVideoAdPlayerView;)V
     .locals 1
 
@@ -62,6 +64,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the state of the object and attaches a view to a VastVideoPlayerPresenter if the state is 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 2
 

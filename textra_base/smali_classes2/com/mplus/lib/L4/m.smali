@@ -35,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/L4/m class, setting its fields to default values. It creates a new SparseArray instance and assigns it to the 'a' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -59,6 +60,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a byte array stored in a SparseArray at key 0xc0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()[B
     .locals 3
 
@@ -191,6 +193,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method stores a byte array in a SparseArray if it's not null, otherwise throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c([B)V
     .locals 3
 
@@ -222,6 +225,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method stores a byte array in a SparseArray at key 0x91 if the input array is not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d([B)V
     .locals 3
 
@@ -245,6 +249,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->v(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

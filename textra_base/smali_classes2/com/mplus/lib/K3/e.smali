@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/K3/e, setting its 'b' and 'c' fields to the provided Lcom/mplus/lib/K3/l objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/K3/l;Lcom/mplus/lib/K3/l;)V
     .locals 0
 
@@ -42,6 +43,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method applies a transformation to an object of type Lcom/mplus/lib/K3/a;, returning an integer value. It checks conditions and invokes methods on the object, potentially incrementing a value or retrieving a value based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 

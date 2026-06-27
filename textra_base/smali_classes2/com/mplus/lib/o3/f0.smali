@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/o3/f0, setting its 'c' field to the provided Lcom/mplus/lib/o3/g0 object and calling the superclass constructor. It effectively sets up the object with a reference to another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/g0;)V
     .locals 0
 
@@ -35,6 +36,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a SimpleImmutableEntry object containing two values retrieved from lists at the specified index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 4
 
@@ -75,6 +77,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It accesses the size of an `AbstractCollection` instance through a series of nested object references.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

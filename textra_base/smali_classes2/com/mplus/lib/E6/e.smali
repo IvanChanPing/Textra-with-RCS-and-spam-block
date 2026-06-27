@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/E6/e, setting its fields 'a' and 'b' with the provided parameters. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/S5/c;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the state of an object based on the provided `Lcom/mplus/lib/w5/b` object. It checks various fields of the object and updates corresponding fields in `Lcom/mplus/lib/S5/c`, then invalidates the drawable to reflect the changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChanged(Ljava/lang/Object;)V
     .locals 7
 

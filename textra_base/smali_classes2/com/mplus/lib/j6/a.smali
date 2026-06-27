@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method checks if a given string is empty and throws an IllegalArgumentException if it is. It returns immediately if the string is not empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A(Ljava/lang/String;)V
     .locals 2
 
@@ -42,6 +43,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input string is not null and has a length, throwing an IllegalArgumentException with the provided message if it doesn't. It effectively validates the input string's existence and length.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static B(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
@@ -69,6 +71,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is null and throws an IllegalArgumentException if it is, otherwise it returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static C(Ljava/lang/Object;)V
     .locals 2
 
@@ -96,6 +99,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided object is null and throws an IllegalArgumentException with the given message if it is. If the object is not null, it returns immediately without doing anything else.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static D(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
@@ -117,6 +121,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to dynamically load and instantiate a class specified by the input string, expecting it to be a GlideModule implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static E(Ljava/lang/String;)V
     .locals 4
 
@@ -255,6 +260,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given HTTP method string is either "GET" or "HEAD", returning true if it's not, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static F(Ljava/lang/String;)Z
     .locals 2
 
@@ -302,6 +308,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to call `I(Lcom/mplus/lib/r4/n;Z)` with `false` and returns the result, or if that fails with an `IllegalArgumentException`, it calls `I(Lcom/mplus/lib/r4/n;Z)` with `true` and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static G(Lcom/mplus/lib/r4/n;)[B
     .locals 2
 
@@ -665,6 +672,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method throws a RuntimeException when unable to instantiate a GlideModule implementation. It constructs an error message with the class that failed to instantiate and the underlying ReflectiveOperationException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static J(Ljava/lang/Class;Ljava/lang/ReflectiveOperationException;)V
     .locals 4
 
@@ -697,6 +705,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is an instance of Lcom/mplus/lib/U9/f and if so, throws the throwable stored in that object. It returns immediately if the object is not of the correct type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final K(Ljava/lang/Object;)V
     .locals 2
 
@@ -910,6 +919,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method performs a hash function on an input integer. It applies a series of bitwise and arithmetic operations to produce a hashed output integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(I)I
     .locals 5
 
@@ -1075,6 +1085,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method performs a hash operation on the input integer. It applies a series of bitwise and arithmetic operations to produce a hashed output.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static P(I)I
     .locals 5
 
@@ -1111,6 +1122,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer based on the hash code of the input object, or a default value if the object is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q(Ljava/lang/Object;)I
     .locals 1
 
@@ -1850,6 +1862,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts an InMobi Vector object to a LinkedHashMap. It iterates over the vector using a forEach method and a custom callback object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Lcom/inmobi/cmp/core/model/Vector;)Ljava/util/LinkedHashMap;
     .locals 4
 
@@ -1979,6 +1992,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to implement a synchronization mechanism, waiting for a specific condition to be met before returning an object. It uses `wait()` and `nanoTime()` to manage the waiting process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f()Lcom/mplus/lib/Va/d;
     .locals 10
 
@@ -2671,6 +2685,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method generates an MD5 hash of the input string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final h(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
@@ -2826,6 +2841,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks and initializes an object of type Lcom/mplus/lib/W9/b, returning the object if it's valid or a default object if not. It throws an exception if the object is already initialized.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Lcom/mplus/lib/W9/b;)Lcom/mplus/lib/W9/b;
     .locals 2
 
@@ -2966,6 +2982,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is null and throws a NullPointerException with a given message if it is, otherwise returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
@@ -4057,6 +4074,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/U9/f` with a given `Ljava/lang/Throwable` and returns it. It also invokes a validation method on the input `Throwable`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final o(Ljava/lang/Throwable;)Lcom/mplus/lib/U9/f;
     .locals 2
 
@@ -4257,6 +4275,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a `ContactPersister$ContactList` object and then constructs a `com/mplus/lib/r4/n` object from it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static q([B)Lcom/mplus/lib/r4/n;
     .locals 4
 
@@ -4459,6 +4478,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input object is an instance of Lcom/mplus/lib/aa/c and if so, attempts to return the intercepted object from it. If not, it returns the original object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Lcom/mplus/lib/Y9/d;)Lcom/mplus/lib/Y9/d;
     .locals 2
 
@@ -4516,6 +4536,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given HTTP method string is one of the supported methods. It returns true for "POST", "PATCH", "PUT", "DELETE", or "MOVE", and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static t(Ljava/lang/String;)Z
     .locals 2
 
@@ -4632,6 +4653,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input boolean is false and throws an IllegalArgumentException with the message "Must be true" if so. It returns immediately if the input is true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static v(Z)V
     .locals 2
 
@@ -4657,6 +4679,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/qa/h` and initializes its `d` field by calling `Lcom/mplus/lib/j6/a;->n`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w(Lcom/mplus/lib/ha/p;)Lcom/mplus/lib/qa/h;
     .locals 2
 
@@ -4677,6 +4700,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a singleton list containing the input object and logs or validates it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(Ljava/lang/Object;)Ljava/util/List;
     .locals 2
 
@@ -4697,6 +4721,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method finds the maximum value between the input integer and all elements in the input array. It returns this maximum value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs y(I[I)I
     .locals 4
 

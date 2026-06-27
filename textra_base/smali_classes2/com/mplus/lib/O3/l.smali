@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/l; that initializes its fields with the provided parameters. It sets the integer field 'a' to the third parameter, and the object fields 'b' and 'c' to the first and second parameters, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/D5;Ljava/lang/String;I)V
     .locals 0
 

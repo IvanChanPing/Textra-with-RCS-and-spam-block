@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t8/b with a BufferedInputStream and a long value. It sets the object's fields with the provided input stream and long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/BufferedInputStream;J)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the 'b' field, which appears to represent a content length.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contentLength()J
     .locals 3
 
@@ -156,6 +158,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an InputStream object, specifically a BufferedInputStream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final source()Ljava/io/InputStream;
     .locals 2
 
@@ -168,6 +171,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an HttpBody object, including its source and content length.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

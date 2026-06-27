@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/u; that initializes an object with a reference to an Lcom/inmobi/media/M6; object. It sets the object's field 'a' to the provided Lcom/inmobi/media/M6; instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/M6;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a key event on an Android view, delegating the handling to the `M6` class. It returns a boolean indicating whether the event was handled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 2
 

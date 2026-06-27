@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/g3, calling its superclass constructor and setting an instance variable 'b' based on the provided parameters. It appears to be related to entity extraction using Google's ML Kit.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([BI)V
     .locals 1
 
@@ -31,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a byte at a specified index from an array, throwing an ArrayIndexOutOfBoundsException if the index is out of bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(I)B
     .locals 5
 
@@ -103,6 +105,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a byte from an array at the index specified by the input parameter. It appears to be an array accessor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(I)B
     .locals 2
 
@@ -115,6 +118,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'b' as an integer. It does not perform any operations, simply returning the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()I
     .locals 2
 

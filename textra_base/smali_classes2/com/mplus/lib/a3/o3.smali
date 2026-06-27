@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/o3, setting its fields 'a' and 'b' with the provided integer and Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcah object. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ILcom/google/android/gms/internal/mlkit_entity_extraction/zzcah;)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares the current object with another object of the same class, returning the difference between their 'a' fields. It implements a comparison function, likely for sorting purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic compareTo(Ljava/lang/Object;)I
     .locals 2
 
@@ -54,6 +56,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'a' as an integer. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -64,6 +67,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method merges two mlkit_entity_extraction objects, specifically a zzbxe and a zzbxk, and returns the merged zzbxe object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbys;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyt;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbys;
     .locals 1
 
@@ -80,6 +84,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not perform any meaningful operation with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyy;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyy;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbyy;
     .locals 1
 
@@ -100,6 +105,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzcai object by calling the zzb method on its b field, which is of type zzcah. It does not use the returned value of 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcai;
     .locals 2
 

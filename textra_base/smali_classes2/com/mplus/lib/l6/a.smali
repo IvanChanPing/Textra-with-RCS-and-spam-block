@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/l6/a class, setting its properties and optionally calling the a(Lcom/mplus/lib/x5/z;)V method. It sets up the object's state with default values and the provided Lcom/mplus/lib/x5/z object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/z;Z)V
     .locals 2
 
@@ -57,6 +58,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method recursively traverses a view hierarchy, collecting `BaseButton` instances in an `ArrayList`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/x5/z;)V
     .locals 5
 
@@ -181,6 +183,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the provided OnClickListener on each BaseButton in the ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Landroid/view/View$OnClickListener;)V
     .locals 3
 
@@ -449,6 +452,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the height of a view based on a spring update and toggles its visibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 11
 
@@ -511,6 +515,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name and the string representation of its `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/N; with a given Runnable and extends Lcom/google/android/gms/internal/play_billing/zzdy. It stores the provided Runnable in a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
@@ -31,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a stored Runnable and catches any exceptions, then reports them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 
@@ -57,6 +59,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of a Runnable object, specifically the 'a' field of the class, wrapped in a "task=[" and "]" string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Ljava/lang/String;
     .locals 4
 

@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static Date object in the class Lcom/mplus/lib/d3/h3. It sets the date to the Unix epoch (January 1, 1970, 00:00:00 GMT).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object with a JSON object, a date, and a JSON array, storing them in instance variables and creating a new JSON object that combines the input data. It sets up the object's state with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lorg/json/JSONObject;Ljava/util/Date;Lorg/json/JSONArray;)V
     .locals 4
 
@@ -71,6 +73,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of a JSONObject. It overrides the toString method to provide a human-readable representation of the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

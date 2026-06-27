@@ -33,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/c3/d, setting its fields with the provided array of objects and integer. It appears to be a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 0
 
@@ -47,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a cache or storage based on the input object, checking for equality with a stored object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 

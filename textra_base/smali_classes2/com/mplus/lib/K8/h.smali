@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/K8/h; and sets its field 'a' to the provided InterstitialAdDelegate object. It is a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/interstitial/view/InterstitialAdDelegate;)V
     .locals 0
 
@@ -44,6 +45,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the InterstitialAdViewModel that an ad has been impressed. It delegates the call to the onAdImpressed method of the InterstitialAdBaseViewModel instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdImpressed()V
     .locals 2
 
@@ -62,6 +64,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the InterstitialAdViewModel that an ad has been opened. It then returns without any further action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdOpened()V
     .locals 2
 

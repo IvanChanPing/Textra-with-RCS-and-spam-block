@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method decrements a counter in the provided object and returns the new value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H(Lcom/google/android/gms/internal/mlkit_entity_extraction/r;)I
     .locals 2
 

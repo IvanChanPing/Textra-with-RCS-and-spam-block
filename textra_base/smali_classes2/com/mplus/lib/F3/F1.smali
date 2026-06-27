@@ -167,6 +167,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, integer, and serializable object. It sets the enum's properties using the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;ILjava/io/Serializable;)V
     .locals 0
 
@@ -177,6 +178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/F3/F1; from a given string. It essentially implements the valueOf method for the F1 enum class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/F3/F1;
     .locals 2
 
@@ -197,6 +199,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of `Lcom/mplus/lib/F3/F1` enum values. It appears to be an implementation of the `values()` method in Java, which is used to return an array of all enum constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/F3/F1;
     .locals 2
 

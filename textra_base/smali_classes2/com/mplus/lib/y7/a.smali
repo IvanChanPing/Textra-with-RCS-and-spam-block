@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/y7/a, setting its 'j' field to the provided Lcom/mplus/lib/T4/d object. It also calls the superclass constructor with the provided Lcom/mplus/lib/L9/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/T4/d;Lcom/mplus/lib/L9/a;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes and uses an instance of `Lcom/mplus/lib/A2/r` to retrieve an object, then passes this object to `Lcom/mplus/lib/L9/a;->c` to get an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()I
     .locals 6
 
@@ -88,6 +90,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a fragment and sets an OnClickListener on a specific view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

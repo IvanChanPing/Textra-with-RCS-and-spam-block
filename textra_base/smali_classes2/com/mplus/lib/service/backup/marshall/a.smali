@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method creates and returns a Gson instance with custom type adapters for Uri and CharSequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a()Lcom/google/gson/Gson;
     .locals 4
 
@@ -65,6 +66,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and configures an Android `NotificationChannel` object based on the properties of the provided `Lcom/mplus/lib/l4/a` object. It sets various attributes such as sound, light color, vibration pattern, and more.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Lcom/mplus/lib/l4/a;)Landroid/app/NotificationChannel;
     .locals 5
 

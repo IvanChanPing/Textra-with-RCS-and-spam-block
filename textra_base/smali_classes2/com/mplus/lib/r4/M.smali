@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of class Lcom/mplus/lib/r4/M, which extends ArrayList, and sets a boolean field 'a' to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if all items in a collection are valid or not required.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Z
     .locals 5
 
@@ -90,6 +92,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if all elements in a collection are valid by calling the `c()` method on each element. If any element is invalid, it immediately returns `false`; otherwise, it returns `true` after checking all elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 4
 
@@ -145,6 +148,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds a specified number of new instances of `Lcom/mplus/lib/r4/L` to the collection. It calculates the number of instances to add based on the input parameter and the current size of the collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 3
 
@@ -185,6 +189,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of Lcom/mplus/lib/r4/L objects and returns the index of the first object that is not valid (i.e., its c() method returns false and its d field is false), or -1 if no such object is found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()I
     .locals 4
 

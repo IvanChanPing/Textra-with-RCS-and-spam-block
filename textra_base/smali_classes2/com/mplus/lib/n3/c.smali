@@ -37,6 +37,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string constant "CharMatcher.none()". It does not perform any actual computation or object state conversion.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

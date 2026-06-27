@@ -67,6 +67,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the `Lcom/mplus/lib/r4/j0` class, setting various member variables to default values. It appears to be a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 5
 
@@ -119,6 +120,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string based on the object's state, either a localized string or a value from another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/String;
     .locals 3
 
@@ -251,6 +253,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks certain conditions and returns true if all are met, including a check for an empty string and a flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Z)Z
     .locals 2
 
@@ -300,6 +303,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a field `q` is non-zero and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Z
     .locals 5
 
@@ -335,6 +339,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method conditionally prefixes the input string with a value obtained from `Lcom/mplus/lib/r4/n;->o` and appends a colon and a space.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/String;Z)Ljava/lang/String;
     .locals 3
 
@@ -390,6 +395,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string based on the state of an object, considering factors such as the object's properties and a boolean parameter. It returns a formatted string that may include the object's size and other details, using string resources from the application's context.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Z)Ljava/lang/String;
     .locals 16
 
@@ -862,6 +868,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, including its properties such as id, conversation id, queue id, kind, unread status, direction, participants, text, and timestamp.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

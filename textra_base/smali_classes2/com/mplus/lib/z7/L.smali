@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/z7/L class, setting its properties and creating an ArrayList. It takes two parameters, Lcom/mplus/lib/x5/l and Lcom/mplus/lib/x5/y, and stores them in the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -50,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current view's bounds have changed and notifies listeners if they have.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPreDraw()Z
     .locals 4
 

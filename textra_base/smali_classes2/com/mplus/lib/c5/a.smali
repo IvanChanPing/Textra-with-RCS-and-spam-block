@@ -125,6 +125,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initiates a phone call using the provided phone number.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static P(Landroid/content/Context;Lcom/mplus/lib/r4/l;Lcom/mplus/lib/O3/Q;)V
     .locals 5
 
@@ -2961,6 +2962,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method replaces characters in a given CharSequence with their corresponding values from a Hashtable, if available. It returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static V(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 7
 
@@ -3451,6 +3453,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method starts an activity using the provided context and intent, adding a flag to the intent before starting. If the activity is not found, it throws a custom exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a0(Landroid/content/Context;Landroid/content/Intent;I)V
     .locals 2
 
@@ -3487,6 +3490,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks a condition and either calls `Lcom/mplus/lib/c5/a;->P` or creates a `Lcom/mplus/lib/z7/B` instance to request the "android.permission.CALL_PHONE" permission.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public M(Landroid/content/Context;Lcom/mplus/lib/r4/l;Lcom/mplus/lib/O3/Q;)V
     .locals 9
 
@@ -3677,6 +3681,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the device screen is on and returns a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public T()Z
     .locals 3
 
@@ -3861,6 +3866,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method saves a file to the device's media storage, either to the external storage directory or to the MediaStore, depending on the Android version.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public W(Lcom/mplus/lib/r4/S;Ljava/lang/String;Ljava/lang/String;J)V
     .locals 20
 
@@ -4568,6 +4574,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method creates an intent to view a vCard and starts the activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b0(Landroid/net/Uri;)V
     .locals 3
 

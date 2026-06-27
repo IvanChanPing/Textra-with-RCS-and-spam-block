@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/Q7/c, storing a provided AppBackgroundAwareHandler. It sets the handler as a field in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/appbgdetection/AppBackgroundAwareHandler;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies that the app has entered the background by invoking a handler thread. It creates a new instance of Lcom/mplus/lib/Q7/b and ensures it's invoked on the handler thread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAppEnteredInBackground()V
     .locals 4
 
@@ -56,6 +58,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies that the app has entered the foreground by invoking a handler thread. It creates a new instance of Lcom/mplus/lib/Q7/b and ensures it's invoked on the handler thread.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAppEnteredInForeground()V
     .locals 4
 

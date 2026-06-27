@@ -37,6 +37,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an IndexOutOfBoundsException when called, indicating that it cannot read from empty metadata.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(I)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzapt;
     .locals 2
 
@@ -63,6 +64,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an IndexOutOfBoundsException when attempting to read from empty metadata. It does not return an object as its signature suggests, instead terminating with an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(I)Ljava/lang/Object;
     .locals 2
 

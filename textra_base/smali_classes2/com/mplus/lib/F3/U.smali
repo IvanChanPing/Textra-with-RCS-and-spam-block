@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class, checking if the provided protobuf message is immutable and creating a mutable copy if necessary. It throws an exception if the default instance is mutable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/protobuf/c;)V
     .locals 1
 
@@ -370,6 +371,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method invokes an interface method `a(Ljava/lang/Object;Ljava/lang/Object;)V` on an object of type `Lcom/mplus/lib/F3/T0;` obtained from `Lcom/mplus/lib/F3/Q0;->b(Ljava/lang/Object;)Lcom/mplus/lib/F3/T0;`. It appears to be a callback or event handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
@@ -394,6 +396,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a protobuf message is initialized and returns it if so, otherwise throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/google/protobuf/c;
     .locals 3
 
@@ -429,6 +432,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a protobuf message is mutable and makes it immutable if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/google/protobuf/c;
     .locals 2
 
@@ -484,6 +488,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a protobuf object is mutable and creates a new mutable instance if it's not. It then merges the existing data into the new instance and updates the object reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 3
 
@@ -558,6 +563,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle serialization or deserialization of data using the `com/mplus/lib/F3/Q0` and `com/mplus/lib/F3/T0` classes. It also catches and handles `RuntimeException` exceptions, specifically re-throwing `IOException` instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)V
     .locals 4
 
@@ -631,6 +637,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a protobuf object is initialized. It returns a boolean value indicating the initialization status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isInitialized()Z
     .locals 3
 

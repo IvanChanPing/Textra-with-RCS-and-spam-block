@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Lcom/mplus/lib/f3/h0 class. It creates a new instance with a constructor argument of 0 and assigns it to the static field d.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/f3/h0 class, creating a new Lcom/mplus/lib/f3/A0 object and assigning it to a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -49,6 +51,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/f3/h0 class, creating a new Lcom/mplus/lib/f3/A0 object and calling the c() method twice.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -67,6 +70,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle billing-related operations, specifically checking the status of a purchase and potentially throwing exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/google/android/gms/internal/play_billing/zzha;Ljava/lang/Object;)I
     .locals 5
 
@@ -242,6 +246,7 @@
     throw v2
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given map entry's value is valid according to certain rules, specifically related to protocol message reflection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/util/Map$Entry;)Z
     .locals 8
 
@@ -602,6 +607,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided object is of the correct type for a given protocol message field and throws an `IllegalArgumentException` if it's not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final h(Lcom/google/android/gms/internal/play_billing/zzha;Ljava/lang/Object;)V
     .locals 3
 
@@ -826,6 +832,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an iterator over the entries of a map, either a normal iterator or a custom iterator depending on the value of a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/util/Iterator;
     .locals 3
 
@@ -898,6 +905,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be responsible for finalizing and making immutable certain data structures within the `Lcom/mplus/lib/f3/A0` object, specifically lists and maps.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 7
 
@@ -1322,6 +1330,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method processes a protocol message reflection, handling cases where the object is a list or a single object, and stores the result in a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/google/android/gms/internal/play_billing/zzha;Ljava/lang/Object;)V
     .locals 5
 
@@ -1426,6 +1435,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if all entries in a map satisfy a certain condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()Z
     .locals 6
 
@@ -1518,6 +1528,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object by comparing their 'a' fields of type Lcom/mplus/lib/f3/A0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -1564,6 +1575,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the object referenced by the 'a' field of the class. It delegates the hash code calculation to the 'hashCode' method of the 'a' object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

@@ -39,6 +39,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to cast its result to Lcom/mplus/lib/Q6/e;. It simply calls the superclass method and returns the cast result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/U1/a;)Lcom/mplus/lib/U1/a;
     .locals 1
 
@@ -89,6 +90,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the clone() function to create a copy of the current object. It calls the superclass's c() method and casts the result to Lcom/mplus/lib/Q6/e.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clone()Ljava/lang/Object;
     .locals 2
 
@@ -105,6 +107,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to return an instance of Lcom/mplus/lib/Q6/e; cast from the result of the superclass method. It essentially proxies the superclass method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Class;)Lcom/mplus/lib/U1/a;
     .locals 1
 
@@ -121,6 +124,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to handle an object of type Lcom/mplus/lib/E1/o;, returning an object of type Lcom/mplus/lib/U1/a;. It simply calls the superclass method and returns the result cast to Lcom/mplus/lib/Q6/e;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/E1/o;)Lcom/mplus/lib/U1/a;
     .locals 1
 
@@ -159,6 +163,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field 'l' to true and returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j()Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -175,6 +180,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides and calls the superclass's `k()` method, then casts the result to `Lcom/mplus/lib/Q6/e;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k()Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -191,6 +197,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides and calls the superclass's `l()` method, then casts the result. It returns the casted object with no modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -221,6 +228,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides and calls the superclass's `o(II)` method, returning the result cast to `Lcom/mplus/lib/Q6/e;`. It essentially delegates the operation to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(II)Lcom/mplus/lib/U1/a;
     .locals 1
 
@@ -235,6 +243,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides and calls the superclass's `p()` method, then casts the result to `Lcom/mplus/lib/Q6/e;`. It returns the casted object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p()Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -249,6 +258,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to handle an object and returns the result cast to Lcom/mplus/lib/Q6/e;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t(Lcom/mplus/lib/B1/j;Ljava/lang/Object;)Lcom/mplus/lib/U1/a;
     .locals 1
 
@@ -267,6 +277,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a superclass method to handle an object of type Lcom/mplus/lib/B1/g; and returns an object of type Lcom/mplus/lib/U1/a; after casting to Lcom/mplus/lib/Q6/e;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u(Lcom/mplus/lib/B1/g;)Lcom/mplus/lib/U1/a;
     .locals 1
 
@@ -295,6 +306,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a parent class method to apply a theme and returns the result cast to Lcom/mplus/lib/Q6/e;. It simply calls the superclass method with the given theme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w(Landroid/content/res/Resources$Theme;)Lcom/mplus/lib/U1/a;
     .locals 1
 
@@ -309,6 +321,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `x` with a `B1/o` object and a boolean value, then casts the result to `Q6/e` and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y(Lcom/mplus/lib/L1/e;)Lcom/mplus/lib/U1/a;
     .locals 2
 

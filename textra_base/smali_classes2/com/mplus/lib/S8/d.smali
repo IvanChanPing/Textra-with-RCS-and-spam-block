@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/S8/d; with a MraidJsProperties object and an integer. It sets the object's fields 'a' and 'b' to the provided integer and MraidJsProperties object, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/richmedia/mraid/bridge/MraidJsProperties;I)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a map and a boolean value based on the value of a class field, invoking different methods of `MraidJsProperties`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final handle(Ljava/util/Map;Z)V
     .locals 2
 

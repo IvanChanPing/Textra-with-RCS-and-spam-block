@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/j9/a; that initializes an instance with a SystemMediaPlayer object. It sets the object's field 'a' to the provided SystemMediaPlayer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/video/vast/vastplayer/system/SystemMediaPlayer;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method is a callback for when a MediaPlayer is prepared, and it calls a static method to associate the MediaPlayer with a SystemMediaPlayer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPrepared(Landroid/media/MediaPlayer;)V
     .locals 2
 

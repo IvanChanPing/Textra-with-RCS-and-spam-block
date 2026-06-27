@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/K5/a with four integer parameters. It sets the object's fields a, b, c, and d to the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(IIII)V
     .locals 0
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/K5/b;`, creating it if necessary based on the object's state. It configures the instance according to the object's fields `a` and `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/K5/b;
     .locals 4
 
@@ -83,6 +85,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method compares two objects of type Lcom/mplus/lib/K5/a and returns true if their corresponding fields in Lcom/mplus/lib/K5/b match.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/K5/a;)Z
     .locals 3
 
@@ -256,6 +259,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/K5/b;`, creating it if necessary based on the object's state. It configures the instance with the object's `d` field value, unless it equals 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Lcom/mplus/lib/K5/b;
     .locals 4
 

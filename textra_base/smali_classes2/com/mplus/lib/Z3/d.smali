@@ -174,6 +174,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method initializes and starts the InMobi Choice CMP (Consent Management Platform) if it hasn't been started before, and accepts a Consumer that will be used to handle the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Ljava/util/function/Consumer;)V
     .locals 5
 
@@ -254,6 +255,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a shared preference change is related to certain IAB consent strings and if so, posts a message to a bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 3
 

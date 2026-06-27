@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B8/e, setting its internal state with a provided list and object. It appears to be a constructor for a custom list wrapper class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/List;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzahx;)V
     .locals 1
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B8/e, setting its internal state with a given list and object. It appears to be a constructor for a custom list wrapper class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/List;Lcom/mplus/lib/n3/e;)V
     .locals 1
 
@@ -61,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B8/e, setting its internal state with a provided list and a nullable function. It ensures the provided list and function are not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/List;Lcom/smaato/sdk/core/util/fi/NullableFunction;)V
     .locals 1
 
@@ -91,6 +94,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the list based on the value of the `a` field, either by calling the superclass's `clear()` method or by clearing the `b` list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public clear()V
     .locals 2
 
@@ -121,6 +125,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a list at a specified index and applies a transformation to it based on the value of a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 3
 
@@ -311,6 +316,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator for the list at the specified index based on the value of a field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator(I)Ljava/util/ListIterator;
     .locals 3
 
@@ -397,6 +403,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object at a specified index from a list and applies a function to the removed object before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(I)Ljava/lang/Object;
     .locals 3
 
@@ -489,6 +496,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list, either by calling the superclass's removeRange method or by clearing a sublist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public removeRange(II)V
     .locals 2
 
@@ -547,6 +555,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a list based on the value of a field `a`. It uses a switch statement to determine which list size to return.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -60,6 +60,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the string "Optional.absent()".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 
@@ -74,6 +75,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method takes a zzahx object as input and returns a zzaih object, but it ignores the input and always returns a static instance of class E.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzahx;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 1
 
@@ -84,6 +86,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an IllegalStateException when called, indicating that Optional.get() was called on an absent value. It does not return an object as declared.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/lang/Object;
     .locals 3
 

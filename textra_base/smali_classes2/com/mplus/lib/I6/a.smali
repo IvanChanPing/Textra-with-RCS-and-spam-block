@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static float field `j` in class `Lcom/mplus/lib/I6/a;` by calling `Lcom/mplus/lib/z7/m;->c(I)I` with argument 1 and converting the result to a float.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -41,6 +42,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/I6/a class, setting its properties and calling the superclass constructor. It sets the object's fields, including g, i, e, and f, with provided and default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/q;Lcom/mplus/lib/v6/P;Lcom/mplus/lib/v6/K;)V
     .locals 0
 
@@ -61,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a ShapeDrawable with a rounded rectangle shape and custom stroke properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n0(IIII)Landroid/graphics/drawable/ShapeDrawable;
     .locals 7
 
@@ -147,6 +150,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if certain conditions are met, including the existence of a list and a specific context configuration, and returns a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized o0()Z
     .locals 2
 
@@ -237,6 +241,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method runs a specific task on the main thread using `Lcom/mplus/lib/ui/main/App;->runOnMainThread` and handles synchronization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized p0()V
     .locals 4
 

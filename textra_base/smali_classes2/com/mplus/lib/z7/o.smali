@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/z7/o, setting its fields and calling the superclass constructor. It stores an integer, object, and runnable, and passes a handler to the superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/os/Handler;Ljava/lang/Object;Ljava/lang/Runnable;I)V
     .locals 0
 

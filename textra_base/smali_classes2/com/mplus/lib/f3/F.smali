@@ -40,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of `Lcom/mplus/lib/f3/F` objects. It appears to be an implementation of the `values()` method, which is typically used to return an array of enum constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/f3/F;
     .locals 2
 
@@ -64,6 +65,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a given Runnable and then returns. It does not appear to use the integer values or have any external dependencies.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 1
 

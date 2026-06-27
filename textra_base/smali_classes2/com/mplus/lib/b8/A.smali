@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes a TCModel object, retrieves its policy version, and returns it as an Integer object. It ignores the initial and final values of the local variable v0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;)Ljava/lang/Object;
     .locals 1
 
@@ -27,6 +28,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the policy version of a TCModel object using an integer value. It casts the provided object to an integer and then calls the setPolicyVersion method on the TCModel object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setValue(Lcom/smaato/sdk/core/gdpr/tcfv2/TCModel;Ljava/lang/Object;)V
     .locals 1
 

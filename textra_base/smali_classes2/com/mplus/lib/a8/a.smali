@@ -165,6 +165,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns a string stored in the object's field 'c'. It does not perform any actual consent string generation or processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getConsentString()Ljava/lang/String;
     .locals 2
 
@@ -177,6 +178,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing purposes. It retrieves the value of the 'e' field from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPurposesString()Ljava/lang/String;
     .locals 2
 
@@ -187,6 +189,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the SubjectToGdpr object associated with the class instance. It does not perform any GDPR-related checks or operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSubjectToGdpr()Lcom/smaato/sdk/core/gdpr/SubjectToGdpr;
     .locals 2
 
@@ -199,6 +202,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing vendors. It simply retrieves the value of the 'd' field from the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVendorsString()Ljava/lang/String;
     .locals 2
 
@@ -299,6 +303,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the presence of a component based on a boolean flag. It returns the value of the instance variable 'a' indicating whether the component is present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isCmpPresent()Z
     .locals 2
 

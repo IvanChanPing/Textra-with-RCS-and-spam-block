@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the input object is null and returns false if so, otherwise it attempts to add the object to the list and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/r4/l0;)Z
     .locals 1
 
@@ -34,6 +35,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method adds an object of type Lcom/mplus/lib/r4/l0; to the collection and returns a boolean result. It delegates the actual addition to the 'a' method in the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -367,6 +369,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a collection is empty by calling the size() method and returns true if the size is 0, false otherwise. It appears to be part of a class that extends AbstractCollection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 2
 

@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/A6/b, storing a reference to an object of type Lcom/mplus/lib/A6/a. It sets up the object with the provided parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/A6/a;)V
     .locals 0
 
@@ -797,6 +798,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided integer object is greater than 0 and if so, it sets a billing override value and notifies a consumer, otherwise it runs a runnable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zzb(Ljava/lang/Object;)V
     .locals 4
 

@@ -41,6 +41,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/t5/d, setting a boolean field 'a' to true. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/t5/d;` and initializes its fields `b` and `c` with values 0 and the input parameter `p0`, respectively. It then returns the newly created instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(I)Lcom/mplus/lib/t5/d;
     .locals 3
 
@@ -77,6 +79,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/t5/d;`, initializing its fields with the provided parameters. It sets the object's properties based on the input integers and boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(IIIZ)Lcom/mplus/lib/t5/d;
     .locals 3
 
@@ -113,6 +116,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/t5/d, initializing some of its fields. It sets the 'b' field to 5, the 'c' field to a resource ID 0x7f0a00f1, and the 'l' field to the input boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Z)Lcom/mplus/lib/t5/d;
     .locals 3
 
@@ -139,6 +143,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/t5/d;` and initializes its fields `b` and `c` with values 1 and the input parameter `p0`, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(I)Lcom/mplus/lib/t5/d;
     .locals 3
 
@@ -159,6 +164,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/t5/d`, initializing its fields with the provided parameters. It sets the `b` field to 6, the `c` field to the provided integer, and the `m` field to the provided `Lcom/mplus/lib/t5/f` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(ILcom/mplus/lib/t5/f;)Lcom/mplus/lib/t5/d;
     .locals 3
 
@@ -217,6 +223,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Drawable object, specifically a VectorDrawableCompat if it doesn't already exist, based on a resource ID stored in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroid/graphics/drawable/Drawable;
     .locals 3
 
@@ -264,6 +271,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a CharSequence, either a previously stored value or a string resource retrieved from the app context based on an integer ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/CharSequence;
     .locals 3
 
@@ -313,6 +321,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

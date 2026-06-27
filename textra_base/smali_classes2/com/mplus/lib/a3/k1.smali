@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/k1, copying data from the provided Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqv object. It sets up HashMaps and assigns values from the zzaqv object to its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqv;)V
     .locals 3
 
@@ -65,6 +66,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method invokes the `zza` method of a `zzaqy` interface instance, either from a hashmap or a default instance, passing `zzapt` and two `Object` parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzapt;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
@@ -102,6 +104,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method invokes a callback function `zza` on a `zzaqx` object if it exists, otherwise it iterates over the provided iterator and recursively calls `zza` on itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzapt;Ljava/util/Iterator;Ljava/lang/Object;)V
     .locals 3
 

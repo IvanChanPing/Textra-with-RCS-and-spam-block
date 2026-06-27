@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/f3/L, storing the provided ExecutorService instance. It extends the Lcom/google/android/gms/internal/play_billing/zzec class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
@@ -27,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls the awaitTermination method of an ExecutorService instance, waiting for termination of tasks. It returns a boolean indicating whether termination occurred within the specified time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
     .locals 2
 
@@ -43,6 +45,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method executes a given Runnable task using an ExecutorService. It does not return any value and appears to set an integer to 1 and then to 5, though the latter has no apparent effect.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 2
 
@@ -57,6 +60,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the ExecutorService is shut down. It returns a boolean value indicating the shutdown status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isShutdown()Z
     .locals 2
 
@@ -71,6 +75,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the ExecutorService is terminated. It returns a boolean value indicating the termination status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isTerminated()Z
     .locals 2
 
@@ -87,6 +92,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method shuts down an ExecutorService. It does this by calling the shutdown method on the ExecutorService instance stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final shutdown()V
     .locals 2
 
@@ -103,6 +109,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method shuts down an executor service immediately and returns a list of tasks that were not completed. It invokes the shutdownNow method on an ExecutorService instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final shutdownNow()Ljava/util/List;
     .locals 2
 
@@ -119,6 +126,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, specifically formatting the result of the superclass's toString method with the string representation of the ExecutorService object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 5
 

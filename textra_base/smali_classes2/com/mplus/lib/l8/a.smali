@@ -31,6 +31,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/l8/a class, setting its properties with the provided parameters. It extends the Lcom/smaato/sdk/core/mvvm/model/AdRequest class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/ad/AdFormat;Ljava/lang/String;Ljava/lang/String;Lcom/smaato/sdk/core/ad/KeyValuePairs;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
 
@@ -373,6 +374,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the KeyValuePairs object stored in the 'd' field of the class. It always returns this object, regardless of any other factors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKeyValuePairs()Lcom/smaato/sdk/core/ad/KeyValuePairs;
     .locals 2
 
@@ -383,6 +385,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the mediation adapter version as a string. It retrieves the version from a class field named 'h'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMediationAdapterVersion()Ljava/lang/String;
     .locals 2
 
@@ -391,6 +394,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the mediation network name stored in the 'f' field of the class. It always returns this field regardless of any other conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMediationNetworkName()Ljava/lang/String;
     .locals 2
 
@@ -401,6 +405,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the mediation network SDK version as a string. It retrieves the version from a field named 'g' in the class Lcom/mplus/lib/l8/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getMediationNetworkSdkVersion()Ljava/lang/String;
     .locals 2
 
@@ -411,6 +416,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Map object stored in the 'e' field of the class. It does not perform any additional operations despite the constants 0x7 and 0x6 being defined.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getObjectExtras()Ljava/util/Map;
     .locals 2
 
@@ -435,6 +441,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Runnable object stored in the 'i' field of the class. It does not perform any expiration checks or handling.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOnCsmAdExpired()Ljava/lang/Runnable;
     .locals 2
 
@@ -445,6 +452,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a unique ID string stored in the object's field 'c'. It does not generate a new ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getUBUniqueId()Ljava/lang/String;
     .locals 2
 

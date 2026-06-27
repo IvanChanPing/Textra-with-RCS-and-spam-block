@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/u6/a, storing a CoverFlow object and creating a new OverScroller. It sets up the object's properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/widgets/coverflow/CoverFlow;)V
     .locals 1
 
@@ -44,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method stops a CoverFlow view's scrolling animation by removing callbacks and forcing the OverScroller to finish.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 3
 
@@ -70,6 +72,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the scrolling and selection of items in a CoverFlow widget. It computes the scroll offset, updates the current position, and selects the item at the current position when the scrolling is finished.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 
@@ -250,6 +253,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It does not directly use the return value's length or any specific object properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

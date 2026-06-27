@@ -16,6 +16,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a boolean field 'a' to true when called. It ignores the input parameter and always sets the field to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChange(Z)V
     .locals 1
 
@@ -30,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field 'a' to true when called. It ignores the input parameters and always sets the field to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChange(ZLandroid/net/Uri;)V
     .locals 1
 
@@ -42,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field 'a' to true when called, ignoring the input parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChange(ZLandroid/net/Uri;I)V
     .locals 1
 
@@ -56,6 +59,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field 'a' to true in the class Lcom/mplus/lib/v4/e. It ignores the input parameters and always sets the field to true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChange(ZLjava/util/Collection;I)V
     .locals 1
 

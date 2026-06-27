@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/O5/c` class, setting up its UI components and internal state. It retrieves various views from the provided `Lcom/mplus/lib/x5/y` interface and stores them as instance fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/y;)V
     .locals 2
 
@@ -107,6 +108,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the 'i' field, which is an instance of Lcom/mplus/lib/s5/r. It appears to be a getter method for the 'i' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 

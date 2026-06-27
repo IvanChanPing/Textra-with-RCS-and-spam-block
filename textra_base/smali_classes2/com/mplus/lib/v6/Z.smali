@@ -83,6 +83,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `I` of type `Lcom/mplus/lib/b2/e;` with an instance created using values 40.0 and 10.0. It sets up a constant for later use in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -99,6 +100,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/v6/Z class, setting its fields with the provided parameters. It calls the superclass constructor and assigns the input objects to the corresponding fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/q;Lcom/mplus/lib/h6/d;Lcom/mplus/lib/v6/K;Lcom/mplus/lib/v6/k;Lcom/mplus/lib/v6/P;Lcom/mplus/lib/s5/q;)V
     .locals 2
 
@@ -123,6 +125,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method casts the input object to Lcom/mplus/lib/y5/z, then calls s0(ZZ) with false parameters and potentially clears the SendText field if a condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Ljava/lang/Object;)V
     .locals 1
 
@@ -156,6 +159,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the SendText object is not editable and sets the cursor visibility of a TextView to true if so.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 2
 
@@ -1213,6 +1217,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the state by calling `s0` with false parameters when a spring is at rest. It does not use the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -1505,6 +1510,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a spring animation in the `Lcom/mplus/lib/v6/Z` class. It checks for existing spring instances, creates a new one if necessary, and sets its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0()V
     .locals 6
 
@@ -1640,6 +1646,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adjusts the width of `SendText` and `SignatureText` views based on the available space in the `BubbleView`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0()V
     .locals 4
 
@@ -1801,6 +1808,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method toggles the state of an object, updating various fields and notifying other components.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s0(ZZ)V
     .locals 7
 

@@ -49,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method repeatedly reads data from a source using `Lcom/mplus/lib/Va/c;->u` and writes it to a destination using `Lcom/mplus/lib/Va/q;->i` until no more data is available.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b0(Lcom/mplus/lib/Va/q;)V
     .locals 6
 

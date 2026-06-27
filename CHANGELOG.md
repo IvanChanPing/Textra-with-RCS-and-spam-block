@@ -1,3 +1,13 @@
+## 2026-06-27 — GROQ method annotations across the FULL com/mplus/lib tree (zero Claude tokens)
+
+Ran scripts/run_annotate_all.sh (drives groq_annotate_verify.py --write) over all 3,544 smali
+files. Cheap non-Anthropic pipeline: llama-3.3-70b annotates, gpt-oss-20b judges, deterministic
+Python grounding gates. ACCEPT=11,271 / FLAG=5,392; 2,863 files now carry `# M-ROLE [GROQ]`
+method lines tagged author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-
+verified. Purely additive: verified 0 non-comment lines added, 0 lines removed across the tree.
+Rust untouched; existing class-level # ANNOTATION + Opus hand-annotations untouched. Flagged
+methods left for review (per-file *.annotate_report.jsonl, gitignored).
+
 ## 2026-06-27 — GROQ method-level annotations on 6 hot RCS/tapback files (zero Claude tokens)
 
 Ran scripts/groq_annotate_verify.py --write on h5/h, r4/H, r4/w, r4/x, C4/e, c5/d.

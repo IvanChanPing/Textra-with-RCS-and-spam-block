@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/U5/c class, setting its properties and calling the superclass constructor. It sets the context, a reference to Lcom/mplus/lib/U5/d, and initializes two instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/U5/d;Landroid/content/Context;)V
     .locals 0
 

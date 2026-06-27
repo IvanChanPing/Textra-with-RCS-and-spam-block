@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/R5/b class with a Context, Uri, and String. It sets the class fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
     .locals 0
 
@@ -36,6 +37,7 @@
 .method public abstract a(Lcom/mplus/lib/N4/d;)Lcom/mplus/lib/R5/h;
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, including its class name and the value of its `b` field, which is an `android/net/Uri` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

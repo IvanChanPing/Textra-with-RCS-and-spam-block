@@ -469,6 +469,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a static boolean flag and, if true, uses sun/misc/Unsafe to get the array index scale of the input Class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/Class;)V
     .locals 2
 
@@ -628,6 +629,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a given object using the sun/misc/Unsafe class. It takes a long offset and an object as parameters and returns the integer value at that offset in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(JLjava/lang/Object;)I
     .locals 2
 
@@ -666,6 +668,7 @@
     return-wide p0
 .end method
 
+# M-ROLE [GROQ]: This method allocates a new instance of the given class using sun/misc/Unsafe, returning the instance if successful or throwing an IllegalStateException if instantiation fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
 
@@ -698,6 +701,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a given memory location using sun/misc/Unsafe. It takes a long offset and an object as parameters and returns the retrieved object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(JLjava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
@@ -718,6 +722,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to obtain an instance of `sun/misc/Unsafe` using `java/security/AccessController`. If successful, it returns the instance; otherwise, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h()Lsun/misc/Unsafe;
     .locals 2
 
@@ -770,6 +775,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a long value in an object using sun/misc/Unsafe. It appears to be used for direct memory access.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/lang/Object;JJ)V
     .locals 8
 
@@ -796,6 +802,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an object field using sun/misc/Unsafe. It stores the object `p3` at the offset `p0` in the object `p2`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(JLjava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
@@ -879,6 +886,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific byte in an object is non-zero.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic m(JLjava/lang/Object;)Z
     .locals 4
 
@@ -950,6 +958,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given class has certain reflection methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(Ljava/lang/Class;)Z
     .locals 7
 
@@ -1112,6 +1121,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the array base offset of a given class if a certain condition is met, otherwise it returns -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Ljava/lang/Class;)I
     .locals 2
 

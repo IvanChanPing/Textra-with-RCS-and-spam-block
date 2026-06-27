@@ -123,6 +123,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method creates an instance of `Lcom/mplus/lib/j4/a` and calls its `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 3
 
@@ -157,6 +158,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of an activity, specifically checking for a picked ringtone URI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityResult(IILandroid/content/Intent;)V
     .locals 4
 
@@ -247,6 +249,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an Android activity, setting its content view and configuring various components such as a web view and a navigation bar.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
 
@@ -429,6 +432,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method, unregistering a shared preference change listener and removing an object from an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onDestroy()V
     .locals 3
 
@@ -475,6 +479,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onResume() method of its superclass and calls a method p0() on an object of type Lcom/mplus/lib/x7/f.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onResume()V
     .locals 2
 
@@ -493,6 +498,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a title using the provided integer resource ID. It invokes a method on an object of class Lcom/mplus/lib/t5/a to perform this action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setTitle(I)V
     .locals 2
 

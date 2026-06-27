@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f3/y with five AtomicReferenceFieldUpdater objects. It sets these updaters as fields of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
     .locals 0
 
@@ -41,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method atomically swaps the value of a field in the provided object with a predefined value (`Lcom/mplus/lib/f3/x;->d`) and returns the previous value. It appears to be part of a synchronization mechanism.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/internal/play_billing/zzdy;)Lcom/mplus/lib/f3/x;
     .locals 3
 
@@ -61,6 +63,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates a field in the provided `zzdy` object with a specific `E` enum value and returns the previous value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/google/android/gms/internal/play_billing/zzdy;)Lcom/mplus/lib/f3/E;
     .locals 3
 
@@ -83,6 +86,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates a field using an AtomicReferenceFieldUpdater and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/f3/E;Lcom/mplus/lib/f3/E;)V
     .locals 2
 
@@ -97,6 +101,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a field in the provided object `p1` to the given thread `p2` using an `AtomicReferenceFieldUpdater`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lcom/mplus/lib/f3/E;Ljava/lang/Thread;)V
     .locals 2
 
@@ -109,6 +114,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `zza` from `Lcom/google/android/gms/internal/play_billing/zzdz` to compare and update objects using an `AtomicReferenceFieldUpdater`. It returns a boolean indicating success.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/google/android/gms/internal/play_billing/zzdy;Lcom/mplus/lib/f3/x;Lcom/mplus/lib/f3/x;)Z
     .locals 2
 
@@ -123,6 +129,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls `zza` from `Lcom/google/android/gms/internal/play_billing/zzdz` to perform an atomic update operation. It returns a boolean result indicating success or failure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/google/android/gms/internal/play_billing/zzdy;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 2
 
@@ -137,6 +144,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calls `zza` from `Lcom/google/android/gms/internal/play_billing/zzdz` to perform an atomic update operation. It returns a boolean result indicating success or failure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/google/android/gms/internal/play_billing/zzdy;Lcom/mplus/lib/f3/E;Lcom/mplus/lib/f3/E;)Z
     .locals 2
 

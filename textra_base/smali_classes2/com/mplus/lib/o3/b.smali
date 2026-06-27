@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/b with a Map, but only if the Map is empty, otherwise it throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 1
 
@@ -44,6 +45,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Collection instance, initializing it if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/Collection;
     .locals 3
 
@@ -77,6 +79,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Map object, either by retrieving a cached instance or by calling method f() to initialize and cache it if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/util/Map;
     .locals 2
 
@@ -100,6 +103,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method clears all collections in a map and then clears the map itself, also resetting a counter variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()V
     .locals 4
 
@@ -154,6 +158,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/a3/Y`, passing the current object, a map, and an integer to its constructor. It appears to be related to serialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public f()Ljava/util/Map;
     .locals 4
 
@@ -177,6 +182,7 @@
 .method public abstract g()Ljava/util/Collection;
 .end method
 
+# M-ROLE [GROQ]: This method delegates the get operation to another method, returning a Collection. It essentially calls its own get method that returns a List.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic get(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 1
 
@@ -251,6 +257,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set object by creating a new instance of Lcom/mplus/lib/o3/e, passing the current object and a map to its constructor. It effectively wraps the map in a set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public h()Ljava/util/Set;
     .locals 3
 
@@ -269,6 +276,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an object to a collection in a map, creating a new collection if the key is not present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 4
 
@@ -370,6 +378,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Collection object, initializing it if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final values()Ljava/util/Collection;
     .locals 3
 

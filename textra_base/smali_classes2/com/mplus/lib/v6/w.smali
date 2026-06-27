@@ -24,6 +24,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method `o0()` within the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K()V
     .locals 1
 
@@ -34,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a selected item from a CoverFlow, either the currently selected item or a default item if no selection is made.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()Lcom/mplus/lib/K5/b;
     .locals 5
 
@@ -75,6 +77,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object's `h` field is equal to the result of `n0()` and sets the visibility of a button based on the result. It also updates an `E` object with the result of `n0()` if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 4
 

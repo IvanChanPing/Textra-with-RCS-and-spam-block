@@ -23,6 +23,7 @@
 .method public abstract b(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the object's state, specifically checking if a field 'a' is equal to 3 and then retrieving a value from another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()I
     .locals 3
 
@@ -62,6 +63,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the object's fields `a` and `b` with values from the input `Lcom/mplus/lib/K5/b` object. It appears to copy the state of the input object to the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(Lcom/mplus/lib/K5/b;)V
     .locals 2
 

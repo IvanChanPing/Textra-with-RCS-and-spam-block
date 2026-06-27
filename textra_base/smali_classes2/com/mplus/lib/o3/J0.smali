@@ -35,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the J0 class, setting its 'f' field to the provided U object and calling the superclass constructor with a Comparator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/U;Ljava/util/Comparator;)V
     .locals 0
 
@@ -57,6 +58,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `b` on the `f` field of the class, passing the provided parameters, and returns the result. It does not use the constant 7, which is unused in the return statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I[Ljava/lang/Object;)I
     .locals 2
 
@@ -120,6 +122,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is contained in a sorted list using binary search. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 4
 
@@ -161,6 +164,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the collection contains all elements from the specified collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 7
 
@@ -340,6 +344,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by calling the `d()` method of the `Lcom/mplus/lib/o3/U` object referenced by the `f` field. It appears to be a wrapper around the `d()` method of `Lcom/mplus/lib/o3/O`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()I
     .locals 2
 
@@ -396,6 +401,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object, specifically comparing sets.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -547,6 +553,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the first element of a collection if it's not empty, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final first()Ljava/lang/Object;
     .locals 3
 
@@ -702,6 +709,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the last element in a collection if it's not empty, otherwise it throws a NoSuchElementException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final last()Ljava/lang/Object;
     .locals 3
 
@@ -842,6 +850,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It appears to be part of a class that wraps another collection, returning the size of the wrapped collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -860,6 +869,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method performs a binary search on a list using a comparator and returns the index of the found object, or the insertion point if not found, with an optional offset if the second parameter is true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t(Ljava/lang/Object;Z)I
     .locals 3
 

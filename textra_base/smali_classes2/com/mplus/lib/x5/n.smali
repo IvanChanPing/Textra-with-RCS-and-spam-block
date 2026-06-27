@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/x5/n class, setting its layoutManager field and calling the superclass constructor. It takes a BaseLinearLayoutManager and a Context as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ui/common/base/BaseLinearLayoutManager;Landroid/content/Context;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method computes the scroll vector for a given position in a RecyclerView. It delegates the computation to the LinearLayoutManager instance stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final computeScrollVectorForPosition(I)Landroid/graphics/PointF;
     .locals 2
 

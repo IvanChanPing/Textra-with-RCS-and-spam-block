@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static context by creating a fixed thread pool with one thread and a handler for the main looper. It sets up the environment for potential future asynchronous operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -35,6 +36,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/E3/E, setting its fields with the provided parameters. It stores a string, an unmodifiable list, and a bundle object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
@@ -55,6 +57,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of the object, formatting the full text and links into a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

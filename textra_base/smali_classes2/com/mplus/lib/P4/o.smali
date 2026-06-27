@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/P4/o class, setting its member variables to default values. It calls the superclass constructor and sets boolean and integer fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -45,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/P4/o with two boolean parameters, setting instance variables based on these parameters. It appears to set default values and perform basic boolean logic operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(ZZ)V
     .locals 1
 
@@ -159,6 +161,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `a` field. If `a` is 0, it calls the private method `a()` to get the string, otherwise it calls the superclass's `toString()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 2
 

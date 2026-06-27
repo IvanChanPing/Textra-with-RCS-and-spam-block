@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/Z; that initializes an object with a reference to Lcom/inmobi/media/s8;. It sets the object's field 'a' to the provided Lcom/inmobi/media/s8; instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/s8;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the buffering status of a MediaPlayer instance. It delegates the update to the `com/inmobi/media/s8` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBufferingUpdate(Landroid/media/MediaPlayer;I)V
     .locals 2
 

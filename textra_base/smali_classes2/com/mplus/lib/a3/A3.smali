@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the A3 class. It creates a new instance of A3 and assigns it to a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the A3 class, setting up a ConcurrentHashMap and an instance of u3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -53,6 +55,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves or creates an instance of `Lcom/mplus/lib/a3/D3` associated with the given `Ljava/lang/Class` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Class;)Lcom/mplus/lib/a3/D3;
     .locals 7
 

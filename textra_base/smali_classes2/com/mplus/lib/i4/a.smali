@@ -317,6 +317,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method reads a properties file and returns the value of the "random" property.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static S()Ljava/lang/String;
     .locals 4
 
@@ -397,6 +398,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method filters a map of entries based on a given string and returns the first matching result as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static T(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
@@ -599,6 +601,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/D6/d`, initializing it with an `AlarmManager` and other parameters. It appears to be related to alarm management.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public U(Landroid/content/Intent;)Lcom/mplus/lib/D6/d;
     .locals 5
 
@@ -641,6 +644,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a license string by concatenating the "license" prefix with the Android ID and the hash code of the app's signature, then encrypts and truncates the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public V()Ljava/lang/String;
     .locals 5
 

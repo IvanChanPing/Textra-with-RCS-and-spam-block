@@ -27,6 +27,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method takes an integer, applies a bitwise AND operation with 0xFFFFFF, and then formats the result as a hexadecimal string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(I)Ljava/lang/String;
     .locals 2
 
@@ -61,6 +62,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method constructs and returns a URL string for downloading an emoji zip file based on input parameters. It appends the input object's string and integer values to a base URL.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Lcom/mplus/lib/F4/k;)Ljava/lang/String;
     .locals 3
 

@@ -47,6 +47,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the object's internal state and returns the object itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(I)Lcom/google/android/gms/internal/mlkit_language_id_common/zzlb;
     .locals 1
 

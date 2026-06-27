@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/n1 with an Iterable and an integer. It sets the object's fields 'a' and 'c' to the provided integer and Iterable, respectively, and 'b' to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Iterable;I)V
     .locals 0
 
@@ -38,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there is a next element in an iterable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 5
 
@@ -200,6 +202,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method implements the `next()` function of an iterator, returning the next object in a sequence.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 6
 
@@ -365,6 +368,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an item from a collection based on the state of the object, throwing an UnsupportedOperationException for certain states.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 3
 

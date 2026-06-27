@@ -33,6 +33,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an object at a specified index in a list. It creates a new instance of Lcom/mplus/lib/a3/l2 with the provided object and replaces the element at the given index in the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(ILjava/lang/Object;)V
     .locals 3
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list of objects, extracts a specific field from each object, and adds it to a new list, which is then passed to another method for processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 4
 

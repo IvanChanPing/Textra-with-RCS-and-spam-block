@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their `a` fields of type `Landroid/net/Uri;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -69,6 +70,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the hash code of the 'a' Uri object. It overrides the default hashCode method to provide a custom implementation based on the Uri object's hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

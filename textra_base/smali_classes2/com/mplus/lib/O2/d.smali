@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O2/d, setting its fields and calling the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the result of a Google API operation based on the instance's state, either by passing it to the superclass or by attempting to set the result of a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zab(Lcom/google/android/gms/common/api/Status;)V
     .locals 3
 
@@ -67,6 +69,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of a module installation, using a switch statement to determine the course of action based on the object's state. It either calls the superclass's method or attempts to set the result of a task using TaskUtil.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zac(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/common/moduleinstall/ModuleInstallIntentResponse;)V
     .locals 2
 
@@ -97,6 +100,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of a module installation, either by passing it to a superclass or by setting the result of a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zad(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/common/moduleinstall/ModuleInstallResponse;)V
     .locals 2
 
@@ -127,6 +131,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `zae` method from its superclass, handling the result of a module availability check based on the instance's state. It either delegates to the superclass or attempts to set the result of a task using `TaskUtil`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zae(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/common/moduleinstall/ModuleAvailabilityResponse;)V
     .locals 2
 

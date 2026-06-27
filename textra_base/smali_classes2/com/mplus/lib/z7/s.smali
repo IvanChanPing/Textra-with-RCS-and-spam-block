@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/z7/s, storing a Context and creating an Intent with the given Context and Class. It sets up the object's fields with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/Class;)V
     .locals 1
 
@@ -107,6 +108,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a PendingIntent for a broadcast intent, conditionally modifying the intent flags.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)Landroid/app/PendingIntent;
     .locals 4
 
@@ -148,6 +150,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes an `Intent` object if it doesn't already exist. It sets the initialized `Intent` to a class field `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 2
 
@@ -175,6 +178,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes or updates an Intent object with a given action string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/String;)V
     .locals 2
 
@@ -206,6 +210,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method puts a boolean extra into an Intent object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Ljava/lang/String;Z)V
     .locals 2
 

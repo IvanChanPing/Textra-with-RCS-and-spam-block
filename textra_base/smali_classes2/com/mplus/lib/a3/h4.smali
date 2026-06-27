@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/h4, calling the superclass constructor and setting a field to a singleton instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih. It appears to be related to Google's ML Kit entity extraction.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a custom downloader metadata object if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbvr;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhj;
     .locals 2
 
@@ -72,6 +74,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the downloadConstraints field of the class if it's not null, returning the instance, or throws a NullPointerException if it is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhi;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhj;
     .locals 2
 
@@ -99,6 +102,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets an extra HTTP headers object if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhj;
     .locals 2
 
@@ -126,6 +130,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a provided Uri is null, and if not, sets it as a field in the class and returns the class instance. If the Uri is null, it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Landroid/net/Uri;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhj;
     .locals 2
 
@@ -157,6 +162,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the `d` field to the input value and the `h` field to 1, then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze(I)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhj;
     .locals 1
 
@@ -173,6 +179,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets a URL string in the class instance if it's not null, otherwise throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhj;
     .locals 2
 
@@ -367,6 +374,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing a URL to download, or throws an exception if the URL has not been set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzh()Ljava/lang/String;
     .locals 3
 

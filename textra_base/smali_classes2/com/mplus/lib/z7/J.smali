@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method pauses the current thread for a specified duration. It catches any InterruptedException that may occur during the sleep period.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A(J)V
     .locals 1
 
@@ -891,6 +892,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts a Throwable object into a string representation of its stack trace.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static F(Ljava/lang/Throwable;)Ljava/lang/String;
     .locals 3
 
@@ -934,6 +936,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the input Exception is a RuntimeException, and if so, returns it; otherwise, it wraps the Exception in a new RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static G(Ljava/lang/Exception;)Ljava/lang/RuntimeException;
     .locals 2
 
@@ -1090,6 +1093,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates an ArrayList from a variable number of input objects. It utilizes the Arrays.asList function to convert the input array into a List, then passes this List to the ArrayList constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs c([Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 2
 
@@ -1108,6 +1112,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method clamps a given float value between a minimum and maximum value. It returns the clamped value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(FFF)F
     .locals 1
 
@@ -1144,6 +1149,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method closes a given Closeable object if it's not null. It catches any exceptions that occur during the close operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/io/Closeable;)V
     .locals 1
 
@@ -1166,6 +1172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method merges two input lists into a new ArrayList. It creates a new ArrayList with a capacity equal to the sum of the sizes of the two input lists, then adds all elements from both lists to the new ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
     .locals 4
 
@@ -1200,6 +1207,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method converts an array of Long objects to a primitive long array. It iterates over the input array, extracting the long value from each Long object and storing it in a new array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h([Ljava/lang/Long;)[J
     .locals 5
 
@@ -1240,6 +1248,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method converts an array of primitive long values to an array of Long objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i([J)[Ljava/lang/Long;
     .locals 5
 
@@ -1280,6 +1289,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first non-empty CharSequence, prioritizing the first parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 2
 
@@ -1301,6 +1311,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the second input string if the first is empty, otherwise returns the first string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -1320,6 +1331,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts a given string into a comma-separated string of hexadecimal Unicode code points.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
@@ -1411,6 +1423,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a singleton instance of `java/text/NumberFormat`, initializing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m()Ljava/text/NumberFormat;
     .locals 2
 
@@ -1506,6 +1519,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the device is in landscape orientation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Landroid/content/Context;)Z
     .locals 2
 
@@ -1547,6 +1561,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method generates and returns a new MotionEvent object with specific parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static q()Landroid/view/MotionEvent;
     .locals 9
 
@@ -1581,6 +1596,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new ArrayList and adds all elements from the input array to it. It then returns the populated ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs r([Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 2
 
@@ -1599,6 +1615,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a SpannableString with the character "!" and sets the input object as a span over this string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Ljava/lang/Object;)Landroid/text/SpannableString;
     .locals 5
 
@@ -1673,6 +1690,7 @@
     return-wide p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates a value based on input parameters, applying interpolation and clamping.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(FFFFF)F
     .locals 2
 
@@ -1715,6 +1733,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates a value based on input parameters, applying mathematical operations and then invoking another method `e(III)` to further process the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static v(IIIII)I
     .locals 5
 
@@ -1811,6 +1830,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is empty and returns an empty string if so, otherwise it appends a colon to the end of the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -1846,6 +1866,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method takes a string, attempts to convert it to bytes using UTF-8 encoding, and then converts those bytes back into a string. It throws a RuntimeException if the encoding fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
@@ -1886,6 +1907,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a SHA-256 hash of the input string and returns it in lowercase.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static z(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 

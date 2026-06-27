@@ -50,6 +50,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/V5/i;, setting its fields with results from Lcom/mplus/lib/F4/j;->V() and Lcom/mplus/lib/F4/j;->W().  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;)V
     .locals 0
 
@@ -600,6 +601,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method resets and clears the `s` field of the class `Lcom/mplus/lib/V5/i;` by setting it to null after potentially calling a method `e` on an object `k` of class `Lcom/mplus/lib/b2/d;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L()V
     .locals 4
 
@@ -634,6 +636,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a touch event by delegating it to another object if it exists, otherwise returning 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
@@ -1204,6 +1207,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a button click event, specifically for a button represented by `o` in the class, and triggers an action on a `G4/m` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 3
 
@@ -1255,6 +1259,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes an item from an ArrayList and then notifies a RecyclerView adapter to update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/F4/i;)V
     .locals 2
 
@@ -1287,6 +1292,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling `s0()` and then invokes `a0()` on the result of `Lcom/mplus/lib/F4/j;->U()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/G4/i;)V
     .locals 1
 
@@ -1307,6 +1313,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method listens for layout changes in a view and responds by calling `r0()` on the current object. It does not use the provided layout change information.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 1
 
@@ -1317,6 +1324,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates and notifies a RecyclerView adapter with a filtered list of items.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 7
 

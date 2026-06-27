@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/s3/s; with an integer value. It sets the object's field 'a' to the provided integer and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -30,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/s3/s;, initializing its fields with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
@@ -44,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a synthetic constructor for the class Lcom/mplus/lib/s3/s;, initializing its fields with the provided parameters. It calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;Z)V
     .locals 0
 
@@ -58,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/s3/s;, setting its fields 'a' to 8 and 'c' to the provided Lcom/mplus/lib/a3/K2; object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/a3/K2;)V
     .locals 1
 
@@ -155,6 +159,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an `OnSuccessListener` is set and if so, calls its `onSuccess` method with the result of a `Task`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final b()V
     .locals 4
 
@@ -228,6 +233,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met and if so, it resets and updates some object fields, otherwise it throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final c()V
     .locals 5
 
@@ -390,6 +396,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a part of an asynchronous task execution system. It checks the state of the task and performs different actions based on that state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 13
 

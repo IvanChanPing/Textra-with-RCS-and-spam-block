@@ -18,6 +18,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method handles a transaction on an Android Binder interface, specifically for the `onGetLaunchReviewFlowInfo` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 5
 

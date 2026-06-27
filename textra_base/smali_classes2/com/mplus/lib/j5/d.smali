@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/j5/d; that initializes an object with a reference to a DebugTelephonyActivity. It sets the object's field 'a' to the provided DebugTelephonyActivity instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/service/telephony/runtime/debug/DebugTelephonyActivity;)V
     .locals 0
 

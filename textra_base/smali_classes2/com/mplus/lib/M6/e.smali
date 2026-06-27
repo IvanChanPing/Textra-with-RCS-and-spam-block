@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/M6/e; with a context and an integer, then calls the superclass constructor. It sets the object's field 'b' to the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
@@ -157,6 +158,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a Function object based on the value of the instance variable 'b'. It returns either a new instance of Lcom/mplus/lib/B6/j or the result of invoking the superclass's b() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()Ljava/util/function/Function;
     .locals 3
 

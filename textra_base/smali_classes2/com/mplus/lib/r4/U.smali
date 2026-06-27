@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/U; with a byte array. It sets the byte array as a field of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>([B)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an InputStream, either by creating a ByteArrayInputStream from a byte array if it exists, or by returning an instance of Lcom/mplus/lib/ab/a if the byte array is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 3
 
@@ -61,6 +63,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of a byte array `a` as a long value, or 0 if the array is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLength()J
     .locals 3
 

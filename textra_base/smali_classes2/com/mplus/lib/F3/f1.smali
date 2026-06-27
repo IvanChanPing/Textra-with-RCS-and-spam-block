@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class with enum-like values. It creates instances of Lcom/mplus/lib/F3/f1 with specific string constants and integer values, then stores them in static fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 6
 
@@ -70,6 +71,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, index, and an additional integer value. It sets the enum's properties and an extra field 'a' with the provided integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -80,6 +82,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/F3/f1; based on the input integer value. It appears to be a factory method that returns different instances for input values 0 and 1, and null for other values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(I)Lcom/mplus/lib/F3/f1;
     .locals 2
 
@@ -114,6 +117,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum value of type Lcom/mplus/lib/F3/f1; from a given string. It essentially parses a string to a corresponding enum constant.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/F3/f1;
     .locals 2
 
@@ -136,6 +140,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of the class Lcom/mplus/lib/F3/f1. It appears to be an implementation of the values() method required by Java enums.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/F3/f1;
     .locals 2
 
@@ -156,6 +161,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the integer value of an enum instance if it's not the unknown enum value, otherwise it throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 3
 

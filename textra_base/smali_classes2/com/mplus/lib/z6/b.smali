@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/z6/b, setting its properties based on the provided context and parameters. It retrieves string resources and creates a TextAppearanceSpan object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;III)V
     .locals 6
 
@@ -145,6 +146,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method modifies a given CharSequence by adding a drawable and text, and applies spans to the text for styling.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/CharSequence;Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 4
 

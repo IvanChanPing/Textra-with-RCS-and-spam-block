@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/F3/x0 class, creating a new Lcom/mplus/lib/D6/d object with the provided parameters. It sets this new object as a field in the current instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/F3/A1;Lcom/mplus/lib/F3/C1;Lcom/google/protobuf/Value;)V
     .locals 6
 
@@ -37,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the sum of two values obtained by calling `Lcom/mplus/lib/F3/O;->c` with different parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/mplus/lib/D6/d;Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 3
 

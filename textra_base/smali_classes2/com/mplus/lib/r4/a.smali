@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a UriMatcher and adds various URI patterns for the "com.textra2" authority.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 5
 
@@ -99,6 +100,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates an MD5 hash of the input stream, uses it to find or create a corresponding file, and returns the file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Lcom/mplus/lib/r4/S;)Ljava/io/File;
     .locals 7
 
@@ -357,6 +359,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method takes a string input and returns a Uri object by prepending "content://com.textra2/drawable/" to the input string and parsing it as a Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;)Landroid/net/Uri;
     .locals 3
 
@@ -391,6 +394,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method generates a Uri for a media body content provider based on a given ID. It constructs the Uri by appending the ID to a base string and then parsing the resulting string into a Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(J)Landroid/net/Uri;
     .locals 3
 
@@ -485,6 +489,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates a MatrixCursor with a single row of data based on the provided parameters, including a URI, ID, display name, and size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f([Ljava/lang/String;JLandroid/net/Uri;Ljava/lang/String;J)Landroid/database/MatrixCursor;
     .locals 6
 
@@ -636,6 +641,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles different types of requests based on the provided Uri and integer parameter, returning various objects such as Lcom/mplus/lib/s4/b, Lcom/mplus/lib/E1/K, Lcom/mplus/lib/f1/e, or Lcom/mplus/lib/B2/l.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Landroid/net/Uri;I)Lcom/mplus/lib/s4/a;
     .locals 4
 
@@ -1445,6 +1451,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method queries data from a content provider based on the provided Uri and returns a Cursor object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 8
 
@@ -1649,6 +1656,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to Lcom/mplus/lib/z7/h;->x(Ljava/lang/Object;)Ljava/lang/String;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

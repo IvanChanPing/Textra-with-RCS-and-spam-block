@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to return an instance of `Lcom/mplus/lib/Ka/s;` from the `Lcom/google/android/gms/internal/mlkit_entity_extraction/M;` object, throwing an `IllegalStateException` if the connection has not been established.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/Ka/s;
     .locals 3
 
@@ -76,6 +77,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method adds a request property to an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/M. It takes two string parameters, a key and a value, and passes them to the addRequestProperty method of the M object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -90,6 +92,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a connected flag to true and invokes a connect method from the Google ML Kit library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final connect()V
     .locals 2
 
@@ -106,6 +109,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method disconnects from the Google ML Kit entity extraction service. It calls the disconnect method on the internal ML Kit entity extraction object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final disconnect()V
     .locals 2
 
@@ -116,6 +120,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the allow user interaction value from a URLConnection object. It appears to be a wrapper around the getAllowUserInteraction method of a URLConnection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAllowUserInteraction()Z
     .locals 2
 
@@ -167,6 +172,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the connect timeout value. It retrieves this value from an object of type Lcom/mplus/lib/Ka/B.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getConnectTimeout()I
     .locals 2
 
@@ -185,6 +191,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the content of a URL connection. It delegates the call to the `getContent()` method of a `java/net/URLConnection` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContent()Ljava/lang/Object;
     .locals 2
 
@@ -201,6 +208,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the `getContent` method of a `URLConnection` object, passing an array of classes, and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContent([Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
 
@@ -219,6 +227,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the content encoding of a URL connection. It delegates the call to the `getContentEncoding()` method of a `java/net/URLConnection` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContentEncoding()Ljava/lang/String;
     .locals 2
 
@@ -235,6 +244,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the content length of a URL connection. It invokes the getContentLength method of a URLConnection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContentLength()I
     .locals 2
 
@@ -251,6 +261,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the content length of a URL connection as a long value. It appears to be a wrapper around the `getContentLengthLong()` method of a `URLConnection` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContentLengthLong()J
     .locals 3
 
@@ -269,6 +280,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the content type of a URL connection. It retrieves the content type from a URLConnection object stored in the class field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getContentType()Ljava/lang/String;
     .locals 2
 
@@ -285,6 +297,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the date of a URL connection. It retrieves the date from the connection object stored in the 'a' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDate()J
     .locals 3
 
@@ -301,6 +314,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the default value of whether to use caches for a URL connection. It delegates this to the `getDefaultUseCaches()` method of a `URLConnection` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDefaultUseCaches()Z
     .locals 2
 
@@ -319,6 +333,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of `getDoInput()` from a `URLConnection` object. It checks if the connection is allowed to read input data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDoInput()Z
     .locals 2
 
@@ -335,6 +350,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of `getDoOutput()` from a `URLConnection` object. It appears to be a wrapper around the standard Java method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDoOutput()Z
     .locals 2
 
@@ -353,6 +369,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an InputStream representing an error stream. It delegates the call to the `getErrorStream()` method of an object of type `Lcom/google/android/gms/internal/mlkit_entity_extraction/M`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getErrorStream()Ljava/io/InputStream;
     .locals 2
 
@@ -385,6 +402,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a header field value by index from an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/M`. It returns the corresponding string value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeaderField(I)Ljava/lang/String;
     .locals 2
 
@@ -403,6 +421,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a header field value by delegating the call to `Lcom/google/android/gms/internal/mlkit_entity_extraction/M;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;`. It returns the result as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeaderField(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -419,6 +438,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the date value of a specified HTTP header field. It delegates the retrieval to an HttpURLConnection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeaderFieldDate(Ljava/lang/String;J)J
     .locals 2
 
@@ -435,6 +455,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer header field value from a URL connection. It wraps the `getHeaderFieldInt` method of a `URLConnection` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeaderFieldInt(Ljava/lang/String;I)I
     .locals 2
 
@@ -453,6 +474,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a header field key by index from an internal `M` object. It delegates the retrieval to the `getHeaderFieldKey` method of the `M` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeaderFieldKey(I)Ljava/lang/String;
     .locals 2
 
@@ -471,6 +493,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a long header field value from a URL connection. It delegates the call to the `getHeaderFieldLong` method of a `URLConnection` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeaderFieldLong(Ljava/lang/String;J)J
     .locals 2
 
@@ -485,6 +508,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns the header fields from an instance of `com/google/android/gms/internal/mlkit_entity_extraction/M`. It delegates the call to the `getHeaderFields()` method of the `com/google/android/gms/internal/mlkit_entity_extraction/M` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHeaderFields()Ljava/util/Map;
     .locals 2
 
@@ -533,6 +557,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an InputStream object by calling the getInputStream method of the internal M object. It appears to be a wrapper around the internal object's input stream retrieval.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInputStream()Ljava/io/InputStream;
     .locals 2
 
@@ -549,6 +574,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean value indicating whether instance follow redirects. It retrieves the value from `Lcom/mplus/lib/Ka/B;->u:Z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInstanceFollowRedirects()Z
     .locals 2
 
@@ -565,6 +591,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the last modified date of a URL connection. It returns the result as a long value representing the number of milliseconds since the epoch.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLastModified()J
     .locals 3
 
@@ -638,6 +665,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the local principal from an X509Certificate if available, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLocalPrincipal()Ljava/security/Principal;
     .locals 4
 
@@ -693,6 +721,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns an OutputStream object by delegating the call to the `getOutputStream()` method of the `com/google/android/gms/internal/mlkit_entity_extraction/M` class. It effectively acts as a wrapper around this internal class's method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOutputStream()Ljava/io/OutputStream;
     .locals 2
 
@@ -707,6 +736,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the peer's principal from an X509 certificate.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPeerPrincipal()Ljava/security/Principal;
     .locals 4
 
@@ -762,6 +792,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns a Java security permission. It delegates the retrieval to an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/M`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPermission()Ljava/security/Permission;
     .locals 2
 
@@ -780,6 +811,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the read timeout value. It retrieves this value from an object of type Lcom/mplus/lib/Ka/B.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getReadTimeout()I
     .locals 2
 
@@ -794,6 +826,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the request method of an HttpURLConnection object. It retrieves the request method from the HttpURLConnection instance stored in the 'a' field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getRequestMethod()Ljava/lang/String;
     .locals 2
 
@@ -810,6 +843,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a map of request properties by delegating the call to another object's `getRequestProperties()` method. It does not modify the result in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getRequestProperties()Ljava/util/Map;
     .locals 2
 
@@ -826,6 +860,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a request property from an internal object. It delegates the retrieval to an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/M;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -842,6 +877,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the response code from a Google ML Kit entity extraction object. It retrieves the response code by calling the getResponseCode method on the object stored in field 'a' of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getResponseCode()I
     .locals 2
 
@@ -858,6 +894,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns a response message from an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/M`. It does this by calling the `getResponseMessage()` method on the `M` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getResponseMessage()Ljava/lang/String;
     .locals 2
 
@@ -872,6 +909,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an SSLSocketFactory instance. It retrieves the factory from a nested object structure within the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSSLSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
     .locals 2
 
@@ -886,6 +924,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves server certificates from a list if it's not empty, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getServerCertificates()[Ljava/security/cert/Certificate;
     .locals 3
 
@@ -953,6 +992,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a boolean indicating whether caching is enabled. It does this by calling the getUseCaches method on an instance of URLConnection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getUseCaches()Z
     .locals 2
 
@@ -969,6 +1009,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the allow user interaction flag on a URLConnection object. It takes a boolean parameter and passes it to the setAllowUserInteraction method of the URLConnection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAllowUserInteraction(Z)V
     .locals 2
 
@@ -981,6 +1022,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the chunked streaming mode for an HttpURLConnection. It takes an integer parameter and passes it to the setChunkedStreamingMode method of the HttpURLConnection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setChunkedStreamingMode(I)V
     .locals 2
 
@@ -995,6 +1037,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the connect timeout in milliseconds by invoking the setConnectTimeout method on an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/M. It takes an integer parameter representing the timeout value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setConnectTimeout(I)V
     .locals 2
 
@@ -1009,6 +1052,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the default use of caches for a URL connection. It takes a boolean parameter and applies it to the connection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setDefaultUseCaches(Z)V
     .locals 2
 
@@ -1023,6 +1067,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the doInput flag for a URLConnection. It takes a boolean parameter and passes it to the setDoInput method of the URLConnection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setDoInput(Z)V
     .locals 2
 
@@ -1039,6 +1084,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the doOutput property of a URLConnection object. It takes a boolean parameter and passes it to the setDoOutput method of the URLConnection object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setDoOutput(Z)V
     .locals 2
 
@@ -1051,6 +1097,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the fixed length streaming mode by invoking a method on an internal object with the given integer parameter. It delegates the operation to an internal class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setFixedLengthStreamingMode(I)V
     .locals 4
 
@@ -1067,6 +1114,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the fixed length streaming mode by calling the same method on an internal object. It takes a long parameter representing the streaming mode length.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setFixedLengthStreamingMode(J)V
     .locals 2
 
@@ -1152,6 +1200,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets instance follow redirects on an internal object. It delegates the operation to another class, passing the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setInstanceFollowRedirects(Z)V
     .locals 2
 
@@ -1162,6 +1211,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the read timeout in milliseconds for an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/M. It delegates the operation to the setReadTimeout method of the referenced object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setReadTimeout(I)V
     .locals 2
 
@@ -1176,6 +1226,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the request method for an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/M. It takes a string parameter and passes it to the setRequestMethod method of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setRequestMethod(Ljava/lang/String;)V
     .locals 2
 
@@ -1190,6 +1241,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a request property using the `setRequestProperty` method of the `M` class from the `com/google/android/gms/internal/mlkit_entity_extraction` package. It takes two string parameters, a key and a value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -1318,6 +1370,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the useCaches property of a URLConnection object. It takes a boolean parameter and applies it to the connection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setUseCaches(Z)V
     .locals 2
 
@@ -1346,6 +1399,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a proxy is being used. It returns a boolean value indicating whether the proxy is in use.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final usingProxy()Z
     .locals 2
 

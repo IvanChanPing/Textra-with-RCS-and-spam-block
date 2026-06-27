@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method calls another method `a` on the `Lcom/mplus/lib/F3/G` object, passing an integer and a `Lcom/mplus/lib/F3/D0` object, to retrieve a `Lcom/mplus/lib/F3/X` object. It appears to be a wrapper around this method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/mplus/lib/F3/G;Lcom/mplus/lib/F3/D0;I)Lcom/mplus/lib/F3/X;
     .locals 1
 
@@ -21,6 +22,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method casts an Object to a GeneratedMessageLite ExtendableMessage and calls ensureExtensionsAreMutable on it, returning the result. It appears to ensure the extensions of a protocol buffer message are mutable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/lang/Object;)Lcom/mplus/lib/F3/O;
     .locals 1
 
@@ -39,6 +41,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be a part of a protocol buffer deserialization process. It takes in several parameters, including an object, various protocol buffer-related classes, and a Google protobuf message. The method deserializes data from the input object based on the provided protocol buffer schema   [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/Object;Lcom/mplus/lib/F3/s;Lcom/mplus/lib/F3/X;Lcom/mplus/lib/F3/G;Lcom/mplus/lib/F3/O;Ljava/lang/Object;Lcom/google/protobuf/h;)Ljava/lang/Object;
     .locals 8
 
@@ -1073,6 +1076,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle serialization of various data types to a protobuf message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Lcom/mplus/lib/F3/w0;Ljava/util/Map$Entry;)V
     .locals 7
 

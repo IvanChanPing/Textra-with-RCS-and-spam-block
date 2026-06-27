@@ -296,6 +296,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the 'e' field, which is an instance of Lcom/mplus/lib/s5/r. It provides access to this field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/s5/r;
     .locals 2
 
@@ -304,6 +305,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility and text properties of certain views based on the input boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Z)V
     .locals 5
 

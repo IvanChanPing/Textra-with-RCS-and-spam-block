@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a `BaseFrameLayout` instance with a given context and attribute set, setting up various properties and objects. It also retrieves and applies styled attributes from the context's theme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
@@ -84,6 +85,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the height of a view in the window manager if it has changed. It checks the current height of the view and updates it if necessary, then notifies the window manager of the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Landroid/view/WindowManager;I)V
     .locals 3
 
@@ -125,6 +127,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `dispatchDraw` method to customize the drawing of the `BaseFrameLayout` by clipping the canvas to a path if available, drawing the background, and then drawing additional content.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
@@ -306,6 +309,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the background color of the BaseFrameLayout instance. It delegates the retrieval to the `Lcom/mplus/lib/z7/N;->j(Lcom/mplus/lib/x5/y;)I` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getBackgroundColorDirect()I
     .locals 2
 
@@ -324,6 +328,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getLastView` method to return the last view from its superclass. It does not modify the result in any way.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLastView()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -336,6 +341,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getLayoutSize function to return the layout size of its superclass. It does not modify the result, simply passing it through.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -350,6 +356,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getMeasuredSize()` method and returns its result. It essentially delegates the measurement size retrieval to its parent class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -362,6 +369,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns its result. It appears to be a generated bridge method for compatibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -376,6 +384,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() and returns the result. It appears to be an overridden method that simply delegates to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -388,6 +397,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the `b` field of the `BaseFrameLayout` class, which is an instance of `Lcom/mplus/lib/y5/s`. It does not appear to perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getShadowDelegate()Lcom/mplus/lib/y5/s;
     .locals 2
 
@@ -416,6 +426,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the view state of the BaseFrameLayout instance. It simply retrieves and returns the value of the 'a' field, which is of type Lcom/mplus/lib/x5/C.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getViewState()Lcom/mplus/lib/x5/C;
     .locals 2
 
@@ -424,6 +435,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getVisibileAnimationDelegate` method to return the result of calling the same method on its superclass. It essentially delegates the call to its superclass `Lcom/mplus/lib/x5/y`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -436,6 +448,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It always returns the result, ignoring the const/4 v1, 0x1 instruction as it's unused.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 
@@ -448,6 +461,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onLayout method of its superclass, calling the superclass's onLayout method and then returning. It does not appear to perform any additional layout-related actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onLayout(ZIIII)V
     .locals 1
 
@@ -551,6 +565,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls the superclass's `requestDisallowInterceptTouchEvent` method based on the state of an object. It checks the state of `Lcom/mplus/lib/x5/C;` and only proceeds if a certain condition is not met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final requestDisallowInterceptTouchEvent(Z)V
     .locals 2
 
@@ -576,6 +591,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing the provided boolean value. It appears to be a bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -586,6 +602,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object implementing the Lcom/mplus/lib/x5/y interface. It takes a float parameter and invokes the setAlpha method on that interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 
@@ -596,6 +613,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background color of a BaseFrameLayout with animation. It creates an instance of Lcom/mplus/lib/y5/c if it doesn't exist and then calls its a(I)V method to animate the color change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBackgroundColorAnimated(I)V
     .locals 2
 
@@ -625,6 +643,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background color of a view directly. It calls a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBackgroundColorDirect(I)V
     .locals 1
 
@@ -633,6 +652,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background drawing delegate for the BaseFrameLayout class by calling its superclass's setBackgroundDrawingDelegate method. It takes a com/mplus/lib/y5/d object as a parameter and does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
     .locals 1
 
@@ -645,6 +665,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a BaseFrameLayout instance. It invokes a static method to adjust the layout margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -655,6 +676,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the clip path for the BaseFrameLayout and then invalidates the view to trigger a redraw. It stores the provided Path object in the 'g' field and calls the invalidate method on the View.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setClipPath(Landroid/graphics/Path;)V
     .locals 1
 
@@ -669,6 +691,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setDispatchTouchEvents method, passing the provided boolean parameter. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setDispatchTouchEvents(Z)V
     .locals 1
 
@@ -681,6 +704,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the foreground drawing delegate for the BaseFrameLayout instance. It stores the provided delegate object in the instance's field 'c'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setForegroundDrawingDelegate(Lcom/mplus/lib/y5/h;)V
     .locals 1
 
@@ -691,6 +715,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `setHeightTo` method with the provided integer parameter. It effectively delegates the `setHeightTo` operation to its superclass `Lcom/mplus/lib/x5/y`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setHeightTo(I)V
     .locals 1
 
@@ -701,6 +726,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method with the provided argument. It appears to be a bridge method for overriding purposes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 
@@ -713,6 +739,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a view by invoking a static method with the provided margin value and the current view instance. It effectively updates the view's layout parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -723,6 +750,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setMargin method, passing a Rect object. It effectively delegates the setting of margins to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -733,6 +761,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the OnMeasureHeightDelegate for the BaseFrameLayout instance. It stores the provided delegate in the instance's field 'f'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setOnMeasureHeightDelegate(Lcom/mplus/lib/y5/l;)V
     .locals 1
 
@@ -755,6 +784,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a BaseFrameLayout instance. It calls a static method to adjust the layout's margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 
@@ -775,6 +805,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setViewVisible method to call its superclass's implementation. It does not add any new functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 
@@ -787,6 +818,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method, passing the input boolean parameter. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 
@@ -799,6 +831,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of the BaseFrameLayout to a specified value. It invokes a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 
@@ -811,6 +844,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name and ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 4
 
@@ -879,6 +913,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Drawable is being used by the current view or its parent. It returns true if the Drawable is verified, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 3
 

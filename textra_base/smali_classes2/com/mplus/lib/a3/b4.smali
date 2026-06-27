@@ -90,6 +90,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzct object, specifically the zzct instance stored in the zzct class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic zzi()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzct;
     .locals 2
 

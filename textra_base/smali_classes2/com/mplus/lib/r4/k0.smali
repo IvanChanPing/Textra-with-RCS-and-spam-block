@@ -123,6 +123,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/r4/k0, setting its boolean fields i, j, and k to true, true, and false respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -141,6 +142,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string based on a given long value, specifically a conversation ID. It invokes a static method to format the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(J)Ljava/lang/String;
     .locals 2
 
@@ -621,6 +623,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the size of a collection is within a certain threshold and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k()Z
     .locals 3
 
@@ -662,6 +665,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/i5/a` and populates it with values from an iterator. It returns the populated instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()Lcom/mplus/lib/i5/a;
     .locals 5
 
@@ -750,6 +754,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the value associated with a given Predicate from a HashMap and returns it. It first calls the E() method on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s(Ljava/util/function/Predicate;)I
     .locals 2
 
@@ -776,6 +781,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method creates a HashMap where keys are Long values and values are Lists of Lcom/mplus/lib/r4/j0 objects, grouping the objects by their 'c' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v()Ljava/util/HashMap;
     .locals 7
 

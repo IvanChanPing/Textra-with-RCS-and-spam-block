@@ -40,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of the class Lcom/mplus/lib/a3/o2. It creates a copy of the enum values array to prevent external modification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/a3/o2;
     .locals 2
 
@@ -62,6 +63,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a given Runnable. It simply calls the run method on the provided Runnable instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 1
 
@@ -70,6 +72,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a fixed string "MoreExecutors.directExecutor()". It does not actually invoke the MoreExecutors.directExecutor() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

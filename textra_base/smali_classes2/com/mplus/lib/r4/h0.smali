@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field with a parsed Uri object. It sets the value of `Lcom/mplus/lib/r4/h0;->a` to a Uri representing the content URL "content://mplus2".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 

@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/h4/a class, setting its properties with provided context, Y3/f, and u5/b objects. It calls the superclass constructor with a specific integer and context object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/Y3/f;Lcom/mplus/lib/u5/b;)V
     .locals 1
 

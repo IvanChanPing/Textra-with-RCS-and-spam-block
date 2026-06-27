@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/I2, setting its ScheduledExecutorService field. It calls the superclass constructor with the provided ExecutorService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method closes a thread pool by shutting it down and waiting for its termination.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic close()V
     .locals 6
 
@@ -130,6 +132,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method schedules a Runnable task for execution after a specified delay. It returns a ScheduledFuture object representing the scheduled task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 3
 
@@ -164,6 +167,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method schedules a callable task for execution after a specified delay and returns a ScheduledFuture. It wraps the callable in a Runnable and submits it to a ScheduledExecutorService.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 2
 
@@ -190,6 +194,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method schedules a runnable to be executed at a fixed rate and returns a ScheduledFuture.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 8
 
@@ -226,6 +231,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method schedules a runnable task with a fixed delay using a ScheduledExecutorService and returns a ScheduledFuture. It also wraps the ScheduledFuture in a custom class Lcom/mplus/lib/a3/F2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
     .locals 8
 

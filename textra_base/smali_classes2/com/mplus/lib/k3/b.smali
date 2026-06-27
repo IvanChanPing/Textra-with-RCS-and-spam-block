@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static Parcelable creator for the class. It sets the CREATOR field to a new instance of Lcom/mplus/lib/P6/a with a priority of 15.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -50,6 +51,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method writes the contents of an object to a Parcel, specifically a PendingIntent and a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 

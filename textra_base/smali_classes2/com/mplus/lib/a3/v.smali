@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of `Lcom/mplus/lib/a3/v;` with a random UUID and a random long value. It also temporarily allows thread disk reads to prevent StrictMode penalties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 5
 
@@ -85,6 +86,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates a random long value using a Linear Congruential Generator (LCG) algorithm and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()J
     .locals 12
 

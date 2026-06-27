@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static Parcelable creator for the class Lcom/mplus/lib/E3/Q. It creates an instance of Lcom/mplus/lib/E3/a with a specific value and assigns it to the CREATOR field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -94,6 +95,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/E3/Q with string and float parameters. It sets the object's fields a, b, c, and d with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;FF)V
     .locals 0
 
@@ -124,6 +126,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method writes the object's data to a Parcel, specifically putting string and float values into a Bundle before writing it to the Parcel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 

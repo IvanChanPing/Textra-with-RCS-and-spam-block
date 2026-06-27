@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/i5/i; and calls the R() method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized Q()Lcom/mplus/lib/i5/i;
     .locals 3
 
@@ -60,6 +61,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a substring of a string obtained from method P(), starting from index 3, or null if the string is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()Ljava/lang/String;
     .locals 3
 
@@ -240,6 +242,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the network operator string, specifically the MCC and MNC, or null if it cannot be determined.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()Ljava/lang/String;
     .locals 5
 
@@ -317,6 +320,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes the PhoneNumberUtil and TelephonyManager instances if they are null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R()V
     .locals 6
 

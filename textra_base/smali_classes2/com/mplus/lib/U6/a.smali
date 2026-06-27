@@ -30,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle a boolean flag `p1` to either run a task immediately or schedule it for a delay.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Z)V
     .locals 4
 
@@ -161,6 +162,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the alpha value of an object using the `setAlpha` method. It retrieves a double value from an object and converts it to a float before passing it to `setAlpha`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

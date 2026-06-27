@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of class Lcom/mplus/lib/J2/F with the given parameters. It sets the instance's fields a, b, c, and d to the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
     .locals 0
 
@@ -58,6 +59,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/J2/F, setting its fields with the provided parameters. It sets an integer field to 7 and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/tappx/a/r;Ljava/lang/String;Ljava/util/Map;)V
     .locals 1
 
@@ -76,6 +78,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/J2/F; that initializes its fields with the provided parameters. It sets the instance variables a, d, b, and c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
@@ -94,6 +97,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a part of a larger system that handles various tasks based on a switch statement. It executes different blocks of code based on the value of `a` in the class `Lcom/mplus/lib/J2/F;`, which seems to be an integer that determines the action to be performed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 11
 

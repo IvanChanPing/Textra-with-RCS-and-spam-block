@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/m0, setting its fields based on the provided Lcom/mplus/lib/a3/p0 object. It also checks if the provided object is empty and sets the c field accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/p0;)V
     .locals 1
 
@@ -62,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/m0, setting its properties based on the provided Lcom/mplus/lib/o3/w object. It sets default values and checks if the provided object is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/w;)V
     .locals 1
 
@@ -352,6 +354,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes the last element returned by the iterator from the underlying collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove()V
     .locals 4
 

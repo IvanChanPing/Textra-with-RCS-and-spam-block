@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/s5/e0 class, setting its fields with the provided parameters. It also creates a new android/graphics/Rect object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/z;Lcom/mplus/lib/ui/common/base/BaseLinearLayout;Lcom/mplus/lib/ui/common/base/BaseLinearLayout;Lcom/mplus/lib/M6/f;)V
     .locals 1
 
@@ -47,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calculates the maximum distance from the right edge of the parent view to the left edge of its visible child views that are instances of BaseImageView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 5
 

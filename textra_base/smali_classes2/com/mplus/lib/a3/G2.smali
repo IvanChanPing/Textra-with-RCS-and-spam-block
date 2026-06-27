@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/G2, storing a provided Runnable object. It also calls the superclass constructor of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzavj.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
@@ -30,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a stored Runnable and catches any exceptions, then reports them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 
@@ -54,6 +56,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of a task, specifically the result of calling `toString()` on a `Runnable` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Ljava/lang/String;
     .locals 4
 

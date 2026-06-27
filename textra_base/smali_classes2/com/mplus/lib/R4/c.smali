@@ -55,6 +55,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws a circle on a Canvas at the center of the Drawable's bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 5
 
@@ -129,6 +130,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of a Paint object. It takes an integer parameter representing the alpha value and applies it to the Paint object's alpha property.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAlpha(I)V
     .locals 2
 
@@ -143,6 +145,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a color filter on a Paint object. It takes a ColorFilter as a parameter and applies it to the Paint object's setColorFilter method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 2
 

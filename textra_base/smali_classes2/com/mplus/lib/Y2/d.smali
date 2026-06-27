@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a task on a Google API client, specifically a location-related task. It casts the client to a zzda object and uses it to start a task with a TaskCompletionSource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic doExecute(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     .locals 2
 

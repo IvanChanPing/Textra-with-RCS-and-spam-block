@@ -107,6 +107,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method iterates over child views of the input object, comparing their tags to the input integer, and sets the 'activated' state of each view accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s0(Lcom/mplus/lib/x5/z;I)V
     .locals 5
 
@@ -181,6 +182,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method named `t0()` within the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K()V
     .locals 1
 
@@ -323,6 +325,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a view of type `Lcom/mplus/lib/x5/z`, setting its child views' backgrounds and click listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(I)Lcom/mplus/lib/x5/z;
     .locals 14
 
@@ -594,6 +597,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the onClick event for a view, checking if the view is a BaseTextView or BaseImageView and performing specific actions based on the type and properties of the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 4
 

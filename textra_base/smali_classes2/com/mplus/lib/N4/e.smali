@@ -40,6 +40,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/N4/e class with a given Android context. It calls the superclass constructor with a specific integer value and the context, and creates a new object stored in the 'm' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -56,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method provides a synchronized instance of the class Lcom/mplus/lib/N4/e, calling the U() method on the instance before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized Q()Lcom/mplus/lib/N4/e;
     .locals 3
 
@@ -422,6 +424,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method iterates over a list of Uri objects and calls the M method on each one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()V
     .locals 4
 
@@ -470,6 +473,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles various actions based on the intent received, such as processing WAP push messages, retrying queued downloads, and sending notifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Landroid/content/Intent;)V
     .locals 7
 
@@ -995,6 +999,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles the sending of MMS messages, parsing the response, and updating the message status. It throws exceptions for various error cases, such as invalid responses or parsing errors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Landroid/net/Uri;Lcom/mplus/lib/O4/b;IILcom/mplus/lib/L4/p;[B)I
     .locals 9
 
@@ -1443,6 +1448,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the retrieval of MMS messages, checking the status of the retrieval and throwing exceptions if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)V
     .locals 6
 
@@ -2529,6 +2535,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of an MMS download, processing the download result and updating the corresponding queue entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X(Lcom/mplus/lib/s5/m;)V
     .locals 9
 
@@ -2811,6 +2818,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles MMS receive acknowledgement by processing the intent data and logging messages.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y(Lcom/mplus/lib/s5/m;)V
     .locals 3
 
@@ -2902,6 +2910,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of sending an MMS message, processing the HTTP status and data from the intent. It checks the queue entry for the message and updates its state accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Z(Lcom/mplus/lib/s5/m;)V
     .locals 9
 
@@ -3449,6 +3458,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method processes an incoming MMS message. It handles different types of MMS messages, including notifications, read receipts, and delivery reports, and saves the message to the database if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c0(Lcom/mplus/lib/s5/m;)V
     .locals 10
 
@@ -4179,6 +4189,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the processing of a message queue entry, checking its state and performing actions accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d0(Landroid/net/Uri;)Z
     .locals 13
 
@@ -4718,6 +4729,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method, `f0()V`, appears to progress all pending MMS messages by iterating over a list of non-failed entries and attempting to send each one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f0()V
     .locals 12
 
@@ -5122,6 +5134,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of an object and triggers a progress update.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized g0(Landroid/net/Uri;Lcom/mplus/lib/O4/b;I)V
     .locals 9
 
@@ -5249,6 +5262,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle retry and queue operations for a list of items, updating their status and notifying the system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h0(Lcom/mplus/lib/r4/k0;)V
     .locals 7
 
@@ -5516,6 +5530,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list of Uri objects and invokes a method to process each one, then calls another method `f0()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i0()V
     .locals 5
 
@@ -5582,6 +5597,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes an Intent object from the input parameter, extracts its Uri data, and uses it to retrieve a specific object, which is then added to a list and passed to another method for further processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j0(Lcom/mplus/lib/s5/m;)V
     .locals 5
 
@@ -5782,6 +5798,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sends a request using the provided Uri and message data, handling potential exceptions and logging the process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized l0(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)V
     .locals 3
 
@@ -6025,6 +6042,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sends a scheduled task and updates the task's timestamp.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/r4/j0;)V
     .locals 4
 
@@ -6099,6 +6117,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initiates the sending of a message, creating a send queue entry and updating the message's status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u(Lcom/mplus/lib/r4/j0;)V
     .locals 11
 

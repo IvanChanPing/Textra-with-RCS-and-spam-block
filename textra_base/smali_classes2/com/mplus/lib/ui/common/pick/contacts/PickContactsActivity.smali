@@ -30,6 +30,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `A` of type `Lcom/mplus/lib/r4/n;` in the `PickContactsActivity` class. It creates a new instance of `Lcom/mplus/lib/r4/n;` and assigns it to the static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -68,6 +69,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `Lcom/mplus/lib/r4/n` object from an `Intent`, specifically from a byte array extra named "picked_contacts".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Y(Landroid/content/Intent;)Lcom/mplus/lib/r4/n;
     .locals 4
 
@@ -128,6 +130,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the result of picking contacts, creating an intent with the picked contacts and other data, and then triggers an action with this intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(ILcom/mplus/lib/r4/n;)V
     .locals 5
 
@@ -431,6 +434,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for various views in the PickContactsActivity, invoking the V method with different parameters based on the view's ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
@@ -536,6 +540,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the PickContactsActivity, setting up its UI components, adapters, and listeners. It also configures the activity's title, tabs, and view pager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 7
 
@@ -871,6 +876,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method restores the instance state of the PickContactsActivity, specifically retrieving previously picked contacts from a bundle. It then updates the activity's state with the retrieved contacts and calls the W() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
@@ -899,6 +905,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method saves the instance state of the PickContactsActivity by calling the superclass's onSaveInstanceState method and then adding a byte array of picked contacts to the bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
 

@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/E6/g` class, setting up its internal state and registering it with an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;ILcom/mplus/lib/s5/t;)V
     .locals 1
 
@@ -637,6 +638,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the ID of an item at a given position by querying a cursor. It returns -1 if the cursor is null, otherwise it returns the long value at the first column of the cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getItemId(I)J
     .locals 3
 
@@ -886,6 +888,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event by removing an object from a HashMap and then performs actions based on the object's properties, such as hiding a view or calling other methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/E6/l;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;

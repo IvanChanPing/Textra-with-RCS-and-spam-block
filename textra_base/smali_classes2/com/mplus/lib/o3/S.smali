@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of class Lcom/mplus/lib/o3/S, setting its 'c' field to the provided Lcom/mplus/lib/o3/U object. It extends the Java AbstractCollection class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/U;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if an object is contained in the instance's 'c' field of type Lcom/mplus/lib/o3/U. It delegates the contains check to the 'c' field's contains method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -41,6 +43,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns a boolean value indicating whether a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Z
     .locals 2
 
@@ -55,6 +58,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object from a list at a specified index, with bounds checking. It returns the object at the index from the end of the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 3
 
@@ -91,6 +95,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the index of a given object from the end of a collection. It returns the index from the end if the object is found, or -1 if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 2
 
@@ -126,6 +131,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by calling method l(I) on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -183,6 +189,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a ListIterator object by calling method l(I) on the current object. It appears to be part of a custom list implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final listIterator()Ljava/util/ListIterator;
     .locals 2
 
@@ -197,6 +204,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list iterator object by calling `l(I)` on the current object. It appears to be a bridge method for the `listIterator(I)` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
     .locals 1
 
@@ -209,6 +217,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It appears to be a wrapper around the size() method of an AbstractCollection instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -227,6 +236,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of the original list by delegating to `v(II)` method. It essentially provides a bridge to the `v(II)` method for the `subList(II)` call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -237,6 +247,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/U;. It appears to be a getter method for the 'c' field of the class Lcom/mplus/lib/o3/S;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()Lcom/mplus/lib/o3/U;
     .locals 2
 

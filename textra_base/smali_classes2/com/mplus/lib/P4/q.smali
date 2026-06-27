@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/P4/q` class, setting various fields based on the provided parameters and querying a database. It checks if a specific package ("com.getpebble.android.basalt") is installed and retrieves data from a database to populate an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/r4/j0;Lcom/mplus/lib/r4/p;Ljava/util/List;Z)V
     .locals 1
 
@@ -326,6 +327,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a bitmap from a cache or storage using a unique identifier. It returns the retrieved bitmap object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()Landroid/graphics/Bitmap;
     .locals 4
 
@@ -350,6 +352,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string based on the value of the `d` flag, either retrieving it from `Lcom/mplus/lib/r4/n;->a()` or returning null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P()Ljava/lang/String;
     .locals 2
 
@@ -379,6 +382,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/R4/h`, which appears to be a configuration or settings object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q()Lcom/mplus/lib/R4/h;
     .locals 8
 
@@ -473,6 +477,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method replaces newline characters with spaces in the input string if a certain condition is met. It then returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
@@ -498,6 +503,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and configures a `NotificationCompat$MessagingStyle` object, setting its conversation title and adding messages to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S()Landroidx/core/app/NotificationCompat$MessagingStyle;
     .locals 12
 
@@ -745,6 +751,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string based on the Android SDK version and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(Lcom/mplus/lib/r4/j0;)Ljava/lang/String;
     .locals 3
 
@@ -781,6 +788,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method constructs and returns a `SpannableStringBuilder` object, conditionally appending styled text based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U()Lcom/mplus/lib/z7/g;
     .locals 6
 

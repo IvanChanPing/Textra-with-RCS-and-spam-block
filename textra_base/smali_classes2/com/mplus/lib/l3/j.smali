@@ -41,6 +41,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static HashMap in the class Lcom/mplus/lib/l3/j. It creates a new instance of java/util/HashMap and assigns it to the static field n.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -53,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/l3/j` class, setting up its fields with various objects and values. It appears to be a constructor for a class that manages some sort of review or feedback system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/C4/g;Landroid/content/Intent;)V
     .locals 2
 
@@ -113,6 +115,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an Android Handler instance associated with a specific string key, creating a new HandlerThread and Handler if the key is not already present.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroid/os/Handler;
     .locals 5
 

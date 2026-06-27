@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/j, setting its 'd' field and calling the superclass constructor. It takes a Lcom/mplus/lib/o3/v0 object and a SortedMap as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/v0;Ljava/util/SortedMap;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a SortedMap object from a class field 'b'. It does not perform any sorting or mapping operations itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Ljava/util/SortedMap;
     .locals 2
 
@@ -42,6 +44,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Comparator instance from a SortedMap. It delegates the call to the comparator() method of the SortedMap instance returned by the a() method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final comparator()Ljava/util/Comparator;
     .locals 2
 
@@ -56,6 +59,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first key of a sorted map. It invokes the 'firstKey' method on a sorted map object obtained from the 'a' method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final first()Ljava/lang/Object;
     .locals 2
 
@@ -74,6 +78,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a SortedSet view of the portion of the map whose keys are less than the given key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
@@ -100,6 +105,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the last key of a sorted map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final last()Ljava/lang/Object;
     .locals 2
 
@@ -120,6 +126,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new SortedSet instance by creating a subset of the current SortedMap using the provided objects as bounds. It then returns this new SortedSet instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
@@ -148,6 +155,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a SortedSet view of the portion of the map whose keys are greater than or equal to the specified key. It creates a new instance of Lcom/mplus/lib/o3/j with a tail map of the original map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 

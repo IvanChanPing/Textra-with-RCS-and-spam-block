@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves the COPPA (Children's Online Privacy Protection Act) compliance status and returns it as a Boolean object. It gets the status from the Smaato SDK and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 2
 

@@ -37,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/V5/j, setting its fields with the provided parameters. It stores two integers and an array of strings in the object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(II[Ljava/lang/String;)V
     .locals 0
 
@@ -55,6 +56,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/V5/j, copying the state of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/V5/j;
     .locals 5
 
@@ -145,6 +147,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method filters an array of strings based on a callback interface and stores the filtered results in another array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/J4/b;)V
     .locals 8
 
@@ -252,6 +255,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of an array of strings, or 0 if the array is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()I
     .locals 2
 
@@ -281,6 +285,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'a' field of the provided Lcom/mplus/lib/F4/x object to a string from the 'b' array based on the provided index. It appears to be used for setting a CharSequence value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(ILcom/mplus/lib/F4/x;)V
     .locals 2
 
@@ -295,6 +300,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method searches for a string match in an array and returns the index if found, otherwise returns -1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/F4/x;)I
     .locals 5
 
@@ -354,6 +360,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes a HashMap with string keys from an array and their corresponding integer indices, then uses this map to look up the index of a given string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Lcom/mplus/lib/F4/x;)I
     .locals 8
 
@@ -495,6 +502,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of the instance field `c` and returns `true` if it's 0, otherwise returns `false`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Z
     .locals 2
 
@@ -522,6 +530,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method resizes the `b` string array and resets the `e` HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(I)V
     .locals 4
 
@@ -584,6 +593,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a string value in an array at a specified index and then clears a HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(ILcom/mplus/lib/F4/x;)V
     .locals 2
 
@@ -612,6 +622,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its class name, ID, and a hash code of its items.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

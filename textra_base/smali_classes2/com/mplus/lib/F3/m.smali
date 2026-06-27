@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/F3/m, creating instances of Lcom/mplus/lib/F3/l and Lcom/mplus/lib/F3/j.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -209,6 +210,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/F3/l` using the bytes of the input string encoded with a specific charset. It returns this new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/lang/String;)Lcom/mplus/lib/F3/l;
     .locals 3
 
@@ -243,6 +245,7 @@
 .method public abstract h()Z
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the object, lazily initializing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 
@@ -290,6 +293,7 @@
 .method public abstract k(I)Lcom/mplus/lib/F3/m;
 .end method
 
+# M-ROLE [GROQ]: This method returns a byte array representation of the object's data, either by returning a default empty array if the object is empty or by filling a new array with the object's data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l()[B
     .locals 3
 
@@ -324,6 +328,7 @@
 .method public abstract m(Ljava/nio/charset/Charset;)Ljava/lang/String;
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, either an empty string if the object is empty, or a string encoded with a specific charset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()Ljava/lang/String;
     .locals 3
 

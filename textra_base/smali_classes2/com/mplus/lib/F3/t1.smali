@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class, including an instance of `sun/misc/Unsafe` and various flags and offsets for primitive types.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 5
 
@@ -259,6 +260,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method allocates a new instance of the given class using sun/misc/Unsafe, returning the instance if successful. If an InstantiationException occurs, it wraps the exception in an IllegalStateException and re-throws it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
 
@@ -289,6 +291,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the class passed to it, using a static instance of `Lcom/mplus/lib/F3/s1;` if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/Class;)I
     .locals 2
 
@@ -318,6 +321,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks a static boolean flag and if true, invokes a method to potentially log or track the given Class object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/lang/Class;)V
     .locals 2
 
@@ -582,6 +586,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method takes a long and a byte array as input, performs an operation using the `Lcom/mplus/lib/F3/s1;->f` method, and returns a byte.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(J[B)B
     .locals 3
 
@@ -694,6 +699,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to obtain an instance of `sun/misc/Unsafe` using `java/security/AccessController`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j()Lsun/misc/Unsafe;
     .locals 2
 
@@ -728,6 +734,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to offset a value by a static field and then invoke another method with the modified value and additional parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k([BJB)V
     .locals 3
 
@@ -746,6 +753,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method performs bitwise operations and invokes another method to store the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(Ljava/lang/Object;JB)V
     .locals 5
 
@@ -858,6 +866,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `q` on a static object `c` of type `Lcom/mplus/lib/F3/s1;`, passing the input parameters. It then returns without using the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(Ljava/lang/Object;JI)V
     .locals 2
 
@@ -872,6 +881,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `r` on an object of class `Lcom/mplus/lib/F3/s1;` with the provided parameters. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Ljava/lang/Object;JJ)V
     .locals 7
 
@@ -894,6 +904,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `s` on a static object `c` of type `Lcom/mplus/lib/F3/s1;`, passing the provided parameters. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(JLjava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 

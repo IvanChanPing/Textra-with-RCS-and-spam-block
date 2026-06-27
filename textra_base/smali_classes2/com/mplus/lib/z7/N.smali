@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class Lcom/mplus/lib/z7/N. It sets various measurement specs, retrieves an instance of Lcom/mplus/lib/J5/g, and initializes geometric objects like RectF and Rect.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -111,6 +112,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a view to a specified value if it's not already set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static A(ILcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -256,6 +258,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a view to a specified value if it's not already set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static D(ILcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -291,6 +294,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the padding of an object implementing `Lcom/mplus/lib/x5/y;` based on its current padding values, with the top padding set to the input integer `p0`. It returns immediately if the object is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static E(ILcom/mplus/lib/x5/y;)V
     .locals 4
 
@@ -326,6 +330,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of a given Android View based on a boolean parameter. It sets the visibility to 0 (VISIBLE) if the boolean is true, and 8 (GONE) if it's false, unless the View is null, in which case it does nothing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static F(Landroid/view/View;Z)V
     .locals 1
 
@@ -361,6 +366,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of a view's layout parameters if they exist and are not already set to the specified width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static G(ILcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -394,6 +400,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method recursively traverses a view hierarchy, invoking an interface method on each view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static H(Landroid/view/View;Lcom/mplus/lib/s5/q0;)V
     .locals 4
 
@@ -451,6 +458,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds a given InputFilter to a TextView's existing filters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Landroid/widget/TextView;Landroid/text/InputFilter;)V
     .locals 5
 
@@ -638,6 +646,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a bitmap from a given BaseTextView by measuring, laying out, and drawing the view onto a canvas.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Lcom/mplus/lib/ui/common/base/BaseTextView;)Landroid/graphics/Bitmap;
     .locals 4
 
@@ -692,6 +701,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method recursively searches for instances of a given class in a view hierarchy and adds them to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Lcom/mplus/lib/x5/y;Ljava/lang/Class;Ljava/util/ArrayList;)V
     .locals 4
 
@@ -775,6 +785,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a rectangle based on the width, height, and a point of an object. It appears to be calculating the bounds of an object within a larger space.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Lcom/mplus/lib/x5/y;)Landroid/graphics/Rect;
     .locals 6
 
@@ -823,6 +834,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the screen location of an object as an Android Point object. It attempts to get the location from the provided object, defaulting to (0,0) if the object is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Lcom/mplus/lib/x5/y;)Landroid/graphics/Point;
     .locals 4
 
@@ -869,6 +881,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the x-coordinate of a view on the screen if the view is not null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Lcom/mplus/lib/x5/y;)I
     .locals 3
 
@@ -894,6 +907,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object has a background drawable and returns its color if it's a ColorDrawable, otherwise returns 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Lcom/mplus/lib/x5/y;)I
     .locals 2
 
@@ -941,6 +955,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the total horizontal margin of a given Android View.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k(Landroid/view/View;)I
     .locals 5
 
@@ -1023,6 +1038,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/z7/G` using the width and height of the root view of the input view. It returns this new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(Lcom/mplus/lib/x5/y;)Lcom/mplus/lib/z7/G;
     .locals 3
 
@@ -1198,6 +1214,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method hides the soft input keyboard from a given view in an Android context. It retrieves the InputMethodManager and uses it to hide the keyboard.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static n(Landroid/content/Context;Landroid/view/View;)V
     .locals 2
 
@@ -1232,6 +1249,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the height and width of an object implementing `Lcom/mplus/lib/x5/y` are both greater than zero. It returns `true` if both conditions are met, and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(Lcom/mplus/lib/x5/y;)Z
     .locals 2
 
@@ -1263,6 +1281,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given point (x, y) is within the bounds of a View on the screen.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(FFLandroid/view/View;)Z
     .locals 6
 
@@ -1353,6 +1372,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the soft keyboard is visible for a given view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static q(Lcom/mplus/lib/x5/y;)Z
     .locals 2
 
@@ -1523,6 +1543,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method measures the height of a view by temporarily changing its visibility, calling measure on it, and then restoring its original visibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static s(Lcom/mplus/lib/x5/y;II)I
     .locals 3
 
@@ -1579,6 +1600,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method measures the size of a view and returns a new instance of `Lcom/mplus/lib/z7/G` with the measured width and height.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static t(Lcom/mplus/lib/x5/z;)Lcom/mplus/lib/z7/G;
     .locals 5
 
@@ -1641,6 +1663,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method measures the width of a view by temporarily setting its visibility to visible, measuring it, and then restoring its original visibility.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(Lcom/mplus/lib/x5/y;)I
     .locals 3
 
@@ -1779,6 +1802,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the background color of a given View, either by directly setting the color or by modifying the existing background drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w(Landroid/view/View;I)V
     .locals 2
 
@@ -1839,6 +1863,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a view to a specified value if it's not already set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(ILcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -1940,6 +1965,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a view to a specified value if it's not already set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static z(ILcom/mplus/lib/x5/y;)V
     .locals 3
 

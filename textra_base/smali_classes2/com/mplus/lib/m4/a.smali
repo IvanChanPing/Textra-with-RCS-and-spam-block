@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/m4/a, setting its 'a' field to the provided Lcom/mplus/lib/m4/d object. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/mplus/lib/m4/d;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a specific condition is met and if so, calls the `M` method on an instance of `Lcom/mplus/lib/m4/d;` with a `List` as an argument.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Lcom/mplus/lib/v1/f;Ljava/util/List;)V
     .locals 2
 
@@ -52,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the class of the object stored in field 'a' of the current object. It does not perform any visible actions with the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b()V
     .locals 2
 
@@ -64,6 +67,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method M on an object of type Lcom/mplus/lib/m4/d, passing a List as an argument. It appears to be a wrapper or proxy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c(Lcom/mplus/lib/v1/f;Ljava/util/List;)V
     .locals 1
 

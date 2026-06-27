@@ -29,6 +29,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a class instance with a Context object and retrieves the LocationManager service.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 

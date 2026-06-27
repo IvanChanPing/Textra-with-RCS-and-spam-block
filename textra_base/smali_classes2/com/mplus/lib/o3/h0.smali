@@ -48,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/o3/h0 class, setting its fields e, f, and g with the provided parameters. It is a constructor method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/J0;Lcom/mplus/lib/o3/U;Lcom/mplus/lib/o3/h0;)V
     .locals 0
 
@@ -62,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/o3/h0;` based on the provided `Ljava/util/Comparator;` object. It checks if the comparator is equal to `Lcom/mplus/lib/o3/x0;->b` and returns a predefined instance if true, otherwise creates a new instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/util/Comparator;)Lcom/mplus/lib/o3/h0;
     .locals 4
 
@@ -105,6 +107,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the object is empty and returns a specific instance of Lcom/mplus/lib/o3/I0 if true, otherwise creates and returns a new instance of Lcom/mplus/lib/o3/g0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/o3/e0;
     .locals 2
 
@@ -138,6 +141,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an AssertionError when called, indicating it should never be invoked. It creates a new AssertionError with the message "should never be called".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/o3/e0;
     .locals 3
 
@@ -154,6 +158,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first entry of a map that is greater than or equal to a given key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
     .locals 2
 
@@ -178,6 +183,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the ceiling key (the smallest key greater than or equal to the given key) in a map. If no such key exists, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final ceilingKey(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -223,6 +229,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an AssertionError when called, indicating it should never be executed. It does not return a value despite its declared return type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()Lcom/mplus/lib/o3/O;
     .locals 3
 
@@ -327,6 +334,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set by calling the superclass's `f()` method. It effectively delegates the `entrySet()` operation to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final entrySet()Ljava/util/Set;
     .locals 2
 
@@ -337,6 +345,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first entry of a map if it's not empty, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final firstEntry()Ljava/util/Map$Entry;
     .locals 3
 
@@ -386,6 +395,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the first key of a data structure, likely a map. It delegates the operation to the `first()` method of the `J0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final firstKey()Ljava/lang/Object;
     .locals 2
 
@@ -402,6 +412,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the last entry of a map after calling another method `l` with the input object and a boolean flag set to true. It essentially finds the floor entry of the input object in a sorted map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final floorEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
     .locals 2
 
@@ -422,6 +433,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the floor key (the greatest key less than or equal to the given key) from a map. If no such key exists, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final floorKey(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -453,6 +465,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks the status of two objects (`e` and `f`) and returns `true` if either of their `g()` methods return `true`, otherwise it returns `false`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Z
     .locals 2
 
@@ -579,6 +592,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'e' field, which is of type Lcom/mplus/lib/o3/J0;, cast to Lcom/mplus/lib/o3/e0;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/o3/e0;
     .locals 2
 
@@ -589,6 +603,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a subset of a map, specifically a head map, based on the provided key and a boolean parameter. It delegates the actual work to another method `l`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic headMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
     .locals 1
 
@@ -601,6 +616,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a head map from the current sorted map up to, but not including, a specified key. It creates a new instance of the current class, effectively a subset of the original map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 2
 
@@ -613,6 +629,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the first entry of a map after finding an entry with a key higher than the given object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final higherEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
     .locals 2
 
@@ -633,6 +650,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the key of the next highest entry in a map if it exists, or null otherwise. It essentially wraps the `higherEntry` method to return only the key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final higherKey(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -734,6 +752,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the 'e' field of the class, which is of type Lcom/mplus/lib/o3/J0. It does not actually return a set of keys as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final keySet()Ljava/util/Set;
     .locals 2
 
@@ -744,6 +763,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `t` on an object of class `Lcom/mplus/lib/o3/J0;` with an object and a boolean, then uses the result to call method `k` on itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(Ljava/lang/Object;Z)Lcom/mplus/lib/o3/h0;
     .locals 2
 
@@ -774,6 +794,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the last entry in a map if it's not empty, otherwise it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lastEntry()Ljava/util/Map$Entry;
     .locals 3
 
@@ -829,6 +850,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the last key from an object, specifically by calling the `last()` method on the `J0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lastKey()Ljava/lang/Object;
     .locals 2
 
@@ -863,6 +885,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the key from a map entry associated with a given object, or returns null if no such entry exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final lowerKey(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -975,6 +998,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method appears to call another method `u` on an object of class `J0` with an object and a boolean, then calls method `k` on the current object with the result and the size of a collection `U`, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Ljava/lang/Object;Z)Lcom/mplus/lib/o3/h0;
     .locals 2
 
@@ -1011,6 +1035,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a NavigableSet object stored in the 'e' field of the class. It does not perform any actual navigation or computation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final navigableKeySet()Ljava/util/NavigableSet;
     .locals 2
 
@@ -1021,6 +1046,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the operation is not supported. It does not actually retrieve or return the first entry of a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final pollFirstEntry()Ljava/util/Map$Entry;
     .locals 2
 
@@ -1033,6 +1059,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually retrieve the last entry from a collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final pollLastEntry()Ljava/util/Map$Entry;
     .locals 2
 
@@ -1047,6 +1074,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a collection. It appears to be part of a class that wraps another collection, specifically returning the size of the wrapped collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -1065,6 +1093,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method delegates to `m` and returns the result as a `NavigableMap`. It appears to be a bridge method for method overloading.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableMap;
     .locals 1
 
@@ -1077,6 +1106,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a subset of a map based on the provided parameters. It calls another method `m` to perform the actual submap operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
@@ -1095,6 +1125,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a tail map view of the current map, based on the provided key and inclusive parameter. It delegates to the `n` method of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic tailMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
     .locals 1
 
@@ -1123,6 +1154,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a Collection object referenced by the 'f' field of the class. It does not use the local variables v1 or the constant values assigned to them.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final values()Ljava/util/Collection;
     .locals 2
 

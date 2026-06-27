@@ -47,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is null and throws a NullPointerException with a given message if it is, otherwise returns immediately. It effectively enforces a non-null check on the provided object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 

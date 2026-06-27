@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the MainActivity class that initializes the object by calling the constructor of its superclass M6/b.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 
@@ -160,6 +161,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the MainActivity, checking the application type and SDK version, and performs actions based on these conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 3
 
@@ -287,6 +289,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onNewIntent function to update the current activity intent and calls the W() method in MainActivity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onNewIntent(Landroid/content/Intent;)V
     .locals 1
 

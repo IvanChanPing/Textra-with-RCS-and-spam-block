@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static instances of the class Lcom/mplus/lib/o3/C. It sets the static fields c and d with these instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static synthetic constructor <clinit>()V
     .locals 3
 
@@ -45,6 +46,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/C with a Comparable object and an integer. It sets the integer field 'b' and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Ljava/lang/Comparable;I)V
     .locals 0
 
@@ -229,6 +231,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method compares the current object with another object and returns an integer indicating their order.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public compareTo(Ljava/lang/Object;)I
     .locals 2
 
@@ -295,6 +298,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a Comparable object, but throws an IllegalStateException if the object's state (b) is 0 or 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()Ljava/lang/Comparable;
     .locals 3
 
@@ -410,6 +414,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a hash code for the object based on its internal state, using either the `hashCode()` method of a contained object or the `identityHashCode()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

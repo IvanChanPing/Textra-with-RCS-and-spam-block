@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/R4/g, setting its 'd' field to the provided integer and 'a', 'b', 'c' fields to 3. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 0
 
@@ -140,6 +141,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method takes a Bitmap as input and returns a Drawable based on the value of the `d` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
@@ -234,6 +236,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/v4/c based on the value of the field 'd' in the class Lcom/mplus/lib/R4/g. It appears to be a simple state-based return method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(Lcom/mplus/lib/v4/c;)Lcom/mplus/lib/v4/c;
     .locals 2
 

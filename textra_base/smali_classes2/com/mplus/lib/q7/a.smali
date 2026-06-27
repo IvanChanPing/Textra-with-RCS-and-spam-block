@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/q7/a, setting its properties and calling the superclass constructor. It sets a boolean flag, a long value, and an integer resource ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;JLcom/mplus/lib/T4/d;)V
     .locals 1
 
@@ -46,6 +47,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the state of a radio button and an image view based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 7
 
@@ -153,6 +155,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles menu item clicks, performing different actions based on the item's ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 7
 
@@ -283,6 +286,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method clears a field and updates another field by calling `u()` with a trimmed string from `y()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 2
 
@@ -313,6 +317,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/r4/y0;`, either by retrieving it from a cache or creating a new one if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y()Lcom/mplus/lib/r4/y0;
     .locals 4
 

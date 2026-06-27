@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/j4; with a given string. It calls the superclass constructor and sets the string as a field 'a' in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
@@ -25,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing the string field 'a' of the current object with the string returned by the 'zza' method of the other object if it's an instance of 'Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhn'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -79,6 +81,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the hash code of the object, specifically by XORing the hash code of a string field with a constant value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 
@@ -105,6 +108,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string field 'a' of the class Lcom/mplus/lib/a3/j4. It does not perform any operations on the string before returning it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Ljava/lang/String;
     .locals 2
 

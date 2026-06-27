@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/S2/b, storing a DeferredLifecycleHelper and a Bundle. It sets up the object's state with the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;Landroid/os/Bundle;)V
     .locals 0
 
@@ -44,6 +45,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the `onCreate` method of a `LifecycleDelegate` instance, passing an `android/os/Bundle` object. It appears to be part of the Android lifecycle management.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zab()V
     .locals 3
 

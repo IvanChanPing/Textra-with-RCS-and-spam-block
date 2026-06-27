@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/u1 with an integer value. It sets the object's field 'c' to the provided integer and calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -529,6 +530,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method reads a string from a ByteBuffer, handling different encoding schemes based on the value of `c` in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
     .locals 23
 

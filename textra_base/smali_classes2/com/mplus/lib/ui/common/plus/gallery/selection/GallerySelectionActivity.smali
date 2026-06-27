@@ -77,6 +77,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes the GallerySelectionActivity by setting up the content view, retrieving the current URI from the intent, and configuring the view pager and its adapters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 9
 
@@ -555,6 +556,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onDestroy method of an Android Activity, calling the superclass's onDestroy and then stopping a component if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -580,6 +582,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the padding of a view using the provided insets. It extracts the left, top, and right inset values and applies them to the view using the setPadding method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w(Lcom/mplus/lib/x5/y;Landroidx/core/graphics/Insets;)V
     .locals 4
 

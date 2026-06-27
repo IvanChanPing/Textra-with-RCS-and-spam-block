@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/F4/a` class, setting up a context and an instance of `Lcom/mplus/lib/A2/r`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(I)V
     .locals 1
 
@@ -91,6 +92,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/F4/n`, either by creating a new one based on certain conditions or by returning an existing instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized M()Lcom/mplus/lib/F4/n;
     .locals 4
 
@@ -192,6 +194,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/F4/n;` based on certain conditions, specifically the version of the `Lcom/mplus/lib/A2/r;` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized N()Lcom/mplus/lib/F4/n;
     .locals 4
 
@@ -319,6 +322,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/F4/n;`, specifically `Lcom/mplus/lib/F4/q;`, either by retrieving an existing instance or creating a new one if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized P()Lcom/mplus/lib/F4/n;
     .locals 3
 
@@ -435,6 +439,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks and handles a given object of type Lcom/mplus/lib/F4/x based on the value of the 'c' field in the current object. It delegates the handling to different methods depending on the 'c' field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/F4/x;)Z
     .locals 2
 
@@ -545,6 +550,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a package name based on the value of the instance variable `c`. It appears to be related to the Textra emojis app.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPackageName()Ljava/lang/String;
     .locals 2
 
@@ -675,6 +681,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/z7/g` based on the value of `c` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()Lcom/mplus/lib/z7/g;
     .locals 4
 
@@ -822,6 +829,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to delegate the handling of an object of type Lcom/mplus/lib/F4/x to different implementations based on the value of a field 'c' in the class. It returns an object of type Lcom/mplus/lib/i5/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Lcom/mplus/lib/F4/x;)Lcom/mplus/lib/i5/a;
     .locals 2
 
@@ -882,6 +890,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string resource ID based on the value of the `c` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s()I
     .locals 2
 
@@ -920,6 +929,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to reset or clear the `e` field of the class instance based on the value of the `c` field. It uses a switch statement to determine which action to take.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()V
     .locals 2
 
@@ -972,6 +982,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a field and calls `H()` on an object of type `Lcom/mplus/lib/A2/r;` based on that value, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v()Z
     .locals 2
 
@@ -1028,6 +1039,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of `c` and calls `H()` on `d` (an instance of `Lcom/mplus/lib/A2/r;`), returning the inverse of the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Z
     .locals 2
 

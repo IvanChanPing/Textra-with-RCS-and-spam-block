@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `d` in class `Lcom/mplus/lib/R4/e;` with the value of `d` from class `Lcom/mplus/lib/z7/N;`. It copies a float constant from one class to another.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -34,6 +35,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a custom Drawable object, setting its callback and creating a Paint object with a stroke style.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
@@ -68,6 +70,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a boolean flag based on the input parameter and updates the paint color if the flag is true. It then invalidates the drawable to trigger a redraw.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 2
 
@@ -107,6 +110,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method draws a Drawable on a Canvas and optionally draws a circle at the center of the Drawable's bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 5
 
@@ -251,6 +255,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onBoundsChange behavior of its superclass, calling the superclass method and then updating the bounds of a nested Drawable object. It effectively propagates bounds changes to the nested Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBoundsChange(Landroid/graphics/Rect;)V
     .locals 2
 
@@ -267,6 +272,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method schedules a runnable to be executed with a specified drawable. It checks if the drawable has a callback and if so, calls the callback's scheduleDrawable method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
     .locals 1
 
@@ -302,6 +308,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method unschedules a drawable and its associated runnable. It checks if the drawable has a callback and if so, calls the callback's unscheduleDrawable method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 1
 

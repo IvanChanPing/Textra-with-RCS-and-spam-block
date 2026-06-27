@@ -54,6 +54,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles item click events in a RecyclerView, checking if the item is a conversation or a message, and performs actions accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(ILandroid/view/View;FF)Z
     .locals 5
 
@@ -283,6 +284,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of `Lcom/mplus/lib/B6/i;` Loader. It initializes the loader with a context and a specific ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateLoader(ILandroid/os/Bundle;)Landroidx/loader/content/Loader;
     .locals 4
 
@@ -408,6 +410,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the loader by calling the `d()` method on the `f` field of the class, which is an instance of `Lcom/mplus/lib/E6/g;`. It effectively notifies the loader that the data is being reset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLoaderReset(Landroidx/loader/content/Loader;)V
     .locals 1
 

@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t6/e with a given Drawable. It calls the superclass constructor with an integer argument and sets the object's 'j' field to the provided Drawable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
@@ -25,6 +26,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/t6/e with a Drawable and an integer. It sets the Drawable and calls the superclass constructor with the integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
@@ -124,6 +126,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the Drawable object stored in the 'j' field of the class. It does not perform any additional operations or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 

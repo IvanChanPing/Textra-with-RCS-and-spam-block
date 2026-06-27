@@ -640,6 +640,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method invokes a static method `a` from the same class, passing `zzbr` and `zzaq` objects. It appears to be a bridge method for calling the static method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic zzb(Lcom/google/android/gms/internal/mlkit_smart_reply_bundled/zzbr;Ljava/lang/Object;)V
     .locals 1
 

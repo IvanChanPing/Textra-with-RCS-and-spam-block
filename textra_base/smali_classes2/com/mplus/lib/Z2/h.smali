@@ -40,6 +40,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of the class Lcom/mplus/lib/Z2/h. It creates a copy of the enum constants array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/Z2/h;
     .locals 2
 
@@ -58,6 +59,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a given Runnable. It simply calls the run method on the provided Runnable instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 1
 

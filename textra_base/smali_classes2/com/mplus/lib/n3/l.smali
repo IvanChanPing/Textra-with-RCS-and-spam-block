@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes a CharSequence as input and returns an unmodifiable list of strings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/CharSequence;)Ljava/util/List;
     .locals 3
 

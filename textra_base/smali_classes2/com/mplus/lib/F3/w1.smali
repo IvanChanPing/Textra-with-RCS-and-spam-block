@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `a` of type `Lcom/mplus/lib/F3/X0;` based on the values of `Lcom/mplus/lib/F3/t1;->e:Z` and `Lcom/mplus/lib/F3/t1;->d:Z` and the result of `Lcom/mplus/lib/F3/d;->a()Z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 

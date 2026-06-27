@@ -15,6 +15,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method performs asynchronous processing of a message send request, invoking a callback on either a `Lcom/mplus/lib/N4/e;` or `Lcom/mplus/lib/c5/d;` object based on the request type, and handles any exceptions by logging an error and posting a send error event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 

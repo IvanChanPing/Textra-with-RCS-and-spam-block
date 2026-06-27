@@ -35,6 +35,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static field `k` with an instance of `Lcom/mplus/lib/J5/g`. It sets up the class by retrieving the instance using `Lcom/mplus/lib/J5/g;->a0()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -101,6 +102,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if two instance variables `a` and `h` are equal and returns `true` if they are not, and `false` otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Z
     .locals 3
 
@@ -493,6 +495,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the color and transparency properties of an object based on the input parameter. It checks the input value against specific color constants and updates the object's properties accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(I)V
     .locals 5
 
@@ -631,6 +634,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to the given object, comparing their classes and a specific integer field 'a' if they are of the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -698,6 +702,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'a' as the hash code of the object. It does not use the standard hash code calculation, instead returning a fixed value stored in 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

@@ -28,6 +28,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static enum-like objects in the Lcom/mplus/lib/A4/c class. It creates instances of Lcom/mplus/lib/A4/c with different string constants and integer values, then stores them in static fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 6
 
@@ -80,6 +81,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an enum instance with a string, index, and an additional integer value. It sets the integer value to a field 'a' in the enum instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
@@ -158,6 +160,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an enum constant of type Lcom/mplus/lib/A4/c; from a given string. It uses the Java Enum.valueOf method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static valueOf(Ljava/lang/String;)Lcom/mplus/lib/A4/c;
     .locals 2
 
@@ -174,6 +177,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values in the class Lcom/mplus/lib/A4/c. It essentially provides a copy of the enum constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/A4/c;
     .locals 2
 
@@ -196,6 +200,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'a' in class Lcom/mplus/lib/A4/c. It does not use the constants 6 or 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 2
 

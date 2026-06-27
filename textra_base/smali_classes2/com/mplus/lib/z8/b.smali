@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/z8/b, setting its 'a' and 'b' fields to the provided objects. It appears to be a constructor for a pair or tuple-like class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically if the other object is an instance of `Lcom/smaato/sdk/core/util/Pair` and has the same first and second values as the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
@@ -135,6 +137,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the object stored in the 'a' field of the class. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final first()Ljava/lang/Object;
     .locals 2
 
@@ -147,6 +150,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on the hash codes of its two fields, `a` and `b`. It uses a simple hashing algorithm involving XOR and multiplication operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 4
 
@@ -211,6 +215,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object field 'b' in the class Lcom/mplus/lib/z8/b. It simply retrieves and returns the stored object reference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final second()Ljava/lang/Object;
     .locals 2
 

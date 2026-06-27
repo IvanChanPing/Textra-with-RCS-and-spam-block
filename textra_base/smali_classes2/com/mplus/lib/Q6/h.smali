@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Q6/h class with a Context and an array of Strings. It sets the Context and String array as instance variables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public varargs constructor <init>(Landroid/content/Context;[Ljava/lang/String;)V
     .locals 0
 

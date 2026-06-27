@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/m7/k, calling the superclass constructor with specific parameters. It sets up the object with a reference to Lcom/mplus/lib/r4/p and Lcom/mplus/lib/m7/j.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -108,6 +109,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state and updates a text view with a string resource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

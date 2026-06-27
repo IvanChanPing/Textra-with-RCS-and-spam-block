@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/u8/a, setting its fields with a byte array and a long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(J[B)V
     .locals 0
 
@@ -32,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of a field named 'b' of type long.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contentLength()J
     .locals 3
 
@@ -44,6 +46,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an InputStream from a byte array. It creates a ByteArrayInputStream using the byte array stored in the object's field 'a'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final source()Ljava/io/InputStream;
     .locals 3
 

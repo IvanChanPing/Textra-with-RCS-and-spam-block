@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/o3/L0, setting its 'a' and 'b' fields to the provided Lcom/mplus/lib/o3/e0 objects. It also calls the superclass constructor of java/util/AbstractSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/e0;Lcom/mplus/lib/o3/e0;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the add operation is not supported. It always returns no value due to the exception, as the method is declared to return a boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -43,6 +45,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to add all elements from a collection. It does not actually add any elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -55,6 +58,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called. It does not actually clear any data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -69,6 +73,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is present in both sets `a` and `b` of the class. It returns true if the object is found in both sets, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 2
 
@@ -145,6 +150,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if two collections are disjoint, meaning they have no elements in common. It returns true if the collections are disjoint and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isEmpty()Z
     .locals 3
 
@@ -165,6 +171,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator object for the class Lcom/mplus/lib/o3/L0. It creates a new instance of Lcom/mplus/lib/o3/l0, passing the current object as a parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
@@ -177,6 +184,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the remove operation is not supported. It always returns by throwing an exception, rather than a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 1
 
@@ -193,6 +201,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the removeall operation is not supported. It does not actually remove any elements from a collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -205,6 +214,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, indicating that the retainAll operation is not supported. It does not modify the collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 1
 
@@ -215,6 +225,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of the intersection between two sets.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 5
 

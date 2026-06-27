@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a new instance of the class Lcom/mplus/lib/Y2/D, storing a LocationResult object. It sets the object's field 'a' to the provided LocationResult.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/location/LocationResult;)V
     .locals 0
 
@@ -28,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies a LocationCallback listener with a LocationResult. It casts the input object to a LocationCallback and calls its onLocationResult method with the stored LocationResult.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic notifyListener(Ljava/lang/Object;)V
     .locals 2
 

@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/d9/a, setting its properties. It calls the superclass constructor and sets four instance variables: a long and three booleans.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(JZZZ)V
     .locals 0
 
@@ -37,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically comparing properties of `VideoAdViewProperties` instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 8
 
@@ -123,6 +125,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code for an object of class Lcom/mplus/lib/d9/a based on its fields. It uses bitwise operations and constants to combine the values of the object's fields into a single hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 6
 
@@ -232,6 +235,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns whether an object is clickable. It returns the value of the object's 'c' field, which presumably represents the clickable state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isClickable()Z
     .locals 2
 
@@ -242,6 +246,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the value of a boolean field `b` indicating whether something is skippable. It does not perform any additional logic or checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isSkippable()Z
     .locals 2
 
@@ -254,6 +259,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks and returns the current sound state. It returns a boolean value indicating whether sound is on or off.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final isSoundOn()Z
     .locals 2
 
@@ -264,6 +270,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field named 'a' of type long. It does not actually skip an interval as its name suggests.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final skipInterval()J
     .locals 3
 
@@ -276,6 +283,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically a `VideoAdViewProperties` object, including its properties such as skip interval, skippability, clickability, and sound status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/a3/q2, setting its fields with provided parameters. It stores references to Lcom/mplus/lib/a3/s2 and Lcom/google/android/gms/internal/mlkit_entity_extraction/zzawb objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/s2;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzawb;)V
     .locals 0
 
@@ -50,6 +51,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to atomically update a reference and returns a zzaxt object either by calling zzawb's zza method if the update is successful, or by calling zzaxi's zzh method if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 4
 

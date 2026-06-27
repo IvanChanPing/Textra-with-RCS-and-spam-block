@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static arrays in the class Lcom/mplus/lib/P7/b, mapping enum values from Lcom/smaato/sdk/core/AdContentRating and Lcom/smaato/sdk/core/ad/GeoType to integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 6
 

@@ -84,6 +84,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to parse and process video ad data, specifically icons and companions, based on the input object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 18
 

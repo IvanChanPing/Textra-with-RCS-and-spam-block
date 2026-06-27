@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/z7/x, storing a MediaMetadataRetriever instance. It sets up the object with the provided MediaMetadataRetriever.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/media/MediaMetadataRetriever;)V
     .locals 0
 

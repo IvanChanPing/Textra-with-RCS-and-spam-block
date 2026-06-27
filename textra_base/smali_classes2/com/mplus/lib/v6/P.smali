@@ -83,6 +83,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an object of type `Lcom/mplus/lib/v4/h` and performs operations on its components, including iterating over a collection and invoking methods on various objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 
@@ -198,6 +199,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the 'v' field, which is an instance of Lcom/mplus/lib/r4/n.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 2
 
@@ -206,6 +208,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle some kind of initialization or cleanup process, resetting certain objects and invoking methods on other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
@@ -283,6 +286,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the initialization and setup of a text input field, including checking for existing text and updating the field accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()V
     .locals 9
 
@@ -498,6 +502,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `P4/p` instance and uses it to call `M` with a `J` value and an `E3/i` object, which is chosen based on a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 5
 
@@ -648,6 +653,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling methods to update and notify various components. It appears to refresh or update data in a RecyclerView adapter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/d7/d;)V
     .locals 1
 
@@ -678,6 +684,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the value of a MutableLiveData object based on the event received, specifically handling cases where the event data indicates an increment or reset of a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/A0;)V
     .locals 9
 
@@ -872,6 +879,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets objects in `Lcom/mplus/lib/s5/m` and `Lcom/mplus/lib/A2/r` instances to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/o;)V
     .locals 2
 
@@ -904,6 +912,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, disabling and stopping certain components.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/v6/O;)V
     .locals 2
 
@@ -922,6 +931,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met and if so, it calls methods to update the UI, specifically `u0` on `Lcom/mplus/lib/Q5/j` and `q0` on `Lcom/mplus/lib/h6/d`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/v6/Y;)V
     .locals 2
 
@@ -979,6 +989,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the global layout of a view, specifically toggling the visibility of certain UI elements based on conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onGlobalLayout()V
     .locals 7
 
@@ -1112,6 +1123,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to reset and clean up various objects and fields within the class, and also invokes methods to update and notify other components.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 6
 
@@ -1247,6 +1259,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to reset or modify a timer by setting a field to a specific negative value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0()V
     .locals 4
 
@@ -1271,6 +1284,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/x5/z;` if it already exists, or initializes and returns it if it doesn't. It does this by finding a view with id `0x7f0a028b` and casting it to `Lcom/mplus/lib/x5/z;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0()Lcom/mplus/lib/x5/z;
     .locals 3
 
@@ -1567,6 +1581,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to be responsible for cleaning up and hiding various UI components, and then registering a new event listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0()V
     .locals 6
 
@@ -1819,6 +1834,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met by calling `Lcom/mplus/lib/i5/h;->V()` and `Lcom/mplus/lib/r4/n;->v()`, returning true if the condition is met and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v0()Z
     .locals 2
 

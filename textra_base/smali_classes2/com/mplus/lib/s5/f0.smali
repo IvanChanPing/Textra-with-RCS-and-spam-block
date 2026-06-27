@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calculates the position of a given section in a list. It uses a binary search algorithm to find the position of the section that matches the given character.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getPositionForSection(I)I
     .locals 13
 
@@ -451,6 +452,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of strings stored in the 'g' field of the class. It always returns this array, regardless of any other factors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getSections()[Ljava/lang/Object;
     .locals 2
 
@@ -463,6 +465,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onChanged() method of the DataSetObserver class and clears the SparseIntArray object 'e' after calling the superclass's onChanged() method. It essentially resets the SparseIntArray when data changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChanged()V
     .locals 2
 
@@ -479,6 +482,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onInvalidated() method of the DataSetObserver class and clears the SparseIntArray object 'e' after calling the superclass's onInvalidated() method. It appears to reset or clear data when the dataset is invalidated.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onInvalidated()V
     .locals 2
 

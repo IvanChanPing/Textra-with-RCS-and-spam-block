@@ -136,6 +136,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/y. It does not perform any operations, just returns the existing instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/x5/y;
     .locals 2
 
@@ -524,6 +525,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a calendar object with the selected date from a DatePicker and then calls two other methods, o0 and p0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDateSet(Landroid/widget/DatePicker;III)V
     .locals 2
 
@@ -574,6 +576,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a calendar object with the selected time and then calls other methods to process the updated calendar. It sets the hour and minute of the calendar using the provided time picker values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTimeSet(Landroid/widget/TimePicker;II)V
     .locals 2
 
@@ -616,6 +619,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the text of two `BaseTextView` instances and sets the visibility of a `BaseButton` based on the current date and time.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 9
 

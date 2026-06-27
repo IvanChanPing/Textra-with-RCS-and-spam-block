@@ -22,6 +22,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map with boolean keys and integer values representing string resources.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -54,6 +55,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/g7/s;, setting up its properties and invoking parent class constructors. It also sets a string resource with ID 0x7f11038e and registers itself as a listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/a;Lcom/mplus/lib/P6/c;Z)V
     .locals 2
 
@@ -84,6 +86,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/g7/t and invokes its b method with an Lcom/mplus/lib/x5/l object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 
@@ -102,6 +105,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a `TextView` object if it's null, using the `m` method to inflate it with specific resource IDs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 3
 
@@ -135,6 +139,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to update the UI based on the state of an object, displaying different messages or strings depending on the object's properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 6
 

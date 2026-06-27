@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the Lcom/mplus/lib/F3/Q0 class. It creates a new instance and assigns it to a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -31,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the Lcom/mplus/lib/F3/Q0 class, setting up a ConcurrentHashMap and an instance of Lcom/mplus/lib/F3/w0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -378,6 +380,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method takes an Object, gets its Class, and uses it to retrieve an instance of Lcom/mplus/lib/F3/T0; via the 'a' method. It returns this instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Object;)Lcom/mplus/lib/F3/T0;
     .locals 1
 

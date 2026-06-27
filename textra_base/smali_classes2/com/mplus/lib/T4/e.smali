@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method decodes a Base64-encoded string, parses it as a HistoricSimPersister$HistoricSims protobuf message, and returns a list of HistoricSim objects wrapped in a P6/c object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g()Lcom/mplus/lib/P6/c;
     .locals 8
 
@@ -424,6 +425,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to parse the first string in an array returned by `k()` as an integer and returns it, or returns -1 if the array is empty, the string cannot be parsed, or an exception occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public j()I
     .locals 5
 
@@ -493,6 +495,7 @@
     return v3
 .end method
 
+# M-ROLE [GROQ]: This method returns an array of strings split by the colon (:) character from a string obtained by calling `getAsString()` on the current object. If the string is empty, it returns an empty array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k()[Ljava/lang/String;
     .locals 4
 
@@ -541,6 +544,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a string returned by `getAsString()` equals "2" and returns the result as a boolean.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public l()Z
     .locals 3
 

@@ -355,6 +355,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method parses a JSON object from a `JsonReader` and populates an instance of `Lcom/mplus/lib/E4/a` with the parsed data. It checks for specific keys like "url", "width", "height", and "size" and sets the corresponding fields in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l0(Landroid/util/JsonReader;)Lcom/mplus/lib/E4/a;
     .locals 4
 

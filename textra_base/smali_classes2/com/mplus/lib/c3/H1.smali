@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the H1 class with a zzu object and two integers. It sets the object and integer fields of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_language_id_common/zzu;II)V
     .locals 0
 
@@ -33,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a list at a calculated index, validating the input index beforehand.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 3
 
@@ -61,6 +63,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -73,6 +76,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a collection by delegating to `zzf(II)` and casting the result to `Ljava/util/List`. It appears to be a bridge method for a subclass of a class that uses `com/google/android/gms/internal/mlkit_language_id_common/zzu`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 
@@ -149,6 +153,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls a validation method and then invokes another method to modify and return a zzu object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(II)Lcom/google/android/gms/internal/mlkit_language_id_common/zzu;
     .locals 2
 

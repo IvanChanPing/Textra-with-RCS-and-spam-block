@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/g8/b; with an integer and an object, then calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides the onActivityCreated callback in the ActivityLifecycleCallbacksAdapter class, handling activity creation based on a switch statement with a single case.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 2
 
@@ -71,6 +73,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the onActivityPaused event by checking the current state and performing actions based on it, such as clearing a WeakReference to the paused activity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityPaused(Landroid/app/Activity;)V
     .locals 3
 
@@ -134,6 +137,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the resumption of an Android activity, performing different actions based on the value of a local variable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityResumed(Landroid/app/Activity;)V
     .locals 2
 
@@ -184,6 +188,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the onActivityStarted event by either storing a weak reference to the activity or notifying a ProcessLifecycleOwner.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityStarted(Landroid/app/Activity;)V
     .locals 2
 
@@ -234,6 +239,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the onActivityStopped event, checking the current state and performing actions based on it, such as clearing the activity reference or calling a lifecycle method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityStopped(Landroid/app/Activity;)V
     .locals 3
 

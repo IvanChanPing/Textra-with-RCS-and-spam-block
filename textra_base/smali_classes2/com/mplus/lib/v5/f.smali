@@ -24,6 +24,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method is a callback for the `onGlobalLayout` event, which is triggered when the global layout of a view changes, and it appears to handle the layout and animation of a view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onGlobalLayout()V
     .locals 5
 
@@ -222,6 +223,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a helper method. It delegates the actual conversion to the `Lcom/mplus/lib/z7/h;->w(Ljava/lang/Object;)Ljava/lang/String>` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

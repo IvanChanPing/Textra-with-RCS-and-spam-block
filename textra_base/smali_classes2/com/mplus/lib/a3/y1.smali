@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/a3/y1 using a zzasf object from the Google ML Kit library. It sets this instance as a static field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -33,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a new instance of the class, wrapping the provided `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzasf` object in an `AtomicReference`. It sets this wrapped object as a field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzasf;)V
     .locals 1
 
@@ -49,6 +51,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from an AtomicReference, casts it to zzasf, and calls its zza method to return a zzaqs object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaqs;
     .locals 2
 
@@ -71,6 +74,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/google/android/gms/internal/mlkit_entity_extraction/zzasr by calling the zzc method on an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/zzasf stored in an AtomicReference.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzasr;
     .locals 2
 
@@ -97,6 +101,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method with the same name and parameters on an object of type Lcom/google/android/gms/internal/mlkit_entity_extraction/zzasf, but its return value is always 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd(Ljava/lang/String;Ljava/util/logging/Level;Z)Z
     .locals 2
 

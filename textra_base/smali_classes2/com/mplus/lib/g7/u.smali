@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/g7/u; that initializes its parent class Lcom/mplus/lib/y7/b; with a null argument. It sets up the object with default or no configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -29,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a string value from a context and uses it to get an integer value from a map or similar data structure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()I
     .locals 3
 
@@ -67,6 +69,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a fragment and initializes its components. It also sets an OnClickListener on a specific view and updates the fragment's state with a string resource.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

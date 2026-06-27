@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/d7/c, setting up its properties and calling the superclass constructor. It also configures the instance with data from the provided Lcom/mplus/lib/P6/c object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/P6/c;)V
     .locals 2
 
@@ -195,6 +196,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks the state of an object and returns a specific resource ID based on its state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y(Lcom/mplus/lib/r4/n;)I
     .locals 2
 
@@ -375,6 +377,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and sets a string value based on the result. If the condition is true, it retrieves a string resource with ID 0x7f110314; otherwise, it sets an empty string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 3
 

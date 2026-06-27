@@ -43,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method executes a callable or an interface method based on the value of `e` field, returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/Object;
     .locals 4
 
@@ -97,6 +98,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of an object based on the value of a field `e`. It checks the value of `e` and returns the string representation of either a `Callable` object or a `com/google/android/gms/internal/mlkit_entity_extraction/zzawb` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/lang/String;
     .locals 2
 
@@ -145,6 +147,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a Throwable exception by checking its type and performing corresponding actions, such as canceling a task or logging the error.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Throwable;)V
     .locals 3
 

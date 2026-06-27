@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a DeleteLongLivedShortcut worker with a context and worker parameters, extracting a "shortcutId" from the input data. It stores this id in the object's field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
     .param p1    # Landroid/content/Context;
@@ -43,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes long-lived shortcuts from the Android system and returns a success result. It uses the provided shortcut ID to remove the corresponding shortcut.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doWork()Landroidx/work/ListenableWorker$Result;
     .locals 3
 

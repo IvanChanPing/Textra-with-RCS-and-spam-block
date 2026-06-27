@@ -57,6 +57,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/h6/d class, setting various object fields and boolean properties. It appears to be a constructor method for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/s5/q;Lcom/mplus/lib/v6/P;Lcom/mplus/lib/s5/q;Lcom/mplus/lib/v6/P;Lcom/mplus/lib/v6/x;Lcom/mplus/lib/h6/i;Lcom/mplus/lib/v6/p;)V
     .locals 0
 
@@ -87,6 +88,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method is called after text has been changed, and it updates the UI by calling `n0` on an `M5/k` object and then calls `p0` on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 3
 
@@ -208,6 +210,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle some initialization or setup process, invoking various other methods and accessing specific objects. It seems to interact with classes related to 'H' and 'P', and calls methods like 'x0', 'p0', and 'w0' on the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0()V
     .locals 3
 
@@ -444,6 +447,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles the destruction of an action mode, updating related objects' states accordingly. It toggles and sets various flags and invokes methods on related objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroyActionMode(Landroid/view/ActionMode;)V
     .locals 3
 
@@ -616,6 +620,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if two objects are equal and if so, it hides a view and calls another method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/X4/c;)V
     .locals 2
 
@@ -659,6 +664,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if two objects of type Lcom/mplus/lib/r4/n are equal and if so, calls the c() method on an object of type Lcom/mplus/lib/s5/q.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/X4/d;)V
     .locals 2
 
@@ -723,6 +729,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if two objects are equal and if so, displays a notification with a specific message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/X4/h;)V
     .locals 2
 
@@ -774,6 +781,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling `w0()` on the current object. It appears to be part of an event bus system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/h6/a;)V
     .locals 1
 
@@ -786,6 +794,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears an object reference and then calls the `x0()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/o;)V
     .locals 2
 
@@ -808,6 +817,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears a HashMap object and then calls the `w0()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/v4/d;)V
     .locals 1
 
@@ -1647,6 +1657,7 @@
     return v4
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle various initialization and setup tasks, including calling other methods to perform specific actions and updating the visibility of a view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 4
 
@@ -1714,6 +1725,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the `d()` method on the `SendText` object, likely clearing its text. It then returns without using the integer values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0()V
     .locals 2
 
@@ -2878,6 +2890,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates and sets the fancy send hint for the SendText object. It iterates over a collection of objects, updating their properties and posting runnables to a handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w0()V
     .locals 9
 
@@ -3039,6 +3052,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility and text of a `SignatureText` view based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x0()V
     .locals 7
 

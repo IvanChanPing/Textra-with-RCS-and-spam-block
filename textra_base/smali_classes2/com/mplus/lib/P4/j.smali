@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/P4/j, storing a NotificationManager and registering itself with an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/app/NotificationManager;)V
     .locals 1
 
@@ -243,6 +244,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method creates a notification channel using the provided `NotificationChannel` object and then clears an `ArrayList`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Landroid/app/NotificationChannel;)V
     .locals 3
 
@@ -285,6 +287,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method deletes a notification channel if it exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/P4/a;I)V
     .locals 2
 
@@ -352,6 +355,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method populates an Android NotificationChannel object from an XML string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/app/NotificationChannel;Ljava/lang/String;)V
     .locals 4
 
@@ -750,6 +754,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of notification channels, excluding the "miscellaneous" channel, and returns the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f()Ljava/util/List;
     .locals 5
 
@@ -1044,6 +1049,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list of NotificationChannels and passes each one to the provided callback interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Lcom/mplus/lib/s5/q0;)V
     .locals 4
 

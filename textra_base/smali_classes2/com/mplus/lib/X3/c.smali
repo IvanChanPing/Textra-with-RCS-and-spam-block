@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/X3/c that initializes an integer field 'b' with the provided value. It also calls the superclass constructor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -46,6 +47,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the current object. It appears to be using a utility method to convert the object to a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final b()Ljava/lang/String;
     .locals 2
 
@@ -62,6 +64,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method destroys ad views based on the value of `b` field. It supports Tappx and Amazon ads.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 3
 
@@ -114,6 +117,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of `b` and based on that, it sets `d` to true and calls `Lcom/mplus/lib/V3/b;->N()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 2
 
@@ -188,6 +192,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/Y3/a` based on the value of the `b` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()Lcom/mplus/lib/Y3/a;
     .locals 2
 
@@ -284,6 +289,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a field `b` and returns a boolean based on the state of an object `e` of type `Y3/a` or its subclasses.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Z
     .locals 2
 
@@ -324,6 +330,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object based on the value of the `b` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 
