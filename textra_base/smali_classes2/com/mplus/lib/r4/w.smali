@@ -39,6 +39,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static string array field `m` in class `Lcom/mplus/lib/r4/w;` with an empty array. It sets up the class's static state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -51,6 +52,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/r4/w` class, setting up various file directories and objects. It creates directories for media, thumbnails, and other data if they do not exist, throwing a `RuntimeException` if the directories cannot be created.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/File;Lcom/mplus/lib/f1/e;Landroid/content/Context;)V
     .locals 2
 
@@ -1067,6 +1069,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a database table named "messages" with specific values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H(JI[BZI)V
     .locals 3
 
@@ -1215,6 +1218,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a database by setting the unread count to 0 for a specific conversation ID. It constructs a SQL query string and executes it using a database object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final J(J)V
     .locals 2
 
@@ -1310,6 +1314,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a database table "mms_queue" with a "failed" status based on the provided ID and a boolean value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L(JZ)V
     .locals 3
 
@@ -1370,6 +1375,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a database table named "messages" with a new "url_prerender_state" value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(IJ)V
     .locals 3
 
@@ -1524,6 +1530,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of objects and invokes another method to handle each object, potentially writing data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O(JLcom/mplus/lib/r4/n;)V
     .locals 12
 
@@ -2195,6 +2202,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method deletes a record from the "sms_queue" table based on a given ID. It constructs a WHERE clause with the ID and executes the deletion query.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(J)V
     .locals 3
 
@@ -2231,6 +2239,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method executes a raw SQL query on a database and returns the first integer column value of the first row in the result set, or a default value if the query returns no rows.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/String;[Ljava/lang/String;I)I
     .locals 2
 
@@ -2315,6 +2324,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method executes a raw SQL query on a database and returns the first column of the first row as a long value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Ljava/lang/String;[Ljava/lang/String;J)J
     .locals 2
 
@@ -2399,6 +2409,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method inserts a new record into a database table named "contact_settings" with columns "lookup_key", "key", and "value".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
@@ -2453,6 +2464,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inserts a conversation into a database and returns the inserted row ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(Lcom/mplus/lib/r4/s;)J
     .locals 6
 
@@ -2671,6 +2683,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method inserts a message into a SQLite database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(Lcom/mplus/lib/r4/j0;Lcom/mplus/lib/r4/l0;)V
     .locals 18
 
@@ -3214,6 +3227,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method inserts data into an "mms_queue" table in a database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(JLcom/mplus/lib/r4/j0;)V
     .locals 9
 
@@ -3358,6 +3372,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inserts data into an SQLite database table named "sms_queue" with columns "_id", "ts", and "sent_sound_state".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l(JLcom/mplus/lib/r4/j0;)V
     .locals 4
 
@@ -3455,6 +3470,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a row in the "convos" table of an SQLite database, setting the "deleted" column to the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Lcom/mplus/lib/z7/O;I)I
     .locals 4
 
@@ -3517,6 +3533,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the "unread" status of a message with a given ID in a SQLite database to false. It returns the number of rows affected by the update operation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(J)I
     .locals 4
 
@@ -3581,6 +3598,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the "deleted" status of messages in the "messages" table in a SQLite database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Lcom/mplus/lib/z7/O;I)V
     .locals 4
 
@@ -3715,6 +3733,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves messages from a SQLite database based on a given MMS unique ID and returns a `Lcom/mplus/lib/r4/q` object. It constructs a SQL query to select messages where deleted equals 0 and MMS unique ID matches the input.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Ljava/lang/String;)Lcom/mplus/lib/r4/q;
     .locals 4
 
@@ -3755,6 +3774,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a conversation from a SQLite database based on a given ID and returns a `Lcom/mplus/lib/r4/u` object. It executes a SQL query with a parameterized ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s(J)Lcom/mplus/lib/r4/u;
     .locals 3
 
@@ -3799,6 +3819,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method executes a SQL query to retrieve conversation data from a database and returns the result as an instance of `Lcom/mplus/lib/r4/u`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t(ILjava/lang/String;)Lcom/mplus/lib/r4/u;
     .locals 4
 
@@ -4036,6 +4057,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method executes a SQL query to retrieve conversation data from a database and returns the result as an instance of `Lcom/mplus/lib/r4/u`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v(Lcom/mplus/lib/z7/O;)Lcom/mplus/lib/r4/u;
     .locals 4
 
@@ -4096,6 +4118,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves messages from a SQLite database based on a queue ID and message kind, and returns a `Lcom/mplus/lib/r4/q` object. It constructs a SQL query with parameters and executes it on the database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w(IJ)Lcom/mplus/lib/r4/q;
     .locals 3
 
@@ -4150,6 +4173,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates an instance of Lcom/mplus/lib/i5/a, sets a value, and then uses the result to call another method A, returning an Lcom/mplus/lib/r4/f0 object. It appears to be involved in some kind of data processing or encoding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x(J)Lcom/mplus/lib/r4/f0;
     .locals 3
 
@@ -4278,6 +4302,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method constructs and executes a SQL query to retrieve messages from a database, filtering by conversation ID, deleted status, and tapback status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z(JIIZZ)Lcom/mplus/lib/r4/f0;
     .locals 4
 

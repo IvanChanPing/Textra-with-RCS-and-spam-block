@@ -45,6 +45,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class `Lcom/mplus/lib/h5/h;`, specifically setting up various locales, reaction emojis, and reaction text for different languages.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 44
 
@@ -1570,6 +1571,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method determines the language of the device and returns a corresponding enum value from the `Lcom/mplus/lib/h5/g` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q()Lcom/mplus/lib/h5/g;
     .locals 6
 

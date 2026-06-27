@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/c5/d, calling the superclass constructor with a specific integer value and a Context object. It also creates a new Object instance and assigns it to a field named 'f'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
@@ -42,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/c5/d; and calls the S() method on it. It handles exceptions by re-throwing them after exiting the synchronized block.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/c5/d;
     .locals 3
 
@@ -209,6 +211,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method unmarks phone numbers as waiting for service in the database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()V
     .locals 9
 
@@ -372,6 +375,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method handles various intent actions, including "maybeSendNextQueued", "reportSentIntent", "reportDeliveryIntent", "backInPhoneService", "expireSending", and "retrySend", and performs corresponding actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Landroid/content/Intent;)V
     .locals 7
 
@@ -616,6 +620,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method always returns true and logs a message with a stack trace when called.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q()Z
     .locals 1
 
@@ -1131,6 +1136,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method notifies the user of a failed SMS send operation and schedules a retry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(Lcom/mplus/lib/r4/j0;)V
     .locals 8
 
@@ -1264,6 +1270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the receipt of an SMS message, parsing the message, checking for duplicates and blacklisted conversations, and then either ignoring the message or displaying it to the user.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(Landroid/content/Intent;)V
     .locals 6
 
@@ -1724,6 +1731,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of sending or delivering an SMS message. It checks the intent action and updates the message status accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(Lcom/mplus/lib/s5/m;)V
     .locals 25
 
@@ -2889,6 +2897,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a collection of objects, cancels notifications, and updates the state of these objects by clearing their data and resetting their flags.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X(Lcom/mplus/lib/r4/k0;)V
     .locals 12
 

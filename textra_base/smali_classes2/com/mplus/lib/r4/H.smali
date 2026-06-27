@@ -42,6 +42,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class, creating two objects and a Uri. It sets up a Uri by appending "convo" to a base Uri from Lcom/mplus/lib/r4/h0;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 
@@ -452,6 +453,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the cursor can move to the next row and returns an object of type Lcom/mplus/lib/r4/j0; if successful, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g0(Lcom/mplus/lib/r4/f0;)Lcom/mplus/lib/r4/j0;
     .locals 2
 
@@ -556,6 +558,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a Uri using the provided long value and then invokes another method to perform an action based on the generated Uri and a boolean flag.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static k0(JZ)V
     .locals 1
 
@@ -572,6 +575,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves data from a database and constructs a `j0` object based on the query results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A0(J)Lcom/mplus/lib/r4/j0;
     .locals 5
 
@@ -704,6 +708,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an MMS queue item from a database based on its ID and returns a `g0` object containing the query results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B0(J)Lcom/mplus/lib/r4/g0;
     .locals 4
 
@@ -1055,6 +1060,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the database to mark a message as tapped back and inserts a new tapback message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final G0(JJ)V
     .locals 9
 
@@ -1331,6 +1337,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of objects and invokes a method on an instance of `Lcom/mplus/lib/r4/w` with various parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final I0(JJILcom/mplus/lib/r4/M;)V
     .locals 12
 
@@ -1582,6 +1589,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method updates a database table named "messages" by setting the "locked" field based on the provided boolean value, using a WHERE clause constructed from the input object's string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K0(Lcom/mplus/lib/z7/O;Z)V
     .locals 4
 
@@ -2241,6 +2249,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a conversation in the database based on the provided conversation ID. It checks for unread messages and updates the conversation accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N0(J)V
     .locals 12
 
@@ -2776,6 +2785,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to query a database and perform actions based on the query results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P0(JJ)V
     .locals 10
 
@@ -2988,6 +2998,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the count of non-deleted, non-tapback messages for a specific conversation ID from a database. It returns the count as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(J)I
     .locals 4
 
@@ -3147,6 +3158,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a collection of contact data, querying the Android ContactsContract and adding relevant data to a new collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Lcom/mplus/lib/r4/n;ZZ)Lcom/mplus/lib/r4/n;
     .locals 12
 
@@ -3402,6 +3414,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves contact settings from a SQLite database and stores them in a HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(Lcom/mplus/lib/r4/p;Lcom/mplus/lib/r4/l;)V
     .locals 5
 
@@ -3577,6 +3590,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates a database record based on the provided `j0` object and notifies the app if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(Lcom/mplus/lib/r4/j0;)V
     .locals 11
 
@@ -3890,6 +3904,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `Lcom/mplus/lib/r4/s` object from a database query using the provided `Ljava/lang/String` parameter. It queries the database, and if a result is found, it returns the corresponding object; otherwise, it returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(Ljava/lang/String;)Lcom/mplus/lib/r4/s;
     .locals 3
 
@@ -3971,6 +3986,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method takes an object of type Lcom/mplus/lib/r4/n, extracts a string from it, and uses that string to call another method V to obtain an object of type Lcom/mplus/lib/r4/s. It then returns this object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/r4/s;
     .locals 1
 
@@ -4053,6 +4069,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method checks if a database transaction is in progress and if so, runs the provided callback immediately; otherwise, it starts a transaction, runs the callback, and then commits the transaction.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Z(Lcom/mplus/lib/r4/b;)V
     .locals 3
 
@@ -4331,6 +4348,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to process and log data from an object of type `Lcom/mplus/lib/r4/j0;`, calling other methods and invoking a logging method on `Lcom/mplus/lib/r4/w;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c0(Lcom/mplus/lib/r4/j0;)V
     .locals 10
 
@@ -4383,6 +4401,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a specific event or action, potentially related to app initialization or a user interaction, and notifies other components about the event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d0(J)V
     .locals 5
 
@@ -4944,6 +4963,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a File object by calling the `b()` method of the `j` object in the `w` object. It appears to retrieve a specific file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h0()Ljava/io/File;
     .locals 2
 
@@ -4962,6 +4982,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to rename a file and returns a Uri of the renamed file if successful, or null if the file does not exist or the rename operation fails.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final l0()Landroid/net/Uri;
     .locals 5
 
@@ -5074,6 +5095,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/r4/n`, merges it with the input instance, and then uses the result to create and return an instance of `Lcom/mplus/lib/r4/p`. It appears to be involved in data processing or merging.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Lcom/mplus/lib/r4/n;)Lcom/mplus/lib/r4/p;
     .locals 2
 
@@ -5104,6 +5126,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves data from a SQLite database and stores it in a HashMap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o0(Ljava/lang/String;)Ljava/util/HashMap;
     .locals 7
 
@@ -5258,6 +5281,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of contacts from the device's contact database, filters them based on certain conditions, and returns the result as a `Lcom/mplus/lib/t9/c` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(Ljava/lang/String;IZZ)Lcom/mplus/lib/t9/c;
     .locals 9
 
@@ -5649,6 +5673,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method generates a SQL query to retrieve conversation data from a database and returns the result as a `Lcom/mplus/lib/r4/u` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s0(Ljava/util/List;)Lcom/mplus/lib/r4/u;
     .locals 5
 
@@ -5877,6 +5902,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the first message from a SQLite database that has not been deleted and has a non-zero send timestamp, then returns the corresponding `j0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u0()Lcom/mplus/lib/r4/j0;
     .locals 5
 
@@ -6150,6 +6176,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method executes a SQL query to retrieve the most recent unread message from a conversation and returns the result as an object of type Lcom/mplus/lib/r4/j0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x0(J)Lcom/mplus/lib/r4/j0;
     .locals 5
 
@@ -6271,6 +6298,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `j0` object based on a provided ID, handling cases where the ID is -1 or an exception occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y0(J)Lcom/mplus/lib/r4/j0;
     .locals 8
 
@@ -6363,6 +6391,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `Lcom/mplus/lib/r4/l0` object from a database query based on a given ID. It handles cursor operations and exception handling for the query.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final z0(J)Lcom/mplus/lib/r4/l0;
     .locals 2
 

@@ -226,8 +226,12 @@ def main():
         lines = text.splitlines()
         for start in sorted(accepted, reverse=True):
             indent = lines[start][:len(lines[start]) - len(lines[start].lstrip())]
-            lines.insert(start, f"{indent}# M-ROLE: {accepted[start]}  "
-                                f"[SRC: groq-llama70b, judge-gpt-oss-20b, grounded]")
+            # AUTHORSHIP IS EXPLICIT: these are GROQ-authored, NOT Claude/human.
+            # A future reader greps "# M-ROLE [GROQ]" to find every machine annotation
+            # and trusts it only as provisional (see the tag's NOT-human-verified note).
+            lines.insert(start, f"{indent}# M-ROLE [GROQ]: {accepted[start]}  "
+                                f"[author=groq-llama-3.3-70b | judge=gpt-oss-20b | "
+                                f"grounded | NOT Claude/human-verified]")
         open(path, "w").write("\n".join(lines) + "\n")
         print(f"WROTE {len(accepted)} annotations into {path}")
 

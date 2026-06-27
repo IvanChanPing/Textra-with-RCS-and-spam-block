@@ -1,3 +1,14 @@
+## 2026-06-27 — GROQ method-level annotations on 6 hot RCS/tapback files (zero Claude tokens)
+
+Ran scripts/groq_annotate_verify.py --write on h5/h, r4/H, r4/w, r4/x, C4/e, c5/d.
+Cheap non-Anthropic models did all the work: llama-3.3-70b annotates, gpt-oss-20b judges,
+deterministic Python grounding gates. Auto-accepted 68 method annotations, flagged 64 for
+review. Every inserted line is a comment tagged `# M-ROLE [GROQ]: ... [author=groq-llama-3.3-70b
+| judge=gpt-oss-20b | grounded | NOT Claude/human-verified]` so machine annotations are always
+distinguishable from Claude/human ones. Verified: only comment lines added, no code changed.
+Script label made explicit-authorship; harness gotchas fixed (Groq WAF 403 on urllib UA;
+judge needs response_format json_object).
+
 # TextRCS Changelog
 
 ## 2026-06-26 — Annotate all 3,525 com/mplus/lib smali files
