@@ -5,3 +5,4 @@ build/
 *.apk.dropbox-stub.json
 textrcs.keystore
 /TextRCS-Integration-Kit.zip
+*.annotate_report.jsonl
