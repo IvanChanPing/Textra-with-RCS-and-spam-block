@@ -41,6 +41,59 @@ class DebugInjectReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action != ACTION) return
         if (intent.getStringExtra("token") != TOKEN) { Log.w(TAG, "ignored: bad token"); return }
+
+        // TEST-ONLY regex probe: `--es testTapbackRegex "<text>"` reflectively runs Textra's tapback
+        // matcher h5.h.N(String)->a3.K1 on the given text and logs whether it matched + the extracted
+        // target (a3.K1.c). Diagnoses why a synthesized reaction text is/ isn't recognised as a tapback.
+        // probeB64: base64 of the EXACT bytes to test (survives the double-shell intact, unlike raw
+        // UTF-8 with spaces/ZWSP/HS). Decoded to a UTF-8 String, then same N() probe as below.
+        val probeB64 = intent.getStringExtra("probeB64")
+        val probe = if (!probeB64.isNullOrEmpty())
+            String(android.util.Base64.decode(probeB64, android.util.Base64.DEFAULT), Charsets.UTF_8)
+        else intent.getStringExtra("testTapbackRegex")
+        if (!probe.isNullOrEmpty()) {
+            try {
+                val hCls = Class.forName("com.mplus.lib.h5.h")
+                // Is the tapback pattern registry populated in this process? (m = ArrayList of templates)
+                try {
+                    val mField = hCls.getDeclaredField("m").apply { isAccessible = true }
+                    val m = mField.get(null)
+                    val sz = (m as? java.util.ArrayList<*>)?.size ?: -1
+                    Log.i(TAG, "REGEX-PROBE registry h5.h.m size=$sz (0/empty ⇒ registrar C4/e never ran in this process)")
+                } catch (e: Throwable) { Log.w(TAG, "REGEX-PROBE m-size read failed: ${e.message}") }
+                val n = hCls
+                    .getDeclaredMethod("N", String::class.java)
+                    .apply { isAccessible = true }
+                val k1 = n.invoke(null, probe)
+                if (k1 == null) {
+                    Log.i(TAG, "REGEX-PROBE NO-MATCH len=${probe.length} bytes=${probe.toByteArray().joinToString(""){ "%02x".format(it) }}")
+                } else {
+                    val cField = k1.javaClass.getDeclaredField("c").apply { isAccessible = true }
+                    val target = cField.get(k1)
+                    val ts = target?.toString() ?: "null"
+                    Log.i(TAG, "REGEX-PROBE MATCH target='${ts}' targetLen=${ts.length} targetBytes=${ts.toByteArray().joinToString(""){ "%02x".format(it) }}")
+                }
+            } catch (e: Throwable) {
+                Log.e(TAG, "REGEX-PROBE failed: ${e.javaClass.name}: ${e.message}", e)
+            }
+            return
+        }
+        // attachProbe: directly exercise the G0 tapback-attach bypass in isolation (no handleReactions,
+        // no participant/dedup logic). `--es attachProbeSender +1.. --es attachProbeEmoji 👍
+        // --es attachProbeTarget "Brunch Saturday"` builds the wrapped reaction text and calls
+        // writeIncomingViaFullStore(sender, wrapped, now, target) so we can verify is_tapback=1 directly.
+        val apTarget = intent.getStringExtra("attachProbeTarget")
+        if (!apTarget.isNullOrEmpty()) {
+            val apSender = intent.getStringExtra("attachProbeSender")?.trim().orEmpty()
+            val apEmoji = intent.getStringExtra("attachProbeEmoji")?.trim().orEmpty().ifEmpty { "👍" }
+            val HS = " "; val ZWSP = "​"
+            val wrapped = "$HS$ZWSP$apEmoji$ZWSP to $apTarget$HS"
+            val ok = com.textrcs.bridge.TextraDbBridge.writeIncomingViaFullStore(
+                apSender, wrapped, System.currentTimeMillis(), apTarget)
+            Log.i(TAG, "ATTACH-PROBE sender=$apSender emoji=$apEmoji target='$apTarget' -> writeIncomingViaFullStore=$ok")
+            return
+        }
+
         val sender = intent.getStringExtra("sender")?.trim().orEmpty()
         val body = intent.getStringExtra("body").orEmpty()
         if (sender.isEmpty() || body.isEmpty()) { Log.w(TAG, "ignored: need sender+body"); return }

@@ -284,7 +284,8 @@ object TextraDbBridge {
      * auto-translated by Textra into a NATIVE tapback badge.
      * j0 fields mirror writeIncomingGroup with a single-member recipient set.
      */
-    fun writeIncomingViaFullStore(senderPhone: String, text: String, timestampMs: Long): Boolean {
+    fun writeIncomingViaFullStore(senderPhone: String, text: String, timestampMs: Long,
+                                  attachTargetText: String? = null): Boolean {
         if (Hooks.shouldSkip("dbbridge_write_skip")) {
             Log.w(TAG, "writeIncomingViaFullStore SKIPPED by hook")
             return false
@@ -313,6 +314,45 @@ object TextraDbBridge {
             hCls.getDeclaredMethod("F0", j0Cls).invoke(h, j0)
             Log.i(TAG, "writeIncomingViaFullStore delivered from.tail=${senderPhone.takeLast(6)} text.len=${text.length}")
             ScreenTracer.note("RCV writeIncomingViaFullStore(F0) text.len=${text.length}")
+
+            // BYPASS attach (ADD reactions only). Textra's tapback regex h5.h.N does NOT match our
+            // synthesized reaction text (VERIFIED on-device 2026-06-29: registry h5.h.m populated=12,
+            // yet every format variant → NO-MATCH), so f0 inserts the reaction as a PLAIN row and never
+            // attaches it as a tapback. We do the attach ourselves: r4.H.Z runs the insert SYNCHRONOUSLY
+            // (Z calls task.run() inline), so by here the reaction row exists AND U has set j0.c to the
+            // resolved convo_id. We look up the just-inserted reaction row _id + the target row _id and
+            // call the hand-verified r4.H.G0(tapbackRowId, targetRowId) which sets is_tapback=1, inserts
+            // the message_tapbacks link, and sets the target's has_tapbacks=1 — exactly what f0 would
+            // have done on a regex hit. (REMOVE is not handled here; it would need the inverse delete.)
+            if (attachTargetText != null && attachTargetText.isNotEmpty()) {
+                try {
+                    val convoId = field("c").getLong(j0)
+                    // live SQLiteDatabase = r4.H.d (r4/w) .b (f1/e) .b (SQLiteDatabase) — see r4/H.Z:4084
+                    val w = hCls.getDeclaredField("d").apply { isAccessible = true }.get(h)
+                    val f1e = w.javaClass.getDeclaredField("b").apply { isAccessible = true }.get(w)
+                    val db = f1e.javaClass.getDeclaredField("b").apply { isAccessible = true }
+                        .get(f1e) as android.database.sqlite.SQLiteDatabase
+                    fun rowIdByText(matchText: String): Long {
+                        db.rawQuery(
+                            "SELECT _id FROM messages WHERE deleted=0 AND convo_id=? AND text=? " +
+                                "AND is_tapback=0 ORDER BY ts DESC, _id DESC LIMIT 1",
+                            arrayOf(convoId.toString(), matchText)
+                        ).use { c -> return if (c.moveToFirst()) c.getLong(0) else -1L }
+                    }
+                    val tapbackRowId = rowIdByText(text)            // the reaction row F0 just inserted
+                    val targetRowId = rowIdByText(attachTargetText) // the message being reacted to
+                    if (tapbackRowId > 0 && targetRowId > 0 && tapbackRowId != targetRowId) {
+                        hCls.getDeclaredMethod("G0", Long::class.javaPrimitiveType, Long::class.javaPrimitiveType)
+                            .invoke(h, tapbackRowId, targetRowId)
+                        Log.i(TAG, "tapback ATTACHED via G0 tapback=$tapbackRowId target=$targetRowId convo=$convoId")
+                        ScreenTracer.note("RCV tapback attached G0 t=$tapbackRowId tgt=$targetRowId")
+                    } else {
+                        Log.w(TAG, "tapback attach SKIP tapbackRow=$tapbackRowId targetRow=$targetRowId convo=$convoId (target text not found)")
+                    }
+                } catch (e: Throwable) {
+                    Log.w(TAG, "G0 attach failed: ${e.javaClass.name}: ${e.message}", e)
+                }
+            }
             true
         } catch (e: Throwable) {
             var c: Throwable = e

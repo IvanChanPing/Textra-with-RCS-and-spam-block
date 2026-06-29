@@ -796,7 +796,9 @@ object IncomingMessageHandler {
             val emoji = key.substringAfterLast(SEP)
             // Deliver via the FULL store (F0) — the ONLY path that schedules
             // Textra's tapback parser so this text is auto-translated to a badge.
-            val wrote = TextraDbBridge.writeIncomingViaFullStore(phone, "${HS}${ZWSP}$emoji${ZWSP} to $targetText${HS}", ts)
+            // attachTargetText=$targetText → writeIncomingViaFullStore does the direct r4.H.G0 attach
+            // (Textra's regex parser h5.h.N doesn't recognise our text; verified 2026-06-29).
+            val wrote = TextraDbBridge.writeIncomingViaFullStore(phone, "${HS}${ZWSP}$emoji${ZWSP} to $targetText${HS}", ts, targetText)
             Log.i(TAG, "  REACTION+ emoji=$emoji msg=$msgId phone.tail=${phone.takeLast(4)} wrote=$wrote")
             ScreenTracer.note("RCV reaction+ wrote=$wrote msg=$msgId")
             if (wrote) { seenReactionKeys.add(key); changed = true }

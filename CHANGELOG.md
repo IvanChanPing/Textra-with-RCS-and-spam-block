@@ -1,3 +1,21 @@
+## 2026-06-29 — FIX receive-side RCS tapback attach via direct r4.H.G0 bypass (DB-VERIFIED)
+
+Task #14. Root cause (verified on redroid 5575 + smali read): Textra's tapback regex h5.h.N does NOT
+match our synthesized reaction text — registry h5.h.m populated (size=12) yet all 7 format variants
+(±HS/ZWSP/VS16) → NO-MATCH — so f0 bailed at the regex and inserted the reaction as a plain row
+(is_tapback=0). Everything downstream was fine (parse task scheduled, convo resolved by U, w.D SQL
+finds the target, G0 does the attach — all hand-verified).
+FIX: writeIncomingViaFullStore(...,attachTargetText) now does the attach itself. r4.H.Z runs F0's
+insert SYNCHRONOUSLY, so after F0 the reaction row exists and j0.c=convo; we rawQuery the reaction
+row _id + target row _id on the live SQLiteDatabase (H.d.b.b) and call the hand-verified
+r4.H.G0(tapbackRowId,targetRowId) (sets is_tapback=1 + message_tapbacks link + has_tapbacks=1).
+PROVEN at DB level via TWO drives (sqlite on messaging.db): isolated attachProbe AND the full
+handleReactions path (warm) → is_tapback=1, message_tapbacks linked, has_tapbacks=1.
+UNVERIFIED: the thread UI rendering the badge (can't drive thread UI on redroid). REMOVE/un-react
+path still TODO. Files: TextraDbBridge.kt, IncomingMessageHandler.kt; DebugInjectReceiver.kt gained
+test probes (regex/registry/attach). Earlier cold-start no-attach was a test artifact (participantPhone
+not warmed in a broadcast-only process; production stays warm during receive).
+
 ## 2026-06-29 — Commit the F0-path receive helper writeIncomingViaFullStore (fixes inconsistent HEAD)
 
 Task #11. HEAD's committed IncomingMessageHandler.kt (f6f99eef) CALLED

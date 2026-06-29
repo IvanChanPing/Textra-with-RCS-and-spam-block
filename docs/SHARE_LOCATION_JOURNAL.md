@@ -1,6 +1,157 @@
 # Share My Location (static map link) + RCS reactions check — Task Journal
 
-## CURRENT STATE / NEXT STEP (2026-06-26) — tapback format fixed; F0 path + HS wrapping; COMPILE-BUILT, on-device UNVERIFIED
+## CURRENT STATE / NEXT STEP (2026-06-29c) — G0 BYPASS WORKS (DB-VERIFIED); UI badge UNVERIFIED
+FIXED task #14 at the data layer. The direct-G0 bypass in writeIncomingViaFullStore attaches the
+tapback correctly. PROVEN on redroid 5575 (sqlite on the real messaging.db) via TWO drives:
+ (1) isolated attachProbe: ATTACHED via G0 tapback=31 target=30 → row31 is_tapback=1, row30
+     has_tapbacks=1, message_tapbacks 30|31.
+ (2) FULL real path (handleReactions → writeIncomingViaFullStore, warm process): REACTION+ wrote=true
+     → ATTACHED via G0 tapback=33 target=32 → row33 is_tapback=1, row32 has_tapbacks=1.
+Cold-start NO-attach earlier = TEST ARTIFACT (participantPhone is in-memory, not warmed in a
+broadcast-only cold process). Production keeps the app warm during receive (wake-on-notif) → resolves.
+**STILL UNVERIFIED (e2e rule): the Textra thread UI actually RENDERING a reaction badge from this DB
+state — can't drive the thread UI on redroid (input tap can't open threads). Needs a real device, OR
+the user to open the thread and confirm the badge.**
+NEXT: commit the fix; hand the user an on-device UI check (open the thread, confirm 👍 badge on the
+target, not a literal "👍 to …" bubble). Then REMOVE handling (un-attach) is still TODO (REMOVE path
+currently inserts a plain "Removed…" row; needs the inverse: delete message_tapbacks + clear flags).
+Files: TextraDbBridge.kt (G0 bypass), IncomingMessageHandler.kt:799 (pass targetText), DebugInjectReceiver.kt (probes).
+
+## (prev) CURRENT STATE / NEXT STEP (2026-06-29b) — G0 BYPASS IMPLEMENTED, isolating the test
+IMPLEMENTED the direct-G0 bypass: writeIncomingViaFullStore(…, attachTargetText) — after F0's
+synchronous insert, reads j0.c (convo), gets live SQLiteDatabase (H.d.b.b), rawQuery's the reaction
+row _id + target row _id, calls r4.H.G0(tapbackRowId,targetRowId). Wired ADD call site to pass
+targetText. (Files: TextraDbBridge.kt, IncomingMessageHandler.kt:799.) COMPILE OK.
+TEST BLOCKER (harness, not product): the reaction inject reuses the target's msgId → on a cold-start
+process handleReactions ran but produced no attach, then "DEDUP skip already-delivered". handleReactions
+IS before dedup (line 394 vs 447), so dedup isn't it; likely participantPhone (in-memory, not persisted)
+didn't resolve the reactor in the cold process. To verify MY change in isolation, added attachProbe
+debug cmd (--es attachProbeTarget/Sender/Emoji) that calls writeIncomingViaFullStore(...,target)
+DIRECTLY. Build b0e2pmelu.
+NEXT: install; (1) inject plain target "Brunch Saturday" (unique msgId); (2) fire attachProbe with same
+sender+target; (3) check DB is_tapback=1 + message_tapbacks row + has_tapbacks=1. If attach works →
+bypass proven at DB level; then separately fix the handleReactions cold-start participant resolution so
+the REAL reaction path drives it (and confirm badge in UI). 
+Device: redroid 5575, adb root. Gotchas: UNIQUE msgId; single-quote body; warm process then logcat -d.
+
+## (prev) CURRENT STATE / NEXT STEP (2026-06-29) — ON-DEVICE VERIFIED **FAILURE**: tapback still NOT attached
+
+**VERIFIED on redroid16-sdtest (localhost:5575, adb root), fresh build textra2.apk (with F0 helper committed f9c4fe16):**
+Injected target "Lunch Friday" then a 👍 reaction (DebugInjectReceiver, unique msgId) on the NEW build.
+- Wire format CORRECT (hexdump row 27): `E2808A E2808B F09F918D E2808B 20746F20 ...467269646179 E2808A`
+  = HS + ZWSP + 👍 + ZWSP + " to " + "Lunch Friday" + HS. Byte-perfect.
+- F0 delivery RAN: logcat `writeIncomingViaFullStore delivered ... text.len=22` + `REACTION+ ... wrote=true`.
+- Target row correctly staged: target(26) & tapback(27) BOTH convo_id=9, direction=0, is_tapback=0 — exactly
+  what r4.w.D's lookup needs.
+- **RESULT: is_tapback=0, has_tapbacks=0, message_tapbacks EMPTY. NO attach happened.**
+
+**ROOT CAUSE (high confidence): r4.H.F0 does NOT schedule the async tapback parse/attach task on this path.**
+The 2026-06-26 hypothesis ("F0 schedules the parse, c5.d.U doesn't") is DISPROVEN — F0 stored the row but the
+parse (h5.h.N) + attach (r4.H.G0) never ran. HS wrapping was necessary but NOT sufficient.
+
+**NEXT STEP (do NOT piecemeal): map what ACTUALLY enqueues the parse task r4/x.run (via r4.H.Z) on the real
+GM-web receive path, OR call r4.H.G0(targetRowId, tapbackRowId) DIRECTLY after F0 write (the alt plan already
+noted below). Then re-test on 5575: expect is_tapback=1 + a message_tapbacks row + has_tapbacks=1.**
+Test harness is READY (device booted, app installed, DebugInjectReceiver works; use a UNIQUE msgId each time —
+persistent seenMessageIds dedups reused ids; single-quote body for the device shell; avoid bash readonly var UID).
+
+## TAPBACK ATTACH — VERIFIED MECHANISM MAP (2026-06-29, read from smali; for task #14)
+
+**Full receive→attach chain (all VERIFIED by reading the .smali this session):**
+1. `writeIncomingViaFullStore(j0)` → `r4.H.F0(j0)` (r4/H:1019).
+2. F0: `new r4/x(this, j0, mode=4)` (1024) → `r4.H.Z(task)` enqueue (1032). So the parse task IS scheduled.
+3. `r4/x.run()` packed-switch base 0x0 → **mode 4 = pswitch_1** (r4/x:165). pswitch_1 = `c0(j0)` then
+   `f0(j0.c, j0.b, j0.j, j0.g, j0.i)` (r4/H:4614). So f0 (the tapback parser) IS called.
+4. `c0(j0)` (r4/H:4352) → `U(j0)` + `L0(j0)` then reads `j0.c` — i.e. c0/U is what RESOLVES the
+   conversation and is meant to populate `j0.c` (convo_id) before f0 uses it. [U not yet fully read.]
+5. `f0`: `h5.h.N(text)` (4623) → null⇒return (plain msg). If tapback-patterned: gate `if j0.g==1`
+   (4690) chooses block1 `w.D(...,true,true)` else block2 `w.D(...,true,false)`; either ⇒ on a cursor
+   hit, `G0(j0.j, targetRowId)` attaches. No hit in either ⇒ block3 inserts as a PLAIN message.
+6. `w.D(JJJ…)` (r4/w:834) WHERE = `deleted=0 AND convo_id=? (=j0.c) AND _id != ? (=j0.b) AND
+   is_tapback=0 [AND direction=0] AND ts < ? (=j0.j) AND text=? (extracted target) ORDER BY ts,_id LIMIT 1`.
+7. `G0(JJ)` (r4/H:1064) GROQ-annotated "marks a message tapped-back + inserts the tapback message"
+   (NOT yet hand-verified — verify before relying).
+
+**VERIFIED on-device symptom (2026-06-29):** reaction text inserted as a PLAIN row (is_tapback=0,
+message_tapbacks empty) ⇒ f0 reached **block3** ⇒ BOTH w.D lookups returned no cursor hit.
+
+**ROOT CAUSE = w.D matched nothing. Candidate reasons (to pin with ONE probe, in priority order):**
+(a) `j0.c` (convo_id) f0 used ≠ the target row's convo_id — c0/U may resolve/create a DIFFERENT convo
+    for the reaction than the convo (9) the plain target landed in (target was inserted via the
+    c5.d.U/writeIncoming path, reaction via writeIncomingViaFullStore/U — they may resolve convos
+    differently). MOST LIKELY.
+(b) extracted target text (`h5.h.N`→K1.c) ≠ stored target `text` (exact `text=?` match) — e.g. stray
+    marker/space, or truncation branch.
+(c) `ts < j0.j` excludes the target (ts ordering of the two injects).
+
+## REGEX PROBE RESULT (2026-06-29) — h5.h.N matches NONE of our formats
+Instrumented DebugInjectReceiver (--es probeB64 <base64>) reflectively calls h5.h.N + logs match.
+ALL FOUR variants → NO-MATCH: full_ADD (HS+ZWSP+👍+ZWSP+" to "+T+HS), inner_only, no_ZWSP, and even
+plain "👍 to Lunch Friday". So h5.h.N recognizes none of them. (Probe gotchas: receiver COLD-STARTS
+per broadcast → warm it first then read `logcat -d`; pass exact bytes as base64 via probeB64, raw
+UTF-8 w/ spaces gets shell-mangled.)
+Interpretation: either (a) real format mismatch, or (b) registry h5/h.m empty in-process. VERIFIED
+h5/h.<clinit> (h5/h:48-~1122) FILLS m itself via ~12 M() calls + builds C4/e@960 ⇒ m populated at
+class-load ⇒ leans (a). Confirming with an m-size probe (build blciks6yv). 
+DECISION: regardless, go with the BYPASS — don't depend on h5.h.N. Use direct G0 (hand-verified below).
+
+## DECISIVE (2026-06-29): registry h5.h.m size=**12** (populated, NOT an artifact) ⇒ real format mismatch.
+Tested 7 formats via probeB64, ALL NO-MATCH: full_ADD, inner_only, no_ZWSP, plain, VS16_full,
+VS16_inner, VS16_plain. The compiled regex (M() converting %e/%s) does not accept any rendering we
+produce; its exact form is unknown. STOP brute-forcing formats (no-piecemeal rule). ROOT CAUSE FINAL:
+f0 bails at h5.h.N (null) before w.D, so no attach. FIX = direct-G0 bypass (insert reaction row via
+F0, then G0(tapbackRowId, targetRowId) — both hand-verified; G0 sets is_tapback=1 + message_tapbacks +
+has_tapbacks). Implement in handleReactions; handle F0's async insert (poll DB for the row, bounded).
+
+## G0 HAND-VERIFIED (2026-06-29, r4/H:1064-1205+) — bypass fix is viable
+`G0(JtapbackRowId, JtargetRowId)` does exactly 3 writes: (1) UPDATE messages SET is_tapback=1 WHERE
+_id=arg1(tapback); (2) INSERT message_tapbacks(message_id=arg2(target), tapback_message_id=arg1);
+(3) UPDATE messages SET has_tapbacks=1 (target). In f0 it's called as G0(j0.b, targetRowId) ⇒ **j0.b
+is meant to be the tapback msg's own row _id**, but writeIncomingViaFullStore leaves j0.b=0 (SECOND
+latent bug: even if the regex matched, G0 would mark _id=0). ⇒ BYPASS FIX (option 3) sidesteps BOTH
+the regex AND j0.b: after the tapback row is inserted, get its real _id + the target _id (w.D-style
+lookup, SQL proven) and call G0(tapbackRowId, targetRowId) directly. Timing caveat: F0's insert is
+async (r4/x task), so writeIncomingViaFullStore won't have the row _id synchronously — the direct-G0
+fix must run AFTER the insert (query newest matching row, or insert synchronously).
+
+## PROBE RESULTS (2026-06-29) — narrowed to the regex h5.h.N itself
+RULED OUT (all VERIFIED on redroid 5575): parse-task-not-scheduled (F0 enqueues mode-4 task);
+convo mismatch (U sets j0.c via iput at r4/H U:80; Lunch target+reaction BOTH convo_id=9); SQL
+filters (replayed w.D WHERE live → returns target row 26 with text='Lunch Friday'); byte format
+(matches active English ADD template C4/e:373 `​%e​ to %s` + P() HS-wrap); locale (en-US).
+REMAINING SUSPECT = h5.h.N runtime: either it doesn't match our bytes, or it extracts a %s that
+isn't exactly the stored target text (so w.D's `text=?` misses). CANNOT settle by reading (the
+%e/%s→regex compile + capture greediness). NEED instrumentation.
+
+## NEXT STEP (task #14): INSTRUMENT h5.h.N (build the instrument to SEE), then fix
+1. Add a debug path (extend DebugInjectReceiver, e.g. --es testTapbackRegex "<text>") that reflectively
+   calls h5.h.N(text) and logs: matched? and the extracted target string (a3/K1.c) + its quote/length.
+2. Rebuild (./build.sh), inject our exact synthesized ADD text → read logcat.
+   - If N returns null → format/regex mismatch despite template match → inspect %e (emoji) capture.
+   - If N matches but extracted %s != "Lunch Friday" exactly (stray HS/space) → align synthesized bytes
+     OR trim before the lookup.
+3. If the regex route stays murky → BYPASS it: after F0 insert, query target _id + tapback _id and call
+   r4.H.G0 directly (HAND-VERIFY G0 at r4/H:1064 first — currently only GROQ-annotated).
+4. Re-test on 5575 → expect is_tapback=1 + message_tapbacks row + badge.
+
+## (orig) NEXT STEP (task #14, do the PROBE before any fix):
+1. Add temporary instrumentation OR query live: after a fresh reaction inject (unique msgId), read
+   the reaction row's convo_id vs the target row's convo_id; and log what convo_id c0/U set on j0.
+   Decisive: if reaction convo_id ≠ target convo_id → cause (a).
+2. Finish reading `U(j0)` (r4/H) to see exactly how it resolves convo_id from recipients (j0.h) — and
+   why it differs from the plain-message path.
+3. THEN pick the fix (only after the cause is pinned):
+   - If (a): make the reaction reuse the target's existing convo (resolve convo from the SAME
+     recipient path the target used, or set j0.c to the target's convo_id before F0), OR deliver the
+     target+reaction through ONE consistent path so both share a convo.
+   - If (b): align the synthesized target substring with the stored text exactly.
+   - Fallback (robust): after F0 inserts, query target _id + tapback _id and call `G0` directly
+     (needs G0 hand-verified first).
+4. Re-test on redroid 5575 (unique msgId; single-quote body; not bash var UID) → expect is_tapback=1
+   + a message_tapbacks row + has_tapbacks=1, then confirm the badge in the thread UI.
+
+---
+(superseded) ## CURRENT STATE / NEXT STEP (2026-06-26) — tapback format fixed; F0 path + HS wrapping; COMPILE-BUILT, on-device UNVERIFIED
 
 **What changed (commit f6f99eef):**
 - ROOT CAUSE FOUND + FIXED: h5/h.N's compiled regex requires HAIR SPACE (U+200A) on BOTH SIDES of the tapback
