@@ -367,6 +367,60 @@ object TextraDbBridge {
     }
 
     /**
+     * removeReactionAttach — un-react: the inverse of the [writeIncomingViaFullStore] G0 attach.
+     * WHAT: removes a previously-attached incoming tapback (RCS reaction REMOVE). Textra has no
+     * single-reaction un-attach entry point we can call (its native un-react rides the regex REMOVE
+     * template, which doesn't match our text — see SHARE_LOCATION_JOURNAL), so we do the inverse of
+     * r4.H.G0 directly on the live messages DB: find the target row, find the tapback row linked to it
+     * (via message_tapbacks) whose text carries this emoji, delete the message_tapbacks link + the
+     * tapback message row, and clear the target's has_tapbacks when no tapbacks remain.
+     * CALLED BY: IncomingMessageHandler.handleReactions REMOVE branch.
+     * STATUS: DB-level (UI refresh may lag until the thread reloads, since this doesn't post Textra's
+     * own change event — acceptable; the stored state is correct). Returns true if a link was removed.
+     */
+    fun removeReactionAttach(senderPhone: String, targetText: String, emoji: String): Boolean {
+        if (Hooks.shouldSkip("dbbridge_write_skip")) return false
+        if (targetText.isEmpty() || emoji.isEmpty()) return false
+        return try {
+            val hCls = Class.forName("com.mplus.lib.r4.H")
+            val h = hCls.getDeclaredMethod("X").invoke(null) ?: return false
+            val w = hCls.getDeclaredField("d").apply { isAccessible = true }.get(h)
+            val f1e = w.javaClass.getDeclaredField("b").apply { isAccessible = true }.get(w)
+            val db = f1e.javaClass.getDeclaredField("b").apply { isAccessible = true }
+                .get(f1e) as android.database.sqlite.SQLiteDatabase
+            // target row (newest non-tapback message with this exact text)
+            val targetRowId = db.rawQuery(
+                "SELECT _id FROM messages WHERE deleted=0 AND text=? AND is_tapback=0 ORDER BY ts DESC,_id DESC LIMIT 1",
+                arrayOf(targetText)
+            ).use { c -> if (c.moveToFirst()) c.getLong(0) else -1L }
+            if (targetRowId <= 0) { Log.w(TAG, "removeReactionAttach: target not found '${targetText.take(16)}'"); return false }
+            // the attached tapback row for this target carrying this emoji
+            val tapbackRowId = db.rawQuery(
+                "SELECT mta.tapback_message_id FROM message_tapbacks mta " +
+                    "JOIN messages m ON m._id = mta.tapback_message_id " +
+                    "WHERE mta.message_id=? AND m.text LIKE ? ORDER BY m._id DESC LIMIT 1",
+                arrayOf(targetRowId.toString(), "%$emoji%")
+            ).use { c -> if (c.moveToFirst()) c.getLong(0) else -1L }
+            if (tapbackRowId <= 0) { Log.w(TAG, "removeReactionAttach: no attached $emoji tapback on target=$targetRowId"); return false }
+            db.delete("message_tapbacks", "tapback_message_id=?", arrayOf(tapbackRowId.toString()))
+            db.delete("messages", "_id=?", arrayOf(tapbackRowId.toString()))
+            val remaining = db.rawQuery(
+                "SELECT count(*) FROM message_tapbacks WHERE message_id=?", arrayOf(targetRowId.toString())
+            ).use { c -> if (c.moveToFirst()) c.getInt(0) else 0 }
+            if (remaining == 0) {
+                val cv = android.content.ContentValues().apply { put("has_tapbacks", 0) }
+                db.update("messages", cv, "_id=?", arrayOf(targetRowId.toString()))
+            }
+            Log.i(TAG, "reaction REMOVED tapback=$tapbackRowId target=$targetRowId emoji=$emoji remaining=$remaining")
+            ScreenTracer.note("RCV reaction removed t=$tapbackRowId tgt=$targetRowId")
+            true
+        } catch (e: Throwable) {
+            Log.w(TAG, "removeReactionAttach FAILED: ${e.javaClass.name}: ${e.message}", e)
+            false
+        }
+    }
+
+    /**
      * Deliver a libgm conversation-status / "tombstone" notice (group
      * created, "now end-to-end encrypted", participant joined/left, …) into
      * Textra as an INLINE STATUS LINE — a `messages` row with `kind = 9`,

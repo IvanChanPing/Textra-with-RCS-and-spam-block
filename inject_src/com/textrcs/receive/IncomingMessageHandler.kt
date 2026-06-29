@@ -810,7 +810,10 @@ object IncomingMessageHandler {
             val pid = parts.getOrNull(1) ?: continue
             val emoji = parts.getOrNull(2) ?: continue
             val phone = participantPhone[pid] ?: continue
-            val wrote = TextraDbBridge.writeIncomingViaFullStore(phone, "${HS}Removed ${ZWNJ}$emoji${ZWNJ} from $targetText${HS}", ts)
+            // un-react: remove the existing tapback attach (inverse of the G0 attach) instead of
+            // inserting a literal "Removed …" row. Textra's regex un-react path can't be used (our
+            // text doesn't match h5.h.N — see SHARE_LOCATION_JOURNAL).
+            val wrote = TextraDbBridge.removeReactionAttach(phone, targetText, emoji)
             Log.i(TAG, "  REACTION- emoji=$emoji msg=$msgId phone.tail=${phone.takeLast(4)} wrote=$wrote")
             if (wrote) { seenReactionKeys.remove(key); changed = true }
         }

@@ -1,3 +1,14 @@
+## 2026-06-29 — RCS reaction REMOVE (un-react) via inverse-G0 (DB-VERIFIED)
+
+Task #16. ADD attaches via r4.H.G0; REMOVE had no Textra entry point (native un-react rides the
+regex template we can't match), so removeReactionAttach() does the inverse directly on the live
+messages DB: find target + the linked tapback row carrying the emoji, delete the message_tapbacks
+link + tapback row, clear target.has_tapbacks when none remain. Wired into handleReactions REMOVE
+branch (no more literal "Removed …" row). PROVEN on redroid: after ADD has_tapbacks=1/links=1; after
+re-send-without-reaction has_tapbacks=0/links=0; logcat "reaction REMOVED … remaining=0". UI refresh
+may lag until thread reload (raw DB write doesn't post Textra's change event). Files: TextraDbBridge.kt,
+IncomingMessageHandler.kt.
+
 ## 2026-06-29 — FIX receive-side RCS tapback attach via direct r4.H.G0 bypass (DB-VERIFIED)
 
 Task #14. Root cause (verified on redroid 5575 + smali read): Textra's tapback regex h5.h.N does NOT
