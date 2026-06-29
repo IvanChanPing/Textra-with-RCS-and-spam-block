@@ -270,6 +270,63 @@ object TextraDbBridge {
     }
 
     /**
+     * Deliver a 1:1 incoming message through Textra's FULL incoming-message
+     * writer `com.mplus.lib.r4.H.F0(r4.j0)` — the SAME path [writeIncomingGroup]
+     * uses — instead of the `c5.d.U` SMS-deliver fallback that [writeIncoming]
+     * uses. Why this exists: ONLY `F0` schedules Textra's async tapback parser
+     * (`F0` builds `new r4.x(this, j0, 4)` and enqueues it via `r4.H.Z`; that task
+     * runs `r4.H.f0 -> h5.h.N(body)` and, on a match, `r4.H.G0` to attach the
+     * reaction). `c5.d.U` stores the row but does NOT schedule that task, so a
+     * tapback-formatted body delivered via [writeIncoming] is left as a plain
+     * message (VERIFIED on emulator: is_tapback=0, message_tapbacks empty).
+     * Used for RCS reactions ([com.textrcs.receive.IncomingMessageHandler.handleReactions]):
+     * the synthesized "<ZWSP>emoji<ZWSP> to <target>" text delivered here gets
+     * auto-translated by Textra into a NATIVE tapback badge.
+     * j0 fields mirror writeIncomingGroup with a single-member recipient set.
+     */
+    fun writeIncomingViaFullStore(senderPhone: String, text: String, timestampMs: Long): Boolean {
+        if (Hooks.shouldSkip("dbbridge_write_skip")) {
+            Log.w(TAG, "writeIncomingViaFullStore SKIPPED by hook")
+            return false
+        }
+        if (senderPhone.isEmpty() || text.isEmpty()) return false
+        return try {
+            // r4.n recipient set with the single sender (Textra's delimiter-aware parser).
+            val recipients = Class.forName("com.mplus.lib.z7.y")
+                .getDeclaredMethod("p", String::class.java)
+                .apply { isAccessible = true }.invoke(null, senderPhone)
+                ?: run { Log.w(TAG, "writeIncomingViaFullStore — z7.y.p null"); return false }
+            val j0Cls = Class.forName("com.mplus.lib.r4.j0")
+            val j0 = j0Cls.getDeclaredConstructor().newInstance()
+            fun field(name: String) = j0Cls.getDeclaredField(name).apply { isAccessible = true }
+            field("i").set(j0, text)
+            field("h").set(j0, recipients)
+            field("z").set(j0, senderPhone)
+            field("j").setLong(j0, timestampMs)
+            field("k").setLong(j0, timestampMs)
+            field("g").setInt(j0, 0)
+            field("f").setInt(j0, 0)
+            field("m").setBoolean(j0, true)
+            val hCls = Class.forName("com.mplus.lib.r4.H")
+            val h = hCls.getDeclaredMethod("X").invoke(null)
+                ?: run { Log.w(TAG, "writeIncomingViaFullStore — r4.H.X() null"); return false }
+            hCls.getDeclaredMethod("F0", j0Cls).invoke(h, j0)
+            Log.i(TAG, "writeIncomingViaFullStore delivered from.tail=${senderPhone.takeLast(6)} text.len=${text.length}")
+            ScreenTracer.note("RCV writeIncomingViaFullStore(F0) text.len=${text.length}")
+            true
+        } catch (e: Throwable) {
+            var c: Throwable = e
+            while (c.cause != null &&
+                (c is java.lang.reflect.InvocationTargetException ||
+                    c is java.lang.reflect.UndeclaredThrowableException)
+            ) { c = c.cause!! }
+            Log.w(TAG, "writeIncomingViaFullStore FAILED: ${c.javaClass.name}: ${c.message}", c)
+            ScreenTracer.note("RCV writeIncomingViaFullStore FAIL ${c.javaClass.name}: ${c.message}")
+            false
+        }
+    }
+
+    /**
      * Deliver a libgm conversation-status / "tombstone" notice (group
      * created, "now end-to-end encrypted", participant joined/left, …) into
      * Textra as an INLINE STATUS LINE — a `messages` row with `kind = 9`,

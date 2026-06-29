@@ -1,3 +1,13 @@
+## 2026-06-29 — Commit the F0-path receive helper writeIncomingViaFullStore (fixes inconsistent HEAD)
+
+Task #11. HEAD's committed IncomingMessageHandler.kt (f6f99eef) CALLED
+TextraDbBridge.writeIncomingViaFullStore at lines 799/811, but the DEFINITION was only in the
+working tree — so HEAD did not compile. Committed the 57-line definition (reflective r4.H.F0(r4.j0)
+delivery that schedules Textra's async tapback parser; the receive-side counterpart to the
+hair-space fix). VERIFIED: ./build.sh exit 0, helper compiled into
+smali_classes7/com/textrcs/bridge/TextraDbBridge.smali, APK built (98M). Also confirmed the 11,271
+GROQ '# M-ROLE' comments do not break baksmali/apktool. On-device tapback render still UNVERIFIED.
+
 ## 2026-06-27 — GROQ method annotations across the FULL com/mplus/lib tree (zero Claude tokens)
 
 Ran scripts/run_annotate_all.sh (drives groq_annotate_verify.py --write) over all 3,544 smali
