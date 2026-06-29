@@ -195,6 +195,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides the Fragment's onDestroy method to release resources by calling `a()` on the `b` object if it's not null, then calls the superclass's onDestroy method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onDestroy()V
     .locals 2
 
@@ -214,6 +215,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an item click event in a grid fragment, retrieving the selected item's data and passing it to the `W` method of a `GiphyActivity` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
 

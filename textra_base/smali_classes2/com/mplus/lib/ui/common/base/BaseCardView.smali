@@ -269,6 +269,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getMeasuredSize() function to return the measured size of the view. It simply calls the superclass's getMeasuredSize() method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -512,6 +513,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a BaseCardView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 

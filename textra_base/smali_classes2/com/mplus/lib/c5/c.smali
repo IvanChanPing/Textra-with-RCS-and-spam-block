@@ -47,6 +47,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/c5/c` class, setting its properties based on the provided parameters and performing some validation and data processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Lcom/mplus/lib/d5/b;Ljava/lang/String;JLcom/mplus/lib/r4/n;Lcom/mplus/lib/r4/M;I)V
     .locals 7
 
@@ -185,6 +186,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/t7/f`. It initializes the instance with various fields from the current object, including strings, a hashmap, an arraylist, and other parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Lcom/mplus/lib/t7/f;
     .locals 9
 

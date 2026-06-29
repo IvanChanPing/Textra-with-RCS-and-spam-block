@@ -114,6 +114,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/r4/n` based on the value of the `a` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/r4/n;
     .locals 4
 

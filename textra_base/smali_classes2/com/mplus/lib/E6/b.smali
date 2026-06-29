@@ -20,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method takes a Long object, retrieves an integer value from a class H using the long value, and returns the integer as an Integer object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 

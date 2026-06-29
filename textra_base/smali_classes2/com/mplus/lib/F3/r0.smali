@@ -38,6 +38,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method merges two lists and then calls a static method to process the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(JLjava/lang/Object;Ljava/lang/Object;)V
     .locals 5
 

@@ -76,6 +76,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a `Task` has failed and calls an `OnFailureListener` if one is set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final a()V
     .locals 4
 
@@ -312,6 +313,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method adds an object to a set within a synchronized block, handling two cases: when the set is null and when it's not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final d()V
     .locals 4
 
@@ -2353,6 +2355,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object based on its state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 5
 

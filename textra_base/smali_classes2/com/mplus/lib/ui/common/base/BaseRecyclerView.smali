@@ -685,6 +685,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method conditionally calls the superclass's `requestDisallowInterceptTouchEvent` method based on the result of `Lcom/mplus/lib/x5/C;->c()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final requestDisallowInterceptTouchEvent(Z)V
     .locals 2
 
@@ -853,6 +854,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a view by invoking a static method with the provided margin value and the current object. It does not directly modify any instance fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 

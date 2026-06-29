@@ -169,6 +169,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle some kind of state transition or event processing, invoking methods on objects of type Lcom/mplus/lib/F3/v and Lcom/mplus/lib/F3/T0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d(ILjava/lang/Object;Lcom/mplus/lib/F3/T0;)V
     .locals 3
 

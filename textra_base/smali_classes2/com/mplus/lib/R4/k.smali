@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static TextPaint object with a specific text size and color. It sets up the paint object for potential future use in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 2
 

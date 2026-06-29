@@ -293,6 +293,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility of two BaseButton objects based on the value of the `r` boolean field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 3
 

@@ -126,6 +126,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 

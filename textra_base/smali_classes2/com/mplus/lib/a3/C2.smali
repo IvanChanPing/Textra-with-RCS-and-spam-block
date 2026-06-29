@@ -184,6 +184,7 @@
 .method public abstract f()Z
 .end method
 
+# M-ROLE [GROQ]: This method attempts to interrupt and unpark a thread if it's currently running a specific task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()V
     .locals 6
 

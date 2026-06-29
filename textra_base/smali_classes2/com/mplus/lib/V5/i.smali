@@ -417,6 +417,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a touch event on an EmojisView, potentially triggering an emoji selection action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 7
 
@@ -662,6 +663,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method toggles the visibility of a `BaseTextView` by adding or removing it from its parent view based on the input boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e0(Z)V
     .locals 2
 

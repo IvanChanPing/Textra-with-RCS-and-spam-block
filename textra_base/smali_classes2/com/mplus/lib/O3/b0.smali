@@ -20,6 +20,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/O3/b0 class with an InMobi ad request status and other parameters. It sets the instance's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/tc;Lcom/inmobi/ads/InMobiAdRequestStatus;I)V
     .locals 0
 

@@ -279,6 +279,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the opacity of an object, with the value depending on the state of the object's `b` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOpacity()I
     .locals 2
 

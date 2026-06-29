@@ -212,6 +212,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the alpha value of an object implementing the Lcom/mplus/lib/x5/y interface. It then returns immediately after the invocation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setAlphaDirect(F)V
     .locals 1
 

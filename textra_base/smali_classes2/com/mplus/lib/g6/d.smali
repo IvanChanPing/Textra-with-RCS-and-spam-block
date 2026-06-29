@@ -494,6 +494,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns an integer value based on the sizes of two ArrayLists in the `Lcom/mplus/lib/g6/c` object. It subtracts the size of one ArrayList from a value, then adds the size of another ArrayList to the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()I
     .locals 3
 

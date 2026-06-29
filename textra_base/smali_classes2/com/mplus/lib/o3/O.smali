@@ -31,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a collection is empty and returns a specific object if it is, otherwise it converts the collection to an array and uses it to create another object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Lcom/mplus/lib/o3/U;
     .locals 3
 
@@ -205,6 +206,7 @@
 .method public abstract h()Lcom/mplus/lib/o3/Q0;
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator by calling the `h()` method of the class `Lcom/mplus/lib/o3/O;` and casting its result to `Ljava/util/Iterator;`. It appears to be a bridge method for the `iterator()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 2
 

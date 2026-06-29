@@ -192,6 +192,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method dispatches a touch event to the BaseGridView, handling it based on the state of an internal object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
@@ -515,6 +516,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a BaseGridView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 

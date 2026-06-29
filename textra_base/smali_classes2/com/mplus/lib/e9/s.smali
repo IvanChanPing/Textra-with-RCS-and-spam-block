@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes a ParseResult object based on the value of a local integer variable, invoking different methods of LinearParser to handle the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 3
 

@@ -32,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to consume a purchase and log the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public I()V
     .locals 4
 

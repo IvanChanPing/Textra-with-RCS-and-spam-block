@@ -58,6 +58,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object by calling the zzw method on the b field object of type P0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 3
 

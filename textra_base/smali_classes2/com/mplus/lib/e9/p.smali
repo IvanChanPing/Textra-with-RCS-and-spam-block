@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/e9/p, setting its fields with the provided parameters. It appears to be a constructor for the class, taking various parsers and lists as arguments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/smaato/sdk/video/vast/parser/InLineParser;Lcom/smaato/sdk/video/vast/parser/RegistryXmlParser;Lcom/smaato/sdk/video/vast/model/InLine$Builder;Ljava/util/List;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 

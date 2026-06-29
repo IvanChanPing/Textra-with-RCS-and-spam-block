@@ -821,6 +821,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adjusts the display orientation of the camera preview based on the device's rotation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()V
     .locals 6
 
@@ -1852,6 +1853,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onMeasure` method to calculate and set the measured dimensions of the `CameraPreview` view based on the camera's aspect ratio.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(II)V
     .locals 8
 

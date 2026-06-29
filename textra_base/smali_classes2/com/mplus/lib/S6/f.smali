@@ -62,6 +62,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be downloading an image and processing it, returning either the processed image or an error object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 

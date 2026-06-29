@@ -675,6 +675,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events on a view, specifically for selecting text in a conversation bubble.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 7
 

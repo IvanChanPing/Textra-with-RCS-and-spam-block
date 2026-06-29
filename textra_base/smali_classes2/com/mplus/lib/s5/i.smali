@@ -30,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method calls another method to set a value based on the results of two getter methods. It then invokes a method `b` on the provided `Lcom/mplus/lib/s5/m0;` object with calculated and constant parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public k(Lcom/mplus/lib/s5/m0;)V
     .locals 4
 

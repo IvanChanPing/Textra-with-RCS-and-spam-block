@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method draws an oval shape on a canvas, centered within the shape's bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final draw(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V
     .locals 5
 

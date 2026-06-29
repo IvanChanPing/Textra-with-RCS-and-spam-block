@@ -238,6 +238,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given integer `p1` is valid based on the value of `a` in the class `Lcom/mplus/lib/a3/O3;`. It uses a series of switch statements and method calls to determine the validity of `p1`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(I)Z
     .locals 3
 

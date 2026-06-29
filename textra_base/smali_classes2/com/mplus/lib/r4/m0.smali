@@ -50,6 +50,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method groups a list of `Lcom/mplus/lib/r4/l0` objects into sublists based on a condition checked by `Lcom/mplus/lib/L4/d;->g(Ljava/lang/String;)Z`. It returns a list of these sublists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Ljava/util/ArrayList;
     .locals 7
 
@@ -397,6 +398,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, including its class name and size.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

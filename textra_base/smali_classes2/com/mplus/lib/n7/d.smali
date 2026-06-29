@@ -116,6 +116,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles menu item clicks, specifically for items with IDs 0 and 1, triggering different actions such as posting events to a bus and invoking methods on various classes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 6
 

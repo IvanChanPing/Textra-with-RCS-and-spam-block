@@ -50,6 +50,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and sets a CharSequence field based on the result, using either a string resource or a value from another class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 4
 

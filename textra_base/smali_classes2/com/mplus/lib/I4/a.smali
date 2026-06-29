@@ -704,6 +704,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to open a log file and write the current app version to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S()V
     .locals 7
 

@@ -203,6 +203,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method appears to be part of a thread that runs a callable task and handles its result or exception. It checks if the task is done, runs the task if not, and handles any exceptions that occur during task execution.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 9
 

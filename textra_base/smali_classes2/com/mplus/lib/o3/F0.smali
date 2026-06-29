@@ -96,6 +96,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/o3/G, cast as Lcom/mplus/lib/o3/Q0, by calling the l() method on the e field of the current object. It appears to retrieve an object at index 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/o3/Q0;
     .locals 3
 

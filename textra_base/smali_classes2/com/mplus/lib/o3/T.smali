@@ -134,6 +134,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an iterator object by calling `l(I)` on the current object with an argument of 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 

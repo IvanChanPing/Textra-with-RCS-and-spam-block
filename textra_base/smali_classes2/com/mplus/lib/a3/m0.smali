@@ -170,6 +170,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method implements the `next()` function of an iterator, returning the next object in the iteration. It checks for concurrent modification and handles the case when there are no more elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final next()Ljava/lang/Object;
     .locals 4
 

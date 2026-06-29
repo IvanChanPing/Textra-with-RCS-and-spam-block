@@ -122,6 +122,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method parses a JSONObject and sets various fields of the class Lcom/mplus/lib/t7/g. It appears to be handling data related to an article or post, extracting fields such as title, answer HTML, publication status, and updated date.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Lorg/json/JSONObject;)V
     .locals 2
 

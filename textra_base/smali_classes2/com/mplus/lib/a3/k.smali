@@ -147,6 +147,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method calls the `zzh` method of the `zzaet` object, passing a null `zzaer` object, and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic zzd(Lcom/mplus/lib/a3/k;Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaer;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 1
 

@@ -66,6 +66,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in a collection or map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 4
 
@@ -204,6 +205,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection, handling map entries by removing the key-value pair from an underlying map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(Ljava/lang/Object;)Z
     .locals 3
 

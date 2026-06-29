@@ -265,6 +265,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the page finished loading event for a WebView, performing different actions based on the state of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPageFinishedLoading(Ljava/lang/String;)V
     .locals 2
 
@@ -336,6 +337,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method overrides the onPageStartedLoading method to handle page loading events based on the object's state, either calling the superclass method or updating an object's URL and notifying a listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onPageStartedLoading(Ljava/lang/String;)V
     .locals 2
 

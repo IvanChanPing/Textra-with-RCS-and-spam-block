@@ -55,6 +55,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves or creates a `T0` object for a given `Class` object, which appears to be related to protobuf message types.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Class;)Lcom/mplus/lib/F3/T0;
     .locals 10
 

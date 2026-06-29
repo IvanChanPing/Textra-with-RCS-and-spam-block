@@ -382,6 +382,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the constant state of a drawable based on its type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 2
 

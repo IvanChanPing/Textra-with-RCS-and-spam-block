@@ -59,6 +59,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to implement a parking mechanism for threads, allowing them to wait for a specific condition to be met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Thread;)V
     .locals 9
 

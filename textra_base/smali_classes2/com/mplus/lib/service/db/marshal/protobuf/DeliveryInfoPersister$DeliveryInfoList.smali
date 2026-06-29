@@ -913,6 +913,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of elements in the deliveryInfo_ list. It retrieves the size of the list using the size() method of the List interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getDeliveryInfoCount()I
     .locals 2
 

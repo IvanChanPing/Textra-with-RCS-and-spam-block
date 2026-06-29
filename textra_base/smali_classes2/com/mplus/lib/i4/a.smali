@@ -475,6 +475,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met based on the values of an object's properties, returning true if the condition is met and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static W(Lcom/mplus/lib/r4/p;I)Z
     .locals 2
 

@@ -71,6 +71,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds a NotificationCompat Action to a NotificationCompat Builder and returns the Builder. It overrides the addAction method of its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAction(Landroidx/core/app/NotificationCompat$Action;)Landroidx/core/app/NotificationCompat$Builder;
     .locals 1
 
@@ -321,6 +322,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bubble metadata for a notification. It invokes the superclass's setBubbleMetadata method to configure the notification with the provided metadata.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Landroidx/core/app/NotificationCompat$BubbleMetadata;)V
     .locals 1
 
@@ -623,6 +625,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the default notification parameters and returns the NotificationCompat Builder object. It calls the superclass's setDefaults method with the provided integer parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setDefaults(I)Landroidx/core/app/NotificationCompat$Builder;
     .locals 1
 

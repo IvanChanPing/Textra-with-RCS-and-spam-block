@@ -272,6 +272,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/v6/a based on the input parameter and the state of Lcom/mplus/lib/K5/a.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(I)Lcom/mplus/lib/v6/a;
     .locals 3
 
@@ -703,6 +704,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/K5/a`, initializing it with data from various fields and methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0()Lcom/mplus/lib/K5/a;
     .locals 6
 
@@ -771,6 +773,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the visibility of various UI components based on the input `BaseTextView` parameter. It toggles the visibility of `CoverFlow` and other views, and notifies a listener about the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r0(Lcom/mplus/lib/ui/common/base/BaseTextView;)V
     .locals 4
 
@@ -915,6 +918,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the background and text colors of two BubbleView instances and sets the visibility of a BaseButton based on the state of a K5/a object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0()V
     .locals 6
 

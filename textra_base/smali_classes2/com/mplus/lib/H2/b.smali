@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/H2/b, storing a GoogleApiAvailability object and a Context object. It also calls the superclass constructor with a Looper object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/GoogleApiAvailability;Landroid/content/Context;)V
     .locals 0
 

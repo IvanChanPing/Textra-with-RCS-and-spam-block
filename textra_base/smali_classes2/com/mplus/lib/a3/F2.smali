@@ -55,6 +55,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method compares the current object with another Delayed object by delegating the comparison to its ScheduledFuture field. It returns the result of this comparison.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 2
 

@@ -41,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method applies a query to a database and returns a `Lcom/mplus/lib/r4/f0` object containing the query results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 

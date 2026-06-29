@@ -418,6 +418,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a BaseImageView instance. It invokes a static method to adjust the view's layout parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 

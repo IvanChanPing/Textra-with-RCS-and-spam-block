@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an enum class `Lcom/mplus/lib/f3/n;` with various error codes and their corresponding integer values, and creates a mapping between these error codes and their enum values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 18
 

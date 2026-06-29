@@ -40,6 +40,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method schedules a delayed task to run after a certain time when the activity stops.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onStop()V
     .locals 5
 

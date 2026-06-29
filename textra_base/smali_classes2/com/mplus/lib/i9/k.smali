@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles video click events by updating the video player's state machine, sending click tracking events, and notifying event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 6
 

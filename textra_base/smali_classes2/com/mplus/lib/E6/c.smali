@@ -679,6 +679,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a `com/mplus/lib/t5/a` object, setting its properties and adding various UI components.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final x()Lcom/mplus/lib/t5/a;
     .locals 8
 

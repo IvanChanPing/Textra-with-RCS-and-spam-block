@@ -258,6 +258,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method with a boolean parameter and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 

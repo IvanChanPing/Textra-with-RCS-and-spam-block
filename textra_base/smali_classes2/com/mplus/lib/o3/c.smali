@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/o3/c class with a given Lcom/mplus/lib/o3/b object and an integer, setting up its internal state. It iterates over the entry set of a map from the provided object and initializes other fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/b;I)V
     .locals 0
 

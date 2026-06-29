@@ -1332,6 +1332,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the instance variables `d` and `e` based on their current values and other instance variables `g` and `i`. It appears to be implementing some kind of boundary checking and adjustment logic.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()V
     .locals 4
 
@@ -1869,6 +1870,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to increment a counter, invoke a method on an object, and then set a value using the `a(I)` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s(ILcom/mplus/lib/F3/C0;Lcom/mplus/lib/F3/G;)V
     .locals 2
 

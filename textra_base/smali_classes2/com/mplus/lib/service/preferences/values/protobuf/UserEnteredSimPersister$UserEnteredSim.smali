@@ -384,6 +384,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a UserEnteredSimProtobuf object from an input stream. It utilizes the Google Protobuf library to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/UserEnteredSimPersister$UserEnteredSim;
     .locals 2
 

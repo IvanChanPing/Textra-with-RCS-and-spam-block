@@ -382,6 +382,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the order field in the SmaatoBannerSetup class by resetting the corresponding bit in the bitField0_ and setting the order_ to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearOrder()V
     .locals 2
 
@@ -683,6 +684,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a SmaatoBannerSetup instance from input data using the `parseFrom` method from `com/google/protobuf/c`. It returns the parsed `SmaatoBannerSetup` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$SmaatoBannerSetup;
     .locals 2
 
@@ -766,6 +768,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a SmaatoBannerSetup object from a ByteBuffer. It utilizes the Google Protocol Buffers library to deserialize the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$SmaatoBannerSetup;
     .locals 2
 
@@ -916,6 +919,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the order of a Smaato banner setup by storing the provided integer value in the `order_` field and updating the `bitField0_` field to reflect the change. It does not invoke any external methods or use string constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setOrder(I)V
     .locals 2
 

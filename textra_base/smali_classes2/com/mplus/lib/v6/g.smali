@@ -2281,6 +2281,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method, `onSpringAtRest`, appears to handle the state of a view when a spring animation comes to rest, making certain views clickable and visible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 3
 
@@ -2827,6 +2828,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain object is not null and calls its `p0()` method if it exists. It then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q()V
     .locals 2
 

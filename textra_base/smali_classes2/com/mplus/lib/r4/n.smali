@@ -1127,6 +1127,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the current object if they pass a check via the `i(Lcom/mplus/lib/r4/l;)Z` method and then calls `E()` if any elements were added.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 4
 

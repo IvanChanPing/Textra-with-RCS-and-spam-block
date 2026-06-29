@@ -647,6 +647,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the item count is greater than 0 and the given position is within a certain range, then returns a cursor object cast to Lcom/mplus/lib/r4/u;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(I)Lcom/mplus/lib/r4/u;
     .locals 2
 
@@ -697,6 +698,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if an item at a specific position is valid and returns true if it is.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(I)Z
     .locals 2
 
@@ -732,6 +734,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method binds data to a RecyclerView ViewHolder. It sets the activated state of the item view, updates the checkbox and image views, and sets the text of the title and description text views based on the data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 18
 

@@ -584,6 +584,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string represents a JPEG image MIME type. It returns true if the string matches "image/jpg", "image/jpeg", or "image/pjpeg" (case-insensitive), and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/lang/String;)Z
     .locals 2
 

@@ -197,6 +197,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method invalidates a given Drawable by calling the invalidateDrawable method on its callback if it exists. It appears to be part of a Drawable implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 

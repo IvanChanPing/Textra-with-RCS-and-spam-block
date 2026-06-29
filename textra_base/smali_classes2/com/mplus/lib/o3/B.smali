@@ -155,6 +155,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically an ordering compound. It constructs the string by concatenating a prefix, the string representation of an array of comparators, and a suffix.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

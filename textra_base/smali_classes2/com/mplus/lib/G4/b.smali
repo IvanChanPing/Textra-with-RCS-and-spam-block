@@ -30,6 +30,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to retrieve an emoji image from a zip file and returns the input stream of the image.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/F4/x;Ljava/io/InputStream;)Ljava/io/InputStream;
     .locals 3
 

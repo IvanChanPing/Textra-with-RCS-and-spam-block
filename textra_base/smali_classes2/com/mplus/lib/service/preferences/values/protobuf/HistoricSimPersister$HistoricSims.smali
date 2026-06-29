@@ -194,6 +194,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds a HistoricSim object to a list of historic sims. It first ensures the list is mutable, then appends the object to the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private addHistoricSims(Lcom/mplus/lib/service/preferences/values/protobuf/HistoricSimPersister$HistoricSim;)V
     .locals 2
 
@@ -269,6 +270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the default instance of `HistoricSimPersister$HistoricSims`. It simply retrieves and returns a pre-existing instance stored in a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static getDefaultInstance()Lcom/mplus/lib/service/preferences/values/protobuf/HistoricSimPersister$HistoricSims;
     .locals 2
 
@@ -426,6 +428,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a HistoricSimPersister$HistoricSims object from input data using the Google Protocol Buffers library. It returns the parsed HistoricSimPersister$HistoricSims instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/r;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/HistoricSimPersister$HistoricSims;
     .locals 2
 
@@ -518,6 +521,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array into a HistoricSimPersister$HistoricSims object using Google's protobuf library. It returns the parsed object, using the DEFAULT_INSTANCE as a template.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom([B)Lcom/mplus/lib/service/preferences/values/protobuf/HistoricSimPersister$HistoricSims;
     .locals 2
 

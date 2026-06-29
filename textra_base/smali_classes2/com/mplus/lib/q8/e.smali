@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method removes a network state callback and runs a stored runnable when the network state changes to connected.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onNetworkStateChanged(Z)V
     .locals 1
 

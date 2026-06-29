@@ -108,6 +108,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object is in an ArrayList and adds it if not, then calls another method with the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(Lcom/mplus/lib/x5/y;)V
     .locals 3
 

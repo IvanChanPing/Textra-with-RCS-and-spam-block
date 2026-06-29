@@ -59,6 +59,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition based on the value of `Lcom/mplus/lib/F3/q1;->b` and returns a boolean result after calling `Lcom/mplus/lib/F3/t1;->h` or `Lcom/mplus/lib/F3/t1;->i` depending on `Lcom/mplus/lib/F3/t1;->h:Z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(JLjava/lang/Object;)Z
     .locals 4
 
@@ -448,6 +449,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method calls either `Lcom/mplus/lib/F3/t1;->l` or `Lcom/mplus/lib/F3/t1;->m` based on the value of `Lcom/mplus/lib/F3/t1;->h` and the instance field `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Ljava/lang/Object;JB)V
     .locals 2
 
@@ -512,6 +514,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method appears to convert a double to a long and then calls another method `r` with the converted value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(Ljava/lang/Object;JD)V
     .locals 7
 

@@ -75,6 +75,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given time interval has expired. It returns true if the interval has expired and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(J)Z
     .locals 5
 

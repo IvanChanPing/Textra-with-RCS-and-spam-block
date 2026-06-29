@@ -61,6 +61,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts a List object, extracts its contents, and uses it to create a new instance of Lcom/mplus/lib/P4/n, which is then submitted to a thread pool for execution.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 12
 

@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and configures a fragment view, inflating a layout, setting up a MaterialShapeDrawable background, and animating a BaseTextView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 

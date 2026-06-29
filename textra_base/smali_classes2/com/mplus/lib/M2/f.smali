@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles messages for a service connection, processing different message types and performing actions such as logging errors, removing service connections, and unbinding services.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 7
 

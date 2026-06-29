@@ -356,6 +356,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a new instance of Lcom/mplus/lib/C4/g if the object's 'b' field is not null, otherwise it throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Lcom/mplus/lib/C4/g;
     .locals 3
 

@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/c3/a, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/c3/d;[Ljava/lang/Object;I)V
     .locals 0
 
@@ -173,6 +174,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of Lcom/mplus/lib/c3/I1. It appears to be related to the Google ML Kit language ID library, but its actual purpose is obscured.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzg()Lcom/google/android/gms/internal/mlkit_language_id_common/zzu;
     .locals 2
 

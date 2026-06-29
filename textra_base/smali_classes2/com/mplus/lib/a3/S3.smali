@@ -523,6 +523,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a HostnameVerifier object. It retrieves the verifier from a nested object within the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
     .locals 2
 
@@ -604,6 +605,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves local certificates from a list if it's not empty, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLocalCertificates()[Ljava/security/cert/Certificate;
     .locals 3
 
@@ -1252,6 +1254,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an SSL socket factory for the class Lcom/mplus/lib/a3/S3. It extracts the trust manager from the provided SSL socket factory and updates the internal state with the new trust manager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
     .locals 5
 

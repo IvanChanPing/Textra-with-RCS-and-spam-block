@@ -265,6 +265,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string, processes it, and returns an object of type `Lcom/mplus/lib/K5/a` based on various conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/K5/a;
     .locals 5
 

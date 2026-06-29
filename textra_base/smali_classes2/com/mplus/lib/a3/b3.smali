@@ -266,6 +266,7 @@
 .method public abstract remove(I)Ljava/lang/Object;
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a list and returns true if successful, false if the object is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Z
     .locals 2
 

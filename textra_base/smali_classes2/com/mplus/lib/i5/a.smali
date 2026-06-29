@@ -599,6 +599,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string by appending the result of `Lcom/mplus/lib/z7/h;->v(Ljava/lang/Object;)Ljava/lang/String;` and the value of `Lcom/mplus/lib/i5/a;->b` to a string builder, wrapping the latter in square brackets.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final K()Ljava/lang/String;
     .locals 4
 
@@ -4351,6 +4352,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles the success of an operation, processing a `Z2` object and invoking methods on `W5` and `I6` objects based on its properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onSuccess(Ljava/lang/Object;)V
     .locals 3
 
@@ -5009,6 +5011,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and processes JSON data related to premium UI labels, specifically "initScreenCustomLinks", and constructs a `com/mplus/lib/mb/p` object based on the parsed data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public s()Lcom/mplus/lib/mb/p;
     .locals 15
 

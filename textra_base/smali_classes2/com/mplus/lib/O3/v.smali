@@ -32,6 +32,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/O3/v; that initializes its fields with the provided parameters. It sets the object's state with the given values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/S8;Lcom/inmobi/media/M3;Lcom/inmobi/media/L3;ILjava/lang/String;IJLcom/inmobi/media/rc;Z)V
     .locals 0
 

@@ -44,6 +44,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles touch events on an Android view, specifically implementing delayed actions based on the type of touch event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 4
 

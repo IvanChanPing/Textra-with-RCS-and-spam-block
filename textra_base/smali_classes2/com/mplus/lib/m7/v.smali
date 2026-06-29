@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/m7/v, calling the superclass constructor with specific parameters. It sets up the object with a reference to Lcom/mplus/lib/r4/p and Lcom/mplus/lib/m7/u.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 

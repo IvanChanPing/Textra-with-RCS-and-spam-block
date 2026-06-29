@@ -18,6 +18,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to retrieve the class name of the caller or a specific class based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb(Ljava/lang/Class;)Ljava/lang/String;
     .locals 2
 

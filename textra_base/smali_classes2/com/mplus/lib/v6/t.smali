@@ -39,6 +39,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a fragment and initializes its UI components. It sets text for a TextView, creates an instance of Lcom/mplus/lib/T4/f, and adds an OnClickListener to a view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 6
 

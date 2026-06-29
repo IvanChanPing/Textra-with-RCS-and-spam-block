@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies the InterstitialAdViewModel that an ad has been closed. It delegates the onAdClosed event to the InterstitialAdViewModel instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdClosed()V
     .locals 2
 

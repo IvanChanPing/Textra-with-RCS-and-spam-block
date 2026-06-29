@@ -603,6 +603,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/m5/a, which implements the Java.util.function.Function interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/function/Function;
     .locals 3
 

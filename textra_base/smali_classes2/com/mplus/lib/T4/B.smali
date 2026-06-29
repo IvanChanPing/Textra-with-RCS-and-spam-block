@@ -112,6 +112,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method schedules a task with parameters, utilizing `Lcom/mplus/lib/P4/i;->c0` and `Lcom/mplus/lib/T/a;-><init>`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(Ljava/lang/Long;)V
     .locals 4
 

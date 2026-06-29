@@ -1734,6 +1734,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method splits the input string by a delimiter ("," or ";") and creates a list of `Lcom/mplus/lib/r4/l` objects from the resulting substrings, which are then added to a `Lcom/mplus/lib/r4/n` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Ljava/lang/String;)Lcom/mplus/lib/r4/n;
     .locals 6
 
@@ -2352,6 +2353,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method reads an input stream from a given object and returns its contents as a byte array. If the object is null or an I/O error occurs, it returns null or throws a RuntimeException, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static v(Lcom/mplus/lib/r4/S;)[B
     .locals 5
 

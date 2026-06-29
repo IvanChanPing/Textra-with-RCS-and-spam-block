@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static map with integer keys and string resource IDs as values. It populates the map with five key-value pairs and assigns it to the `n` field of the `Lcom/mplus/lib/g7/p` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -100,6 +101,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/g7/q` and initializes it with `Lcom/mplus/lib/x5/l` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 2
 

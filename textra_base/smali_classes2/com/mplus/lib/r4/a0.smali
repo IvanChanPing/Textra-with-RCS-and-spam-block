@@ -77,6 +77,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the length of a file or resource, first attempting to get it from a Uri using a ContentResolver, and if that fails, it falls back to reading the length from an InputStream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getLength()J
     .locals 6
 

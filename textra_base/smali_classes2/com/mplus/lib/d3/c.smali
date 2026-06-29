@@ -26,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method implements the `next()` function, returning the next object in a sequence based on the current state. It either delegates to the superclass or returns a specific object from a `d` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public next()Ljava/lang/Object;
     .locals 2
 

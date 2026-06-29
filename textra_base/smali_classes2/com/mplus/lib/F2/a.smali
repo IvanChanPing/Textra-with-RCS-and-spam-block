@@ -52,6 +52,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method waits for a countdown latch with a specified timeout and then attempts to call the `zza()` method on an `AdvertisingIdClient` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

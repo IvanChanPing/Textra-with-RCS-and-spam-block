@@ -306,6 +306,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method schedules a one-time work request with the WorkManager to execute the `MmsMgr$WorkBuilder$Worker` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e0()V
     .locals 8
 
@@ -2389,6 +2390,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle the sending of an acknowledgement indication for a received MMS message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized W(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)V
     .locals 3
 
@@ -3306,6 +3308,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method handles an Android Intent, extracts its data, and enqueues a one-time work request to process the intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b0(Landroid/content/Intent;)V
     .locals 5
 
@@ -5676,6 +5679,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to a file in the external cache directory of an Android app, logging the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k0(Ljava/lang/String;[B)V
     .locals 7
 

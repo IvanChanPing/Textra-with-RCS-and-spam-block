@@ -26,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves and processes data from a database cursor, converting it into a specific object format.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H()Lcom/mplus/lib/O4/b;
     .locals 7
 

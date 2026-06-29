@@ -134,6 +134,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appends an array of objects to the end of an internal array, updating the internal index.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs b([Ljava/lang/Object;)V
     .locals 5
 

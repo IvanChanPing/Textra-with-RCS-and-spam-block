@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the back button invocation based on the value of `a` and performs different actions accordingly. It either runs a `Runnable`, calls `OnBackPressedDispatcher$Api33Impl.a()` with a `com/mplus/lib/ha/a` object, or calls `com/inmobi/ads/rendering/InMobiAdActivity.a()` with a `com/inm  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBackInvoked()V
     .locals 2
 

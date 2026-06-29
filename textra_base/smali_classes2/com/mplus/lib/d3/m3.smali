@@ -34,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if a given object is a Map Entry and if its value exists in the internal map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 3
 

@@ -968,6 +968,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met in the `Lcom/mplus/lib/v6/J` object and returns the `WindowInsetsCompat` object either immediately or after calling a method on that object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
     .locals 2
 
@@ -1187,6 +1188,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a MotionEvent and calls the p0() method on an object of type Lcom/mplus/lib/v6/o. It then returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t(Landroid/view/MotionEvent;)Z
     .locals 1
 

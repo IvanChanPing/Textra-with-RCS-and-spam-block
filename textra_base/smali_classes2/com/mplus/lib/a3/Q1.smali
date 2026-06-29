@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/a3/Q1` class, setting its properties based on the provided parameters. It checks if a padding character is already in the alphabet and throws an error if it is.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/a3/M1;Ljava/lang/Character;)V
     .locals 3
 
@@ -256,6 +257,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method encodes a given CharSequence into a byte array using a custom encoding scheme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza([BLjava/lang/CharSequence;)I
     .locals 17
 

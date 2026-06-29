@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts an object and sets various properties of an `Icon$Builder` based on the object's type and the method's internal state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 2
 

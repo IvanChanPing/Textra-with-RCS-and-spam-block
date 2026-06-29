@@ -414,6 +414,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method scales and then invokes the cubicTo method of its superclass, android/graphics/Path, to draw a cubic Bézier curve. It applies scaling transformations using the a and b methods of its class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final cubicTo(FFFFFF)V
     .locals 8
 

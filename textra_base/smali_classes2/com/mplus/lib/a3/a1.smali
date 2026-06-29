@@ -154,6 +154,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method searches for a given object in an array and returns its index if found, or -1 if not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzapt;)I
     .locals 4
 

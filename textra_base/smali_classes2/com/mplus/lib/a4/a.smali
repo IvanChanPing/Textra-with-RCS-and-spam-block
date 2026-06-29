@@ -184,6 +184,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method opens a document file and returns a ParcelFileDescriptor for it, specifically handling the "adDebug.log" file.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final openDocument(Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
     .locals 3
 

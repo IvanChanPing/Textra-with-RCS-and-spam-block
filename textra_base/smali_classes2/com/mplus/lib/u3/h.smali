@@ -604,6 +604,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method attempts to atomically set a boolean flag and, if successful, creates a copy of a HashMap and calls another method `j0` with this copy.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k0()V
     .locals 4
 

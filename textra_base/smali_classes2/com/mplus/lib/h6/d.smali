@@ -125,6 +125,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns a duration in milliseconds, considering animation duration and a value retrieved from `Lcom/mplus/lib/T4/q;->g()Ljava/lang/Integer;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()J
     .locals 7
 
@@ -838,6 +839,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes a global layout listener and sets a touch delegate for a view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onGlobalLayout()V
     .locals 8
 

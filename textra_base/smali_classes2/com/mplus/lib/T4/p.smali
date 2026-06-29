@@ -289,6 +289,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method handles a string input based on the value of `e` in the class, either invoking a superclass method or executing a specific block of code using `Lcom/mplus/lib/P4/i;->c0`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(Ljava/lang/String;)V
     .locals 4
 
@@ -412,6 +413,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the set method to handle different types based on the value of `e`, specifically calling `e(Ljava/lang/String;)` when `e` is 1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic set(Ljava/lang/Object;)V
     .locals 2
 

@@ -27,6 +27,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to decrypt or decode a byte array based on the provided index and length.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic a(II[B)I
     .locals 6
 

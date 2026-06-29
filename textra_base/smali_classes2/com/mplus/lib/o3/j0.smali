@@ -152,6 +152,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a reversed version of the current object, creating a new instance if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o()Lcom/mplus/lib/o3/j0;
     .locals 4
 

@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles changes based on the value of `a` in the class, either by casting the input to an `Integer` or a `List` and then calling `y()` on `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChanged(Ljava/lang/Object;)V
     .locals 2
 

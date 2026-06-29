@@ -1719,6 +1719,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the soft input mode of a window and performs additional actions based on a boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u0(Landroid/view/Window;Z)V
     .locals 3
 

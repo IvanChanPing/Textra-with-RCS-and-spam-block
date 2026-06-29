@@ -34,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/o3/G, setting its fields and calling the superclass constructor. It sets the 'c' field to 0 and the 'd' field to the provided Iterable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/o3/H;I)V
     .locals 1
 
@@ -52,6 +53,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object based on the value of the `c` field, either an element from a list or an iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(I)Ljava/lang/Object;
     .locals 2
 

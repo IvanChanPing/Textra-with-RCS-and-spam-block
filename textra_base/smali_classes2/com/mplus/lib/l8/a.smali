@@ -354,6 +354,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method returns the AdFormat object stored in the class field 'a'. It always returns this object, regardless of any other factors.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAdFormat()Lcom/smaato/sdk/core/ad/AdFormat;
     .locals 2
 
@@ -364,6 +365,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a string field named 'b' in the class Lcom/mplus/lib/l8/a. It does not use the provided integer value 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getAdSpaceId()Ljava/lang/String;
     .locals 2
 
@@ -429,6 +431,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `j` field, which is a `Runnable` object, likely representing a callback for when an ad is clicked.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getOnCsmAdClicked()Ljava/lang/Runnable;
     .locals 2
 

@@ -43,6 +43,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method clears the contents of an AbstractMap object based on the value of a field 'a'. It invokes the clear method on different map implementations (Lcom/mplus/lib/a3/Y;, Lcom/mplus/lib/o3/w;, Lcom/mplus/lib/a3/p0;) depending on the switch case.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 2
 
@@ -1117,6 +1118,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of a map based on the value of the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

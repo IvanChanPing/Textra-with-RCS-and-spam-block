@@ -20,6 +20,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inflates a layout and initializes a view with a custom adapter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 4
 

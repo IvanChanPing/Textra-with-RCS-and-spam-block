@@ -117,6 +117,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzae object by calling zzk on the b field object with argument 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_smart_reply_common/zzae;
     .locals 3
 

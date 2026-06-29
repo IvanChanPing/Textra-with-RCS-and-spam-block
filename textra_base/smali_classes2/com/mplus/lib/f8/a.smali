@@ -266,6 +266,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the `Lcom/mplus/lib/f8/a` object, including its properties such as rolling fill rate, session depth, total ad requests, and total fill rate. It uses a `StringBuilder` to construct the string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

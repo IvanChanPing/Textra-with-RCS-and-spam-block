@@ -19,6 +19,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a boolean flag and modifies a byte field in the class instance, then returns the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Z)Lcom/google/android/gms/internal/mlkit_language_id_common/zzlb;
     .locals 2
 

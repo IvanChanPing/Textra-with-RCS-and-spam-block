@@ -118,6 +118,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object field 'a' of the class. It does not use the integer constant 5.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/Object;
     .locals 2
 

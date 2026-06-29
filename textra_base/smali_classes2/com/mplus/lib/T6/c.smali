@@ -37,6 +37,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method searches for a child view with a tag of type Lcom/mplus/lib/T6/b; that has a matching Lcom/mplus/lib/r4/l; object and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Lcom/mplus/lib/r4/l;)Lcom/mplus/lib/T6/b;
     .locals 4
 

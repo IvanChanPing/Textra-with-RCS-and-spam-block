@@ -137,6 +137,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method writes a byte array to an output stream, with behavior determined by the value of `a` in the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public write([BII)V
     .locals 2
 

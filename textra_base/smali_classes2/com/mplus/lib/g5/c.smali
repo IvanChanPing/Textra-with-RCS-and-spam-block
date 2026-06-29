@@ -130,6 +130,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method concatenates an integer and two strings, returning the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 

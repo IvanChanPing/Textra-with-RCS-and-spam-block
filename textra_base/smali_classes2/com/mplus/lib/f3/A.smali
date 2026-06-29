@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the state of a `zzdy` object and updates it if necessary, returning the resulting state as an `x` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/internal/play_billing/zzdy;)Lcom/mplus/lib/f3/x;
     .locals 3
 
@@ -132,6 +133,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a provided object matches the current object in a zzdy instance and updates it if they match.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/google/android/gms/internal/play_billing/zzdy;Lcom/mplus/lib/f3/x;Lcom/mplus/lib/f3/x;)Z
     .locals 2
 

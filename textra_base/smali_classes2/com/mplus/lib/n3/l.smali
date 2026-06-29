@@ -17,6 +17,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/n3/l class, setting its fields with the provided parameter and default values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f1/e;)V
     .locals 0
 

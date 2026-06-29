@@ -237,6 +237,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets the hint text for a `TextView` based on the state of a `com/mplus/lib/r4/n` object. It checks various conditions and sets the hint text accordingly, truncating the text if it exceeds a certain width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setSendHintNow(Lcom/mplus/lib/r4/n;)V
     .locals 8
 
@@ -766,6 +767,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of ArrowKeyMovementMethod. It creates a new movement method for text navigation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getDefaultMovementMethod()Landroid/text/method/MovementMethod;
     .locals 2
 
@@ -1575,6 +1577,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a view by invoking a static method with the provided margin value and the current object. It does not directly modify any instance fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -1631,6 +1634,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of an object by calling a static method `E` from class `Lcom/mplus/lib/z7/N`. It takes an integer `p1` and the current object `p0` as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 

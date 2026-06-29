@@ -31,6 +31,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if billing is supported on the device and initializes the billing client. It checks the highest level of billing support for in-app and subscription purchases, and logs any errors or exceptions that occur during the process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final a()Ljava/lang/Object;
     .locals 17
 

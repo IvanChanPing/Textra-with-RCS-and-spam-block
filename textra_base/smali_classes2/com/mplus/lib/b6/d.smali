@@ -149,6 +149,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks conditions and starts a new thread if necessary, initializing and starting a `Lcom/mplus/lib/b6/f` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 8
 

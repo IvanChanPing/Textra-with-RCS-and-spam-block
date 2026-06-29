@@ -99,6 +99,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method modifies the input Rect object by adding the corresponding values from another Rect object if it's not null, then updates the padding of a View object with the modified Rect values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 5
 

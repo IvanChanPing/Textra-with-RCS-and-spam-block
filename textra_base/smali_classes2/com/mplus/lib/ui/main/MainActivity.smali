@@ -18,6 +18,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an Intent to launch the MainActivity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static V(Landroid/content/Context;)Landroid/content/Intent;
     .locals 3
 

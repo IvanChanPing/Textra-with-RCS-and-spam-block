@@ -617,6 +617,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a dynamic method dispatcher for a protobuf-generated class, handling various operations such as getting the parser, default instance, and new instance, as well as serialization and deserialization.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dynamicMethod(Lcom/mplus/lib/F3/Y;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 

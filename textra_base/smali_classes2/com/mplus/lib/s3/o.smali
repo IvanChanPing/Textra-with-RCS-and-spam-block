@@ -878,6 +878,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method waits for a `Future` object to complete and returns its result, handling `InterruptedException` by retrying and eventually interrupting the current thread if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static h(Lcom/mplus/lib/s3/v;)Ljava/lang/Object;
     .locals 2
 
@@ -2025,6 +2026,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representing the remaining delay of a ScheduledFuture task in milliseconds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i()Ljava/lang/String;
     .locals 4
 

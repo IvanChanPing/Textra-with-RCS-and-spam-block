@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/n9/c, setting up various fields and handlers. It appears to be a constructor for a class that handles VAST (Video Ad Serving Template) elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/log/Logger;Lcom/mplus/lib/l9/a;Lcom/smaato/sdk/video/vast/browser/VastWebComponentSecurityPolicy;Lcom/smaato/sdk/video/vast/widget/element/VastElementErrorCodeStrategy;Lcom/smaato/sdk/video/vast/model/VastIconScenario;Lcom/smaato/sdk/video/utils/AnimationHelper;J)V
     .locals 0
 

@@ -653,6 +653,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method serializes and writes the given object to a stream. It gets the object's size, writes the size, then writes the object's contents.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L(Lcom/mplus/lib/F3/D0;)V
     .locals 2
 
@@ -1062,6 +1063,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method calls two other methods, Q and U, with the provided parameters. It appears to be a wrapper or initializer method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T(IJ)V
     .locals 2
 

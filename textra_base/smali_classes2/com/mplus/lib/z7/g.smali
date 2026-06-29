@@ -48,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a span with the given CharacterStyle in a SpannableStringBuilder. It uses the provided object's integer fields to determine the span's start and end positions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/text/style/CharacterStyle;Lcom/mplus/lib/z7/C;)V
     .locals 3
 

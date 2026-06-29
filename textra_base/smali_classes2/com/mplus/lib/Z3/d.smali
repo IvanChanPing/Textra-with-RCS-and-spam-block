@@ -24,6 +24,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method displays a formatted string as a toast notification if a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(Lcom/mplus/lib/Z3/d;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
@@ -77,6 +78,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the GDPR applies based on the "IABTCF_gdprApplies" preference in the default shared preferences.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N()Z
     .locals 5
 

@@ -87,6 +87,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method adds all elements from a given collection to the list at a specified index and returns a boolean indicating whether the list was modified.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addAll(ILjava/util/Collection;)Z
     .locals 2
 
@@ -229,6 +230,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an object at a specified index from an ArrayList and returns it, potentially converting it to a String if it's a byte array or an instance of Lcom/mplus/lib/F3/m.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 7
 

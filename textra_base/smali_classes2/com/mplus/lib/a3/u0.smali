@@ -48,6 +48,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a collection object stored in the 'b' field of the class. It does not use the local variable v1.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getValue()Ljava/lang/Object;
     .locals 2
 

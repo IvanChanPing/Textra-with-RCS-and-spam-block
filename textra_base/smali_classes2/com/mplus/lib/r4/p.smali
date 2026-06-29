@@ -922,6 +922,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called with any parameters. It does not retrieve an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInt(Ljava/lang/String;I)I
     .locals 1
 
@@ -1048,6 +1049,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when attempting to put an integer value into SharedPreferences. It does not actually store the value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
     .locals 1
 

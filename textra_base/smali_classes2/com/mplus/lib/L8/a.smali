@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles various events related to interstitial ads, such as opening, clicking, closing, and impression.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 2
 

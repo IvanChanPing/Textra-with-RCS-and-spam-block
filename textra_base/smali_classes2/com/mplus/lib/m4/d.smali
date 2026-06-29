@@ -366,6 +366,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and uses an instance of `Lcom/mplus/lib/v1/c;` if it's not already initialized, then checks if it's ready and either accepts it with the provided `Consumer` or schedules it for later.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized P(Ljava/util/function/Consumer;)V
     .locals 5
 

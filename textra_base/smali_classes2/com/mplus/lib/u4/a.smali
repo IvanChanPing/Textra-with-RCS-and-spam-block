@@ -1927,6 +1927,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a long ID value based on the value of the `b` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getId()J
     .locals 3
 

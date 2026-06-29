@@ -224,6 +224,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates and invalidates a view when a spring update occurs. It does this by calling the `invalidate` method on an object that implements the `Lcom/mplus/lib/x5/y` interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 1
 

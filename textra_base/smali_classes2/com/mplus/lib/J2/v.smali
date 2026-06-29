@@ -43,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a ConnectionTelemetryConfiguration is enabled and valid for a given BaseGmsClient, and returns it if so, otherwise returns null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Lcom/google/android/gms/common/api/internal/zabq;Lcom/google/android/gms/common/internal/BaseGmsClient;I)Lcom/google/android/gms/common/internal/ConnectionTelemetryConfiguration;
     .locals 2
 

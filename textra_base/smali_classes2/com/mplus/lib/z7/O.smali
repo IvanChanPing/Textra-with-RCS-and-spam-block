@@ -49,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appends a string and its arguments to a StringBuilder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 5
 

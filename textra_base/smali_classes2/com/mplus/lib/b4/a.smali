@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method sets various request properties on an HttpURLConnection object, including Accept-Language, Accept, Accept-Encoding, X-Device-Model, and User-Agent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(Ljava/net/HttpURLConnection;)V
     .locals 3
 

@@ -532,6 +532,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a BaseRelativeLayout instance. It calls a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 

@@ -108,6 +108,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a successful ad load event for an InMobi banner, logging the creative ID and initializing a new ad view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAdLoadSucceeded(Ljava/lang/Object;Lcom/inmobi/ads/AdMetaInfo;)V
     .locals 4
 

@@ -708,6 +708,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a specific property of a notification channel based on the input string. It checks the Android SDK version and the input string to determine which property to retrieve, such as enable notifications, ringtone, vibrate pattern, or led blink color.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(Lcom/mplus/lib/T4/a;Ljava/lang/Comparable;Lcom/mplus/lib/r4/p;)Ljava/lang/Object;
     .locals 4
 
@@ -872,6 +873,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object of type Lcom/mplus/lib/P4/a is present in a HashMap. It returns true if the object is found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(Lcom/mplus/lib/P4/a;)Z
     .locals 3
 
@@ -2503,6 +2505,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method initializes and creates notification channels for an Android application. It checks for existing channels and creates new ones if necessary, handling different types of notifications and channels.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e0()V
     .locals 6
 

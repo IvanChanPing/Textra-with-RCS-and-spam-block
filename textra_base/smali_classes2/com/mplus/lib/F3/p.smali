@@ -304,6 +304,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks a condition and returns an integer value based on it, potentially throwing an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final E()I
     .locals 3
 
@@ -385,6 +386,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle various operations based on the value of the input parameter `p1`, including invoking other methods, throwing exceptions, and returning boolean values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H(I)Z
     .locals 6
 
@@ -1155,6 +1157,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method reads an 8-byte long value from a byte array and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M()J
     .locals 10
 
@@ -2469,6 +2472,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided integer matches a stored value, and if not, throws an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)V
     .locals 2
 
@@ -2947,6 +2951,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to increment a counter, invoke a method on an object, and then call another method with a modified parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final s(ILcom/mplus/lib/F3/C0;Lcom/mplus/lib/F3/G;)V
     .locals 2
 
@@ -3099,6 +3104,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method reads and decodes a single integer value from a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()I
     .locals 8
 

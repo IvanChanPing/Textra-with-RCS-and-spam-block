@@ -68,6 +68,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the dimensions of an object based on the input parameters and the context in which it is called.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(III)V
     .locals 4
 
@@ -170,6 +171,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method configures and posts a runnable to update the UI with specific colors and visibility settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 6
 

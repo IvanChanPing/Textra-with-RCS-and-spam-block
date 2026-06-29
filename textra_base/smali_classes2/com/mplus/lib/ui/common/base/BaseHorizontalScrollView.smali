@@ -192,6 +192,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a view. It invokes a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -261,6 +262,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a view by invoking a static method with the provided margin value and the current object. It appears to be part of a custom view class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 

@@ -114,6 +114,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a custom BaseAdapter instance, specifically an instance of `Lcom/mplus/lib/g7/d;`, which is populated with views generated from a map of objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p()Landroid/widget/BaseAdapter;
     .locals 8
 

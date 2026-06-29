@@ -129,6 +129,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field of an object using the `sun/misc/Unsafe` class. It takes an object, a long offset, and a float value which is converted to an integer before being stored.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Ljava/lang/Object;JF)V
     .locals 2
 

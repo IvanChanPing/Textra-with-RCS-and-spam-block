@@ -256,6 +256,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method formats a phone number based on a given region code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
@@ -318,6 +319,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is a valid email address.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(Ljava/lang/String;)Z
     .locals 3
 
@@ -446,6 +448,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method formats a phone number.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Lcom/mplus/lib/r4/l;)Ljava/lang/String;
     .locals 12
 

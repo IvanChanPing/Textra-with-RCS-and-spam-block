@@ -31,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a string representation of a task. It constructs the string by appending the task object to a prefix and suffix.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i()Ljava/lang/String;
     .locals 3
 

@@ -113,6 +113,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calculates the optimal text size for an `AutoResizeTextView` to fit within a given rectangle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static d(IILcom/mplus/lib/s5/m;Landroid/graphics/RectF;)I
     .locals 17
 
@@ -588,6 +589,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns the result. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -875,6 +877,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of an AutoResizeTextView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -954,6 +957,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text size of an `AutoResizeTextView` instance, applying the given size and unit to the display metrics. It then clears a sparse integer array and calls another method `c()` to presumably update the text view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setTextSize(IF)V
     .locals 2
 

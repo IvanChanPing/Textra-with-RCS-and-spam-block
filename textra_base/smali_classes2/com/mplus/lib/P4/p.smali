@@ -741,6 +741,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method generates a bitmap based on certain conditions and configurations. It uses various classes and methods to create a drawable and then converts it to a bitmap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(Z)Landroid/graphics/Bitmap;
     .locals 4
 
@@ -876,6 +877,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method checks and updates the notification channel and displays a notification if certain conditions are met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S()V
     .locals 14
 
@@ -1585,6 +1587,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and displays a notification for a conversation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(Lcom/mplus/lib/r4/j0;Lcom/mplus/lib/B2/l;Lcom/mplus/lib/r4/p;ZZZZZZLjava/util/List;)V
     .locals 18
 
@@ -3344,6 +3347,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method displays a notification with a title, message, and image, and handles the notification click event with a PendingIntent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final X(Lcom/mplus/lib/r4/j0;Landroid/app/PendingIntent;)V
     .locals 7
 

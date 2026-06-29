@@ -210,6 +210,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method decrements the current index by 1 and returns the result, but with no bounds checking.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 

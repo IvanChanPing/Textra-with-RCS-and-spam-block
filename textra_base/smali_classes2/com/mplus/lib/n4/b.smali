@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes two static integer arrays `f` and `g` in the class `Lcom/mplus/lib/n4/b;` with predefined values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -88,6 +89,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method normalizes a given string by converting it to lowercase, replacing certain characters, and removing extra whitespace.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 

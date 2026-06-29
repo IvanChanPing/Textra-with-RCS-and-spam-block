@@ -244,6 +244,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the URI of a SendTextPersister$AttachmentSpan object. It invokes a private setUri method on the object, passing the provided string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$700(Lcom/mplus/lib/ui/common/sendtext/marshal/protobuf/SendTextPersister$AttachmentSpan;Ljava/lang/String;)V
     .locals 1
 
@@ -278,6 +279,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the content type of an AttachmentSpan by resetting the corresponding bit field and setting the content type to its default value. It effectively resets the content type to its initial state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearContentType()V
     .locals 2
 
@@ -334,6 +336,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the span end of an AttachmentSpan by resetting the `spanEnd_` field to 0 and updating the `bitField0_` to reflect this change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearSpanEnd()V
     .locals 2
 
@@ -1196,6 +1199,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the content type of an attachment as a protobuf message. It retrieves the content type string from the `contentType_` field and converts it to a protobuf message using `Lcom/mplus/lib/F3/m;->d(Ljava/lang/String;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getContentTypeBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 

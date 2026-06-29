@@ -34,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns the left safe inset of a DisplayCutout object. It appears to be a bridge method, but its actual functionality is to get the left safe inset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic C(Landroid/view/DisplayCutout;)I
     .locals 1
 
@@ -255,6 +256,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns the current process name as a string. It does not use the returned string length as indicated by the constant 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic o()Ljava/lang/String;
     .locals 2
 
@@ -319,6 +321,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the required network for a JobInfo$Builder and returns immediately. It does not utilize the returned JobInfo$Builder.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static bridge synthetic t(Landroid/app/job/JobInfo$Builder;Landroid/net/NetworkRequest;)V
     .locals 1
 

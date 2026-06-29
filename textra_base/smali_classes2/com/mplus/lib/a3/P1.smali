@@ -529,6 +529,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a field `b` of type `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;`. It appears to be a getter method for the field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -537,6 +538,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the `f` field, which is an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -547,6 +549,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `com/google/android/gms/internal/mlkit_entity_extraction/zzaih`. It appears to be a getter method for the `e` field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 
@@ -595,6 +598,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the `zzaih` object stored in the class field `c`. It does not perform any operations based on the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzi()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 

@@ -1206,6 +1206,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an error message with the provided LogDomain and string format. It calls another method `c` with LogLevel.ERROR and the given parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs error(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 
@@ -1269,6 +1270,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an info message with the provided LogDomain and string format, using the INFO log level. It delegates the actual logging to another method `c` in the same class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs info(Lcom/smaato/sdk/core/log/LogDomain;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 7
 

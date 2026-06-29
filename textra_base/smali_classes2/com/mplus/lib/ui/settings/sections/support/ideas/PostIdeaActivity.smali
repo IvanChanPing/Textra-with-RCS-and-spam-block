@@ -61,6 +61,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the PostIdeaActivity, setting up its UI components and event listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 13
 

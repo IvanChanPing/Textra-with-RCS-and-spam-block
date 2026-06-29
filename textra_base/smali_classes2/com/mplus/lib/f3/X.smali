@@ -98,6 +98,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current list object is equal to another object. It first checks if the object is the same instance, then if it's a list, and if it's a random access list, it compares the elements of the two lists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public equals(Ljava/lang/Object;)Z
     .locals 7
 
@@ -305,6 +306,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements in the specified collection from the current collection and returns true if any elements were removed. It first calls an internal method `a()` before delegating to the superclass's `removeAll()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 1
 

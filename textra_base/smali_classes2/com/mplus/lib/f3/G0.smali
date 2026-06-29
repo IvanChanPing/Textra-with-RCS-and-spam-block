@@ -648,6 +648,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a long value from a memory location using sun/misc/Unsafe.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(JLjava/lang/Object;)J
     .locals 2
 
@@ -755,6 +756,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field in an object using sun/misc/Unsafe. It takes an object, a field offset, and an integer value as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Ljava/lang/Object;JI)V
     .locals 2
 

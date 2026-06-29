@@ -135,6 +135,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onChildAttachedToWindow` method of `RecyclerView` to ensure that child views are fully opaque and visible when attached.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onChildAttachedToWindow(Landroid/view/View;)V
     .locals 3
 

@@ -48,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a string describing an object's position and alignment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final a()Ljava/lang/String;
     .locals 4
 

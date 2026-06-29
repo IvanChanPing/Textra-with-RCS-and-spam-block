@@ -187,6 +187,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, specifically an instance of `Lcom/mplus/lib/Y3/e;`, including its order, publisherId, and adspaceId.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

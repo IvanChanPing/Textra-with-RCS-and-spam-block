@@ -322,6 +322,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method generates or retrieves a bitmap based on the dimensions provided in the input object. It checks a hashmap for a bitmap with the specified dimensions and creates a new one if it doesn't exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Lcom/mplus/lib/v4/c;)Landroid/graphics/Bitmap;
     .locals 5
 

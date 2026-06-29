@@ -31,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle different states (based on the value of `p`) and performs actions such as setting flags, calling other methods, and executing code blocks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public I()V
     .locals 4
 

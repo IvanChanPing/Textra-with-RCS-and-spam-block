@@ -1676,6 +1676,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs a message with the given format string and arguments, using `Lcom/mplus/lib/I4/a;->Q` if the logging is enabled.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static varargs h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
 

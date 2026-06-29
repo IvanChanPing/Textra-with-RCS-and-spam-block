@@ -123,6 +123,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the UI components of a DrawerMenuFragment, including setting up a list view with various menu items.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onActivityCreated(Landroid/os/Bundle;)V
     .locals 10
 

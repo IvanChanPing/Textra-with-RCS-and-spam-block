@@ -153,6 +153,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes the views of a GiphyCategoryItemCell after inflation. It sets the `h` and `i` fields to a BaseImageView and a BaseTextView, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onFinishInflate()V
     .locals 2
 

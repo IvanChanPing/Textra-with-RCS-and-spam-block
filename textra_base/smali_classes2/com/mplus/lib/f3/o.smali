@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a static instance of the class Lcom/mplus/lib/f3/o. It creates a new instance of the class and assigns it to a static field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 1
 
@@ -55,6 +56,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string constant "Ordering.natural()". It appears to be part of a class that provides a string representation of an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

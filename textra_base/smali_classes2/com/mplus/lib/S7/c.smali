@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts an object and performs different actions based on its type, either creating a new `D8/a` instance with an `Intent` or a `String` and invoking it on a `BrowserView`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 5
 

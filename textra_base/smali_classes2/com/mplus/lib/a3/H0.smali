@@ -50,6 +50,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method invokes the `zza` method of a `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzahx;` interface, passing the input object `p1`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

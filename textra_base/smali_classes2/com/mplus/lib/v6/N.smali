@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles WindowInsetsCompat, specifically adjusting the height of a view based on the status bar insets when a certain condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroidx/core/view/WindowInsetsCompat;)V
     .locals 4
 

@@ -338,6 +338,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a failed banner load event by logging the error and resetting the banner listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBannerLoadFailed(Lcom/tappx/sdk/android/TappxBanner;Lcom/tappx/sdk/android/TappxAdError;)V
     .locals 4
 
@@ -420,6 +421,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the loading of a Tappx banner ad, logging the event and updating the ad's listener.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBannerLoaded(Lcom/tappx/sdk/android/TappxBanner;)V
     .locals 8
 

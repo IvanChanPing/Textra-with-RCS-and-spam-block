@@ -747,6 +747,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses an `AdSetupPersister$InmobiBannerSetup` object from an input stream. It utilizes the `parseFrom` method from `com/google/protobuf/c` to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Ljava/io/InputStream;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/service/preferences/values/protobuf/AdSetupPersister$InmobiBannerSetup;
     .locals 2
 
@@ -1343,6 +1344,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the maximum attempts value stored in the `maxAttempts_` field of the `InmobiBannerSetup` object. It does not use the constant value 3.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getMaxAttempts()I
     .locals 2
 

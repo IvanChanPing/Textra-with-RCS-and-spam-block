@@ -64,6 +64,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an integer value from an object and stores it, then invokes a method to hide views with specific IDs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final G()V
     .locals 4
 
@@ -110,6 +111,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method increments a counter by the input value and then calls a method to update a component with the new counter value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(I)V
     .locals 4
 

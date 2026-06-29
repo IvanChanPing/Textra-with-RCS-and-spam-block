@@ -552,6 +552,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears and resets the rewardInMillis field to a default value of 30000 (0x7530 in hexadecimal).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearRewardInMillis()V
     .locals 3
 
@@ -1116,6 +1117,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the reward time in milliseconds for an Amazon Aps banner setup and updates the bit field accordingly. It stores the provided time in the `rewardInMillis_` field and sets the 5th bit (0x10) in the `bitField0_` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setRewardInMillis(J)V
     .locals 2
 
@@ -1662,6 +1664,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the 'order' field is set in the AdSetupPersister$AmazonApsBannerSetup object. It returns true if the field is set, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasOrder()Z
     .locals 2
 

@@ -577,6 +577,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method formats a phone number using the libphonenumber library.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m()Ljava/lang/String;
     .locals 5
 

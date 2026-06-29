@@ -1020,6 +1020,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a data structure and returns the removed object. It checks if the object exists, and if so, removes it from either a list or a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

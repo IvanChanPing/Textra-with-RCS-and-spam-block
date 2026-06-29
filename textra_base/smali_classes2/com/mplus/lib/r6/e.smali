@@ -526,6 +526,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method schedules a runnable to run on the main thread of the application. It creates an instance of Lcom/mplus/lib/r6/c and passes it to the runOnMainThread method of the App instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0()V
     .locals 4
 

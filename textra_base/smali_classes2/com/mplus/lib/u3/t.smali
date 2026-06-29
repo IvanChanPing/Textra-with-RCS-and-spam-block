@@ -373,6 +373,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given class is in a set of declared dependencies and returns a set of dependencies for that class if it exists, otherwise it throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Class;)Ljava/util/Set;
     .locals 4
 

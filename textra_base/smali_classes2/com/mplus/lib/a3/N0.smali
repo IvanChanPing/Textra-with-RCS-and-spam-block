@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/a3/N0, setting its fields with the provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamj;[Ljava/lang/Object;II)V
     .locals 0
 
@@ -142,6 +143,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an instance of zzaon from zzamg. It returns the result as zzaom.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaom;
     .locals 3
 

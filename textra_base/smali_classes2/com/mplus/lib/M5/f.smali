@@ -496,6 +496,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method handles an onClick event for a view, either a BaseImageView or another view with a specific tag, and performs actions based on the view's identity.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 5
 
@@ -674,6 +675,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of an object based on spring animation values. It checks the animation progress and updates the alpha value of a view accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 4
 

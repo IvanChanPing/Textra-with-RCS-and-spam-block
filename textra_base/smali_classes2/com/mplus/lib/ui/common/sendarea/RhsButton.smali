@@ -24,6 +24,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a new `DrawableWrapper` instance with a color state list and adds it to an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Landroid/graphics/drawable/Drawable;)V
     .locals 10
 
@@ -478,6 +479,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of an object by invoking a static method with the provided margin value and the current object. It appears to be a part of a custom UI component.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -530,6 +532,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of an object by invoking a static method `E` from class `Lcom/mplus/lib/z7/N` with the provided padding value and the current object. It then returns without using the result of the invocation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 

@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an object based on the value of a switch variable, invoking different methods from `Lcom/smaato/sdk/richmedia/util/RichMediaHtmlUtils;` to handle the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 2
 

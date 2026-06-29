@@ -78,6 +78,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzaxt object, ignoring the provided Executor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Ljava/util/concurrent/Executor;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaxt;
     .locals 1
 
@@ -92,6 +93,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/E3/q;`, locking and unlocking is not explicitly shown but a lock is acquired at the start.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Lcom/mplus/lib/E3/m;
     .locals 5
 

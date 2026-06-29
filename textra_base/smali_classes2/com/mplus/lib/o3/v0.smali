@@ -97,6 +97,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a Set based on the type of Map stored in the object's field 'e'. It checks if the map is a NavigableMap, SortedMap, or a regular Map, and returns a corresponding Set implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Ljava/util/Set;
     .locals 3
 

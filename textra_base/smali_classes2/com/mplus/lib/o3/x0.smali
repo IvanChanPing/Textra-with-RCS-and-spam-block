@@ -82,6 +82,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method compares two objects and returns an integer indicating their order.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 

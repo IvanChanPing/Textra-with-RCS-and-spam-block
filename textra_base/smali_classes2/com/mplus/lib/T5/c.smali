@@ -50,6 +50,7 @@
     .end array-data
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/T5/c class with a Context, Uri, integer, and File. It sets the corresponding fields of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;ILjava/io/File;)V
     .locals 0
 

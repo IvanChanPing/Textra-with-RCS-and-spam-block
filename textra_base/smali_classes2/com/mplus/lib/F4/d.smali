@@ -266,6 +266,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a field `c` and calls method `f` on an object of type `Lcom/mplus/lib/F4/o;` with a `Lcom/mplus/lib/F4/x;` parameter based on that value. It returns a boolean result from that method call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/F4/x;)Z
     .locals 2
 

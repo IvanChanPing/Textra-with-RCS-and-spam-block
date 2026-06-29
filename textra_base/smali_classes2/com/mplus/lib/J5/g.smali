@@ -1163,6 +1163,7 @@
     return v4
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list of WeakReferences to objects of type Lcom/mplus/lib/J5/f, and for each non-null reference, it posts a Runnable to the main thread to process the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 6
 

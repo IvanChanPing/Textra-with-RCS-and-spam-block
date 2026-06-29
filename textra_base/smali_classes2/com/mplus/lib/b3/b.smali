@@ -73,6 +73,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a sublist of a collection by delegating to `zbf(II)` method. It returns an object of type `Lcom/google/android/gms/internal/mlkit_language_id_bundled/zbi;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 1
 

@@ -12,6 +12,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates an intent to launch the ringtone picker activity and sets various extras for the intent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 5
 

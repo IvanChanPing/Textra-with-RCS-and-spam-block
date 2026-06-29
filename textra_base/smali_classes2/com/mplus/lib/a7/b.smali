@@ -194,6 +194,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles different cases based on the value of `p0.n` and performs actions such as sending emails, creating zip files, and starting intents.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 14
 

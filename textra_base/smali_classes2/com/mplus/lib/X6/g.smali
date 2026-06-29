@@ -1066,6 +1066,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the onClick event for a view, specifically a popup menu with three options, and performs actions based on the selected option.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 13
 

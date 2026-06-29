@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields with AtomicReferenceFieldUpdaters for various classes and fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -119,6 +120,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates a field in the first `Lcom/mplus/lib/a3/d2` object to reference the second `Lcom/mplus/lib/a3/d2` object using an `AtomicReferenceFieldUpdater`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/a3/d2;Lcom/mplus/lib/a3/d2;)V
     .locals 2
 

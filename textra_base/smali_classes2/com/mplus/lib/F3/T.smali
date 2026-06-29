@@ -48,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to get message info for a given class, specifically checking if it's a subclass of `com/google/protobuf/c`. If it is, it tries to get the default instance and build message info, returning it as `Lcom/mplus/lib/F3/S0;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Class;)Lcom/mplus/lib/F3/S0;
     .locals 4
 

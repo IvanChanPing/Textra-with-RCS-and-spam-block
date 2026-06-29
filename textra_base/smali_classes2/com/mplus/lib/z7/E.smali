@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes a BufferedInputStream object with the provided InputStream. It sets the buffer, input stream, and various flags and counters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/io/InputStream;)V
     .locals 2
 

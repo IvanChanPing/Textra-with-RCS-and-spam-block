@@ -128,6 +128,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates a local copy of a given Uri if the second parameter is true, and returns the Uri of the local copy.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Landroid/net/Uri;ZLjava/util/function/Consumer;)Landroid/net/Uri;
     .locals 11
 

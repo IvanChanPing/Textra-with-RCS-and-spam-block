@@ -27,6 +27,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets a download status object if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_common/zzna;)Lcom/google/android/gms/internal/mlkit_common/zzsi;
     .locals 2
 
@@ -155,6 +156,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean field `c` and modifies a byte field `h` by setting its least significant bit, then returns the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzf(Z)Lcom/google/android/gms/internal/mlkit_common/zzsi;
     .locals 1
 

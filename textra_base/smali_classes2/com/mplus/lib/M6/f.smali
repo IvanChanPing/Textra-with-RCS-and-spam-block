@@ -98,6 +98,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method draws lines on a Canvas, specifically a horizontal line at the top and bottom, and a vertical line, with varying alpha values based on the `t` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Landroid/graphics/Canvas;)V
     .locals 12
 

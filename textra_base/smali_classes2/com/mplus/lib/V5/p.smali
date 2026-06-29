@@ -493,6 +493,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles a MotionEvent and updates the state of a list of views based on the event's coordinates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(Landroid/view/MotionEvent;)V
     .locals 14
 
@@ -888,6 +889,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the display of emojis in a popup view, specifically when the user interacts with a text input field. It processes the emojis, lays them out in a grid, and animates the popup view to appear above the input field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q0(Lcom/mplus/lib/D6/d;Landroid/view/MotionEvent;)V
     .locals 26
 

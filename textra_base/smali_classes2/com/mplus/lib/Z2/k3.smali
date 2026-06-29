@@ -117,6 +117,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object based on its string, boolean, and integer fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 5
 
@@ -175,6 +176,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an MLKitLoggingOptions object, including its library name, enable firelog status, and firelog event type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

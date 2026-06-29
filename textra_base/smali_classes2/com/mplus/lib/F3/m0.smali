@@ -28,6 +28,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a new instance of Lcom/mplus/lib/F3/m0, which is actually an IOException with a specific error message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b()Lcom/mplus/lib/F3/m0;
     .locals 3
 

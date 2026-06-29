@@ -158,6 +158,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method removes all elements from the collection passed as an argument from the set it's called on. It attempts to use a bulk removal method, and if that fails, it iterates over the collection and removes elements individually.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 2
 

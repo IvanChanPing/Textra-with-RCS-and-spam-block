@@ -362,6 +362,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method dispatches touch events to the parent view or handles them internally based on the state of an object of class `Lcom/mplus/lib/x5/C`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
@@ -1164,6 +1165,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a view. It invokes a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -1218,6 +1220,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a BaseLinearLayout instance. It calls a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 

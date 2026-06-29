@@ -34,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks the state of an object and returns a boolean value based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public a()Z
     .locals 2
 

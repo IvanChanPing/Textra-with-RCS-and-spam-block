@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/M6/n` class, setting up its UI components and configuring their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
     .locals 11
 

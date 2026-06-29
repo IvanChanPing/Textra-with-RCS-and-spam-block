@@ -68,6 +68,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getMeasuredSize()` method to return the measured size of the view. It simply calls the superclass's `getMeasuredSize()` method and returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
@@ -257,6 +258,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the bottom margin of a view by invoking a static method with the provided margin value and the current object. It appears to be a wrapper around another method that performs the actual margin setting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setBottomMargin(I)V
     .locals 1
 
@@ -265,6 +267,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setDispatchTouchEvents function to call its superclass's version. It takes a boolean parameter and returns immediately after the call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setDispatchTouchEvents(Z)V
     .locals 1
 
@@ -315,6 +318,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a view by invoking a static method with the provided margin value and the current object. It appears to be configuring the layout of the GiphyListView.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -340,6 +344,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a view by invoking a static method `E` from class `Lcom/mplus/lib/z7/N`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 

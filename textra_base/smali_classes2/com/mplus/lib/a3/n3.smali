@@ -945,6 +945,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method throws an exception based on the value of a switch statement.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic zza(Ljava/lang/Object;)V
     .locals 2
 

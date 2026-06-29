@@ -14,6 +14,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles work for responding via SMS, specifically checking the intent action and extracting relevant data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onHandleWork(Landroid/content/Intent;)V
     .locals 5
 

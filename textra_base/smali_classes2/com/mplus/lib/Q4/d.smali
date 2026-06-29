@@ -41,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to update and reset certain properties of an object, specifically setting values related to a timer or counter, and invoking methods to update and reset other components.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

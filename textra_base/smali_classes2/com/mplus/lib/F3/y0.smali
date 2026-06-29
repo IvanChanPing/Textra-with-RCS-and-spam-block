@@ -411,6 +411,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of an object by iterating over its entries, hashing each key and value, and summing the XOR of these hashes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 5
 

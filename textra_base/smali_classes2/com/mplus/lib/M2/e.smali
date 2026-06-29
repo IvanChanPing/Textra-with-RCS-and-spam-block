@@ -29,6 +29,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/M2/e class, setting its properties with the provided parameters. It also creates a new HashMap and sets an integer field to 2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/M2/g;Lcom/google/android/gms/common/internal/zzo;)V
     .locals 0
 

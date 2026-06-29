@@ -43,6 +43,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/F3/u0 with an array of 10 long integers. It calls another constructor in the same class with this array and an integer value of 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 2
 
@@ -228,6 +229,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method adds a Long object to a collection by calling `b(J)V` with the long value, then returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 3
 

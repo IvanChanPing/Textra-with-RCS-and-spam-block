@@ -1125,6 +1125,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onPause` lifecycle method in an Android FragmentActivity, calling the superclass's `onPause` and then performing cleanup tasks on certain objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onPause()V
     .locals 7
 
@@ -1556,6 +1557,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the content view of an activity and initializes a `B6/c` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setContentView(I)V
     .locals 3
 
@@ -1592,6 +1594,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object, including its class name and an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public toString()Ljava/lang/String;
     .locals 3
 

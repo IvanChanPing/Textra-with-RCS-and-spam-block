@@ -58,6 +58,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method converts a Collection to an instance of Lcom/mplus/lib/o3/U;, handling cases where the Collection is an instance of Lcom/mplus/lib/o3/O;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/util/Collection;)Lcom/mplus/lib/o3/U;
     .locals 2
 
@@ -261,6 +262,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates an array of objects and passes it to other methods for processing, ultimately returning an instance of Lcom/mplus/lib/o3/C0;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static r(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mplus/lib/o3/C0;
     .locals 1
 
@@ -389,6 +391,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method sorts a list of objects using a provided comparator and returns a new object of type Lcom/mplus/lib/o3/C0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(Ljava/util/Comparator;Ljava/util/List;)Lcom/mplus/lib/o3/C0;
     .locals 3
 
@@ -600,6 +603,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current list object is equal to another object, which is also a list. It compares the two lists by checking if they have the same size and if their elements are equal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
@@ -766,6 +770,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an object of type Lcom/mplus/lib/o3/G;, but is declared to return Lcom/mplus/lib/o3/Q0;. It calls method l() on the current object with argument 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/o3/Q0;
     .locals 2
 
@@ -837,6 +842,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the index of the first occurrence of a specified object in a list, or -1 if the object is not found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public indexOf(Ljava/lang/Object;)I
     .locals 5
 

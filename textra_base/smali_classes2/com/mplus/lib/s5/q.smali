@@ -4055,6 +4055,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onPause` lifecycle method in an Android Activity, handling various operations such as checking configuration changes, comparing text, and sending events.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPause()V
     .locals 8
 

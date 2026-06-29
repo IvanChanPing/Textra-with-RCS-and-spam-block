@@ -52,6 +52,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/t5/a` class, setting up its properties and views.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/x5/z;Lcom/mplus/lib/s5/e;)V
     .locals 2
 

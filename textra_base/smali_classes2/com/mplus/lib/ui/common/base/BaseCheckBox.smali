@@ -247,6 +247,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a color filter on a drawable object. It mutates the drawable to ensure the change doesn't affect other instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 2
 

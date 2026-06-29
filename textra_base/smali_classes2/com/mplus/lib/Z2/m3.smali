@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Z2/m3 class with various parameters. It sets the object's fields with the provided values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_common/zzmu;Ljava/lang/String;ZZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzna;I)V
     .locals 0
 

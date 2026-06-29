@@ -314,6 +314,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves or creates a `Lcom/mplus/lib/F1/d` object associated with a given `Lcom/mplus/lib/F1/i` object and adds a given object to its list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(Lcom/mplus/lib/F1/i;Ljava/lang/Object;)V
     .locals 5
 

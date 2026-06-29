@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a dialog click event based on the value of `a` field in the class, invoking different methods from `Lcom/inmobi/media/za;` or `Lcom/tappx/a/j0;` classes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 

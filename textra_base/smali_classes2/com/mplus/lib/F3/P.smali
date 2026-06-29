@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes and populates an array of `Lcom/mplus/lib/F3/P` objects, which appear to represent different data types in a protocol buffer-like system.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 86
 
@@ -922,6 +923,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a cloned array of all enum values of class Lcom/mplus/lib/F3/P. It creates a copy of the enum constants array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static values()[Lcom/mplus/lib/F3/P;
     .locals 2
 

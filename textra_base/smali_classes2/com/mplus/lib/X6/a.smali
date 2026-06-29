@@ -376,6 +376,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method binds data to a RecyclerView ViewHolder. It sets the activated state of the item view, updates the checkbox visibility, and populates the search result text views with data from a cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 16
 

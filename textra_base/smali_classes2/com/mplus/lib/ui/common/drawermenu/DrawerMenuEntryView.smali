@@ -97,6 +97,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingHorizontal() and returns its result. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 
@@ -359,6 +360,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a DrawerMenuEntryView instance. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 

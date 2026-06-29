@@ -187,6 +187,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the object's state by retrieving and processing values from other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 5
 

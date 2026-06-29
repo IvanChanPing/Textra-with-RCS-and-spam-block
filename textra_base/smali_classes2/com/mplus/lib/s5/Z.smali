@@ -697,6 +697,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the end of an animation, specifically resetting and invalidating the drawable when the animation ends.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 

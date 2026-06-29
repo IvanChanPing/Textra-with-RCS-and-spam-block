@@ -208,6 +208,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the object's velocity and position based on the input float and long values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(FJ)V
     .locals 4
 

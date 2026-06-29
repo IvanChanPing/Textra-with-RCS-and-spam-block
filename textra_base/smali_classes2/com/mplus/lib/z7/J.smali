@@ -682,6 +682,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method converts an Android Bundle object into a string representation, listing its key-value pairs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static D(Landroid/os/Bundle;)Ljava/lang/String;
     .locals 6
 
@@ -1131,6 +1132,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the maximum of the first two input integers and then returns the minimum of that result and the third input integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(III)I
     .locals 1
 

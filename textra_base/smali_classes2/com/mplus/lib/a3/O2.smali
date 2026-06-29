@@ -76,6 +76,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzgw` or throws an `IllegalStateException` if required properties are missing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzgw;
     .locals 5
 

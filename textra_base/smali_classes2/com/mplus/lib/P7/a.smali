@@ -96,6 +96,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code of the object based on the hash code of a stored string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 3
 

@@ -267,6 +267,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the text size as a float. It simply converts an integer field 'f' to a float and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getTextSizeDirect()F
     .locals 2
 
@@ -332,6 +333,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method with a boolean parameter. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 

@@ -568,6 +568,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method returns a parser for the PretendSimPersister class. It retrieves the parser from the DEFAULT_INSTANCE of PretendSimPersister.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parser()Lcom/mplus/lib/F3/O0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

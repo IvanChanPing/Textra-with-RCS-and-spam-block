@@ -370,6 +370,7 @@
 .method public abstract size()I
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of a ByteString object, including its hash code, size, and contents.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 6
 

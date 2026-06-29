@@ -338,6 +338,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method writes the object's data to an output stream in a delimited format. It calculates the size of the data, creates a buffer if necessary, and then writes the data to the output stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public writeDelimitedTo(Ljava/io/OutputStream;)V
     .locals 4
 

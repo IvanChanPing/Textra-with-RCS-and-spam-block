@@ -181,6 +181,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method filters a list of objects based on a predicate and returns the first matching object of type Lcom/mplus/lib/J6/r;. It creates an instance of Lcom/mplus/lib/J4/j; with a string and an integer, then uses this instance as a filter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Ljava/lang/String;Ljava/util/List;)Lcom/mplus/lib/J6/r;
     .locals 3
 
@@ -943,6 +944,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of items, filters and counts them, and then creates a new collection of items with associated drawables.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/util/List;Lcom/mplus/lib/cb/b;)Lcom/mplus/lib/J6/a;
     .locals 16
 

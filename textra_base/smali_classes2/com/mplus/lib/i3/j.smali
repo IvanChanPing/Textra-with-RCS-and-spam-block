@@ -193,6 +193,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method adds an OnCompleteListener to a task and executes it on the main thread. It also notifies and updates related components.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final addOnCompleteListener(Landroid/app/Activity;Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
     .locals 3
 

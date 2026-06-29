@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method notifies a VastVideoPlayer event listener that the render process has gone and then calls a method to reset the VastVideoPlayerPresenter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onRenderProcessGone()V
     .locals 5
 

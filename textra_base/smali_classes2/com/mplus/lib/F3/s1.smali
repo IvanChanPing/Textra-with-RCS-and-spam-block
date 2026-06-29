@@ -26,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the array base offset of a given class using sun/misc/Unsafe. It always returns the result of arrayBaseOffset plus nothing, as the '2' is not used in the calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Class;)I
     .locals 2
 
@@ -75,6 +76,7 @@
 .method public abstract h(JLjava/lang/Object;)F
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an integer value from a memory location using the `sun/misc/Unsafe` class. It takes a `long` offset and an `Object` as parameters and returns the integer value at that offset in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(JLjava/lang/Object;)I
     .locals 2
 
@@ -154,6 +156,7 @@
 .method public abstract p(Ljava/lang/Object;JF)V
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field of an object using the sun/misc/Unsafe class. It takes an object, a field offset, and an integer value as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final q(Ljava/lang/Object;JI)V
     .locals 2
 
@@ -166,6 +169,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a long field in the given object using sun/misc/Unsafe. It takes an object and two long values as parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Ljava/lang/Object;JJ)V
     .locals 7
 

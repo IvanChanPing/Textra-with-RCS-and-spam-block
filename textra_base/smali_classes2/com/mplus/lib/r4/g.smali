@@ -49,6 +49,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the integer value retrieved by `getInt(I)` is equal to 1 and returns true (1) if so, otherwise returns false (0).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final F(I)Z
     .locals 2
 

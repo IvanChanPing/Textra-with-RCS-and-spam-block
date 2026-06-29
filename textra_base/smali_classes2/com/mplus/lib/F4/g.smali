@@ -25,6 +25,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method generates a list of bitmaps by decoding files with names constructed from the input string and a counter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Ljava/lang/String;Lcom/mplus/lib/V5/j;)Ljava/util/ArrayList;
     .locals 7
 

@@ -106,6 +106,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code for an instance of the class Lcom/mplus/lib/c3/E1, combining the hash codes of its fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 5
 

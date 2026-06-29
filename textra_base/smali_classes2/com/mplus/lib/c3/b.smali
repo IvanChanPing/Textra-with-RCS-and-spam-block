@@ -119,6 +119,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzaf object, but the provided code suggests it actually returns a zzag object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_language_id_common/zzaf;
     .locals 3
 

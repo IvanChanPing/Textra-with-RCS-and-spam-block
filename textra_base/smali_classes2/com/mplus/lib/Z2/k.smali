@@ -579,6 +579,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method concatenates four strings: the input string `p2`, the integer `p0`, the input string `p3`, and the integer `p1`, in that order, and returns the resulting string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static o(IILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
@@ -835,6 +836,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method concatenates two input strings and logs the result at the warning level.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 

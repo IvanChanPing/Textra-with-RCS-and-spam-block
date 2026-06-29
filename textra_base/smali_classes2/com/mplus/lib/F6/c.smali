@@ -48,6 +48,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object based on the value of the `a` field in the class, which determines the type of object to be returned.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 8
 

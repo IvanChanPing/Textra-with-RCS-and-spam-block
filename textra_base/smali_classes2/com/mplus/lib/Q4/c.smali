@@ -370,6 +370,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the state of an object and calls a method on it with specific parameters if certain conditions are met. It appears to handle an event and update the object's state accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/U3/a;)V
     .locals 3
 

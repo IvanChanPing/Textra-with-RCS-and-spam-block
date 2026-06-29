@@ -844,6 +844,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method performs a complex conditional search and update operation on arrays and objects, involving bitwise operations and equality checks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static J(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;[I[Ljava/lang/Object;[Ljava/lang/Object;)I
     .locals 8
 
@@ -987,6 +988,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method generates an array of a specific primitive type based on the input size, which must be a power of 2 between 2^1 and 2^30.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(I)Ljava/lang/Object;
     .locals 3
 
@@ -1633,6 +1635,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the outline provider, clip to outline, and elevation of a view, and conditionally sets the outline ambient and spot shadow colors if the Android SDK version is 28 or higher.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Lcom/mplus/lib/x5/y;)V
     .locals 4
 
@@ -3529,6 +3532,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/U9/i` using the provided `Lcom/mplus/lib/ha/a` object. It also checks if the object has an "initializer" method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static r(Lcom/mplus/lib/ha/a;)Lcom/mplus/lib/U9/i;
     .locals 2
 
@@ -4886,6 +4890,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves or creates a `Lcom/mplus/lib/D6/d` object from a given `Lorg/jsoup/nodes/a` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(Lorg/jsoup/nodes/a;)Lcom/mplus/lib/D6/d;
     .locals 2
 

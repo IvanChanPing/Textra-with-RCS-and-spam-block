@@ -154,6 +154,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method stops and clears a list of objects that implement the `Lcom/mplus/lib/i3/g` interface by calling their `zzc()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onStop()V
     .locals 4
 

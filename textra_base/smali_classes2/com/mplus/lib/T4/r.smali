@@ -117,6 +117,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided Integer is equal to the result of `g()`, and if not, it calls the superclass's `i()` method and posts a `V3/f` object to the event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final declared-synchronized i(Ljava/lang/Integer;)V
     .locals 2
 

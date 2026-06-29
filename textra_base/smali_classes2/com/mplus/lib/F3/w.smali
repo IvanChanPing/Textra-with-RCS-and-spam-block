@@ -214,6 +214,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method adds a Double object to the class instance and calls method b(D)V with its value. It then returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 3
 
@@ -865,6 +866,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list by shifting the remaining elements to fill the gap.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeRange(II)V
     .locals 3
 

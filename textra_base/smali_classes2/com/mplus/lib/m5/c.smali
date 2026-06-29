@@ -150,6 +150,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and schedules a delayed task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final varargs declared-synchronized N(Ljava/lang/String;[Lcom/mplus/lib/r6/a;)V
     .locals 4
 

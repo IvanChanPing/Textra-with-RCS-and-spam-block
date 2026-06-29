@@ -598,6 +598,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of Lcom/mplus/lib/F3/b0 with a truncated array if the input index is within bounds, otherwise it throws an IllegalArgumentException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(I)Lcom/mplus/lib/F3/j0;
     .locals 3
 

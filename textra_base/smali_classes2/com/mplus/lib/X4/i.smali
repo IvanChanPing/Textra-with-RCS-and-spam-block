@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method returns a synchronized instance of `Lcom/mplus/lib/X4/i;`, initializing it if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized M()Lcom/mplus/lib/X4/i;
     .locals 7
 

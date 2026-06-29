@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the start position of a span in a `Spanned` object. It takes an object as input and returns its start position as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 2
 

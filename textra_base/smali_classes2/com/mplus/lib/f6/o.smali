@@ -179,6 +179,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method animates a change in a RecyclerView, either by moving an item or replacing it with another.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final animateChange(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)Z
     .locals 8
 
@@ -523,6 +524,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method animates the removal of a RecyclerView item and adds it to a list. It returns true after ending the animation and adding the item.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final animateRemove(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 2
 

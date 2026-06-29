@@ -651,6 +651,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if there are any valid signatures in the database by querying the 'signatures' table.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public P()Z
     .locals 6
 

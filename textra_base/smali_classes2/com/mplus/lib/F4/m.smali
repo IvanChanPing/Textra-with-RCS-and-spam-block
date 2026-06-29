@@ -28,6 +28,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of strings from a HashMap based on the input string. It then returns this list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Ljava/lang/String;)Ljava/util/List;
     .locals 2
 

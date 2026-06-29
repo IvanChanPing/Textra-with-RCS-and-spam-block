@@ -21,6 +21,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/S4/a class, setting up its internal state with empty HashMaps and an ArrayList.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 1
 
@@ -231,6 +232,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method throws an UnsupportedOperationException when called, regardless of input. It does not retrieve an integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getInt(Ljava/lang/String;I)I
     .locals 1
 

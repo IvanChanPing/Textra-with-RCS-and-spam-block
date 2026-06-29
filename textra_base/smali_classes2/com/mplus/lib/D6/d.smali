@@ -297,6 +297,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/D6/d, setting its fields and validating input parameters. It constructs a new Lcom/mplus/lib/C1/i object and assigns it to a field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/F3/a;Ljava/util/ArrayList;Lcom/mplus/lib/F1/g;)V
     .locals 1
 
@@ -353,6 +354,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/D6/d class, setting its properties with values from the provided Lcom/mplus/lib/ib/f1 object. It also creates a new Lcom/mplus/lib/P6/c object with parameters 0 and 5.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/ib/f1;)V
     .locals 2
 
@@ -514,6 +516,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method processes a given Uri and sends a request using the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(Landroid/net/Uri;Lcom/mplus/lib/N4/j;)V
     .locals 7
 
@@ -1541,6 +1544,7 @@
     return-object v3
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a JSON object from a field, parses its contents, and constructs a LinkedHashMap with the parsed data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public c()Ljava/util/LinkedHashMap;
     .locals 11
 
@@ -1694,6 +1698,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/L5/a`, initializing its fields with values from the current object's fields. It sets the `a`, `b`, and `c` fields of `Lcom/mplus/lib/L5/a` to a `Drawable`, a `C4/g` object, and a `String`, respectively.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()Lcom/mplus/lib/L5/a;
     .locals 3
 
@@ -2575,6 +2580,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles the failure of sending a message, determining the course of action based on the type of failure and the message's status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public m(Landroid/net/Uri;Lcom/mplus/lib/O4/b;Ljava/lang/Exception;)Z
     .locals 11
 
@@ -3680,6 +3686,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method invokes a dynamically found method on an SSLSocket object using reflection, passing in a variable number of arguments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public varargs p(Ljavax/net/ssl/SSLSocket;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
@@ -3781,6 +3788,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method attempts to invoke a method on an SSLSocket object using reflection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public varargs q(Ljavax/net/ssl/SSLSocket;[Ljava/lang/Object;)V
     .locals 2
 
@@ -3857,6 +3865,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method creates a PendingIntent for a broadcast intent to delete queued downloads.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public r()Landroid/app/PendingIntent;
     .locals 5
 
@@ -3991,6 +4000,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a PendingIntent for a broadcast intent with the action "retrySend" and the provided Uri data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public t(Landroid/net/Uri;)Landroid/app/PendingIntent;
     .locals 4
 
@@ -6049,6 +6059,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to log a message and then invoke a method to save data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public z()V
     .locals 11
 

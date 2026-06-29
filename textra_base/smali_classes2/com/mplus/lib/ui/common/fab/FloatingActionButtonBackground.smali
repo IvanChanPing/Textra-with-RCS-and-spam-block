@@ -672,6 +672,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met and if not, it sets the view visibility to false.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 1
 
@@ -898,6 +899,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a FloatingActionButtonBackground object. It invokes a static method to configure the margin.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 
@@ -928,6 +930,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the material design properties of a FloatingActionButtonBackground, including its color, pressed color, and border color. It retrieves these properties from a provided Lcom/mplus/lib/K5/b object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setMaterial(Lcom/mplus/lib/K5/b;)V
     .locals 2
 
@@ -980,6 +983,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the offset value when showing the FloatingActionButtonBackground. It delegates the work to the setEndValueWhenShowing method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setOffsetWhenShowing(I)V
     .locals 1
 

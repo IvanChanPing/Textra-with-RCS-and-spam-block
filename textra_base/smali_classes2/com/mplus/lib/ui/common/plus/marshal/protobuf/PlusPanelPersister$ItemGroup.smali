@@ -286,6 +286,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new builder for the PlusPanelPersister$ItemGroup class. It returns an instance of Lcom/mplus/lib/d6/b, which is a builder for the ItemGroup class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static newBuilder()Lcom/mplus/lib/d6/b;
     .locals 2
 
@@ -574,6 +575,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method removes an item at a specified index from the items list. It first ensures the list is mutable before performing the removal.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private removeItems(I)V
     .locals 2
 
@@ -610,6 +612,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a dynamic method dispatcher for the `PlusPanelPersister$ItemGroup` class, handling various operations such as getting the parser, default instance, and message info.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dynamicMethod(Lcom/mplus/lib/F3/Y;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
@@ -841,6 +844,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an item from a list at a specified index and returns it as a `Lcom/mplus/lib/d6/c` object. It essentially acts as a getter for items in the `items_` list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getItemsOrBuilder(I)Lcom/mplus/lib/d6/c;
     .locals 2
 

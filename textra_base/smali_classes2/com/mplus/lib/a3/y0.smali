@@ -34,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns an `IllegalArgumentException` with a message indicating multiple entries with the same key.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/lang/IllegalArgumentException;
     .locals 9
 

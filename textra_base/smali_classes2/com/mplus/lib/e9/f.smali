@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts an object, casts it to a ParseResult, and then uses a switch statement to call different parsing methods based on the value of the `a` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 3
 

@@ -64,6 +64,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles MotionEvent for a View, using a GestureDetector to process touch events. It resets a flag when the action is ACTION_DOWN (0) and always processes the MotionEvent with the GestureDetector.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 2
 

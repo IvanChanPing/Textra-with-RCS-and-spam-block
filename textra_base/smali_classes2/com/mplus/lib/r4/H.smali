@@ -544,6 +544,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `i0` with a specific Uri and a boolean parameter, likely toggling or setting a feature. It then returns without using the integer constants.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j0(Z)V
     .locals 2
 
@@ -824,6 +825,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method executes a SQL query to retrieve message tapbacks from a database and returns the result as a `com/mplus/lib/r4/f0` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final D0(J)Lcom/mplus/lib/r4/f0;
     .locals 5
 
@@ -1227,6 +1229,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle database operations, specifically retrieving data from a cursor and performing actions based on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final H0(J)V
     .locals 4
 
@@ -2568,6 +2571,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle notification channel management and updates the channel name if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O0(JLcom/mplus/lib/r4/n;Z)V
     .locals 6
 
@@ -4191,6 +4195,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to execute a database transaction, invoking a callback with a custom object if the database is already in a transaction, or starting a new transaction and executing the callback within it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0(IJLcom/mplus/lib/r4/c;)V
     .locals 4
 
@@ -5819,6 +5824,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a SpannableString from a database query based on a provided string. It uses a cursor to fetch the result and returns the SpannableString if the query is successful, or null if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t0(Lcom/mplus/lib/r4/n;)Landroid/text/SpannableString;
     .locals 3
 
@@ -6006,6 +6012,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method executes a SQL query on an Android database and returns the result as an object of type Lcom/mplus/lib/r4/Q.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final v0(ILcom/mplus/lib/r4/n;)Lcom/mplus/lib/r4/Q;
     .locals 5
 
@@ -6098,6 +6105,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a list of messages from a database and returns a `f0` object containing the query results. It constructs a SQL query string based on the input parameters and executes the query on the database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w0(IJ)Lcom/mplus/lib/r4/f0;
     .locals 5
 

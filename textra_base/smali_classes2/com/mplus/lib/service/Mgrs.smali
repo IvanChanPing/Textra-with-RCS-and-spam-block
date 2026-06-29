@@ -36,6 +36,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static maps in the Mgrs class, specifically `mgrs` and `mgrFactories`, and populates `mgrFactories` with instances of `com/mplus/lib/Q6/a` associated with classes `Lcom/mplus/lib/J5/e;` and `Lcom/mplus/lib/S4/b;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 
@@ -247,6 +248,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns an instance of `Lcom/mplus/lib/S4/b;`, which appears to be a settings manager class, populating its fields with various settings and preferences.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private static lambda$static$1(Landroid/content/Context;)Ljava/lang/Object;
     .locals 11
 

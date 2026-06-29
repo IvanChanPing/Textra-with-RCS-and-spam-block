@@ -48,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/V3/b; and calls the P() method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized N()Lcom/mplus/lib/V3/b;
     .locals 3
 

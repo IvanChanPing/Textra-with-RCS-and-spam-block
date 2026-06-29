@@ -483,6 +483,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method constructs and returns a `Lcom/mplus/lib/r4/k0` object, which appears to be involved in building a query or condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0(Z)Lcom/mplus/lib/r4/k0;
     .locals 5
 

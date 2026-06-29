@@ -34,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific query parameter "auto" in a given URI is set to "y".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static T(Lcom/mplus/lib/G4/k;)Z
     .locals 2
 
@@ -449,6 +450,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method downloads a file using the `DownloadManager` and saves it to a local file, handling cases where the file already exists and registering a broadcast receiver for download completion.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Lcom/mplus/lib/F4/k;Z)V
     .locals 8
 

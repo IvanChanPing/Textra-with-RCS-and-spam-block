@@ -54,6 +54,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets up a listener and adds a task to a queue, likely for handling a specific event or action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/K5/e;)V
     .locals 4
 

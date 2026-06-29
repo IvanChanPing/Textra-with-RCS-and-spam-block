@@ -45,6 +45,7 @@
 .method public abstract c(Ljava/lang/Object;)V
 .end method
 
+# M-ROLE [GROQ]: This method runs a task that waits for the completion of a future and then processes its result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 7
 

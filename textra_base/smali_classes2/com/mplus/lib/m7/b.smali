@@ -172,6 +172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method generates a PendingIntent based on the provided parameters, including a Context, a j0 object, a String, and a p object. It creates an Intent with specific actions and data, and then wraps it in a PendingIntent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static x(Landroid/content/Context;Lcom/mplus/lib/r4/j0;Ljava/lang/String;Lcom/mplus/lib/r4/p;)Landroid/app/PendingIntent;
     .locals 11
 
@@ -919,6 +920,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes a `TextView` object if it's null, using the provided `Lcom/mplus/lib/x5/y` object and resource IDs. It then assigns the initialized `TextView` to a field `p` in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 3
 

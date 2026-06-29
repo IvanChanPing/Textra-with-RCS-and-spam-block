@@ -37,6 +37,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a formatted string by concatenating "Attach" with a string obtained from `Lcom/mplus/lib/E1/k;->d()`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j()Ljava/lang/String;
     .locals 3
 

@@ -179,13 +179,17 @@ def main():
     args = sys.argv[1:]
     write = "--write" in args
     args = [a for a in args if a != "--write"]
+    # --fill: re-process ONLY previously-FLAGGED methods (those without a # M-ROLE line yet),
+    # recovering ones that now pass (e.g. judge-non-JSON false flags). Bypasses the file resume guard.
+    fill = "--fill" in args
+    args = [a for a in args if a != "--fill"]
     limit = None
     if "--limit" in args:
         i = args.index("--limit"); limit = int(args[i+1]); del args[i:i+2]
     path = args[0]
     text = open(path).read()
-    # RESUME GUARD: skip files already method-annotated by a prior run (idempotent batch).
-    if "# M-ROLE [GROQ]" in text:
+    # RESUME GUARD: skip files already method-annotated — UNLESS --fill (then re-do only flagged methods).
+    if "# M-ROLE [GROQ]" in text and not fill:
         print(f"{path}: already annotated, skip")
         return
     cls = re.search(r"\.class[^\n]*?(L[\w/$]+;)", text)
@@ -196,10 +200,18 @@ def main():
     accepted = {}      # start_line -> role_line
     n_acc = n_flag = 0
 
+    orig_lines = text.splitlines()
     methods = list(split_methods(text))
     if limit:
         methods = methods[:limit]
-    print(f"{path}: {len(methods)} methods")
+    # In --fill mode, only reprocess methods that DON'T already have a # M-ROLE line directly above.
+    if fill:
+        methods = [m for m in methods
+                   if not (m[2] - 1 >= 0 and "# M-ROLE [GROQ]" in orig_lines[m[2] - 1])]
+        if not methods:
+            print(f"{path}: no flagged methods to fill, skip")
+            return
+    print(f"{path}: {len(methods)} methods" + (" (fill: flagged-only)" if fill else ""))
 
     for sig, body, start in methods:
         name = method_name(sig)

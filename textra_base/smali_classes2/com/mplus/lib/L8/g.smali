@@ -79,6 +79,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves and returns the creative ID from the InterstitialAdViewModel instance. It essentially acts as a wrapper around the getCreativeId() method of the SmaatoSdkViewModel class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getCreativeId()Ljava/lang/String;
     .locals 2
 

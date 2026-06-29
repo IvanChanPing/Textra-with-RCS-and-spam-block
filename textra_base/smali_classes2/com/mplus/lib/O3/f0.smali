@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles touch events for a view, delegating the handling to different methods of `Lcom/inmobi/media/w3;` based on the value of `Lcom/mplus/lib/O3/f0;->a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 

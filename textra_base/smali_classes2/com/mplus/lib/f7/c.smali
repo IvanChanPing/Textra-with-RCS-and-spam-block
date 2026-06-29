@@ -197,6 +197,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method initializes a fragment with a title and sets its arguments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 4
 

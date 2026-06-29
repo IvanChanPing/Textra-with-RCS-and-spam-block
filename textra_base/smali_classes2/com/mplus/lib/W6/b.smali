@@ -91,6 +91,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean flag `c` to true and conditionally runs a `Runnable` object `b` based on the state of flags `d` and `e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 2
 

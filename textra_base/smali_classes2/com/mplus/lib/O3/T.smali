@@ -41,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/O3/T, setting its fields with provided parameters. It appears to be a constructor for the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public synthetic constructor <init>(Lcom/inmobi/media/md;Ljava/lang/String;Lcom/inmobi/media/L4;)V
     .locals 1
 

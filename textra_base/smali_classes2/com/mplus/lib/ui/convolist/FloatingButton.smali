@@ -188,6 +188,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `getVisibileAnimationDelegate` method to return the result from its superclass. It delegates the call to its superclass `Lcom/mplus/lib/x5/y`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
     .locals 2
 
@@ -814,6 +815,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the value of a boolean field `o` in the `FloatingButton` class, indicating whether to show flood.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setShowFlood(Z)V
     .locals 1
 

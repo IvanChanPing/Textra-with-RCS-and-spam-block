@@ -94,6 +94,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appends a given byte array to an existing byte array stored in the object, or sets it if the existing array is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a([B)V
     .locals 3
 

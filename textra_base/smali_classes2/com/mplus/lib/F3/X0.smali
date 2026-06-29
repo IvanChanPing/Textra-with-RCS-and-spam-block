@@ -34,6 +34,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method encodes a set of bytes into a Unicode string using UTF-16 encoding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(BBBB[CI)V
     .locals 3
 
@@ -163,6 +164,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method decodes a UTF-8 encoded byte pair into a single character and stores it in a character array if the input bytes are valid, otherwise it throws an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b(BB[CI)V
     .locals 2
 
@@ -303,6 +305,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method decodes a UTF-8 encoded string from a ByteBuffer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
     .locals 8
 

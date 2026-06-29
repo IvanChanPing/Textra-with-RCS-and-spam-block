@@ -102,6 +102,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for three different views, invoking the `p0` method of `Lcom/mplus/lib/o7/d;` with different parameters based on the view clicked.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 11
 
@@ -248,6 +249,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread by calling the onBackPressed method of the OnBackPressedDispatcher. It appears to trigger the back button press behavior when an event of type Lcom/mplus/lib/n7/b is received.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/n7/b;)V
     .locals 1
 

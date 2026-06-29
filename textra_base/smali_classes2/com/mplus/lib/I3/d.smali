@@ -391,6 +391,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method generates a BitSet based on certain conditions and returns a new instance of Lcom/mplus/lib/K3/c with the BitSet.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Lcom/mplus/lib/K3/a;Lcom/mplus/lib/K3/l;Lcom/mplus/lib/K3/l;)Lcom/mplus/lib/K3/c;
     .locals 5
 
@@ -516,6 +517,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method adds an enum value to a set and conditionally updates a field with the result of a static method call, then returns the field's value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A()Lcom/mplus/lib/K3/n;
     .locals 4
 
@@ -1438,6 +1440,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the version as an integer. It checks if a specific enum value is added to a set and if so, retrieves a byte value from another object and stores it as the version.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getVersion()I
     .locals 3
 
@@ -2277,6 +2280,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of an object, including various properties such as version, creation and update times, IDs, and consent settings.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

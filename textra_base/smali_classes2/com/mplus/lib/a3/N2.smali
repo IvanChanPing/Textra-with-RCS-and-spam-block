@@ -332,6 +332,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `com/google/android/gms/internal/mlkit_entity_extraction/zzaih`. It appears to be a getter method for a field named `c` in the class `Lcom/mplus/lib/a3/N2`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;
     .locals 2
 

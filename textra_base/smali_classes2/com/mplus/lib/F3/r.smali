@@ -86,6 +86,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method creates an instance of `Lcom/mplus/lib/F3/r;` from an input stream, defaulting to a predefined byte array if the stream is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static i(Ljava/io/InputStream;)Lcom/mplus/lib/F3/r;
     .locals 3
 

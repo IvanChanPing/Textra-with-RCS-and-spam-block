@@ -138,6 +138,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the dispatchDraw method of the View class to customize the drawing of the BaseScrollView, conditionally drawing a background and then invoking the superclass's dispatchDraw method. It also calls methods on other objects to perform additional drawing operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
@@ -643,6 +644,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a BaseScrollView instance by invoking a static method with the provided margin value and the current instance. It then returns immediately without further processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -738,6 +740,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given Drawable is being used by the current view or its parent.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 3
 

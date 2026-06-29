@@ -707,6 +707,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text bytes in the SendText object by retrieving a string from the input object and updating the object's text_ field. It also sets a bit flag in the bitField0_ field to indicate the text_ field has been set.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setTextBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 

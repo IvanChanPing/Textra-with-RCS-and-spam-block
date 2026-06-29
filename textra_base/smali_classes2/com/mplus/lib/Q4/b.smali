@@ -30,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles a broadcast receiver event based on the value of `a` field in the class, executing different logic for each case.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 

@@ -135,6 +135,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method appears to toggle the visibility of a view and set its background color based on the input parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public o0(Z)V
     .locals 7
 

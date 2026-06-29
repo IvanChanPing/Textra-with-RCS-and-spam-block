@@ -36,6 +36,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a byte at a specified index from an array, throwing an ArrayIndexOutOfBoundsException if the index is out of bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)B
     .locals 5
 
@@ -173,6 +174,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'f' as the size. It does not perform any actual size calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

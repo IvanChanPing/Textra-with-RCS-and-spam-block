@@ -93,6 +93,7 @@
     return-wide p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of bytes that can be read from the input stream without blocking, considering the current state and a buffer size limit.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final available()I
     .locals 3
 
@@ -512,6 +513,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method skips a specified number of bytes in an input stream, handling different states and buffer conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final skip(J)J
     .locals 3
 

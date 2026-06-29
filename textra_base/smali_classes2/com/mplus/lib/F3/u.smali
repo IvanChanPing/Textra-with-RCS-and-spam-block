@@ -158,6 +158,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to perform a series of operations based on the provided integer parameters, invoking other methods within the class. It seems to be setting or updating values using the input parameters p1 and p2.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final E(II)V
     .locals 2
 

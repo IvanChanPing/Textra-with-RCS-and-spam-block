@@ -883,6 +883,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer value at a specified index in an array and returns the previously stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
@@ -928,6 +929,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/f3/k0;` based on the input index, or throws an `IllegalArgumentException` if the index is out of bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic zzd(I)Lcom/google/android/gms/internal/play_billing/zzho;
     .locals 4
 

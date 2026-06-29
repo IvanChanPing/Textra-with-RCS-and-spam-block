@@ -32,6 +32,7 @@
     return-object p2
 .end method
 
+# M-ROLE [GROQ]: This method casts an object to zzaxt and calls zzc on it, likely checking or handling an entity extraction result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final synthetic c(Ljava/lang/Object;)V
     .locals 1
 

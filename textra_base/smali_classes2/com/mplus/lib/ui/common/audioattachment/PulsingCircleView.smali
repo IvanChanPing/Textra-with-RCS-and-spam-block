@@ -515,6 +515,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of the PulsingCircleView to a specified value. It invokes a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 

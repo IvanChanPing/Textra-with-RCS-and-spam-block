@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method increments a counter based on the value of `a` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final write(I)V
     .locals 5
 

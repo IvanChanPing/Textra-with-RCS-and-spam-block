@@ -110,6 +110,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method dispatches touch events to the parent view or handles them internally based on the state of an object of class `Lcom/mplus/lib/x5/C`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
@@ -560,6 +561,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a view by invoking a static method from class Lcom/mplus/lib/z7/N. It takes an integer parameter representing the margin size and the current object as arguments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 

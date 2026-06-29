@@ -50,6 +50,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method performs a binary search on a sorted list to find the insertion point for a given comparable object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Ljava/lang/Comparable;)I
     .locals 5
 
@@ -1008,6 +1009,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection and returns the removed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

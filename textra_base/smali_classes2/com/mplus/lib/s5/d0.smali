@@ -130,6 +130,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method handles the fling gesture on an Android device, determining whether the gesture is valid and performing actions accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 5
 

@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields of the class, including a charset, two maps, and a zzbd object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 4
 
@@ -100,6 +101,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/Z2/l class, setting its fields with the provided parameters. It creates a new instance of Lcom/mplus/lib/Z2/m and assigns it to the 'e' field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/io/ByteArrayOutputStream;Ljava/util/Map;Ljava/util/Map;Lcom/mplus/lib/w3/d;)V
     .locals 2
 
@@ -1276,6 +1278,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method writes a variable-length integer to an output stream, handling the case where the integer is too large to fit in a single byte.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(I)V
     .locals 5
 

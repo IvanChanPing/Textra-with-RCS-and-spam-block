@@ -33,6 +33,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an object based on the value of `a` field in the class, using the `CoreModuleInterface` to create instances of different classes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(Lcom/smaato/sdk/core/di/DiConstructor;)Ljava/lang/Object;
     .locals 2
 

@@ -194,6 +194,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method serializes an object to a binary format. It handles various data types, including strings, numbers, booleans, and collections.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Lcom/mplus/lib/w3/c;Ljava/lang/Object;Z)V
     .locals 5
 
@@ -922,6 +923,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method writes data to an output stream based on the provided annotation and parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/w3/c;JZ)V
     .locals 3
 

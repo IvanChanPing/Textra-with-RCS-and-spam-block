@@ -44,6 +44,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method sets a Set object in the provided mlkit_entity_extraction object if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K(Lcom/google/android/gms/internal/mlkit_entity_extraction/r;Ljava/util/Set;)V
     .locals 2
 

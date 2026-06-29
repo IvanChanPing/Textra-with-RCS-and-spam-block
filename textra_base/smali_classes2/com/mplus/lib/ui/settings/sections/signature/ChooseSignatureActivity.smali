@@ -452,6 +452,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, specifically removing a signature item from a collection and notifying the adapter to update the UI.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/v0;)V
     .locals 7
 
@@ -748,6 +749,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, specifically checking for a specific condition related to a signature and invoking a method to update or refresh the signature if the condition is met.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/x0;)V
     .locals 7
 

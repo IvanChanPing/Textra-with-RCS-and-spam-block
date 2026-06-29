@@ -796,6 +796,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an array of objects based on the value of the `a` field in the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final newArray(I)[Ljava/lang/Object;
     .locals 2
 

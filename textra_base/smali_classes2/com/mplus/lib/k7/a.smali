@@ -123,6 +123,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text of a `TextView` using a `CharSequence` obtained from `Lcom/mplus/lib/L9/a;->a` method. It appears to be part of a UI component initialization process.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/x5/y;)V
     .locals 4
 

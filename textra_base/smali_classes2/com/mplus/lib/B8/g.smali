@@ -18,6 +18,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/B8/g, setting its 'a' field to the provided integer and its 'b' field to the provided Iterator, with different handling based on the integer value. It checks for null and performs type casting.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/util/Iterator;I)V
     .locals 0
 

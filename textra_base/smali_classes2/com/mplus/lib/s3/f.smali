@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks and potentially updates the state of an object of type Lcom/mplus/lib/s3/o, specifically its 'c' field of type Lcom/mplus/lib/s3/n, to a specific state (Lcom/mplus/lib/s3/n;->c). It then returns the previous state of the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A(Lcom/mplus/lib/s3/o;)Lcom/mplus/lib/s3/n;
     .locals 3
 

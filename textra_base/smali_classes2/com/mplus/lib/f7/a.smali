@@ -26,6 +26,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of the class Lcom/mplus/lib/f7/a;, setting up its properties and invoking other methods.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x7/a;Lcom/mplus/lib/P6/c;)V
     .locals 2
 

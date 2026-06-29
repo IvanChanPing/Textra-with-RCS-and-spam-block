@@ -46,6 +46,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a collection of values by calling the `h()` method on an instance of `Lcom/mplus/lib/o3/Y`. It appears to be part of a data structure, possibly a node in a linked list or tree.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final values()Ljava/util/Collection;
     .locals 2
 

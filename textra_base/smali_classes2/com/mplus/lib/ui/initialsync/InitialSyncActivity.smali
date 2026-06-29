@@ -329,6 +329,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the InitialSyncActivity, setting up its UI components and scheduling layout animations. It also checks for essential permissions and posts delayed runnables to handle further initialization tasks.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 4
 

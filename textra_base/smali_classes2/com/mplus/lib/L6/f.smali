@@ -60,6 +60,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided integer offset is within a valid range and throws an IllegalArgumentException if it's not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public b(I)V
     .locals 4
 

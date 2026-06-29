@@ -425,6 +425,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method attempts to retrieve a drawable resource from the provided context, trying different approaches if the initial ones fail.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static E(Landroid/content/Context;Landroid/content/Context;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
@@ -1493,6 +1494,7 @@
     return-wide v4
 .end method
 
+# M-ROLE [GROQ]: This method invokes a callback function with two parameters and handles the result, which may be an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static final R(Lcom/mplus/lib/xa/r;Lcom/mplus/lib/xa/r;Lcom/mplus/lib/ha/p;)Ljava/lang/Object;
     .locals 2
 
@@ -1817,6 +1819,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method throws an ArithmeticException if the first parameter is false, with a message indicating an overflow.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static V(ZLjava/lang/String;JJ)V
     .locals 3
 
@@ -1950,6 +1953,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks for null values in key-value pairs and throws a NullPointerException with a descriptive message if either the key or value is null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static X(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
@@ -3939,6 +3943,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if the provided start and end indices are within a valid range and throws an IndexOutOfBoundsException if they are not. It also constructs an error message based on the specific invalid condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static r(III)V
     .locals 2
 
@@ -4231,6 +4236,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a `Lcom/mplus/lib/Ca/d` object, which appears to be a configuration or settings object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static v()Lcom/mplus/lib/Ca/d;
     .locals 6
 
@@ -4446,6 +4452,7 @@
     throw v2
 .end method
 
+# M-ROLE [GROQ]: This method redirects a given Uri to either the Amazon app store or the Google Play store based on the Uri's scheme.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static w(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 3
 
@@ -4775,6 +4782,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific value stored in shared storage matches the string "NATIONAL".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y()Z
     .locals 3
 

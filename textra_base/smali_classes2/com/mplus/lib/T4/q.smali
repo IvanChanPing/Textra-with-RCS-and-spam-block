@@ -176,6 +176,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method takes an Integer as input, converts it to a string using `j(I)Ljava/lang/String;`, and then calls `f(Ljava/lang/String;)V` on the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized i(Ljava/lang/Integer;)V
     .locals 1
 

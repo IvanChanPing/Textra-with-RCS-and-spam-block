@@ -16,6 +16,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a BaseGridLayout object, calling the GridLayout constructor and creating a new instance of Lcom/mplus/lib/x5/C.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
@@ -409,6 +410,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the left margin of a view by invoking a static method with the provided margin value and the current object. It appears to be a wrapper around the static method for setting margins.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setLeftMargin(I)V
     .locals 1
 

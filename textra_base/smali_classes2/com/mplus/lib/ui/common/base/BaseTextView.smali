@@ -606,6 +606,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the text size of a `TextView` directly and then clears any bitmap references in its spans.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTextSizeDirect(F)V
     .locals 5
 
@@ -736,6 +737,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the width of a BaseTextView to a specified value. It invokes a static method to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setWidthTo(I)V
     .locals 1
 

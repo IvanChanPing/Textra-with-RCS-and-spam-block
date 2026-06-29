@@ -437,6 +437,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a `NotificationChannel` based on the provided `P4/a` object and an integer parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/P4/a;I)Landroid/app/NotificationChannel;
     .locals 9
 
@@ -961,6 +962,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a notification channel is a conversation channel and if so, throws an exception, otherwise it updates the channel.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(Landroid/app/NotificationChannel;)V
     .locals 4
 

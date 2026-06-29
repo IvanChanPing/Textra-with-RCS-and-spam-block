@@ -85,6 +85,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the index of a given object from the end of a collection. It returns the index from the end if the object is found, or -1 if not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 3
 

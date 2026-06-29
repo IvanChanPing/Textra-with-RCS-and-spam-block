@@ -135,6 +135,7 @@
     return p2
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzamg object by wrapping the object stored in the 'a' field of the class instance. It does this by calling the zzp method of the zzamg class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzamg;
     .locals 2
 

@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method copies a given CharSequence to the Android clipboard and displays a toast notification.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static N(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/String;Lcom/mplus/lib/s5/l0;)V
     .locals 3
 
@@ -2724,6 +2725,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method creates an `Lcom/mplus/lib/J4/f` object and populates it with data based on the provided `Landroid/content/Context` and `Lcom/mplus/lib/r4/l` objects, determining whether to create an intent for inserting or editing a contact or viewing an existing contact.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static S(Landroid/content/Context;Lcom/mplus/lib/r4/l;)Lcom/mplus/lib/J4/f;
     .locals 7
 
@@ -3117,6 +3119,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method creates and sends an email intent with attachments.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/mplus/lib/B2/l;)V
     .locals 4
 
@@ -3296,6 +3299,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and starts an intent to share content, either text or files, using the Android share menu.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Z(Landroid/app/Activity;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Z)V
     .locals 6
 

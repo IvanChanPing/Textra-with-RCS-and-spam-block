@@ -61,6 +61,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles different cases based on the value of `n` and performs actions such as creating an `Intent` and comparing objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/x7/g;)V
     .locals 4
 

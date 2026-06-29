@@ -1879,6 +1879,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes an object of type `Lcom/google/android/gms/internal/mlkit_language_id_common/zzib` into a format that can be written by an object of type `Lcom/mplus/lib/w3/e`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 

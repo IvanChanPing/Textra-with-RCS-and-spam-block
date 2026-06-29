@@ -563,6 +563,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of a database cursor's columns and values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Landroid/database/Cursor;)Ljava/lang/String;
     .locals 7
 
@@ -948,6 +949,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method deletes a file if it exists, then creates a directory at the same path if it doesn't already exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Ljava/io/File;)V
     .locals 3
 

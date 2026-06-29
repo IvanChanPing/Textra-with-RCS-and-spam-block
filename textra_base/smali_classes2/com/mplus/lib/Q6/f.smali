@@ -113,6 +113,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method takes a File object, calls method P on it, and returns the result cast to Lcom/mplus/lib/Q6/f;. It essentially wraps the input File in an Lcom/mplus/lib/y1/i; object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final L(Ljava/io/File;)Lcom/mplus/lib/y1/i;
     .locals 1
 
@@ -166,6 +167,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method takes a URL and returns an instance of Lcom/mplus/lib/y1/i;. It appears to be a simple wrapper around another method, passing the URL as an argument and returning the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final O(Ljava/net/URL;)Lcom/mplus/lib/y1/i;
     .locals 1
 
@@ -284,6 +286,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method takes an object of type Lcom/mplus/lib/L1/n and returns an object of type Lcom/mplus/lib/U1/a by calling method t with a specific B1/j object. It appears to be a wrapper around the t method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/L1/n;)Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -472,6 +475,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a parent class method to apply a theme and returns the result cast to Lcom/mplus/lib/Q6/f;. It essentially calls the superclass's method with the same name and parameters, then casts the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w(Landroid/content/res/Resources$Theme;)Lcom/mplus/lib/U1/a;
     .locals 1
 

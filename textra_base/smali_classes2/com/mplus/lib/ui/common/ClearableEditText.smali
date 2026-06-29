@@ -113,6 +113,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() and returns its result. It does not use the constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -157,6 +158,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the compound drawables of a ClearableEditText based on whether the text is empty or not. It sets the right drawable to the clear button if the text is not empty, and to null if the text is empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 6
 
@@ -460,6 +462,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisibleAnimated method with the provided boolean parameter. It then returns immediately without any further action.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisibleAnimated(Z)V
     .locals 1
 

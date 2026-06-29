@@ -476,6 +476,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onMeasure` method of `FrameLayout` to handle custom measurement logic, specifically considering the width and height of the view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onMeasure(II)V
     .locals 5
 
@@ -774,6 +775,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the right margin of a view by invoking a static method with the provided margin value and the current object. It effectively updates the layout parameters of the BaseFrameLayout instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setRightMargin(I)V
     .locals 1
 
@@ -793,6 +795,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a BaseFrameLayout instance. It invokes a static method to adjust the padding based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 

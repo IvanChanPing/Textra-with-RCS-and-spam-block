@@ -77,6 +77,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the size of an object, specifically the value of field 'c' in the 'f' object. It always returns the value of 'c' as is, without any modifications.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

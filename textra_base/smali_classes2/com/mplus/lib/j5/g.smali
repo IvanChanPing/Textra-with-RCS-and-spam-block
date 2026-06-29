@@ -914,6 +914,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method synchronizes access to an object and calls other methods (`Q()` and `W(IZ)`) to perform some operation based on the input parameter `p1`. It returns an integer result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized V(Z)I
     .locals 2
 

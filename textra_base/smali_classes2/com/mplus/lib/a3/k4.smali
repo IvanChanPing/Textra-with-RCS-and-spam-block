@@ -32,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically handling cases where the other object is an instance of `Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhx`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -320,6 +321,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value based on the value of the instance variable `a`. It uses a packed-switch statement to determine the return value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()I
     .locals 2
 

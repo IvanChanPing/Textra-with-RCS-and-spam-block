@@ -525,6 +525,7 @@
 .method public abstract U(J)V
 .end method
 
+# M-ROLE [GROQ]: This method logs a warning about ill-formed UTF-16 conversion and then attempts to write a string to a buffer as bytes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y(Ljava/lang/String;Lcom/mplus/lib/F3/v1;)V
     .locals 4
 

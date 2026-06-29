@@ -137,6 +137,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's getPaddingVertical() and returns its result. It does not use the returned value in any operation, simply passing it through.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingVertical()I
     .locals 2
 
@@ -208,6 +209,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the getVisualDebugDelegate function to return the result from its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
     .locals 2
 

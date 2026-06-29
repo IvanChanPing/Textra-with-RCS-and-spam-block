@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a long value from a memory location using sun/misc/Unsafe, then converts it to a double.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(JLjava/lang/Object;)D
     .locals 2
 

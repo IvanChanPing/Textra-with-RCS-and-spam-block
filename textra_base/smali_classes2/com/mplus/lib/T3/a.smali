@@ -436,6 +436,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles various Android intent actions, such as boot completion, service state changes, package additions, removals, and changes, as well as time zone changes. It performs different actions based on the intent action, including initializing and starting services, logging events, and upda  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 

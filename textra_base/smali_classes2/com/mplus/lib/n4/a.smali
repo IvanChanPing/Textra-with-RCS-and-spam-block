@@ -94,6 +94,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/E1/k`, initializing its properties with specific values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static Q()Lcom/mplus/lib/E1/k;
     .locals 5
 

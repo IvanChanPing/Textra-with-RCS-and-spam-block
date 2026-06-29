@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles the connected state of a Google API client, invoking a method to perform an action after connection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onConnected(Landroid/os/Bundle;)V
     .locals 4
 

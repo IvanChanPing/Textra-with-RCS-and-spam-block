@@ -744,6 +744,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, specifically processing a `Lcom/mplus/lib/B6/w` object and performing actions based on its `d` field value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/B6/w;)V
     .locals 5
 

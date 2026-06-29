@@ -1245,6 +1245,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the unread count of a conversation in a database and posts a notification event.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final K(IJ)V
     .locals 4
 
@@ -1587,6 +1588,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes data from `Lcom/mplus/lib/r4/j0` and `Lcom/mplus/lib/r4/l0` objects, invoking various methods to handle the data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Lcom/mplus/lib/r4/j0;Lcom/mplus/lib/r4/l0;)V
     .locals 9
 
@@ -4208,6 +4210,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves messages from a SQLite database based on a queue ID and message kind, and returns a `f0` object containing the query results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final y(IJ)Lcom/mplus/lib/r4/f0;
     .locals 4
 

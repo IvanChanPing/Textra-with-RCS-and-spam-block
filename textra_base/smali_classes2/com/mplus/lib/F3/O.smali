@@ -926,6 +926,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object's type matches the expected type for a given protocol message field and throws an `IllegalArgumentException` if the types do not match.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static p(Lcom/mplus/lib/F3/W;Ljava/lang/Object;)V
     .locals 4
 
@@ -1127,6 +1128,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method serializes data of various types to a binary stream using the `Lcom/mplus/lib/F3/v` class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static q(Lcom/mplus/lib/F3/v;Lcom/mplus/lib/F3/E1;ILjava/lang/Object;)V
     .locals 3
 

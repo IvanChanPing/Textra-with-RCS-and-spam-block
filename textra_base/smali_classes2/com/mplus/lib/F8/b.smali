@@ -389,6 +389,7 @@
     throw v2
 .end method
 
+# M-ROLE [GROQ]: This method sets the ad markup string in the class instance if it's not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setAdMarkup(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -528,6 +529,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the bundleId in the class instance if the provided string is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setBundleId(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -702,6 +704,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets the publisher string in the class instance if it's not null, otherwise throws a NullPointerException. It returns the instance itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setPublisher(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -807,6 +810,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a session ID in the class instance if the provided ID is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setSessionId(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 
@@ -834,6 +838,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method sets a timestamp string in the class instance if the input is not null, otherwise it throws a NullPointerException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setTimestamp(Ljava/lang/String;)Lcom/smaato/sdk/core/violationreporter/Report$Builder;
     .locals 2
 

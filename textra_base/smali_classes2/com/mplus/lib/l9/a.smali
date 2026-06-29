@@ -55,6 +55,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/l9/a class, setting its properties and validating the input parameters. It sets the class's fields with the provided Logger, VastIconScenario, and VastScenarioResourceDataConverter instances.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/smaato/sdk/core/log/Logger;Lcom/smaato/sdk/video/vast/model/VastIconScenario;Lcom/smaato/sdk/video/vast/utils/VastScenarioResourceDataConverter;)V
     .locals 1
 

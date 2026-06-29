@@ -41,6 +41,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method logs an InMobi ad request status error.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static M(Lcom/mplus/lib/d4/b;Lcom/inmobi/ads/InMobiAdRequestStatus;)V
     .locals 6
 

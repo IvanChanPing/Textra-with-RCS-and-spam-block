@@ -59,6 +59,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and starts a ValueAnimator with a duration of 150ms, adding listeners and update listeners.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(FFLcom/mplus/lib/W6/b;)V
     .locals 3
 

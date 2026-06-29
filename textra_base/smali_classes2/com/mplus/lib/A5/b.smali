@@ -250,6 +250,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles the onClick event for two image views, navigating to the previous or next item in a view pager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onClick(Landroid/view/View;)V
     .locals 3
 
@@ -433,6 +434,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls `p0()` when a page is selected and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onPageSelected(I)V
     .locals 1
 

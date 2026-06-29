@@ -179,6 +179,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the MIME type of an Android Intent, either from the Intent itself or by querying the ContentResolver.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
@@ -2090,6 +2091,7 @@
     goto :goto_0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a string from a database based on a given ID, filtering results by a specific condition.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n(J)Ljava/lang/String;
     .locals 3
 
@@ -2321,6 +2323,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a view based on the provided parameters, using either an `LayoutInflater$Factory` or `LayoutInflater$Factory2` depending on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 2
 
@@ -4280,6 +4283,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a `ListenerHolder` object, specifically the one stored in the `b` field of the class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized zza()Lcom/google/android/gms/common/api/internal/ListenerHolder;
     .locals 2
 

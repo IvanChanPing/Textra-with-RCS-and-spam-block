@@ -19,6 +19,7 @@
 .method public abstract W()Lcom/mplus/lib/r4/n;
 .end method
 
+# M-ROLE [GROQ]: This method checks if a certain condition is met by calling another method `b()` on an object of type `Lcom/mplus/lib/r4/n;` and returns the result as a boolean. It appears to be related to checking a state or status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y()Z
     .locals 2
 
@@ -113,6 +114,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method iterates over a list of objects, checks their properties, and updates the state of the application based on the results.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0(Lcom/mplus/lib/P6/c;)V
     .locals 9
 

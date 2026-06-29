@@ -37,6 +37,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method applies a transformation to an object of type Lcom/mplus/lib/K3/a, performing various operations and calculations on its elements.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 

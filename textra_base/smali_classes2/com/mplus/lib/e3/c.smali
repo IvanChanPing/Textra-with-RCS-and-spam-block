@@ -19,6 +19,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes the class Lcom/mplus/lib/e3/c by creating a new instance of it. It appears to be a static constructor that invokes the class's own constructor with an empty array of objects and an integer value of 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 3
 

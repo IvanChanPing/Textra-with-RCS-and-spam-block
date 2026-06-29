@@ -344,6 +344,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the length of a `CharSequence` object if a certain condition is met, otherwise it returns a value based on the object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()I
     .locals 3
 

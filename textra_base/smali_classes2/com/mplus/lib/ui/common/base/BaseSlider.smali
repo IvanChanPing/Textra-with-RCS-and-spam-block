@@ -162,6 +162,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method updates the internal index of a BaseSlider instance and notifies a listener if one is set. It checks if the new index is the same as the current one and updates the listener accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setIndexInternal(I)V
     .locals 2
 
@@ -1050,6 +1051,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method, passing a boolean parameter. It then returns immediately with no additional actions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 

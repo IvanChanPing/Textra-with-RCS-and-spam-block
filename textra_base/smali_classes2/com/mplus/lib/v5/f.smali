@@ -153,6 +153,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the translation X of a view and its children based on a spring update. It checks if a certain condition is met before applying the translation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 3
 

@@ -63,6 +63,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles the result of a Smart Reply suggestion, invoking a consumer with the result or an error based on the status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onSuccess(Ljava/lang/Object;)V
     .locals 6
 

@@ -38,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the text of a `BaseTextView` based on an index, either formatting a number or displaying a default string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public D(I)V
     .locals 5
 

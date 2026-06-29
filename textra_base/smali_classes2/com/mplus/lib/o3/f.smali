@@ -366,6 +366,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a NavigableMap object from a SortedMap. It casts the object to NavigableMap and returns it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Ljava/util/NavigableMap;
     .locals 2
 
@@ -606,6 +607,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves the first entry from a set of entries. It does this by getting an iterator for the entry set and passing it to another method `f` to process and return the first entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final pollFirstEntry()Ljava/util/Map$Entry;
     .locals 2
 

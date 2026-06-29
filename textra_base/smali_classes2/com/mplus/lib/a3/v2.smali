@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to cancel a Future task and returns the result of the cancellation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final cancel(Z)Z
     .locals 2
 

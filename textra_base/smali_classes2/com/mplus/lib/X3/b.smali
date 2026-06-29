@@ -403,6 +403,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles ad failure by logging the error code and message.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onFailure(Lcom/amazon/device/ads/AdError;)V
     .locals 6
 

@@ -30,6 +30,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their `a` field of type `Lcom/mplus/lib/F3/D0;` and `b` field of type `I`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 

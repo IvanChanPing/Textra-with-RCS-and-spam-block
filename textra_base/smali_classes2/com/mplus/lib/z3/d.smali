@@ -177,6 +177,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks for a specific annotation on a given object and performs actions based on its presence and value. If the annotation is not found, it throws a RuntimeException.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/mplus/lib/w3/c;J)Lcom/mplus/lib/w3/e;
     .locals 3
 
@@ -960,6 +961,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method encodes an object using the provided encoder and writes it to an output stream.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/mplus/lib/w3/d;Lcom/mplus/lib/w3/c;Ljava/lang/Object;Z)V
     .locals 6
 

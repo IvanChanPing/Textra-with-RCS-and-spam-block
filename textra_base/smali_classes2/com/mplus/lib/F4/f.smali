@@ -58,6 +58,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets a boolean value to false and logs an error message indicating an invalid URL.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private final a()V
     .locals 5
 

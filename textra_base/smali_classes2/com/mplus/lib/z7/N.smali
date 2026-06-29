@@ -1073,6 +1073,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calculates and returns the available screen size of an Android device.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Landroid/app/Activity;)Lcom/mplus/lib/z7/G;
     .locals 5
 
@@ -1901,6 +1902,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the layout parameters of a view if they have changed.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static y(Lcom/mplus/lib/x5/y;II)V
     .locals 3
 

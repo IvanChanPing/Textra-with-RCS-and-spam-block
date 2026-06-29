@@ -26,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the bounds and callback of a given Drawable object, and if the object is an instance of Lcom/mplus/lib/P1/c, it calls the start method on it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/lang/Object;)V
     .locals 6
 

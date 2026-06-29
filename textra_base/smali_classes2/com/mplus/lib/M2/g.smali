@@ -268,6 +268,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method attempts to bind a GmsServiceConnection to a service, handling cases where the connection is already established or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Lcom/google/android/gms/common/internal/zzo;Landroid/content/ServiceConnection;Ljava/lang/String;Ljava/util/concurrent/Executor;)Z
     .locals 6
 

@@ -100,6 +100,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method takes a Boolean value, converts it to a string, and then calls another method `f` with this string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public declared-synchronized i(Ljava/lang/Boolean;)V
     .locals 1
 

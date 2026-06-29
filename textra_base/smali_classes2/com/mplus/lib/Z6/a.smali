@@ -280,6 +280,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method creates an instance of `Lcom/mplus/lib/j4/a` and calls its `d()` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()V
     .locals 3
 

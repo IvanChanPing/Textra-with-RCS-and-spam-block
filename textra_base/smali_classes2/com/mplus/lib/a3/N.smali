@@ -129,6 +129,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates random bytes and fills the provided byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public nextBytes([B)V
     .locals 2
 

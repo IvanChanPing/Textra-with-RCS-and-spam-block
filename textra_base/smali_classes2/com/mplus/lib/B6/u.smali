@@ -34,6 +34,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/B6/u, setting its OnClickListener and B6/l object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/x5/l;Lcom/mplus/lib/A2/h;Lcom/mplus/lib/B6/l;)V
     .locals 1
 

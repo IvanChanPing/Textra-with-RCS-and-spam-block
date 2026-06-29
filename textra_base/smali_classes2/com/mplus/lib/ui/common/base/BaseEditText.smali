@@ -144,6 +144,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the computeScroll() method of the View class and, if certain conditions are met, resets the scroll position of the BaseEditText to 0.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final computeScroll()V
     .locals 4
 
@@ -183,6 +184,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to cancel pending posts and clean up resources for a BaseEditText instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d()V
     .locals 3
 
@@ -455,6 +457,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onMeasure` method of the `View` class to measure the width and height of a custom `BaseEditText` view. It takes into account the view's measured width and height, as well as any constraints imposed by its parent view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(II)V
     .locals 7
 
@@ -791,6 +794,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setLayoutSize method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
     .locals 1
 

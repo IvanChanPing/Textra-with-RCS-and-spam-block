@@ -32,6 +32,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/z7/s` and initializes its `b` field with an `Intent` object deserialized from a byte array retrieved from a `Data` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Landroidx/work/Data;)Lcom/mplus/lib/z7/s;
     .locals 6
 

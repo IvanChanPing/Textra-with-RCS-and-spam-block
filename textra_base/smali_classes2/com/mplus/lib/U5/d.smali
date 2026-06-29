@@ -31,6 +31,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the value of the `k` field of type `Lcom/mplus/lib/x5/y` and then sets it to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/x5/y;
     .locals 3
 

@@ -32,6 +32,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method attempts to execute a query and handle any potential IOException that may occur.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 4
 

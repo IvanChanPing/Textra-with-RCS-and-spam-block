@@ -202,6 +202,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method adds a Float object to the class instance and calls method b(F)V with its value. It then returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -935,6 +936,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'c' as an integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

@@ -85,6 +85,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a fragment, sets the initial text of an edit text, and sets up click listeners for views.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

@@ -9,6 +9,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method is a constructor for the class Lcom/mplus/lib/x5/p, initializing a new instance of the class. It calls the superclass constructor of ListFragment.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>()V
     .locals 0
 

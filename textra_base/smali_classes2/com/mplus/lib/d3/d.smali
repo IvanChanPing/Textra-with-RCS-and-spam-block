@@ -80,6 +80,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object, specifically a Map Entry. It compares the key and value of the current object with the key and value of the given Map Entry.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -183,6 +184,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the object field 'f' of the class Lcom/mplus/lib/d3/d. It does not use the integer constant 7.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getKey()Ljava/lang/Object;
     .locals 2
 

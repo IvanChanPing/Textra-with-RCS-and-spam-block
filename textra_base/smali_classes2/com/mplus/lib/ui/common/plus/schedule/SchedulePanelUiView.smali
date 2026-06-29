@@ -136,6 +136,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `onMeasure` method to handle measurement of the `SchedulePanelUiView` based on its width and height. It checks the screen orientation and adjusts the layout accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onMeasure(II)V
     .locals 12
 
@@ -372,6 +373,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -467,6 +469,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method overrides the setMargin function to call its superclass's setMargin method with the provided Rect object. It does not perform any additional operations beyond the superclass call.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
     .locals 1
 
@@ -490,6 +493,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top margin of a SchedulePanelUiView instance. It invokes a static method to adjust the margin based on the provided integer value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopMargin(I)V
     .locals 1
 

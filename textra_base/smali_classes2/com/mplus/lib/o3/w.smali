@@ -163,6 +163,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method clears the contents of an object, resetting its state by removing or zeroing out its data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 6
 

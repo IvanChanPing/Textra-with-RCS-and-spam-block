@@ -40,6 +40,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Java Logger instance, either by reusing an existing instance or creating a new one using the `java.util.logging.Logger.getLogger` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/logging/Logger;
     .locals 3
 

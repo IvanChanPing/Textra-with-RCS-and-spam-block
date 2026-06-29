@@ -94,6 +94,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to retrieve and process a value from an object, potentially related to state or status.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()I
     .locals 3
 
@@ -2257,6 +2258,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of integers based on the instance type of the input list and the state of an object, performing actions such as adding integers to the list or throwing exceptions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final m(Ljava/util/List;)V
     .locals 4
 
@@ -3257,6 +3259,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of integers based on the state of the object, either adding them to the list or throwing an exception.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final r(Ljava/util/List;)V
     .locals 4
 
@@ -3868,6 +3871,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method processes a list of integers based on the instance type and certain conditions. It invokes methods from `Lcom/mplus/lib/F3/r` and `Lcom/mplus/lib/F3/b0` classes, and throws an exception from `Lcom/mplus/lib/F3/m0`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u(Ljava/util/List;)V
     .locals 4
 

@@ -855,6 +855,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method retrieves an MMS manager instance for a given subscription ID and logs the instance details.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public S(Lcom/mplus/lib/O4/b;)Lcom/mplus/lib/B4/b;
     .locals 7
 
@@ -11873,6 +11874,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sends an MMS message and broadcasts the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public p(Landroid/net/Uri;Lcom/mplus/lib/O4/b;)I
     .locals 7
 

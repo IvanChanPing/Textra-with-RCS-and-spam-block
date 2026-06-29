@@ -429,6 +429,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method constructs and returns a Uri object by appending a given string and a long value to a base content Uri.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(JLjava/lang/String;)Landroid/net/Uri;
     .locals 3
 

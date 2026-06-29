@@ -817,6 +817,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method retrieves contact information from the Android contacts database based on the input parameter `Lcom/mplus/lib/r4/l;`. It queries the contacts database using various URIs and selection criteria, and returns an `ArrayList` of contact objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(Lcom/mplus/lib/r4/l;)Ljava/util/ArrayList;
     .locals 10
 

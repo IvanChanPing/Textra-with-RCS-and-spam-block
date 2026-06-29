@@ -598,6 +598,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method removes an object from a collection based on its type, which is determined by the value of the `a` field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public remove(Ljava/lang/Object;)Z
     .locals 2
 

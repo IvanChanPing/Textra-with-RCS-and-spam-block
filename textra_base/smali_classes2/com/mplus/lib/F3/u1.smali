@@ -118,6 +118,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method decodes a byte array into a string using a specific charset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(II[B)Ljava/lang/String;
     .locals 8
 
@@ -893,6 +894,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method writes a string to a byte array, handling Unicode characters and surrogate pairs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g(Ljava/lang/String;[BII)I
     .locals 24
 
@@ -1628,6 +1630,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method decodes a UTF-8 encoded byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final k(II[B)I
     .locals 17
 

@@ -34,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an object from a list at a calculated index. It checks the input index against a bound and then offsets the index before accessing the list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get(I)Ljava/lang/Object;
     .locals 3
 

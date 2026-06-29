@@ -135,6 +135,7 @@
     return v2
 .end method
 
+# M-ROLE [GROQ]: This method calculates the hash code for an object of class Lcom/mplus/lib/a3/r. It combines the hash codes of its fields, including two zzamg objects, a UUID, and a long value, using a specific algorithm.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 8
 

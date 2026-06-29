@@ -9,6 +9,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method overrides and calls the superclass's B() method, returning the result cast to Lcom/mplus/lib/Q6/e;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final B()Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -56,6 +57,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method overrides a parent class method and returns an instance of Lcom/mplus/lib/Q6/e. It appears to be a simple override with no additional functionality.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -74,6 +76,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method overrides a parent class method and returns the result of the parent class method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()Lcom/mplus/lib/U1/a;
     .locals 2
 
@@ -141,6 +144,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `t` with a specific enum value and an object, then returns the result.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/L1/n;)Lcom/mplus/lib/U1/a;
     .locals 2
 

@@ -122,6 +122,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes suppliers in the class with a provided list and returns the instance itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Ljava/util/List;)Lcom/mplus/lib/r4/c0;
     .locals 3
 

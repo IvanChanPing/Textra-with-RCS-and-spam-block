@@ -35,6 +35,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes and populates an array of enum-like objects, each representing a different data type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 12
 

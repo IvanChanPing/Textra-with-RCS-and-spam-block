@@ -39,6 +39,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a DialogFragment and sets the text of a BaseTextView with a value from a Bundle.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 3
 

@@ -113,6 +113,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method pops an element from a thread-local stack and clears the stack if it becomes empty.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static b()V
     .locals 3
 

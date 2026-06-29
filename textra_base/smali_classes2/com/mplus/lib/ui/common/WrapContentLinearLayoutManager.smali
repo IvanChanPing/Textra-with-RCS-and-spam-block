@@ -48,6 +48,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the `mInsetsDirty` field of a `RecyclerView$LayoutParams` object to `true` using reflection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a(Landroidx/recyclerview/widget/RecyclerView$LayoutParams;)V
     .locals 4
 
@@ -131,6 +132,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method measures a child view in a RecyclerView and stores its measured width and height in an array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Landroidx/recyclerview/widget/RecyclerView$Recycler;III[I)V
     .locals 9
 

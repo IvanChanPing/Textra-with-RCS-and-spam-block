@@ -29,6 +29,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a string representation of the object by calling a static method `w` from class `Lcom/mplus/lib/z7/h`. It delegates the actual conversion to this external method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 2
 

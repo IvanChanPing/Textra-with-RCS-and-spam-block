@@ -90,6 +90,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles touch events, specifically determining the direction of a swipe gesture and updating the state accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(Landroid/view/MotionEvent;FF)V
     .locals 6
 

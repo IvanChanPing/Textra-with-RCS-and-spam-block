@@ -668,6 +668,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the device brand is "HUAWEI" or "HONOR" and returns true if it is, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static g()Z
     .locals 3
 

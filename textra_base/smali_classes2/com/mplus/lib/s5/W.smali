@@ -79,6 +79,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current drawable of an ImageView is an instance of Lcom/mplus/lib/x5/m and if so, sets a different drawable. It then sets the object reference at field g to null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w(Lcom/mplus/lib/s5/Z;)V
     .locals 2
 

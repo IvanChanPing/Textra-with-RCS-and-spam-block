@@ -26,6 +26,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the input object is an instance of Lcom/mplus/lib/a3/M and returns true if the 'a' field of the current object is equal to the 'a' field of the input object. It returns false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 

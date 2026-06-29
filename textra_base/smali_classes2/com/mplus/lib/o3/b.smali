@@ -368,6 +368,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'f' as the size. It does not perform any actual size calculation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 

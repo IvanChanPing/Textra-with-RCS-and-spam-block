@@ -37,6 +37,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method handles onClick events for two specific views, triggering different actions based on the view's ID.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onClick(Landroid/view/View;)V
     .locals 3
 

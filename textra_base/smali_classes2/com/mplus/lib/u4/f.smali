@@ -343,6 +343,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method inserts a new part into a multipart message, creating a new Uri and writing the part's content to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Lcom/mplus/lib/r4/l0;Landroid/net/Uri;I)V
     .locals 5
 
@@ -975,6 +976,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method inserts an SMS message into the built-in SMS database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Lcom/mplus/lib/r4/n;Ljava/lang/String;IJJZZLjava/lang/String;I)J
     .locals 22
 

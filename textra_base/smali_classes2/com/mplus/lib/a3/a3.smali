@@ -42,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates a field using `AtomicReferenceFieldUpdater` with the provided objects `p1` and `p2`. It sets the field of `p1` to `p2` in a thread-safe manner.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/internal/mlkit_entity_extraction/w;Lcom/google/android/gms/internal/mlkit_entity_extraction/w;)V
     .locals 2
 

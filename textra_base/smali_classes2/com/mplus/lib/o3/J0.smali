@@ -361,6 +361,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a descending iterator. It appears to retrieve a reverse iterator from an internal data structure.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final descendingIterator()Ljava/util/Iterator;
     .locals 3
 
@@ -383,6 +384,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an integer value by calling the `e()` method of the `Lcom/mplus/lib/o3/U` object referenced by the `f` field. The value is ultimately obtained from `Lcom/mplus/lib/o3/O;->e()I`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 2
 
@@ -912,6 +914,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method performs a binary search on a list using a comparator and returns the index of the found object or the insertion point if not found, with an optional offset.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final u(Ljava/lang/Object;Z)I
     .locals 3
 

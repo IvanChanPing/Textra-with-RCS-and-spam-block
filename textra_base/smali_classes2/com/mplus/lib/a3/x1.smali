@@ -86,6 +86,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sets the `g` field of the class to the provided `zzaih` object and returns the current object. It appears to be part of a builder pattern implementation.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza(Lcom/google/android/gms/internal/mlkit_entity_extraction/zzaih;)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzch;
     .locals 1
 

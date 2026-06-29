@@ -37,6 +37,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts a ParseResult object and processes it based on the value of a local integer variable, invoking different methods of CreativeParser.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 3
 

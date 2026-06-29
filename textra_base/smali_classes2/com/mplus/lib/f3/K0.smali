@@ -42,6 +42,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates a field using an AtomicReferenceFieldUpdater, replacing the first argument with the second. It then returns immediately.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Lcom/google/android/gms/internal/play_billing/p;Lcom/google/android/gms/internal/play_billing/p;)V
     .locals 2
 

@@ -2468,6 +2468,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the visibility and offset of certain UI elements based on the provided boolean parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0(ZZ)V
     .locals 3
 

@@ -426,6 +426,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a `Z` object, which appears to be a custom drawable, and sets it as the callback for the `BubbleView` instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static c(Lcom/mplus/lib/ui/convo/BubbleView;)V
     .locals 5
 
@@ -1121,6 +1122,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method updates the state of a `BubbleView` object based on the provided `f0` object, which contains conversation data. It sets various properties of the view, such as the bubble specification source, text, and padding, and also updates the view's layout and appearance accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Lcom/mplus/lib/r4/f0;Lcom/mplus/lib/s5/h;Lcom/mplus/lib/v6/S;Lcom/mplus/lib/v6/K;)V
     .locals 22
 
@@ -3477,6 +3479,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method conditionally formats a CharSequence based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(ZLjava/lang/CharSequence;Lcom/mplus/lib/z6/e;Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 3
 
@@ -6080,6 +6083,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the stretched width of a BubbleView, ensuring it's not negative and updating the view if the new width differs from the current one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setStretchedWidth(I)V
     .locals 2
 

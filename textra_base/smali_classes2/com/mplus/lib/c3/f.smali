@@ -1269,6 +1269,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method writes a variable-length integer to an output stream, using a technique where the most significant bit of each byte indicates whether there are more bytes to follow.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h(I)V
     .locals 5
 

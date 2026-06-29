@@ -134,6 +134,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method clears a set by removing elements that do not match a predicate defined by the `Lcom/mplus/lib/n3/i` interface.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clear()V
     .locals 7
 
@@ -298,6 +299,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given object is contained in a set and if so, applies a predicate to it.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final contains(Ljava/lang/Object;)Z
     .locals 3
 

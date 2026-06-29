@@ -111,6 +111,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/r4/y0;` based on the value of a long field, either retrieving a default instance or creating a new one with values from a cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public I()Lcom/mplus/lib/r4/y0;
     .locals 6
 

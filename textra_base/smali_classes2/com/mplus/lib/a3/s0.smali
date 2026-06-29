@@ -242,6 +242,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method returns a hash code for the object, using the object's identity hash code if its internal state 'a' is 0, otherwise defaulting to the object's identity hash code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hashCode()I
     .locals 2
 

@@ -1369,6 +1369,7 @@
     return-object v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzhp object by calling the zzb method on the zzcei object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zze()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzhp;
     .locals 2
 

@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method encodes an object into a specific format based on its type, throwing a RuntimeException if no suitable encoder is found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final encode(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 

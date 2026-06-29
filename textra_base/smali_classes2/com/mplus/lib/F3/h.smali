@@ -211,6 +211,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method adds a boolean object to the class and calls method b(Z) with its value. It then returns true.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 1
 
@@ -506,6 +507,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their integer field `c` and boolean array field `b`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 6
 
@@ -848,6 +850,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method removes a range of elements from a list. It shifts elements to fill the gap and updates the list's size and modification count.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final removeRange(II)V
     .locals 3
 

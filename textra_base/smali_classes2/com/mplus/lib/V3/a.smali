@@ -183,6 +183,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to manage the iteration and execution of a list of tasks or ads, handling cases where tasks are completed or not.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c()V
     .locals 7
 

@@ -95,6 +95,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns a synchronized instance of Lcom/mplus/lib/Y4/a;. It does not perform any complex operations, just returns the existing instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized P()Lcom/mplus/lib/Y4/a;
     .locals 3
 
@@ -136,6 +137,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method sends a GET request to a URL constructed based on the device's Android ID and returns the response as a string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public N(Z)Ljava/lang/String;
     .locals 7
 

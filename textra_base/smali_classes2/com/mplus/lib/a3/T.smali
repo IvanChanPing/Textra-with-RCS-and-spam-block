@@ -120,6 +120,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an object, either by retrieving it from `b` if it's not in a specific state, or by returning a cached object `c`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Ljava/lang/Object;
     .locals 4
 

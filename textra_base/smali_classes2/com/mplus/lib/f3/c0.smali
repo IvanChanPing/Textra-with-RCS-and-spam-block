@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object is equal to the provided object by comparing their lengths and byte arrays.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 7
 

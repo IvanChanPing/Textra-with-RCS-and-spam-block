@@ -49,6 +49,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to handle different cases based on the value of `a` and performs actions related to offline license helper or InMobi media.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final run()V
     .locals 6
 

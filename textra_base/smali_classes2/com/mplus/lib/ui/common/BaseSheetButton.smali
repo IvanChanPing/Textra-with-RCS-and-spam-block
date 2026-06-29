@@ -50,6 +50,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's `getPaddingHorizontal()` and returns the result. It does not use the local variables `v1` assigned with values 6 and 4.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic getPaddingHorizontal()I
     .locals 2
 

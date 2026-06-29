@@ -128,6 +128,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the object stored in the 'a' field of the class. It does not use the local variables v1 or the assigned values 5 and 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public d()Ljava/lang/Comparable;
     .locals 2
 

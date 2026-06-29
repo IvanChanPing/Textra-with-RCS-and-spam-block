@@ -516,6 +516,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method tests an object against a string stored in the class, with the test type determined by an integer field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public test(Ljava/lang/Object;)Z
     .locals 2
 

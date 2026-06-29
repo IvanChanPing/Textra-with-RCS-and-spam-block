@@ -23,6 +23,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method creates and returns a RecyclerView.ViewHolder based on the provided position.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/x5/z;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 5
 

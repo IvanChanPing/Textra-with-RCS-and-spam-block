@@ -348,6 +348,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a view. It invokes a static method to configure the padding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 

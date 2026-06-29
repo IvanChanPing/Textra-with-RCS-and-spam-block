@@ -274,6 +274,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a static field `e` in class `Lcom/mplus/lib/s5/J;`. It effectively provides the intrinsic width of an object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getIntrinsicWidth()I
     .locals 2
 

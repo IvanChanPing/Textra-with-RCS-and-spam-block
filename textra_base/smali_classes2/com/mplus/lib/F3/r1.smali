@@ -180,6 +180,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method attempts to invoke various reflection methods on the `sun.misc.Unsafe` class, specifically `getByte`, `putByte`, `getBoolean`, `putBoolean`, `getFloat`, `putFloat`, `getDouble`, and `putDouble`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final t()Z
     .locals 7
 

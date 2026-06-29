@@ -213,6 +213,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the country ISO field by resetting the corresponding bit in the bitField0_ and setting the countryIso_ field to its default value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearCountryIso()V
     .locals 2
 
@@ -278,6 +279,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the phone number field by resetting the corresponding bit in the bitField0_ and setting the phoneNumber_ to its default value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearPhoneNumber()V
     .locals 2
 
@@ -676,6 +678,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the country ISO bytes in the HistoricSim object. It retrieves a string from the input object, stores it in the countryIso_ field, and updates the bitField0_ to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setCountryIsoBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -1045,6 +1048,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the country ISO as bytes by converting the `countryIso_` string to bytes using `Lcom/mplus/lib/F3/m;->d(Ljava/lang/String;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getCountryIsoBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 
@@ -1101,6 +1105,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the phone number as bytes by converting the `phoneNumber_` string to a `Lcom/mplus/lib/F3/l` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getPhoneNumberBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 

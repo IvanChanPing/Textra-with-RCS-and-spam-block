@@ -151,6 +151,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the Lcom/mplus/lib/E3/C class, setting its properties and creating a new instance of Lcom/mplus/lib/q6/c.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/M6/b;)V
     .locals 1
 
@@ -171,6 +172,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes an instance of the `Lcom/mplus/lib/E3/C` class, setting its properties and formatting a configuration path string.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/mplus/lib/f1/e;Lcom/inmobi/cmp/data/storage/SharedStorage;Lcom/mplus/lib/R1/d;Lcom/mplus/lib/i5/a;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
@@ -1711,6 +1713,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method reads a value from a ByteArrayInputStream and returns its length, handling values up to a certain threshold and throwing an exception for invalid values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(Ljava/io/ByteArrayInputStream;)I
     .locals 3
 
@@ -4366,6 +4369,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method validates and sets the HTTP request method and body.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public l(Ljava/lang/String;Lcom/mplus/lib/y1/c;)V
     .locals 3
 
@@ -5068,6 +5072,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method parses a byte array input stream and extracts content-type parameters from it, storing them in a sparse array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public n(Ljava/io/ByteArrayInputStream;Landroid/util/SparseArray;)[B
     .locals 16
 
@@ -8009,6 +8014,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method stores objects of type Lcom/mplus/lib/L4/m in various HashMaps based on byte array values retrieved from the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public w(Lcom/mplus/lib/L4/m;)V
     .locals 4
 

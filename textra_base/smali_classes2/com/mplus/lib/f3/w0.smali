@@ -196,6 +196,7 @@
     throw p2
 .end method
 
+# M-ROLE [GROQ]: This method adds an object to the end of a list, resizing the list's array if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final add(Ljava/lang/Object;)Z
     .locals 6
 

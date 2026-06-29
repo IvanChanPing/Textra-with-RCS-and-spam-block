@@ -901,6 +901,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/F4/g` based on the provided `Lcom/mplus/lib/V5/j` object, handling cases where the object is not valid or the instance already exists.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Lcom/mplus/lib/V5/j;)Lcom/mplus/lib/F4/g;
     .locals 8
 
@@ -1624,6 +1625,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to manage and update certain application settings and data, including checking and updating a version string and handling file operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a0()V
     .locals 4
 

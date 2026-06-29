@@ -13,6 +13,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes a class instance, setting a Google API client and a Looper. It extends the Google base class initializer with the provided Looper.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zabe;Landroid/os/Looper;)V
     .locals 0
 

@@ -281,6 +281,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the material design for a view, specifically a `TextView`, using the provided `K5/b` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setMaterialDirect(Lcom/mplus/lib/K5/b;)V
     .locals 13
 

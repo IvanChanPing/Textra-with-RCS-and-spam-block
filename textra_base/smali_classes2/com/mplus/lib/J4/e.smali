@@ -46,6 +46,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compresses an image into a byte array.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/r4/T;Ljava/lang/String;I)[B
     .locals 7
 

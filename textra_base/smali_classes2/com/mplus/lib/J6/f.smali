@@ -29,6 +29,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method accepts two objects and performs an action based on the value of a field 'a' in the class, either adding an object to an ArrayList or adding all elements from another collection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 

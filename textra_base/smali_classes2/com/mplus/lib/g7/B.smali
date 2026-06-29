@@ -49,6 +49,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method restores the view state of a fragment, initializing its UI components and setting their properties.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onViewStateRestored(Landroid/os/Bundle;)V
     .locals 8
 

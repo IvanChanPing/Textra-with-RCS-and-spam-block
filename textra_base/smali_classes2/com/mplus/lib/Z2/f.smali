@@ -111,6 +111,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzas object, but the provided code suggests it actually returns a zzat object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_common/zzas;
     .locals 3
 

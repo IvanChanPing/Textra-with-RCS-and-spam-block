@@ -22,6 +22,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there is a next element in the iteration, handling nested iterators and dequeues.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 4
 

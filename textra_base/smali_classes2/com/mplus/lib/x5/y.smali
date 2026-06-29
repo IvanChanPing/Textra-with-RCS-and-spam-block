@@ -692,6 +692,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the view's visibility with animation based on the provided boolean value. It delegates the animation to an instance of Lcom/mplus/lib/y5/z.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setViewVisibleAnimated(Z)V
     .locals 2
 

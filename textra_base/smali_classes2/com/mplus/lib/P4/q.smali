@@ -212,6 +212,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method generates an `androidx/core/app/Person` object based on the provided `Lcom/mplus/lib/r4/j0` object. It checks the object's properties and performs various operations to create the `Person` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Lcom/mplus/lib/r4/j0;)Landroidx/core/app/Person;
     .locals 4
 

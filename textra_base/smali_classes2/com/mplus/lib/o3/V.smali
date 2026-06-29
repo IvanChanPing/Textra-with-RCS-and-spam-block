@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Collection instance, initializing it if it's null.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Ljava/util/Collection;
     .locals 2
 

@@ -437,6 +437,7 @@
     return-object v2
 .end method
 
+# M-ROLE [GROQ]: This method checks if certain reflection methods are available for a given class. It returns true if all methods are found, false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/lang/Class;)Z
     .locals 8
 

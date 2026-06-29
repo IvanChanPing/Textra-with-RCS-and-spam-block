@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves an item ID from a list based on the provided index and then passes this ID to another object for processing.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final S(ILandroid/view/View;FF)V
     .locals 1
 
@@ -272,6 +273,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns an object referenced by the field `e` of type `Lcom/mplus/lib/r4/n;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final get()Ljava/lang/Object;
     .locals 2
 

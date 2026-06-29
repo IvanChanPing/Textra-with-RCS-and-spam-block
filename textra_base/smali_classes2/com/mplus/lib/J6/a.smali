@@ -789,6 +789,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method overrides the `retainAll` method of `ArrayList` to conditionally call the superclass method based on the value of `a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 2
 

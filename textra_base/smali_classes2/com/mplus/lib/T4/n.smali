@@ -372,6 +372,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method parses a string into two integers and returns an instance of `Lcom/mplus/lib/f7/b` with these integers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public i()Lcom/mplus/lib/f7/b;
     .locals 8
 

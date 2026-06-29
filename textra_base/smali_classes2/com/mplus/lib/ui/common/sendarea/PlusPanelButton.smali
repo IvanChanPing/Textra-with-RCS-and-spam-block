@@ -291,6 +291,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method updates the rotation of two objects in the PlusPanelButton class based on the input from the onSpringUpdate method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringUpdate(Lcom/mplus/lib/b2/d;)V
     .locals 12
 
@@ -467,6 +468,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the top padding of a PlusPanelButton instance. It invokes a static method to configure the padding.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public setTopPadding(I)V
     .locals 1
 
@@ -477,6 +479,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method, passing the provided boolean parameter. It does not perform any additional operations.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 

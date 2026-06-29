@@ -310,6 +310,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks a boolean flag and if true, it toggles the visibility of certain UI elements based on a boolean value retrieved from a settings manager.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final w()V
     .locals 5
 

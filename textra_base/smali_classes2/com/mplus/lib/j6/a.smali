@@ -341,6 +341,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method serializes a CharSequence into a byte array using protocol buffers.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static declared-synchronized H(Ljava/lang/CharSequence;)[B
     .locals 6
 
@@ -2159,6 +2160,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method returns a language code string based on the input integer.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic g(I)Ljava/lang/String;
     .locals 2
 
@@ -3044,6 +3046,7 @@
     return-object v3
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a `com/mplus/lib/y1/g` object, which appears to be a registry for various data types and their corresponding model loaders, transcoders, and resource decoders.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static m(Lcom/bumptech/glide/a;Ljava/util/List;Lcom/mplus/lib/a3/t1;)Lcom/mplus/lib/y1/g;
     .locals 28
 
@@ -4622,6 +4625,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is null or empty, returning true if so and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static u(Ljava/lang/String;)Z
     .locals 2
 

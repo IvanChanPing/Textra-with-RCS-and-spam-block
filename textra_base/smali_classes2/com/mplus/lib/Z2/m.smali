@@ -292,6 +292,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method encodes a boolean value in a ValueEncoderContext, throwing an exception if a value has already been encoded.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(Z)Lcom/mplus/lib/w3/g;
     .locals 4
 

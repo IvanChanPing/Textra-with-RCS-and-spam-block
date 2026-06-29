@@ -115,6 +115,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance field 'b' as an integer. It does not perform any operations or checks, simply returning the field's current value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()I
     .locals 2
 

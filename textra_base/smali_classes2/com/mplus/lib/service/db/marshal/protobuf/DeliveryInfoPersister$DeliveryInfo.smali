@@ -150,6 +150,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the private `setSegmentsReportedOn` method on the `DeliveryInfoPersister$DeliveryInfo` object. It takes an integer and a boolean as parameters and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$2200(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfo;IZ)V
     .locals 1
 
@@ -195,6 +196,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the 'when' field of a DeliveryInfo object. It invokes a private setter method with a long parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$2600(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfo;J)V
     .locals 1
 
@@ -445,6 +447,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the deliverySegments field and updates the bitField0_ to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearDeliverySegments()V
     .locals 2
 
@@ -623,6 +626,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method merges the provided `DeliveryInfoSegmentList` into the current object's `deliverySegments_` field, either by creating a new list or merging into an existing one.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private mergeDeliverySegments(Lcom/mplus/lib/service/db/marshal/protobuf/DeliveryInfoPersister$DeliveryInfoSegmentList;)V
     .locals 3
 
@@ -1478,6 +1482,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the failed text as bytes in the form of a `Lcom/mplus/lib/F3/m` object. It does this by converting the `failedText_` string to bytes using `Lcom/mplus/lib/F3/m;->d(Ljava/lang/String;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getFailedTextBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 
@@ -1524,6 +1529,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the number of segments reported on. It retrieves the size of the `segmentsReportedOn_` list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSegmentsReportedOnCount()I
     .locals 2
 

@@ -85,6 +85,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/o3/Z` with the object `Lcom/mplus/lib/o3/V` and returns it. It appears to be a factory method for `Lcom/mplus/lib/o3/Z`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final h()Lcom/mplus/lib/o3/Q0;
     .locals 3
 

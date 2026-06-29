@@ -196,6 +196,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the `codepoint2_` field and the corresponding bit in the `bitField0_` bitmask.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearCodepoint2()V
     .locals 2
 
@@ -222,6 +223,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the 'glyph' field of the current object by resetting the corresponding bit in the bitField0_ and setting the glyph_ field to its default value. It effectively resets the glyph field to its default state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearGlyph()V
     .locals 2
 
@@ -360,6 +362,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method parses a PlusPanelPersister$Item object from input data using the Google Protocol Buffers library. It returns the parsed item object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static parseFrom(Lcom/mplus/lib/F3/m;Lcom/mplus/lib/F3/G;)Lcom/mplus/lib/ui/common/plus/marshal/protobuf/PlusPanelPersister$Item;
     .locals 2
 

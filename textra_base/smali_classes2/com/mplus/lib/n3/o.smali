@@ -120,6 +120,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, specifically a memoized supplier.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 4
 

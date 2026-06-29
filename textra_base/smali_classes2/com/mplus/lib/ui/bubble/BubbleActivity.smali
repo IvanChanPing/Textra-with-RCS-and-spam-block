@@ -39,6 +39,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes and configures a UI component, specifically a bubble activity, with various buttons and settings. It also sets up event listeners and handles different states based on certain conditions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final W(Lcom/mplus/lib/ui/common/base/BaseFrameLayout;)Lcom/mplus/lib/v6/W;
     .locals 8
 

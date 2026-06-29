@@ -72,6 +72,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inflates a layout with ID 0x7f0d0126 and returns the resulting View. It overrides the provided LayoutInflater with the Fragment's own.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final f(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 

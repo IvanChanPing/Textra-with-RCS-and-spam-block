@@ -39,6 +39,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if there is a next item in the cursor. It returns true if the current position is less than the last index of the cursor, and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 4
 

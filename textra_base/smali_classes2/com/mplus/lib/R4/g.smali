@@ -34,6 +34,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns a Drawable object based on the value of `d` field in the class. It creates either a ColorDrawable or a custom drawable (R4/c or R4/e) depending on the switch case.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Landroid/graphics/drawable/Drawable;
     .locals 5
 

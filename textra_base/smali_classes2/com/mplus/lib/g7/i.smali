@@ -188,6 +188,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles different cases based on the value of `r` and performs actions such as checking a collection, adding an object to a list, and scheduling a runnable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public e(Lcom/mplus/lib/x7/g;)V
     .locals 4
 

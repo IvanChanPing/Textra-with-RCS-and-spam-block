@@ -448,6 +448,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the `isTest_` flag by setting it to `false` and updates the `bitField0_` accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearIsTest()V
     .locals 2
 

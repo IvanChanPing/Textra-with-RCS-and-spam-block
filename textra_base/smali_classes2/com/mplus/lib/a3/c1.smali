@@ -220,6 +220,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of a class field 'c' as a character. It does not use the constant 3 or 1 as might be expected from the code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 

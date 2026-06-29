@@ -18,6 +18,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an Android Intent, extracting a queue ID from its URI and attempting to send a message with that ID if it's valid.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(Landroid/content/Intent;)V
     .locals 7
 

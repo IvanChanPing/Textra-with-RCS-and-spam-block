@@ -345,6 +345,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a specific permission is missing and appends a message to a StringBuilder if it is. It considers the Android SDK version when determining whether to check for the permission.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private appendPermissionIfMissing(Ljava/lang/StringBuilder;Ljava/lang/String;I)V
     .locals 2
 
@@ -1221,6 +1222,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method initializes and returns a spring system instance if it doesn't already exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private getSpringSystem()Lcom/mplus/lib/b2/g;
     .locals 4
 
@@ -2553,6 +2555,7 @@
     throw p0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given string is empty, and if not, returns it; otherwise, it checks if the device's model, brand, or manufacturer contains a given keyword (case-insensitive) and returns the keyword if a match is found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private maybeSetManufacturer(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 

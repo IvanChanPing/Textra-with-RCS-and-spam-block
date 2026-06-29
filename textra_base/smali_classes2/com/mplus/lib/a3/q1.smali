@@ -183,6 +183,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns the size of a map object. It always returns the map size, ignoring the comparison with the value 6.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()I
     .locals 2
 
@@ -199,6 +200,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a set of keys from a map object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzb()Ljava/util/Set;
     .locals 2
 

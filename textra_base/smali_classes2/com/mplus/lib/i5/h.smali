@@ -556,6 +556,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/i5/a` based on the input parameter `I`. If the input corresponds to a specific value, it creates a new instance with predefined strings, otherwise it uses values from an object of type `Lcom/mplus/lib/i5/d`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Q(I)Lcom/mplus/lib/i5/a;
     .locals 5
 

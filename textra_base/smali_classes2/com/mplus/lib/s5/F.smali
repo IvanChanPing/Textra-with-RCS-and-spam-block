@@ -160,6 +160,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to reset or clear the state of the object, invoking various methods to clear data and notify changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 2
 

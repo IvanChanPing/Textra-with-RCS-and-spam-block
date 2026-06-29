@@ -405,6 +405,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setAllParentsClip method and then returns. It effectively delegates the setting of all parents' clip property to its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setAllParentsClip(Z)V
     .locals 1
 
@@ -533,6 +534,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method to set the view's visibility. It overrides the setViewVisible method from its superclass.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 

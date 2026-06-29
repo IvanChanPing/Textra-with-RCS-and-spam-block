@@ -879,6 +879,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method fetches the remote configuration for the ML Kit Smart Reply feature. It sends an HTTP request to the remote config service, parses the response, and updates the local configuration.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public zza()Z
     .locals 19
 

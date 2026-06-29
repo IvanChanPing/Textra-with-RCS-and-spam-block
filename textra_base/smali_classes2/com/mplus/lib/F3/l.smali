@@ -329,6 +329,7 @@
     return p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the byte at a specified index in the `d` byte array. It takes an integer index as input and returns the corresponding byte value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public g(I)B
     .locals 2
 
@@ -552,6 +553,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `m` to process data from the current object, passing the result of `r()`, `size()`, and a byte array `d`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p(Lcom/mplus/lib/F3/v;)V
     .locals 4
 

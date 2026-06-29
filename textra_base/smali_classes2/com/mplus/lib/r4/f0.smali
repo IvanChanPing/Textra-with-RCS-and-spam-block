@@ -737,6 +737,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if certain conditions are met based on the result of `getInt(7)` and the return values of `d()`, `K()`, and various methods in `Lcom/mplus/lib/L4/d`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final T()Z
     .locals 3
 
@@ -1106,6 +1107,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an Iterator object, specifically a Lcom/mplus/lib/r4/p0 instance, which is initialized with the current object and a Function that transforms data from a Cursor.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final iterator()Ljava/util/Iterator;
     .locals 4
 

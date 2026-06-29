@@ -152,6 +152,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the settings activity by setting the title, creating and adding various settings items to the activity's list, and observing certain live data for changes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 9
 

@@ -62,6 +62,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates a new `Lcom/mplus/lib/r4/k0` object and populates it with a list of `Lcom/mplus/lib/r4/j0` objects, which are initialized with data from a collection of `Landroidx/core/util/Pair` objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()Lcom/mplus/lib/r4/k0;
     .locals 7
 

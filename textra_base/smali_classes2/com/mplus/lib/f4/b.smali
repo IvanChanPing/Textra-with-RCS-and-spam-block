@@ -94,6 +94,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/x5/y, which is actually a BaseFrameLayout.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final g()Lcom/mplus/lib/x5/y;
     .locals 2
 

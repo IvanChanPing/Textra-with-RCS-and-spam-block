@@ -209,6 +209,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method removes the current object from a list and stops a media player, then schedules a delayed task.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b()V
     .locals 5
 

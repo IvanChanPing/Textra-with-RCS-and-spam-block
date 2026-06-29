@@ -818,6 +818,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a list of PendingSend objects. It appears to simply return the 'send_' field of the class instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getSendList()Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

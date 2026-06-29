@@ -13,6 +13,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method resets or clears certain object fields. It sets the 'e' field to null and the 'i' field to null, effectively clearing their values.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(I)V
     .locals 1
 

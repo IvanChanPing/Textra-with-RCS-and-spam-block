@@ -71,6 +71,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method retrieves a Drawable object based on the provided integer parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(I)Landroid/graphics/drawable/Drawable;
     .locals 4
 

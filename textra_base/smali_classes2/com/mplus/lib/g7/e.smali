@@ -166,6 +166,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method returns an instance of `Lcom/mplus/lib/v6/a` based on the input parameter and the state of the object. It checks if the input parameter matches a specific value and calls different methods to create the instance.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final o(I)Lcom/mplus/lib/v6/a;
     .locals 3
 

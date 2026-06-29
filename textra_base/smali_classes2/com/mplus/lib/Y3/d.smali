@@ -157,6 +157,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'i'. It does not perform any operations or checks, simply returning the current value of 'i'.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e()I
     .locals 2
 
@@ -176,6 +177,7 @@
     return-wide v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a string constant "inmobiBanner".  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final getName()Ljava/lang/String;
     .locals 2
 

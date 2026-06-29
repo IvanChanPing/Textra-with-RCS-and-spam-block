@@ -995,6 +995,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, checking a condition and potentially triggering actions like `n0()` and `p0()` on other objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/X4/g;)V
     .locals 3
 
@@ -1067,6 +1068,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, checking a condition and potentially scheduling a delayed post of the current object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/r4/i0;)V
     .locals 3
 

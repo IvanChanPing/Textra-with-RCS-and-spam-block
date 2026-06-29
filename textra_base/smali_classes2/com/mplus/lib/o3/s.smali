@@ -328,6 +328,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if two objects are equal, specifically comparing maps by their entry sets if one object is a map.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static f(Ljava/lang/Object;Ljava/util/Map;)Z
     .locals 2
 
@@ -621,6 +622,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the last element of the given iterable.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/lang/Iterable;)Ljava/lang/Object;
     .locals 3
 
@@ -778,6 +780,7 @@
     return p0
 .end method
 
+# M-ROLE [GROQ]: This method calculates a checksum of hash codes from a set of objects.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static l(Ljava/util/Set;)I
     .locals 4
 

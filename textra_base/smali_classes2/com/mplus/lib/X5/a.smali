@@ -439,6 +439,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method resets the loader by calling the `c()` method on the `g` object of type `Lcom/mplus/lib/B6/h;`. It does not utilize the provided `Loader` parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onLoaderReset(Landroidx/loader/content/Loader;)V
     .locals 1
 

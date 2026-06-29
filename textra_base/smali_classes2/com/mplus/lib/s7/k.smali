@@ -187,6 +187,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method appears to display a notification and send a message through an event bus.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n()V
     .locals 4
 

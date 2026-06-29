@@ -87,6 +87,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a string representation of the object, including its URI and MIME type.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final toString()Ljava/lang/String;
     .locals 3
 

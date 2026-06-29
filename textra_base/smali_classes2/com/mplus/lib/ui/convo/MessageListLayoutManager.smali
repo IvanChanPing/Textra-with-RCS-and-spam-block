@@ -57,6 +57,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method smooth scrolls a RecyclerView to a specified position. It calls a method `a` on the current object with the position and other parameters to achieve this.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;I)V
     .locals 1
 

@@ -466,6 +466,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns a clone of the current object. It does this by creating a new builder for the object's type and setting its internal state to match the current object's state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final clone()Ljava/lang/Object;
     .locals 3
 
@@ -528,6 +529,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a provided protobuf object is equal to the current object's protobuf, and if not, it calls method d() and then method g() to update the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final e(Lcom/google/protobuf/c;)V
     .locals 2
 

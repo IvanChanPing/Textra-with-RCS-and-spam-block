@@ -852,6 +852,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the description bytes of a UrlPrerender object by retrieving a string from the input object and updating the object's description field. It also updates the object's bit field to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setDescriptionBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 
@@ -1070,6 +1071,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method appears to be a dynamic method dispatcher for a protobuf-generated class, handling various operations such as getting the parser, default instance, and message info.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final dynamicMethod(Lcom/mplus/lib/F3/Y;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
@@ -1310,6 +1312,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the description of a UrlPrerender object as bytes. It converts the description string to bytes using the `Lcom/mplus/lib/F3/m;->d` method.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getDescriptionBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 
@@ -1366,6 +1369,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the provider name as bytes. It retrieves the provider name from the `providerName_` field and converts it to bytes using `Lcom/mplus/lib/F3/m;->d(Ljava/lang/String;)`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getProviderNameBytes()Lcom/mplus/lib/F3/m;
     .locals 2
 

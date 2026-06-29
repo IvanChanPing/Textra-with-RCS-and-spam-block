@@ -2261,6 +2261,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a timeout or delay, checking if a certain condition is met and then performing actions such as sending a request and updating a state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final p0()V
     .locals 13
 

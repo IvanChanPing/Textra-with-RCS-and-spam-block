@@ -281,6 +281,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the name of a ContactPersister$Contact object. It invokes a private method to clear the name and then returns.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static synthetic access$500(Lcom/mplus/lib/service/db/marshal/protobuf/ContactPersister$Contact;)V
     .locals 1
 
@@ -476,6 +477,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the `nested_` field of the `Contact` object and updates the `bitField0_` to reflect the change.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearNested()V
     .locals 2
 

@@ -764,6 +764,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets an integer field in an object using sun/misc/Unsafe. It puts an integer value at a specified offset in the object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static j(Ljava/lang/Object;JI)V
     .locals 2
 

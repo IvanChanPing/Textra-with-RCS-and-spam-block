@@ -23,6 +23,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes static fields in the class Lcom/mplus/lib/s3/m; by getting the memory offsets of specific fields in classes Lcom/mplus/lib/s3/o; and Lcom/mplus/lib/s3/n; using the sun/misc/Unsafe class.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method static constructor <clinit>()V
     .locals 7
 
@@ -150,6 +151,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method compares the state of an object with a target state and calls another method to transition between states if they don't match.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A(Lcom/mplus/lib/s3/o;)Lcom/mplus/lib/s3/n;
     .locals 4
 

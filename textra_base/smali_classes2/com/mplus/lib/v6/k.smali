@@ -168,6 +168,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method handles an event on the main thread, updating the text of a `SendText` view if the event's data is different from the current text.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public onEventMainThread(Lcom/mplus/lib/v6/j;)V
     .locals 3
 

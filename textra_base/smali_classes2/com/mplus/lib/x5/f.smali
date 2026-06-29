@@ -28,6 +28,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method returns an instance of Lcom/mplus/lib/N4/d, initializing it with the fragment's arguments if it doesn't already exist.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()Lcom/mplus/lib/N4/d;
     .locals 3
 
@@ -334,6 +335,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the style of a DialogFragment and stores the provided style value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final setStyle(II)V
     .locals 1
 

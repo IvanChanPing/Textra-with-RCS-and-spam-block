@@ -169,6 +169,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns the index of the element that would be returned by a subsequent call to the 'previous' method in a list iterator. It checks the state of the iterator and then calls the 'previousIndex' method on the iterator.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final previousIndex()I
     .locals 2
 

@@ -88,6 +88,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method applies transformations to an input object based on a switch value. It handles various types of objects, including Bundles, TrackGroupArrays, SelectionOverrides, and VastBeacons, and returns the transformed object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 

@@ -353,6 +353,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method appends a given float value to an array, resizing the array if necessary.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(F)V
     .locals 6
 
@@ -933,6 +934,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method generates a new instance of `Lcom/mplus/lib/a3/m3;` based on the input index, or throws an exception if the index is out of bounds.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final bridge synthetic zzd(I)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzbxu;
     .locals 4
 

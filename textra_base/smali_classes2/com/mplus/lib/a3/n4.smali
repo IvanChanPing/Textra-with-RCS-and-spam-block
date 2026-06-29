@@ -252,6 +252,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method returns a zzdj object from the mlkit_entity_extraction package.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_entity_extraction/zzdj;
     .locals 2
 

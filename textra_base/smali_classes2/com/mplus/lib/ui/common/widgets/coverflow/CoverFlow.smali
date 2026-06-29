@@ -1722,6 +1722,7 @@
     return v1
 .end method
 
+# M-ROLE [GROQ]: This method calculates a float value based on the input integer and the view's width. It appears to be scaling the input value relative to half the view's width.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final j(I)F
     .locals 2
 

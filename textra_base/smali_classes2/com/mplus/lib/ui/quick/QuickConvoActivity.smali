@@ -44,6 +44,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method creates and configures an Intent to start the QuickConvoActivity, setting various flags and extras based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static a0(Landroid/content/Context;ZLcom/mplus/lib/r4/n;ZZZLjava/util/ArrayList;)Landroid/content/Intent;
     .locals 3
 
@@ -541,6 +542,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method calculates the available width of the screen in the QuickConvoActivity, taking into account the padding of a specific view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final Y()I
     .locals 5
 
@@ -662,6 +664,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to handle a float value and triggers an action on the conversation UI, specifically calling a method to update the conversation state.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(F)V
     .locals 4
 
@@ -686,6 +689,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if a conversation view can be scrolled or if certain views are visible, returning false if so and true otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b(Lcom/mplus/lib/B2/l;)Z
     .locals 9
 
@@ -1464,6 +1468,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method initializes the QuickConvoActivity, handling essential permissions, setting up the UI, and registering a broadcast receiver.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 6
 

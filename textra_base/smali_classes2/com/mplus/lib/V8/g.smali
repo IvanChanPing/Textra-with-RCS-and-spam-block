@@ -503,6 +503,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes the restoration of the original orientation by creating a new instance of `Lcom/mplus/lib/H8/b` and passing it to `Lcom/smaato/sdk/richmedia/mraid/presenter/MraidPresenterImpl;->access$300`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final processRestoreOriginalOrientation()V
     .locals 3
 

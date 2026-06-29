@@ -125,6 +125,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method updates the value of a MutableLiveData object with a new instance of Lcom/mplus/lib/Q5/b, removing the previous instance's view if it exists, and adds the new instance's view.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final A0(Lcom/mplus/lib/Q5/b;)V
     .locals 5
 
@@ -1687,6 +1688,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an intent and attempts to start an activity, catching `ActivityNotFoundException` and displaying an error message if it occurs.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final E0(ILandroid/content/Intent;)V
     .locals 5
 
@@ -2042,6 +2044,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks certain conditions and then calls methods to set values in `Lcom/mplus/lib/b2/d;`, specifically `e(D)V` and `g(D)V`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V()V
     .locals 4
 
@@ -2200,6 +2203,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method sends a delete key event to the input connection.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n0()V
     .locals 6
 

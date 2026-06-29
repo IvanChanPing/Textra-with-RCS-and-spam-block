@@ -527,6 +527,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method handles an item click event in a list, updating the checked state of a checkbox based on the item's data.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
 

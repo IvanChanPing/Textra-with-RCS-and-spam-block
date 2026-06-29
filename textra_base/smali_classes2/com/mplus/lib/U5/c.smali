@@ -38,6 +38,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method handles orientation changes in an Android camera application, adjusting the camera preview and UI accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onOrientationChanged(I)V
     .locals 14
 

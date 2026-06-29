@@ -27,6 +27,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an object of class Lcom/mplus/lib/a3/M1, validating and processing a character array to ensure it only contains ASCII characters and has no duplicates.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/String;[C)V
     .locals 9
 
@@ -313,6 +314,7 @@
     throw v1
 .end method
 
+# M-ROLE [GROQ]: This method checks if the current object is equal to another object by comparing their 'h' boolean field and 'b' char array field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 

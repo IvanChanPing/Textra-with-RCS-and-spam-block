@@ -41,6 +41,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method registers various factories with a DiRegistry instance, providing dependencies for different classes.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final accept(Ljava/lang/Object;)V
     .locals 5
 

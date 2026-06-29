@@ -194,6 +194,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks the value of a spring's position and performs actions based on whether it's at rest (0.0) or fully extended (1.0).  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onSpringAtRest(Lcom/mplus/lib/b2/d;)V
     .locals 5
 

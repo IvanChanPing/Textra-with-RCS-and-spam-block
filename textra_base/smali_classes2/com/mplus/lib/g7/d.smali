@@ -267,6 +267,7 @@
     .end packed-switch
 .end method
 
+# M-ROLE [GROQ]: This method generates and customizes a view for a list item, handling different cases based on the value of `a` in the class `Lcom/mplus/lib/g7/d;`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 

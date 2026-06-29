@@ -347,6 +347,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls the superclass's setViewVisible method to set the visibility of a view. It takes a boolean parameter indicating whether the view should be visible.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public bridge synthetic setViewVisible(Z)V
     .locals 1
 

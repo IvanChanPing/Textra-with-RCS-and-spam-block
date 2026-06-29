@@ -15,6 +15,7 @@
 
 
 # direct methods
+# M-ROLE [GROQ]: This method initializes an instance of Lcom/mplus/lib/Y2/y, storing a Boolean and a TaskCompletionSource. It also calls the superclass constructor of Lcom/google/android/gms/common/api/internal/IStatusCallback$Stub.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public constructor <init>(Ljava/lang/Boolean;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
 

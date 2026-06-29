@@ -36,6 +36,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method acquires a wake lock, unregisters the broadcast receiver, and then sends a new intent with the result code.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 

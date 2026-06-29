@@ -635,6 +635,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a given SMS message is a duplicate of an existing message in the database.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final R(Lcom/mplus/lib/r4/j0;)Z
     .locals 13
 
@@ -1642,6 +1643,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks certain conditions and if met, schedules a task to run, then calls a method to handle a value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final V(J)V
     .locals 5
 
@@ -3772,6 +3774,7 @@
     throw v2
 .end method
 
+# M-ROLE [GROQ]: This method processes and sends messages from a queue. It iterates over the queue entries, checks their status, and sends or deletes them accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final b0()V
     .locals 14
 
@@ -4366,6 +4369,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method appears to schedule an SMS send operation and update the corresponding object's fields.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final n(Lcom/mplus/lib/r4/j0;)V
     .locals 4
 

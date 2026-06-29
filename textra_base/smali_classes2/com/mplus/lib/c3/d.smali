@@ -121,6 +121,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method returns the value of the instance variable 'b' which represents the size. It does not perform any calculations or operations, simply returning the stored value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final size()I
     .locals 2
 
@@ -129,6 +130,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method creates a new instance of `Lcom/mplus/lib/c3/c` and returns it, effectively wrapping the object array and integer value in a new object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zza()Lcom/google/android/gms/internal/mlkit_language_id_common/zzq;
     .locals 5
 
@@ -149,6 +151,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method creates and returns an instance of `Lcom/mplus/lib/c3/a`.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_language_id_common/zzx;
     .locals 4
 

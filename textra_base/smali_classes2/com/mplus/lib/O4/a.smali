@@ -708,6 +708,7 @@
     return-object p1
 .end method
 
+# M-ROLE [GROQ]: This method takes several parameters, clears two ArrayLists, and then returns without using the other parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public m(Ljava/lang/String;Ljava/util/List;Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
     .locals 1
 

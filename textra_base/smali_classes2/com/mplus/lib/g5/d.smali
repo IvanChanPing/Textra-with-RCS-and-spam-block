@@ -82,6 +82,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method processes an Android Intent, handling actions such as "processQueued", "clearDb", and "sins". It interacts with the database, processes queued messages, and clears the database when required.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final M(Landroid/content/Intent;)V
     .locals 22
 
@@ -1041,6 +1042,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method processes two sets of data from a `k0` object based on conditions "T.kind = 0" and "T.kind = 1", and schedules tasks with a delay of 50 (0x32) using a `H` object.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(Ljava/lang/String;Ljava/lang/String;Lcom/mplus/lib/r4/k0;)V
     .locals 7
 

@@ -1,3 +1,10 @@
+## 2026-06-29 — GROQ flag-queue recovery (#13): +930 annotations recovered (zero Claude tokens)
+
+Added --fill mode to groq_annotate_verify.py (reprocess only previously-FLAGGED methods, i.e. those
+without a # M-ROLE line). Ran run_fill_flagged.sh across all 2,863 annotated files. The judge now uses
+forced JSON, so judge-non-JSON false-flags re-pass: recovered 930 method annotations (accepted+written),
+3,748 remain genuinely flagged (real fabrication/unverifiable). Total accepted ~11,271 -> ~12,201.
+Purely additive: verified 0 non-comment lines added, 0 removed. Zero Claude tokens (Groq only).
 ## 2026-06-29 — Reaction-emoji tap "pop" animation (ReactionPop) — RENDER-VERIFIED on emulator
 
 Task #10 (partial). ReactionPop.popEmoji (inject_src/com/textrcs/anim/ReactionPop.kt): tap-feedback

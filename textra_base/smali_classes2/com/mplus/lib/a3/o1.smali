@@ -47,6 +47,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method checks if the current object has a next element and returns true if the object's 'b' field is non-negative.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final hasNext()Z
     .locals 2
 

@@ -149,6 +149,7 @@
     throw p1
 .end method
 
+# M-ROLE [GROQ]: This method synchronizes messages for a given conversation. It processes each message in the conversation, handling SMS and MMS messages, and updates the database accordingly.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final N(Lcom/mplus/lib/r4/s;IIILcom/mplus/lib/g5/f;)V
     .locals 27
 
@@ -961,6 +962,7 @@
     throw v0
 .end method
 
+# M-ROLE [GROQ]: This method inserts data into a database table using `ContentValues`. It creates a new `ContentValues` object, puts various key-value pairs into it, and then uses the `B` method of `Lcom/mplus/lib/f1/e;` to insert the data into the table.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final P(IJJJJ)V
     .locals 4
 
@@ -1472,6 +1474,7 @@
     return-wide v6
 .end method
 
+# M-ROLE [GROQ]: This method queries a SQLite database for a record with a specific ID and returns a `Lcom/mplus/lib/g5/a` object if found.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final U(J)Lcom/mplus/lib/g5/a;
     .locals 4
 

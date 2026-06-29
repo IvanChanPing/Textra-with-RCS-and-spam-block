@@ -132,6 +132,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method inflates a BaseTextView layout and sets its text color and content based on the provided parameters.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a(ILcom/mplus/lib/x1/a;)Lcom/mplus/lib/ui/common/base/BaseTextView;
     .locals 4
 

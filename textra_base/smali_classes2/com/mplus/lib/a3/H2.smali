@@ -104,6 +104,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method sets the 3rd bit of the instance's byte field 'g' and returns the instance itself.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final zzc(Z)Lcom/google/android/gms/internal/mlkit_entity_extraction/zzcr;
     .locals 1
 

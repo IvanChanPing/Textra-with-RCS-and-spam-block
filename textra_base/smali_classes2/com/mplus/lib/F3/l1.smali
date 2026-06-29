@@ -84,6 +84,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method merges two `Lcom/mplus/lib/F3/l1` objects by concatenating their arrays.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public static e(Lcom/mplus/lib/F3/l1;Lcom/mplus/lib/F3/l1;)Lcom/mplus/lib/F3/l1;
     .locals 7
 

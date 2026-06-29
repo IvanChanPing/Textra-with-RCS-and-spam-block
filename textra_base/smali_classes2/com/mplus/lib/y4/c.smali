@@ -357,6 +357,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method checks if an object exists for a given ID, and if not, creates a new one and adds it to a list, then sends a message to a handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final d(I)V
     .locals 3
 

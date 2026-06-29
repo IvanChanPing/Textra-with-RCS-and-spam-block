@@ -1338,6 +1338,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method writes a long value to an output stream in a 7-bit encoded format.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final i(J)V
     .locals 5
 

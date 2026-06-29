@@ -337,6 +337,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method clears the phone number field of the PretendSim object by resetting the corresponding bit in the bitField0_ and setting the phoneNumber_ field to its default value.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private clearPhoneNumber()V
     .locals 2
 
@@ -773,6 +774,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method sets the display name bytes for a PretendSim object. It retrieves a string from the input object and updates the object's displayName_ field, then sets the corresponding bit in the bitField0_ field.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method private setDisplayNameBytes(Lcom/mplus/lib/F3/m;)V
     .locals 1
 

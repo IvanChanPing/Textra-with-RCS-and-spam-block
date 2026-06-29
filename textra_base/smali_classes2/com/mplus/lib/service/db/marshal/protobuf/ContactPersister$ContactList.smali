@@ -1063,6 +1063,7 @@
     return-object v0
 .end method
 
+# M-ROLE [GROQ]: This method retrieves a contact at a specified index from a list of contacts. It returns the contact as an instance of Lcom/mplus/lib/A4/e;.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public getContactsOrBuilder(I)Lcom/mplus/lib/A4/e;
     .locals 2
 
@@ -1167,6 +1168,7 @@
     return v0
 .end method
 
+# M-ROLE [GROQ]: This method checks if a contact list has a flag set to construct a thumbnail. It returns true if the flag is set and false otherwise.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public hasShouldConstructThumb()Z
     .locals 3
 

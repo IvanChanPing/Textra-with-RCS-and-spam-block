@@ -77,6 +77,7 @@
     return-object p0
 .end method
 
+# M-ROLE [GROQ]: This method implements the `onTransact` method of the `IBinder` interface, handling various transactions related to media sessions and messaging extensions.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 7
 

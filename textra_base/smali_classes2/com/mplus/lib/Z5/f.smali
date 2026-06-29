@@ -69,6 +69,7 @@
 
 
 # virtual methods
+# M-ROLE [GROQ]: This method interrupts the current thread and clears a list of runnables from a handler.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final a()V
     .locals 6
 

@@ -411,6 +411,7 @@
     return-void
 .end method
 
+# M-ROLE [GROQ]: This method calls another method `d` to retrieve a list based on the provided object and long value. It then returns this list.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
 .method public final c(JLjava/lang/Object;)Ljava/util/List;
     .locals 2
 
