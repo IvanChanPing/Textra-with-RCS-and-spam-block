@@ -1,3 +1,14 @@
+## 2026-06-29 — Reaction-emoji tap "pop" animation (ReactionPop) — RENDER-VERIFIED on emulator
+
+Task #10 (partial). ReactionPop.popEmoji (inject_src/com/textrcs/anim/ReactionPop.kt): tap-feedback
+scale-pop, snap to 0.7x then ObjectAnimator scaleX/Y -> 1.0 with an OVERSHOOT PathInterpolator
+(0.34,1.7,0.64,1.0 = easeOutBack, y>1 control = overshoot; NO physics bounce per rule). Verified the
+animation RENDERS by launching a slowed (durMs=4000) test Activity (ReactionPopTestActivity, manifest-
+registered) and screencap'ing frames: central-window colored-pixel count ramps 4900->7600->settled 9372
+across two pops = emoji visibly scales up. REMAINING: wire popEmoji into the real reaction picker's
+per-emoji tap (v6/K menu -> B2/f -> J6/d picker -> per-emoji view; deep obfuscated smali, not yet done).
+Files: ReactionPop.kt, ReactionPopTestActivity.kt, AndroidManifest.xml.
+
 ## 2026-06-29 — RCS reaction REMOVE (un-react) via inverse-G0 (DB-VERIFIED)
 
 Task #16. ADD attaches via r4.H.G0; REMOVE had no Textra entry point (native un-react rides the

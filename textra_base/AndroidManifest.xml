@@ -3046,6 +3046,7 @@
         </activity-alias>
         <activity android:name="com.mplus.lib.ui.initialsync.InitialSyncActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.InitialSyncActivity"/>
         <activity android:name="com.textrcs.ui.pairing.PairingActivity" android:exported="true" android:icon="@drawable/icon_ffff6d00" android:label="Textra 2 Pair" android:screenOrientation="portrait" android:theme="@android:style/Theme.Material.Light.NoActionBar"/>
+        <activity android:name="com.textrcs.anim.ReactionPopTestActivity" android:exported="true" android:theme="@android:style/Theme.Material.Light.NoActionBar"/>
         <activity android:name="com.textrcs.spam.SpamSettingsActivity" android:exported="true" android:icon="@drawable/icon_ffff6d00" android:label="Textra Spam Filter" android:theme="@android:style/Theme.Material.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
