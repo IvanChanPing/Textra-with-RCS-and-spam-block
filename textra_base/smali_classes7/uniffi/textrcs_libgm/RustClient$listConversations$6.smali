@@ -79,7 +79,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 3029
+    .line 3038
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -99,7 +99,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3040
+    .line 3049
     sget-object v0, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v0, p1}, Luniffi/textrcs_libgm/FfiConverterByteArray;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;

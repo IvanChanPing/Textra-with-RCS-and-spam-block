@@ -51,15 +51,15 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4508
+    .line 4517
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Luniffi/textrcs_libgm/LibgmException;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    .line 4507
+    .line 4516
     iput-object p1, p0, Luniffi/textrcs_libgm/LibgmException$Auth;->v1:Ljava/lang/String;
 
-    .line 4505
+    .line 4514
     return-void
 .end method
 
@@ -68,7 +68,7 @@
 .method public getMessage()Ljava/lang/String;
     .registers 3
 
-    .line 4510
+    .line 4519
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +95,7 @@
 .method public final getV1()Ljava/lang/String;
     .registers 2
 
-    .line 4507
+    .line 4516
     iget-object v0, p0, Luniffi/textrcs_libgm/LibgmException$Auth;->v1:Ljava/lang/String;
 
     return-object v0

@@ -70,7 +70,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 112
+    .line 114
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Boolean;
@@ -87,18 +87,30 @@
 .end method
 
 .method public final invoke(Z)V
-    .registers 4
+    .registers 5
     .param p1, "on"    # Z
 
-    .line 113
+    .line 115
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
+    .line 116
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity$onCreate$4;->this$0:Lcom/textrcs/spam/SpamSettingsActivity;
 
     check-cast v1, Landroid/content/Context;
 
-    invoke-virtual {v0, v1, p1}, Lcom/textrcs/spam/SpamGuard;->setOnlineEnabled(Landroid/content/Context;Z)V
+    if-eqz p1, :cond_b
 
-    .line 114
+    const-string v2, "block"
+
+    goto :goto_d
+
+    :cond_b
+    const-string v2, "deliver"
+
+    .line 115
+    :goto_d
+    invoke-virtual {v0, v1, v2}, Lcom/textrcs/spam/SpamGuard;->setFlagAction(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 118
     return-void
 .end method

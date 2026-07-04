@@ -82,7 +82,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .registers 2
 
-    .line 3560
+    .line 3569
     invoke-virtual {p0}, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->invoke()V
 
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
@@ -93,10 +93,10 @@
 .method public final invoke()V
     .registers 7
 
-    .line 3561
+    .line 3570
     iget-object v0, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$uniffiObj:Luniffi/textrcs_libgm/RustEventSink;
 
-    .line 3562
+    .line 3571
     sget-object v1, Luniffi/textrcs_libgm/FfiConverterInt;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterInt;
 
     iget v2, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$action:I
@@ -109,7 +109,7 @@
 
     move-result v1
 
-    .line 3563
+    .line 3572
     sget-object v2, Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;
 
     iget-object v3, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$decryptedData:Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -120,7 +120,7 @@
 
     check-cast v2, [B
 
-    .line 3564
+    .line 3573
     sget-object v3, Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterOptionalByteArray;
 
     iget-object v4, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$unencryptedData:Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -131,7 +131,7 @@
 
     check-cast v3, [B
 
-    .line 3565
+    .line 3574
     sget-object v4, Luniffi/textrcs_libgm/FfiConverterBoolean;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterBoolean;
 
     iget-byte v5, p0, Luniffi/textrcs_libgm/uniffiCallbackInterfaceRustEventSink$onDataEvent$callback$makeCall$1;->$isOld:B
@@ -144,9 +144,9 @@
 
     move-result v4
 
-    .line 3561
+    .line 3570
     invoke-interface {v0, v1, v2, v3, v4}, Luniffi/textrcs_libgm/RustEventSink;->onDataEvent(I[B[BZ)V
 
-    .line 3567
+    .line 3576
     return-void
 .end method

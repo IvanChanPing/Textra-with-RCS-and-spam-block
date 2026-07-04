@@ -96,19 +96,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4237
+    .line 4246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4238
+    .line 4247
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamFeedResult;->name:Ljava/lang/String;
 
-    .line 4239
+    .line 4248
     iput-wide p2, p0, Luniffi/textrcs_libgm/SpamFeedResult;->count:J
 
-    .line 4240
+    .line 4249
     iput-object p4, p0, Luniffi/textrcs_libgm/SpamFeedResult;->error:Ljava/lang/String;
 
-    .line 4237
+    .line 4246
     return-void
 .end method
 
@@ -265,7 +265,7 @@
 .method public final getCount-s-VKNKU()J
     .registers 3
 
-    .line 4239
+    .line 4248
     iget-wide v0, p0, Luniffi/textrcs_libgm/SpamFeedResult;->count:J
 
     return-wide v0
@@ -274,7 +274,7 @@
 .method public final getError()Ljava/lang/String;
     .registers 2
 
-    .line 4240
+    .line 4249
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamFeedResult;->error:Ljava/lang/String;
 
     return-object v0
@@ -283,7 +283,7 @@
 .method public final getName()Ljava/lang/String;
     .registers 2
 
-    .line 4238
+    .line 4247
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamFeedResult;->name:Ljava/lang/String;
 
     return-object v0
@@ -335,7 +335,7 @@
     .registers 3
     .param p1, "<set-?>"    # J
 
-    .line 4239
+    .line 4248
     iput-wide p1, p0, Luniffi/textrcs_libgm/SpamFeedResult;->count:J
 
     return-void
@@ -345,7 +345,7 @@
     .registers 2
     .param p1, "<set-?>"    # Ljava/lang/String;
 
-    .line 4240
+    .line 4249
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamFeedResult;->error:Ljava/lang/String;
 
     return-void
@@ -359,7 +359,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4238
+    .line 4247
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamFeedResult;->name:Ljava/lang/String;
 
     return-void

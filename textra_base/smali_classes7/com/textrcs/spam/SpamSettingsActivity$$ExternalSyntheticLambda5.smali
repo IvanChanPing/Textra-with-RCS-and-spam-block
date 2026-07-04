@@ -30,7 +30,7 @@
     .line 0
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda5;->f$0:Lcom/textrcs/spam/SpamSettingsActivity;
 
-    invoke-static {v0}, Lcom/textrcs/spam/SpamSettingsActivity;->$r8$lambda$XMHgkkOmyRdbRuif0MuuZEY_TpU(Lcom/textrcs/spam/SpamSettingsActivity;)V
+    invoke-static {v0}, Lcom/textrcs/spam/SpamSettingsActivity;->$r8$lambda$duS5xrRNMC3o0spWsVMT4oXpc4o(Lcom/textrcs/spam/SpamSettingsActivity;)V
 
     return-void
 .end method

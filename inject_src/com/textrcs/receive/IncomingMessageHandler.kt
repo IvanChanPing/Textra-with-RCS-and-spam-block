@@ -509,6 +509,20 @@ object IncomingMessageHandler {
         // message is still delivered below; the verdict is logged + stored for a
         // future UI). Only reached for genuinely incoming, sender-resolved messages
         // (own-sends / outgoing / tombstones returned earlier).
+        // [SPAM v0.16] BLOCK action — if the user set the flag-action to "Block", classify this
+        // message SYNCHRONOUSLY (offline heuristic + feed match only, no network) BEFORE it is
+        // written to Textra. A flagged message is recorded in the Spam log and DROPPED here (mark
+        // seen so a later push does not retry it) — so it produces no bubble and no notification.
+        // maybeBlock fails open (returns false on any error). In "Deliver + mark" mode it is a
+        // no-op and the async verdict-only path below handles logging.
+        try {
+            if (com.textrcs.spam.SpamGuard.maybeBlock(context, data.messageID, sender.value, body)) {
+                Log.w(TAG, "  SPAM-BLOCK id=${data.messageID} — withheld (not delivered)")
+                markSeen(data.messageID)
+                return
+            }
+        } catch (_: Throwable) {
+        }
         try {
             com.textrcs.spam.SpamGuard.classifyAsync(context, data.messageID, sender.value, body)
         } catch (_: Throwable) {

@@ -12,7 +12,9 @@ import uniffi.textrcs_libgm.SpamConfig
 import uniffi.textrcs_libgm.SpamFeedKind
 import uniffi.textrcs_libgm.SpamFeedSource
 import uniffi.textrcs_libgm.SpamLevel
+import uniffi.textrcs_libgm.SpamVerdict
 import uniffi.textrcs_libgm.spamClassify
+import uniffi.textrcs_libgm.spamClassifyOffline
 import uniffi.textrcs_libgm.spamConfigure
 import uniffi.textrcs_libgm.spamRefreshFeeds
 import uniffi.textrcs_libgm.spamStatus
@@ -68,6 +70,11 @@ object SpamGuard {
     private const val K_NUM_FLAG = "number_rep_flag_substr"  // marker; empty = off
     private const val K_NUM_HDR_NAME = "number_rep_header_name"  // API-key header name; empty = no header
     private const val K_NUM_HDR_VALUE = "number_rep_header_value" // API-key header value (token)
+    private const val K_FLAG_ACTION = "flag_action" // ACTION_BLOCK | ACTION_DELIVER
+
+    /** What to do with a flagged message. Chosen in [SpamSettingsActivity]. */
+    const val ACTION_BLOCK = "block"     // withhold it (Spam log), never delivered
+    const val ACTION_DELIVER = "deliver" // deliver it, just record a verdict (badge/log)
 
     /** OpenPhish Community feed — keyless, 12h refresh (verified 2026-06-17). */
     private const val OPENPHISH_URL =
@@ -82,6 +89,11 @@ object SpamGuard {
     /** Cap on stored recent verdicts surfaced for a future UI. */
     private const val VERDICT_PREFS = "textrcs_spam_verdicts"
     private const val VERDICT_CAP = 200
+
+    /** The "Spam log": full records of messages the Block action withheld, so the user can
+     *  review what was held. Keyed by messageId; capped. Read by [SpamLogActivity]. */
+    private const val BLOCKED_PREFS = "textrcs_spam_blocked"
+    private const val BLOCKED_CAP = 500
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -209,6 +221,109 @@ object SpamGuard {
     }
 
     /**
+     * BLOCK gate for the receive path. Called SYNCHRONOUSLY from
+     * [com.textrcs.receive.IncomingMessageHandler] BEFORE the message is written into Textra.
+     * Returns true iff the user's flag-action is "Block" AND the message is flagged by the fast
+     * on-device signals (offline L0 political heuristic + threat-feed match, NO network — the Rust
+     * [spamClassifyOffline]). When it returns true it has ALREADY recorded the message in the Spam
+     * log; the caller must then DROP the message (skip delivery, mark it seen) so no bubble and no
+     * notification are produced for it.
+     *
+     * Safe on the receive thread: the offline classify is a pure in-memory scan (no I/O, no
+     * network). In "Deliver + mark" mode it returns false immediately without classifying
+     * ([classifyAsync] handles the verdict-only logging on the delivered path instead).
+     * FAILS OPEN — any error → false (never withhold a message because of a classifier fault).
+     */
+    fun maybeBlock(context: Context, messageId: String, sender: String, body: String): Boolean {
+        if (Hooks.shouldSkip("spam_classify_skip")) return false
+        if (getFlagAction(context) != ACTION_BLOCK) return false
+        ensureConfigured(context)
+        return try {
+            val v = spamClassifyOffline(body, sender)
+            if (v.level == SpamLevel.CLEAN) return false
+            val reason = v.reasons.firstOrNull() ?: v.level.name
+            Log.w(TAG, "BLOCK msg=$messageId from.tail=${sender.takeLast(4)} ${v.level} :: $reason")
+            ScreenTracer.note("SPAM BLOCK ${v.level} from.tail=${sender.takeLast(4)} $reason")
+            logBlocked(context, messageId, sender, body, v)
+            true
+        } catch (e: Throwable) {
+            Log.w(TAG, "maybeBlock failed msg=$messageId: ${e.javaClass.simpleName}: ${e.message}")
+            false
+        }
+    }
+
+    /** One entry in the Spam log (a message the Block action withheld). */
+    data class BlockedEntry(
+        val messageId: String,
+        val sender: String,
+        val body: String,
+        val timestampMs: Long,
+        val level: String,
+        val reason: String,
+    )
+
+    /** Persist a withheld message to the Spam log (capped, oldest-half-dropped on overflow). */
+    private fun logBlocked(
+        context: Context, messageId: String, sender: String, body: String, verdict: SpamVerdict,
+    ) {
+        try {
+            val bp = context.applicationContext
+                .getSharedPreferences(BLOCKED_PREFS, Context.MODE_PRIVATE)
+            if (bp.all.size >= BLOCKED_CAP) {
+                val oldest = bp.all.keys.take(BLOCKED_CAP / 2)
+                bp.edit().apply { oldest.forEach { remove(it) } }.apply()
+            }
+            val obj = org.json.JSONObject()
+                .put("sender", sender)
+                .put("body", body)
+                .put("ts", System.currentTimeMillis())
+                .put("level", verdict.level.name)
+                .put("reason", verdict.reasons.firstOrNull() ?: verdict.level.name)
+            bp.edit().putString(messageId, obj.toString()).apply()
+        } catch (e: Throwable) {
+            Log.w(TAG, "logBlocked failed: ${e.message}")
+        }
+    }
+
+    /** Read the Spam log (blocked messages), newest first. Used by [SpamLogActivity]. */
+    fun getBlockedLog(context: Context): List<BlockedEntry> {
+        return try {
+            val bp = context.applicationContext
+                .getSharedPreferences(BLOCKED_PREFS, Context.MODE_PRIVATE)
+            bp.all.mapNotNull { (id, raw) ->
+                val s = raw as? String ?: return@mapNotNull null
+                val o = org.json.JSONObject(s)
+                BlockedEntry(
+                    messageId = id,
+                    sender = o.optString("sender"),
+                    body = o.optString("body"),
+                    timestampMs = o.optLong("ts"),
+                    level = o.optString("level"),
+                    reason = o.optString("reason"),
+                )
+            }.sortedByDescending { it.timestampMs }
+        } catch (e: Throwable) {
+            Log.w(TAG, "getBlockedLog failed: ${e.message}"); emptyList()
+        }
+    }
+
+    /** Delete one Spam-log entry (a "not spam / dismiss" tap in [SpamLogActivity]). */
+    fun deleteBlocked(context: Context, messageId: String) {
+        try {
+            context.applicationContext.getSharedPreferences(BLOCKED_PREFS, Context.MODE_PRIVATE)
+                .edit().remove(messageId).apply()
+        } catch (_: Throwable) {}
+    }
+
+    /** Clear the entire Spam log. */
+    fun clearBlockedLog(context: Context) {
+        try {
+            context.applicationContext.getSharedPreferences(BLOCKED_PREFS, Context.MODE_PRIVATE)
+                .edit().clear().apply()
+        } catch (_: Throwable) {}
+    }
+
+    /**
      * Persist a flagged-message verdict (capped) so a future UI can render a
      * badge / spam view without re-classifying. Key = messageId.
      */
@@ -289,6 +404,19 @@ object SpamGuard {
             .putString(K_NUM_HDR_VALUE, headerValue)
             .apply()
         reconfigureAsync(context)
+    }
+
+    /**
+     * Flag action — what happens to a flagged message: [ACTION_BLOCK] (withhold to the Spam log,
+     * never delivered) or [ACTION_DELIVER] (deliver it, just record a verdict). Default = BLOCK
+     * (the out-of-box behaviour the user chose). Set from the "Block flagged spam" switch in
+     * [SpamSettingsActivity]; read synchronously by [maybeBlock] on the receive path.
+     */
+    fun getFlagAction(context: Context) =
+        prefs(context).getString(K_FLAG_ACTION, ACTION_BLOCK) ?: ACTION_BLOCK
+
+    fun setFlagAction(context: Context, action: String) {
+        prefs(context).edit().putString(K_FLAG_ACTION, action).apply()
     }
 
     // ── Current setting reads (used by SpamSettingsActivity to populate controls) ──

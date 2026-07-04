@@ -851,6 +851,8 @@ internal open class UniffiVTableCallbackInterfaceRustEventSink(
 
 
 
+
+
 // A JNA Library to expose the extern-C FFI definitions.
 // This is an implementation detail which will be called internally by the public API.
 
@@ -971,6 +973,8 @@ internal interface UniffiLib : Library {
     ): RustBuffer.ByValue
     fun uniffi_textrcs_libgm_fn_func_spam_classify(`text`: RustBuffer.ByValue,`sender`: RustBuffer.ByValue,
     ): Long
+    fun uniffi_textrcs_libgm_fn_func_spam_classify_offline(`text`: RustBuffer.ByValue,`sender`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
+    ): RustBuffer.ByValue
     fun uniffi_textrcs_libgm_fn_func_spam_configure(`config`: RustBuffer.ByValue,uniffi_out_err: UniffiRustCallStatus, 
     ): Unit
     fun uniffi_textrcs_libgm_fn_func_spam_refresh_feeds(
@@ -1097,6 +1101,8 @@ internal interface UniffiLib : Library {
     ): Short
     fun uniffi_textrcs_libgm_checksum_func_spam_classify(
     ): Short
+    fun uniffi_textrcs_libgm_checksum_func_spam_classify_offline(
+    ): Short
     fun uniffi_textrcs_libgm_checksum_func_spam_configure(
     ): Short
     fun uniffi_textrcs_libgm_checksum_func_spam_refresh_feeds(
@@ -1197,6 +1203,9 @@ private fun uniffiCheckApiChecksums(lib: UniffiLib) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_func_spam_classify() != 38730.toShort()) {
+        throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    }
+    if (lib.uniffi_textrcs_libgm_checksum_func_spam_classify_offline() != 9654.toShort()) {
         throw RuntimeException("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     }
     if (lib.uniffi_textrcs_libgm_checksum_func_spam_configure() != 55606.toShort()) {
@@ -4999,6 +5008,25 @@ public object FfiConverterMapStringString: FfiConverterRustBuffer<Map<kotlin.Str
         UniffiNullRustCallStatusErrorHandler,
     )
     }
+
+        /**
+         * Synchronous OFFLINE-ONLY classification — L0 political heuristic + offline threat-feed match,
+         * with NO network (the online layer of [spam_classify] is skipped entirely).
+         *
+         * WHY IT EXISTS: the receive path's "Block" action must decide whether to withhold a message
+         * BEFORE it is written into the host SMS app, and it runs on the RCS receive thread — so the
+         * decision must be synchronous and must never wait on a network call. This mirrors steps 1–2 of
+         * [spam_classify] (the fast, no-I/O signals) and returns Clean if the engine is disabled or
+         * nothing matched offline. `checked_online` is always false here.
+         */ fun `spamClassifyOffline`(`text`: kotlin.String, `sender`: kotlin.String): SpamVerdict {
+            return FfiConverterTypeSpamVerdict.lift(
+    uniffiRustCall() { _status ->
+    UniffiLib.INSTANCE.uniffi_textrcs_libgm_fn_func_spam_classify_offline(
+        FfiConverterString.lower(`text`),FfiConverterString.lower(`sender`),_status)
+}
+    )
+    }
+    
 
         /**
          * Configure the engine and load any cached index from disk. Idempotent; call

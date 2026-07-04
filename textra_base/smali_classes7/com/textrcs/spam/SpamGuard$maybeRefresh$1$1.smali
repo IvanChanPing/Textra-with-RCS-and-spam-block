@@ -27,7 +27,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSpamGuard.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpamGuard.kt\ncom/textrcs/spam/SpamGuard$maybeRefresh$1$1\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,311:1\n1#2:312\n*E\n"
+    value = "SMAP\nSpamGuard.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpamGuard.kt\ncom/textrcs/spam/SpamGuard$maybeRefresh$1$1\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,439:1\n1#2:440\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -88,7 +88,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 174
+    .line 186
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,13 +125,13 @@
 
     if-eqz v1, :cond_41
 
-    .line 312
+    .line 440
     nop
 
     .local v1, "e":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 174
+    .line 186
     .local v2, "$i$a$-let-SpamGuard$maybeRefresh$1$1$1":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -176,7 +176,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 174
+    .line 186
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/SpamFeedResult;

@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceByteArray\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Iterators.kt\nkotlin/collections/CollectionsKt__IteratorsKt\n*L\n1#1,5056:1\n1549#2:5057\n1620#2,3:5058\n32#3,2:5061\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceByteArray\n*L\n4830#1:5057\n4830#1:5058,3\n4836#1:5061,2\n*E\n"
+    value = "SMAP\ntextrcs_libgm.kt\nKotlin\n*S Kotlin\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceByteArray\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Iterators.kt\nkotlin/collections/CollectionsKt__IteratorsKt\n*L\n1#1,5084:1\n1549#2:5085\n1620#2,3:5086\n32#3,2:5089\n*S KotlinDebug\n*F\n+ 1 textrcs_libgm.kt\nuniffi/textrcs_libgm/FfiConverterSequenceByteArray\n*L\n4839#1:5085\n4839#1:5086,3\n4845#1:5089,2\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -71,7 +71,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 4820
+    .line 4829
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -83,7 +83,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4820
+    .line 4829
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -110,10 +110,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4829
+    .line 4838
     const-wide/16 v0, 0x4
 
-    .line 4830
+    .line 4839
     .local v0, "sizeForLength":J
     move-object v2, p1
 
@@ -122,7 +122,7 @@
     .local v2, "$this$map$iv":Ljava/lang/Iterable;
     const/4 v3, 0x0
 
-    .line 5057
+    .line 5085
     .local v3, "$i$f$map":I
     new-instance v4, Ljava/util/ArrayList;
 
@@ -142,7 +142,7 @@
     .local v5, "$this$mapTo$iv$iv":Ljava/lang/Iterable;
     const/4 v6, 0x0
 
-    .line 5058
+    .line 5086
     .local v6, "$i$f$mapTo":I
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -159,7 +159,7 @@
 
     move-result-object v8
 
-    .line 5059
+    .line 5087
     .local v8, "item$iv$iv":Ljava/lang/Object;
     move-object v9, v8
 
@@ -168,7 +168,7 @@
     .local v9, "it":[B
     const/4 v10, 0x0
 
-    .line 4830
+    .line 4839
     .local v10, "$i$a$-map-FfiConverterSequenceByteArray$allocationSize$sizeForItems$1":I
     sget-object v11, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
@@ -182,12 +182,12 @@
 
     move-result-object v9
 
-    .line 5059
+    .line 5087
     invoke-interface {v4, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_1e
 
-    .line 5060
+    .line 5088
     .end local v8    # "item$iv$iv":Ljava/lang/Object;
     :cond_3a
     nop
@@ -197,19 +197,19 @@
     .end local v6    # "$i$f$mapTo":I
     check-cast v4, Ljava/util/List;
 
-    .line 5057
+    .line 5085
     nop
 
     .end local v2    # "$this$map$iv":Ljava/lang/Iterable;
     .end local v3    # "$i$f$map":I
     check-cast v4, Ljava/lang/Iterable;
 
-    .line 4830
+    .line 4839
     invoke-static {v4}, Lkotlin/collections/UCollectionsKt;->sumOfULong(Ljava/lang/Iterable;)J
 
     move-result-wide v2
 
-    .line 4831
+    .line 4840
     .local v2, "sizeForItems":J
     add-long v4, v0, v2
 
@@ -224,7 +224,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4820
+    .line 4829
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -240,7 +240,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4820
+    .line 4829
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterSequenceByteArray;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/util/List;
 
     move-result-object v0
@@ -261,7 +261,7 @@
         }
     .end annotation
 
-    .line 4820
+    .line 4829
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lift(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -275,7 +275,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4820
+    .line 4829
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterSequenceByteArray;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/util/List;
 
     move-result-object v0
@@ -296,7 +296,7 @@
         }
     .end annotation
 
-    .line 4820
+    .line 4829
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -310,7 +310,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4820
+    .line 4829
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -326,7 +326,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4820
+    .line 4829
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -350,7 +350,7 @@
         }
     .end annotation
 
-    .line 4820
+    .line 4829
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lower(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -362,7 +362,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4820
+    .line 4829
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -386,7 +386,7 @@
         }
     .end annotation
 
-    .line 4820
+    .line 4829
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -398,7 +398,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4820
+    .line 4829
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterSequenceByteArray;->read(Ljava/nio/ByteBuffer;)Ljava/util/List;
 
     move-result-object v0
@@ -423,12 +423,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4822
+    .line 4831
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 4823
+    .line 4832
     .local v0, "len":I
     new-instance v1, Ljava/util/ArrayList;
 
@@ -444,7 +444,7 @@
     .local v3, "it":I
     const/4 v4, 0x0
 
-    .line 4824
+    .line 4833
     .local v4, "$i$a$-List-FfiConverterSequenceByteArray$read$1":I
     sget-object v5, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
@@ -452,7 +452,7 @@
 
     move-result-object v3
 
-    .line 4823
+    .line 4832
     .end local v3    # "it":I
     .end local v4    # "$i$a$-List-FfiConverterSequenceByteArray$read$1":I
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -472,7 +472,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4820
+    .line 4829
     move-object v0, p1
 
     check-cast v0, Ljava/util/List;
@@ -504,14 +504,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4835
+    .line 4844
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4836
+    .line 4845
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -519,7 +519,7 @@
     .local v0, "$this$forEach$iv":Ljava/util/Iterator;
     const/4 v1, 0x0
 
-    .line 5061
+    .line 5089
     .local v1, "$i$f$forEach":I
     nop
 
@@ -542,16 +542,16 @@
     .local v3, "it":[B
     const/4 v4, 0x0
 
-    .line 4837
+    .line 4846
     .local v4, "$i$a$-forEach-FfiConverterSequenceByteArray$write$1":I
     sget-object v5, Luniffi/textrcs_libgm/FfiConverterByteArray;->INSTANCE:Luniffi/textrcs_libgm/FfiConverterByteArray;
 
     invoke-virtual {v5, v3, p2}, Luniffi/textrcs_libgm/FfiConverterByteArray;->write([BLjava/nio/ByteBuffer;)V
 
-    .line 4838
+    .line 4847
     nop
 
-    .line 5061
+    .line 5089
     .end local v3    # "it":[B
     .end local v4    # "$i$a$-forEach-FfiConverterSequenceByteArray$write$1":I
     nop
@@ -559,11 +559,11 @@
     .end local v2    # "element$iv":Ljava/lang/Object;
     goto :goto_17
 
-    .line 5062
+    .line 5090
     :cond_2d
     nop
 
-    .line 4839
+    .line 4848
     .end local v0    # "$this$forEach$iv":Ljava/util/Iterator;
     .end local v1    # "$i$f$forEach":I
     return-void

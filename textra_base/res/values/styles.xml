@@ -121,8 +121,16 @@
     <style name="AppTheme.QuickConvo" parent="@style/AppTheme.ModalDialogLike">
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowActionModeOverlay">true</item>
+        <!-- textrcs: expand-from-notification morph (open) + collapse-back (close). Overrides the
+             plain platform fade inherited from AppTheme.ModalDialogLike. -->
+        <item name="android:windowAnimationStyle">@style/QuickConvoMorphAnimation</item>
         <item name="convoContent">@style/convoContent</item>
         <item name="convoContentControlledHeight">@style/convoContentControlledHeight.QuickReplyRounded</item>
+    </style>
+    <!-- textrcs: window open/close animations for the QuickConvo tap-to-open chat popup. -->
+    <style name="QuickConvoMorphAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/quick_convo_enter</item>
+        <item name="android:windowExitAnimation">@anim/quick_convo_exit</item>
     </style>
     <style name="convoContentControlledHeight.QuickReplyRounded" parent="@style/common_floating_window">
         <item name="android:background">@drawable/quick_reply_card_bg</item>

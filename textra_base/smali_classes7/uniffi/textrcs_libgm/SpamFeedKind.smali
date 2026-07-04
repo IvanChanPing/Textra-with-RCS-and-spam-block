@@ -70,7 +70,7 @@
 .method static constructor <clinit>()V
     .registers 3
 
-    .line 4659
+    .line 4668
     new-instance v0, Luniffi/textrcs_libgm/SpamFeedKind;
 
     const-string v1, "URLS"
@@ -81,7 +81,7 @@
 
     sput-object v0, Luniffi/textrcs_libgm/SpamFeedKind;->URLS:Luniffi/textrcs_libgm/SpamFeedKind;
 
-    .line 4663
+    .line 4672
     new-instance v0, Luniffi/textrcs_libgm/SpamFeedKind;
 
     const-string v1, "HOSTS"
@@ -129,7 +129,7 @@
         }
     .end annotation
 
-    .line 4654
+    .line 4663
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

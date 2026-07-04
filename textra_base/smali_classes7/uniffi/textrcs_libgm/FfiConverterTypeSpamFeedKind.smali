@@ -66,7 +66,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 4671
+    .line 4680
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,7 +78,7 @@
     .registers 4
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4671
+    .line 4680
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/SpamFeedKind;
@@ -98,7 +98,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4678
+    .line 4687
     const-wide/16 v0, 0x4
 
     return-wide v0
@@ -108,7 +108,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4671
+    .line 4680
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/RustBuffer$ByValue;
@@ -124,7 +124,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4671
+    .line 4680
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedKind;->lift(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/SpamFeedKind;
 
     move-result-object v0
@@ -136,7 +136,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4671
+    .line 4680
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lift(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -150,7 +150,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4671
+    .line 4680
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedKind;->liftFromRustBuffer(Luniffi/textrcs_libgm/RustBuffer$ByValue;)Luniffi/textrcs_libgm/SpamFeedKind;
 
     move-result-object v0
@@ -162,7 +162,7 @@
     .registers 3
     .param p1, "rbuf"    # Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
-    .line 4671
+    .line 4680
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->liftFromRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Luniffi/textrcs_libgm/RustBuffer$ByValue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -176,7 +176,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4671
+    .line 4680
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/SpamFeedKind;
@@ -192,7 +192,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4671
+    .line 4680
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/SpamFeedKind;
@@ -208,7 +208,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/SpamFeedKind;
 
-    .line 4671
+    .line 4680
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lower(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -220,7 +220,7 @@
     .registers 3
     .param p1, "value"    # Ljava/lang/Object;
 
-    .line 4671
+    .line 4680
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/SpamFeedKind;
@@ -236,7 +236,7 @@
     .registers 3
     .param p1, "value"    # Luniffi/textrcs_libgm/SpamFeedKind;
 
-    .line 4671
+    .line 4680
     invoke-static {p0, p1}, Luniffi/textrcs_libgm/FfiConverterRustBuffer$DefaultImpls;->lowerIntoRustBuffer(Luniffi/textrcs_libgm/FfiConverterRustBuffer;Ljava/lang/Object;)Luniffi/textrcs_libgm/RustBuffer$ByValue;
 
     move-result-object v0
@@ -248,7 +248,7 @@
     .registers 3
     .param p1, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4671
+    .line 4680
     invoke-virtual {p0, p1}, Luniffi/textrcs_libgm/FfiConverterTypeSpamFeedKind;->read(Ljava/nio/ByteBuffer;)Luniffi/textrcs_libgm/SpamFeedKind;
 
     move-result-object v0
@@ -264,10 +264,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4672
+    .line 4681
     nop
 
-    .line 4673
+    .line 4682
     :try_start_6
     invoke-static {}, Luniffi/textrcs_libgm/SpamFeedKind;->values()[Luniffi/textrcs_libgm/SpamFeedKind;
 
@@ -283,14 +283,14 @@
     :try_end_12
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_6 .. :try_end_12} :catch_13
 
-    .line 4676
+    .line 4685
     return-object v0
 
-    .line 4674
+    .line 4683
     :catch_13
     move-exception v0
 
-    .line 4675
+    .line 4684
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -310,7 +310,7 @@
     .param p1, "value"    # Ljava/lang/Object;
     .param p2, "buf"    # Ljava/nio/ByteBuffer;
 
-    .line 4671
+    .line 4680
     move-object v0, p1
 
     check-cast v0, Luniffi/textrcs_libgm/SpamFeedKind;
@@ -333,7 +333,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4681
+    .line 4690
     invoke-virtual {p1}, Luniffi/textrcs_libgm/SpamFeedKind;->ordinal()I
 
     move-result v0
@@ -342,6 +342,6 @@
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4682
+    .line 4691
     return-void
 .end method

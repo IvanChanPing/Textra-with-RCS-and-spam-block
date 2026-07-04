@@ -184,37 +184,37 @@
 
     invoke-static {p9, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4143
+    .line 4152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4147
+    .line 4156
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamConfig;->enabled:Z
 
-    .line 4151
+    .line 4160
     iput-boolean p2, p0, Luniffi/textrcs_libgm/SpamConfig;->onlineEnabled:Z
 
-    .line 4155
+    .line 4164
     iput-object p3, p0, Luniffi/textrcs_libgm/SpamConfig;->cachePath:Ljava/lang/String;
 
-    .line 4159
+    .line 4168
     iput-object p4, p0, Luniffi/textrcs_libgm/SpamConfig;->feeds:Ljava/util/List;
 
-    .line 4163
+    .line 4172
     iput-object p5, p0, Luniffi/textrcs_libgm/SpamConfig;->safebrowsingApiKey:Ljava/lang/String;
 
-    .line 4168
+    .line 4177
     iput-object p6, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationUrlTemplate:Ljava/lang/String;
 
-    .line 4173
+    .line 4182
     iput-object p7, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
 
-    .line 4179
+    .line 4188
     iput-object p8, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
 
-    .line 4183
+    .line 4192
     iput-object p9, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
 
-    .line 4143
+    .line 4152
     return-void
 .end method
 
@@ -603,7 +603,7 @@
 .method public final getCachePath()Ljava/lang/String;
     .registers 2
 
-    .line 4155
+    .line 4164
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->cachePath:Ljava/lang/String;
 
     return-object v0
@@ -612,7 +612,7 @@
 .method public final getEnabled()Z
     .registers 2
 
-    .line 4147
+    .line 4156
     iget-boolean v0, p0, Luniffi/textrcs_libgm/SpamConfig;->enabled:Z
 
     return v0
@@ -629,7 +629,7 @@
         }
     .end annotation
 
-    .line 4159
+    .line 4168
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->feeds:Ljava/util/List;
 
     return-object v0
@@ -638,7 +638,7 @@
 .method public final getNumberReputationFlagSubstring()Ljava/lang/String;
     .registers 2
 
-    .line 4173
+    .line 4182
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
 
     return-object v0
@@ -647,7 +647,7 @@
 .method public final getNumberReputationHeaderName()Ljava/lang/String;
     .registers 2
 
-    .line 4179
+    .line 4188
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
 
     return-object v0
@@ -656,7 +656,7 @@
 .method public final getNumberReputationHeaderValue()Ljava/lang/String;
     .registers 2
 
-    .line 4183
+    .line 4192
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
 
     return-object v0
@@ -665,7 +665,7 @@
 .method public final getNumberReputationUrlTemplate()Ljava/lang/String;
     .registers 2
 
-    .line 4168
+    .line 4177
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationUrlTemplate:Ljava/lang/String;
 
     return-object v0
@@ -674,7 +674,7 @@
 .method public final getOnlineEnabled()Z
     .registers 2
 
-    .line 4151
+    .line 4160
     iget-boolean v0, p0, Luniffi/textrcs_libgm/SpamConfig;->onlineEnabled:Z
 
     return v0
@@ -683,7 +683,7 @@
 .method public final getSafebrowsingApiKey()Ljava/lang/String;
     .registers 2
 
-    .line 4163
+    .line 4172
     iget-object v0, p0, Luniffi/textrcs_libgm/SpamConfig;->safebrowsingApiKey:Ljava/lang/String;
 
     return-object v0
@@ -789,7 +789,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4155
+    .line 4164
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->cachePath:Ljava/lang/String;
 
     return-void
@@ -799,7 +799,7 @@
     .registers 2
     .param p1, "<set-?>"    # Z
 
-    .line 4147
+    .line 4156
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamConfig;->enabled:Z
 
     return-void
@@ -821,7 +821,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4159
+    .line 4168
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->feeds:Ljava/util/List;
 
     return-void
@@ -835,7 +835,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4173
+    .line 4182
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationFlagSubstring:Ljava/lang/String;
 
     return-void
@@ -849,7 +849,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4179
+    .line 4188
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderName:Ljava/lang/String;
 
     return-void
@@ -863,7 +863,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4183
+    .line 4192
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationHeaderValue:Ljava/lang/String;
 
     return-void
@@ -877,7 +877,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4168
+    .line 4177
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->numberReputationUrlTemplate:Ljava/lang/String;
 
     return-void
@@ -887,7 +887,7 @@
     .registers 2
     .param p1, "<set-?>"    # Z
 
-    .line 4151
+    .line 4160
     iput-boolean p1, p0, Luniffi/textrcs_libgm/SpamConfig;->onlineEnabled:Z
 
     return-void
@@ -901,7 +901,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4163
+    .line 4172
     iput-object p1, p0, Luniffi/textrcs_libgm/SpamConfig;->safebrowsingApiKey:Ljava/lang/String;
 
     return-void

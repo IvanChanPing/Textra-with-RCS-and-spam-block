@@ -5,5 +5,5 @@
 <translate xmlns:a="http://schemas.android.com/apk/res/android"
     a:fromXDelta="0"
     a:toXDelta="100%p"
-    a:duration="350"
+    a:duration="410"
     a:interpolator="@android:interpolator/fast_out_slow_in"/>

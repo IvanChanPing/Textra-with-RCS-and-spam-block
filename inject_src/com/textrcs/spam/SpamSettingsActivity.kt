@@ -66,6 +66,7 @@ class SpamSettingsActivity : Activity() {
 
     private lateinit var statusText: TextView
     private lateinit var masterSwitch: Switch
+    private lateinit var blockSwitch: Switch
     private lateinit var onlineSwitch: Switch
     private lateinit var safeBrowsingKeyField: EditText
     private lateinit var urlhausField: EditText
@@ -107,6 +108,34 @@ class SpamSettingsActivity : Activity() {
             SpamGuard.setEnabled(this, on)
         }
         root.addView(masterSwitch)
+
+        // blockSwitch — what to DO with a flagged message. ON (default) = hold it in the Spam log,
+        // never delivered, no notification. OFF = deliver it but record a verdict (badge/log).
+        blockSwitch = makeSwitch("Block flagged spam (hold in Spam log)") { on ->
+            SpamGuard.setFlagAction(
+                this, if (on) SpamGuard.ACTION_BLOCK else SpamGuard.ACTION_DELIVER,
+            )
+        }
+        root.addView(blockSwitch)
+
+        // blockCaption — small grey explainer directly under the block switch.
+        root.addView(TextView(this).apply {
+            text = "On: a spam message is held in the Spam log and never reaches your inbox " +
+                "(no notification). Off: it is delivered but recorded so you can review it."
+            setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
+            setTextColor(Color.GRAY)
+            setPadding(dp(4), 0, 0, dp(8))
+        })
+
+        // viewSpamLogButton — full-width button opening the Spam log (withheld messages).
+        root.addView(Button(this).apply {
+            text = "View Spam log"
+            setOnClickListener {
+                startActivity(
+                    android.content.Intent(this@SpamSettingsActivity, SpamLogActivity::class.java),
+                )
+            }
+        }, fullWidthTopMargin(dp(4)))
 
         // onlineSwitch — enable live online lookups (off by default).
         onlineSwitch = makeSwitch("Online lookups (Safe Browsing)") { on ->
@@ -191,6 +220,7 @@ class SpamSettingsActivity : Activity() {
         super.onResume()
         // Populate controls from the persisted settings every time the screen shows.
         masterSwitch.isChecked = SpamGuard.isEnabled(this)
+        blockSwitch.isChecked = SpamGuard.getFlagAction(this) == SpamGuard.ACTION_BLOCK
         onlineSwitch.isChecked = SpamGuard.isOnlineEnabled(this)
         safeBrowsingKeyField.setText(SpamGuard.getSafeBrowsingKey(this))
         urlhausField.setText(SpamGuard.getUrlhausFeedUrl(this))

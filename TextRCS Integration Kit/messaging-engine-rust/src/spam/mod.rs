@@ -448,6 +448,27 @@ pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
     verdict_to_ffi(offline_verdict)
 }
 
+/// Synchronous OFFLINE-ONLY classification — L0 political heuristic + offline threat-feed match,
+/// with NO network (the online layer of [spam_classify] is skipped entirely).
+///
+/// WHY IT EXISTS: the receive path's "Block" action must decide whether to withhold a message
+/// BEFORE it is written into the host SMS app, and it runs on the RCS receive thread — so the
+/// decision must be synchronous and must never wait on a network call. This mirrors steps 1–2 of
+/// [spam_classify] (the fast, no-I/O signals) and returns Clean if the engine is disabled or
+/// nothing matched offline. `checked_online` is always false here.
+#[uniffi::export]
+pub fn spam_classify_offline(text: String, sender: String) -> SpamVerdict {
+    let st = STATE.read().unwrap_or_else(|e| e.into_inner());
+    if !st.enabled {
+        return CLEAN_FFI();
+    }
+    // Political heuristic first (matches spam_classify's return priority), then the feed match.
+    if let Some(v) = classify_political(&text, &sender, false, &HeuristicConfig::default()) {
+        return verdict_to_ffi(v);
+    }
+    verdict_to_ffi(engine::classify_offline(&st.store, &text, &sender))
+}
+
 /// Snapshot of engine status for the settings/diagnostics screen.
 #[uniffi::export]
 pub fn spam_status() -> SpamStatus {
