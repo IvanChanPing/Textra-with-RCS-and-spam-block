@@ -53,12 +53,21 @@ jobs:
       - name: Install cargo-ndk
         run: cargo install cargo-ndk --locked
 
-      - name: Install apktool + baksmali + fetch Maven jars
+      - name: Install protoc + baksmali + apktool + fetch Maven jars
         run: |
           set -euo pipefail
-          # apktool (on PATH) + smali (provides /usr/bin/baksmali, build.sh's default)
+          # protoc: the engine's build.rs compiles .proto at build time via prost-reflect-build.
+          # smali: provides /usr/bin/baksmali (build.sh's BAKSMALI default).
           sudo apt-get update
-          sudo apt-get install -y apktool smali
+          sudo apt-get install -y protobuf-compiler smali
+          # apktool pinned to 2.10.0 — the maintainer's known-good build tool. Ubuntu's apt apktool
+          # is older and mishandles the targetSdk-36 base (textra_base/apktool.yml version 3.0.2).
+          sudo curl -fsSL -o /usr/local/bin/apktool.jar \
+            https://github.com/iBotPeaches/Apktool/releases/download/v2.10.0/apktool_2.10.0.jar
+          sudo curl -fsSL -o /usr/local/bin/apktool \
+            https://raw.githubusercontent.com/iBotPeaches/Apktool/v2.10.0/scripts/linux/apktool
+          sudo chmod +x /usr/local/bin/apktool
+          apktool --version
           JARS="$RUNNER_TEMP/jars"; mkdir -p "$JARS"
           M="https://repo1.maven.org/maven2"
           curl -fsSL -o "$JARS/kotlin-compiler-embeddable-1.9.24.jar" "$M/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.9.24/kotlin-compiler-embeddable-1.9.24.jar"

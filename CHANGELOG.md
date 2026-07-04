@@ -1,3 +1,14 @@
+## 2026-07-04 — CI: build the APK on GitHub Actions (`.github/workflows/build-apk.yml`)
+
+Added a `build-apk` workflow that reproduces the local pipeline on a clean runner: build the Rust
+engine `.so` for all 4 ABIs (cargo-ndk), drop them into `textra_base/lib/<abi>/`, then run `build.sh`
+(kotlinc → d8 → baksmali → merge into the committed base → apktool b → apksigner) and upload
+`textra2.apk`. `build.sh` was parameterized so every tool/jar/keystore path is env-overridable
+(defaults unchanged = the maintainer's box). First run surfaced two toolchain gaps, both fixed:
+installed `protobuf-compiler` (the engine's `build.rs` compiles `.proto` via prost-reflect-build at
+build time) and pinned `apktool` to the known-good **2.10.0** (Ubuntu's apt apktool is older and
+mishandles the targetSdk-36 base whose `apktool.yml` records version 3.0.2).
+
 ## 2026-07-04 — Spam engine: add L0 political-spam heuristic + crowd feed
 
 Ported the improved spam detection into `messaging-engine-rust/src/spam`. New `heuristic.rs` is the L0
