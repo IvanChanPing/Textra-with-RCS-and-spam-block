@@ -1,3 +1,20 @@
+## 2026-07-04 — Spam engine: add L0 political-spam heuristic + crowd feed
+
+Ported the improved spam detection into `messaging-engine-rust/src/spam`. New `heuristic.rs` is the L0
+political-spam detector — the rotating-number campaign/fundraising texts that number/domain blocklists
+can't catch: fundraising / GOTV / engagement + political-figure lexicons, a "≥2 strong signals" decision
+rule for a zero-false-positive stance, NFKC + zero-width normalization to defeat styled-Unicode evasion,
+and a trusted-sender allowlist. New `crowd.rs` is an opt-in shared spam-fingerprint feed: a rotation-proof
+content fingerprint (strips greeting/links/codes, keeps the sender number as a bonus signal), local match,
+report, and a pluggable transport (the community feed or a provider's own server, with GitHub
+`repository_dispatch` envelope support). Both are wired into `spam_classify` (crowd match → political
+heuristic → threat feeds, first hit wins), with new `spam_report_spam` / `spam_refresh_crowd` FFI
+functions and the crowd + `trusted_senders` config fields. `spam_classify` keeps its 2-arg signature.
+Added the `unicode-normalization` dependency. `cargo test`: 68 spam tests pass.
+
+Remaining to ship it in the APK: regenerate the UniFFI Kotlin bindings (`SpamConfig` gained fields),
+update the smali `spam_configure` caller, and rebuild the `.so` + APK.
+
 ## 2026-06-29 — GROQ flag-queue recovery (#13): +930 annotations recovered (zero Claude tokens)
 
 Added --fill mode to groq_annotate_verify.py (reprocess only previously-FLAGGED methods, i.e. those

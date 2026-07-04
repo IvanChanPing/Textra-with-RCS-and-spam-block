@@ -69,6 +69,9 @@ serde_bytes = "0.11"
 thiserror = "1"
 anyhow    = "1"
 
+# --- Text normalization (NFKC-fold styled Unicode for the political-spam heuristic) ---
+unicode-normalization = "0.1"
+
 # --- Logging (Android logcat surface via android_logger when on Android) ---
 log = "0.4"
 
