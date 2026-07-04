@@ -9,7 +9,7 @@
 
 set -euo pipefail
 
-PROJ="/root/agent-work/projects/textrcs"
+PROJ="${PROJ:-/root/agent-work/projects/textrcs}"
 INJECT_SRC="$PROJ/inject_src"
 BUILD="$PROJ/build"
 # Heavy build scratch (jars, dex, baksmali output — ~1G of small-file
@@ -22,17 +22,21 @@ SMALI_OUT="$SCRATCH/inject_smali"
 BASE="$PROJ/textra_base"
 INJECT_DEX_SLOT="$BASE/smali_classes4"
 
-ANDROID_JAR="/opt/android-sdk/platforms/android-34/android.jar"
-D8="/opt/android-sdk/build-tools/36.0.0/d8"
-APKSIGNER="/opt/android-sdk/build-tools/36.0.0/apksigner"
-BAKSMALI="/usr/bin/baksmali"
+# Tool + jar locations. All env-overridable (defaults = this box's layout); CI sets these to
+# the runner's SDK + a flat dir of Maven-downloaded jars — see .github/workflows/build-apk.yml.
+SDK="${ANDROID_SDK_ROOT:-/opt/android-sdk}"
+BUILD_TOOLS_VER="${BUILD_TOOLS_VER:-36.0.0}"
+ANDROID_JAR="${ANDROID_JAR:-$SDK/platforms/android-34/android.jar}"
+D8="${D8:-$SDK/build-tools/$BUILD_TOOLS_VER/d8}"
+APKSIGNER="${APKSIGNER:-$SDK/build-tools/$BUILD_TOOLS_VER/apksigner}"
+BAKSMALI="${BAKSMALI:-/usr/bin/baksmali}"
 
-GRADLE="/root/.gradle/caches/modules-2/files-2.1"
-KOTLIN_COMPILER="$GRADLE/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.9.24/78dab849090e6c5e2eadb6e59a11cdc28fb67a08/kotlin-compiler-embeddable-1.9.24.jar"
-KOTLIN_STDLIB="$GRADLE/org.jetbrains.kotlin/kotlin-stdlib/1.9.24/9928532f12c66ad816a625b3f9984f8368ca6d2b/kotlin-stdlib-1.9.24.jar"
-JB_ANNOTATIONS="$GRADLE/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar"
-TROVE4J="$GRADLE/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar"
-PROTOBUF_JAVA="$GRADLE/com.google.protobuf/protobuf-java/3.24.4/a773e5a3845e6baa5c4ede5532c426ebe6c53330/protobuf-java-3.24.4.jar"
+GRADLE="${GRADLE:-/root/.gradle/caches/modules-2/files-2.1}"
+KOTLIN_COMPILER="${KOTLIN_COMPILER:-$GRADLE/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.9.24/78dab849090e6c5e2eadb6e59a11cdc28fb67a08/kotlin-compiler-embeddable-1.9.24.jar}"
+KOTLIN_STDLIB="${KOTLIN_STDLIB:-$GRADLE/org.jetbrains.kotlin/kotlin-stdlib/1.9.24/9928532f12c66ad816a625b3f9984f8368ca6d2b/kotlin-stdlib-1.9.24.jar}"
+JB_ANNOTATIONS="${JB_ANNOTATIONS:-$GRADLE/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar}"
+TROVE4J="${TROVE4J:-$GRADLE/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar}"
+PROTOBUF_JAVA="${PROTOBUF_JAVA:-$GRADLE/com.google.protobuf/protobuf-java/3.24.4/a773e5a3845e6baa5c4ede5532c426ebe6c53330/protobuf-java-3.24.4.jar}"
 # JNA — needed by the UniFFI-generated Kotlin bindings (uniffi/textrcs_libgm/textrcs_libgm.kt).
 # We bundle the @aar variant's classes.jar at $PROJ/build-deps/jna-5.13.0.jar and
 # its per-ABI libjnidispatch.so files are already in $BASE/lib/<abi>/.
@@ -41,9 +45,9 @@ JNA_JAR="$PROJ/build-deps/jna-5.13.0.jar"
 COROUTINES_CORE="$PROJ/build-deps/kotlinx-coroutines-core-jvm-1.7.3.jar"
 COROUTINES_ANDROID="$PROJ/build-deps/kotlinx-coroutines-android-1.7.3.jar"
 
-KEYSTORE="$PROJ/textrcs.keystore"
-KS_PASS="textrcs-pass"
-KS_ALIAS="textrcs"
+KEYSTORE="${KEYSTORE:-$PROJ/textrcs.keystore}"
+KS_PASS="${KS_PASS:-textrcs-pass}"
+KS_ALIAS="${KS_ALIAS:-textrcs}"
 
 mkdir -p "$BUILD" "$SCRATCH" "$SMALI_OUT"
 

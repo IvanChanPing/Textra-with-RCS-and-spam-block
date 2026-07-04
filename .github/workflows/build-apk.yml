@@ -1,0 +1,117 @@
+# Build the TextRCS APK on GitHub Actions.
+#
+# Reproduces the local pipeline on a clean Ubuntu runner: build the Rust engine .so for all 4
+# Android ABIs (cargo-ndk), drop them into textra_base/lib/<abi>/, then run build.sh (kotlinc →
+# d8 → baksmali → merge into the committed base → apktool b → apksigner) and upload the APK.
+#
+# The build scripts read tool/jar/keystore locations from env vars (defaults = the maintainer's
+# box); this workflow sets them to the runner's SDK + Maven-downloaded jars + a generated keystore.
+# For stable, update-in-place signing, add a base64 keystore as the secret TEXTRCS_KEYSTORE_B64
+# (alias/pass via TEXTRCS_KS_ALIAS / TEXTRCS_KS_PASS); otherwise a fresh keystore is generated.
+name: build-apk
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'TextRCS Integration Kit/messaging-engine-rust/**'
+      - 'build.sh'
+      - '.github/workflows/build-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  NDK_VERSION: "27.1.12297006"
+  BUILD_TOOLS_VER: "36.0.0"
+  ENGINE_DIR: "TextRCS Integration Kit/messaging-engine-rust"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK + NDK
+        uses: android-actions/setup-android@v3
+      - name: Install SDK packages
+        run: |
+          sdkmanager "platforms;android-34" "build-tools;${BUILD_TOOLS_VER}" "ndk;${NDK_VERSION}"
+
+      - name: Set up Rust + cargo-ndk
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-linux-android,armv7-linux-androideabi,i686-linux-android,x86_64-linux-android
+      - name: Install cargo-ndk
+        run: cargo install cargo-ndk --locked
+
+      - name: Install apktool + baksmali + fetch Maven jars
+        run: |
+          set -euo pipefail
+          # apktool (on PATH) + smali (provides /usr/bin/baksmali, build.sh's default)
+          sudo apt-get update
+          sudo apt-get install -y apktool smali
+          JARS="$RUNNER_TEMP/jars"; mkdir -p "$JARS"
+          M="https://repo1.maven.org/maven2"
+          curl -fsSL -o "$JARS/kotlin-compiler-embeddable-1.9.24.jar" "$M/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.9.24/kotlin-compiler-embeddable-1.9.24.jar"
+          curl -fsSL -o "$JARS/kotlin-stdlib-1.9.24.jar"              "$M/org/jetbrains/kotlin/kotlin-stdlib/1.9.24/kotlin-stdlib-1.9.24.jar"
+          curl -fsSL -o "$JARS/annotations-23.0.0.jar"                "$M/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar"
+          curl -fsSL -o "$JARS/trove4j-1.0.20200330.jar"              "$M/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar"
+          curl -fsSL -o "$JARS/protobuf-java-3.24.4.jar"              "$M/com/google/protobuf/protobuf-java/3.24.4/protobuf-java-3.24.4.jar"
+          {
+            echo "KOTLIN_COMPILER=$JARS/kotlin-compiler-embeddable-1.9.24.jar"
+            echo "KOTLIN_STDLIB=$JARS/kotlin-stdlib-1.9.24.jar"
+            echo "JB_ANNOTATIONS=$JARS/annotations-23.0.0.jar"
+            echo "TROVE4J=$JARS/trove4j-1.0.20200330.jar"
+            echo "PROTOBUF_JAVA=$JARS/protobuf-java-3.24.4.jar"
+          } >> "$GITHUB_ENV"
+
+      - name: Prepare signing keystore
+        run: |
+          set -euo pipefail
+          KS="$RUNNER_TEMP/textrcs.keystore"
+          if [ -n "${{ secrets.TEXTRCS_KEYSTORE_B64 }}" ]; then
+            echo "${{ secrets.TEXTRCS_KEYSTORE_B64 }}" | base64 -d > "$KS"
+            echo "KS_ALIAS=${{ secrets.TEXTRCS_KS_ALIAS }}" >> "$GITHUB_ENV"
+            echo "KS_PASS=${{ secrets.TEXTRCS_KS_PASS }}"   >> "$GITHUB_ENV"
+          else
+            keytool -genkeypair -keystore "$KS" -alias textrcs -storepass textrcs-pass \
+              -keypass textrcs-pass -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=textrcs"
+            echo "KS_ALIAS=textrcs" >> "$GITHUB_ENV"
+            echo "KS_PASS=textrcs-pass" >> "$GITHUB_ENV"
+          fi
+          echo "KEYSTORE=$KS" >> "$GITHUB_ENV"
+
+      - name: Build the Rust engine .so (all 4 ABIs) + drop into the base tree
+        run: |
+          set -euo pipefail
+          export ANDROID_NDK_HOME="$ANDROID_SDK_ROOT/ndk/$NDK_VERSION"
+          echo "NDK: $ANDROID_NDK_HOME"; test -d "$ANDROID_NDK_HOME"
+          cd "$ENGINE_DIR"
+          bash build.sh
+          for abi in arm64-v8a armeabi-v7a x86 x86_64; do
+            so="jniLibs-out/$abi/libtextrcs_libgm.so"
+            [ -f "$so" ] || { echo "missing $so"; exit 1; }
+            cp "$so" "$GITHUB_WORKSPACE/textra_base/lib/$abi/libtextrcs_libgm.so"
+            echo "installed $abi ($(stat -c%s "$so") bytes)"
+          done
+
+      - name: Build + sign the APK
+        env:
+          PROJ: ${{ github.workspace }}
+        run: bash build.sh
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: textra2-apk
+          path: build/textra2.apk
+          if-no-files-found: error
