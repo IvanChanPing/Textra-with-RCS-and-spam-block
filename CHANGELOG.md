@@ -4,16 +4,16 @@ Ported the improved spam detection into `messaging-engine-rust/src/spam`. New `h
 political-spam detector — the rotating-number campaign/fundraising texts that number/domain blocklists
 can't catch: fundraising / GOTV / engagement + political-figure lexicons, a "≥2 strong signals" decision
 rule for a zero-false-positive stance, NFKC + zero-width normalization to defeat styled-Unicode evasion,
-and a trusted-sender allowlist. New `crowd.rs` is an opt-in shared spam-fingerprint feed: a rotation-proof
-content fingerprint (strips greeting/links/codes, keeps the sender number as a bonus signal), local match,
-report, and a pluggable transport (the community feed or a provider's own server, with GitHub
-`repository_dispatch` envelope support). Both are wired into `spam_classify` (crowd match → political
-heuristic → threat feeds, first hit wins), with new `spam_report_spam` / `spam_refresh_crowd` FFI
-functions and the crowd + `trusted_senders` config fields. `spam_classify` keeps its 2-arg signature.
-Added the `unicode-normalization` dependency. `cargo test`: 68 spam tests pass.
+and a trusted-sender allowlist. The heuristic is wired into `spam_classify` so it runs on every incoming
+message with default config, ahead of the existing threat-feed match. The FFI surface (`SpamConfig` and the
+exported functions) is unchanged — verified by regenerating the UniFFI Kotlin bindings and confirming they
+are byte-identical to the committed ones — so no Kotlin/smali change is needed; only the rebuilt `.so`
+carries the new behaviour. `crowd.rs` (a rotation-proof shared-fingerprint feed with a pluggable transport)
+is included for later use but is not wired into the FFI yet, since it needs a feed server. Added the
+`unicode-normalization` dependency. `cargo test`: 68 spam tests pass.
 
-Remaining to ship it in the APK: regenerate the UniFFI Kotlin bindings (`SpamConfig` gained fields),
-update the smali `spam_configure` caller, and rebuild the `.so` + APK.
+Shipping it: rebuild the `.so` (messaging-engine-rust/build.sh), drop the per-ABI `libtextrcs_libgm.so`
+into `textra_base/lib/<abi>/`, and repackage the APK.
 
 ## 2026-06-29 — GROQ flag-queue recovery (#13): +930 annotations recovered (zero Claude tokens)
 

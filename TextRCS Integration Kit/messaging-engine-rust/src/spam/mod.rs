@@ -42,7 +42,6 @@ use std::time::{SystemTime, UNIX_EPOCH};
 
 use once_cell::sync::Lazy;
 
-use crowd::{CrowdConfig, CrowdFeedStore};
 use engine::SpamLevel as InnerLevel;
 use feeds::{FeedKind as InnerFeedKind, FeedSource as InnerFeedSource};
 use heuristic::{classify_political, HeuristicConfig};
@@ -65,10 +64,6 @@ struct SpamState {
     number_reputation_header_value: String,
     feeds: Vec<InnerFeedSource>,
     store: IndicatorStore,
-    // --- crowd feed (opt-in shared fingerprint feed) ---
-    crowd_cfg: CrowdConfig,
-    crowd_store: CrowdFeedStore,
-    trusted_senders: Vec<String>,
 }
 
 impl Default for SpamState {
@@ -85,9 +80,6 @@ impl Default for SpamState {
             number_reputation_header_value: String::new(),
             feeds: Vec::new(),
             store: IndicatorStore::default(),
-            crowd_cfg: CrowdConfig::default(),
-            crowd_store: CrowdFeedStore::default(),
-            trusted_senders: Vec::new(),
         }
     }
 }
@@ -148,26 +140,6 @@ pub struct SpamConfig {
     pub number_reputation_header_name: String,
     /// Value for [number_reputation_header_name] (the API key/token). Empty = none.
     pub number_reputation_header_value: String,
-    /// Crowd feed (opt-in): master toggle. Off unless true AND a URL below is set.
-    pub crowd_enabled: bool,
-    /// URL to GET the shared crowd fingerprint feed. Empty = no download. A provider can
-    /// point this at the community feed OR their own server.
-    pub crowd_feed_url: String,
-    /// URL to POST a spam report (fingerprint) to. Empty = no upload.
-    pub crowd_report_url: String,
-    /// Optional request-header NAME sent on crowd feed/report calls (API key or attestation
-    /// token). Empty = no header.
-    pub crowd_auth_header_name: String,
-    /// Value for [crowd_auth_header_name]. Empty = none.
-    pub crowd_auth_header_value: String,
-    /// When non-empty, crowd reports are POSTed as a GitHub `repository_dispatch` envelope with
-    /// this `event_type` (use "crowd-report" + point crowd_report_url at `…/dispatches`). Empty =
-    /// POST the bare report to a provider endpoint.
-    pub crowd_dispatch_event_type: String,
-    /// Trusted senders never flagged by the political heuristic regardless of content
-    /// (e.g. "Eventbrite", your bank's short code, a campaign you opted into). Matched by
-    /// alphanumeric sender-ID or by digits. Feed/reputation checks still apply. Default empty.
-    pub trusted_senders: Vec<String>,
 }
 
 /// Severity level of a verdict. Mirrors `engine::SpamLevel`.
@@ -264,15 +236,6 @@ pub fn spam_configure(config: SpamConfig) {
     st.number_reputation_header_name = config.number_reputation_header_name;
     st.number_reputation_header_value = config.number_reputation_header_value;
     st.feeds = feeds;
-    st.crowd_cfg = CrowdConfig {
-        enabled: config.crowd_enabled,
-        feed_url: config.crowd_feed_url,
-        report_url: config.crowd_report_url,
-        auth_header_name: config.crowd_auth_header_name,
-        auth_header_value: config.crowd_auth_header_value,
-        dispatch_event_type: config.crowd_dispatch_event_type,
-    };
-    st.trusted_senders = config.trusted_senders;
     st.configured = true;
 
     // Warm the index from the on-disk cache so classification works immediately
@@ -284,12 +247,6 @@ pub fn spam_configure(config: SpamConfig) {
                 st.store = s;
             }
             Err(e) => log::warn!("spam: cache load failed ({e}); starting empty"),
-        }
-        // Crowd feed is cached beside the indicator cache (….crowd.json).
-        let cp = format!("{}.crowd.json", st.cache_path);
-        match CrowdFeedStore::load(std::path::Path::new(&cp)) {
-            Ok(s) => st.crowd_store = s,
-            Err(e) => log::warn!("spam: crowd cache load failed ({e})"),
         }
     }
 }
@@ -405,23 +362,18 @@ const CLEAN_FFI: fn() -> SpamVerdict = || SpamVerdict {
 /// Async because of step 3; the std RwLock guard is dropped before any `.await`.
 #[uniffi::export(async_runtime = "tokio")]
 pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
-    // Snapshot everything we need, then release the lock before any await. The crowd-feed match
-    // and the L0 political heuristic are pure/sync string scans, computed here under the read lock.
-    let (online_enabled, offline_verdict, crowd_verdict, heuristic_verdict, online_cfg) = {
+    // Snapshot everything we need, then release the lock before any await. The L0 political
+    // heuristic is a pure/sync string scan, computed here under the read lock.
+    let (online_enabled, offline_verdict, heuristic_verdict, online_cfg) = {
         let st = STATE.read().unwrap_or_else(|e| e.into_inner());
         if !st.enabled {
             return CLEAN_FFI();
         }
         let v = engine::classify_offline(&st.store, &text, &sender);
-        let crowd_v = crowd::match_feed(&st.crowd_store, &text, &sender);
-        // L0 political-spam heuristic (rotating-number campaign/fundraising texts), with the
-        // host's trusted-sender allowlist applied. is_known_contact is not part of this FFI's
-        // contract, so it's false here (a trusted sender is exempted via trusted_senders).
-        let hcfg = HeuristicConfig {
-            trusted_senders: st.trusted_senders.clone(),
-            ..HeuristicConfig::default()
-        };
-        let heur_v = classify_political(&text, &sender, false, &hcfg);
+        // L0 political-spam heuristic (rotating-number campaign/fundraising texts that
+        // number/domain blocklists can't catch). Runs on every message with default config;
+        // is_known_contact is not part of this FFI's contract, so it's false here.
+        let heur_v = classify_political(&text, &sender, false, &HeuristicConfig::default());
         let cfg = online::OnlineConfig {
             safebrowsing_api_key: st.safebrowsing_api_key.clone(),
             number_reputation_url_template: st.number_reputation_url_template.clone(),
@@ -429,13 +381,10 @@ pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
             number_reputation_header_name: st.number_reputation_header_name.clone(),
             number_reputation_header_value: st.number_reputation_header_value.clone(),
         };
-        (st.online_enabled, v, crowd_v, heur_v, cfg)
+        (st.online_enabled, v, heur_v, cfg)
     };
 
-    // Fast offline signals first (no network): crowd feed → political heuristic → threat feeds.
-    if let Some(v) = crowd_verdict {
-        return verdict_to_ffi(v);
-    }
+    // Fast offline signals first (no network): political heuristic → threat feeds.
     if let Some(v) = heuristic_verdict {
         return verdict_to_ffi(v);
     }
@@ -497,63 +446,6 @@ pub async fn spam_classify(text: String, sender: String) -> SpamVerdict {
 
     // Offline clean, online not used.
     verdict_to_ffi(offline_verdict)
-}
-
-/// Report a message the app/user classified as spam to the crowd feed (opt-in). Builds a
-/// privacy-preserving fingerprint (raw text never leaves the device) and POSTs it. `reporter_id`
-/// is an anonymous per-install id supplied by Kotlin so the server can count distinct reporters.
-/// Returns true on success; safe no-op (false) if the crowd feed isn't configured. Async.
-#[uniffi::export(async_runtime = "tokio")]
-pub async fn spam_report_spam(text: String, sender: String, reporter_id: String) -> bool {
-    let (cfg, report) = {
-        let st = STATE.read().unwrap_or_else(|e| e.into_inner());
-        if !st.crowd_cfg.can_report() {
-            return false;
-        }
-        (
-            st.crowd_cfg.clone(),
-            crowd::build_report(&text, &sender, &reporter_id, now_unix()),
-        )
-    };
-    match crowd::submit_report(&cfg, &report).await {
-        Ok(()) => true,
-        Err(e) => {
-            log::warn!("spam: crowd report failed ({e})");
-            false
-        }
-    }
-}
-
-/// Download + install the shared crowd fingerprint feed (opt-in). On success replaces the
-/// in-memory feed and persists it beside the indicator cache; on failure the previous feed is
-/// kept. Returns true if a feed was installed. Async — a periodic WorkManager job calls this.
-#[uniffi::export(async_runtime = "tokio")]
-pub async fn spam_refresh_crowd() -> bool {
-    let (cfg, cache_path) = {
-        let st = STATE.read().unwrap_or_else(|e| e.into_inner());
-        (st.crowd_cfg.clone(), st.cache_path.clone())
-    };
-    if !cfg.can_fetch() {
-        return false;
-    }
-    match crowd::fetch_feed(&cfg).await {
-        Ok(reports) => {
-            let store = CrowdFeedStore::from_reports(&reports, now_unix());
-            let mut st = STATE.write().unwrap_or_else(|e| e.into_inner());
-            st.crowd_store = store;
-            if !cache_path.is_empty() {
-                let cp = format!("{cache_path}.crowd.json");
-                if let Err(e) = st.crowd_store.save(std::path::Path::new(&cp)) {
-                    log::warn!("spam: crowd cache save failed ({e})");
-                }
-            }
-            true
-        }
-        Err(e) => {
-            log::warn!("spam: crowd feed refresh failed ({e})");
-            false
-        }
-    }
 }
 
 /// Snapshot of engine status for the settings/diagnostics screen.
