@@ -87,13 +87,19 @@
 
     const/4 v2, 0x7
 
-    const-wide/16 v0, 0x96
+    invoke-static {}, Lcom/textrcs/anim/PopupAnimHooks;->fadeMs()J
 
-    const-wide/16 v0, 0x96
+    move-result-wide v0
 
     const/4 v2, 0x5
 
     invoke-virtual {p2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    invoke-static {}, Lcom/textrcs/anim/PopupAnimHooks;->interpolator()Landroid/animation/TimeInterpolator;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     const/4 v2, 0x3
 
