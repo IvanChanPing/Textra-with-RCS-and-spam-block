@@ -105,28 +105,28 @@
 
     invoke-static {p7, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 256
+    .line 276
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 257
+    .line 277
     iput-object p1, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->messageId:Ljava/lang/String;
 
-    .line 258
+    .line 278
     iput-object p2, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->sender:Ljava/lang/String;
 
-    .line 259
+    .line 279
     iput-object p3, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->body:Ljava/lang/String;
 
-    .line 260
+    .line 280
     iput-wide p4, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->timestampMs:J
 
-    .line 261
+    .line 281
     iput-object p6, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->level:Ljava/lang/String;
 
-    .line 262
+    .line 282
     iput-object p7, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->reason:Ljava/lang/String;
 
-    .line 256
+    .line 276
     return-void
 .end method
 
@@ -393,7 +393,7 @@
 .method public final getBody()Ljava/lang/String;
     .registers 2
 
-    .line 259
+    .line 279
     iget-object v0, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->body:Ljava/lang/String;
 
     return-object v0
@@ -402,7 +402,7 @@
 .method public final getLevel()Ljava/lang/String;
     .registers 2
 
-    .line 261
+    .line 281
     iget-object v0, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->level:Ljava/lang/String;
 
     return-object v0
@@ -411,7 +411,7 @@
 .method public final getMessageId()Ljava/lang/String;
     .registers 2
 
-    .line 257
+    .line 277
     iget-object v0, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->messageId:Ljava/lang/String;
 
     return-object v0
@@ -420,7 +420,7 @@
 .method public final getReason()Ljava/lang/String;
     .registers 2
 
-    .line 262
+    .line 282
     iget-object v0, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->reason:Ljava/lang/String;
 
     return-object v0
@@ -429,7 +429,7 @@
 .method public final getSender()Ljava/lang/String;
     .registers 2
 
-    .line 258
+    .line 278
     iget-object v0, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->sender:Ljava/lang/String;
 
     return-object v0
@@ -438,7 +438,7 @@
 .method public final getTimestampMs()J
     .registers 3
 
-    .line 260
+    .line 280
     iget-wide v0, p0, Lcom/textrcs/spam/SpamGuard$BlockedEntry;->timestampMs:J
 
     return-wide v0

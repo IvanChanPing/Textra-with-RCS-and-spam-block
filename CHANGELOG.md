@@ -1,3 +1,21 @@
+## 2026-07-05 — Spam: "Spam filter" settings menu; default action = add to Textra's block list
+
+Added a **Spam filter** row to Textra's own Settings (under *More nuisance control*, next to
+Blacklist) — no separate launcher icon anymore. It opens the scam/spam settings screen.
+
+The action taken on a flagged spam message is now user-selectable, defaulting to the block list:
+- **Add to block list (default)** — the new `TextraBlocklist` adds the sender to Textra's native
+  blocklist (the exact native `y1.c.l(long, r4.n)` block action) *before* the message is written,
+  so Textra's own receive handler files it silently in the blocked conversation with no notification,
+  and keeps doing so for every future message from that number.
+- **Delete** — drops the message; a copy is kept in the Spam log so a false positive is recoverable.
+
+Files: new `inject_src/com/textrcs/bridge/TextraBlocklist.kt`; `SpamGuard` actions
+(`ACTION_BLOCK`/`ACTION_DELETE`/`ACTION_DELIVER`) with `maybeBlock` reworked to block-then-deliver or
+delete; `SpamSettingsActivity` action control → Block/Delete; a "Spam filter" row injected into
+`SettingsActivity.smali`; the `SpamSettingsActivity` launcher intent-filter removed from the manifest.
+APK: `textra2.apk`.
+
 ## 2026-07-04 — CI: build the APK on GitHub Actions (`.github/workflows/build-apk.yml`)
 
 Added a `build-apk` workflow that reproduces the local pipeline on a clean runner: build the Rust

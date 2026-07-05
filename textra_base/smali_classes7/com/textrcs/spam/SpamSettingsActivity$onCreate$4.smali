@@ -70,7 +70,7 @@
     .registers 3
     .param p1, "p1"    # Ljava/lang/Object;
 
-    .line 114
+    .line 115
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Boolean;
@@ -90,27 +90,27 @@
     .registers 5
     .param p1, "on"    # Z
 
-    .line 115
+    .line 116
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
-    .line 116
+    .line 117
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity$onCreate$4;->this$0:Lcom/textrcs/spam/SpamSettingsActivity;
 
     check-cast v1, Landroid/content/Context;
 
     if-eqz p1, :cond_b
 
-    const-string v2, "block"
+    const-string v2, "delete"
 
     goto :goto_d
 
     :cond_b
-    const-string v2, "deliver"
+    const-string v2, "block"
 
-    .line 115
+    .line 116
     :goto_d
     invoke-virtual {v0, v1, v2}, Lcom/textrcs/spam/SpamGuard;->setFlagAction(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 118
+    .line 119
     return-void
 .end method

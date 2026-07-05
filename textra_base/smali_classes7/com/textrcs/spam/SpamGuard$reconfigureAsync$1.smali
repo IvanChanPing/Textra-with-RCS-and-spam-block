@@ -163,7 +163,7 @@
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 349
+    .line 369
     iget v0, p0, Lcom/textrcs/spam/SpamGuard$reconfigureAsync$1;->label:I
 
     packed-switch v0, :pswitch_data_1e

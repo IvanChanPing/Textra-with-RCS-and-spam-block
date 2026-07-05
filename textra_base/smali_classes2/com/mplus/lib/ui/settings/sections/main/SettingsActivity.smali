@@ -1067,6 +1067,30 @@
 
     invoke-virtual {v0, p1, v2}, Lcom/mplus/lib/x7/f;->n0(Lcom/mplus/lib/x7/g;I)V
 
+    # [TextRCS] "Spam filter" settings row — opens com.textrcs.spam.SpamSettingsActivity, placed
+    # immediately after the Blacklist row (same "More nuisance control" category). Cloned from the
+    # native activity-opening row pattern (Y6/a + Intent, added via x7/f->n0); title set with the
+    # String overload x7/g->u(CharSequence) so no new string resource is needed.
+    new-instance p1, Lcom/mplus/lib/Y6/a;
+
+    invoke-direct {p1, p0}, Lcom/mplus/lib/x7/m;-><init>(Lcom/mplus/lib/x5/l;)V
+
+    const-string v0, "Spam filter"
+
+    invoke-virtual {p1, v0}, Lcom/mplus/lib/x7/g;->u(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/textrcs/spam/SpamSettingsActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iput-object v0, p1, Lcom/mplus/lib/x7/m;->o:Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/mplus/lib/x7/c;->v:Lcom/mplus/lib/x7/f;
+
+    invoke-virtual {v0, p1, v2}, Lcom/mplus/lib/x7/f;->n0(Lcom/mplus/lib/x7/g;I)V
+
     new-instance p1, Lcom/mplus/lib/x7/j;
 
     const/4 v8, 0x4

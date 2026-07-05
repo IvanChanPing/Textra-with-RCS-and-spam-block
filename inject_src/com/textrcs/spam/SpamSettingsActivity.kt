@@ -23,26 +23,27 @@ import android.widget.Toast
  *
  * WHAT THIS IS / HOW IT'S REACHED
  * -------------------------------
- * A standalone settings Activity (its own launcher icon, label "Textra Spam
- * Filter", declared in AndroidManifest with a MAIN/LAUNCHER intent-filter) that
- * lets the user turn the on-device scam/spam protection on/off and configure it.
- * It is the UI front-end for [SpamGuard]; every control reads/writes the
- * `textrcs_spam` prefs through SpamGuard and re-pushes the config to the Rust
- * engine OFF the main thread.
+ * The scam/spam settings screen, opened from a "Spam filter" row injected into
+ * Textra's own Settings under the "More nuisance control" category (next to
+ * Blacklist) — no separate launcher icon. It lets the user turn the on-device
+ * scam/spam protection on/off and configure it. It is the UI front-end for
+ * [SpamGuard]; every control reads/writes the `textrcs_spam` prefs through
+ * SpamGuard and re-pushes the config to the Rust engine OFF the main thread.
  *
- * WHY A SEPARATE LAUNCHER SCREEN
- * ------------------------------
- * This app is a decompiled-Textra + injected-Kotlin build; injecting controls
- * into Textra's own (smali) settings is fragile, so — exactly like the existing
- * injected `PairingActivity` — this is a self-contained programmatically-built
- * screen (no layout XML / host R class). A launcher icon makes it reachable with
- * zero adb and zero per-boot steps.
+ * WHY A PROGRAMMATIC SCREEN
+ * -------------------------
+ * This app is a decompiled-Textra + injected-Kotlin build, so — exactly like the
+ * existing injected `PairingActivity` — this is a self-contained programmatically-
+ * built screen (no layout XML / host R class). The Textra Settings row launches it
+ * with an explicit Intent.
  *
  * CONTROLS (top → bottom)
  * -----------------------
  *   • statusText            — small grey multi-line label: indicator count, last
  *                             refresh time, enabled/online state.
  *   • masterSwitch          — big switch "Scam & spam protection".
+ *   • deleteSwitch          — switch "Delete flagged spam (instead of blocking the sender)";
+ *                             off (default) = add sender to Textra's block list, on = delete.
  *   • onlineSwitch          — switch "Online lookups (Safe Browsing)" + red caption
  *                             warning it sends links/number off the device.
  *   • safeBrowsingKeyField  — single-line text field for the Safe Browsing API key.
@@ -56,9 +57,8 @@ import android.widget.Toast
  * THREADING: SpamGuard setters reconfigure on a background scope; status is read
  * on a worker thread and posted back. Nothing slow runs on the UI thread.
  *
- * HOW TO TEST — open the "Textra Spam Filter" icon; toggle protection; check the
- * status line updates after "Refresh threat feeds now". Status: compile-only here
- * (no device in build env) — the click-path is UNVERIFIED until run on a phone.
+ * HOW TO TEST — open Settings → More nuisance control → Spam filter; toggle protection
+ * and the Delete switch; check the status line updates after "Refresh threat feeds now".
  */
 class SpamSettingsActivity : Activity() {
 
@@ -66,7 +66,7 @@ class SpamSettingsActivity : Activity() {
 
     private lateinit var statusText: TextView
     private lateinit var masterSwitch: Switch
-    private lateinit var blockSwitch: Switch
+    private lateinit var deleteSwitch: Switch
     private lateinit var onlineSwitch: Switch
     private lateinit var safeBrowsingKeyField: EditText
     private lateinit var urlhausField: EditText
@@ -109,19 +109,21 @@ class SpamSettingsActivity : Activity() {
         }
         root.addView(masterSwitch)
 
-        // blockSwitch — what to DO with a flagged message. ON (default) = hold it in the Spam log,
-        // never delivered, no notification. OFF = deliver it but record a verdict (badge/log).
-        blockSwitch = makeSwitch("Block flagged spam (hold in Spam log)") { on ->
+        // deleteSwitch — what to DO with a flagged spam message. OFF (default) = add the sender to
+        // Textra's block list (the message is filed silently in the blocked conversation, no
+        // notification). ON = delete the message instead (a copy is kept in the Spam log).
+        deleteSwitch = makeSwitch("Delete flagged spam (instead of blocking the sender)") { on ->
             SpamGuard.setFlagAction(
-                this, if (on) SpamGuard.ACTION_BLOCK else SpamGuard.ACTION_DELIVER,
+                this, if (on) SpamGuard.ACTION_DELETE else SpamGuard.ACTION_BLOCK,
             )
         }
-        root.addView(blockSwitch)
+        root.addView(deleteSwitch)
 
-        // blockCaption — small grey explainer directly under the block switch.
+        // spamActionCaption — small grey explainer directly under the delete switch.
         root.addView(TextView(this).apply {
-            text = "On: a spam message is held in the Spam log and never reaches your inbox " +
-                "(no notification). Off: it is delivered but recorded so you can review it."
+            text = "Default (off): the sender is added to your block list and the message is filed " +
+                "silently in the blocked conversation — no notification. On: the message is deleted " +
+                "(a copy is kept in the Spam log so you can recover a false positive)."
             setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
             setTextColor(Color.GRAY)
             setPadding(dp(4), 0, 0, dp(8))
@@ -220,7 +222,7 @@ class SpamSettingsActivity : Activity() {
         super.onResume()
         // Populate controls from the persisted settings every time the screen shows.
         masterSwitch.isChecked = SpamGuard.isEnabled(this)
-        blockSwitch.isChecked = SpamGuard.getFlagAction(this) == SpamGuard.ACTION_BLOCK
+        deleteSwitch.isChecked = SpamGuard.getFlagAction(this) == SpamGuard.ACTION_DELETE
         onlineSwitch.isChecked = SpamGuard.isOnlineEnabled(this)
         safeBrowsingKeyField.setText(SpamGuard.getSafeBrowsingKey(this))
         urlhausField.setText(SpamGuard.getUrlhausFeedUrl(this))
