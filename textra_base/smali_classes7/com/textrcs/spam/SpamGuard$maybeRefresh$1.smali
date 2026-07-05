@@ -53,7 +53,7 @@
     f = "SpamGuard.kt"
     i = {}
     l = {
-        0xb5
+        0xb7
     }
     m = "invokeSuspend"
     n = {}
@@ -162,7 +162,7 @@
 
     move-result-object v1
 
-    .line 170
+    .line 172
     iget v2, p0, Lcom/textrcs/spam/SpamGuard$maybeRefresh$1;->label:I
 
     const-string v3, "TextRCSSpamGuard"
@@ -193,13 +193,13 @@
 
     goto/16 :goto_ac
 
-    .line 187
+    .line 189
     :catchall_1d
     move-exception v0
 
     goto/16 :goto_13d
 
-    .line 170
+    .line 172
     .end local v1    # "this":Lcom/textrcs/spam/SpamGuard$maybeRefresh$1;
     .end local p1    # "$result":Ljava/lang/Object;
     :pswitch_20
@@ -207,18 +207,18 @@
 
     move-object v2, p0
 
-    .line 171
+    .line 173
     .local v2, "this":Lcom/textrcs/spam/SpamGuard$maybeRefresh$1;
     .restart local p1    # "$result":Ljava/lang/Object;
     nop
 
-    .line 172
+    .line 174
     :try_start_25
     invoke-static {}, Luniffi/textrcs_libgm/Textrcs_libgmKt;->spamStatus()Luniffi/textrcs_libgm/SpamStatus;
 
     move-result-object v4
 
-    .line 173
+    .line 175
     .local v4, "st":Luniffi/textrcs_libgm/SpamStatus;
     invoke-virtual {v4}, Luniffi/textrcs_libgm/SpamStatus;->getEnabled()Z
 
@@ -230,7 +230,7 @@
 
     return-object v0
 
-    .line 174
+    .line 176
     :cond_32
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -240,7 +240,7 @@
 
     div-long/2addr v5, v7
 
-    .line 175
+    .line 177
     .local v5, "nowS":J
     invoke-virtual {v4}, Luniffi/textrcs_libgm/SpamStatus;->getLastRefreshUnix()J
 
@@ -248,7 +248,7 @@
 
     sub-long/2addr v5, v7
 
-    .line 176
+    .line 178
     .local v5, "age":J
     invoke-virtual {v4}, Luniffi/textrcs_libgm/SpamStatus;->getLastRefreshUnix()J
 
@@ -266,7 +266,7 @@
 
     if-gez v7, :cond_81
 
-    .line 177
+    .line 179
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +311,7 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
+    .line 180
     nop
 
     .end local v4    # "st":Luniffi/textrcs_libgm/SpamStatus;
@@ -320,7 +320,7 @@
 
     return-object v0
 
-    .line 180
+    .line 182
     .restart local v5    # "age":J
     :cond_81
     new-instance v4, Ljava/lang/StringBuilder;
@@ -353,7 +353,7 @@
 
     check-cast v4, Lkotlin/coroutines/Continuation;
 
-    .line 181
+    .line 183
     .end local v5    # "age":J
     const/4 v5, 0x1
 
@@ -367,23 +367,23 @@
 
     if-ne v4, v1, :cond_aa
 
-    .line 170
+    .line 172
     return-object v1
 
-    .line 181
+    .line 183
     :cond_aa
     move-object v1, p1
 
     move-object p1, v4
 
-    .line 170
+    .line 172
     .end local p1    # "$result":Ljava/lang/Object;
     .local v1, "$result":Ljava/lang/Object;
     :goto_ac
     :try_start_ac
     check-cast p1, Luniffi/textrcs_libgm/SpamRefreshResult;
 
-    .line 183
+    .line 185
     .local p1, "r":Luniffi/textrcs_libgm/SpamRefreshResult;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -441,10 +441,10 @@
 
     move-result-object v4
 
-    .line 182
+    .line 184
     invoke-static {v4}, Lcom/textrcs/diag/ScreenTracer;->note(Ljava/lang/String;)V
 
-    .line 185
+    .line 187
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -485,7 +485,7 @@
 
     move-result-object v0
 
-    .line 186
+    .line 188
     invoke-virtual {p1}, Luniffi/textrcs_libgm/SpamRefreshResult;->getFeeds()Ljava/util/List;
 
     move-result-object v4
@@ -518,7 +518,7 @@
 
     move-result-object v4
 
-    .line 185
+    .line 187
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -533,7 +533,7 @@
 
     goto :goto_16b
 
-    .line 187
+    .line 189
     .end local p1    # "r":Luniffi/textrcs_libgm/SpamRefreshResult;
     :catchall_137
     move-exception v0
@@ -551,7 +551,7 @@
 
     move-object v1, v2
 
-    .line 188
+    .line 190
     .end local v2    # "this":Lcom/textrcs/spam/SpamGuard$maybeRefresh$1;
     .local v0, "e":Ljava/lang/Throwable;
     .local v1, "this":Lcom/textrcs/spam/SpamGuard$maybeRefresh$1;
@@ -602,7 +602,7 @@
 
     move-object v1, p1
 
-    .line 190
+    .line 192
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local p1    # "$result":Ljava/lang/Object;
     .local v1, "$result":Ljava/lang/Object;

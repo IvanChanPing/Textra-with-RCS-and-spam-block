@@ -27,7 +27,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nComparisons.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Comparisons.kt\nkotlin/comparisons/ComparisonsKt__ComparisonsKt$compareByDescending$1\n+ 2 SpamGuard.kt\ncom/textrcs/spam/SpamGuard\n*L\n1#1,328:1\n304#2:329\n*E\n"
+    value = "SMAP\nComparisons.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Comparisons.kt\nkotlin/comparisons/ComparisonsKt__ComparisonsKt$compareByDescending$1\n+ 2 SpamGuard.kt\ncom/textrcs/spam/SpamGuard\n*L\n1#1,328:1\n324#2:329\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;

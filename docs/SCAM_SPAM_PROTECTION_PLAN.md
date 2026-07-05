@@ -4,6 +4,76 @@
 **Goal:** Research all viable scam-text / spam-SMS protection techniques, then implement the
 best-fit ones ON-DEVICE inside the Rust messaging engine (`textrcs_libgm`).
 
+**2026-07-05 (BUILT + SERVED) — SHIPPED to APK, device-test pending.** build.sh GREEN: kotlinc clean
+(TextraBlocklist/SpamGuard/SpamSettingsActivity compile), apktool b + signed → build/textra2.apk (102MB).
+Verified IN the APK (unzip+strings): com/textrcs/bridge/TextraBlocklist, com/textrcs/spam/SpamSettingsActivity,
+the "Spam filter" row string, com/mplus/lib/y1/c, 4× libtextrcs_libgm.so. Served
+https://204-168-163-118.sslip.io/trackers/static/textra2.apk + repo-root textra2.apk (md5
+a6e1768353c4e6a2df359d4416d716f7). Kotlin COMPILES + smali/manifest ASSEMBLE; NOT device-verified: the
+reflection resolving obfuscated names at runtime, the settings-row render+click, silent-file-no-notification.
+NEXT (user device test): install → Settings → More nuisance control → tap "Spam filter" (screen opens);
+leave Delete OFF → text yourself a spam-heuristic-tripping message → sender should appear in Settings→Blacklist
++ message filed silently, NO notification. Toggle Delete ON → next spam text dropped (copy in Spam log).
+Log: `adb logcat -s TextRCSSpamGuard TextRCSBlocklist TextRCSIncoming`.
+
+**2026-07-05 — VERDICT-ACTION DESIGN (user): engine stays verdict-only; the APP acts on the verdict.
+Want: a switch IN Textra's own Settings (NOT a separate launcher icon) choosing what happens to a
+flagged msg: (1) BLOCK = add number to Textra's NATIVE blocklist (silent, filed in blocked convo);
+(2) DELETE = drop it. Default = (1).**
+VERIFIED THIS SESSION (code read):
+- Settings screen + action toggle ALREADY EXIST: `SpamSettingsActivity.kt` (master + `blockSwitch`
+  "Block flagged spam") + `SpamGuard.getFlagAction/setFlagAction` (ACTION_BLOCK|ACTION_DELIVER,
+  default BLOCK). BUT current BLOCK = withhold to OUR OWN in-app "Spam log" (SharedPreferences
+  `textrcs_spam_blocked`, read by SpamLogActivity) via `maybeBlock()` called sync BEFORE writeIncoming
+  (IncomingMessageHandler:519). That is a THIRD behaviour, NOT the native blocklist.
+- SpamSettingsActivity currently has its OWN `MAIN/LAUNCHER` intent-filter (the icon the user does NOT
+  want). "In the app" = inject a row into Textra's native SettingsActivity + drop that intent-filter.
+- Textra native Settings (`p521ui/settings/sections/main/SettingsActivity.java`) builds rows
+  programmatically; has a **"More nuisance control"** category (R.string.settings_more_nuisance_control)
+  already holding the **Blacklist** row (R.string.blacklisted_title → BlacklistedActivity) + "Unknown
+  contacts". Natural home for a "Spam filter" row (smali injection into the obfuscated onCreate list-build).
+- NATIVE BLOCKLIST behaviour (C5217d.m7457U `c5.d.U`, lines 256-277): blacklist = a per-CONVERSATION
+  flag (`C6894H.m8768n0(recipients).f15355C.mo6623h()`). If blacklisted → sets `m8720M.f15290m=false`
+  (suppresses notify) and STILL stores the msg (`m7461Y`) → filed silently in the blocked convo, NO
+  notification. Persistent (all future msgs). Block dialog = C5020c (`block_number_dialog`, per-number).
+- ENFORCEMENT REACHES OUR PATH: `TextraDbBridge.writeIncoming` (1:1 SMS) delivers via `c5.d.P()`→`c5.d.U`
+  (bridge lines 67-77) = the SAME handler that checks the blacklist (line 258 "convo is blacklisted").
+  ⇒ adding the number to Textra's native blocklist WILL silently file our relayed 1:1 SMS. CAVEAT:
+  writeIncomingGroup/MMS use the r4.H.F0 full-store path (bypasses c5.d.U) → native blocklist NOT applied
+  to group/MMS (minor; spam≈all 1:1 SMS). Option (2) DELETE = just skip writeIncoming+markSeen on our path
+  (fully in our control, no native dep; tradeoff = no recoverable record for a false positive).
+- NATIVE BLOCK API TRACED (VERIFIED): block dialog OK (ViewOnClickListenerC2769m case 15) →
+  `AbstractC7685c.m9891l(convoId, C6938n recipients)` which does: (1) `m8768n0(recipients).f15355C.set(true)`
+  (set per-convo "blacklist" contact_settings row true; f15355C=C4020f("blacklist"), setter=C4020f.set(Boolean)),
+  (2) store recipient blob in f15356D (so it lists in BlacklistedActivity even with NO convo — j==-100 ok),
+  (3) if convo exists (j!=-100) `m8762d0(j)`, (4) refresh mgr `C4659a.m7076S()`, (5) dismiss notifs
+  `C3803i.m6285h0(recipients)`. Recipient from a raw number = `new C6938n(new C6934l(num,num))`; convo lookup =
+  `C6894H.m8755V(c6938n.mo8870d())` (nullable → j=-100). So blocking works WITHOUT a pre-existing convo (keyed
+  by contact lookup_key).
+- DESIGN (user-confirmed 2026-07-05): BLOCK-THEN-DELIVER ordering. On spam+BLOCK, in `maybeBlock` (which
+  already runs BEFORE writeIncoming), call the native block for the sender, then RETURN FALSE so delivery
+  proceeds → `writeIncoming`→`c5.d.U` sees the convo blacklisted → sets f15290m=false → silent file in the
+  blocked convo, NO notification. Order matters: blacklist BEFORE the write, else the first msg notifies.
+  (Current maybeBlock DROPs to our own Spam log — REPLACE that with native-block-then-deliver for the BLOCK
+  option.) DELETE option = drop (skip writeIncoming+markSeen). Default = BLOCK.
+- NOTIFY-SUPPRESSION VERIFIED: blacklisted→`m8720M.f15290m=false` (C5217d.m7457U:259); f15290m (C6931j0:68
+  default true) is consumed by the notify-decision gate (C6894H:484, propagated :457). = Textra's own blocked-
+  number path → no notification (shipping behaviour). On-device test confirms first-msg shows nothing.
+SMALI NAMES VERIFIED (textra_base 2026-07-05): native block = `com.mplus.lib.y1.c.l(J, com.mplus.lib.r4.n)`
+(static void, y1/c.smali:3485 — sets r4.p->C blacklist field + Base64-encodes recips). Helpers: r4.H.X()
+(singleton) / V(String)→r4.s (find convo) / n0(r4.n)→r4.p (get settings); r4.s.a(J id)/.b(r4.n recips);
+r4.n(<init>(r4.l))/.d()→String key; r4.l(<init>(String,String)); blacklist field = r4.p.C (T4.f), "blacklist"
+const-string present.
+BUILT THIS TURN (Kotlin, compile pending build.sh; no NDK/device here): NEW inject_src/com/textrcs/bridge/
+TextraBlocklist.kt (reflects y1.c.l to add a number to Textra's native blocklist). SpamGuard actions now =
+ACTION_BLOCK (default; native-blocklist the sender + deliver → filed silently, no notif) / ACTION_DELETE
+(drop; keep a copy in the Spam log) / ACTION_DELIVER (verdict-only). maybeBlock rewired: BLOCK → TextraBlocklist.
+block()+return false; DELETE → logBlocked()+return true; DELIVER → return false. Caller (IncomingMessageHandler
+:519 `if(maybeBlock) {markSeen;return}`) unchanged — correct for both (drops only on DELETE).
+REMAINING: (a) repurpose SpamSettingsActivity action control → "Add to block list"(default)/"Delete" choice;
+(b) inject a "Spam filter" row into Textra SettingsActivity ("More nuisance control" category, next to Blacklist);
+(c) drop SpamSettingsActivity launcher intent-filter (no standalone icon); (d) build.sh → APK → user device-test.
+
 **2026-06-24 — ALL THREE FOLLOW-UPS DONE + DEVICE-VERIFIED on redroid x86_64.**
 (1) PATH B (generic API-key HEADER on the online number provider) — VERIFIED: configured the provider
     via the real Spam Settings UI at https://httpbin.org/headers with a marker header; an injected msg

@@ -70,10 +70,12 @@ object SpamGuard {
     private const val K_NUM_FLAG = "number_rep_flag_substr"  // marker; empty = off
     private const val K_NUM_HDR_NAME = "number_rep_header_name"  // API-key header name; empty = no header
     private const val K_NUM_HDR_VALUE = "number_rep_header_value" // API-key header value (token)
-    private const val K_FLAG_ACTION = "flag_action" // ACTION_BLOCK | ACTION_DELIVER
+    private const val K_FLAG_ACTION = "flag_action" // ACTION_BLOCK | ACTION_DELETE | ACTION_DELIVER
 
     /** What to do with a flagged message. Chosen in [SpamSettingsActivity]. */
-    const val ACTION_BLOCK = "block"     // withhold it (Spam log), never delivered
+    const val ACTION_BLOCK = "block"     // add sender to Textra's NATIVE blocklist; the msg is filed
+                                         // silently in the blocked conversation, no notification (default)
+    const val ACTION_DELETE = "delete"   // drop the msg entirely (a copy is kept in the Spam log for recovery)
     const val ACTION_DELIVER = "deliver" // deliver it, just record a verdict (badge/log)
 
     /** OpenPhish Community feed — keyless, 12h refresh (verified 2026-06-17). */
@@ -221,31 +223,49 @@ object SpamGuard {
     }
 
     /**
-     * BLOCK gate for the receive path. Called SYNCHRONOUSLY from
-     * [com.textrcs.receive.IncomingMessageHandler] BEFORE the message is written into Textra.
-     * Returns true iff the user's flag-action is "Block" AND the message is flagged by the fast
-     * on-device signals (offline L0 political heuristic + threat-feed match, NO network — the Rust
-     * [spamClassifyOffline]). When it returns true it has ALREADY recorded the message in the Spam
-     * log; the caller must then DROP the message (skip delivery, mark it seen) so no bubble and no
-     * notification are produced for it.
+     * Pre-delivery spam ACTION gate. Called SYNCHRONOUSLY from
+     * [com.textrcs.receive.IncomingMessageHandler] BEFORE the message is written into Textra, so the
+     * chosen action takes effect before delivery. Runs the FAST on-device classifier only
+     * ([spamClassifyOffline] — offline L0 political heuristic + threat-feed match, NO network).
      *
-     * Safe on the receive thread: the offline classify is a pure in-memory scan (no I/O, no
-     * network). In "Deliver + mark" mode it returns false immediately without classifying
-     * ([classifyAsync] handles the verdict-only logging on the delivered path instead).
-     * FAILS OPEN — any error → false (never withhold a message because of a classifier fault).
+     * Returns TRUE only when the caller must DROP the message (the "Delete" action). For the default
+     * "Add to block list" action it adds the sender to Textra's NATIVE blocklist
+     * ([com.textrcs.bridge.TextraBlocklist.block]) and returns FALSE so delivery proceeds — Textra's
+     * own receive handler (c5.d.U) then sees the just-blacklisted conversation and files the message
+     * SILENTLY into the blocked conversation with no notification. Order is the whole point:
+     * blacklist BEFORE the write, else the first message would notify.
+     *
+     * Actions (from [getFlagAction], default [ACTION_BLOCK]):
+     *   ACTION_BLOCK   → native-blocklist the sender, return false (delivered silently). [default]
+     *   ACTION_DELETE  → keep a copy in the Spam log, return true (caller drops it).
+     *   ACTION_DELIVER → return false immediately without classifying ([classifyAsync] logs a verdict
+     *                    on the delivered path instead).
+     *
+     * Safe on the receive thread (offline classify = pure in-memory scan). FAILS OPEN — any error →
+     * false, so a classifier/blocklist fault never withholds or drops a message.
      */
     fun maybeBlock(context: Context, messageId: String, sender: String, body: String): Boolean {
         if (Hooks.shouldSkip("spam_classify_skip")) return false
-        if (getFlagAction(context) != ACTION_BLOCK) return false
+        val action = getFlagAction(context)
+        if (action == ACTION_DELIVER) return false
         ensureConfigured(context)
         return try {
             val v = spamClassifyOffline(body, sender)
             if (v.level == SpamLevel.CLEAN) return false
             val reason = v.reasons.firstOrNull() ?: v.level.name
-            Log.w(TAG, "BLOCK msg=$messageId from.tail=${sender.takeLast(4)} ${v.level} :: $reason")
-            ScreenTracer.note("SPAM BLOCK ${v.level} from.tail=${sender.takeLast(4)} $reason")
-            logBlocked(context, messageId, sender, body, v)
-            true
+            if (action == ACTION_DELETE) {
+                Log.w(TAG, "SPAM-DELETE msg=$messageId from.tail=${sender.takeLast(4)} ${v.level} :: $reason")
+                ScreenTracer.note("SPAM DELETE ${v.level} from.tail=${sender.takeLast(4)} $reason")
+                logBlocked(context, messageId, sender, body, v) // recoverable copy in the Spam log
+                true // caller drops it
+            } else {
+                // ACTION_BLOCK (default): add to Textra's native blocklist, then let it deliver so
+                // c5.d.U files it silently into the blocked conversation (no notification).
+                val added = com.textrcs.bridge.TextraBlocklist.block(context, sender)
+                Log.w(TAG, "SPAM-BLOCKLIST msg=$messageId from.tail=${sender.takeLast(4)} ${v.level} :: $reason (added=$added)")
+                ScreenTracer.note("SPAM BLOCKLIST ${v.level} from.tail=${sender.takeLast(4)} added=$added")
+                false // deliver → filed silently by the blocked-conversation path
+            }
         } catch (e: Throwable) {
             Log.w(TAG, "maybeBlock failed msg=$messageId: ${e.javaClass.simpleName}: ${e.message}")
             false

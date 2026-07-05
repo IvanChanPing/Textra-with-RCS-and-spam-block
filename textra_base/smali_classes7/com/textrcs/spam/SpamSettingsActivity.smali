@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSpamSettingsActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpamSettingsActivity.kt\ncom/textrcs/spam/SpamSettingsActivity\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,304:1\n1#2:305\n*E\n"
+    value = "SMAP\nSpamSettingsActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpamSettingsActivity.kt\ncom/textrcs/spam/SpamSettingsActivity\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,306:1\n1#2:307\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -16,7 +16,7 @@
         "Lcom/textrcs/spam/SpamSettingsActivity;",
         "Landroid/app/Activity;",
         "()V",
-        "blockSwitch",
+        "deleteSwitch",
         "Landroid/widget/Switch;",
         "mainHandler",
         "Landroid/os/Handler;",
@@ -66,7 +66,7 @@
 
 
 # instance fields
-.field private blockSwitch:Landroid/widget/Switch;
+.field private deleteSwitch:Landroid/widget/Switch;
 
 .field private final mainHandler:Landroid/os/Handler;
 
@@ -198,27 +198,27 @@
     .registers 5
     .param p1, "top"    # I
 
-    .line 300
+    .line 302
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 301
+    .line 303
     nop
 
-    .line 300
+    .line 302
     const/4 v1, -0x1
 
     const/4 v2, -0x2
 
     invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 302
+    .line 304
     move-object v1, v0
 
-    .line 305
+    .line 307
     .local v1, "$this$fullWidthTopMargin_u24lambda_u2419":Landroid/widget/LinearLayout$LayoutParams;
     const/4 v2, 0x0
 
-    .line 302
+    .line 304
     .local v2, "$i$a$-apply-SpamSettingsActivity$fullWidthTopMargin$1":I
     iput p1, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
@@ -231,7 +231,7 @@
     .registers 8
     .param p1, "text"    # Ljava/lang/String;
 
-    .line 285
+    .line 287
     new-instance v0, Landroid/widget/TextView;
 
     move-object v1, p0
@@ -245,7 +245,7 @@
     .local v1, "$this$label_u24lambda_u2417":Landroid/widget/TextView;
     const/4 v2, 0x0
 
-    .line 286
+    .line 288
     .local v2, "$i$a$-apply-SpamSettingsActivity$label$1":I
     move-object v3, p1
 
@@ -253,14 +253,14 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 287
+    .line 289
     const/4 v3, 0x2
 
     const/high16 v4, 0x41500000    # 13.0f
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 288
+    .line 290
     invoke-virtual {v1}, Landroid/widget/TextView;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v3
@@ -269,7 +269,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    .line 289
+    .line 291
     const/16 v3, 0xc
 
     invoke-direct {p0, v3}, Lcom/textrcs/spam/SpamSettingsActivity;->dp(I)I
@@ -286,15 +286,15 @@
 
     invoke-virtual {v1, v5, v3, v5, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 290
+    .line 292
     nop
 
-    .line 285
+    .line 287
     .end local v1    # "$this$label_u24lambda_u2417":Landroid/widget/TextView;
     .end local v2    # "$i$a$-apply-SpamSettingsActivity$label$1":I
     nop
 
-    .line 290
+    .line 292
     return-object v0
 .end method
 
@@ -303,7 +303,7 @@
     .param p1, "hint"    # Ljava/lang/String;
     .param p2, "inputType"    # I
 
-    .line 293
+    .line 295
     new-instance v0, Landroid/widget/EditText;
 
     move-object v1, p0
@@ -317,7 +317,7 @@
     .local v1, "$this$makeField_u24lambda_u2418":Landroid/widget/EditText;
     const/4 v2, 0x0
 
-    .line 294
+    .line 296
     .local v2, "$i$a$-apply-SpamSettingsActivity$makeField$1":I
     move-object v3, p1
 
@@ -325,23 +325,23 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 295
+    .line 297
     invoke-virtual {v1, p2}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 296
+    .line 298
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 297
+    .line 299
     nop
 
-    .line 293
+    .line 295
     .end local v1    # "$this$makeField_u24lambda_u2418":Landroid/widget/EditText;
     .end local v2    # "$i$a$-apply-SpamSettingsActivity$makeField$1":I
     nop
 
-    .line 297
+    .line 299
     return-object v0
 .end method
 
@@ -362,7 +362,7 @@
         }
     .end annotation
 
-    .line 277
+    .line 279
     new-instance v0, Landroid/widget/Switch;
 
     move-object v1, p0
@@ -376,7 +376,7 @@
     .local v1, "$this$makeSwitch_u24lambda_u2416":Landroid/widget/Switch;
     const/4 v2, 0x0
 
-    .line 278
+    .line 280
     .local v2, "$i$a$-apply-SpamSettingsActivity$makeSwitch$1":I
     move-object v3, p1
 
@@ -384,14 +384,14 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/Switch;->setText(Ljava/lang/CharSequence;)V
 
-    .line 279
+    .line 281
     const/4 v3, 0x2
 
     const/high16 v4, 0x41800000    # 16.0f
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/Switch;->setTextSize(IF)V
 
-    .line 280
+    .line 282
     const/16 v3, 0xa
 
     invoke-direct {p0, v3}, Lcom/textrcs/spam/SpamSettingsActivity;->dp(I)I
@@ -406,22 +406,22 @@
 
     invoke-virtual {v1, v5, v4, v5, v3}, Landroid/widget/Switch;->setPadding(IIII)V
 
-    .line 281
+    .line 283
     new-instance v3, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda1;
 
     invoke-direct {v3, p2}, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda1;-><init>(Lkotlin/jvm/functions/Function1;)V
 
     invoke-virtual {v1, v3}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 282
+    .line 284
     nop
 
-    .line 277
+    .line 279
     .end local v1    # "$this$makeSwitch_u24lambda_u2416":Landroid/widget/Switch;
     .end local v2    # "$i$a$-apply-SpamSettingsActivity$makeSwitch$1":I
     nop
 
-    .line 282
+    .line 284
     return-object v0
 .end method
 
@@ -434,7 +434,7 @@
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 281
+    .line 283
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -453,7 +453,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 207
+    .line 209
     move-object v0, p0
 
     check-cast v0, Landroid/content/Context;
@@ -470,7 +470,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 208
+    .line 210
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
     move-object v1, p0
@@ -479,7 +479,7 @@
 
     invoke-virtual {v0, v1}, Lcom/textrcs/spam/SpamGuard;->refreshNow(Landroid/content/Context;)V
 
-    .line 210
+    .line 212
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->mainHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda6;
@@ -490,7 +490,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 211
+    .line 213
     return-void
 .end method
 
@@ -502,7 +502,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 210
+    .line 212
     invoke-direct {p0}, Lcom/textrcs/spam/SpamSettingsActivity;->updateStatus()V
 
     return-void
@@ -517,10 +517,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 134
+    .line 136
     nop
 
-    .line 135
+    .line 137
     new-instance v0, Landroid/content/Intent;
 
     move-object v1, p0
@@ -531,10 +531,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 134
+    .line 136
     invoke-virtual {p0, v0}, Lcom/textrcs/spam/SpamSettingsActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 137
+    .line 139
     return-void
 .end method
 
@@ -547,7 +547,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 199
+    .line 201
     invoke-direct {p0}, Lcom/textrcs/spam/SpamSettingsActivity;->onSave()V
 
     return-void
@@ -556,7 +556,7 @@
 .method private final onSave()V
     .registers 6
 
-    .line 235
+    .line 237
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
     move-object v1, p0
@@ -596,7 +596,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/textrcs/spam/SpamGuard;->setSafeBrowsingKey(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 236
+    .line 238
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
     move-object v1, p0
@@ -634,15 +634,15 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/textrcs/spam/SpamGuard;->setUrlhausFeedUrl(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 237
+    .line 239
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
-    .line 238
+    .line 240
     move-object v1, p0
 
     check-cast v1, Landroid/content/Context;
 
-    .line 239
+    .line 241
     iget-object v2, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberTemplateField:Landroid/widget/EditText;
 
     if-nez v2, :cond_58
@@ -672,7 +672,7 @@
 
     move-result-object v2
 
-    .line 240
+    .line 242
     iget-object v4, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberFlagField:Landroid/widget/EditText;
 
     if-nez v4, :cond_74
@@ -702,18 +702,18 @@
 
     move-result-object v4
 
-    .line 237
+    .line 239
     invoke-virtual {v0, v1, v2, v4}, Lcom/textrcs/spam/SpamGuard;->setNumberReputation(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 242
+    .line 244
     sget-object v0, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
-    .line 243
+    .line 245
     move-object v1, p0
 
     check-cast v1, Landroid/content/Context;
 
-    .line 244
+    .line 246
     iget-object v2, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderNameField:Landroid/widget/EditText;
 
     if-nez v2, :cond_98
@@ -743,7 +743,7 @@
 
     move-result-object v2
 
-    .line 245
+    .line 247
     iget-object v4, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderValueField:Landroid/widget/EditText;
 
     if-nez v4, :cond_b4
@@ -776,10 +776,10 @@
 
     move-result-object v3
 
-    .line 242
+    .line 244
     invoke-virtual {v0, v1, v2, v3}, Lcom/textrcs/spam/SpamGuard;->setNumberReputationHeader(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 247
+    .line 249
     move-object v0, p0
 
     check-cast v0, Landroid/content/Context;
@@ -796,28 +796,28 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 248
+    .line 250
     return-void
 .end method
 
 .method private final updateStatus()V
     .registers 3
 
-    .line 252
+    .line 254
     new-instance v0, Ljava/lang/Thread;
 
-    .line 271
+    .line 273
     new-instance v1, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda5;
 
     invoke-direct {v1, p0}, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda5;-><init>(Lcom/textrcs/spam/SpamSettingsActivity;)V
 
-    .line 252
+    .line 254
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 271
+    .line 273
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 272
+    .line 274
     return-void
 .end method
 
@@ -831,10 +831,10 @@
 
     invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 253
+    .line 255
     nop
 
-    .line 254
+    .line 256
     :try_start_8
     sget-object v1, Lcom/textrcs/spam/SpamGuard;->INSTANCE:Lcom/textrcs/spam/SpamGuard;
 
@@ -842,14 +842,14 @@
 
     move-result-object v1
 
-    .line 255
+    .line 257
     .local v1, "s":Luniffi/textrcs_libgm/SpamStatus;
     if-nez v1, :cond_12
 
-    .line 256
+    .line 258
     goto/16 :goto_88
 
-    .line 258
+    .line 260
     :cond_12
     invoke-virtual {v1}, Luniffi/textrcs_libgm/SpamStatus;->getLastRefreshUnix()J
 
@@ -865,7 +865,7 @@
 
     goto :goto_38
 
-    .line 259
+    .line 261
     :cond_1f
     new-instance v2, Ljava/text/SimpleDateFormat;
 
@@ -875,7 +875,7 @@
 
     invoke-direct {v2, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 260
+    .line 262
     new-instance v3, Ljava/util/Date;
 
     invoke-virtual {v1}, Luniffi/textrcs_libgm/SpamStatus;->getLastRefreshUnix()J
@@ -892,11 +892,11 @@
 
     move-result-object v2
 
-    .line 258
+    .line 260
     :goto_38
     nop
 
-    .line 261
+    .line 263
     .local v2, "last":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -926,23 +926,23 @@
 
     move-result-object v3
 
-    .line 262
+    .line 264
     nop
 
-    .line 261
+    .line 263
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 262
+    .line 264
     const-string v4, "\nProtection: "
 
-    .line 261
+    .line 263
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 263
+    .line 265
     invoke-virtual {v1}, Luniffi/textrcs_libgm/SpamStatus;->getEnabled()Z
 
     move-result v4
@@ -962,22 +962,22 @@
     :cond_6d
     move-object v4, v6
 
-    .line 261
+    .line 263
     :goto_6e
     :try_start_6e
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 263
+    .line 265
     const-string v4, "   Online: "
 
-    .line 261
+    .line 263
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 264
+    .line 266
     invoke-virtual {v1}, Luniffi/textrcs_libgm/SpamStatus;->getOnlineEnabled()Z
 
     move-result v4
@@ -989,7 +989,7 @@
     :cond_7f
     move-object v5, v6
 
-    .line 261
+    .line 263
     :goto_80
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1006,11 +1006,11 @@
     :goto_88
     goto :goto_a7
 
-    .line 266
+    .line 268
     :catchall_89
     move-exception v1
 
-    .line 267
+    .line 269
     .local v1, "e":Ljava/lang/Throwable;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1038,15 +1038,15 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
+    .line 270
     nop
 
-    .line 253
+    .line 255
     .end local v1    # "e":Ljava/lang/Throwable;
     :goto_a7
     nop
 
-    .line 270
+    .line 272
     .local v0, "text":Ljava/lang/String;
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->mainHandler:Landroid/os/Handler;
 
@@ -1056,7 +1056,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 271
+    .line 273
     return-void
 .end method
 
@@ -1073,7 +1073,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 270
+    .line 272
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->statusText:Landroid/widget/TextView;
 
     if-nez v0, :cond_14
@@ -1305,27 +1305,27 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 114
+    .line 115
     new-instance v1, Lcom/textrcs/spam/SpamSettingsActivity$onCreate$4;
 
     invoke-direct {v1, p0}, Lcom/textrcs/spam/SpamSettingsActivity$onCreate$4;-><init>(Lcom/textrcs/spam/SpamSettingsActivity;)V
 
     check-cast v1, Lkotlin/jvm/functions/Function1;
 
-    const-string v3, "Block flagged spam (hold in Spam log)"
+    const-string v3, "Delete flagged spam (instead of blocking the sender)"
 
     invoke-direct {p0, v3, v1}, Lcom/textrcs/spam/SpamSettingsActivity;->makeSwitch(Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Landroid/widget/Switch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->blockSwitch:Landroid/widget/Switch;
+    iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->deleteSwitch:Landroid/widget/Switch;
 
-    .line 119
-    iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->blockSwitch:Landroid/widget/Switch;
+    .line 120
+    iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->deleteSwitch:Landroid/widget/Switch;
 
     if-nez v1, :cond_c2
 
-    const-string v1, "blockSwitch"
+    const-string v1, "deleteSwitch"
 
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
@@ -1336,7 +1336,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 122
+    .line 123
     new-instance v1, Landroid/widget/TextView;
 
     move-object v3, p0
@@ -1350,23 +1350,23 @@
     .local v3, "$this$onCreate_u24lambda_u243":Landroid/widget/TextView;
     const/4 v7, 0x0
 
-    .line 123
+    .line 124
     .local v7, "$i$a$-apply-SpamSettingsActivity$onCreate$5":I
-    const-string v9, "On: a spam message is held in the Spam log and never reaches your inbox (no notification). Off: it is delivered but recorded so you can review it."
+    const-string v9, "Default (off): the sender is added to your block list and the message is filed silently in the blocked conversation \u2014 no notification. On: the message is deleted (a copy is kept in the Spam log so you can recover a false positive)."
 
     check-cast v9, Ljava/lang/CharSequence;
 
     invoke-virtual {v3, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 125
+    .line 127
     const/high16 v9, 0x41400000    # 12.0f
 
     invoke-virtual {v3, v6, v9}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 126
+    .line 128
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 127
+    .line 129
     const/4 v4, 0x4
 
     invoke-direct {p0, v4}, Lcom/textrcs/spam/SpamSettingsActivity;->dp(I)I
@@ -1379,17 +1379,17 @@
 
     invoke-virtual {v3, v11, v10, v10, v12}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 128
+    .line 130
     nop
 
-    .line 122
+    .line 123
     .end local v3    # "$this$onCreate_u24lambda_u243":Landroid/widget/TextView;
     .end local v7    # "$i$a$-apply-SpamSettingsActivity$onCreate$5":I
     check-cast v1, Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 131
+    .line 133
     new-instance v1, Landroid/widget/Button;
 
     move-object v3, p0
@@ -1403,7 +1403,7 @@
     .local v3, "$this$onCreate_u24lambda_u245":Landroid/widget/Button;
     const/4 v7, 0x0
 
-    .line 132
+    .line 134
     .local v7, "$i$a$-apply-SpamSettingsActivity$onCreate$6":I
     const-string v11, "View Spam log"
 
@@ -1411,22 +1411,22 @@
 
     invoke-virtual {v3, v11}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 133
+    .line 135
     new-instance v11, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda2;
 
     invoke-direct {v11, p0}, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda2;-><init>(Lcom/textrcs/spam/SpamSettingsActivity;)V
 
     invoke-virtual {v3, v11}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 138
+    .line 140
     nop
 
-    .line 131
+    .line 133
     .end local v3    # "$this$onCreate_u24lambda_u245":Landroid/widget/Button;
     .end local v7    # "$i$a$-apply-SpamSettingsActivity$onCreate$6":I
     check-cast v1, Landroid/view/View;
 
-    .line 138
+    .line 140
     invoke-direct {p0, v4}, Lcom/textrcs/spam/SpamSettingsActivity;->dp(I)I
 
     move-result v3
@@ -1437,10 +1437,10 @@
 
     check-cast v3, Landroid/view/ViewGroup$LayoutParams;
 
-    .line 131
+    .line 133
     invoke-virtual {v0, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 141
+    .line 143
     new-instance v1, Lcom/textrcs/spam/SpamSettingsActivity$onCreate$7;
 
     invoke-direct {v1, p0}, Lcom/textrcs/spam/SpamSettingsActivity$onCreate$7;-><init>(Lcom/textrcs/spam/SpamSettingsActivity;)V
@@ -1455,7 +1455,7 @@
 
     iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->onlineSwitch:Landroid/widget/Switch;
 
-    .line 144
+    .line 146
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->onlineSwitch:Landroid/widget/Switch;
 
     if-nez v1, :cond_134
@@ -1471,7 +1471,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 147
+    .line 149
     new-instance v1, Landroid/widget/TextView;
 
     move-object v3, p0
@@ -1485,7 +1485,7 @@
     .local v3, "$this$onCreate_u24lambda_u246":Landroid/widget/TextView;
     const/4 v7, 0x0
 
-    .line 148
+    .line 150
     .local v7, "$i$a$-apply-SpamSettingsActivity$onCreate$8":I
     const-string v11, "When on, links and the sender number are sent to Google Safe Browsing / your number-reputation service. Off = fully on-device."
 
@@ -1493,10 +1493,10 @@
 
     invoke-virtual {v3, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 150
+    .line 152
     invoke-virtual {v3, v6, v9}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 151
+    .line 153
     const-string v6, "#B00020"
 
     invoke-static {v6}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1505,7 +1505,7 @@
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 152
+    .line 154
     invoke-direct {p0, v4}, Lcom/textrcs/spam/SpamSettingsActivity;->dp(I)I
 
     move-result v4
@@ -1516,26 +1516,26 @@
 
     invoke-virtual {v3, v4, v10, v10, v6}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 153
+    .line 155
     nop
 
-    .line 147
+    .line 149
     .end local v3    # "$this$onCreate_u24lambda_u246":Landroid/widget/TextView;
     .end local v7    # "$i$a$-apply-SpamSettingsActivity$onCreate$8":I
     check-cast v1, Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 155
-    nop
-
-    .line 156
-    nop
-
     .line 157
     nop
 
-    .line 155
+    .line 158
+    nop
+
+    .line 159
+    nop
+
+    .line 157
     const-string v1, "Google Safe Browsing API key (for online URL checks)"
 
     const v3, 0x80001
@@ -1546,7 +1546,7 @@
 
     iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->safeBrowsingKeyField:Landroid/widget/EditText;
 
-    .line 159
+    .line 161
     const-string v1, "Safe Browsing API key"
 
     invoke-direct {p0, v1}, Lcom/textrcs/spam/SpamSettingsActivity;->label(Ljava/lang/String;)Landroid/widget/TextView;
@@ -1557,7 +1557,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 160
+    .line 162
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->safeBrowsingKeyField:Landroid/widget/EditText;
 
     if-nez v1, :cond_18a
@@ -1573,16 +1573,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 162
-    nop
-
-    .line 163
-    nop
-
     .line 164
     nop
 
-    .line 162
+    .line 165
+    nop
+
+    .line 166
+    nop
+
+    .line 164
     const-string v1, "https://urlhaus\u2026/<your-auth-key>/\u2026 (optional)"
 
     const/16 v4, 0x11
@@ -1593,7 +1593,7 @@
 
     iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->urlhausField:Landroid/widget/EditText;
 
-    .line 166
+    .line 168
     const-string v1, "URLhaus feed URL (optional offline feed)"
 
     invoke-direct {p0, v1}, Lcom/textrcs/spam/SpamSettingsActivity;->label(Ljava/lang/String;)Landroid/widget/TextView;
@@ -1604,7 +1604,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 167
+    .line 169
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->urlhausField:Landroid/widget/EditText;
 
     if-nez v1, :cond_1b1
@@ -1620,7 +1620,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 170
+    .line 172
     const-string v1, "Number reputation (advanced, optional)"
 
     invoke-direct {p0, v1}, Lcom/textrcs/spam/SpamSettingsActivity;->label(Ljava/lang/String;)Landroid/widget/TextView;
@@ -1631,16 +1631,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 171
-    nop
-
-    .line 172
-    nop
-
     .line 173
     nop
 
-    .line 171
+    .line 174
+    nop
+
+    .line 175
+    nop
+
+    .line 173
     const-string v1, "https://service/check?n={number}"
 
     invoke-direct {p0, v1, v4}, Lcom/textrcs/spam/SpamSettingsActivity;->makeField(Ljava/lang/String;I)Landroid/widget/EditText;
@@ -1649,7 +1649,7 @@
 
     iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberTemplateField:Landroid/widget/EditText;
 
-    .line 175
+    .line 177
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberTemplateField:Landroid/widget/EditText;
 
     if-nez v1, :cond_1d6
@@ -1665,16 +1665,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 176
-    nop
-
-    .line 177
-    nop
-
     .line 178
     nop
 
-    .line 176
+    .line 179
+    nop
+
+    .line 180
+    nop
+
+    .line 178
     const-string v1, "Response text that means SPAM (e.g. \"listed\")"
 
     invoke-direct {p0, v1, v3}, Lcom/textrcs/spam/SpamSettingsActivity;->makeField(Ljava/lang/String;I)Landroid/widget/EditText;
@@ -1683,7 +1683,7 @@
 
     iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberFlagField:Landroid/widget/EditText;
 
-    .line 180
+    .line 182
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberFlagField:Landroid/widget/EditText;
 
     if-nez v1, :cond_1f0
@@ -1699,16 +1699,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 184
-    nop
-
-    .line 185
-    nop
-
     .line 186
     nop
 
-    .line 184
+    .line 187
+    nop
+
+    .line 188
+    nop
+
+    .line 186
     const-string v1, "API-key header name (e.g. Authorization) \u2014 optional"
 
     invoke-direct {p0, v1, v3}, Lcom/textrcs/spam/SpamSettingsActivity;->makeField(Ljava/lang/String;I)Landroid/widget/EditText;
@@ -1717,7 +1717,7 @@
 
     iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderNameField:Landroid/widget/EditText;
 
-    .line 188
+    .line 190
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderNameField:Landroid/widget/EditText;
 
     if-nez v1, :cond_20a
@@ -1733,16 +1733,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 190
-    nop
-
-    .line 191
-    nop
-
     .line 192
     nop
 
-    .line 190
+    .line 193
+    nop
+
+    .line 194
+    nop
+
+    .line 192
     const-string v1, "API-key header value (token) \u2014 optional"
 
     invoke-direct {p0, v1, v3}, Lcom/textrcs/spam/SpamSettingsActivity;->makeField(Ljava/lang/String;I)Landroid/widget/EditText;
@@ -1751,7 +1751,7 @@
 
     iput-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderValueField:Landroid/widget/EditText;
 
-    .line 194
+    .line 196
     iget-object v1, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderValueField:Landroid/widget/EditText;
 
     if-nez v1, :cond_224
@@ -1770,7 +1770,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 197
+    .line 199
     new-instance v1, Landroid/widget/Button;
 
     move-object v2, p0
@@ -1784,7 +1784,7 @@
     .local v2, "$this$onCreate_u24lambda_u248":Landroid/widget/Button;
     const/4 v3, 0x0
 
-    .line 198
+    .line 200
     .local v3, "$i$a$-apply-SpamSettingsActivity$onCreate$saveButton$1":I
     const-string v4, "Save settings"
 
@@ -1792,22 +1792,22 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 199
+    .line 201
     new-instance v4, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda3;
 
     invoke-direct {v4, p0}, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda3;-><init>(Lcom/textrcs/spam/SpamSettingsActivity;)V
 
     invoke-virtual {v2, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 200
+    .line 202
     nop
 
-    .line 197
+    .line 199
     .end local v2    # "$this$onCreate_u24lambda_u248":Landroid/widget/Button;
     .end local v3    # "$i$a$-apply-SpamSettingsActivity$onCreate$saveButton$1":I
     nop
 
-    .line 201
+    .line 203
     .local v1, "saveButton":Landroid/widget/Button;
     move-object v2, v1
 
@@ -1825,7 +1825,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 204
+    .line 206
     new-instance v2, Landroid/widget/Button;
 
     move-object v3, p0
@@ -1839,7 +1839,7 @@
     .local v3, "$this$onCreate_u24lambda_u2411":Landroid/widget/Button;
     const/4 v4, 0x0
 
-    .line 205
+    .line 207
     .local v4, "$i$a$-apply-SpamSettingsActivity$onCreate$refreshButton$1":I
     const-string v6, "Refresh threat feeds now"
 
@@ -1847,22 +1847,22 @@
 
     invoke-virtual {v3, v6}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 206
+    .line 208
     new-instance v6, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda4;
 
     invoke-direct {v6, p0}, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda4;-><init>(Lcom/textrcs/spam/SpamSettingsActivity;)V
 
     invoke-virtual {v3, v6}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 212
+    .line 214
     nop
 
-    .line 204
+    .line 206
     .end local v3    # "$this$onCreate_u24lambda_u2411":Landroid/widget/Button;
     .end local v4    # "$i$a$-apply-SpamSettingsActivity$onCreate$refreshButton$1":I
     nop
 
-    .line 213
+    .line 215
     .local v2, "refreshButton":Landroid/widget/Button;
     move-object v3, v2
 
@@ -1880,7 +1880,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 215
+    .line 217
     new-instance v3, Landroid/widget/ScrollView;
 
     move-object v4, p0
@@ -1891,11 +1891,11 @@
 
     move-object v4, v3
 
-    .line 305
+    .line 307
     .local v4, "$this$onCreate_u24lambda_u2412":Landroid/widget/ScrollView;
     const/4 v5, 0x0
 
-    .line 215
+    .line 217
     .local v5, "$i$a$-apply-SpamSettingsActivity$onCreate$scroll$1":I
     move-object v6, v0
 
@@ -1903,7 +1903,7 @@
 
     invoke-virtual {v4, v6}, Landroid/widget/ScrollView;->addView(Landroid/view/View;)V
 
-    .line 216
+    .line 218
     .end local v4    # "$this$onCreate_u24lambda_u2412":Landroid/widget/ScrollView;
     .end local v5    # "$i$a$-apply-SpamSettingsActivity$onCreate$scroll$1":I
     .local v3, "scroll":Landroid/widget/ScrollView;
@@ -1913,17 +1913,17 @@
 
     invoke-virtual {p0, v4}, Lcom/textrcs/spam/SpamSettingsActivity;->setContentView(Landroid/view/View;)V
 
-    .line 217
+    .line 219
     return-void
 .end method
 
 .method protected onResume()V
     .registers 5
 
-    .line 220
+    .line 222
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 222
+    .line 224
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->masterSwitch:Landroid/widget/Switch;
 
     const/4 v1, 0x0
@@ -1949,12 +1949,12 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Switch;->setChecked(Z)V
 
-    .line 223
-    iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->blockSwitch:Landroid/widget/Switch;
+    .line 225
+    iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->deleteSwitch:Landroid/widget/Switch;
 
     if-nez v0, :cond_24
 
-    const-string v0, "blockSwitch"
+    const-string v0, "deleteSwitch"
 
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
@@ -1971,7 +1971,7 @@
 
     move-result-object v2
 
-    const-string v3, "block"
+    const-string v3, "delete"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1979,7 +1979,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Switch;->setChecked(Z)V
 
-    .line 224
+    .line 226
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->onlineSwitch:Landroid/widget/Switch;
 
     if-nez v0, :cond_40
@@ -2003,7 +2003,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Switch;->setChecked(Z)V
 
-    .line 225
+    .line 227
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->safeBrowsingKeyField:Landroid/widget/EditText;
 
     if-nez v0, :cond_56
@@ -2029,7 +2029,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 226
+    .line 228
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->urlhausField:Landroid/widget/EditText;
 
     if-nez v0, :cond_6e
@@ -2055,7 +2055,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 227
+    .line 229
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberTemplateField:Landroid/widget/EditText;
 
     if-nez v0, :cond_86
@@ -2081,7 +2081,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 228
+    .line 230
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberFlagField:Landroid/widget/EditText;
 
     if-nez v0, :cond_9e
@@ -2107,7 +2107,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 229
+    .line 231
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderNameField:Landroid/widget/EditText;
 
     if-nez v0, :cond_b6
@@ -2133,7 +2133,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 230
+    .line 232
     iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity;->numberHeaderValueField:Landroid/widget/EditText;
 
     if-nez v0, :cond_ce
@@ -2162,9 +2162,9 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 231
+    .line 233
     invoke-direct {p0}, Lcom/textrcs/spam/SpamSettingsActivity;->updateStatus()V
 
-    .line 232
+    .line 234
     return-void
 .end method
