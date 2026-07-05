@@ -3,34 +3,34 @@
 .source "D8$$SyntheticClass"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic f$0:Lkotlin/jvm/functions/Function1;
+.field public final synthetic f$0:Lcom/textrcs/spam/SpamSettingsActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlin/jvm/functions/Function1;)V
+.method public synthetic constructor <init>(Lcom/textrcs/spam/SpamSettingsActivity;)V
     .registers 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda1;->f$0:Lkotlin/jvm/functions/Function1;
+    iput-object p1, p0, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda1;->f$0:Lcom/textrcs/spam/SpamSettingsActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .registers 4
+.method public final onDismiss(Landroid/content/DialogInterface;)V
+    .registers 3
 
     .line 0
-    iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda1;->f$0:Lkotlin/jvm/functions/Function1;
+    iget-object v0, p0, Lcom/textrcs/spam/SpamSettingsActivity$$ExternalSyntheticLambda1;->f$0:Lcom/textrcs/spam/SpamSettingsActivity;
 
-    invoke-static {v0, p1, p2}, Lcom/textrcs/spam/SpamSettingsActivity;->$r8$lambda$fhUF2ovaf8H8FFb0nGqgHc9nzX8(Lkotlin/jvm/functions/Function1;Landroid/widget/CompoundButton;Z)V
+    invoke-static {v0, p1}, Lcom/textrcs/spam/SpamSettingsActivity;->$r8$lambda$lM19SAJwUAokfgQWbXw1i6uS2Tw(Lcom/textrcs/spam/SpamSettingsActivity;Landroid/content/DialogInterface;)V
 
     return-void
 .end method

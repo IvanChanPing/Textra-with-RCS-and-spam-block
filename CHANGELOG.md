@@ -1,3 +1,12 @@
+## 2026-07-05 — Spam popup simplified to a 3-choice picker; QuickConvo fold-animation reverted
+
+The Spam Filter screen is now a single Material single-choice popup — **Filter** (block list, default) /
+**Delete** / **None** — opened from the "Spam filter" row in Settings. The old full config form (Safe
+Browsing key, URLhaus URL, number-reputation fields, status text) is gone; all detection is handled
+internally (built-in OpenPhish feed + on-device heuristic). Separately, reverted the QuickConvo
+tap-to-open popup's window animation from the fold-down morph back to the platform default it always
+used (removed `QuickConvoMorphAnimation` + `quick_convo_enter`/`quick_convo_exit`).
+
 ## 2026-07-05 — Spam: "Spam filter" settings menu; default action = add to Textra's block list
 
 Added a **Spam filter** row to Textra's own Settings (under *More nuisance control*, next to
