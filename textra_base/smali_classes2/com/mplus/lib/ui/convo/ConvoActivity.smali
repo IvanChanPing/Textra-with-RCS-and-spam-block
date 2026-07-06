@@ -858,6 +858,10 @@
     # with the slide-in window animation (textrcs_overlay_enter).
     invoke-static {p0}, Lcom/textrcs/anim/ConvoCornerAnim;->attach(Landroid/app/Activity;)V
 
+    # textrcs: slide the compose bar + content in lockstep with the keyboard (ImeSyncAnim), official
+    # WindowInsetsAnimation.Callback technique. Same one-line attach(Activity) style as ConvoCornerAnim.
+    invoke-static {p0}, Lcom/textrcs/anim/ImeSyncAnim;->attach(Landroid/app/Activity;)V
+
     invoke-virtual {p0, p1}, Lcom/mplus/lib/s5/q;->V(Landroid/os/Bundle;)V
 
     new-instance p1, Lcom/mplus/lib/v6/h;
