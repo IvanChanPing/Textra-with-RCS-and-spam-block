@@ -119,12 +119,16 @@ object ImeSyncAnim {
                 imeTargetBottom = try {
                     content()?.rootWindowInsets?.getInsets(WindowInsets.Type.ime())?.bottom ?: 0
                 } catch (_: Throwable) { 0 }
-                // Pre-position to the OLD resting spot BEFORE the first frame draws, so the content
-                // doesn't flash at its final (snapped) position for one frame between Textra's re-layout
-                // and the first onProgress. onProgress then decays this to 0 as the keyboard rises.
-                content()?.translationY = imeTargetBottom.toFloat()
-                Log.d(TAG, "onStart imeTarget=$imeTargetBottom (bottom start=$startBottom end=$endBottom) view=${content() != null}")
-                buf.append("START ime=$imeTargetBottom region h=${cch?.height} lp=${cch?.layoutParams?.height}\n")
+                // Pre-shift to the CURRENT (pre-animation) keyboard spot so frame 0 doesn't snap.
+                // SHOW: keyboard starts DOWN (current ime inset 0) -> pre-shift +imeTargetBottom (old low spot).
+                // HIDE: keyboard starts UP (current = full kb height = bounds.upperBound.bottom) and ends at 0,
+                // so start LIFTED by -kbHeight, matching onProgress frame-0 (ty = imeTargetBottom - current =
+                // 0 - kbHeight). Without this, HIDE set translationY=0 then jumped to -kbHeight on frame 0 = the
+                // "snap up then slide down" the user saw on close (device numbers CPH2583, 2026-07-06).
+                val startShift = if (imeTargetBottom > 0) imeTargetBottom else -bounds.upperBound.bottom
+                content()?.translationY = startShift.toFloat()
+                Log.d(TAG, "onStart imeTarget=$imeTargetBottom startShift=$startShift (start=$startBottom end=$endBottom)")
+                buf.append("START ime=$imeTargetBottom ty=$startShift region h=${cch?.height} lp=${cch?.layoutParams?.height}\n")
                 return bounds
             }
 
