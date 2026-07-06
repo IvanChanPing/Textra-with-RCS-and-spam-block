@@ -16,10 +16,10 @@ import android.widget.Toast
  *  - data     tel:<number>
  *  - extra    IS_AUDIO_ONLY = false  -> video call
  *  - extra    DUOKIT_VERSION = "0.0.1"
- *  - MUST be launched via startActivityForResult and WITHOUT FLAG_ACTIVITY_NEW_TASK,
- *    otherwise getCallingPackage() is null and Meet's ServiceAuthorizer rejects the
- *    call ("Package [Optional.absent()] is NOT authorized"). Our app holds CALL_PHONE,
- *    which satisfies the authorizer once the calling package is visible.
+ *  - extra    REFERRER   = our own package name
+ *  - launched with startActivity() and WITHOUT FLAG_ACTIVITY_NEW_TASK, matching the
+ *    Fossify Phone dialer's device-verified Meet hand-off (OnePlus, Meet build 362).
+ *    Our app holds CALL_PHONE, which Meet's ServiceAuthorizer accepts.
  */
 object MeetCall {
     private const val TAG = "TextRcsMeet"
@@ -37,10 +37,10 @@ object MeetCall {
             .setData(Uri.parse("tel:$number"))
             .putExtra("com.google.android.apps.tachyon.extra.IS_AUDIO_ONLY", false)
             .putExtra("com.google.android.gms.duokit.extra.DUOKIT_VERSION", "0.0.1")
-            .putExtra("com.google.android.apps.tachyon.extra.REFERRER", "textrcs")
+            .putExtra("com.google.android.apps.tachyon.extra.REFERRER", activity.packageName)
         try {
-            // startActivityForResult (no NEW_TASK) so getCallingPackage() is populated.
-            activity.startActivityForResult(call, 0)
+            // Plain startActivity (no NEW_TASK) — matches Fossify's device-verified Meet hand-off.
+            activity.startActivity(call)
         } catch (e: ActivityNotFoundException) {
             Log.w(TAG, "Meet not installed, opening Play Store", e)
             try {

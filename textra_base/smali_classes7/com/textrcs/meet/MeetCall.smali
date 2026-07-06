@@ -201,7 +201,9 @@
     .line 40
     const-string v3, "com.google.android.apps.tachyon.extra.REFERRER"
 
-    const-string v4, "textrcs"
+    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -219,15 +221,15 @@
     nop
 
     .line 43
-    :try_start_7b
-    invoke-virtual {p0, v1, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_7e
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_7b .. :try_end_7e} :catch_7f
+    :try_start_7d
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    :try_end_80
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_7d .. :try_end_80} :catch_81
 
-    goto :goto_b2
+    goto :goto_b4
 
     .line 44
-    :catch_7f
+    :catch_81
     move-exception v3
 
     .line 45
@@ -249,7 +251,7 @@
     nop
 
     .line 48
-    :try_start_8c
+    :try_start_8e
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.VIEW"
@@ -273,13 +275,13 @@
 
     .line 47
     invoke-virtual {p0, v4}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-    :try_end_a2
-    .catch Ljava/lang/Exception; {:try_start_8c .. :try_end_a2} :catch_a3
+    :try_end_a4
+    .catch Ljava/lang/Exception; {:try_start_8e .. :try_end_a4} :catch_a5
 
-    goto :goto_b2
+    goto :goto_b4
 
     .line 52
-    :catch_a3
+    :catch_a5
     move-exception v4
 
     .line 53
@@ -301,6 +303,6 @@
     .line 56
     .end local v3    # "e":Landroid/content/ActivityNotFoundException;
     .end local v4    # "e2":Ljava/lang/Exception;
-    :goto_b2
+    :goto_b4
     return-void
 .end method
