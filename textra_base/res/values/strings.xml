@@ -842,7 +842,7 @@ Please note: the debug log may contain privacy related information, such as phon
     <string name="settings_get_support_title">Support</string>
     <string name="settings_group_theme_color">Group Theme Color</string>
     <string name="settings_have_upgraded_to_pro_summary">Your support really helps!</string>
-    <string name="settings_have_upgraded_to_pro_title">Pro User</string>
+    <string name="settings_have_upgraded_to_pro_title">Login</string>
     <string name="settings_help_translate_summary">Textra is written in English, and is translated by volunteers. If you want to help improve the translation, or add another translation, please email us!</string>
     <string name="settings_help_translate_title">Email Us</string>
     <string name="settings_long_hold_convo_list_note">"Tip: customize more than one chat at once by long pressing in the chat list and choosing '%1$s' from the dot-dot-dot menu."</string>
