@@ -1,3 +1,19 @@
+## 2026-07-06 — Conversation keyboard: compose bar + chat slide with the keyboard
+
+Opening and closing the keyboard in a conversation slides the message list and compose bar up and down in
+lockstep with the keyboard (Gmail/Claude style) instead of snapping to the final position, with the blue
+top bar staying stationary.
+
+Mechanism (`inject_src/com/textrcs/anim/ImeSyncAnim.kt`, API 30+): a `WindowInsetsAnimation.Callback`
+installed on the conversation window uses the "deferred insets" technique — at `onStart` it reads the
+final keyboard height and pre-shifts `@id/messageListAndSendArea` back to its pre-keyboard position, then
+`onProgress` decays `translationY` toward 0 as the keyboard animates, so the list + compose bar ride the
+keyboard from the old position to the new one (symmetric for show and hide). Only
+`@id/messageListAndSendArea` is translated; the blue bar (`@id/actionbarContainer`) is a sibling above it
+and stays put. `setHeightTo` in `x5/y.smali` is left stock. Pre-API-30: no-op.
+
+Files: `inject_src/com/textrcs/anim/ImeSyncAnim.kt`. APK: `textra2.apk`.
+
 ## 2026-07-05 — Spam popup simplified to a 3-choice picker; QuickConvo fold-animation reverted
 
 The Spam Filter screen is now a single Material single-choice popup — **Filter** (block list, default) /
