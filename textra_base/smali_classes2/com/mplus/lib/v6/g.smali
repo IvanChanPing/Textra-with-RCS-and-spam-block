@@ -1748,12 +1748,13 @@
     :cond_19
     iget-object v5, v0, Lcom/mplus/lib/v6/g;->K:Lcom/mplus/lib/ui/common/base/BaseImageView;
 
-    if-ne v1, v5, :cond_1a
+    if-ne v1, v5, :cond_meet_check
 
     invoke-virtual {v7, v0}, Lcom/mplus/lib/R1/q;->a(Lcom/mplus/lib/s6/a;)V
 
     return-void
 
+    :cond_meet_check
     iget-object v5, v0, Lcom/mplus/lib/v6/g;->c0:Lcom/mplus/lib/ui/common/fab/FloatingActionButtonBackground;
 
     if-ne v1, v5, :cond_meet_dispatch
