@@ -83,7 +83,12 @@ object ImeSyncAnim {
     @Volatile private var cfgHideOff = 0
     @Volatile private var cfgShowOff = 0
     @Volatile private var cfgHideOn = true
-    @Volatile private var cfgShowOn = true
+    // DEFAULT close-only (open slide OFF): the region shrink on OPEN is STRUCTURAL — both Textra's own resize
+    // AND the framework adjustResize shrink @id/contentControlledHeight before frame 0, so the open slide can't
+    // be made clean by a knob (it just pushes already-short content down, leaving a white gap). Native snap on
+    // open + the smooth close slide is the accepted fallback (user, 2026-07-06). Flip showEnabled=true in the
+    // config to experiment with open again.
+    @Volatile private var cfgShowOn = false
     @Volatile private var cfgNavInset = -1   // nav-bar px used in the ride formula; -1 = auto (kbMax - travel)
     @Volatile private var pollStarted = false
 

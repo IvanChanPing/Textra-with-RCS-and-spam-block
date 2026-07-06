@@ -17,7 +17,14 @@ https://204-168-163-118.sslip.io/imelog/`). Full region=2148, keyboard=981, shru
 3. CLOSE: region already FULL (2148) at START, but onStart set `translationY=0` while onProgress frame-0
    is `ty=-981` → a 0→-981 JUMP = the "snap up then slide down" (the user confirmed the "flash" WAS this
    jump). **FIXED this turn:** onStart pre-shifts `-bounds.upperBound.bottom` (-kbHeight) for a hide so
-   frame 0 matches → no jump. Rebuilding to let the user confirm close is now smooth.
+   frame 0 matches → no jump. CONFIRMED on device: close jump GONE. Remaining close issue: content descended
+   ~23% slower than the keyboard because onProgress scaled travel by frac=current/kbMax (753 over 981); FIXED
+   by tracking the keyboard top 1:1 minus the nav inset (ty=-(current-nav), nav=kbMax-travel=228), live knob
+   navInsetPx. OPEN (show) confirmed WHITE-GAP on device (region already shrunk to 1395 at frame 0, so the
+   +travel pre-shift pushes the short content down leaving white below the bar) — needs ADJUST_NOTHING to keep
+   the region full; disabled live (showEnabled=false) meanwhile. LIVE CONFIG file =
+   tracker-bridge/static/imesync_config.json → served /trackers/static/imesync_config.json (mode/offsets/
+   enables/navInsetPx, polled ~1.5s). Latest commit 8f3e53f9 (live-config) + this turn's 1:1-tracking commit.
 
 Multi-session note: other session's edits still uncommitted in this shared tree; user said keep going.
 The ImeSyncAnim attach hook is committed (2517517b) so it can't be dropped again.
