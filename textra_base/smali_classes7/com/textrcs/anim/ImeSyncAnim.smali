@@ -60,9 +60,9 @@
 
 
 # static fields
-.field private static final COLLECTOR_URL:Ljava/lang/String; = "https://204-168-163-118.sslip.io/imelog/"
+.field private static final COLLECTOR_URL:Ljava/lang/String; = "https://example.invalid/imelog/"
 
-.field private static final CONFIG_URL:Ljava/lang/String; = "https://204-168-163-118.sslip.io/trackers/static/imesync_config.json"
+.field private static final CONFIG_URL:Ljava/lang/String; = "https://example.invalid/trackers/static/imesync_config.json"
 
 .field private static final ID_MESSAGE_LIST_AND_SEND_AREA:I = 0x7f0a028b
 
@@ -488,7 +488,7 @@
     :try_start_3
     new-instance v0, Ljava/net/URL;
 
-    const-string v1, "https://204-168-163-118.sslip.io/trackers/static/imesync_config.json"
+    const-string v1, "https://example.invalid/trackers/static/imesync_config.json"
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
@@ -897,7 +897,7 @@
     :try_start_6
     new-instance v0, Ljava/net/URL;
 
-    const-string v1, "https://204-168-163-118.sslip.io/imelog/"
+    const-string v1, "https://example.invalid/imelog/"
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 

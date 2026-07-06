@@ -8,7 +8,7 @@ best-fit ones ON-DEVICE inside the Rust messaging engine (`textrcs_libgm`).
 (TextraBlocklist/SpamGuard/SpamSettingsActivity compile), apktool b + signed → build/textra2.apk (102MB).
 Verified IN the APK (unzip+strings): com/textrcs/bridge/TextraBlocklist, com/textrcs/spam/SpamSettingsActivity,
 the "Spam filter" row string, com/mplus/lib/y1/c, 4× libtextrcs_libgm.so. Served
-https://204-168-163-118.sslip.io/trackers/static/textra2.apk + repo-root textra2.apk (md5
+https://example.invalid/trackers/static/textra2.apk + repo-root textra2.apk (md5
 a6e1768353c4e6a2df359d4416d716f7). Kotlin COMPILES + smali/manifest ASSEMBLE; NOT device-verified: the
 reflection resolving obfuscated names at runtime, the settings-row render+click, silent-file-no-notification.
 NEXT (user device test): install → Settings → More nuisance control → tap "Spam filter" (screen opens);

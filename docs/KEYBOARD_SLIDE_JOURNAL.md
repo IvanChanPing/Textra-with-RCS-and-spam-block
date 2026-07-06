@@ -57,7 +57,7 @@ by decoupling the list's translationY from the bar's with a small easing delay (
 for the catch-up look — NOT a physics bounce spec).
 
 **DEVICE NUMBERS ARE IN (2026-07-06, CPH2583/OnePlus)** — via the imelog auto-upload (`curl -s
-https://204-168-163-118.sslip.io/imelog/`). Full region=2148, keyboard=981, shrunk region=1395 (list
+https://example.invalid/imelog/`). Full region=2148, keyboard=981, shrunk region=1395 (list
 1716→963). THREE VERIFIED FINDINGS:
 1. region `lp` = **-1 (MATCH_PARENT) ALWAYS**, even when the actual height shrinks 2148→1395 ⇒ the resize
    is the FRAMEWORK `adjustResize` (window content area), NOT Textra `setHeightTo`. So `suppressResize`
@@ -83,7 +83,7 @@ The ImeSyncAnim attach hook is committed (2517517b) so it can't be dropped again
 GOAL: compose bar + chat list SLIDE up/down in lockstep with the keyboard (Gmail/Claude), blue top bar
 (`@id/actionbarContainer`) stationary. File `inject_src/com/textrcs/anim/ImeSyncAnim.kt`, hooked from
 `ConvoActivity.onCreate` smali after `ConvoCornerAnim.attach`. Build `bash build.sh` → `build/textra2.apk`
-→ auto-served `https://204-168-163-118.sslip.io/trackers/static/textra2.apk`.
+→ auto-served `https://example.invalid/trackers/static/textra2.apk`.
 
 - WORKING BASELINE (user-confirmed on device) = deferred-insets "ride the keyboard", COMMITTED **ec43f554**.
   Translates ONLY `@id/messageListAndSendArea` (0x7f0a028b); onStart pre-shift `translationY=imeTargetBottom`,
@@ -100,13 +100,13 @@ GOAL: compose bar + chat list SLIDE up/down in lockstep with the keyboard (Gmail
 - DECISION: instrument, don't guess. User won't read/forward logs → the app AUTO-UPLOADS the heights to the box.
   Built: imelog collector `imelog/collector.py` port 8772 + Caddy `/imelog/*` (public POST verified via curl).
   ImeSyncAnim now batches one keyboard animation's frames (PREPARE/START/prog*/END: region h + lp + measured,
-  list h, ime, ty) and POSTs to `https://204-168-163-118.sslip.io/imelog/` on a daemon thread in onEnd. The
+  list h, ime, ty) and POSTs to `https://example.invalid/imelog/` on a daemon thread in onEnd. The
   working slide is unchanged.
 
 NEXT STEP:
 1. Confirm the auto-upload build compiles (`/tmp/textrcs_build5.log`), serve the URL.
 2. User: open a conversation, tap the compose field a few times (open+close). No other action.
-3. Read the numbers: `curl -s https://204-168-163-118.sslip.io/imelog/`. KEY QUESTION they answer: at
+3. Read the numbers: `curl -s https://example.invalid/imelog/`. KEY QUESTION they answer: at
    PREPARE / START / first `prog` frame, is region `lp`/`h` already the SHRUNK value (snap at frame 0) or full?
    → decides the fix: defer-the-shrink (keep full + translate up, seamless onEnd) vs animate-the-height.
 

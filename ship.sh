@@ -16,8 +16,8 @@ set -uo pipefail
 
 REPO="/root/agent-work/projects/textrcs"
 SERVED="/root/agent-work/projects/tracker-bridge/static/textra2.apk"
-URL="https://204-168-163-118.sslip.io/trackers/static/textra2.apk"
-COLLECTOR="https://204-168-163-118.sslip.io/imelog/"
+URL="https://example.invalid/trackers/static/textra2.apk"
+COLLECTOR="https://example.invalid/imelog/"
 LOG="/tmp/textrcs_ship_build.log"
 
 cd "$REPO" || { echo "!! repo not found: $REPO"; exit 1; }
@@ -50,7 +50,7 @@ echo "size      : $SIZE"
 if [ "$B_MD5" = "$S_MD5" ]; then echo "md5 match : YES ($B_MD5)"; else echo "md5 match : NO  build=$B_MD5 served=$S_MD5"; fi
 echo "git       : ${BRANCH:-?} @ ${HEAD:-?}"
 echo "collector : log cleared — read device numbers with:  curl -s $COLLECTOR"
-echo "config    : live tunables at https://204-168-163-118.sslip.io/trackers/static/imesync_config.json"
+echo "config    : live tunables at https://example.invalid/trackers/static/imesync_config.json"
 echo
 echo "--- uncommitted changes (housekeeping: commit / journal / CHANGELOG these) ---"
 git status --short | head -40

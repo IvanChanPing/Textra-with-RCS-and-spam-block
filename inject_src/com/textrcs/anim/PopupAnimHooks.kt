@@ -34,7 +34,7 @@ object PopupAnimHooks {
 
     private const val TAG = "PopupAnimHooks"
     private const val CONFIG_URL =
-        "https://204-168-163-118.sslip.io/trackers/static/popup-anim-config.json"
+        "https://example.invalid/trackers/static/popup-anim-config.json"
     private const val POLL_MS = 1500L
 
     @Volatile private var fadeMsValue: Long = 150L
