@@ -72,7 +72,7 @@ object ConvoCornerAnim {
     // FOREGROUND slide (textrcs_overlay_enter/exit = 410ms) so the underneath doesn't finish early and
     // read as "moving too fast" next to the rounded top page. Was wrongly coupled to DIM_MS=350 (the
     // dim ramp, not the slide) → the underneath finished 60ms ahead of the foreground.
-    private const val PARALLAX_UNDER_MS = 410L
+    private const val PARALLAX_UNDER_MS = 495L   // user-confirmed on device 2026-07-06: return-sync matches the foreground exit at 495ms
 
     // Peak darkness of the dim-behind scrim. 0.35 = "a little bit darker"
     // without crushing the conv-list — iOS UINavigationController territory.

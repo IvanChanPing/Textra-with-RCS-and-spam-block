@@ -1,5 +1,7 @@
 - Route under-screen parallax duration through imesync_config.json (parallaxUnderMs) so it's live-tunable via ImeSyncAnim's poll instead of the dead Hooks path
 
+- Set PARALLAX_UNDER_MS to 495ms so the return-slide syncs with the foreground exit
+
 ## 2026-07-06 — Conversation keyboard: compose bar + chat slide with the keyboard
 
 Opening and closing the keyboard in a conversation slides the message list and compose bar up and down in
