@@ -36,6 +36,13 @@ class SmsWakeReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action != Telephony.Sms.Intents.SMS_RECEIVED_ACTION) return
 
+        // Opt-in backup: gated by the "SMS backup alert" setting (Settings -> More nuisance
+        // control -> SmsBackupSettingsActivity). Default OFF, so by default the rust/GM-web
+        // path's proper Textra notification is the only one. When ON, everything below runs
+        // exactly as before (instant plain heads-up per incoming SMS). Cheap SharedPreferences
+        // read; safe on the receiver thread.
+        if (!SmsBackup.isEnabled(context)) return
+
         val messages = try {
             Telephony.Sms.Intents.getMessagesFromIntent(intent)
         } catch (e: Throwable) {
@@ -57,9 +64,14 @@ class SmsWakeReceiver : BroadcastReceiver() {
 
         val tapIntent = buildTapIntent(context, sender)
 
+        // Title = the contact's display name (falls back to the bare number if there's no
+        // matching contact or READ_CONTACTS isn't granted) — so the backup heads-up shows the
+        // name just like Textra's own notification, instead of a raw number.
+        val title = contactName(context, sender) ?: sender
+
         val notif = Notification.Builder(context, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.sym_action_email)
-            .setContentTitle(sender)
+            .setContentTitle(title)
             .setContentText(body)
             .setStyle(Notification.BigTextStyle().bigText(body))
             .setPriority(Notification.PRIORITY_HIGH)
@@ -106,6 +118,31 @@ class SmsWakeReceiver : BroadcastReceiver() {
             PendingIntent.FLAG_UPDATE_CURRENT
         }
         return PendingIntent.getActivity(context, sender.hashCode(), intent, flags)
+    }
+
+    /**
+     * Contact display name for [number] via ContactsContract.PhoneLookup (which normalises the
+     * number itself), or null if there is no matching contact / READ_CONTACTS isn't granted /
+     * the query fails. Used to title the backup heads-up with a name instead of a raw number.
+     */
+    private fun contactName(context: Context, number: String): String? {
+        if (number.isBlank() || number == "Unknown") return null
+        return try {
+            val uri = android.net.Uri.withAppendedPath(
+                android.provider.ContactsContract.PhoneLookup.CONTENT_FILTER_URI,
+                android.net.Uri.encode(number),
+            )
+            context.contentResolver.query(
+                uri,
+                arrayOf(android.provider.ContactsContract.PhoneLookup.DISPLAY_NAME),
+                null, null, null,
+            )?.use { c ->
+                if (c.moveToFirst()) c.getString(0)?.takeIf { it.isNotBlank() } else null
+            }
+        } catch (e: Throwable) {
+            Log.w(TAG, "contactName lookup failed: ${e.javaClass.simpleName}: ${e.message}")
+            null
+        }
     }
 
     companion object {

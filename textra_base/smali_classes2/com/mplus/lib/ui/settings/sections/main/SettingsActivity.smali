@@ -1091,6 +1091,30 @@
 
     invoke-virtual {v0, p1, v2}, Lcom/mplus/lib/x7/f;->n0(Lcom/mplus/lib/x7/g;I)V
 
+    # [TextRCS] "SMS backup alert" settings row — opens com.textrcs.smswake.SmsBackupSettingsActivity,
+    # placed immediately after the Spam filter row (same "More nuisance control" category). Toggles the
+    # wake-on-SMS backup notifier (SmsWakeReceiver) on/off. Cloned exactly from the Spam filter row
+    # above; title via the String overload x7/g->u(CharSequence); reuses live registers p0/p1/v0/v1/v2.
+    new-instance p1, Lcom/mplus/lib/Y6/a;
+
+    invoke-direct {p1, p0}, Lcom/mplus/lib/x7/m;-><init>(Lcom/mplus/lib/x5/l;)V
+
+    const-string v0, "SMS backup alert"
+
+    invoke-virtual {p1, v0}, Lcom/mplus/lib/x7/g;->u(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/textrcs/smswake/SmsBackupSettingsActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iput-object v0, p1, Lcom/mplus/lib/x7/m;->o:Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/mplus/lib/x7/c;->v:Lcom/mplus/lib/x7/f;
+
+    invoke-virtual {v0, p1, v2}, Lcom/mplus/lib/x7/f;->n0(Lcom/mplus/lib/x7/g;I)V
+
     new-instance p1, Lcom/mplus/lib/x7/j;
 
     const/4 v8, 0x4
