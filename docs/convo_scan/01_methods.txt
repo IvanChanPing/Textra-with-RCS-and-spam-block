@@ -1,0 +1,144 @@
+== com/mplus/lib/ui/convo/BubbleView ==
+  148:.method static constructor <clinit>()V
+  265:.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+  430:.method public static c(Lcom/mplus/lib/ui/convo/BubbleView;)V
+  673:.method private getColorOfHeartEmoji()I
+  767:.method private getTextSizeOriginal()F
+  797:.method private setStatusText(Ljava/lang/CharSequence;)V
+  824:.method private setTextSizeMultiplier(F)V
+  862:.method public final d(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+  1126:.method public final f(Lcom/mplus/lib/r4/f0;Lcom/mplus/lib/s5/h;Lcom/mplus/lib/v6/S;Lcom/mplus/lib/v6/K;)V
+  2883:.method public final g(Z)V
+  2990:.method public getAnchorBoundsForMiniMenu()Landroid/graphics/RectF;
+  3114:.method public getBackgroundColorDirect()I
+  3131:.method public getBubbleOutgoingAntiSquashPaddingTop()I
+  3146:.method public getBubbleOutgoingDrawablePaddingRight()I
+  3179:.method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
+  3194:.method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
+  3209:.method public getOffsetToTextLayoutX()I
+  3237:.method public getOffsetToTextLayoutY()I
+  3310:.method public bridge synthetic getPaddingHorizontal()I
+  3321:.method public bridge synthetic getPaddingVertical()I
+  3335:.method public getTapbackTypeIdByCurrentUser()Lcom/mplus/lib/J6/t;
+  3428:.method public getTextColorDirect()I
+  3446:.method public getView()Landroid/view/View;
+  3455:.method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
+  3468:.method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
+  3483:.method public final h(ZLjava/lang/CharSequence;Lcom/mplus/lib/z6/e;Ljava/lang/Object;)Ljava/lang/CharSequence;
+  3555:.method public final i(Lcom/mplus/lib/r4/f0;ZZLjava/lang/String;)Ljava/lang/CharSequence;
+  3732:.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+  3811:.method public final j(Lcom/mplus/lib/r4/f0;)Lcom/mplus/lib/r4/L;
+  3857:.method public final k(Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)V
+  3941:.method public final l(Landroid/graphics/drawable/Drawable;)V
+  4104:.method public final onDraw(Landroid/graphics/Canvas;)V
+  5168:.method public final onLayout(ZIIII)V
+  5330:.method public final onMeasure(II)V
+  5887:.method public bridge synthetic setAllParentsClip(Z)V
+  5900:.method public setAllowAnyHeight(Z)V
+  5913:.method public setAlphaDirect(F)V
+  5926:.method public setBackgroundColorAnimated(I)V
+  5958:.method public setBackgroundColorDirect(I)V
+  5977:.method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
+  5986:.method public setBottomMargin(I)V
+  5995:.method public setBubbleSpecSource(Lcom/mplus/lib/s5/h;)V
+  6006:.method public bridge synthetic setHeightTo(I)V
+  6019:.method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
+  6032:.method public setLeftMargin(I)V
+  6043:.method public setLinkClickMovementMethod(Lcom/mplus/lib/v6/v;)V
+  6056:.method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
+  6065:.method public setMaxWidth(I)V
+  6076:.method public setRightMargin(I)V
+  6087:.method public setStretchedWidth(I)V
+  6116:.method public setTextColorDirect(I)V
+  6153:.method public setTopMargin(I)V
+  6164:.method public setTopPadding(I)V
+  6175:.method public bridge synthetic setViewVisible(Z)V
+  6186:.method public bridge synthetic setViewVisibleAnimated(Z)V
+  6197:.method public setWidthTo(I)V
+  6208:.method public final toString()Ljava/lang/String;
+  6245:.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+== com/mplus/lib/ui/convo/ConvoActivity ==
+  20:.method public constructor <init>()V
+  29:.method public static Z(Landroid/content/Context;ZLcom/mplus/lib/r4/n;ZJZ)Landroid/content/Intent;
+  107:.method public final B()V
+  176:.method public final P()Z
+  186:.method public final W(Lcom/mplus/lib/ui/common/base/BaseFrameLayout;)Lcom/mplus/lib/v6/W;
+  495:.method public final Y()I
+  514:.method public final a0()V
+  560:.method public final c()V
+  594:.method public final h()V
+  608:.method public final k(II)Z
+  844:.method public final onCreate(Landroid/os/Bundle;)V
+  936:.method public final onResume()V
+  1032:.method public final onWindowFocusChanged(Z)V
+== com/mplus/lib/ui/convo/gallery/GalleryActivity ==
+  20:.method public constructor <init>()V
+  48:.method public final U()I
+  58:.method public final onCreate(Landroid/os/Bundle;)V
+  631:.method public final onDestroy()V
+  665:.method public final w(Lcom/mplus/lib/x5/y;Landroidx/core/graphics/Insets;)V
+  685:.method public final z(Lcom/mplus/lib/x5/y;Landroidx/core/graphics/Insets;)V
+== com/mplus/lib/ui/convo/media/ConvoMediaActivity ==
+  21:.method public constructor <init>()V
+  31:.method public final onCreate(Landroid/os/Bundle;)V
+  449:.method public final onDestroy()V
+== com/mplus/lib/ui/convo/MessageListLayoutManager ==
+  17:.method public constructor <init>(Landroid/content/Context;)V
+  30:.method public final a(III)V
+  61:.method public final smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;I)V
+  80:.method public final toString()Ljava/lang/String;
+== com/mplus/lib/ui/convo/MessageListView ==
+  25:.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+  36:.method public bridge synthetic getLastView()Lcom/mplus/lib/x5/y;
+  51:.method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
+  66:.method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
+  81:.method public bridge synthetic getPaddingHorizontal()I
+  92:.method public bridge synthetic getPaddingVertical()I
+  104:.method public getView()Landroid/view/View;
+  114:.method public getViewGroup()Landroid/view/ViewGroup;
+  123:.method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
+  138:.method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
+  151:.method public final onChildAttachedToWindow(Landroid/view/View;)V
+  227:.method public bridge synthetic setAllParentsClip(Z)V
+  240:.method public setAlphaDirect(F)V
+  250:.method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
+  261:.method public setBottomMargin(I)V
+  272:.method public bridge synthetic setDispatchTouchEvents(Z)V
+  283:.method public bridge synthetic setHeightTo(I)V
+  294:.method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
+  304:.method public setLeftMargin(I)V
+  315:.method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
+  325:.method public setRightMargin(I)V
+  334:.method public setTopMargin(I)V
+  347:.method public setTopPadding(I)V
+  358:.method public bridge synthetic setViewVisible(Z)V
+  371:.method public bridge synthetic setViewVisibleAnimated(Z)V
+  382:.method public setWidthTo(I)V
+== com/mplus/lib/ui/convo/RowLayout ==
+  17:.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+  28:.method public getHolder()Lcom/mplus/lib/v6/B;
+  39:.method public bridge synthetic getLastView()Lcom/mplus/lib/x5/y;
+  54:.method public bridge synthetic getLayoutSize()Lcom/mplus/lib/z7/G;
+  69:.method public bridge synthetic getMeasuredSize()Lcom/mplus/lib/z7/G;
+  86:.method public bridge synthetic getPaddingHorizontal()I
+  99:.method public bridge synthetic getPaddingVertical()I
+  113:.method public getView()Landroid/view/View;
+  123:.method public getViewGroup()Landroid/view/ViewGroup;
+  132:.method public bridge synthetic getVisibileAnimationDelegate()Lcom/mplus/lib/y5/z;
+  147:.method public bridge synthetic getVisualDebugDelegate()Lcom/mplus/lib/y5/A;
+  160:.method public bridge synthetic setAllParentsClip(Z)V
+  171:.method public setAlphaDirect(F)V
+  179:.method public bridge synthetic setBackgroundDrawingDelegate(Lcom/mplus/lib/y5/d;)V
+  190:.method public setBottomMargin(I)V
+  201:.method public bridge synthetic setDispatchTouchEvents(Z)V
+  212:.method public bridge synthetic setHeightTo(I)V
+  223:.method public setHolder(Lcom/mplus/lib/v6/B;)V
+  236:.method public bridge synthetic setLayoutSize(Lcom/mplus/lib/z7/G;)V
+  249:.method public setLeftMargin(I)V
+  262:.method public bridge synthetic setMargin(Landroid/graphics/Rect;)V
+  275:.method public setRightMargin(I)V
+  284:.method public setTopMargin(I)V
+  295:.method public setTopPadding(I)V
+  304:.method public bridge synthetic setViewVisible(Z)V
+  315:.method public bridge synthetic setViewVisibleAnimated(Z)V
+  326:.method public setWidthTo(I)V

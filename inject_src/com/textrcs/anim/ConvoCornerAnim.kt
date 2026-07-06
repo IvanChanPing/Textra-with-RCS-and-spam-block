@@ -68,6 +68,12 @@ object ConvoCornerAnim {
     // Dim ramp duration — matches the window slide.
     private const val DIM_MS = 350L
 
+    // Underneath (conv-list, the NON-rounded bottom page) parallax slide duration. Must match the
+    // FOREGROUND slide (textrcs_overlay_enter/exit = 410ms) so the underneath doesn't finish early and
+    // read as "moving too fast" next to the rounded top page. Was wrongly coupled to DIM_MS=350 (the
+    // dim ramp, not the slide) → the underneath finished 60ms ahead of the foreground.
+    private const val PARALLAX_UNDER_MS = 410L
+
     // Peak darkness of the dim-behind scrim. 0.35 = "a little bit darker"
     // without crushing the conv-list — iOS UINavigationController territory.
     private const val DIM_MAX = 0.35f
@@ -155,7 +161,7 @@ object ConvoCornerAnim {
         val frac = Hooks.overrideDouble(
             "convo_parallax_under_fraction", PARALLAX_FRACTION.toDouble()).toFloat()
         // [REMOTE_HOOK] convo_parallax_under_ms — slide duration.
-        val ms = Hooks.overrideLong("convo_parallax_under_ms", DIM_MS)
+        val ms = Hooks.overrideLong("convo_parallax_under_ms", PARALLAX_UNDER_MS)
         val from: Float
         val to: Float
         if (opening) { from = 0f; to = -frac * cv.width } else { from = cv.translationX; to = 0f }

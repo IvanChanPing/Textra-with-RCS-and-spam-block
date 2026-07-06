@@ -1,5 +1,18 @@
 # Share My Location (static map link) + RCS reactions check — Task Journal
 
+## SEND-SIDE REACTIONS (ADD+REMOVE) — code-traced 2026-06-29; make-or-break unknown flagged
+Send chain VERIFIED intact by reading: Textra SMS send `e5/d.m(body,recips,…)` → (hooked) →
+`SendManager.sendSmsBridge` (707) → `sendText` (717) → `maybeSendAsReaction` (160). maybeSendAsReaction
+detects ZWSP(add)/ZWNJ(remove), resolves target via resolveReactionTargetId, and calls
+RustBridge.sendReaction(targetId, emoji, action) with **ADD=1 / REMOVE=2** (SendManager.kt:393). So the
+RCS remove instruction (Beeper-style) IS wired for the user removing their own reaction.
+**MAKE-OR-BREAK UNKNOWN (unresolved by static read; no grep-able caller of e5/d.m with a tapback body):**
+does Textra, on an RCS thread, dispatch a user reaction/removal as a tapback TEXT body through e5/d.m
+(the path we hook), or via a native/different mechanism that bypasses our hook? Gates BOTH send-ADD and
+send-REMOVE. ON-DEVICE TEST (real paired RCS device): long-press→add 👍 → expect Logcat
+"SEND reaction OK emoji=👍 action=1"; remove → "action=2". No maybeSendAsReaction log on react ⇒ Textra
+bypasses e5/d.m ⇒ must hook Textra's actual tapback-send method instead. NOT on-device verified.
+
 ## CURRENT STATE / NEXT STEP (2026-06-29c) — G0 BYPASS WORKS (DB-VERIFIED); UI badge UNVERIFIED
 FIXED task #14 at the data layer. The direct-G0 bypass in writeIncomingViaFullStore attaches the
 tapback correctly. PROVEN on redroid 5575 (sqlite on the real messaging.db) via TWO drives:

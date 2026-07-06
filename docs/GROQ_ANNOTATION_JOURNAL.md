@@ -1,5 +1,44 @@
 # Groq Zero-Claude-Token Method Annotation — Task Journal
 
+## #10 PICKER UI-DRIVE FINDINGS (2026-06-29, on redroid16-mine 5585 — MINE, not sdtest!)
+Drove the real UI (am start MainActivity → tap convo → ConvoActivity → long-press bubble). VERIFIED:
+- Long-press a bubble = `input motionevent DOWN; (≈800ms via round-trips); UP` (input swipe same-point
+  is coalesced to a TAP on redroid — doesn't long-press). Long-press opens `id/menu` [36,1588][996,1933].
+- That menu = `id/main` row with **"COPY" + `id/overflowButton`** only. Screencap of menu-top region
+  [1588,1815] = 100% WHITE (0% colored) → NO emoji reaction bar in the long-press menu.
+- Reactions are reached via overflow → "Add reaction" (ic_add_reaction, the v6/K menu item). The eventual
+  emoji grid has NO uiautomator accessibility nodes → CUSTOM-DRAWN (v6/K/P6/c canvas), NOT per-emoji Views.
+⇒ "animate tapped picker emoji" needs custom-CANVAS animation deep in v6/K (not a simple View.popEmoji).
+DECISION: pivot #10 to the SIMPLE verifiable version — pop the reaction BADGE on ui/convo/BubbleView when
+a reaction lands (real View; drive by INJECTING a reaction; verify via screencap). ReactionPop reused.
+Emulator: redroid16-mine (5585). textra2.apk installed there. Onboarding: tap id/startButton once.
+
+## CURRENT STATE / NEXT STEP (2026-06-29d) — "do everything" pass: reactions+anim+flag-recovery done; UI-render items remain
+DONE this pass: #14 receive tapback attach (G0 bypass, DB-verified, 648222d7); #16 REMOVE/un-react
+(DB-verified, inverse-G0); send-side REMOVE traced (action=2 wired, on-device-UNVERIFIED, make-or-break
+unknown = does Textra route RCS-thread reactions through e5/d.m); #10 ReactionPop animation built +
+RENDER-VERIFIED via slowed test activity + screencap (colored-px 4900→9372); #13 GROQ flag recovery
++930 annotations (5955f7c1, zero Claude tokens), 3748 genuinely flagged remain.
+REMAINING (all need deep smali and/or a REAL DEVICE): #10 wire ReactionPop into the real picker tap
+(v6/K→J6 deep obfuscated smali; gesture not drivable on redroid → needs tap-test); #7 image-expand
+morph (window/shared-element transition — redroid CANNOT capture window-level anims → needs real device);
+#15 reaction badge render (real device). 
+NEXT: pick #10-wiring or #7; both end UNVERIFIED-on-redroid for the gesture/window parts → hand user a
+tap-test. APK at repo root has #14/#16/#10-anim/#13. Device redroid 5575 (running).
+
+## CURRENT STATE / NEXT STEP (2026-06-29) — executing OPEN_WORK_PLAN.md
+
+- STEP 1 (#11) DONE: committed F0 helper writeIncomingViaFullStore (commit f9c4fe16). HEAD was
+  inconsistent (caller in f6f99eef, def working-tree-only → did not compile). VERIFIED ./build.sh
+  exit 0, helper compiled into smali_classes7, APK built 98M, placed at repo-root textra2.apk.
+  Confirmed the 11,271 # M-ROLE comments don't break baksmali/apktool.
+- STEP 2 (build) effectively DONE via the same build (textra2.apk at root, dated this run).
+- NEXT = STEP 3 (#12): on-device verify tapback render. Needs a device/emulator + adb root.
+  If no device available → hand the user the ordered test script (in docs/SHARE_LOCATION_JOURNAL.md).
+- Reaction-picker leads for STEP 4/5 (#10): ui/common/plus/emojis/EmojisView.smali + ui/convo/BubbleView.smali (unverified hooks).
+
+---
+(below: prior 2026-06-27 state)
 ## CURRENT STATE / NEXT STEP (2026-06-27)
 
 **Goal:** Annotate method-level smali roles using ONLY cheap non-Anthropic models (Groq), with a

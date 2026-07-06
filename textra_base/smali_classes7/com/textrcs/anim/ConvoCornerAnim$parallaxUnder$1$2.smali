@@ -58,7 +58,7 @@
 
     iput-boolean p3, p0, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;->$opening:Z
 
-    .line 167
+    .line 173
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
@@ -67,14 +67,14 @@
 .method private final done()V
     .registers 3
 
-    .line 169
+    .line 175
     iget-object v0, p0, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;->$cv:Landroid/view/View;
 
     iget v1, p0, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;->$to:F
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 170
+    .line 176
     iget-boolean v0, p0, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;->$opening:Z
 
     if-nez v0, :cond_11
@@ -85,7 +85,7 @@
 
     invoke-static {v0}, Lcom/textrcs/anim/ConvoCornerAnim;->access$setUnderReturning$p(Z)V
 
-    .line 171
+    .line 177
     :cond_11
     return-void
 .end method
@@ -100,7 +100,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 173
+    .line 179
     invoke-direct {p0}, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;->done()V
 
     return-void
@@ -114,7 +114,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 172
+    .line 178
     invoke-direct {p0}, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;->done()V
 
     return-void

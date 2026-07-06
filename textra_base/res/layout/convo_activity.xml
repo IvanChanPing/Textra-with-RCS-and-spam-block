@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- textrcs conversation screen (ConvoActivity). FULL architecture: docs/CONVO_VIEW_ARCHITECTURE.md.
+     Hierarchy: @id/main (this, the inset-listener view) > @id/content (0dp, fills) > @id/contentControlledHeight
+     (Textra resizes THIS for the keyboard via x5.y.setHeightTo) > @id/send_panel (vertical LinearLayout) =
+     [@id/actionbarContainer = the blue TOP BAR] + [@id/messageListAndSendArea = the chat list + compose bar].
+     clipChildren=false throughout → translated list rows can paint OVER the top bar (must be clipped).
+     KEYBOARD: the window is adjustResize (set in code at runtime by v6.P.u0, NOT here/manifest); opening the IME
+     resizes the content two ways — framework adjustResize + Textra setHeightTo — which is why the compose bar
+     historically SNAPS. The slide fix (ImeSyncAnim) forces adjustNothing + suppresses setHeightTo + translates
+     @id/messageListAndSendArea to follow the keyboard. -->
 <com.mplus.lib.ui.common.base.BaseConstraintLayout a:id="@id/main" a:clipChildren="false" a:layout_width="match_parent" a:layout_height="match_parent"
   xmlns:a="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.mplus.lib.ui.common.base.BaseFrameLayout a:id="@id/content" a:layout_width="match_parent" a:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="?convoContent">

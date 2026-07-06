@@ -48,7 +48,7 @@
 
     iput-object p1, p0, Lcom/textrcs/anim/ConvoCornerAnim$attachClose$1;->$state:[F
 
-    .line 313
+    .line 319
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -69,7 +69,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 315
+    .line 321
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v4
@@ -94,6 +94,6 @@
     .local v1, "outline":Landroid/graphics/Outline;
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
-    .line 316
+    .line 322
     return-void
 .end method

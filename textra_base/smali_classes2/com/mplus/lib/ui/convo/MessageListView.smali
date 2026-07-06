@@ -5,6 +5,18 @@
 # ROLE  : conversation and bubble UI — BubbleView, MessageListView, ConversationActivity fragments
 # SIG   : extends com.mplus.lib.ui.common.base.BaseRecyclerView
 # SRC   : structural parse (superclass + interfaces + field/method names + string constants)
+#
+# textrcs (VERIFIED 2026-07-06, full read) — the chat list = com.mplus.lib.ui.convo.MessageListView,
+# a BaseRecyclerView (RecyclerView). RELEVANT TO THE KEYBOARD SLIDE:
+#   * onChildAttachedToWindow [below] force-sets every newly-attached row to alpha=1.0 + visibility=VISIBLE.
+#     Under framework adjustResize, opening the keyboard shrinks the region -> rows get detached/re-attached ->
+#     each re-attached row is force-shown here = the "bubbles flash before the animation" the user saw.
+#     The adjustNothing + translationY fix removes the resize entirely, so rows are NOT re-attached -> no flash.
+#   * NO onMeasure / onSizeChanged / onLayout override -- the list does no custom work on a size change; it just
+#     relies on RecyclerView remeasure. So translating @id/messageListAndSendArea does not trip any list logic.
+#   * The many setX/getX bridge-synthetics below are the x5.y/x5.z "layout-size" interface impl (margins,
+#     padding, heightTo, visibility) -- none are IME/keyboard specific.
+#   * Bottom-anchoring is by scroll (see MessageListLayoutManager smoothScroll), NOT stackFromEnd.
 
 
 

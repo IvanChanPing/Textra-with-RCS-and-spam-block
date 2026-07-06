@@ -1720,6 +1720,13 @@
 .end method
 
 # M-ROLE [GROQ]: This method sets the soft input mode of a window and performs additional actions based on a boolean parameter.  [author=groq-llama-3.3-70b | judge=gpt-oss-20b | grounded | NOT Claude/human-verified]
+# textrcs (VERIFIED 2026-07-06 — docs/CONVO_VIEW_ARCHITECTURE.md): sets the conversation window's soft-input mode.
+# v0 = (p2 ? STATE_VISIBLE=4 : STATE_HIDDEN=2), then `or-int 0x10`, then Window.setSoftInputMode(v0). 0x10 =
+# SOFT_INPUT_ADJUST_RESIZE, so the window is ALWAYS adjustResize (only the STATE bit varies with p2). Called from
+# BOTH ConvoActivity.onCreate (:893) AND QuickConvoActivity (:1684) — do NOT patch this for a ConvoActivity-only
+# change. This adjustResize is ONE of the two things that snap the compose bar when the keyboard opens (the other
+# is x5.y.setHeightTo via B6.b->Q5.j.r0). The ImeSyncAnim keyboard-slide fix instead forces ADJUST_NOTHING on
+# ConvoActivity's window via a decorView.post that runs AFTER this method.
 .method public final u0(Landroid/view/Window;Z)V
     .locals 3
 

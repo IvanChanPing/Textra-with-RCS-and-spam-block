@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nConvoCornerAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConvoCornerAnim.kt\ncom/textrcs/anim/ConvoCornerAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,339:1\n1#2:340\n*E\n"
+    value = "SMAP\nConvoCornerAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ConvoCornerAnim.kt\ncom/textrcs/anim/ConvoCornerAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,345:1\n1#2:346\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0012\u0010\u0012\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u0013\u001a\u00020\u000eH\u0002J\u0010\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u000eH\u0007J\u0010\u0010\u0017\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u000eH\u0007J\u0012\u0010\u0018\u001a\u0004\u0018\u00010\u00192\u0006\u0010\u001a\u001a\u00020\u000eH\u0002J\u0008\u0010\u001b\u001a\u00020\u001cH\u0002J\u0018\u0010\u001d\u001a\u00020\u00152\u0006\u0010\u0013\u001a\u00020\u000e2\u0006\u0010\u001e\u001a\u00020\u0011H\u0002J\u0010\u0010\u001f\u001a\u00020\u00152\u0006\u0010 \u001a\u00020!H\u0007J\u0010\u0010\"\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u000eH\u0007J\u0010\u0010#\u001a\u00020\u00072\u0006\u0010\u0016\u001a\u00020\u000eH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R*\u0010\u000b\u001a\u001e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000e0\r0\u000cj\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000e0\r`\u000fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082\u000e\u00a2\u0006\u0002\n\u0000"
+        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0012\u0010\u0013\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u0014\u001a\u00020\u000fH\u0002J\u0010\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u000fH\u0007J\u0010\u0010\u0018\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u000fH\u0007J\u0012\u0010\u0019\u001a\u0004\u0018\u00010\u001a2\u0006\u0010\u001b\u001a\u00020\u000fH\u0002J\u0008\u0010\u001c\u001a\u00020\u001dH\u0002J\u0018\u0010\u001e\u001a\u00020\u00162\u0006\u0010\u0014\u001a\u00020\u000f2\u0006\u0010\u001f\u001a\u00020\u0012H\u0002J\u0010\u0010 \u001a\u00020\u00162\u0006\u0010!\u001a\u00020\"H\u0007J\u0010\u0010#\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u000fH\u0007J\u0010\u0010$\u001a\u00020\u00072\u0006\u0010\u0017\u001a\u00020\u000fH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R*\u0010\u000c\u001a\u001e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\rj\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u0010X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/anim/ConvoCornerAnim;",
@@ -24,6 +24,7 @@
         "DIM_MS",
         "FALLBACK_RADIUS_DP",
         "PARALLAX_FRACTION",
+        "PARALLAX_UNDER_MS",
         "recentResumed",
         "Ljava/util/ArrayList;",
         "Ljava/lang/ref/WeakReference;",
@@ -74,6 +75,8 @@
 .field public static final INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
 .field private static final PARALLAX_FRACTION:F = 0.2f
+
+.field private static final PARALLAX_UNDER_MS:J = 0x19aL
 
 .field private static final recentResumed:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -131,7 +134,7 @@
 
     sput-object v0, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
-    .line 91
+    .line 97
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -195,7 +198,7 @@
     .registers 6
     .param p1, "top"    # Landroid/app/Activity;
 
-    .line 135
+    .line 141
     sget-object v0, Lcom/textrcs/anim/ConvoCornerAnim;->recentResumed:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -216,7 +219,7 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
-    .line 136
+    .line 142
     .local v1, "ref":Ljava/lang/ref/WeakReference;
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -228,7 +231,7 @@
 
     goto :goto_6
 
-    .line 137
+    .line 143
     .local v2, "a":Landroid/app/Activity;
     :cond_1b
     if-eq v2, p1, :cond_6
@@ -241,7 +244,7 @@
 
     goto :goto_6
 
-    .line 138
+    .line 144
     :cond_24
     invoke-virtual {v2}, Landroid/app/Activity;->isDestroyed()Z
 
@@ -249,10 +252,10 @@
 
     if-nez v3, :cond_6
 
-    .line 139
+    .line 145
     return-object v2
 
-    .line 141
+    .line 147
     .end local v1    # "ref":Ljava/lang/ref/WeakReference;
     .end local v2    # "a":Landroid/app/Activity;
     :cond_2b
@@ -273,10 +276,10 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 228
+    .line 234
     nop
 
-    .line 230
+    .line 236
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v2, "convo_corner_anim_disable"
@@ -293,7 +296,7 @@
 
     return-void
 
-    .line 231
+    .line 237
     :cond_15
     invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -306,7 +309,7 @@
     :cond_1c
     move-object v2, v0
 
-    .line 232
+    .line 238
     .local v2, "window":Landroid/view/Window;
     invoke-virtual {v2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -318,7 +321,7 @@
 
     move-object v5, v0
 
-    .line 234
+    .line 240
     .local v5, "decor":Landroid/view/View;
     sget-object v0, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
@@ -326,7 +329,7 @@
 
     move-result v6
 
-    .line 238
+    .line 244
     .local v6, "radiusPx":F
     const/4 v7, 0x1
 
@@ -338,7 +341,7 @@
 
     move-object v9, v0
 
-    .line 239
+    .line 245
     .local v9, "state":[F
     new-instance v0, Lcom/textrcs/anim/ConvoCornerAnim$attach$1;
 
@@ -348,10 +351,10 @@
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 244
+    .line 250
     invoke-virtual {v5, v7}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 245
+    .line 251
     :try_start_41
     invoke-virtual {v2, v7}, Landroid/view/Window;->setClipToOutline(Z)V
     :try_end_44
@@ -362,7 +365,7 @@
     :catchall_45
     move-exception v0
 
-    .line 249
+    .line 255
     :goto_46
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -380,7 +383,7 @@
 
     goto :goto_65
 
-    .line 250
+    .line 256
     :cond_53
     sget-object v10, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -400,23 +403,23 @@
 
     double-to-float v0, v10
 
-    .line 249
+    .line 255
     :goto_65
     nop
 
-    .line 251
+    .line 257
     .local v0, "dimMax":F
     cmpl-float v10, v0, v3
 
     if-lez v10, :cond_97
 
-    .line 252
+    .line 258
     invoke-virtual {v2, v4}, Landroid/view/Window;->addFlags(I)V
 
-    .line 253
+    .line 259
     invoke-virtual {v2, v3}, Landroid/view/Window;->setDimAmount(F)V
 
-    .line 254
+    .line 260
     new-array v10, v4, [F
 
     fill-array-data v10, :array_f0
@@ -428,13 +431,13 @@
     .local v10, "$this$attach_u24lambda_u244":Landroid/animation/ValueAnimator;
     const/4 v11, 0x0
 
-    .line 255
+    .line 261
     .local v11, "$i$a$-apply-ConvoCornerAnim$attach$2":I
     const-wide/16 v12, 0x15e
 
     invoke-virtual {v10, v12, v13}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 256
+    .line 262
     sget-object v12, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v12}, Lcom/textrcs/anim/ConvoCornerAnim;->ease()Landroid/view/animation/PathInterpolator;
@@ -445,31 +448,31 @@
 
     invoke-virtual {v10, v12}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 257
+    .line 263
     new-instance v12, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda1;
 
     invoke-direct {v12, v2, v0}, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda1;-><init>(Landroid/view/Window;F)V
 
     invoke-virtual {v10, v12}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 258
+    .line 264
     invoke-virtual {v10}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 259
+    .line 265
     nop
 
-    .line 254
+    .line 260
     .end local v10    # "$this$attach_u24lambda_u244":Landroid/animation/ValueAnimator;
     .end local v11    # "$i$a$-apply-ConvoCornerAnim$attach$2":I
     nop
 
-    .line 264
+    .line 270
     :cond_97
     sget-object v10, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v10, v1, v7}, Lcom/textrcs/anim/ConvoCornerAnim;->parallaxUnder(Landroid/app/Activity;Z)V
 
-    .line 270
+    .line 276
     sget-object v11, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const/16 v16, 0x4
@@ -486,7 +489,7 @@
 
     move-result-wide v10
 
-    .line 271
+    .line 277
     .local v10, "hold":J
     sget-object v12, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -504,7 +507,7 @@
 
     move-result-wide v12
 
-    .line 272
+    .line 278
     .local v12, "square":J
     new-array v4, v4, [F
 
@@ -519,14 +522,14 @@
     .local v3, "$this$attach_u24lambda_u246":Landroid/animation/ValueAnimator;
     const/4 v4, 0x0
 
-    .line 273
+    .line 279
     .local v4, "$i$a$-apply-ConvoCornerAnim$attach$3":I
     invoke-virtual {v3, v12, v13}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 274
+    .line 280
     invoke-virtual {v3, v10, v11}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 275
+    .line 281
     sget-object v7, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v7}, Lcom/textrcs/anim/ConvoCornerAnim;->ease()Landroid/view/animation/PathInterpolator;
@@ -537,14 +540,14 @@
 
     invoke-virtual {v3, v7}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 276
+    .line 282
     new-instance v7, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda2;
 
     invoke-direct {v7, v9, v5}, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda2;-><init>([FLandroid/view/View;)V
 
     invoke-virtual {v3, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 280
+    .line 286
     new-instance v7, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;
 
     invoke-direct {v7, v5, v2}, Lcom/textrcs/anim/ConvoCornerAnim$attach$3$2;-><init>(Landroid/view/View;Landroid/view/Window;)V
@@ -553,18 +556,18 @@
 
     invoke-virtual {v3, v7}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 291
+    .line 297
     invoke-virtual {v3}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 292
+    .line 298
     nop
 
-    .line 272
+    .line 278
     .end local v3    # "$this$attach_u24lambda_u246":Landroid/animation/ValueAnimator;
     .end local v4    # "$i$a$-apply-ConvoCornerAnim$attach$3":I
     nop
 
-    .line 293
+    .line 299
     return-void
 
     nop
@@ -590,7 +593,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 257
+    .line 263
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -630,7 +633,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 277
+    .line 283
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -649,10 +652,10 @@
 
     aput v0, p0, v1
 
-    .line 278
+    .line 284
     invoke-virtual {p1}, Landroid/view/View;->invalidateOutline()V
 
-    .line 279
+    .line 285
     return-void
 .end method
 
@@ -666,10 +669,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 305
+    .line 311
     nop
 
-    .line 306
+    .line 312
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v1, "convo_corner_anim_disable"
@@ -686,7 +689,7 @@
 
     return-void
 
-    .line 307
+    .line 313
     :cond_13
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -699,7 +702,7 @@
     :cond_1a
     move-object v1, v0
 
-    .line 308
+    .line 314
     .local v1, "window":Landroid/view/Window;
     invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -711,7 +714,7 @@
 
     move-object v4, v0
 
-    .line 309
+    .line 315
     .local v4, "decor":Landroid/view/View;
     sget-object v0, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
@@ -719,7 +722,7 @@
 
     move-result v5
 
-    .line 312
+    .line 318
     .local v5, "radiusPx":F
     const/4 v0, 0x1
 
@@ -729,7 +732,7 @@
 
     aput v5, v6, v7
 
-    .line 313
+    .line 319
     .local v6, "state":[F
     new-instance v8, Lcom/textrcs/anim/ConvoCornerAnim$attachClose$1;
 
@@ -739,10 +742,10 @@
 
     invoke-virtual {v4, v8}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 318
+    .line 324
     invoke-virtual {v4, v0}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 319
+    .line 325
     :try_start_3e
     invoke-virtual {v1, v0}, Landroid/view/Window;->setClipToOutline(Z)V
     :try_end_41
@@ -753,11 +756,11 @@
     :catchall_42
     move-exception v0
 
-    .line 320
+    .line 326
     :goto_43
     invoke-virtual {v4}, Landroid/view/View;->invalidateOutline()V
 
-    .line 322
+    .line 328
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v8, "convo_dim_behind_disable"
@@ -774,7 +777,7 @@
 
     goto :goto_64
 
-    .line 323
+    .line 329
     :cond_53
     sget-object v8, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
@@ -794,23 +797,23 @@
 
     double-to-float v0, v8
 
-    .line 322
+    .line 328
     :goto_64
     nop
 
-    .line 324
+    .line 330
     .local v0, "dimMax":F
     cmpl-float v2, v0, v2
 
     if-lez v2, :cond_96
 
-    .line 325
+    .line 331
     invoke-virtual {v1, v3}, Landroid/view/Window;->addFlags(I)V
 
-    .line 326
+    .line 332
     invoke-virtual {v1, v0}, Landroid/view/Window;->setDimAmount(F)V
 
-    .line 327
+    .line 333
     new-array v2, v3, [F
 
     fill-array-data v2, :array_9c
@@ -822,13 +825,13 @@
     .local v2, "$this$attachClose_u24lambda_u248":Landroid/animation/ValueAnimator;
     const/4 v3, 0x0
 
-    .line 328
+    .line 334
     .local v3, "$i$a$-apply-ConvoCornerAnim$attachClose$2":I
     const-wide/16 v8, 0x15e
 
     invoke-virtual {v2, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 329
+    .line 335
     sget-object v8, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v8}, Lcom/textrcs/anim/ConvoCornerAnim;->ease()Landroid/view/animation/PathInterpolator;
@@ -839,31 +842,31 @@
 
     invoke-virtual {v2, v8}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 330
+    .line 336
     new-instance v8, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda3;
 
     invoke-direct {v8, v1, v0}, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda3;-><init>(Landroid/view/Window;F)V
 
     invoke-virtual {v2, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 331
+    .line 337
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 332
+    .line 338
     nop
 
-    .line 327
+    .line 333
     .end local v2    # "$this$attachClose_u24lambda_u248":Landroid/animation/ValueAnimator;
     .end local v3    # "$i$a$-apply-ConvoCornerAnim$attachClose$2":I
     nop
 
-    .line 336
+    .line 342
     :cond_96
     sget-object v2, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v2, p0, v7}, Lcom/textrcs/anim/ConvoCornerAnim;->parallaxUnder(Landroid/app/Activity;Z)V
 
-    .line 337
+    .line 343
     return-void
 
     :array_9c
@@ -887,7 +890,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 330
+    .line 336
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -913,7 +916,7 @@
     .registers 5
     .param p1, "a"    # Landroid/app/Activity;
 
-    .line 131
+    .line 137
     const/4 v0, 0x0
 
     :try_start_1
@@ -950,7 +953,7 @@
 .method private final ease()Landroid/view/animation/PathInterpolator;
     .registers 6
 
-    .line 75
+    .line 81
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     const v1, 0x3e4ccccd    # 0.2f
@@ -971,7 +974,7 @@
     .param p1, "top"    # Landroid/app/Activity;
     .param p2, "opening"    # Z
 
-    .line 151
+    .line 157
     sget-object v0, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v1, "convo_parallax_under_disable"
@@ -988,7 +991,7 @@
 
     return-void
 
-    .line 152
+    .line 158
     :cond_d
     invoke-direct {p0, p1}, Lcom/textrcs/anim/ConvoCornerAnim;->activityBelow(Landroid/app/Activity;)Landroid/app/Activity;
 
@@ -996,11 +999,11 @@
 
     if-eqz v0, :cond_83
 
-    .line 340
+    .line 346
     .local v0, "it":Landroid/app/Activity;
     const/4 v1, 0x0
 
-    .line 152
+    .line 158
     .local v1, "$i$a$-let-ConvoCornerAnim$parallaxUnder$cv$1":I
     sget-object v2, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
@@ -1014,15 +1017,15 @@
 
     goto :goto_83
 
-    .line 155
+    .line 161
     .local v0, "cv":Landroid/view/View;
     :cond_1d
     sget-object v4, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    .line 156
+    .line 162
     nop
 
-    .line 155
+    .line 161
     const/4 v9, 0x4
 
     const/4 v10, 0x0
@@ -1037,33 +1040,33 @@
 
     move-result-wide v1
 
-    .line 156
+    .line 162
     double-to-float v1, v1
 
-    .line 155
+    .line 161
     nop
 
-    .line 158
+    .line 164
     .local v1, "frac":F
     sget-object v4, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
     const-string v5, "convo_parallax_under_ms"
 
-    const-wide/16 v6, 0x15e
+    const-wide/16 v6, 0x19a
 
     invoke-static/range {v4 .. v10}, Lcom/textrcs/control/Hooks;->overrideLong$default(Lcom/textrcs/control/Hooks;Ljava/lang/String;JLjava/util/Map;ILjava/lang/Object;)J
 
     move-result-wide v4
 
-    .line 159
+    .line 165
     .local v4, "ms":J
     const/4 v2, 0x0
 
-    .line 160
+    .line 166
     .local v2, "from":F
     const/4 v6, 0x0
 
-    .line 161
+    .line 167
     .local v6, "to":F
     if-eqz p2, :cond_47
 
@@ -1088,7 +1091,7 @@
 
     const/4 v7, 0x0
 
-    .line 162
+    .line 168
     .end local v6    # "to":F
     .local v7, "to":F
     :goto_4c
@@ -1098,7 +1101,7 @@
 
     sput-boolean v6, Lcom/textrcs/anim/ConvoCornerAnim;->underReturning:Z
 
-    .line 163
+    .line 169
     :cond_51
     new-array v3, v3, [F
 
@@ -1115,11 +1118,11 @@
     .local v3, "$this$parallaxUnder_u24lambda_u242":Landroid/animation/ValueAnimator;
     const/4 v6, 0x0
 
-    .line 164
+    .line 170
     .local v6, "$i$a$-apply-ConvoCornerAnim$parallaxUnder$1":I
     invoke-virtual {v3, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 165
+    .line 171
     sget-object v8, Lcom/textrcs/anim/ConvoCornerAnim;->INSTANCE:Lcom/textrcs/anim/ConvoCornerAnim;
 
     invoke-direct {v8}, Lcom/textrcs/anim/ConvoCornerAnim;->ease()Landroid/view/animation/PathInterpolator;
@@ -1130,14 +1133,14 @@
 
     invoke-virtual {v3, v8}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 166
+    .line 172
     new-instance v8, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda0;
 
     invoke-direct {v8, v0}, Lcom/textrcs/anim/ConvoCornerAnim$$ExternalSyntheticLambda0;-><init>(Landroid/view/View;)V
 
     invoke-virtual {v3, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 167
+    .line 173
     new-instance v8, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;
 
     invoke-direct {v8, v0, v7, p2}, Lcom/textrcs/anim/ConvoCornerAnim$parallaxUnder$1$2;-><init>(Landroid/view/View;FZ)V
@@ -1146,21 +1149,21 @@
 
     invoke-virtual {v3, v8}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 175
+    .line 181
     invoke-virtual {v3}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 176
+    .line 182
     nop
 
-    .line 163
+    .line 169
     .end local v3    # "$this$parallaxUnder_u24lambda_u242":Landroid/animation/ValueAnimator;
     .end local v6    # "$i$a$-apply-ConvoCornerAnim$parallaxUnder$1":I
     nop
 
-    .line 177
+    .line 183
     return-void
 
-    .line 152
+    .line 158
     .end local v0    # "cv":Landroid/view/View;
     .end local v1    # "frac":F
     .end local v2    # "from":F
@@ -1184,7 +1187,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 166
+    .line 172
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -1214,7 +1217,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 104
+    .line 110
     new-instance v0, Lcom/textrcs/anim/ConvoCornerAnim$registerActivityTracking$1;
 
     invoke-direct {v0}, Lcom/textrcs/anim/ConvoCornerAnim$registerActivityTracking$1;-><init>()V
@@ -1223,7 +1226,7 @@
 
     invoke-virtual {p0, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    .line 127
+    .line 133
     return-void
 .end method
 
@@ -1237,10 +1240,10 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 218
+    .line 224
     nop
 
-    .line 219
+    .line 225
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -1249,7 +1252,7 @@
 
     return-void
 
-    .line 220
+    .line 226
     .local v0, "window":Landroid/view/Window;
     :cond_d
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -1260,18 +1263,18 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 221
+    .line 227
     .local v1, "decor":Landroid/view/View;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 222
+    .line 228
     sget-object v3, Landroid/view/ViewOutlineProvider;->BACKGROUND:Landroid/view/ViewOutlineProvider;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 223
+    .line 229
     :try_start_1f
     invoke-virtual {v0, v2}, Landroid/view/Window;->setClipToOutline(Z)V
     :try_end_22
@@ -1282,7 +1285,7 @@
     :catchall_23
     move-exception v2
 
-    .line 224
+    .line 230
     :goto_24
     return-void
 .end method
@@ -1291,7 +1294,7 @@
     .registers 12
     .param p1, "activity"    # Landroid/app/Activity;
 
-    .line 190
+    .line 196
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1302,13 +1305,13 @@
 
     iget v1, v0, Landroid/util/DisplayMetrics;->density:F
 
-    .line 191
+    .line 197
     .local v1, "density":F
     const/high16 v0, 0x41e00000    # 28.0f
 
     mul-float v2, v1, v0
 
-    .line 192
+    .line 198
     .local v2, "radiusPx":F
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1316,7 +1319,7 @@
 
     if-lt v0, v3, :cond_4f
 
-    .line 193
+    .line 199
     const/4 v3, 0x0
 
     :try_start_15
@@ -1336,30 +1339,30 @@
     :goto_1c
     move-object v4, v0
 
-    .line 194
+    .line 200
     .local v4, "display":Landroid/view/Display;
     if-eqz v4, :cond_4f
 
-    .line 195
+    .line 201
     const/4 v0, 0x0
 
-    .line 197
+    .line 203
     .local v0, "maxR":I
     nop
 
-    .line 198
+    .line 204
     nop
 
-    .line 197
+    .line 203
     nop
 
-    .line 199
+    .line 205
     nop
 
-    .line 197
+    .line 203
     nop
 
-    .line 200
+    .line 206
     const/4 v5, 0x2
 
     const/4 v6, 0x0
@@ -1372,12 +1375,12 @@
 
     move-result-object v5
 
-    .line 197
+    .line 203
     move v7, v6
 
     move v6, v0
 
-    .line 196
+    .line 202
     .end local v0    # "maxR":I
     .local v6, "maxR":I
     :goto_2f
@@ -1387,7 +1390,7 @@
 
     aget v8, v5, v7
 
-    .line 201
+    .line 207
     .local v8, "pos":I
     :try_start_34
     invoke-virtual {v4, v8}, Landroid/view/Display;->getRoundedCorner(I)Landroid/view/RoundedCorner;
@@ -1403,7 +1406,7 @@
 
     move-object v0, v3
 
-    .line 202
+    .line 208
     .local v0, "rc":Landroid/view/RoundedCorner;
     :goto_3b
     if-eqz v0, :cond_47
@@ -1418,38 +1421,38 @@
 
     move-result v6
 
-    .line 196
+    .line 202
     .end local v0    # "rc":Landroid/view/RoundedCorner;
     .end local v8    # "pos":I
     :cond_47
     nop
 
-    .line 197
+    .line 203
     nop
 
-    .line 196
+    .line 202
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2f
 
-    .line 204
+    .line 210
     :cond_4c
     if-lez v6, :cond_4f
 
     int-to-float v2, v6
 
-    .line 209
+    .line 215
     .end local v4    # "display":Landroid/view/Display;
     .end local v6    # "maxR":I
     :cond_4f
     sget-object v3, Lcom/textrcs/control/Hooks;->INSTANCE:Lcom/textrcs/control/Hooks;
 
-    .line 210
+    .line 216
     div-float v0, v2, v1
 
     float-to-double v5, v0
 
-    .line 209
+    .line 215
     const/4 v8, 0x4
 
     const/4 v9, 0x0
@@ -1462,13 +1465,13 @@
 
     move-result-wide v3
 
-    .line 210
+    .line 216
     double-to-float v0, v3
 
-    .line 209
+    .line 215
     nop
 
-    .line 211
+    .line 217
     .local v0, "dp":F
     mul-float v3, v0, v1
 

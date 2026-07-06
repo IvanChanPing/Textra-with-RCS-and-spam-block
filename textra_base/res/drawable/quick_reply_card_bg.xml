@@ -2,6 +2,10 @@
 <shape android:shape="rectangle"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="?attr/screen_background" />
-    <!-- textrcs: rounded corners on the QuickConvo (tap-to-open chat) popup card. -->
-    <corners android:radius="20dp" />
+    <!-- textrcs: rounded corners on the QuickConvo (tap-to-open chat) popup card.
+         Item ③ (2026-07-05): bumped 20dp → 28dp for a more rounded look per user
+         request ("corners more rounded on all those pop-ups"). This drawable is the
+         QuickConvo card background; Textra's other dialogs round via the common_dialog
+         frame (see docs/TEXTRA_DIALOG_FRAMEWORK_MAP.md §2). -->
+    <corners android:radius="28dp" />
 </shape>

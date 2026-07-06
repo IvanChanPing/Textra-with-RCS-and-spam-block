@@ -5,6 +5,16 @@ Related: memory `reference_textrcs_keyboard_slide_fix_2026_07_06`, `reference_de
 plan `/root/.claude/plans/functional-enchanting-galaxy.md`.
 
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
+**BUILD e7a7f780 (2026-07-06) served** = close-only fallback + LIVE EXPERIMENT TOGGLES (imesync_config.json:
+`adjustNothing`, `suppressResize`) for the structural open (HOLD model: region stays full + translationY=-(ime-nav)
+held while shown, = close-in-reverse; gated behind adjustNothing, both dirs) + Textra-resize gate (@JvmField
+`suppressResize` → smali `x5/y.setHeightTo` early-return). PARALLAX return sync is ALSO in this build:
+ConvoCornerAnim.parallaxUnder = 410ms fast_out_slow_in, matches foreground `textrcs_overlay_exit.xml` (410ms
+fast_out_slow_in). Parallax live-tune caveat: `convo_parallax_under_ms` is a `Hooks` key read from /control/config
+(bridge_base_url = example.invalid, DEAD) → NOT live-tunable via that path; if 410 doesn't sync, wire the duration
+into imesync_config.json instead. To TRY open live: set adjustNothing=true + suppressResize=true (both HOLD).
+NEXT: user installs, tests parallax return + close; then flip the open experiment.
+
 **SHIPPED close-only fallback (2026-07-06):** CLOSE slide is smooth + keyboard-matched (1:1 track, user-confirmed
 good); OPEN = native snap (default `cfgShowOn=false`). Saved as git tag **`keyboard-slide-close-only-v1`**. The
 open slide is STRUCTURAL to fix — the region shrinks before frame 0 via BOTH Textra's resize AND the framework
