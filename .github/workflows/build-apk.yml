@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   NDK_VERSION: "27.1.12297006"
@@ -124,3 +124,11 @@ jobs:
           name: textra2-apk
           path: build/textra2.apk
           if-no-files-found: error
+
+      - name: Publish APK to a GitHub Release (rolling "latest")
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest TextRCS build
+          files: build/textra2.apk
+          body: "Automated build from master (${{ github.sha }})."
