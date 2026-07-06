@@ -84,6 +84,7 @@ object ImeSyncAnim {
     @Volatile private var cfgShowOff = 0
     @Volatile private var cfgHideOn = true
     @Volatile private var cfgShowOn = true
+    @Volatile private var cfgNavInset = -1   // nav-bar px used in the ride formula; -1 = auto (kbMax - travel)
     @Volatile private var pollStarted = false
 
     private fun startConfigPoll() {
@@ -102,6 +103,7 @@ object ImeSyncAnim {
                     cfgShowOff = j.optInt("showOffsetPx", cfgShowOff)
                     cfgHideOn = j.optBoolean("hideEnabled", cfgHideOn)
                     cfgShowOn = j.optBoolean("showEnabled", cfgShowOn)
+                    cfgNavInset = j.optInt("navInsetPx", cfgNavInset)
                 } catch (_: Throwable) {}
                 try { Thread.sleep(1500) } catch (_: Throwable) {}
             }
@@ -196,11 +198,14 @@ object ImeSyncAnim {
                 // offset decays to 0 — it rides the keyboard. Hide works too (target=0 -> -current -> 0).
                 if (animTravel <= 0f || kbMax <= 0) return insets   // direction disabled -> leave native snap
                 val current = insets.getInsets(WindowInsets.Type.ime()).bottom
-                val frac = (current.toFloat() / kbMax).coerceIn(0f, 1f)   // 0..1 of the keyboard shown
-                // Ride the keyboard by `animTravel` (the real content travel), not the raw inset. SHOW: content
-                // starts +travel (low) and decays to 0 as the kb rises. HIDE: starts -travel (high) and decays to
-                // 0 as the kb falls. frac ties the offset to the keyboard's actual position each frame.
-                val ty = if (animShow) animTravel * (1f - frac) else -animTravel * frac
+                // Ride the keyboard's TOP edge 1:1 (same speed), not a fraction of it. The content only travels
+                // `animTravel` (753) while the keyboard travels kbMax (981); the difference is the nav-bar inset
+                // (nav). Tracking the keyboard MINUS nav keeps the compose bar glued to the keyboard's top at the
+                // same speed, clamped so it never passes its rest (0) or its start (animTravel). Linear frac-scaling
+                // made the content descend ~23% slower than the keyboard on close (device-reported lag, 2026-07-06).
+                val navF = if (cfgNavInset >= 0) cfgNavInset.toFloat() else (kbMax.toFloat() - animTravel).coerceAtLeast(0f)
+                val ty = if (animShow) ((kbMax - current).toFloat() - navF).coerceIn(0f, animTravel)
+                         else -((current.toFloat() - navF).coerceIn(0f, animTravel))
                 val v = content()
                 v?.translationY = ty
                 // Slide UNDER the blue top bar: when ty<0 the top rows would paint over the stationary
@@ -208,7 +213,7 @@ object ImeSyncAnim {
                 val up = (-ty).toInt().coerceAtLeast(0)
                 if (v != null) v.clipBounds = if (up > 0 && v.width > 0) Rect(0, up, v.width, v.height) else null
                 if (msgList == null) msgList = try { activity.findViewById<View>(0x7f0a028a) } catch (_: Throwable) { null }
-                buf.append("prog ime=$current frac=${(frac * 100).toInt()} ty=${ty.toInt()} region h=${cch?.height} list h=${msgList?.height}\n")
+                buf.append("prog ime=$current ty=${ty.toInt()} nav=${navF.toInt()} region h=${cch?.height} list h=${msgList?.height}\n")
                 return insets
             }
 
