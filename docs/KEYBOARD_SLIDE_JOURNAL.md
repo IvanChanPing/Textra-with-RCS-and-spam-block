@@ -5,6 +5,14 @@ Related: memory `reference_textrcs_keyboard_slide_fix_2026_07_06`, `reference_de
 plan `/root/.claude/plans/functional-enchanting-galaxy.md`.
 
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
+**TOOLING + PARALLAX (2026-07-06):** `bash ship.sh` (repo root, git-tracked commit 3dbf8a3a) = one command:
+build.sh → copy APK to the served URL → verify md5+HTTP200 → clear imelog log → print SHIP REPORT (URL, git,
+uncommitted files). UNDER-SCREEN parallax duration is now LIVE-TUNABLE via imesync_config.json `parallaxUnderMs`
+(ConvoCornerAnim.parallaxUnder reads `ImeSyncAnim.parallaxUnderMs`, populated by the working imesync poll; the
+`Hooks`/control path is DEAD = bridge_base_url example.invalid). Set to **480** (slower — user said 410 finished
+too soon on return). CONVENTION: when the user says "slower/faster" it means ONLY this under screen. New build
+shipping via ship.sh now.
+
 **BUILD e7a7f780 (2026-07-06) served** = close-only fallback + LIVE EXPERIMENT TOGGLES (imesync_config.json:
 `adjustNothing`, `suppressResize`) for the structural open (HOLD model: region stays full + translationY=-(ime-nav)
 held while shown, = close-in-reverse; gated behind adjustNothing, both dirs) + Textra-resize gate (@JvmField

@@ -99,6 +99,7 @@ object ImeSyncAnim {
     @Volatile private var cfgAdjustNothing = false
     @Volatile private var cfgSuppress = false
     @JvmField var suppressResize = false   // read by x5.y.setHeightTo (smali); true = Textra resize no-op
+    @JvmField var parallaxUnderMs = 0L     // live under-screen parallax duration; ConvoCornerAnim reads it (0 = its default)
     @Volatile private var winRef: Window? = null
     @Volatile private var decorRef: View? = null
     @Volatile private var lastAdjust = -1   // last softInputMode adjust bits applied (avoid re-posting every poll)
@@ -124,6 +125,7 @@ object ImeSyncAnim {
                     cfgAdjustNothing = j.optBoolean("adjustNothing", cfgAdjustNothing)
                     cfgSuppress = j.optBoolean("suppressResize", cfgSuppress)
                     suppressResize = cfgSuppress
+                    parallaxUnderMs = j.optLong("parallaxUnderMs", parallaxUnderMs)
                     val want = if (cfgAdjustNothing) 0x30 else 0x10   // ADJUST_NOTHING : ADJUST_RESIZE
                     if (want != lastAdjust) {
                         lastAdjust = want

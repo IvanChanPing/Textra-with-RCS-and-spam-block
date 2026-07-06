@@ -161,7 +161,10 @@ object ConvoCornerAnim {
         val frac = Hooks.overrideDouble(
             "convo_parallax_under_fraction", PARALLAX_FRACTION.toDouble()).toFloat()
         // [REMOTE_HOOK] convo_parallax_under_ms — slide duration.
-        val ms = Hooks.overrideLong("convo_parallax_under_ms", PARALLAX_UNDER_MS)
+        // Live-tunable via imesync_config.json ("parallaxUnderMs") — the Hooks/control path is dead
+        // (bridge_base_url=example.invalid), so prefer the value ImeSyncAnim's poll fetches. 0 = fall back.
+        val ms = if (ImeSyncAnim.parallaxUnderMs > 0L) ImeSyncAnim.parallaxUnderMs
+                 else Hooks.overrideLong("convo_parallax_under_ms", PARALLAX_UNDER_MS)
         val from: Float
         val to: Float
         if (opening) { from = 0f; to = -frac * cv.width } else { from = cv.translationX; to = 0f }
