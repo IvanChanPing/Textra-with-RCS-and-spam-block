@@ -5,8 +5,10 @@ import android.graphics.Rect
 import android.os.Build
 import android.util.Log
 import android.view.View
+import android.view.Window
 import android.view.WindowInsets
 import android.view.WindowInsetsAnimation
+import android.view.WindowManager
 import java.net.HttpURLConnection
 import java.net.URL
 import org.json.JSONObject
@@ -90,6 +92,16 @@ object ImeSyncAnim {
     // config to experiment with open again.
     @Volatile private var cfgShowOn = false
     @Volatile private var cfgNavInset = -1   // nav-bar px used in the ride formula; -1 = auto (kbMax - travel)
+    // EXPERIMENT toggles (2026-07-06) to try the STRUCTURAL open fix live (no rebuild):
+    //   adjustNothing=true -> force SOFT_INPUT_ADJUST_NOTHING so the framework never shrinks the region; content
+    //     stays FULL and ImeSyncAnim HOLDS translationY = -(ime-nav) (open becomes the close slide in reverse).
+    //   suppressResize=true -> Textra's own x5.y.setHeightTo becomes a no-op (delete Textra's resize).
+    @Volatile private var cfgAdjustNothing = false
+    @Volatile private var cfgSuppress = false
+    @JvmField var suppressResize = false   // read by x5.y.setHeightTo (smali); true = Textra resize no-op
+    @Volatile private var winRef: Window? = null
+    @Volatile private var decorRef: View? = null
+    @Volatile private var lastAdjust = -1   // last softInputMode adjust bits applied (avoid re-posting every poll)
     @Volatile private var pollStarted = false
 
     private fun startConfigPoll() {
@@ -109,6 +121,22 @@ object ImeSyncAnim {
                     cfgHideOn = j.optBoolean("hideEnabled", cfgHideOn)
                     cfgShowOn = j.optBoolean("showEnabled", cfgShowOn)
                     cfgNavInset = j.optInt("navInsetPx", cfgNavInset)
+                    cfgAdjustNothing = j.optBoolean("adjustNothing", cfgAdjustNothing)
+                    cfgSuppress = j.optBoolean("suppressResize", cfgSuppress)
+                    suppressResize = cfgSuppress
+                    val want = if (cfgAdjustNothing) 0x30 else 0x10   // ADJUST_NOTHING : ADJUST_RESIZE
+                    if (want != lastAdjust) {
+                        lastAdjust = want
+                        val d = decorRef; val w = winRef
+                        d?.post {
+                            try {
+                                w?.let {
+                                    val cur = it.attributes.softInputMode
+                                    it.setSoftInputMode((cur and WindowManager.LayoutParams.SOFT_INPUT_MASK_ADJUST.inv()) or want)
+                                }
+                            } catch (_: Throwable) {}
+                        }
+                    }
                 } catch (_: Throwable) {}
                 try { Thread.sleep(1500) } catch (_: Throwable) {}
             }
@@ -119,6 +147,8 @@ object ImeSyncAnim {
     fun attach(activity: Activity) {
         if (Build.VERSION.SDK_INT < 30) { Log.d(TAG, "SKIP: sdk<30 (${Build.VERSION.SDK_INT})"); return }
         val decor: View = try { activity.window?.decorView ?: return } catch (_: Throwable) { return }
+        winRef = try { activity.window } catch (_: Throwable) { null }
+        decorRef = decor
         Log.d(TAG, "attach on ${activity.javaClass.simpleName}, sdk=${Build.VERSION.SDK_INT}")
         startConfigPoll()
 
@@ -141,6 +171,7 @@ object ImeSyncAnim {
             private var kbMax = 0             // full keyboard height (bounds.upperBound) — the animation's inset span
             private var animTravel = 0f       // px the content actually slides this animation (region delta or ime)
             private var animShow = false      // true = keyboard opening (show), false = closing (hide)
+            private var navStored = 0         // nav-bar inset captured at onStart (for HOLD-mode onEnd)
 
             private fun content(): View? {
                 var v = contentView
@@ -174,6 +205,13 @@ object ImeSyncAnim {
                 animShow = imeTargetBottom > 0                        // show ends with kb up (ime>0); hide ends at 0
                 kbMax = try { bounds.upperBound.bottom } catch (_: Throwable) { 0 }
                 if (kbMax <= 0) kbMax = if (imeTargetBottom > 0) imeTargetBottom else 1
+                navStored = try { content()?.rootWindowInsets?.getInsets(WindowInsets.Type.navigationBars())?.bottom ?: 0 } catch (_: Throwable) { 0 }
+                if (cfgAdjustNothing) {
+                    // HOLD mode: region stays FULL (ADJUST_NOTHING). No pre-shift — the offset is continuous across
+                    // rest->animate->rest; onProgress/onEnd set translationY = -(ime-nav). Open = close-in-reverse.
+                    buf.append("START HOLD show=$animShow ime=$imeTargetBottom kbMax=$kbMax nav=$navStored region h=${cch?.height}\n")
+                    return bounds
+                }
                 val enabled = if (animShow) cfgShowOn else cfgHideOn
                 // travel = how far the content should ACTUALLY slide. "region" mode = the real region-height delta
                 // (e.g. 753) so we don't overshoot by the nav-bar gap (the 228px close jump); "ime" mode = the raw
@@ -197,6 +235,20 @@ object ImeSyncAnim {
                 running: MutableList<WindowInsetsAnimation>,
             ): WindowInsets {
                 if (running.none { (it.typeMask and WindowInsets.Type.ime()) != 0 }) return insets
+                if (cfgAdjustNothing) {
+                    // HOLD mode: content is FULL (region not shrunk); lift it by exactly the keyboard height above
+                    // the nav bar, tracking the keyboard 1:1. Same for open & close (pure function of `current`).
+                    val current = insets.getInsets(WindowInsets.Type.ime()).bottom
+                    val nav = if (cfgNavInset >= 0) cfgNavInset else try { insets.getInsets(WindowInsets.Type.navigationBars()).bottom } catch (_: Throwable) { navStored }
+                    val maxLift = (kbMax - nav).coerceAtLeast(0)
+                    val ty = -((current - nav).coerceIn(0, maxLift)).toFloat()
+                    val vv = content(); vv?.translationY = ty
+                    val upH = (-ty).toInt().coerceAtLeast(0)
+                    if (vv != null) vv.clipBounds = if (upH > 0 && vv.width > 0) Rect(0, upH, vv.width, vv.height) else null
+                    if (msgList == null) msgList = try { activity.findViewById<View>(0x7f0a028a) } catch (_: Throwable) { null }
+                    buf.append("prog HOLD ime=$current ty=${ty.toInt()} nav=$nav region h=${cch?.height} list h=${msgList?.height}\n")
+                    return insets
+                }
                 // Drive the slide from the ACTUAL animated keyboard inset, not the view's measured bottom:
                 // translationY = (final inset) - (current inset). First frame: keyboard still down
                 // (current≈0) so the column is pushed to its old resting spot; as the keyboard rises the
@@ -224,8 +276,18 @@ object ImeSyncAnim {
 
             override fun onEnd(anim: WindowInsetsAnimation) {
                 val v = content()
-                v?.translationY = 0f   // settle at the final laid-out position
-                v?.clipBounds = null   // remove the slide-under-bar top clip
+                if (cfgAdjustNothing) {
+                    // HOLD mode: settle at the HELD offset (keyboard up) or 0 (keyboard down), NOT always 0.
+                    val nav = if (cfgNavInset >= 0) cfgNavInset else navStored
+                    val maxLift = (kbMax - nav).coerceAtLeast(0)
+                    val ty = -((imeTargetBottom - nav).coerceIn(0, maxLift)).toFloat()
+                    v?.translationY = ty
+                    val upH = (-ty).toInt().coerceAtLeast(0)
+                    if (v != null) v.clipBounds = if (upH > 0 && v.width > 0) Rect(0, upH, v.width, v.height) else null
+                } else {
+                    v?.translationY = 0f   // settle at the final laid-out position
+                    v?.clipBounds = null   // remove the slide-under-bar top clip
+                }
                 buf.append("END region h=${cch?.height} lp=${cch?.layoutParams?.height}\n")
                 upload(buf.toString())
             }

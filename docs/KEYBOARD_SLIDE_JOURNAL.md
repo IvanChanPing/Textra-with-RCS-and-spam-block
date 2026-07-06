@@ -5,6 +5,18 @@ Related: memory `reference_textrcs_keyboard_slide_fix_2026_07_06`, `reference_de
 plan `/root/.claude/plans/functional-enchanting-galaxy.md`.
 
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
+**SHIPPED close-only fallback (2026-07-06):** CLOSE slide is smooth + keyboard-matched (1:1 track, user-confirmed
+good); OPEN = native snap (default `cfgShowOn=false`). Saved as git tag **`keyboard-slide-close-only-v1`**. The
+open slide is STRUCTURAL to fix — the region shrinks before frame 0 via BOTH Textra's resize AND the framework
+adjustResize, so translating the pre-shrunk content just leaves a white gap; a knob can't fix it. To attempt open:
+force `SOFT_INPUT_ADJUST_NOTHING` (stop the framework shrink) + keep full-height content + slide (RISKY —
+ADJUST_NOTHING misbehaved earlier this session; revert to the tag if it fights Textra). AWAITING user decision:
+ship close-only as final, or take the structural swing at open. → USER (2026-07-06) chose: RESEARCH the
+structural fix first. TODO (Claude-app polish, future, AFTER open works): the compose BAR rides the keyboard 1:1
+but the message LIST lags slightly ON PURPOSE — a catch-up "being-pushed"/bounce look, both up AND down. Implement
+by decoupling the list's translationY from the bar's with a small easing delay (tween + overshoot CubicBezierEasing
+for the catch-up look — NOT a physics bounce spec).
+
 **DEVICE NUMBERS ARE IN (2026-07-06, CPH2583/OnePlus)** — via the imelog auto-upload (`curl -s
 https://204-168-163-118.sslip.io/imelog/`). Full region=2148, keyboard=981, shrunk region=1395 (list
 1716→963). THREE VERIFIED FINDINGS:
@@ -58,6 +70,38 @@ NEXT STEP:
 3. Read the numbers: `curl -s https://204-168-163-118.sslip.io/imelog/`. KEY QUESTION they answer: at
    PREPARE / START / first `prog` frame, is region `lp`/`h` already the SHRUNK value (snap at frame 0) or full?
    → decides the fix: defer-the-shrink (keep full + translate up, seamless onEnd) vs animate-the-height.
+
+## STRUCTURAL FIX RESEARCH — making OPEN slide (2026-07-06, user-requested)
+WHY open can't be a knob: the region (@id/contentControlledHeight) shrinks BEFORE frame 0 via TWO mechanisms —
+(1) framework adjustResize (v6.P.u0 sets ADJUST_RESIZE 0x10 unconditionally, verified P.smali:1751) and (2) Textra
+Q5.j.r0→setHeightTo. The content (@id/messageListAndSendArea) holds a reverseLayout (bottom-pinned) RecyclerView,
+so translating the already-shrunk content DOWN leaves a white gap at the top (below the blue bar). lp stays -1
+(MATCH_PARENT) → the actual shrink is adjustResize, not setHeightTo.
+
+TWO structural routes:
+A. Official "deferred insets" (AOSP developer.android.com/develop/ui/views/layout/sw-keyboard): REQUIRES
+   ADJUST_RESIZE; onProgress translationY=(startBottom-endBottom)*(1-frac) on the RESIZED content. Clean for
+   TOP-pinned lists (Gmail/Claude: list top pinned under the bar → no gap). Textra's list is BOTTOM-pinned →
+   translating messageListAndSendArea gaps; translating the whole contentControlledHeight (incl blue bar) avoids
+   the internal gap but MOVES the blue bar (user wants it stationary; earlier device-observed bar drop). ⇒ doesn't
+   fit reverse-pinned without moving the bar or re-anchoring the list.
+B. Modern WindowInsets / ADJUST_NOTHING (own the offset) — RECOMMENDED. Force SOFT_INPUT_ADJUST_NOTHING
+   (ConvoActivity-only, decor.post after u0) + suppress setHeightTo → region stays FULL (2148), content never
+   shrinks. Apply the ime inset as a PERSISTENT translationY=-ime on messageListAndSendArea, HELD the whole time
+   the keyboard is shown (not just during the anim), animated by WindowInsetsAnimation.Callback; top clipBounds so
+   rows don't paint over the bar; blue bar untouched. Full content always → no gap; bar rides the keyboard;
+   reverse list slides naturally. This is the "redo": replaces Textra's ADJUST_RESIZE+setHeightTo for ConvoActivity.
+   RISKS: (1) ADJUST_NOTHING resting state — the bar sits above the keyboard ONLY because my offset holds it; must
+   handle ALL inset updates (rotation, split-screen, kb-height change, multi-window), not just animations, or the
+   bar ends up behind the keyboard; (2) OEM OxygenOS inset quirks (earlier ADJUST_NOTHING builds misbehaved — cause
+   was buggy translate math, but on-device confirm still needed); (3) Textra's measure delegate v6.K.c0 / Q5.j may
+   fight a full region; (4) config-change / process-death re-establish. Safety net = tag keyboard-slide-close-only-v1.
+OPTION (user 2026-07-06): "delete the open thing, do the CLOSE animation in reverse." This CONVERGES with B —
+close slides correctly BECAUSE the region is FULL at its start; open only differs because its region is shrunk.
+Keep the region full on open (ADJUST_NOTHING + suppress setHeightTo) and open BECOMES close-in-reverse: reuse the
+exact working close path (pre-shift +travel, ride the keyboard to 0). So CLOSE is a proof the full-region slide
+works; B just extends it to OPEN. Keep all ideas open. DECISION PENDING: implement B (= open-as-reverse-of-close),
+or ship close-only.
 
 ## LOG
 ### 2026-07-06

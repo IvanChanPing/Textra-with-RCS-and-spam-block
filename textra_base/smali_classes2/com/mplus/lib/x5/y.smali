@@ -510,6 +510,13 @@
 .method public setHeightTo(I)V
     .locals 3
 
+    sget-boolean v0, Lcom/textrcs/anim/ImeSyncAnim;->suppressResize:Z
+
+    if-eqz v0, :cond_textrcs_keep
+
+    return-void
+
+    :cond_textrcs_keep
     const/4 v2, 0x4
 
     sget v0, Lcom/mplus/lib/z7/N;->a:I
