@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nImeSyncAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,302:1\n1#2:303\n*E\n"
+    value = "SMAP\nImeSyncAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,305:1\n1#2:306\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -225,6 +225,15 @@
     return v0
 .end method
 
+.method public static final synthetic access$getWinRef$p()Landroid/view/Window;
+    .registers 1
+
+    .line 48
+    sget-object v0, Lcom/textrcs/anim/ImeSyncAnim;->winRef:Landroid/view/Window;
+
+    return-object v0
+.end method
+
 .method public static final synthetic access$upload(Lcom/textrcs/anim/ImeSyncAnim;Ljava/lang/String;)V
     .registers 2
     .param p0, "$this"    # Lcom/textrcs/anim/ImeSyncAnim;
@@ -246,7 +255,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 150
+    .line 153
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
@@ -285,7 +294,7 @@
 
     return-void
 
-    .line 151
+    .line 154
     :cond_2c
     :try_start_2c
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -304,7 +313,7 @@
 
     goto :goto_82
 
-    .line 152
+    .line 155
     .local v0, "decor":Landroid/view/View;
     :cond_39
     :try_start_39
@@ -328,10 +337,10 @@
     :goto_41
     sput-object v1, Lcom/textrcs/anim/ImeSyncAnim;->winRef:Landroid/view/Window;
 
-    .line 153
+    .line 156
     sput-object v0, Lcom/textrcs/anim/ImeSyncAnim;->decorRef:Landroid/view/View;
 
-    .line 154
+    .line 157
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -372,17 +381,17 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
+    .line 158
     sget-object v1, Lcom/textrcs/anim/ImeSyncAnim;->INSTANCE:Lcom/textrcs/anim/ImeSyncAnim;
 
     invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim;->startConfigPoll()V
 
-    .line 157
+    .line 160
     new-instance v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;
 
     invoke-direct {v1, p0}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;-><init>(Landroid/app/Activity;)V
 
-    .line 298
+    .line 301
     .local v1, "callback":Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;
     :try_start_79
     move-object v2, v1
@@ -398,11 +407,11 @@
     :catchall_80
     move-exception v2
 
-    .line 299
+    .line 302
     :goto_81
     return-void
 
-    .line 151
+    .line 154
     .end local v0    # "decor":Landroid/view/View;
     .end local v1    # "callback":Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;
     :cond_82
@@ -441,14 +450,14 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 145
+    .line 148
     move-object v2, v1
 
-    .line 303
+    .line 306
     .local v2, "$this$startConfigPoll_u24lambda_u247":Ljava/lang/Thread;
     const/4 v3, 0x0
 
-    .line 145
+    .line 148
     .local v3, "$i$a$-apply-ImeSyncAnim$startConfigPoll$2":I
     invoke-virtual {v2, v0}, Ljava/lang/Thread;->setDaemon(Z)V
 
@@ -456,7 +465,7 @@
     .end local v3    # "$i$a$-apply-ImeSyncAnim$startConfigPoll$2":I
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 146
+    .line 149
     return-void
 .end method
 
@@ -535,14 +544,14 @@
     :goto_3e
     check-cast v3, Ljava/io/Closeable;
     :try_end_40
-    .catchall {:try_start_3 .. :try_end_40} :catchall_df
+    .catchall {:try_start_3 .. :try_end_40} :catchall_db
 
     :try_start_40
     move-object v1, v3
 
     check-cast v1, Ljava/io/BufferedReader;
 
-    .line 303
+    .line 306
     .local v1, "it":Ljava/io/BufferedReader;
     const/4 v2, 0x0
 
@@ -556,7 +565,7 @@
 
     move-result-object v4
     :try_end_4b
-    .catchall {:try_start_40 .. :try_end_4b} :catchall_d8
+    .catchall {:try_start_40 .. :try_end_4b} :catchall_d4
 
     .end local v1    # "it":Ljava/io/BufferedReader;
     .end local v2    # "$i$a$-use-ImeSyncAnim$startConfigPoll$1$txt$1":I
@@ -698,32 +707,27 @@
     .line 130
     .local v2, "want":I
     :goto_c3
-    sget v3, Lcom/textrcs/anim/ImeSyncAnim;->lastAdjust:I
-
-    if-eq v2, v3, :cond_e0
-
-    .line 131
     sput v2, Lcom/textrcs/anim/ImeSyncAnim;->lastAdjust:I
 
-    .line 132
+    .line 134
     sget-object v3, Lcom/textrcs/anim/ImeSyncAnim;->decorRef:Landroid/view/View;
 
     .local v3, "d":Landroid/view/View;
     sget-object v5, Lcom/textrcs/anim/ImeSyncAnim;->winRef:Landroid/view/Window;
 
-    .line 133
+    .line 135
     .local v5, "w":Landroid/view/Window;
-    if-eqz v3, :cond_e0
+    if-eqz v3, :cond_dc
 
     new-instance v6, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;
 
     invoke-direct {v6, v5, v2}, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;-><init>(Landroid/view/Window;I)V
 
     invoke-virtual {v3, v6}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-    :try_end_d7
-    .catchall {:try_start_4c .. :try_end_d7} :catchall_df
+    :try_end_d3
+    .catchall {:try_start_4c .. :try_end_d3} :catchall_db
 
-    goto :goto_e0
+    goto :goto_dc
 
     .line 116
     .end local v1    # "j":Lorg/json/JSONObject;
@@ -731,44 +735,44 @@
     .end local v3    # "d":Landroid/view/View;
     .end local v4    # "txt":Ljava/lang/String;
     .end local v5    # "w":Landroid/view/Window;
-    :catchall_d8
+    :catchall_d4
     move-exception v1
 
     .end local v0    # "c":Ljava/net/HttpURLConnection;
-    :try_start_d9
+    :try_start_d5
     throw v1
-    :try_end_da
-    .catchall {:try_start_d9 .. :try_end_da} :catchall_da
+    :try_end_d6
+    .catchall {:try_start_d5 .. :try_end_d6} :catchall_d6
 
     .restart local v0    # "c":Ljava/net/HttpURLConnection;
-    :catchall_da
+    :catchall_d6
     move-exception v2
 
-    :try_start_db
+    :try_start_d7
     invoke-static {v3, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v2
-    :try_end_df
-    .catchall {:try_start_db .. :try_end_df} :catchall_df
+    :try_end_db
+    .catchall {:try_start_d7 .. :try_end_db} :catchall_db
 
-    .line 142
+    .line 145
     .end local v0    # "c":Ljava/net/HttpURLConnection;
-    :catchall_df
+    :catchall_db
     move-exception v0
 
-    .line 143
-    :cond_e0
-    :goto_e0
+    .line 146
+    :cond_dc
+    :goto_dc
     const-wide/16 v0, 0x5dc
 
-    :try_start_e2
+    :try_start_de
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_e5
-    .catchall {:try_start_e2 .. :try_end_e5} :catchall_e7
+    :try_end_e1
+    .catchall {:try_start_de .. :try_end_e1} :catchall_e3
 
     goto/16 :goto_1
 
-    :catchall_e7
+    :catchall_e3
     move-exception v0
 
     goto/16 :goto_1
@@ -779,18 +783,18 @@
     .param p0, "$w"    # Landroid/view/Window;
     .param p1, "$want"    # I
 
-    .line 134
+    .line 136
     nop
 
-    .line 135
-    if-eqz p0, :cond_15
+    .line 137
+    if-eqz p0, :cond_19
 
     move-object v0, p0
 
     .local v0, "it":Landroid/view/Window;
     const/4 v1, 0x0
 
-    .line 136
+    .line 138
     .local v1, "$i$a$-let-ImeSyncAnim$startConfigPoll$1$1$1":I
     :try_start_5
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
@@ -799,37 +803,43 @@
 
     iget v2, v2, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
-    .line 137
+    .line 139
     .local v2, "cur":I
+    and-int/lit16 v3, v2, 0xf0
+
+    if-eq v3, p1, :cond_15
+
+    .line 140
     and-int/lit16 v3, v2, -0xf1
 
     or-int/2addr v3, p1
 
     invoke-virtual {v0, v3}, Landroid/view/Window;->setSoftInputMode(I)V
-    :try_end_11
-    .catchall {:try_start_5 .. :try_end_11} :catchall_13
+    :try_end_15
+    .catchall {:try_start_5 .. :try_end_15} :catchall_17
 
-    .line 138
+    .line 142
+    :cond_15
     nop
 
     .end local v0    # "it":Landroid/view/Window;
     .end local v1    # "$i$a$-let-ImeSyncAnim$startConfigPoll$1$1$1":I
     .end local v2    # "cur":I
-    goto :goto_15
+    goto :goto_19
 
-    .line 139
-    :catchall_13
+    .line 143
+    :catchall_17
     move-exception v0
 
-    goto :goto_16
+    goto :goto_1a
 
-    .line 135
-    :cond_15
-    :goto_15
+    .line 137
+    :cond_19
+    :goto_19
     nop
 
-    .line 140
-    :goto_16
+    .line 144
+    :goto_1a
     return-void
 .end method
 
@@ -851,7 +861,7 @@
     .line 74
     move-object v1, v0
 
-    .line 303
+    .line 306
     .local v1, "$this$upload_u24lambda_u242":Ljava/lang/Thread;
     const/4 v2, 0x0
 
@@ -940,7 +950,7 @@
 
     check-cast v2, Ljava/io/OutputStream;
 
-    .line 303
+    .line 306
     .local v2, "it":Ljava/io/OutputStream;
     const/4 v3, 0x0
 

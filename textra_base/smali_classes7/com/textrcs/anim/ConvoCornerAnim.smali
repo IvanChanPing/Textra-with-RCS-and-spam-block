@@ -76,7 +76,7 @@
 
 .field private static final PARALLAX_FRACTION:F = 0.2f
 
-.field private static final PARALLAX_UNDER_MS:J = 0x19aL
+.field private static final PARALLAX_UNDER_MS:J = 0x1efL
 
 .field private static final recentResumed:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -1070,7 +1070,7 @@
 
     const-string v7, "convo_parallax_under_ms"
 
-    const-wide/16 v8, 0x19a
+    const-wide/16 v8, 0x1ef
 
     const/4 v10, 0x0
 

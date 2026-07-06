@@ -136,3 +136,6 @@ or ship close-only.
   time). Committed the hook alone at **2517517b**. LESSON: the smali attach hooks (ConvoActivity.smali
   ImeSyncAnim + ConvoCornerAnim) are UNCOMMITTED injections that build.sh does NOT regenerate — commit
   them, and never share ONE working tree across two live sessions.
+
+### 2026-07-06 — OPEN structural approach = DEAD END (device-confirmed, CPH2583)
+adjustNothing=true (diagnostic sim=0x32 -> adjust bits 0x30 = ADJUST_NOTHING IS applied) + suppressResize=true: on OPEN the region STILL shrinks to 1395, and lp=-1 (MATCH_PARENT) so setHeightTo is NOT the shrinker (suppress held). A THIRD path (Textra inset-consumer layout sizing the parent/content) shrinks it even with framework-resize + setHeightTo both killed. Reverse/bottom-pinned RecyclerView also cannot fill a translated gap (off-viewport rows unrendered). => OPEN slide needs a TOP-ANCHORED layout REWRITE; two-lever approach is dead here. SHIP = close-only fallback (tag keyboard-slide-close-only-v1).

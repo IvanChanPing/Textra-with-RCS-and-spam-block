@@ -127,17 +127,20 @@ object ImeSyncAnim {
                     suppressResize = cfgSuppress
                     parallaxUnderMs = j.optLong("parallaxUnderMs", parallaxUnderMs)
                     val want = if (cfgAdjustNothing) 0x30 else 0x10   // ADJUST_NOTHING : ADJUST_RESIZE
-                    if (want != lastAdjust) {
-                        lastAdjust = want
-                        val d = decorRef; val w = winRef
-                        d?.post {
-                            try {
-                                w?.let {
-                                    val cur = it.attributes.softInputMode
+                    lastAdjust = want
+                    // Re-assert EVERY cycle (not just on change): Textra's v6.P.u0 forces ADJUST_RESIZE on every
+                    // ConvoActivity.onCreate, so a freshly-opened conversation reverts — re-correct the CURRENT
+                    // window's mode within ~1.5s. Only touch it when it actually differs (avoids needless relayout).
+                    val d = decorRef; val w = winRef
+                    d?.post {
+                        try {
+                            w?.let {
+                                val cur = it.attributes.softInputMode
+                                if ((cur and WindowManager.LayoutParams.SOFT_INPUT_MASK_ADJUST) != want) {
                                     it.setSoftInputMode((cur and WindowManager.LayoutParams.SOFT_INPUT_MASK_ADJUST.inv()) or want)
                                 }
-                            } catch (_: Throwable) {}
-                        }
+                            }
+                        } catch (_: Throwable) {}
                     }
                 } catch (_: Throwable) {}
                 try { Thread.sleep(1500) } catch (_: Throwable) {}
@@ -211,7 +214,7 @@ object ImeSyncAnim {
                 if (cfgAdjustNothing) {
                     // HOLD mode: region stays FULL (ADJUST_NOTHING). No pre-shift — the offset is continuous across
                     // rest->animate->rest; onProgress/onEnd set translationY = -(ime-nav). Open = close-in-reverse.
-                    buf.append("START HOLD show=$animShow ime=$imeTargetBottom kbMax=$kbMax nav=$navStored region h=${cch?.height}\n")
+                    buf.append("START HOLD show=$animShow ime=$imeTargetBottom kbMax=$kbMax nav=$navStored region h=${cch?.height} lp=${cch?.layoutParams?.height} sim=0x${Integer.toHexString(try { winRef?.attributes?.softInputMode ?: 0 } catch (_: Throwable) { 0 })}\n")
                     return bounds
                 }
                 val enabled = if (animShow) cfgShowOn else cfgHideOn
