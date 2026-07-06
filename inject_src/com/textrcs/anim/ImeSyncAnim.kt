@@ -9,6 +9,7 @@ import android.view.WindowInsets
 import android.view.WindowInsetsAnimation
 import java.net.HttpURLConnection
 import java.net.URL
+import org.json.JSONObject
 
 /**
  * ImeSyncAnim — slides the message compose bar (and the whole conversation content column) up and
@@ -29,7 +30,9 @@ import java.net.URL
  * the slide from the KEYBOARD INSET itself: onStart captures the final IME inset (rootWindowInsets, whose
  * end state is already applied), onProgress sets translationY = (final inset) - (current animated inset),
  * decaying to 0 so the column rides the keyboard from its old spot to its new one (works for hide too);
- * onEnd resets to 0. Attached to
+ * onEnd resets to 0. TRAVEL DISTANCE + per-direction enable are LIVE-CONFIGURABLE from imesync_config.json
+ * on the box (polled ~1.5s) so values are dialed on-device with NO rebuild; default drives the slide by the
+ * real region-height delta (not the raw keyboard inset) to avoid the nav-bar overshoot. Attached to
  * the decor view (DISPATCH_MODE_STOP); no conflict (no other WindowInsetsAnimation callback in the app).
  *
  * CALLED FROM: ConvoActivity.onCreate — smali hook placed immediately after
@@ -69,11 +72,48 @@ object ImeSyncAnim {
         }.apply { isDaemon = true }.start()
     }
 
+    // LIVE CONFIG (2026-07-06): the slide's tunables are re-read from a JSON on the box every ~1.5s, so the
+    // values can be dialed on-device with NO rebuild (edit imesync_config.json -> phone picks it up in 1.5s).
+    //   mode: "region" = drive the slide by the REAL region-height delta (753 on CPH2583; how far the content
+    //         actually moves, no nav-bar overshoot) | "ime" = drive by the raw keyboard inset (981, old).
+    //   hideOffsetPx / showOffsetPx: +/- px added to the travel for that direction (fine tuning).
+    //   hideEnabled / showEnabled: toggle the slide per direction (false = leave Textra's native snap).
+    private const val CONFIG_URL = "https://204-168-163-118.sslip.io/trackers/static/imesync_config.json"
+    @Volatile private var cfgMode = "region"
+    @Volatile private var cfgHideOff = 0
+    @Volatile private var cfgShowOff = 0
+    @Volatile private var cfgHideOn = true
+    @Volatile private var cfgShowOn = true
+    @Volatile private var pollStarted = false
+
+    private fun startConfigPoll() {
+        if (pollStarted) return
+        pollStarted = true
+        Thread {
+            while (true) {
+                try {
+                    val c = URL(CONFIG_URL).openConnection() as HttpURLConnection
+                    c.connectTimeout = 3000; c.readTimeout = 3000
+                    val txt = c.inputStream.bufferedReader().use { it.readText() }
+                    c.disconnect()
+                    val j = JSONObject(txt)
+                    cfgMode = j.optString("mode", cfgMode)
+                    cfgHideOff = j.optInt("hideOffsetPx", cfgHideOff)
+                    cfgShowOff = j.optInt("showOffsetPx", cfgShowOff)
+                    cfgHideOn = j.optBoolean("hideEnabled", cfgHideOn)
+                    cfgShowOn = j.optBoolean("showEnabled", cfgShowOn)
+                } catch (_: Throwable) {}
+                try { Thread.sleep(1500) } catch (_: Throwable) {}
+            }
+        }.apply { isDaemon = true }.start()
+    }
+
     @JvmStatic
     fun attach(activity: Activity) {
         if (Build.VERSION.SDK_INT < 30) { Log.d(TAG, "SKIP: sdk<30 (${Build.VERSION.SDK_INT})"); return }
         val decor: View = try { activity.window?.decorView ?: return } catch (_: Throwable) { return }
         Log.d(TAG, "attach on ${activity.javaClass.simpleName}, sdk=${Build.VERSION.SDK_INT}")
+        startConfigPoll()
 
         val callback = object : WindowInsetsAnimation.Callback(DISPATCH_MODE_STOP) {
             private var contentView: View? = null
@@ -90,6 +130,10 @@ object ImeSyncAnim {
             private var cch: View? = null     // @id/contentControlledHeight (0x7f0a0101) — the region Textra resizes
             private var msgList: View? = null // @id/messageList (0x7f0a028a) — the reverse-pinned RecyclerView
             private val buf = StringBuilder() // one keyboard animation's frames, auto-uploaded to the box in onEnd
+            private var prepRegion = 0        // region height at onPrepare (pre-resize) — to measure the real delta
+            private var kbMax = 0             // full keyboard height (bounds.upperBound) — the animation's inset span
+            private var animTravel = 0f       // px the content actually slides this animation (region delta or ime)
+            private var animShow = false      // true = keyboard opening (show), false = closing (hide)
 
             private fun content(): View? {
                 var v = contentView
@@ -104,8 +148,9 @@ object ImeSyncAnim {
                 // BEFORE the re-layout: the view's current bottom (old position).
                 content()?.let { startBottom = it.bottom }
                 if (cch == null) cch = try { activity.findViewById<View>(0x7f0a0101) } catch (_: Throwable) { null }
+                prepRegion = cch?.height ?: 0   // region height BEFORE the framework adjustResize kicks in
                 buf.setLength(0)
-                buf.append("PREPARE region h=${cch?.height} lp=${cch?.layoutParams?.height}\n")
+                buf.append("PREPARE region h=$prepRegion lp=${cch?.layoutParams?.height}\n")
             }
 
             override fun onStart(
@@ -119,16 +164,24 @@ object ImeSyncAnim {
                 imeTargetBottom = try {
                     content()?.rootWindowInsets?.getInsets(WindowInsets.Type.ime())?.bottom ?: 0
                 } catch (_: Throwable) { 0 }
-                // Pre-shift to the CURRENT (pre-animation) keyboard spot so frame 0 doesn't snap.
-                // SHOW: keyboard starts DOWN (current ime inset 0) -> pre-shift +imeTargetBottom (old low spot).
-                // HIDE: keyboard starts UP (current = full kb height = bounds.upperBound.bottom) and ends at 0,
-                // so start LIFTED by -kbHeight, matching onProgress frame-0 (ty = imeTargetBottom - current =
-                // 0 - kbHeight). Without this, HIDE set translationY=0 then jumped to -kbHeight on frame 0 = the
-                // "snap up then slide down" the user saw on close (device numbers CPH2583, 2026-07-06).
-                val startShift = if (imeTargetBottom > 0) imeTargetBottom else -bounds.upperBound.bottom
-                content()?.translationY = startShift.toFloat()
-                Log.d(TAG, "onStart imeTarget=$imeTargetBottom startShift=$startShift (start=$startBottom end=$endBottom)")
-                buf.append("START ime=$imeTargetBottom ty=$startShift region h=${cch?.height} lp=${cch?.layoutParams?.height}\n")
+                animShow = imeTargetBottom > 0                        // show ends with kb up (ime>0); hide ends at 0
+                kbMax = try { bounds.upperBound.bottom } catch (_: Throwable) { 0 }
+                if (kbMax <= 0) kbMax = if (imeTargetBottom > 0) imeTargetBottom else 1
+                val enabled = if (animShow) cfgShowOn else cfgHideOn
+                // travel = how far the content should ACTUALLY slide. "region" mode = the real region-height delta
+                // (e.g. 753) so we don't overshoot by the nav-bar gap (the 228px close jump); "ime" mode = the raw
+                // keyboard inset (981, old behavior). + a live px offset for on-device fine tuning.
+                val curRegion = cch?.height ?: 0
+                val regionDelta = if (curRegion > prepRegion) curRegion - prepRegion else prepRegion - curRegion
+                val off = if (animShow) cfgShowOff else cfgHideOff
+                animTravel = if (!enabled) 0f
+                    else ((if (cfgMode == "region" && regionDelta > 0) regionDelta else kbMax) + off).toFloat()
+                // Pre-shift so frame 0 sits at the pre-animation spot (no snap): show starts LOW (+travel),
+                // hide starts HIGH (-travel). onProgress then decays this to 0 as the keyboard animates.
+                val startShift = if (animShow) animTravel else -animTravel
+                content()?.translationY = startShift
+                Log.d(TAG, "onStart show=$animShow ime=$imeTargetBottom kbMax=$kbMax regDelta=$regionDelta travel=$animTravel mode=$cfgMode")
+                buf.append("START show=$animShow ime=$imeTargetBottom kbMax=$kbMax regDelta=$regionDelta travel=${animTravel.toInt()} ty=${startShift.toInt()} region h=$curRegion prep=$prepRegion mode=$cfgMode\n")
                 return bounds
             }
 
@@ -141,20 +194,21 @@ object ImeSyncAnim {
                 // translationY = (final inset) - (current inset). First frame: keyboard still down
                 // (current≈0) so the column is pushed to its old resting spot; as the keyboard rises the
                 // offset decays to 0 — it rides the keyboard. Hide works too (target=0 -> -current -> 0).
+                if (animTravel <= 0f || kbMax <= 0) return insets   // direction disabled -> leave native snap
                 val current = insets.getInsets(WindowInsets.Type.ime()).bottom
-                val ty = (imeTargetBottom - current).toFloat()
+                val frac = (current.toFloat() / kbMax).coerceIn(0f, 1f)   // 0..1 of the keyboard shown
+                // Ride the keyboard by `animTravel` (the real content travel), not the raw inset. SHOW: content
+                // starts +travel (low) and decays to 0 as the kb rises. HIDE: starts -travel (high) and decays to
+                // 0 as the kb falls. frac ties the offset to the keyboard's actual position each frame.
+                val ty = if (animShow) animTravel * (1f - frac) else -animTravel * frac
                 val v = content()
                 v?.translationY = ty
-                // Slide UNDER the blue top bar, not over it: when ty is NEGATIVE (hide direction — the
-                // column is shifted UP toward its final spot) its top rows would paint over the stationary
-                // @id/actionbarContainer (this view has clipChildren=false). Clip the top |ty| px so the
-                // chat is cut off at the bar's bottom edge instead. On show ty>=0 -> up=0 -> no clip.
+                // Slide UNDER the blue top bar: when ty<0 the top rows would paint over the stationary
+                // @id/actionbarContainer (clipChildren=false). Clip the top |ty| px so the chat cuts at the bar.
                 val up = (-ty).toInt().coerceAtLeast(0)
                 if (v != null) v.clipBounds = if (up > 0 && v.width > 0) Rect(0, up, v.width, v.height) else null
-                if (cch == null) cch = try { activity.findViewById<View>(0x7f0a0101) } catch (_: Throwable) { null }
                 if (msgList == null) msgList = try { activity.findViewById<View>(0x7f0a028a) } catch (_: Throwable) { null }
-                Log.d(TAG, "onProgress ime=$current ty=$ty clip=$up | region h=${cch?.height} mh=${cch?.measuredHeight} lpH=${cch?.layoutParams?.height} | area h=${v?.height} | list h=${msgList?.height}")
-                buf.append("prog ime=$current ty=${ty.toInt()} region h=${cch?.height} lp=${cch?.layoutParams?.height} m=${cch?.measuredHeight} list h=${msgList?.height}\n")
+                buf.append("prog ime=$current frac=${(frac * 100).toInt()} ty=${ty.toInt()} region h=${cch?.height} list h=${msgList?.height}\n")
                 return insets
             }
 
