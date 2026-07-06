@@ -14,7 +14,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nImeSyncAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim$attach$callback$1\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,305:1\n1#2:306\n2624#3,3:307\n*S KotlinDebug\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim$attach$callback$1\n*L\n242#1:307,3\n*E\n"
+    value = "SMAP\nImeSyncAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim$attach$callback$1\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,313:1\n1#2:314\n2624#3,3:315\n*S KotlinDebug\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim$attach$callback$1\n*L\n250#1:315,3\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -102,33 +102,33 @@
 
     iput-object p1, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->$activity:Landroid/app/Activity;
 
-    .line 160
+    .line 163
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/view/WindowInsetsAnimation$Callback;-><init>(I)V
 
-    .line 174
+    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
 
-    .line 160
+    .line 163
     return-void
 .end method
 
 .method private final content()Landroid/view/View;
     .registers 4
 
-    .line 182
+    .line 185
     iget-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->contentView:Landroid/view/View;
 
-    .line 183
+    .line 186
     .local v0, "v":Landroid/view/View;
     if-nez v0, :cond_14
 
-    .line 184
+    .line 187
     :try_start_4
     iget-object v1, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->$activity:Landroid/app/Activity;
 
@@ -154,10 +154,10 @@
     :goto_11
     move-object v0, v1
 
-    .line 185
+    .line 188
     iput-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->contentView:Landroid/view/View;
 
-    .line 187
+    .line 190
     :cond_14
     return-object v0
 .end method
@@ -172,12 +172,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 283
+    .line 291
     invoke-direct {p0}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
 
     move-result-object v0
 
-    .line 284
+    .line 292
     .local v0, "v":Landroid/view/View;
     # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgAdjustNothing:Z
     invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgAdjustNothing$p()Z
@@ -188,7 +188,7 @@
 
     if-eqz v1, :cond_57
 
-    .line 286
+    .line 294
     # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgNavInset:I
     invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgNavInset$p()I
 
@@ -206,7 +206,7 @@
     :cond_1b
     iget v1, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->navStored:I
 
-    .line 287
+    .line 295
     .local v1, "nav":I
     :goto_1d
     iget v3, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
@@ -219,7 +219,7 @@
 
     move-result v3
 
-    .line 288
+    .line 296
     .local v3, "maxLift":I
     iget v5, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
 
@@ -233,7 +233,7 @@
 
     neg-float v5, v5
 
-    .line 289
+    .line 297
     .local v5, "ty":F
     if-nez v0, :cond_31
 
@@ -242,7 +242,7 @@
     :cond_31
     invoke-virtual {v0, v5}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 290
+    .line 298
     :goto_34
     neg-float v6, v5
 
@@ -252,7 +252,7 @@
 
     move-result v6
 
-    .line 291
+    .line 299
     .local v6, "upH":I
     if-eqz v0, :cond_64
 
@@ -290,7 +290,7 @@
     .end local v6    # "upH":I
     goto :goto_64
 
-    .line 293
+    .line 301
     :cond_57
     if-nez v0, :cond_5a
 
@@ -301,7 +301,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 294
+    .line 302
     :goto_5e
     if-nez v0, :cond_61
 
@@ -310,7 +310,7 @@
     :cond_61
     invoke-virtual {v0, v2}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    .line 296
+    .line 304
     :cond_64
     :goto_64
     iget-object v1, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
@@ -386,7 +386,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 297
+    .line 305
     sget-object v1, Lcom/textrcs/anim/ImeSyncAnim;->INSTANCE:Lcom/textrcs/anim/ImeSyncAnim;
 
     iget-object v2, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
@@ -402,7 +402,7 @@
     # invokes: Lcom/textrcs/anim/ImeSyncAnim;->upload(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/textrcs/anim/ImeSyncAnim;->access$upload(Lcom/textrcs/anim/ImeSyncAnim;Ljava/lang/String;)V
 
-    .line 298
+    .line 306
     return-void
 .end method
 
@@ -414,18 +414,18 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 192
+    .line 195
     invoke-direct {p0}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_12
 
-    .line 306
+    .line 314
     .local v0, "it":Landroid/view/View;
     const/4 v1, 0x0
 
-    .line 192
+    .line 195
     .local v1, "$i$a$-let-ImeSyncAnim$attach$callback$1$onPrepare$1":I
     invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
@@ -433,7 +433,7 @@
 
     iput v2, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->startBottom:I
 
-    .line 193
+    .line 196
     .end local v0    # "it":Landroid/view/View;
     .end local v1    # "$i$a$-let-ImeSyncAnim$attach$callback$1$onPrepare$1":I
     :cond_12
@@ -464,7 +464,7 @@
     :goto_23
     iput-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
 
-    .line 194
+    .line 197
     :cond_25
     iget-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
 
@@ -484,12 +484,12 @@
     :goto_30
     iput v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
 
-    .line 195
+    .line 198
     iget-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 196
+    .line 199
     iget-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -547,7 +547,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 197
+    .line 200
     return-void
 .end method
 
@@ -580,7 +580,7 @@
 
     invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 242
+    .line 250
     move-object v0, v3
 
     check-cast v0, Ljava/lang/Iterable;
@@ -588,7 +588,7 @@
     .local v0, "$this$none$iv":Ljava/lang/Iterable;
     const/4 v4, 0x0
 
-    .line 307
+    .line 315
     .local v4, "$i$f$none":I
     instance-of v5, v0, Ljava/util/Collection;
 
@@ -610,7 +610,7 @@
 
     goto :goto_49
 
-    .line 308
+    .line 316
     :cond_24
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -635,7 +635,7 @@
     .local v9, "it":Landroid/view/WindowInsetsAnimation;
     const/4 v10, 0x0
 
-    .line 242
+    .line 250
     .local v10, "$i$a$-none-ImeSyncAnim$attach$callback$1$onProgress$1":I
     invoke-virtual {v9}, Landroid/view/WindowInsetsAnimation;->getTypeMask()I
 
@@ -656,7 +656,7 @@
     :cond_43
     move v9, v7
 
-    .line 308
+    .line 316
     .end local v9    # "it":Landroid/view/WindowInsetsAnimation;
     .end local v10    # "$i$a$-none-ImeSyncAnim$attach$callback$1$onProgress$1":I
     :goto_44
@@ -666,12 +666,12 @@
 
     goto :goto_49
 
-    .line 309
+    .line 317
     .end local v8    # "element$iv":Ljava/lang/Object;
     :cond_48
     nop
 
-    .line 242
+    .line 250
     .end local v0    # "$this$none$iv":Ljava/lang/Iterable;
     .end local v4    # "$i$f$none":I
     :goto_49
@@ -679,7 +679,7 @@
 
     return-object v2
 
-    .line 243
+    .line 251
     :cond_4c
     # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgAdjustNothing:Z
     invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgAdjustNothing$p()Z
@@ -696,7 +696,7 @@
 
     if-eqz v0, :cond_128
 
-    .line 246
+    .line 254
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
     move-result v0
@@ -707,7 +707,7 @@
 
     iget v12, v0, Landroid/graphics/Insets;->bottom:I
 
-    .line 247
+    .line 255
     .local v12, "current":I
     # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgNavInset:I
     invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgNavInset$p()I
@@ -751,7 +751,7 @@
     :goto_7e
     move v13, v0
 
-    .line 248
+    .line 256
     .local v13, "nav":I
     iget v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
 
@@ -761,7 +761,7 @@
 
     move-result v14
 
-    .line 249
+    .line 257
     .local v14, "maxLift":I
     sub-int v0, v12, v13
 
@@ -773,7 +773,7 @@
 
     neg-float v15, v0
 
-    .line 250
+    .line 258
     .local v15, "ty":F
     invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
 
@@ -787,7 +787,7 @@
     :cond_95
     invoke-virtual {v11, v15}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 251
+    .line 259
     :goto_98
     neg-float v0, v15
 
@@ -797,7 +797,7 @@
 
     move-result v4
 
-    .line 252
+    .line 260
     .local v4, "upH":I
     if-eqz v11, :cond_ba
 
@@ -829,7 +829,7 @@
     :goto_b7
     invoke-virtual {v11, v0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    .line 253
+    .line 261
     :cond_ba
     iget-object v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->msgList:Landroid/view/View;
 
@@ -856,7 +856,7 @@
     :goto_ca
     iput-object v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->msgList:Landroid/view/View;
 
-    .line 254
+    .line 262
     :cond_cc
     iget-object v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
 
@@ -956,10 +956,10 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 255
+    .line 263
     return-object v2
 
-    .line 261
+    .line 269
     .end local v4    # "upH":I
     .end local v11    # "vv":Landroid/view/View;
     .end local v12    # "current":I
@@ -981,7 +981,7 @@
 
     goto/16 :goto_20b
 
-    .line 262
+    .line 270
     :cond_135
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
@@ -993,7 +993,7 @@
 
     iget v4, v0, Landroid/graphics/Insets;->bottom:I
 
-    .line 268
+    .line 276
     .local v4, "current":I
     # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgNavInset:I
     invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgNavInset$p()I
@@ -1027,7 +1027,7 @@
     :goto_155
     move v5, v0
 
-    .line 269
+    .line 277
     .local v5, "navF":F
     iget-boolean v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
 
@@ -1049,7 +1049,7 @@
 
     goto :goto_16f
 
-    .line 270
+    .line 278
     :cond_166
     int-to-float v0, v4
 
@@ -1063,17 +1063,17 @@
 
     neg-float v0, v0
 
-    .line 269
+    .line 277
     :goto_16f
     move v3, v0
 
-    .line 271
+    .line 279
     .local v3, "ty":F
     invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
 
     move-result-object v11
 
-    .line 272
+    .line 280
     .local v11, "v":Landroid/view/View;
     if-nez v11, :cond_177
 
@@ -1082,7 +1082,7 @@
     :cond_177
     invoke-virtual {v11, v3}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 275
+    .line 283
     :goto_17a
     neg-float v0, v3
 
@@ -1092,7 +1092,7 @@
 
     move-result v12
 
-    .line 276
+    .line 284
     .local v12, "up":I
     if-eqz v11, :cond_19c
 
@@ -1124,7 +1124,7 @@
     :goto_199
     invoke-virtual {v11, v0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    .line 277
+    .line 285
     :cond_19c
     iget-object v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->msgList:Landroid/view/View;
 
@@ -1151,7 +1151,7 @@
     :goto_1ac
     iput-object v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->msgList:Landroid/view/View;
 
-    .line 278
+    .line 286
     :cond_1ae
     iget-object v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
 
@@ -1253,10 +1253,10 @@
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 279
+    .line 287
     return-object v2
 
-    .line 261
+    .line 269
     .end local v3    # "ty":F
     .end local v4    # "current":I
     .end local v5    # "navF":F
@@ -1286,18 +1286,18 @@
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 204
+    .line 207
     invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1d
 
-    .line 306
+    .line 314
     .local v0, "it":Landroid/view/View;
     const/4 v4, 0x0
 
-    .line 204
+    .line 207
     .local v4, "$i$a$-let-ImeSyncAnim$attach$callback$1$onStart$1":I
     invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
@@ -1305,13 +1305,13 @@
 
     iput v5, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->endBottom:I
 
-    .line 207
+    .line 210
     .end local v0    # "it":Landroid/view/View;
     .end local v4    # "$i$a$-let-ImeSyncAnim$attach$callback$1$onStart$1":I
     :cond_1d
     nop
 
-    .line 208
+    .line 211
     const/4 v4, 0x0
 
     :try_start_1f
@@ -1348,17 +1348,17 @@
 
     goto :goto_3c
 
-    .line 209
+    .line 212
     :catchall_3a
     move-exception v0
 
     move v0, v4
 
-    .line 207
+    .line 210
     :goto_3c
     iput v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
 
-    .line 210
+    .line 213
     iget v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
 
     const/4 v5, 0x1
@@ -1375,7 +1375,7 @@
     :goto_46
     iput-boolean v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
 
-    .line 211
+    .line 214
     :try_start_48
     invoke-virtual {v2}, Landroid/view/WindowInsetsAnimation$Bounds;->getUpperBound()Landroid/graphics/Insets;
 
@@ -1395,82 +1395,87 @@
     :goto_51
     iput v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
 
-    .line 212
+    .line 215
     iget v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
 
-    if-gtz v0, :cond_5f
+    if-gtz v0, :cond_61
 
     iget v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
 
-    if-lez v0, :cond_5d
+    if-lez v0, :cond_5e
 
-    iget v5, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
+    iget v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
 
-    :cond_5d
-    iput v5, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
+    goto :goto_5f
 
-    .line 213
-    :cond_5f
-    :try_start_5f
+    :cond_5e
+    move v0, v5
+
+    :goto_5f
+    iput v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
+
+    .line 216
+    :cond_61
+    :try_start_61
     invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_78
+    if-eqz v0, :cond_7a
 
     invoke-virtual {v0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
 
     move-result-object v0
 
-    if-eqz v0, :cond_78
+    if-eqz v0, :cond_7a
 
     invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
 
-    move-result v5
+    move-result v6
 
-    invoke-virtual {v0, v5}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
+    invoke-virtual {v0, v6}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
 
     move-result-object v0
 
-    if-eqz v0, :cond_78
+    if-eqz v0, :cond_7a
 
     iget v0, v0, Landroid/graphics/Insets;->bottom:I
-    :try_end_77
-    .catchall {:try_start_5f .. :try_end_77} :catchall_7a
+    :try_end_79
+    .catchall {:try_start_61 .. :try_end_79} :catchall_7c
 
-    goto :goto_7c
+    goto :goto_7e
 
-    :cond_78
+    :cond_7a
     move v0, v4
 
-    goto :goto_7c
+    goto :goto_7e
 
-    :catchall_7a
+    :catchall_7c
     move-exception v0
 
     move v0, v4
 
-    :goto_7c
+    :goto_7e
     iput v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->navStored:I
 
-    .line 214
+    .line 217
     # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgAdjustNothing:Z
     invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgAdjustNothing$p()Z
 
     move-result v0
 
-    const/16 v5, 0xa
+    const/16 v6, 0xa
 
-    const-string v6, " region h="
+    const-string v7, " region h="
 
-    const-string v7, " kbMax="
+    const-string v8, " kbMax="
 
-    const-string v8, " ime="
+    const-string v9, " ime="
 
-    if-eqz v0, :cond_11b
+    if-eqz v0, :cond_11d
 
-    .line 217
-    iget-object v9, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
+    .line 220
+    iget-object v5, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1488,477 +1493,133 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v8, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v7, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v7, " nav="
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v7, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->navStored:I
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
-
-    const/4 v7, 0x0
-
-    if-eqz v6, :cond_d1
-
-    invoke-virtual {v6}, Landroid/view/View;->getHeight()I
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    goto :goto_d2
-
-    :cond_d1
-    move-object v6, v7
-
-    :goto_d2
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v6, " lp="
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
-
-    if-eqz v6, :cond_ec
-
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_ec
-
-    iget v6, v6, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    :cond_ec
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v6, " sim=0x"
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    :try_start_f6
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->winRef:Landroid/view/Window;
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getWinRef$p()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_107
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_107
-
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
-    :try_end_104
-    .catchall {:try_start_f6 .. :try_end_104} :catchall_106
-
-    move v4, v0
-
-    goto :goto_107
-
-    :catchall_106
-    move-exception v0
-
-    :cond_107
-    :goto_107
-    invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 218
-    return-object v2
-
-    .line 220
-    :cond_11b
-    iget-boolean v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
-
-    if-eqz v0, :cond_124
-
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOn:Z
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgShowOn$p()Z
-
-    move-result v0
-
-    goto :goto_128
-
-    :cond_124
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOn:Z
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgHideOn$p()Z
-
-    move-result v0
-
-    .line 224
-    .local v0, "enabled":Z
-    :goto_128
-    iget-object v9, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
-
-    if-eqz v9, :cond_130
-
-    invoke-virtual {v9}, Landroid/view/View;->getHeight()I
-
-    move-result v4
-
-    .line 225
-    .local v4, "curRegion":I
-    :cond_130
-    iget v9, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
-
-    if-le v4, v9, :cond_139
-
-    iget v9, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
-
-    sub-int v9, v4, v9
-
-    goto :goto_13c
-
-    :cond_139
-    iget v9, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
-
-    sub-int/2addr v9, v4
-
-    .line 226
-    .local v9, "regionDelta":I
-    :goto_13c
-    iget-boolean v10, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
-
-    if-eqz v10, :cond_145
-
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOff:I
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgShowOff$p()I
-
-    move-result v10
-
-    goto :goto_149
-
-    :cond_145
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOff:I
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgHideOff$p()I
-
-    move-result v10
-
-    .line 227
-    .local v10, "off":I
-    :goto_149
-    if-nez v0, :cond_14d
-
-    const/4 v11, 0x0
-
-    goto :goto_161
-
-    .line 228
-    :cond_14d
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgMode:Ljava/lang/String;
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgMode$p()Ljava/lang/String;
-
-    move-result-object v11
-
-    const-string v12, "region"
-
-    invoke-static {v11, v12}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_15d
-
-    if-lez v9, :cond_15d
-
-    move v11, v9
-
-    goto :goto_15f
-
-    :cond_15d
-    iget v11, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
-
-    :goto_15f
-    add-int/2addr v11, v10
-
-    int-to-float v11, v11
-
-    .line 227
-    :goto_161
-    iput v11, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
-
-    .line 231
-    iget-boolean v11, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
-
-    if-eqz v11, :cond_16a
-
-    iget v11, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
-
-    goto :goto_16d
-
-    :cond_16a
-    iget v11, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
-
-    neg-float v11, v11
-
-    .line 232
-    .local v11, "startShift":F
-    :goto_16d
-    invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
-
-    move-result-object v12
-
-    if-nez v12, :cond_174
-
-    goto :goto_177
-
-    :cond_174
-    invoke-virtual {v12, v11}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 233
-    :goto_177
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v13, "onStart show="
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    iget-boolean v13, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    iget v13, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    iget v13, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    const-string v13, " regDelta="
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    invoke-virtual {v12, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    const-string v14, " travel="
-
-    invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    iget v15, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
-
-    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    const-string v15, " mode="
-
-    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgMode:Ljava/lang/String;
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgMode$p()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v12, "ImeSyncAnim"
-
-    invoke-static {v12, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 234
-    iget-object v5, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
-
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
-
-    move/from16 v16, v0
-
-    .end local v0    # "enabled":Z
-    .local v16, "enabled":Z
-    const-string v0, "START show="
-
-    invoke-virtual {v12, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-boolean v12, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
-
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v8, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v7, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    iget v9, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
 
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v7, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
+    iget v8, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
 
-    float-to-int v7, v7
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v7, " ty="
+    const-string v8, " nav="
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v8, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->navStored:I
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    float-to-int v7, v11
+    iget-object v7, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v8, 0x0
 
-    move-result-object v0
+    if-eqz v7, :cond_d3
 
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Landroid/view/View;->getHeight()I
 
-    move-result-object v0
+    move-result v7
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v7
 
-    const-string v6, " prep="
+    goto :goto_d4
 
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_d3
+    move-object v7, v8
 
-    move-result-object v0
-
-    iget v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :goto_d4
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v7, " lp="
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgMode:Ljava/lang/String;
-    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgMode$p()Ljava/lang/String;
+    iget-object v7, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
 
-    move-result-object v6
+    if-eqz v7, :cond_ee
 
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_ee
+
+    iget v7, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    :cond_ee
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const/16 v6, 0xa
+    const-string v7, " sim=0x"
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    :try_start_f8
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->winRef:Landroid/view/Window;
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getWinRef$p()Landroid/view/Window;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_109
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_109
+
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
+    :try_end_106
+    .catchall {:try_start_f8 .. :try_end_106} :catchall_108
+
+    move v4, v0
+
+    goto :goto_109
+
+    :catchall_108
+    move-exception v0
+
+    :cond_109
+    :goto_109
+    invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -1970,6 +1631,382 @@
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 235
+    .line 221
     return-object v2
+
+    .line 226
+    :cond_11d
+    sget-boolean v0, Lcom/textrcs/anim/ImeSyncAnim;->suppressNextHide:Z
+
+    if-eqz v0, :cond_127
+
+    iget-boolean v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
+
+    if-nez v0, :cond_127
+
+    move v0, v5
+
+    goto :goto_128
+
+    :cond_127
+    move v0, v4
+
+    .line 227
+    .local v0, "skipThisHide":Z
+    :goto_128
+    sget-object v10, Lcom/textrcs/anim/ImeSyncAnim;->INSTANCE:Lcom/textrcs/anim/ImeSyncAnim;
+
+    sput-boolean v4, Lcom/textrcs/anim/ImeSyncAnim;->suppressNextHide:Z
+
+    .line 228
+    iget-boolean v10, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
+
+    if-eqz v10, :cond_135
+
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOn:Z
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgShowOn$p()Z
+
+    move-result v5
+
+    goto :goto_13f
+
+    :cond_135
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOn:Z
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgHideOn$p()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_13e
+
+    if-nez v0, :cond_13e
+
+    goto :goto_13f
+
+    :cond_13e
+    move v5, v4
+
+    .line 232
+    .local v5, "enabled":Z
+    :goto_13f
+    iget-object v10, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->cch:Landroid/view/View;
+
+    if-eqz v10, :cond_147
+
+    invoke-virtual {v10}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    .line 233
+    .local v4, "curRegion":I
+    :cond_147
+    iget v10, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
+
+    if-le v4, v10, :cond_150
+
+    iget v10, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
+
+    sub-int v10, v4, v10
+
+    goto :goto_153
+
+    :cond_150
+    iget v10, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
+
+    sub-int/2addr v10, v4
+
+    .line 234
+    .local v10, "regionDelta":I
+    :goto_153
+    iget-boolean v11, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
+
+    if-eqz v11, :cond_15c
+
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOff:I
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgShowOff$p()I
+
+    move-result v11
+
+    goto :goto_160
+
+    :cond_15c
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOff:I
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgHideOff$p()I
+
+    move-result v11
+
+    .line 235
+    .local v11, "off":I
+    :goto_160
+    if-nez v5, :cond_164
+
+    const/4 v12, 0x0
+
+    goto :goto_178
+
+    .line 236
+    :cond_164
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgMode:Ljava/lang/String;
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgMode$p()Ljava/lang/String;
+
+    move-result-object v12
+
+    const-string v13, "region"
+
+    invoke-static {v12, v13}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_174
+
+    if-lez v10, :cond_174
+
+    move v12, v10
+
+    goto :goto_176
+
+    :cond_174
+    iget v12, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
+
+    :goto_176
+    add-int/2addr v12, v11
+
+    int-to-float v12, v12
+
+    .line 235
+    :goto_178
+    iput v12, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
+
+    .line 239
+    iget-boolean v12, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
+
+    if-eqz v12, :cond_181
+
+    iget v12, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
+
+    goto :goto_184
+
+    :cond_181
+    iget v12, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
+
+    neg-float v12, v12
+
+    .line 240
+    .local v12, "startShift":F
+    :goto_184
+    invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->content()Landroid/view/View;
+
+    move-result-object v13
+
+    if-nez v13, :cond_18b
+
+    goto :goto_18e
+
+    :cond_18b
+    invoke-virtual {v13, v12}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 241
+    :goto_18e
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v14, "onStart show="
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    iget-boolean v14, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    iget v14, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    iget v14, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    const-string v14, " regDelta="
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    const-string v15, " travel="
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    iget v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
+
+    invoke-virtual {v13, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v13, " mode="
+
+    invoke-virtual {v6, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    move/from16 v16, v0
+
+    .end local v0    # "skipThisHide":Z
+    .local v16, "skipThisHide":Z
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgMode:Ljava/lang/String;
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgMode$p()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v6, "ImeSyncAnim"
+
+    invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 242
+    iget-object v0, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->buf:Ljava/lang/StringBuilder;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "START show="
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-boolean v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animShow:Z
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->imeTargetBottom:I
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->kbMax:I
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->animTravel:F
+
+    float-to-int v6, v6
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v6, " ty="
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    float-to-int v6, v12
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v6, " prep="
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v6, v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;->prepRegion:I
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    # getter for: Lcom/textrcs/anim/ImeSyncAnim;->cfgMode:Ljava/lang/String;
+    invoke-static {}, Lcom/textrcs/anim/ImeSyncAnim;->access$getCfgMode$p()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const/16 v6, 0xa
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 243
+    return-object p2
 .end method

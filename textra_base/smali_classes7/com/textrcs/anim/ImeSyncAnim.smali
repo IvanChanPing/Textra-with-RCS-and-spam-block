@@ -5,12 +5,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nImeSyncAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,305:1\n1#2:306\n*E\n"
+    value = "SMAP\nImeSyncAnim.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImeSyncAnim.kt\ncom/textrcs/anim/ImeSyncAnim\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,313:1\n1#2:314\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001eH\u0007J\u0008\u0010\u001f\u001a\u00020\u001cH\u0002J\u0010\u0010 \u001a\u00020\u001c2\u0006\u0010!\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0015\u001a\u00020\u00168\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0018\u001a\u00020\n8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u0082\u000e\u00a2\u0006\u0002\n\u0000"
+        "\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u001fH\u0007J\u0008\u0010 \u001a\u00020\u001dH\u0002J\u0010\u0010!\u001a\u00020\u001d2\u0006\u0010\"\u001a\u00020\u0004H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0008\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000c\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0015\u001a\u00020\u00168\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\nX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0018\u001a\u00020\n8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0002\n\u0000R\u0012\u0010\u0019\u001a\u00020\n8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u001a\u001a\u0004\u0018\u00010\u001bX\u0082\u000e\u00a2\u0006\u0002\n\u0000"
     }
     d2 = {
         "Lcom/textrcs/anim/ImeSyncAnim;",
@@ -37,6 +37,7 @@
         "parallaxUnderMs",
         "",
         "pollStarted",
+        "suppressNextHide",
         "suppressResize",
         "winRef",
         "Landroid/view/Window;",
@@ -93,6 +94,8 @@
 
 .field private static volatile pollStarted:Z
 
+.field public static suppressNextHide:Z
+
 .field public static suppressResize:Z
 
 .field private static volatile winRef:Landroid/view/Window;
@@ -147,7 +150,7 @@
 
     sput v0, Lcom/textrcs/anim/ImeSyncAnim;->cfgNavInset:I
 
-    .line 105
+    .line 108
     sput v0, Lcom/textrcs/anim/ImeSyncAnim;->lastAdjust:I
 
     return-void
@@ -255,7 +258,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 153
+    .line 156
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
@@ -294,7 +297,7 @@
 
     return-void
 
-    .line 154
+    .line 157
     :cond_2c
     :try_start_2c
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -313,7 +316,7 @@
 
     goto :goto_82
 
-    .line 155
+    .line 158
     .local v0, "decor":Landroid/view/View;
     :cond_39
     :try_start_39
@@ -337,10 +340,10 @@
     :goto_41
     sput-object v1, Lcom/textrcs/anim/ImeSyncAnim;->winRef:Landroid/view/Window;
 
-    .line 156
+    .line 159
     sput-object v0, Lcom/textrcs/anim/ImeSyncAnim;->decorRef:Landroid/view/View;
 
-    .line 157
+    .line 160
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -381,17 +384,17 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
+    .line 161
     sget-object v1, Lcom/textrcs/anim/ImeSyncAnim;->INSTANCE:Lcom/textrcs/anim/ImeSyncAnim;
 
     invoke-direct {v1}, Lcom/textrcs/anim/ImeSyncAnim;->startConfigPoll()V
 
-    .line 160
+    .line 163
     new-instance v1, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;
 
     invoke-direct {v1, p0}, Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;-><init>(Landroid/app/Activity;)V
 
-    .line 301
+    .line 309
     .local v1, "callback":Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;
     :try_start_79
     move-object v2, v1
@@ -407,11 +410,11 @@
     :catchall_80
     move-exception v2
 
-    .line 302
+    .line 310
     :goto_81
     return-void
 
-    .line 154
+    .line 157
     .end local v0    # "decor":Landroid/view/View;
     .end local v1    # "callback":Lcom/textrcs/anim/ImeSyncAnim$attach$callback$1;
     :cond_82
@@ -428,20 +431,20 @@
 .method private final startConfigPoll()V
     .registers 5
 
-    .line 109
+    .line 112
     sget-boolean v0, Lcom/textrcs/anim/ImeSyncAnim;->pollStarted:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 110
+    .line 113
     :cond_5
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/textrcs/anim/ImeSyncAnim;->pollStarted:Z
 
-    .line 111
+    .line 114
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda0;
@@ -450,14 +453,14 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 148
+    .line 151
     move-object v2, v1
 
-    .line 306
+    .line 314
     .local v2, "$this$startConfigPoll_u24lambda_u247":Ljava/lang/Thread;
     const/4 v3, 0x0
 
-    .line 148
+    .line 151
     .local v3, "$i$a$-apply-ImeSyncAnim$startConfigPoll$2":I
     invoke-virtual {v2, v0}, Ljava/lang/Thread;->setDaemon(Z)V
 
@@ -465,23 +468,23 @@
     .end local v3    # "$i$a$-apply-ImeSyncAnim$startConfigPoll$2":I
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 149
+    .line 152
     return-void
 .end method
 
 .method private static final startConfigPoll$lambda$6()V
     .registers 7
 
-    .line 112
+    .line 115
     nop
 
     :goto_1
     nop
 
-    .line 113
+    .line 116
     nop
 
-    .line 114
+    .line 117
     :try_start_3
     new-instance v0, Ljava/net/URL;
 
@@ -499,7 +502,7 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
-    .line 115
+    .line 118
     .local v0, "c":Ljava/net/HttpURLConnection;
     const/16 v1, 0xbb8
 
@@ -507,7 +510,7 @@
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 116
+    .line 119
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
@@ -551,11 +554,11 @@
 
     check-cast v1, Ljava/io/BufferedReader;
 
-    .line 306
+    .line 314
     .local v1, "it":Ljava/io/BufferedReader;
     const/4 v2, 0x0
 
-    .line 116
+    .line 119
     .local v2, "$i$a$-use-ImeSyncAnim$startConfigPoll$1$txt$1":I
     move-object v4, v1
 
@@ -574,16 +577,16 @@
     :try_start_4c
     invoke-static {v3, v1}, Lkotlin/io/CloseableKt;->closeFinally(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    .line 117
+    .line 120
     .local v4, "txt":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 118
+    .line 121
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1, v4}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 119
+    .line 122
     .local v1, "j":Lorg/json/JSONObject;
     const-string v2, "mode"
 
@@ -599,7 +602,7 @@
 
     sput-object v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgMode:Ljava/lang/String;
 
-    .line 120
+    .line 123
     const-string v2, "hideOffsetPx"
 
     sget v3, Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOff:I
@@ -610,7 +613,7 @@
 
     sput v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOff:I
 
-    .line 121
+    .line 124
     const-string v2, "showOffsetPx"
 
     sget v3, Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOff:I
@@ -621,7 +624,7 @@
 
     sput v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOff:I
 
-    .line 122
+    .line 125
     const-string v2, "hideEnabled"
 
     sget-boolean v3, Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOn:Z
@@ -632,7 +635,7 @@
 
     sput-boolean v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgHideOn:Z
 
-    .line 123
+    .line 126
     const-string v2, "showEnabled"
 
     sget-boolean v3, Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOn:Z
@@ -643,7 +646,7 @@
 
     sput-boolean v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgShowOn:Z
 
-    .line 124
+    .line 127
     const-string v2, "navInsetPx"
 
     sget v3, Lcom/textrcs/anim/ImeSyncAnim;->cfgNavInset:I
@@ -654,7 +657,7 @@
 
     sput v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgNavInset:I
 
-    .line 125
+    .line 128
     const-string v2, "adjustNothing"
 
     sget-boolean v3, Lcom/textrcs/anim/ImeSyncAnim;->cfgAdjustNothing:Z
@@ -665,7 +668,7 @@
 
     sput-boolean v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgAdjustNothing:Z
 
-    .line 126
+    .line 129
     const-string v2, "suppressResize"
 
     sget-boolean v3, Lcom/textrcs/anim/ImeSyncAnim;->cfgSuppress:Z
@@ -676,12 +679,12 @@
 
     sput-boolean v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgSuppress:Z
 
-    .line 127
+    .line 130
     sget-boolean v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgSuppress:Z
 
     sput-boolean v2, Lcom/textrcs/anim/ImeSyncAnim;->suppressResize:Z
 
-    .line 128
+    .line 131
     const-string v2, "parallaxUnderMs"
 
     sget-wide v5, Lcom/textrcs/anim/ImeSyncAnim;->parallaxUnderMs:J
@@ -692,7 +695,7 @@
 
     sput-wide v2, Lcom/textrcs/anim/ImeSyncAnim;->parallaxUnderMs:J
 
-    .line 129
+    .line 132
     sget-boolean v2, Lcom/textrcs/anim/ImeSyncAnim;->cfgAdjustNothing:Z
 
     if-eqz v2, :cond_c1
@@ -704,18 +707,18 @@
     :cond_c1
     const/16 v2, 0x10
 
-    .line 130
+    .line 133
     .local v2, "want":I
     :goto_c3
     sput v2, Lcom/textrcs/anim/ImeSyncAnim;->lastAdjust:I
 
-    .line 134
+    .line 137
     sget-object v3, Lcom/textrcs/anim/ImeSyncAnim;->decorRef:Landroid/view/View;
 
     .local v3, "d":Landroid/view/View;
     sget-object v5, Lcom/textrcs/anim/ImeSyncAnim;->winRef:Landroid/view/Window;
 
-    .line 135
+    .line 138
     .local v5, "w":Landroid/view/Window;
     if-eqz v3, :cond_dc
 
@@ -729,7 +732,7 @@
 
     goto :goto_dc
 
-    .line 116
+    .line 119
     .end local v1    # "j":Lorg/json/JSONObject;
     .end local v2    # "want":I
     .end local v3    # "d":Landroid/view/View;
@@ -755,12 +758,12 @@
     :try_end_db
     .catchall {:try_start_d7 .. :try_end_db} :catchall_db
 
-    .line 145
+    .line 148
     .end local v0    # "c":Ljava/net/HttpURLConnection;
     :catchall_db
     move-exception v0
 
-    .line 146
+    .line 149
     :cond_dc
     :goto_dc
     const-wide/16 v0, 0x5dc
@@ -783,10 +786,10 @@
     .param p0, "$w"    # Landroid/view/Window;
     .param p1, "$want"    # I
 
-    .line 136
+    .line 139
     nop
 
-    .line 137
+    .line 140
     if-eqz p0, :cond_19
 
     move-object v0, p0
@@ -794,7 +797,7 @@
     .local v0, "it":Landroid/view/Window;
     const/4 v1, 0x0
 
-    .line 138
+    .line 141
     .local v1, "$i$a$-let-ImeSyncAnim$startConfigPoll$1$1$1":I
     :try_start_5
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
@@ -803,13 +806,13 @@
 
     iget v2, v2, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
-    .line 139
+    .line 142
     .local v2, "cur":I
     and-int/lit16 v3, v2, 0xf0
 
     if-eq v3, p1, :cond_15
 
-    .line 140
+    .line 143
     and-int/lit16 v3, v2, -0xf1
 
     or-int/2addr v3, p1
@@ -818,7 +821,7 @@
     :try_end_15
     .catchall {:try_start_5 .. :try_end_15} :catchall_17
 
-    .line 142
+    .line 145
     :cond_15
     nop
 
@@ -827,18 +830,18 @@
     .end local v2    # "cur":I
     goto :goto_19
 
-    .line 143
+    .line 146
     :catchall_17
     move-exception v0
 
     goto :goto_1a
 
-    .line 137
+    .line 140
     :cond_19
     :goto_19
     nop
 
-    .line 144
+    .line 147
     :goto_1a
     return-void
 .end method
@@ -861,7 +864,7 @@
     .line 74
     move-object v1, v0
 
-    .line 306
+    .line 314
     .local v1, "$this$upload_u24lambda_u242":Ljava/lang/Thread;
     const/4 v2, 0x0
 
@@ -950,7 +953,7 @@
 
     check-cast v2, Ljava/io/OutputStream;
 
-    .line 306
+    .line 314
     .local v2, "it":Ljava/io/OutputStream;
     const/4 v3, 0x0
 

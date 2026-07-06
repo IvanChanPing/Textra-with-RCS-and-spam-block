@@ -5,6 +5,27 @@ Related: memory `reference_textrcs_keyboard_slide_fix_2026_07_06`, `reference_de
 plan `/root/.claude/plans/functional-enchanting-galaxy.md`.
 
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
+**"+" BUTTON DOWN-SLIDE OPT-OUT (2026-07-06, DEVICE-CONFIRMED WORKING by user):** Tapping "+" no longer down-slides
+(old snap), normal closes still slide — user confirmed on-device. Locked in. TWO ITEMS STILL LEFT (user, deferrable
+until after a GitHub merge-push): (1) UP/open slide (known structural: framework adjustResize + Textra setHeightTo
+both shrink before frame 0 → translating leaves a gap; plan `functional-enchanting-galaxy.md` Part 2 = force
+ADJUST_NOTHING + hold suppressResize + IME-follower translate, RISKY); (2) bubble/box "lag-follow" — rows trail the
+compose bar during the slide for an elastic follow look (NO physics bounce spec — use tween/overshoot easing per the
+bounce rule). Both non-trivial → per user, PUSH the working state to GitHub first (merge, don't overwrite), then
+attempt them. ORIGINAL "+" FIX DETAIL BELOW:
+**"+" BUTTON DOWN-SLIDE OPT-OUT (2026-07-06):** User reported the CLOSE down-slide ALSO fired when
+tapping the "+" attach-panel button (camera/gallery) — unwanted; it should use the OLD snap (no slide) in that one
+case. FIX = a one-shot flag: `@JvmField var suppressNextHide` on ImeSyncAnim (static). The "+" panel opens via
+`Q5/j.C0()` which at `Q5/j.smali:1460` calls `h6/d.q0()` → `BaseEditText.d()` → `z7/N.n` (hideSoftInput) — that
+q0 call is UNIQUE to the +panel-open, so a `sput-boolean true` inserted right before it (reusing dead scratch v13,
+`.locals 14`) flags ONLY the + button's hide. `ImeSyncAnim.onStart` computes `skipThisHide = suppressNextHide &&
+!animShow`, ALWAYS consumes (`suppressNextHide=false`), and sets `enabled = animShow ? cfgShowOn : (cfgHideOn &&
+!skipThisHide)` → flagged hide gets animTravel=0 = old native snap. Every other hide still slides. Files:
+inject_src/.../ImeSyncAnim.kt (field + onStart), textra_base/.../Q5/j.smali:1460 (flag-set). Caveat: HOLD-mode
+(cfgAdjustNothing, default OFF) early-returns before the consume → flag not honored/consumed there; region mode
+ships, so no impact now. Compile-only until user device-tests. NEXT: build finishes → serve → user taps "+" in a
+convo, confirms NO down-slide there but normal tap-away close STILL slides.
+
 **TOOLING + PARALLAX (2026-07-06):** `bash ship.sh` (repo root, git-tracked commit 3dbf8a3a) = one command:
 build.sh → copy APK to the served URL → verify md5+HTTP200 → clear imelog log → print SHIP REPORT (URL, git,
 uncommitted files). UNDER-SCREEN parallax duration is now LIVE-TUNABLE via imesync_config.json `parallaxUnderMs`

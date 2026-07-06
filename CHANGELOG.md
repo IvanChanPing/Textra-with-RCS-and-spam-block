@@ -2,6 +2,8 @@
 
 - Set PARALLAX_UNDER_MS to 495ms so the return-slide syncs with the foreground exit
 
+- Add one-shot suppressNextHide flag so the "+" attach-panel keyboard-hide uses the old snap instead of the down-slide, leaving all other closes animated.
+
 ## 2026-07-06 — Conversation keyboard: compose bar + chat slide with the keyboard
 
 Opening and closing the keyboard in a conversation slides the message list and compose bar up and down in

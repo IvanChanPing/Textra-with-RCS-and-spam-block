@@ -1457,6 +1457,13 @@
 
     const/4 v13, 0x4
 
+    # TEXTRCS: "+" attach-panel is about to hide the keyboard (q0 -> BaseEditText.d -> hideSoftInput).
+    # Flag ImeSyncAnim so THIS one keyboard-hide skips the down-slide and uses the old snap (v13 is dead
+    # scratch here, stomped with junk above). Consumed on the next onStart. See ImeSyncAnim.suppressNextHide.
+    const/4 v13, 0x1
+
+    sput-boolean v13, Lcom/textrcs/anim/ImeSyncAnim;->suppressNextHide:Z
+
     invoke-virtual {v0}, Lcom/mplus/lib/h6/d;->q0()V
 
     invoke-virtual {p0, v3}, Lcom/mplus/lib/Q5/j;->r0(Z)V

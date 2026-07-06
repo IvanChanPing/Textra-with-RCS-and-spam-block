@@ -99,6 +99,9 @@ object ImeSyncAnim {
     @Volatile private var cfgAdjustNothing = false
     @Volatile private var cfgSuppress = false
     @JvmField var suppressResize = false   // read by x5.y.setHeightTo (smali); true = Textra resize no-op
+    // Set true (from Q5/j.C0 smali) right before the "+" attach-panel hides the keyboard, so THAT one hide
+    // falls back to the old no-slide snap instead of the down-slide. Consumed (cleared) on the next onStart.
+    @JvmField var suppressNextHide = false
     @JvmField var parallaxUnderMs = 0L     // live under-screen parallax duration; ConvoCornerAnim reads it (0 = its default)
     @Volatile private var winRef: Window? = null
     @Volatile private var decorRef: View? = null
@@ -217,7 +220,12 @@ object ImeSyncAnim {
                     buf.append("START HOLD show=$animShow ime=$imeTargetBottom kbMax=$kbMax nav=$navStored region h=${cch?.height} lp=${cch?.layoutParams?.height} sim=0x${Integer.toHexString(try { winRef?.attributes?.softInputMode ?: 0 } catch (_: Throwable) { 0 })}\n")
                     return bounds
                 }
-                val enabled = if (animShow) cfgShowOn else cfgHideOn
+                // "+" attach-panel opt-out: the panel's C0() sets suppressNextHide before hiding the keyboard.
+                // Honor it ONLY for the following hide (old snap, no slide); always consume so it never leaks
+                // into an unrelated later hide (e.g. panel opened while kb already down -> no anim this time).
+                val skipThisHide = suppressNextHide && !animShow
+                suppressNextHide = false
+                val enabled = if (animShow) cfgShowOn else (cfgHideOn && !skipThisHide)
                 // travel = how far the content should ACTUALLY slide. "region" mode = the real region-height delta
                 // (e.g. 753) so we don't overshoot by the nav-bar gap (the 228px close jump); "ime" mode = the raw
                 // keyboard inset (981, old behavior). + a live px offset for on-device fine tuning.
