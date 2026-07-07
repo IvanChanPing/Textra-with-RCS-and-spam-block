@@ -314,6 +314,10 @@
 
     iput-boolean v3, p0, Lcom/mplus/lib/Q5/j;->i:Z
 
+    # TEXTRCS: "+ attach panel OPENED" -> tell ImeSyncAnim to drop HOLD (switch window to ADJUST_RESIZE +
+    # un-suppress the region) so the panel lays out natively with the compose box visible above it. v3 = true.
+    invoke-static {v3}, Lcom/textrcs/anim/ImeSyncAnim;->setPlusPanelOpen(Z)V
+
     iget-object v4, p0, Lcom/mplus/lib/Q5/j;->m:Lcom/mplus/lib/ui/common/base/BaseLinearLayout;
 
     const/4 v13, 0x3
@@ -3771,6 +3775,10 @@
     const/4 v8, 0x7
 
     iput-boolean v0, p0, Lcom/mplus/lib/Q5/j;->i:Z
+
+    # TEXTRCS: "+ attach panel CLOSED" -> tell ImeSyncAnim to restore HOLD (ADJUST_NOTHING) so the keyboard
+    # slide works again. v0 = false here.
+    invoke-static {v0}, Lcom/textrcs/anim/ImeSyncAnim;->setPlusPanelOpen(Z)V
 
     const/4 v8, 0x0
 

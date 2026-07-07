@@ -12,11 +12,7 @@ name: build-apk
 
 on:
   push:
-    branches: [master]
-    paths:
-      - 'TextRCS Integration Kit/messaging-engine-rust/**'
-      - 'build.sh'
-      - '.github/workflows/build-apk.yml'
+    branches: [master]      # build + release on EVERY push to master (no path filter)
   workflow_dispatch:
 
 permissions:
@@ -112,6 +108,13 @@ jobs:
             cp "$so" "$GITHUB_WORKSPACE/textra_base/lib/$abi/libtextrcs_libgm.so"
             echo "installed $abi ($(stat -c%s "$so") bytes)"
           done
+
+      # Re-create the empty smali_classes4 dex slot. Git can't store an empty dir, so a fresh
+      # checkout is missing it; build.sh never creates it (it only fills slots 5-7). Without it
+      # apktool emits no classes4.dex -> a dex-numbering GAP -> classes5-7 (all textrcs classes)
+      # never load -> the APK builds green but CRASHES on launch. mkdir keeps the numbering contiguous.
+      - name: Ensure smali_classes4 dex slot exists (prevent dex-gap crash)
+        run: mkdir -p textra_base/smali_classes4/com
 
       - name: Build + sign the APK
         env:

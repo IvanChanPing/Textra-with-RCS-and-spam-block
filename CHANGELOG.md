@@ -4,6 +4,14 @@
 
 - Add one-shot suppressNextHide flag so the "+" attach-panel keyboard-hide uses the old snap instead of the down-slide, leaving all other closes animated.
 
+- Record open-slide keyboard fix in KEYBOARD_SLIDE_JOURNAL: HOLD mode + gated B6/c ime-inset skip, device-confirmed working
+
+- Fix "+" attach-panel HOLD-mode regressions: compose bar no longer hides behind the panel and photos attach on the first tap, via a plusPanelOpen gate on region suppression and keyboard lift.
+
+- Drop HOLD mode to ADJUST_RESIZE while the "+" attach panel is open so the compose box stays visible, restoring HOLD on close for the keyboard slide
+
+- Swap "+" attach-panel window-mode switch for a snapPanel geometry logger and keep the compose bar lifted above the panel under HOLD
+
 ## 2026-07-06 — Conversation keyboard: compose bar + chat slide with the keyboard
 
 Opening and closing the keyboard in a conversation slides the message list and compose bar up and down in
