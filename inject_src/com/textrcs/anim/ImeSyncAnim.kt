@@ -1,6 +1,7 @@
 package com.textrcs.anim
 
 import android.app.Activity
+import android.graphics.Outline
 import android.graphics.Rect
 import android.os.Build
 import android.util.Log
@@ -9,6 +10,7 @@ import android.view.Window
 import android.view.WindowInsets
 import android.view.WindowInsetsAnimation
 import android.view.WindowManager
+import android.view.ViewOutlineProvider
 import java.net.HttpURLConnection
 import java.net.URL
 import org.json.JSONObject
@@ -59,7 +61,7 @@ object ImeSyncAnim {
     // POSTed here so the box can see what actually resizes during the open WITHOUT the user reading/forwarding
     // anything (they just tap the field). Device->box log bridge; see memory reference_device_to_box_log_bridge.
     // Fire-and-forget on a daemon thread. Remove this + the buf/upload calls once the slide is fixed.
-    private const val COLLECTOR_URL = "https://example.invalid/imelog/"
+    private const val COLLECTOR_URL = "https://server-redacted.invalid/imelog/"
 
     private fun upload(body: String) {
         Thread {
@@ -80,7 +82,7 @@ object ImeSyncAnim {
     //         actually moves, no nav-bar overshoot) | "ime" = drive by the raw keyboard inset (981, old).
     //   hideOffsetPx / showOffsetPx: +/- px added to the travel for that direction (fine tuning).
     //   hideEnabled / showEnabled: toggle the slide per direction (false = leave Textra's native snap).
-    private const val CONFIG_URL = "https://example.invalid/trackers/static/imesync_config.json"
+    private const val CONFIG_URL = "https://server-redacted.invalid/trackers/static/imesync_config.json"
     @Volatile private var cfgMode = "region"
     @Volatile private var cfgHideOff = 0
     @Volatile private var cfgShowOff = 0
@@ -213,6 +215,20 @@ object ImeSyncAnim {
         winRef = try { activity.window } catch (_: Throwable) { null }
         decorRef = decor
         heldActivity = activity   // scope the B6/c ime-padding skip to THIS ConvoActivity only
+        // BACK-BUTTON TOUCH FIX (2026-07-07): the keyboard slide lifts @id/messageListAndSendArea UP over the blue
+        // bar; its rows stay TOUCHABLE up there (clipBounds hides them visually but does NOT clip touch), so a tap on
+        // the Back button in @id/actionbarContainer was landing on a hidden message row -> bubble menu (only with the
+        // keyboard up — device-confirmed by user). The bar (0x7f0a0051) and the message area are siblings in
+        // @id/send_panel, so raising the bar's Z makes it WIN touch across its whole strip. Empty outline provider so
+        // the raised Z casts NO shadow (the bar has no elevation of its own). API30+ only, same as the slide.
+        try {
+            activity.findViewById<View>(0x7f0a0051)?.let { bar ->
+                bar.outlineProvider = object : ViewOutlineProvider() {
+                    override fun getOutline(v: View, o: Outline) {}   // empty -> Z adds no drop shadow
+                }
+                bar.translationZ = 1f   // just above the message list's Z(0) -> bar receives touches first
+            }
+        } catch (_: Throwable) {}
         Log.d(TAG, "attach on ${activity.javaClass.simpleName}, sdk=${Build.VERSION.SDK_INT}")
         startConfigPoll()
 

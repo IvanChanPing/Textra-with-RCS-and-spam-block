@@ -5,6 +5,34 @@ Related: memory `reference_textrcs_keyboard_slide_fix_2026_07_06`, `reference_de
 plan `/root/.claude/plans/functional-enchanting-galaxy.md`.
 
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
+**2026-07-07 (latest) — BACK-BUTTON mis-tap fix built (md5 8294a9b7, option A / z-order), DEVICE-UNVERIFIED.**
+BUG (user device-confirmed): with the keyboard UP (not down), tapping the Back button in the blue bar popped the bubble
+menu instead of Back — because the slide lifts @id/messageListAndSendArea up over the bar and its rows stay TOUCHABLE
+there (clipBounds hides them visually, NOT for touch). Dropdown chevron unaffected (asymmetry unresolved but moot). FIX
+(option A, in ImeSyncAnim.attach, API30+): raise @id/actionbarContainer(0x7f0a0051) translationZ=1f so the bar WINS touch
+across its whole strip (it + messageListAndSendArea are siblings in @id/send_panel, verified convo_activity.xml:16&30);
+empty ViewOutlineProvider so the raised Z casts NO shadow (bar has no elevation). Compiled in (3 smali hits). Option B
+(touch-clip cutoff) NOT built — it's behaviorally identical to A but needs ViewGroup touch-interception plumbing; held as
+fallback only if A disappoints. NEXT STEP: user installs 8294a9b7, kbd-UP → tap Back = registers Back (not bubble menu),
+no shadow under bar, dropdown still works. If good → back-button bug closed. Files: ImeSyncAnim.kt (attach + 2 imports).
+⚠️ Working tree still DIRTY with real server URLs (restored post-GitHub-scrub) — re-scrub before any future push; no hk-finalize while dirty.
+---
+### (done) SHIPPED TO GITHUB (clean) + slide + "+" panel fix
+**2026-07-07 — ✅ SHIPPED TO GITHUB (clean). Keyboard slide + "+" panel fix DEVICE-CONFIRMED. Task essentially DONE.**
+Pushed commit `711d5082` to `popup-anim-tester` via the Decodo proxy (author IvanChanPing, NO Claude trailer). GitHub's
+current HEAD has ZERO server links: box IP/`sslip.io` host scrubbed → `example.invalid` across all 10 tracked files
+(2 docs, collector.py, 2 kt, ship.sh, 3 smali); `imelog/collected.log` untracked (device data) + gitignored. Old history
+still has the host (user: "don't care about history, just the existing/current one"). Method: `git reset --soft origin` →
+scrub → one trailer-free commit → push; verified `git grep HEAD` host-free BEFORE pushing.
+⚠️ WORKING TREE IS INTENTIONALLY DIRTY: real URLs (server-redacted.invalid) restored into ImeSyncAnim.kt/PopupAnimHooks.kt/
+ship.sh/collector.py as UNCOMMITTED edits so LOCAL builds still hit the box. **BEFORE ANY FUTURE PUSH: re-scrub the host to
+example.invalid, commit, push, then restore — else a new commit re-leaks the server.** Do NOT fire hk-finalize while dirty
+(it would commit the real URLs). Docs kept scrubbed both places (they don't need the live URL).
+REMAINING (optional, user-deferred): (a) the "+" kbd-UP dip-jitter (race: normal HOLD hide runs before plusPanelOpen keep-lift
+engages — fix = set the panel flag on the button press, earlier than Textra's C0); (b) bubble lag-follow polish; (c) strip the
+snapPanel/imelog diagnostic logging if a clean release build is wanted.
+---
+### (history) "+" PANEL TEXT-BOX FIX — DEVICE-CONFIRMED md5 85ce1f9b
 **2026-07-07 — ✅ "+" PANEL TEXT-BOX FIXED (DEVICE-CONFIRMED by user on md5 85ce1f9b). "It works."**
 The compose box now stays above the + attach panel. Root cause was MY OWN backwards `reset ty=0` in the HOLD
 plusPanelOpen branches; fix = keep the bar lifted by the panel footprint `ty=-(kbMax-nav)` (=-753) in onStart/

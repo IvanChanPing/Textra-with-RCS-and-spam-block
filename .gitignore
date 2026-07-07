@@ -7,3 +7,5 @@ textrcs.keystore
 /TextRCS-Integration-Kit.zip
 *.annotate_report.jsonl
 imelog/collected.log
+clean-push.sh
+.hk-checkpoints/

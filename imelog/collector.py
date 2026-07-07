@@ -3,7 +3,7 @@
 # app auto-POSTs (no user action beyond using the app). Appends each POST body to
 # collected.log so this session can read what the region/list heights did during the
 # keyboard open, WITHOUT the user reading or forwarding anything.
-# Exposed publicly by Caddy at https://example.invalid/imelog/ -> localhost:8772.
+# Exposed publicly by Caddy at https://server-redacted.invalid/imelog/ -> localhost:8772.
 import http.server, socketserver, datetime, os
 
 PORT = 8772
