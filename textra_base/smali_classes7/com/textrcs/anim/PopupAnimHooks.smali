@@ -46,7 +46,7 @@
 
 
 # static fields
-.field private static final CONFIG_URL:Ljava/lang/String; = "https://server-redacted.invalid/trackers/static/popup-anim-config.json"
+.field private static final CONFIG_URL:Ljava/lang/String; = "https://REDACTED_HOST/trackers/static/popup-anim-config.json"
 
 .field public static final INSTANCE:Lcom/textrcs/anim/PopupAnimHooks;
 
@@ -240,7 +240,7 @@
     :try_start_1
     new-instance v0, Ljava/net/URL;
 
-    const-string v1, "https://server-redacted.invalid/trackers/static/popup-anim-config.json"
+    const-string v1, "https://REDACTED_HOST/trackers/static/popup-anim-config.json"
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 

@@ -5,7 +5,23 @@ Related: memory `reference_textrcs_keyboard_slide_fix_2026_07_06`, `reference_de
 plan `/root/.claude/plans/functional-enchanting-galaxy.md`.
 
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
-**2026-07-07 (latest) — BACK-BUTTON mis-tap fix built (md5 8294a9b7, option A / z-order), DEVICE-UNVERIFIED.**
+**2026-07-07 (latest) — ✅ BACK-BUTTON fix DEVICE-CONFIRMED + PUSHED clean; `clean-push.sh` tool built & hardened (7 passes).**
+Back-button z-order fix (translationZ=1f on @id/actionbarContainer + empty ViewOutlineProvider, in ImeSyncAnim.attach)
+DEVICE-CONFIRMED by user ("it work"). Pushed to GitHub commit `7caabfca` on popup-anim-tester via `clean-push.sh` — origin
+tree host-free, no Claude trailer, author IvanChanPing.
+NEW TOOL `clean-push.sh` (repo root, GITIGNORED so it never pushes; it contains the real host): one command = scrub host→
+`server-redacted.invalid` across tracked+untracked files → squash to one trailer-free commit → FAIL-CLOSED verify (abort if
+`204[-.]168...` still staged) → push via Decodo proxy → **trap restore EXIT** puts the real host back (even on failure/Ctrl-C).
+`./clean-push.sh ["msg"]` to push; `./clean-push.sh --dry-run` = safe preview. Verified via bash -n + dry-run (exit 0, tree
+restored, index clean). Hardened over 7 passes: trap-restore-on-any-exit, sed regex-escape, both IP forms, null-delimited
+filenames, grep -I (never scan/corrupt binaries), diff-vs-origin for "nothing to push".
+⚠️ SPEED LESSON (user-flagged): NEVER `grep -r` / per-file loops over textra_base (thousands of smali = 2min+ timeouts) —
+use `git grep` (indexed, instant). ⚠️ Working tree stays intentionally DIRTY with real host; clean-push.sh does the scrub —
+do NOT hand-commit those lines, and do NOT commit a build .apk (binary → can't be scrubbed/verified → keep gitignored).
+REMAINING (optional): "+" kbd-UP dip-jitter; bubble lag-follow; strip diagnostic snapPanel/imelog logging for a release build.
+---
+### (history) back-button build 8294a9b7 (pre-push)
+**2026-07-07 — BACK-BUTTON mis-tap fix built (md5 8294a9b7, option A / z-order), DEVICE-UNVERIFIED.**
 BUG (user device-confirmed): with the keyboard UP (not down), tapping the Back button in the blue bar popped the bubble
 menu instead of Back — because the slide lifts @id/messageListAndSendArea up over the bar and its rows stay TOUCHABLE
 there (clipBounds hides them visually, NOT for touch). Dropdown chevron unaffected (asymmetry unresolved but moot). FIX
@@ -24,7 +40,7 @@ current HEAD has ZERO server links: box IP/`sslip.io` host scrubbed → `example
 (2 docs, collector.py, 2 kt, ship.sh, 3 smali); `imelog/collected.log` untracked (device data) + gitignored. Old history
 still has the host (user: "don't care about history, just the existing/current one"). Method: `git reset --soft origin` →
 scrub → one trailer-free commit → push; verified `git grep HEAD` host-free BEFORE pushing.
-⚠️ WORKING TREE IS INTENTIONALLY DIRTY: real URLs (server-redacted.invalid) restored into ImeSyncAnim.kt/PopupAnimHooks.kt/
+⚠️ WORKING TREE IS INTENTIONALLY DIRTY: real URLs (REDACTED_HOST) restored into ImeSyncAnim.kt/PopupAnimHooks.kt/
 ship.sh/collector.py as UNCOMMITTED edits so LOCAL builds still hit the box. **BEFORE ANY FUTURE PUSH: re-scrub the host to
 example.invalid, commit, push, then restore — else a new commit re-leaks the server.** Do NOT fire hk-finalize while dirty
 (it would commit the real URLs). Docs kept scrubbed both places (they don't need the live URL).

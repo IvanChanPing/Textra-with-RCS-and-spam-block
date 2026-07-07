@@ -61,7 +61,7 @@ object ImeSyncAnim {
     // POSTed here so the box can see what actually resizes during the open WITHOUT the user reading/forwarding
     // anything (they just tap the field). Device->box log bridge; see memory reference_device_to_box_log_bridge.
     // Fire-and-forget on a daemon thread. Remove this + the buf/upload calls once the slide is fixed.
-    private const val COLLECTOR_URL = "https://server-redacted.invalid/imelog/"
+    private const val COLLECTOR_URL = "https://REDACTED_HOST/imelog/"
 
     private fun upload(body: String) {
         Thread {
@@ -82,7 +82,7 @@ object ImeSyncAnim {
     //         actually moves, no nav-bar overshoot) | "ime" = drive by the raw keyboard inset (981, old).
     //   hideOffsetPx / showOffsetPx: +/- px added to the travel for that direction (fine tuning).
     //   hideEnabled / showEnabled: toggle the slide per direction (false = leave Textra's native snap).
-    private const val CONFIG_URL = "https://server-redacted.invalid/trackers/static/imesync_config.json"
+    private const val CONFIG_URL = "https://REDACTED_HOST/trackers/static/imesync_config.json"
     @Volatile private var cfgMode = "region"
     @Volatile private var cfgHideOff = 0
     @Volatile private var cfgShowOff = 0

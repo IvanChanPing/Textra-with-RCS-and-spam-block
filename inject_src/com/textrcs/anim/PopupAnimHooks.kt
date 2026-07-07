@@ -34,7 +34,7 @@ object PopupAnimHooks {
 
     private const val TAG = "PopupAnimHooks"
     private const val CONFIG_URL =
-        "https://server-redacted.invalid/trackers/static/popup-anim-config.json"
+        "https://REDACTED_HOST/trackers/static/popup-anim-config.json"
     private const val POLL_MS = 1500L
 
     @Volatile private var fadeMsValue: Long = 150L
