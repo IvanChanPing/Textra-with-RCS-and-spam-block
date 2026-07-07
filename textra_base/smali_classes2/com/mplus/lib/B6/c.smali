@@ -117,8 +117,24 @@
 
     const/4 v5, 0x4
 
+    # TEXTRCS: @id/main bottom-padding = systemBars|cutout|ime is the "third shrinker" (shrinks @id/content by the
+    # keyboard height). Under ImeSyncAnim HOLD for the HELD ConvoActivity ONLY, EXCLUDE ime so the region stays full
+    # (2148) and the HOLD translate slides the compose bar with no top gap. Other activities (v0 != heldActivity)
+    # and normal mode (suppressResize=false) fall through to `or-int` = unchanged ime padding.
+    sget-boolean v3, Lcom/textrcs/anim/ImeSyncAnim;->suppressResize:Z
+
+    if-eqz v3, :cond_textrcs_addime
+
+    sget-object v3, Lcom/textrcs/anim/ImeSyncAnim;->heldActivity:Landroid/app/Activity;
+
+    if-ne v0, v3, :cond_textrcs_addime
+
+    goto :cond_textrcs_skipime
+
+    :cond_textrcs_addime
     or-int/2addr v1, v2
 
+    :cond_textrcs_skipime
     const/4 v5, 0x2
 
     invoke-virtual {p1, v1}, Landroidx/core/view/WindowInsetsCompat;->getInsets(I)Landroidx/core/graphics/Insets;

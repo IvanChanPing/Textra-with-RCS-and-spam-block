@@ -5,6 +5,232 @@ Related: memory `reference_textrcs_keyboard_slide_fix_2026_07_06`, `reference_de
 plan `/root/.claude/plans/functional-enchanting-galaxy.md`.
 
 ## CURRENT STATE / NEXT STEP  (rewrite every turn)
+**2026-07-07 (latest) — ✅ BACK-BUTTON fix DEVICE-CONFIRMED + PUSHED clean; `clean-push.sh` tool built & hardened (7 passes).**
+Back-button z-order fix (translationZ=1f on @id/actionbarContainer + empty ViewOutlineProvider, in ImeSyncAnim.attach)
+DEVICE-CONFIRMED by user ("it work"). Pushed to GitHub commit `7caabfca` on popup-anim-tester via `clean-push.sh` — origin
+tree host-free, no Claude trailer, author IvanChanPing.
+NEW TOOL `clean-push.sh` (repo root, GITIGNORED so it never pushes; it contains the real host): one command = scrub host→
+`server-redacted.invalid` across tracked+untracked files → squash to one trailer-free commit → FAIL-CLOSED verify (abort if
+`204[-.]168...` still staged) → push via Decodo proxy → **trap restore EXIT** puts the real host back (even on failure/Ctrl-C).
+`./clean-push.sh ["msg"]` to push; `./clean-push.sh --dry-run` = safe preview. Verified via bash -n + dry-run (exit 0, tree
+restored, index clean). Hardened over 7 passes: trap-restore-on-any-exit, sed regex-escape, both IP forms, null-delimited
+filenames, grep -I (never scan/corrupt binaries), diff-vs-origin for "nothing to push".
+⚠️ SPEED LESSON (user-flagged): NEVER `grep -r` / per-file loops over textra_base (thousands of smali = 2min+ timeouts) —
+use `git grep` (indexed, instant). ⚠️ Working tree stays intentionally DIRTY with real host; clean-push.sh does the scrub —
+do NOT hand-commit those lines, and do NOT commit a build .apk (binary → can't be scrubbed/verified → keep gitignored).
+REMAINING (optional): "+" kbd-UP dip-jitter; bubble lag-follow; strip diagnostic snapPanel/imelog logging for a release build.
+---
+### (history) back-button build 8294a9b7 (pre-push)
+**2026-07-07 — BACK-BUTTON mis-tap fix built (md5 8294a9b7, option A / z-order), DEVICE-UNVERIFIED.**
+BUG (user device-confirmed): with the keyboard UP (not down), tapping the Back button in the blue bar popped the bubble
+menu instead of Back — because the slide lifts @id/messageListAndSendArea up over the bar and its rows stay TOUCHABLE
+there (clipBounds hides them visually, NOT for touch). Dropdown chevron unaffected (asymmetry unresolved but moot). FIX
+(option A, in ImeSyncAnim.attach, API30+): raise @id/actionbarContainer(0x7f0a0051) translationZ=1f so the bar WINS touch
+across its whole strip (it + messageListAndSendArea are siblings in @id/send_panel, verified convo_activity.xml:16&30);
+empty ViewOutlineProvider so the raised Z casts NO shadow (bar has no elevation). Compiled in (3 smali hits). Option B
+(touch-clip cutoff) NOT built — it's behaviorally identical to A but needs ViewGroup touch-interception plumbing; held as
+fallback only if A disappoints. NEXT STEP: user installs 8294a9b7, kbd-UP → tap Back = registers Back (not bubble menu),
+no shadow under bar, dropdown still works. If good → back-button bug closed. Files: ImeSyncAnim.kt (attach + 2 imports).
+⚠️ Working tree still DIRTY with real server URLs (restored post-GitHub-scrub) — re-scrub before any future push; no hk-finalize while dirty.
+---
+### (done) SHIPPED TO GITHUB (clean) + slide + "+" panel fix
+**2026-07-07 — ✅ SHIPPED TO GITHUB (clean). Keyboard slide + "+" panel fix DEVICE-CONFIRMED. Task essentially DONE.**
+Pushed commit `711d5082` to `popup-anim-tester` via the Decodo proxy (author IvanChanPing, NO Claude trailer). GitHub's
+current HEAD has ZERO server links: box IP/`sslip.io` host scrubbed → `example.invalid` across all 10 tracked files
+(2 docs, collector.py, 2 kt, ship.sh, 3 smali); `imelog/collected.log` untracked (device data) + gitignored. Old history
+still has the host (user: "don't care about history, just the existing/current one"). Method: `git reset --soft origin` →
+scrub → one trailer-free commit → push; verified `git grep HEAD` host-free BEFORE pushing.
+⚠️ WORKING TREE IS INTENTIONALLY DIRTY: real URLs (REDACTED_HOST) restored into ImeSyncAnim.kt/PopupAnimHooks.kt/
+ship.sh/collector.py as UNCOMMITTED edits so LOCAL builds still hit the box. **BEFORE ANY FUTURE PUSH: re-scrub the host to
+example.invalid, commit, push, then restore — else a new commit re-leaks the server.** Do NOT fire hk-finalize while dirty
+(it would commit the real URLs). Docs kept scrubbed both places (they don't need the live URL).
+REMAINING (optional, user-deferred): (a) the "+" kbd-UP dip-jitter (race: normal HOLD hide runs before plusPanelOpen keep-lift
+engages — fix = set the panel flag on the button press, earlier than Textra's C0); (b) bubble lag-follow polish; (c) strip the
+snapPanel/imelog diagnostic logging if a clean release build is wanted.
+---
+### (history) "+" PANEL TEXT-BOX FIX — DEVICE-CONFIRMED md5 85ce1f9b
+**2026-07-07 — ✅ "+" PANEL TEXT-BOX FIXED (DEVICE-CONFIRMED by user on md5 85ce1f9b). "It works."**
+The compose box now stays above the + attach panel. Root cause was MY OWN backwards `reset ty=0` in the HOLD
+plusPanelOpen branches; fix = keep the bar lifted by the panel footprint `ty=-(kbMax-nav)` (=-753) in onStart/
+onProgress/onEnd (the panel occupies the old keyboard space, so the bar rides above it exactly like above the keyboard).
+Verified via imelog geometry: at open, sendarea y=1251→1395 sits directly above pluspanel y=1395→2148.
+DEFERRED (user OK to leave): minor cosmetic jitter — tapping "+" with the keyboard UP makes the compose bar briefly dip
+to the bottom then rise (hypothesis: a frame at rest before keep-lift applies; animates up from bottom instead of holding).
+STILL PRESENT (diagnostic cruft, strip before any GitHub push): `snapPanel()` + "+settled" postDelayed + verbose
+`prog PANEL`/`START PANEL` logging in ImeSyncAnim.kt upload to imelog on every panel open/close.
+NEXT STEP (user picks): (a) polish the deferred dip-jitter, (b) strip diagnostics + do the GitHub push with NO server
+trace (local keeps URLs), or (c) the bubble lag-follow polish. Slide (open+close) + "+" panel all working under HOLD.
+imelog snapPanel (build 29615341, device CPH2583) at "+"-open with keyboard UP (ime=981, screen 2376, kbd top y=1395):
+`sendarea` y=1251→1395 (listAndSend ty=-753) = CORRECTLY above the panel; `pluspanel` h=753 y=1395→2148 (keyboard's
+footprint). THEN my `onStart HOLD plusPanelOpen` branch logged "reset ty=0" → dropped listAndSend to ty=0 → sendarea to
+y=2004→2148 = BEHIND the panel. So MY reset-to-0 was the box-hider (backwards): when the panel opens (it occupies the old
+keyboard space) the bar must STAY lifted (kbMax-nav=753), exactly like above the keyboard. FIX (85ce1f9b): all 3 HOLD
+plusPanelOpen branches (onStart/onProgress/onEnd) now set ty=-(kbMax-nav) [keep lifted] instead of 0; added a 500ms
+"+settled" snapshot + `prog PANEL ime=` logging to see if the keyboard actually dismisses (unknown — my old branch
+suppressed the ime log). OPEN QUESTION the settled snap answers: does "+" dismiss the keyboard? If NOT, pluspanel
+(1395→2148) stays behind the keyboard → next fix = explicit hideSoftInput on panel-open (separate, do it after confirming).
+setPlusPanelOpen is still diagnostic-only re: window mode (NO mode switch — that regression stays reverted). Config HOLD-on.
+NEXT STEP: user installs 85ce1f9b, kbd-UP then tap "+"; `curl -s .../imelog/` read the PANEL-OPEN+settled snap → is
+sendarea above pluspanel (box fixed?) and is ime 0 (keyboard dismissed?) → then either DONE or add the explicit kbd-hide.
+The 81c663df setPlusPanelOpen window-mode switch (ADJUST_NOTHING→ADJUST_RESIZE on panel open) REGRESSED: kbd-UP + tap
+= "weird jitter", the "+" did NOT dismiss the keyboard, panel opened BEHIND the keyboard (user device report). kbd-DOWN
++ tap works fine. imelog confirms the keyboard CAN dismiss under HOLD (sim=0x32 ADJUST_NOTHING, ime 981→0 clean) — so the
+mode switch is what broke the dismiss. User directive: (1) LOG everything first, (2) then handle the compose bar as its own
+separate pass. THIS BUILD: reverted the window-mode switch + poll gate; `ImeSyncAnim.setPlusPanelOpen()` is now DIAGNOSTIC
+ONLY — logs `snapPanel()` (on-screen y/height/vis/ty of main,content,region,listAndSend,sendarea,pluspanel + sim + ime) at
+panel open/close (now + next frame) to the imelog. setHeightTo gate + HOLD ty=0 branches left in (benign). Config HOLD-on.
+NEXT STEP: user installs 29615341, does kbd-DOWN +tap then kbd-UP +tap; then `curl -s https://example.invalid/imelog/`
+and read the PANEL-OPEN snapshots — compare where `sendarea` (compose box) lands vs `pluspanel` in each case → design the
+"separate compose-bar pass" (keep box pinned above the panel) from the real numbers. DO NOT touch window mode again.
+Known device geometry (HOLD, kbd up): main=2376 const, region/content=2148, list=1716, nav=228, kbMax=981.
+DIAGNOSTIC (device-confirmed via live-config flip to HOLD-off, user screenshot 9db49dca): with HOLD OFF the compose box
+APPEARS over the + panel, but the keyboard-slide shrink/white-gap returns. So HOLD and the + panel fight over layout.
+Narrowed the lever: my earlier `plusPanelOpen` un-gate of `x5.y.setHeightTo` had ZERO effect on the box → setHeightTo is
+NOT the box-hider; the forced **ADJUST_NOTHING** window mode (config poll ImeSyncAnim.kt:144 → 0x30) is. VERIFIED the flag
+is correct: `Q5/j->i:Z` is the panel-open flag (C0 sets true only on open @315, u0 sets false only on close @3773 — the
+only 2 writers; readers incl B6/b:131, A5/e:103). FIX (this build): new `ImeSyncAnim.setPlusPanelOpen(open)` (@JvmStatic)
+called from C0 (true) + u0 (false) via `invoke-static` — sets plusPanelOpen AND immediately switches softInputMode to
+ADJUST_RESIZE(0x10) while open / restores configured HOLD mode on close; the 1.5s poll's `want` now also gated on
+`!plusPanelOpen` so it won't re-assert ADJUST_NOTHING. Reproduces the known-working HOLD-off state ONLY while the panel is
+open. Full-screen-panel fix (setHeightTo scoped to region 0x7f0a0101) and the slide are untouched. Config back to HOLD-on.
+NEXT STEP: user installs textra2-81c663df.apk, taps + → is the compose box visible above the thumbnails, photo attaches
+1st tap, and does the slide still work after closing the panel? If box still hidden → add geometry logging on panel open.
+Files: ImeSyncAnim.kt (setPlusPanelOpen + poll gate), Q5/j.smali (C0/u0 invoke-static), x5/y.smali (setHeightTo gate, kept).
+NOTE: browser resume-onto-stale-partial corrupts the download (v3 SHA-256 digest fail / "package invalid") — always serve a
+FRESH unique filename (textra2-<md5>.apk) + tell user to delete old textra2 partials. (device-confirmed this session.)
+
+---
+### (prev 2026-07-07) plusPanelOpen v1 (setHeightTo-only) — INSUFFICIENT, superseded above
+**2026-07-07 — OPEN+CLOSE SLIDE DEVICE-CONFIRMED (HOLD mode); now polishing the "+" attach-panel coexistence.**
+DONE + device-confirmed by user: keyboard OPEN and CLOSE both slide with no gap, blue bar stationary, via HOLD mode
+(`adjustNothing=true`+`suppressResize=true`) + the gated `B6/c` ime-skip (region kept full 2148 for the held
+ConvoActivity; the earlier "dead end" was wrong — the shrink was Textra's own `x5/l.z` @id/main ime bottom-padding,
+now excluded). "+" button no-longer-slides-down fix confirmed. + panel fills-whole-screen fix confirmed.
+IN PROGRESS (compile-done, md5 `f66fdc57`, DEVICE-UNVERIFIED): two remaining "+" panel bugs the user reported —
+(a) the compose text box briefly disappears/flickers when the + panel opens (came back after), and (b) selecting a
+photo doesn't attach on the 1st tap (needs a 2nd). ROOT (code-grounded): `@id/pluspanelContainer` is a bottom-pinned
+sibling of `@id/content` under `@id/main` (convo_activity.xml:74, height 0→panel); the compose bar rides ABOVE it
+only if the region (`@id/contentControlledHeight`) SHRINKS — which `r0→k.setHeightTo(positive)` does but my HOLD
+`suppressResize` was no-op'ing → box behind panel + gallery mis-laid-out (1st tap misses). FIX (this turn): new
+`ImeSyncAnim.plusPanelOpen` @JvmField mirrors Textra's own `Q5/j->i:Z` (sput true at C0:315 open, false at u0:3773
+close). While it's true: (1) `x5/y.setHeightTo` no longer suppresses the region (short-circuits at `if-nez` — panel
+gets 100% original layout), and it now NEVER suppresses a restore (`p1<=0`) so close always heals; (2) ImeSyncAnim
+HOLD onStart/onProgress/onEnd force `translationY=0` (no held lift) so the box settles above the panel, no flicker.
+NEXT STEP: user installs md5 `f66fdc57`, verifies — open convo, keyboard slide still good; tap + → compose box stays
+put above the gallery panel (no flicker); tap a photo → attaches on the FIRST tap. Then: GitHub push w/ no server
+trace (local keeps URLs), and the deferred bubble lag-follow polish.
+Files this turn: `inject_src/.../ImeSyncAnim.kt` (field + 3 HOLD branches), `Q5/j.smali` (C0/u0 mirrors),
+`x5/y.smali` (gate: `!plusPanelOpen && p1>0`). Config unchanged (HOLD on). Safety tag `keyboard-slide-close-only-v1`.
+
+---
+### (historical) 2026-07-06 block — superseded by the SOLVED open-slide above; kept for the dead-end trace
+**OPEN-SLIDE REAL FIX FOUND BY READING CODE (2026-07-06):** The gap on open came from the `showEnabled` REGION-MODE
+path (region shrinks to 1395 before frame0 → down-pre-shift of the whole column detaches its top from the blue bar →
+white gap). The GEOMETRICALLY-CORRECT path already exists in ImeSyncAnim.kt: **HOLD mode** (config `adjustNothing=true`
++ `suppressResize=true`). VERIFIED in code: the config poll (ImeSyncAnim.kt:128-143) FORCES the window to
+SOFT_INPUT_ADJUST_NOTHING (0x30) EVERY cycle (re-asserting over Textra's v6.P.u0 ADJUST_RESIZE) so the framework never
+shrinks the region; suppressResize=true no-ops Textra's x5.y.setHeightTo. Region stays FULL (2148); HOLD onProgress
+(ImeSyncAnim.kt:251-265) lifts the full column UP 1:1 with the keyboard + clips top under the bar → no gap, both dirs.
+Groq relay (gpt-oss-120b, /tmp/groq_ime/dialogue.txt) proposed TWO patches — BOTH wrong (applied HOLD up-lift WITHOUT
+keeping region full → over-lifts compose bar to mid-screen); refuted vs the real log numbers, NOT built. NEXT: propose
+to user to flip `adjustNothing=true`+`suppressResize=true` LIVE (no rebuild) and reopen keyboard — the geometrically-
+correct test. ⚠️ SUPERSEDED SAME TURN by re-reading this journal + memory + Mengram (user told me to check before
+acting): this EXACT test is a DEVICE-CONFIRMED DEAD END — see the dated "OPEN structural approach = DEAD END
+(device-confirmed, CPH2583)" entry below. `adjustNothing=true`+`suppressResize=true` WAS applied on device (diag
+sim=0x32 → adjust bits 0x30 = ADJUST_NOTHING really applied; suppressResize held, lp=-1) and the region STILL shrank
+to 1395 via a THIRD Textra inset-consumer path. My "flip the config" idea (and Groq's whole HOLD-mode convergence)
+was reached from the CODE alone (which shows ADJUST_NOTHING is applied) but is refuted by the DEVICE history. DO NOT
+flip adjustNothing — it reproduces the shrink. REAL remaining path = TOP-ANCHORED layout rewrite (re-anchor the
+reverse/bottom-pinned messageList) — a bigger change; user deferred it. Live config: showEnabled=true (left on as
+tolerable-quick-shrink default per user), adjustNothing=false, suppressResize=false — LEAVE AS-IS.
+**DEEPER TRACE (2026-07-06, Groq relay, all read from real smali) — ruled out every app-code shrink path, narrowing
+the "third path" the notes said was untraced:** (1) contentControlledHeight measure delegate = Q5/j.c0(spec,view)
+[Q5/j.smali:2161] only rewrites AT_MOST→EXACTLY at the SAME size (MATCH_PARENT child fills either identically → NOT
+the reducer). (2) Q5/j.r0(Z) [3390] only effect = k.setHeightTo(-1 restore | measuredHeight-t0() shrink), and
+setHeightTo [x5/y.smali:~510] is gated by suppressResize → no-op when suppressed. (3) The IME inset consumer =
+B6/b.a() default case [B6/b.smali] stores insets on Q5/j.S, updates a LiveData, then calls r0(FALSE)= setHeightTo(-1)
+= tries to RESTORE full height (not shrink); B6/b's other cases apply nav/status/cutout as padding/margin/scrim,
+NEVER the ime inset as padding to @id/main. (4) BaseFrameLayout.onMeasure [BaseFrameLayout.smali:480] just applies
+c0 to the height spec then super — no extra reduction. CONCLUSION: with suppressResize+ADJUST_NOTHING on, NO
+readable app path reduces the region, yet device still measured 1395 (reduction = 753 = ime981−nav228). Residual =
+OxygenOS not keeping the window content full under ADJUST_NOTHING (runtime/OEM, not in readable code) — consistent
+with the device-confirmed dead-end. Groq produced 3 patches this relay, ALL wrong (2 hallucinated non-existent static
+Q5/j.k/l fields; 1 false premise that clearing c0 restores full height) — caught by verifying vs real bytes. Trace
+BOTTOMED OUT at the OEM residual. Real path remains = TOP-ANCHORED layout rewrite (or accept close-only). Full relay
+transcript: /tmp/groq_ime/dialogue.txt.
+**CORRECTION (2026-07-07) — the "reverse/bottom-pinned RecyclerView" premise was WRONG.** Re-read
+MessageListView.smali header (my own verified full-read annotation): the chat list is a NORMAL top-down
+BaseRecyclerView; "Bottom-anchoring is by SCROLL (MessageListLayoutManager.smoothScroll), NOT stackFromEnd";
+NO onMeasure/onLayout override; MessageListLayoutManager only overrides smoothScrollToPosition (scroll speed).
+So off-viewport-rows-can't-fill-gap was a false premise. REAL cause of the open gap: the container
+@id/messageListAndSendArea (list + compose bar) is translated DOWN on open → its TOP edge leaves the blue
+bar → white band. Close works because UP tucks the top behind the bar (clipped). DECISION (user 2026-07-07,
+"OxygenOS-fault claim retracted — unverified; rewrite is best as long as we can revert"): do the REWRITE =
+make the list fill FULL height BEHIND a stationary overlaid blue bar (bar becomes an overlay on top, not a
+sibling above), so translating the list down reveals area behind the bar (covered) not a gap = slides UNDER
+the bar (Gmail/Claude look). Safety net = tag keyboard-slide-close-only-v1 (verified exists) + pushed commits.
+NEXT: map the exact XML/smali changes... **UPDATE (2026-07-07): the simple "list behind an overlaid bar"
+rewrite is INSUFFICIENT — caught by reasoning, not a wasted build.** On open the container pre-shifts DOWN by
+animTravel (~753px = ime−nav), but the blue bar is only ~150px tall, so a ~600px gap still shows BELOW the bar;
+hiding the top 150px behind the bar can't cover a 753px slide. Root cause unchanged: the region shrinks to final
+height BEFORE frame 0, so shifting shrunk content down reveals empty top. ⇒ The ONLY architecture that works =
+FULL-WINDOW LIST that is NOT a child of the shrinking contentControlledHeight: bar overlays top, compose bar overlays
+bottom, the list never resizes; animate only the compose-bar offset + list bottom-padding with the keyboard (Gmail/
+Signal/Telegram model = the "own the offset" route the notes named). MAKE-OR-BREAK UNKNOWN to verify from code BEFORE
+building: does the message list, pulled into a full-window container, actually stay full-height, or does the same
+measure machinery (Q5/j onMeasureHeight delegate on contentControlledHeight, B6/b inset consumers, adjustResize) still
+reach/shrink it? If it still shrinks → same failure; if not → works. Keep bar STATIONARY (list translates, bar does
+not). Safety net = tag keyboard-slide-close-only-v1. User (2026-07-07): rewrite as much as needed BUT keep the exact
+Textra look + ALL features (not a basic SMS app); revertable required.
+**MEASUREMENT RESULT (2026-07-07, device CPH2583, adjustNothing=true+suppressResize=true, real imelog):** MAKE-OR-BREAK
+RESOLVED. `main h`(@id/main 0x7f0a025f) = **2376 CONSTANT on every frame** — the window root does NOT shrink under
+ADJUST_NOTHING. `content h`(@id/content 0x7f0a00ff) = main − bottomInset: 2148 (kb down, nav 228) → 1395 (kb up, ime
+981). region(contentControlledHeight)=content. ⇒ The "third shrinker" is PINNED: the app applies the IME inset as
+BOTTOM PADDING to @id/content (insets still DISPATCHED under ADJUST_NOTHING — it stops resize, not inset). @id/main
+stays full; only @id/content & below shrink by the ime inset. ⇒ TWO fixes: (A, PREFERRED/small) find & neutralize
+the ONE consumer that pads @id/content (or @id/main) with the IME inset (keep nav only) → region stays full 2148 →
+the EXISTING HOLD translate works, no gap, no restructure; (B, fallback/invasive) move the list to a full-window
+child of @id/main. NEXT: trace the s5/i onApplyWindowInsets consumer chain on @id/main to find where ime becomes
+@id/content's bottom padding, and neutralize it under our ADJUST_NOTHING mode. Config REVERTED to region-mode default (adjustNothing=false, suppressResize=false, showEnabled=true) for daily use.
+**SHRINK MECHANISM PINNED (2026-07-07, verified from smali — NOT OEM):** `x5/l.z(x5/y view, Insets)` [x5/l.smali]
+= `view.setPadding(left, 0, right, insets.bottom)`. Fed by `B6/c.a(WindowInsetsCompat)` [B6/c.smali] whose pswitch_0
+(case a=2) computes insets = `systemBars() | displayCutout() | ime()` then calls `x5/l.z` → so the target view gets
+BOTTOM PADDING = the IME-inclusive inset. THAT shrinks @id/content by the ime inset (dispatched even under
+ADJUST_NOTHING). Confirmed: user was RIGHT it's not OxygenOS — it's Textra's own inset consumer. B6/c ctor(I a,
+Object b=Activity(x5/l), Object c=view); packed-switch order [pswitch_2,1,0] for a=[0,1,2]. Convo registration in
+s5/q.smali:2763 = a=1 (view 0x7f0a03af, NOT the content view). The a=2 (ime) registration is in x5/l.smali (base
+Activity, ~line 281 a=3=default/systemBars, and ~1580 a=? — NOT yet pinned). REMAINING: (1) pin the exact a=2
+registration + confirm its view = the content view that shrinks (@id/content 0x7f0a00ff or @id/main 0x7f0a025f wrapper);
+(2) FIX = gate the `or ime()` in B6/c pswitch_0 (or z) on ImeSyncAnim.suppressResize so under HOLD the padding excludes
+ime → region stays full 2148 → existing HOLD translate slides correctly, no gap; (3) SCOPE: suppressResize is a global
+static → must ensure only ConvoActivity is affected (QuickConvoActivity/BubbleActivity popups have no translate, must
+keep their ime padding). Then build, flip HOLD config, user tests the OPEN slide.
+**FIX BUILT + SERVED (2026-07-07, md5 05122d88, compile-green, DEVICE-UNVERIFIED):** Implemented the gated fix.
+(1) ImeSyncAnim.kt: `@JvmField var heldActivity: Activity?` set in attach() (`sput-object` verified in built
+ImeSyncAnim.smali:92/350). (2) B6/c.smali pswitch_0: guarded the `or ime()` — `if (suppressResize && v0(activity)==
+heldActivity) skip ime` (verified in built B6/c.smali:124-137). Config=HOLD (adjustNothing+suppressResize=true).
+Cross-ref resolves (heldActivity static field exists). **DEVICE-CONFIRMED WORKING (user 2026-07-07: "yea it seems to
+work") — the OPEN keyboard slide now works, no gap. THE OPEN-SLIDE IS SOLVED.** This SUPERSEDES all earlier "dead
+end / structural / needs rewrite / OEM-fault" conclusions in this journal + memory: the open was NEVER a true dead
+end — the shrinker was Textra's own inset consumer padding @id/main with the ime inset (x5/l.z ← B6/c pswitch_0),
+fully in readable code. Fix = HOLD mode (adjustNothing+suppressResize) + the gated B6/c skip-ime-for-held-ConvoActivity.
+Currently driven by LIVE config (adjustNothing=true+suppressResize=true). NEXT (optional finalize): bake
+cfgAdjustNothing/cfgSuppress defaults =true so it survives a config outage — NOTE suppressResize is a GLOBAL @JvmField
+(x5/y.setHeightTo no-op affects all activities); the B6/c ime-skip is scoped to heldActivity but the setHeightTo
+no-op is global — verify settings/QuickConvo/Bubble popups still OK before baking suppressResize default true, or
+scope it. Also still-open polish: the "bubble lag-follow" feature (rows trail the compose bar). Safety net = tag
+keyboard-slide-close-only-v1.
+**+ PANEL REGRESSION FIXED (2026-07-07, built md5 0228e01d, DEVICE-UNVERIFIED):** User found: under HOLD the "+"
+attach panel (gallery/camera) FILLED THE WHOLE SCREEN (no convo list above). CAUSE (verified from smali): the + panel
+height is set via `Q5/j.l.setHeightTo()` where l=@id/pluspanelContainer(0x7f0a0318); my suppressResize gate in
+x5/y.setHeightTo no-op'd EVERY setHeightTo → panel never got its keyboard-height. FIX: scoped the gate to ONLY the
+region view — `if suppressResize && this.getView().getId()==0x7f0a0101(contentControlledHeight) return` — so the +
+panel (0x7f0a0318) & all other views resize normally; region still stays full for the slide. File:
+textra_base/smali_classes2/com/mplus/lib/x5/y.smali. Config back to HOLD (slide on). AWAITING USER TEST: slide still
+works + tap "+" shows gallery/camera in the bottom area with convo list above (not full-screen). Files this turn: inject_src/.../ImeSyncAnim.kt,
+textra_base/.../B6/c.smali. Leak note: heldActivity holds one Activity statically (overwritten each ConvoActivity;
+minor, not a crash).
+
 **"+" BUTTON DOWN-SLIDE OPT-OUT (2026-07-06, DEVICE-CONFIRMED WORKING by user):** Tapping "+" no longer down-slides
 (old snap), normal closes still slide — user confirmed on-device. Locked in. TWO ITEMS STILL LEFT (user, deferrable
 until after a GitHub merge-push): (1) UP/open slide (known structural: framework adjustResize + Textra setHeightTo
@@ -12,7 +238,12 @@ both shrink before frame 0 → translating leaves a gap; plan `functional-enchan
 ADJUST_NOTHING + hold suppressResize + IME-follower translate, RISKY); (2) bubble/box "lag-follow" — rows trail the
 compose bar during the slide for an elastic follow look (NO physics bounce spec — use tween/overshoot easing per the
 bounce rule). Both non-trivial → per user, PUSH the working state to GitHub first (merge, don't overwrite), then
-attempt them. ORIGINAL "+" FIX DETAIL BELOW:
+attempt them. **PUSHED 2026-07-06** (commit 46fe8a8b): clean FAST-FORWARD via Decodo proxy to origin/master
+(e7d383e3..46fe8a8b) AND origin/popup-anim-tester (e69daa49..46fe8a8b) — 0 behind both, nothing overwritten;
+origin/meet-reachability left untouched. Co-author trailer NOT stripped (existing GitHub commits already carry it
+from last session; stripping would rewrite SHAs → force-push → the "competing" the user forbade). NEXT: user picks
+which of the 2 features to attempt (open-slide = known-structural/RISKY to the working close; bubble-lag = additive,
+lower risk). ORIGINAL "+" FIX DETAIL BELOW:
 **"+" BUTTON DOWN-SLIDE OPT-OUT (2026-07-06):** User reported the CLOSE down-slide ALSO fired when
 tapping the "+" attach-panel button (camera/gallery) — unwanted; it should use the OLD snap (no slide) in that one
 case. FIX = a one-shot flag: `@JvmField var suppressNextHide` on ImeSyncAnim (static). The "+" panel opens via

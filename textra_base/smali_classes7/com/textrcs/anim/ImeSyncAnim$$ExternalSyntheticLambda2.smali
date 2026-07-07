@@ -7,21 +7,17 @@
 
 
 # instance fields
-.field public final synthetic f$0:Landroid/view/Window;
-
-.field public final synthetic f$1:I
+.field public final synthetic f$0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/Window;I)V
-    .registers 3
+.method public synthetic constructor <init>(Z)V
+    .registers 2
 
     .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;->f$0:Landroid/view/Window;
-
-    iput p2, p0, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;->f$1:I
+    iput-boolean p1, p0, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;->f$0:Z
 
     return-void
 .end method
@@ -29,14 +25,12 @@
 
 # virtual methods
 .method public final run()V
-    .registers 3
+    .registers 2
 
     .line 0
-    iget-object v0, p0, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;->f$0:Landroid/view/Window;
+    iget-boolean v0, p0, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;->f$0:Z
 
-    iget v1, p0, Lcom/textrcs/anim/ImeSyncAnim$$ExternalSyntheticLambda2;->f$1:I
-
-    invoke-static {v0, v1}, Lcom/textrcs/anim/ImeSyncAnim;->$r8$lambda$izXGeov_BfAkJpMyIhhlFTWbBEM(Landroid/view/Window;I)V
+    invoke-static {v0}, Lcom/textrcs/anim/ImeSyncAnim;->$r8$lambda$HeCDVSXbLjMR11kCTK46DYpMHV8(Z)V
 
     return-void
 .end method

@@ -1,6 +1,7 @@
 package com.textrcs.anim
 
 import android.app.Activity
+import android.graphics.Outline
 import android.graphics.Rect
 import android.os.Build
 import android.util.Log
@@ -9,6 +10,7 @@ import android.view.Window
 import android.view.WindowInsets
 import android.view.WindowInsetsAnimation
 import android.view.WindowManager
+import android.view.ViewOutlineProvider
 import java.net.HttpURLConnection
 import java.net.URL
 import org.json.JSONObject
@@ -59,7 +61,7 @@ object ImeSyncAnim {
     // POSTed here so the box can see what actually resizes during the open WITHOUT the user reading/forwarding
     // anything (they just tap the field). Device->box log bridge; see memory reference_device_to_box_log_bridge.
     // Fire-and-forget on a daemon thread. Remove this + the buf/upload calls once the slide is fixed.
-    private const val COLLECTOR_URL = "https://example.invalid/imelog/"
+    private const val COLLECTOR_URL = "https://REDACTED_HOST/imelog/"
 
     private fun upload(body: String) {
         Thread {
@@ -80,7 +82,7 @@ object ImeSyncAnim {
     //         actually moves, no nav-bar overshoot) | "ime" = drive by the raw keyboard inset (981, old).
     //   hideOffsetPx / showOffsetPx: +/- px added to the travel for that direction (fine tuning).
     //   hideEnabled / showEnabled: toggle the slide per direction (false = leave Textra's native snap).
-    private const val CONFIG_URL = "https://example.invalid/trackers/static/imesync_config.json"
+    private const val CONFIG_URL = "https://REDACTED_HOST/trackers/static/imesync_config.json"
     @Volatile private var cfgMode = "region"
     @Volatile private var cfgHideOff = 0
     @Volatile private var cfgShowOff = 0
@@ -102,6 +104,18 @@ object ImeSyncAnim {
     // Set true (from Q5/j.C0 smali) right before the "+" attach-panel hides the keyboard, so THAT one hide
     // falls back to the old no-slide snap instead of the down-slide. Consumed (cleared) on the next onStart.
     @JvmField var suppressNextHide = false
+    // Mirrors Textra's own "+ attach panel is open" flag (Q5/j->i:Z): set true from Q5/j.C0 (open),
+    // false from Q5/j.u0 (close) — smali. While the panel is open the region (@id/contentControlledHeight)
+    // MUST be allowed to shrink so the compose bar rides ABOVE the bottom-pinned @id/pluspanelContainer
+    // (the panel is a sibling of @id/content, bottom-anchored to @id/main). So under HOLD we (a) stop
+    // suppressing the region's setHeightTo while the panel is open [x5.y.setHeightTo smali], and (b) drop
+    // the held keyboard lift so the compose bar settles at the shrunk region's bottom, not floating up.
+    @JvmField var plusPanelOpen = false
+    // The ConvoActivity this is attached to. B6/c (the SHARED @id/main inset consumer, smali) reads this +
+    // suppressResize to EXCLUDE the ime inset from @id/main's bottom padding ONLY for this activity under HOLD —
+    // so the region stays full (2148) and the HOLD translate slides the compose bar with NO top gap. Every other
+    // screen (activity != heldActivity) and normal mode (suppressResize=false) keep their normal ime padding.
+    @JvmField var heldActivity: Activity? = null
     @JvmField var parallaxUnderMs = 0L     // live under-screen parallax duration; ConvoCornerAnim reads it (0 = its default)
     @Volatile private var winRef: Window? = null
     @Volatile private var decorRef: View? = null
@@ -151,12 +165,70 @@ object ImeSyncAnim {
         }.apply { isDaemon = true }.start()
     }
 
+    // Called from Q5/j.C0 (open -> true) and Q5/j.u0 (close -> false) — smali — the ONLY two sites that toggle
+    // Textra's own panel-open flag Q5/j->i:Z. The "+" attach panel (gallery/camera thumbnails) only lays out
+    // correctly — compose box ABOVE the bottom-pinned panel — under the STOCK ADJUST_RESIZE window mode. HOLD
+    // forces ADJUST_NOTHING (for the keyboard slide), which hides the compose box while the panel is open. So:
+    // on open, switch the window to ADJUST_RESIZE (0x10) IMMEDIATELY (don't wait ~1.5s for the poll) + let the
+    // region resize (plusPanelOpen un-gates x5.y.setHeightTo); on close, restore the configured HOLD mode so the
+    // keyboard slide works again. Verified 2026-07-07: with HOLD off the panel shows the box (device screenshot).
+    @JvmStatic
+    fun setPlusPanelOpen(open: Boolean) {
+        plusPanelOpen = open
+        // DIAGNOSTIC ONLY (2026-07-07): do NOT touch the window mode here (that switch introduced a jitter +
+        // stopped the "+" button dismissing the keyboard). Just record the exact geometry of every relevant
+        // view at panel open/close (now + next frame) so we can see where the compose box (sendarea) actually
+        // lands vs the panel and the keyboard, and design a proper separate "compose-bar pass" from real data.
+        snapPanel(if (open) "PANEL-OPEN" else "PANEL-CLOSE")
+        decorRef?.post { snapPanel(if (open) "PANEL-OPEN+1f" else "PANEL-CLOSE+1f") }
+        // Settled snapshot ~500ms later, AFTER the keyboard hide/show animation finishes — this is what tells us
+        // whether the keyboard actually dismissed (ime->0) and where sendarea/pluspanel finally land.
+        decorRef?.postDelayed({ snapPanel(if (open) "PANEL-OPEN+settled" else "PANEL-CLOSE+settled") }, 500)
+    }
+
+    // Uploads a one-shot snapshot of the conversation view tree geometry (on-screen y, height, visibility,
+    // translationY) + the window's soft-input mode + the current IME inset, tagged for the panel event.
+    private fun snapPanel(tag: String) {
+        try {
+            val a = heldActivity ?: return
+            val sb = StringBuilder()
+            val ime = try { a.window.decorView.rootWindowInsets?.getInsets(WindowInsets.Type.ime())?.bottom ?: -1 } catch (_: Throwable) { -1 }
+            val sim = try { a.window.attributes.softInputMode } catch (_: Throwable) { 0 }
+            sb.append("\n===== $tag  plusPanelOpen=$plusPanelOpen sim=0x${Integer.toHexString(sim)} ime=$ime =====\n")
+            val views = arrayOf(
+                0x7f0a025f to "main", 0x7f0a00ff to "content", 0x7f0a0101 to "region",
+                0x7f0a028b to "listAndSend", 0x7f0a03d4 to "sendarea", 0x7f0a0318 to "pluspanel")
+            for ((id, name) in views) {
+                val v = try { a.findViewById<View>(id) } catch (_: Throwable) { null }
+                if (v == null) { sb.append("$name: null\n"); continue }
+                val loc = IntArray(2); try { v.getLocationOnScreen(loc) } catch (_: Throwable) {}
+                sb.append("$name: vis=${v.visibility} h=${v.height} y=${loc[1]} bottom=${loc[1] + v.height} ty=${v.translationY}\n")
+            }
+            upload(sb.toString())
+        } catch (_: Throwable) {}
+    }
+
     @JvmStatic
     fun attach(activity: Activity) {
         if (Build.VERSION.SDK_INT < 30) { Log.d(TAG, "SKIP: sdk<30 (${Build.VERSION.SDK_INT})"); return }
         val decor: View = try { activity.window?.decorView ?: return } catch (_: Throwable) { return }
         winRef = try { activity.window } catch (_: Throwable) { null }
         decorRef = decor
+        heldActivity = activity   // scope the B6/c ime-padding skip to THIS ConvoActivity only
+        // BACK-BUTTON TOUCH FIX (2026-07-07): the keyboard slide lifts @id/messageListAndSendArea UP over the blue
+        // bar; its rows stay TOUCHABLE up there (clipBounds hides them visually but does NOT clip touch), so a tap on
+        // the Back button in @id/actionbarContainer was landing on a hidden message row -> bubble menu (only with the
+        // keyboard up — device-confirmed by user). The bar (0x7f0a0051) and the message area are siblings in
+        // @id/send_panel, so raising the bar's Z makes it WIN touch across its whole strip. Empty outline provider so
+        // the raised Z casts NO shadow (the bar has no elevation of its own). API30+ only, same as the slide.
+        try {
+            activity.findViewById<View>(0x7f0a0051)?.let { bar ->
+                bar.outlineProvider = object : ViewOutlineProvider() {
+                    override fun getOutline(v: View, o: Outline) {}   // empty -> Z adds no drop shadow
+                }
+                bar.translationZ = 1f   // just above the message list's Z(0) -> bar receives touches first
+            }
+        } catch (_: Throwable) {}
         Log.d(TAG, "attach on ${activity.javaClass.simpleName}, sdk=${Build.VERSION.SDK_INT}")
         startConfigPoll()
 
@@ -173,6 +245,8 @@ object ImeSyncAnim {
             private var imeTargetBottom = 0
             // DIAGNOSTIC (2026-07-06): observe what actually resizes during the open, so the real fix isn't a guess.
             private var cch: View? = null     // @id/contentControlledHeight (0x7f0a0101) — the region Textra resizes
+            private var mainV: View? = null   // DIAG @id/main (0x7f0a025f) window root — measure if it stays FULL under ADJUST_NOTHING
+            private var contentV: View? = null // DIAG @id/content (0x7f0a00ff) — the 0dp fill under @id/main
             private var msgList: View? = null // @id/messageList (0x7f0a028a) — the reverse-pinned RecyclerView
             private val buf = StringBuilder() // one keyboard animation's frames, auto-uploaded to the box in onEnd
             private var prepRegion = 0        // region height at onPrepare (pre-resize) — to measure the real delta
@@ -194,9 +268,11 @@ object ImeSyncAnim {
                 // BEFORE the re-layout: the view's current bottom (old position).
                 content()?.let { startBottom = it.bottom }
                 if (cch == null) cch = try { activity.findViewById<View>(0x7f0a0101) } catch (_: Throwable) { null }
+                if (mainV == null) mainV = try { activity.findViewById<View>(0x7f0a025f) } catch (_: Throwable) { null }
+                if (contentV == null) contentV = try { activity.findViewById<View>(0x7f0a00ff) } catch (_: Throwable) { null }
                 prepRegion = cch?.height ?: 0   // region height BEFORE the framework adjustResize kicks in
                 buf.setLength(0)
-                buf.append("PREPARE region h=$prepRegion lp=${cch?.layoutParams?.height}\n")
+                buf.append("PREPARE region h=$prepRegion lp=${cch?.layoutParams?.height} main h=${mainV?.height} content h=${contentV?.height}\n")
             }
 
             override fun onStart(
@@ -215,6 +291,9 @@ object ImeSyncAnim {
                 if (kbMax <= 0) kbMax = if (imeTargetBottom > 0) imeTargetBottom else 1
                 navStored = try { content()?.rootWindowInsets?.getInsets(WindowInsets.Type.navigationBars())?.bottom ?: 0 } catch (_: Throwable) { 0 }
                 if (cfgAdjustNothing) {
+                    // + panel opening/closing: don't hold the keyboard lift — clear it so the compose bar sits at the
+                    // (now shrunk) region's bottom, above the bottom-pinned panel, instead of floating up (the flicker).
+                    if (plusPanelOpen) { val nav = if (cfgNavInset >= 0) cfgNavInset else navStored; val lift = (kbMax - nav).coerceAtLeast(0); content()?.let { it.translationY = -lift.toFloat(); it.clipBounds = null }; buf.append("START PANEL keep-lift ty=${-lift} nav=$nav kbMax=$kbMax\n"); return bounds }
                     // HOLD mode: region stays FULL (ADJUST_NOTHING). No pre-shift — the offset is continuous across
                     // rest->animate->rest; onProgress/onEnd set translationY = -(ime-nav). Open = close-in-reverse.
                     buf.append("START HOLD show=$animShow ime=$imeTargetBottom kbMax=$kbMax nav=$navStored region h=${cch?.height} lp=${cch?.layoutParams?.height} sim=0x${Integer.toHexString(try { winRef?.attributes?.softInputMode ?: 0 } catch (_: Throwable) { 0 })}\n")
@@ -249,6 +328,17 @@ object ImeSyncAnim {
             ): WindowInsets {
                 if (running.none { (it.typeMask and WindowInsets.Type.ime()) != 0 }) return insets
                 if (cfgAdjustNothing) {
+                    // + panel open: KEEP the bar lifted by the panel footprint (kbMax-nav) so the compose box stays
+                    // ABOVE the bottom-pinned panel (the panel occupies the old keyboard space). Log ime to see if
+                    // the keyboard is actually dismissing.
+                    if (plusPanelOpen) {
+                        val cur = insets.getInsets(WindowInsets.Type.ime()).bottom
+                        val nav = if (cfgNavInset >= 0) cfgNavInset else try { insets.getInsets(WindowInsets.Type.navigationBars()).bottom } catch (_: Throwable) { navStored }
+                        val lift = (kbMax - nav).coerceAtLeast(0)
+                        content()?.let { it.translationY = -lift.toFloat(); it.clipBounds = null }
+                        buf.append("prog PANEL ime=$cur ty=${-lift} nav=$nav\n")
+                        return insets
+                    }
                     // HOLD mode: content is FULL (region not shrunk); lift it by exactly the keyboard height above
                     // the nav bar, tracking the keyboard 1:1. Same for open & close (pure function of `current`).
                     val current = insets.getInsets(WindowInsets.Type.ime()).bottom
@@ -259,7 +349,7 @@ object ImeSyncAnim {
                     val upH = (-ty).toInt().coerceAtLeast(0)
                     if (vv != null) vv.clipBounds = if (upH > 0 && vv.width > 0) Rect(0, upH, vv.width, vv.height) else null
                     if (msgList == null) msgList = try { activity.findViewById<View>(0x7f0a028a) } catch (_: Throwable) { null }
-                    buf.append("prog HOLD ime=$current ty=${ty.toInt()} nav=$nav region h=${cch?.height} list h=${msgList?.height}\n")
+                    buf.append("prog HOLD ime=$current ty=${ty.toInt()} nav=$nav region h=${cch?.height} list h=${msgList?.height} main h=${mainV?.height} content h=${contentV?.height}\n")
                     return insets
                 }
                 // Drive the slide from the ACTUAL animated keyboard inset, not the view's measured bottom:
@@ -289,7 +379,12 @@ object ImeSyncAnim {
 
             override fun onEnd(anim: WindowInsetsAnimation) {
                 val v = content()
-                if (cfgAdjustNothing) {
+                if (cfgAdjustNothing && plusPanelOpen) {
+                    // + panel open: keep the bar lifted by the panel footprint so it stays ABOVE the panel.
+                    val nav = if (cfgNavInset >= 0) cfgNavInset else navStored
+                    val lift = (kbMax - nav).coerceAtLeast(0)
+                    v?.translationY = -lift.toFloat(); v?.clipBounds = null
+                } else if (cfgAdjustNothing) {
                     // HOLD mode: settle at the HELD offset (keyboard up) or 0 (keyboard down), NOT always 0.
                     val nav = if (cfgNavInset >= 0) cfgNavInset else navStored
                     val maxLift = (kbMax - nav).coerceAtLeast(0)

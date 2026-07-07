@@ -514,6 +514,32 @@
 
     if-eqz v0, :cond_textrcs_keep
 
+    # TEXTRCS: while the + attach panel is open, DON'T suppress the region shrink — the region MUST shrink so the
+    # compose bar rides above the bottom-pinned @id/pluspanelContainer (else it hides behind the panel). Mirror of
+    # Q5/j->i:Z, set from C0/u0.
+    sget-boolean v0, Lcom/textrcs/anim/ImeSyncAnim;->plusPanelOpen:Z
+
+    if-nez v0, :cond_textrcs_keep
+
+    # TEXTRCS: only suppress a POSITIVE shrink (the keyboard's r0 setHeightTo). NEVER suppress a restore
+    # (p1 <= 0 = MATCH_PARENT) so closing the panel/keyboard always heals the region back to full.
+    if-lez p1, :cond_textrcs_keep
+
+    # TEXTRCS: under HOLD, only SUPPRESS the region view (@id/contentControlledHeight 0x7f0a0101) so it stays FULL for
+    # the keyboard slide. NEVER suppress other views' setHeightTo — esp. @id/pluspanelContainer 0x7f0a0318 (the + attach
+    # panel, whose height is ALSO set via setHeightTo); suppressing it made the panel fill the whole screen.
+    invoke-interface {p0}, Lcom/mplus/lib/x5/y;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
+
+    move-result v1
+
+    const v2, 0x7f0a0101
+
+    if-ne v1, v2, :cond_textrcs_keep
+
     return-void
 
     :cond_textrcs_keep
