@@ -56,6 +56,12 @@ class PairingActivity : Activity() {
     private lateinit var resultText: TextView
 
     @Volatile private var signInTriggered: Boolean = false
+    /** Bounded re-poll of the cookie store when the *APISID auth cookie hasn't
+     *  landed yet at onPageFinished — makes sign-in auto-continue in a single
+     *  pass instead of stalling until the user re-taps Connect. */
+    @Volatile private var harvestRetries: Int = 0
+    private val harvestMaxRetries = 8
+    private val harvestRetryMs = 700L
     /** [FIX rcs-emoji-flicker #1] true once pairing fully succeeds; gates the
      *  onDestroy cancel so we NEVER cancel a completed pairing. */
     @Volatile private var paired: Boolean = false
@@ -91,6 +97,7 @@ class PairingActivity : Activity() {
         }
 
         connectButton.setOnClickListener {
+            harvestRetries = 0
             com.textrcs.diag.PairingTrace.start()
             com.textrcs.diag.PairingTrace.log("UI", "connect-tapped")
             startGoogleLogin()
@@ -180,22 +187,34 @@ class PairingActivity : Activity() {
         }
         // Quick guard: don't re-trigger after we've already started SignInGaia.
         if (signInTriggered) return
-        // [REMOTE_HOOK v0.58] webview_required_cookie_name — usually SAPISID
-        // but we may need to switch (e.g. __Secure-3PAPISID-only sessions).
-        val required = Hooks.overrideString("webview_required_cookie_name", "SAPISID")
-        if (!rawCookie.contains(required)) {
+        // Populate the jar FIRST, then gate on the HTTP client's OWN accept
+        // logic (SAPISID or __Secure-3PAPISID or __Secure-1PAPISID). The old
+        // gate `rawCookie.contains("SAPISID")` silently stalled on modern
+        // sessions that only expose __Secure-3PAPISID (that name has no
+        // "SAPISID" substring), leaving the raw /web/config page showing forever.
+        httpClient.ingestCookieHeader(rawCookie)
+        if (httpClient.sapisid == null) {
             com.textrcs.diag.PairingTrace.log(
-                "COOKIE", "no-sapisid",
+                "COOKIE", "no-apisid",
                 "len=${rawCookie.length}",
                 "names=" + rawCookie.split("; ").mapNotNull {
                     val eq = it.indexOf('=')
                     if (eq > 0) it.substring(0, eq) else null
                 }.joinToString(",")
             )
+            // Single-pass: on /web/config the user IS signed in, but the *APISID
+            // auth cookie can land a few hundred ms after onPageFinished (which
+            // won't fire again). Re-poll the cookie store a few times so sign-in
+            // auto-continues instead of stalling until the user re-taps Connect.
+            if (url?.contains("/web/config") == true && !signInTriggered &&
+                harvestRetries < harvestMaxRetries
+            ) {
+                harvestRetries++
+                com.textrcs.diag.PairingTrace.log("COOKIE", "retry", "attempt=$harvestRetries")
+                mainHandler.postDelayed({ if (!signInTriggered) tryHarvestSapisid(url) }, harvestRetryMs)
+            }
             return
         }
-
-        httpClient.ingestCookieHeader(rawCookie)
         com.textrcs.diag.PairingTrace.log(
             "COOKIE", "sapisid-captured",
             "rawLen=${rawCookie.length}",

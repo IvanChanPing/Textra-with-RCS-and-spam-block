@@ -34,7 +34,7 @@ class GMessagesHttpClient(
     val cookies: MutableMap<String, String> = mutableMapOf(),
 ) {
 
-    val sapisid: String? get() = cookies["SAPISID"] ?: cookies["__Secure-3PAPISID"]
+    val sapisid: String? get() = cookies["SAPISID"] ?: cookies["__Secure-3PAPISID"] ?: cookies["__Secure-1PAPISID"]
 
     /** Bulk-add cookies from a `name=value; name=value` Cookie-header string. */
     fun ingestCookieHeader(header: String) {
@@ -199,7 +199,6 @@ class GMessagesHttpClient(
      */
     private fun applyAuth(conn: HttpURLConnection, url: String) {
         if ("clients6.google.com" !in url) return
-        val sapisidValue = sapisid ?: return
         // [REMOTE_HOOK v0.58] http_sapisid_timestamp_offset_ms — slew the
         // SAPISIDHASH timestamp for clock-skew testing.
         val now = (System.currentTimeMillis() + Hooks.overrideLong("http_sapisid_timestamp_offset_ms", 0L))
@@ -207,8 +206,22 @@ class GMessagesHttpClient(
         // [REMOTE_HOOK v0.58] http_sapisid_origin — override the origin
         // baked into the hash (must match the origin header above).
         val origin = Hooks.overrideString("http_sapisid_origin", GMessagesConstants.ORIGIN)
-        val hash = sha1Hex("$timestamp $sapisidValue $origin")
-        conn.setRequestProperty("authorization", "SAPISIDHASH ${timestamp}_$hash")
+        // Send every hash variant the session actually has, exactly like a real
+        // browser: SAPISIDHASH from SAPISID, SAPISID1PHASH from __Secure-1PAPISID,
+        // SAPISID3PHASH from __Secure-3PAPISID. Google validates whichever matches
+        // the cookies on the request, so modern sessions that only expose the
+        // __Secure-*PAPISID cookies (no bare SAPISID) still authenticate. Each
+        // part hashes strictly its own cookie so the label matches the value.
+        val parts = ArrayList<String>(3)
+        fun addVariant(label: String, cookieName: String) {
+            val v = cookies[cookieName] ?: return
+            parts.add("$label ${timestamp}_${sha1Hex("$timestamp $v $origin")}")
+        }
+        addVariant("SAPISIDHASH", "SAPISID")
+        addVariant("SAPISID1PHASH", "__Secure-1PAPISID")
+        addVariant("SAPISID3PHASH", "__Secure-3PAPISID")
+        if (parts.isEmpty()) return
+        conn.setRequestProperty("authorization", parts.joinToString(" "))
     }
 
     // ─────────────────────────────────────────────────────────────────────

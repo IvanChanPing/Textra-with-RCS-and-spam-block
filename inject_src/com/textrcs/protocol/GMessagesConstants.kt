@@ -112,14 +112,16 @@ object GMessagesConstants {
     // ─────────────────────────────────────────────────────────────────────
 
     /**
-     * Google Messages Web authentication page (mirrors mautrix
-     * `pkg/libgm/util/paths.go:5`: `GoogleAuthenticationURL = MessagesBaseURL + "/web/authentication"`).
-     * Returns text/html (the actual Messages Web HTML app) per server probe
-     * 2026-05-15. Was previously `/web/config` which returns text/plain JSON
-     * (the runtime config endpoint, not the user-facing page).
+     * Google-account (Gaia / EMOJI) sign-in URL. The continue target is
+     * /web/config — the emoji-pairing flow — NOT /web/authentication, which is
+     * the QR-pairing page (loading it showed the user a QR code instead of the
+     * emoji flow). 2026-07-12: matched to the fossify port; VERIFIED from
+     * Beeper's libgojni.so, which loads AccountChooser?continue=.../web/config.
+     * (/web/config renders as raw JSON, but it's only a cookie-harvest vehicle —
+     * the emoji pairing runs on the harvested cookies via the Gaia orchestrator.)
      */
     const val GAIA_LOGIN_URL =
-        "https://accounts.google.com/AccountChooser?continue=https://messages.google.com/web/authentication"
+        "https://accounts.google.com/AccountChooser?continue=https://messages.google.com/web/config"
 
     /**
      * Prefix for QR-pairing URLs. URLData{pairingKey, AESKey, HMACKey} is
