@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- textrcs: entrance for the "Contact Details" launch (opening the external Contacts app
+     from the conversation dropdown). The incoming Contacts activity slides UP from the bottom
+     edge (100%p -> 0) with a decelerate curve (tween, NO bounce). Used ONLY for that one
+     launch via f9/c::pswitch_13's ACTION_VIEW/com.android.contacts branch; no other animation
+     in the app is affected. -->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromYDelta="100%p"
+    android:toYDelta="0.0"
+    android:duration="300"
+    android:interpolator="@android:anim/decelerate_interpolator" />

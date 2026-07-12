@@ -38,6 +38,7 @@
     <public type="anim" name="slide_in_from_right_and_fade" id="0x7f010029" />
     <public type="anim" name="slide_out_to_right_and_fade" id="0x7f01002a" />
     <public type="anim" name="stay_still" id="0x7f01002b" />
+    <public type="anim" name="textrcs_contactview_slideup_enter" id="0x7f01002d" />
     <public type="anim" name="toast_text" id="0x7f01002c" />
     <public type="animator" name="design_appbar_state_list_animator" id="0x7f020000" />
     <public type="animator" name="design_fab_hide_motion_spec" id="0x7f020001" />

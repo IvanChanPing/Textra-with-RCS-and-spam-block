@@ -741,6 +741,31 @@
     :pswitch_13
     const v2, 0x7f010022
 
+    # textrcs slide-up (2026-07-10): ONLY the "Contact Details" launch that opens the external
+    # Contacts app (ACTION_VIEW on the com.android.contacts authority) enters with an upward
+    # slide (0x7f01002d). v3 still holds the launched Intent here; every other dropdown action
+    # keeps the original grow-from-bottom (0x7f010022). No other app animation is touched.
+    invoke-virtual {v3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_slideup13
+
+    invoke-virtual {v4}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "com.android.contacts"
+
+    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_slideup13
+
+    const v2, 0x7f01002d
+
+    :cond_slideup13
     const v3, 0x7f01002b
 
     const/4 v5, 0x0
