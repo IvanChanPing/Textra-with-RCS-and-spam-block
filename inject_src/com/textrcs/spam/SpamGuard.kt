@@ -272,6 +272,31 @@ object SpamGuard {
         }
     }
 
+    /**
+     * RETROACTIVE scan of ONE already-stored message. Classifies with the SAME offline classifier as
+     * the live path; if not CLEAN, adds the sender to the native blocklist (always the reversible BLOCK
+     * action, regardless of the live flag-action setting) and returns true. NEVER deletes/alters stored
+     * messages. Called by RescanSpamActivity's one-time "Rescan existing messages" scan.
+     */
+    fun retroScanOne(context: Context, sender: String, body: String): Boolean {
+        if (sender.isBlank() || body.isBlank()) return false
+        return try {
+            ensureConfigured(context)
+            val v = spamClassifyOffline(body, sender)
+            // Log EVERY verdict (not just flags) so a live-filter dry-run is visible in logcat.
+            Log.i(TAG, "retro from.tail=${sender.takeLast(4)} level=${v.level} score=${v.score.toInt()} " +
+                "reasons=${v.reasons.joinToString("|")}")
+            if (v.level == SpamLevel.CLEAN) return false
+            val added = com.textrcs.bridge.TextraBlocklist.block(context, sender)
+            Log.w(TAG, "retro FLAG from.tail=${sender.takeLast(4)} ${v.level} added=$added")
+            true
+        } catch (e: Throwable) {
+            Log.w(TAG, "retroScanOne failed from.tail=" + sender.takeLast(4) + ": " +
+                e.javaClass.simpleName + ": " + e.message)
+            false
+        }
+    }
+
     /** One entry in the Spam log (a message the Block action withheld). */
     data class BlockedEntry(
         val messageId: String,
