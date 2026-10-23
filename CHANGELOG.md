@@ -12,6 +12,8 @@
 
 - Swap "+" attach-panel window-mode switch for a snapPanel geometry logger and keep the compose bar lifted above the panel under HOLD
 
+- 2026-10-23 16:33 License original contributions under AGPL-3.0-only with exclusions; document UI replacement and F-Droid review draft. No whole-APK FOSS or submission claim.
+
 ## 2026-07-06 — Conversation keyboard: compose bar + chat slide with the keyboard
 
 Opening and closing the keyboard in a conversation slides the message list and compose bar up and down in

@@ -4,6 +4,11 @@ A modified **Textra 2** SMS/messaging app that sends and receives through your p
 **Google Messages** account (the same mechanism as *Messages for web*), plus an on-device
 **scam/spam filter**.
 
+Original TextRCS contributions are licensed under **AGPL-3.0-only**; see
+[license coverage](LICENSING.md). This does not relicense the bundled Textra base
+or establish that the complete APK is FOSS. See the
+[original-source UI replacement plan](ORIGINAL_SOURCE_UI_PLAN.md).
+
 Instead of running an always-on background service, it uses a **zero-background-battery**
 design: a notification listener wakes the app only when Google Messages posts a notification
 for an incoming message, then connects briefly to sync. (See *Notifications* below — this is
