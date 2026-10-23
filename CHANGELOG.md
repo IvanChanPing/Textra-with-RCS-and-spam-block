@@ -14,6 +14,8 @@
 
 - 2026-10-23 16:33 License original contributions under AGPL-3.0-only with exclusions; document UI replacement and F-Droid review draft. No whole-APK FOSS or submission claim.
 
+- 2026-10-23 16:53 Select morluto/rea for TextRCS UI recreation planning; document artifact evidence, JADX provider and real-UI verification boundaries.
+
 ## 2026-07-06 — Conversation keyboard: compose bar + chat slide with the keyboard
 
 Opening and closing the keyboard in a conversation slides the message list and compose bar up and down in
